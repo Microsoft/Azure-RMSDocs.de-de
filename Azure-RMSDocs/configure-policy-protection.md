@@ -12,17 +12,17 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
-ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
-ms.translationtype: HT
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778550"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404452"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Weitere Informationen zum Azure Rights Management-Schutz und dessen Funktionswei
 > [!IMPORTANT]
 > Um eine Bezeichnung zur Anwendung dieses Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Weitere Informationen finden Sie unter [Aktivieren des Schutzdiensts von Azure Information Protection](activate-service.md).
 
-Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Folgende Features für geschützte Dateien werden von diesen Speicherorten nicht unterstützt: gemeinsame Dokumenterstellung, Office für das Web, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
+Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen die folgenden Features für geschützte Dateien nicht: gemeinsamen Dokument Erstellung, Office für das Web, Suche, Dokument Vorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
 
 > [!TIP]
 > Wenn Sie Ihre [Bezeichnungen zu vereinheitlichten Vertraulichkeitsbezeichnungen migrieren](configure-policy-migrate-labels.md) und diese von einem der Admin Center für Bezeichnungen (wie beispielsweise dem Microsoft 365 Compliance Center) aus veröffentlichen, werden Bezeichnungen, die Schutz anwenden, für diese Speicherorte unterstützt. Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeitsbezeichnungen für Office-Dateien in SharePoint und OneDrive (öffentliche Vorschauversion)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
@@ -66,13 +66,13 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
 
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**. 
     
-    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie im Bereich **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten. 
+2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen** : Wählen Sie im Bereich **Azure Information Protection-Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten. 
 
 3. Suchen Sie im Bereich **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus:
     
-    - **Nicht konfiguriert:** Wählen Sie diese Option aus, wenn die Bezeichnung derzeit zum Anwenden von Schutz konfiguriert ist und die ausgewählte Bezeichnung keinen Schutz mehr anwenden soll. Fahren Sie dann mit Schritt 11 fort.
+    - **Nicht konfiguriert**: Wählen Sie diese Option aus, wenn die Bezeichnung derzeit zum Anwenden von Schutz konfiguriert ist und die ausgewählte Bezeichnung keinen Schutz mehr anwenden soll. Fahren Sie dann mit Schritt 11 fort.
         
         Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
         
@@ -80,19 +80,19 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
          - Wenn der Inhalt zuvor ohne diese Bezeichnung geschützt wurde, bleibt der Schutz erhalten. 
          
-         - Wenn der Inhalt zuvor mit einer Bezeichnung geschützt wurde, wird der Schutz entfernt, wenn der Benutzer, der die Bezeichnung anwendet, Berechtigungen hat, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das [Nutzungsrecht](configure-usage-rights.md) **Exportieren** oder **Vollzugriff** verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren.
+         - Wenn der Inhalt zuvor mit einer Bezeichnung geschützt wurde, wird der Schutz entfernt, wenn der Benutzer, der die Bezeichnung anwendet, Berechtigungen hat, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das **Nutzungsrecht** **Exportieren** oder [Vollzugriff](configure-usage-rights.md) verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren.
              
-             Wenn der Benutzer keine Berechtigungen hat, um den Schutz zu entfernen, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. If this problem persists, contact your administrator.** (Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.) 
+             Wenn der Benutzer nicht über die Berechtigung zum Entfernen des Schutzes verfügt, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection diese Bezeichnung nicht anwenden können. Wenn dieses Problem weiterhin besteht, wenden Sie sich an Ihren Administrator**. 
     
     - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und fahren Sie dann mit Schritt 4 fort.
     
-    - **Schutz entfernen**: Wählen Sie diese Option aus, um den Schutz zu entfernen, wenn ein Dokument oder eine E-Mail geschützt ist. Fahren Sie dann mit Schritt 11 fort.
+    - **Schutz entfernen**: Wählen Sie diese Option aus, um den Schutz zu entfernen, wenn ein Dokument oder eine E-Mail-Adresse geschützt ist. Fahren Sie dann mit Schritt 11 fort.
         
         Wenn der Schutz mit einer Bezeichnungs- oder Schutzvorlage angewendet wurde, werden die Schutzeinstellungen in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Schützen** ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
         
-        Beachten Sie, dass Benutzer zum erfolgreichen Anwenden einer Bezeichnung mit dieser Option die Berechtigungen benötigen, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das [Nutzungsrecht](configure-usage-rights.md) **Exportieren** oder **Vollzugriff** verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren. 
+        Beachten Sie, dass Benutzer zum erfolgreichen Anwenden einer Bezeichnung mit dieser Option die Berechtigungen benötigen, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das **Nutzungsrecht** **Exportieren** oder [Vollzugriff](configure-usage-rights.md) verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren. 
         
-        Wenn der Benutzer, der die Bezeichnung mit dieser Einstellung anwendet, keine Berechtigung zum Entfernen des Rights Management-Schutzes hat, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
+        Wenn der Benutzer, der die Bezeichnung mit dieser Einstellung anwendet, nicht über Berechtigungen zum Entfernen Rights Management Schutzes verfügt, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Wenn dieses Problem weiterhin besteht, wenden Sie sich an Ihren Administrator.**
 
 4. Wenn Sie **Schützen** ausgewählt haben, wird der Bereich **Schutz** automatisch geöffnet, wenn zuvor eine der anderen Optionen ausgewählt wurde. Klicken Sie auf **Schutz**, wenn dieser neue Bereich nicht automatisch geöffnet wird:
     
@@ -104,13 +104,13 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
 6. Wählen Sie eine der folgenden Optionen aus:
     
-   - **Berechtigungen festlegen**: Neue Schutzeinstellungen können in diesem Portal definiert werden.
+   - **Berechtigungen festlegen**: Definieren neuer Schutzeinstellungen in diesem Portal.
     
    - **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** : Benutzer können angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook oder Word, Excel, PowerPoint und den Datei-Explorer auswählen. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
         
-       Wenn Sie die Option für Outlook auswählen: Die Bezeichnung wird in Outlook angezeigt, und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
+       Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
         
-       Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt ist, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
+       Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt wird, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
     
    - **Vordefinierte Vorlage auswählen**: Zum Verwenden einer der Standardvorlagen oder einer benutzerdefinierten Vorlage, die Sie konfiguriert haben. Beachten Sie, dass diese Option nicht zur Anzeige für neue Bezeichnungen verfügbar ist, oder wenn Sie eine Bezeichnung bearbeiten, die zuvor die Option **Berechtigungen festlegen** verwendet hat.
     
@@ -120,7 +120,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
 
 7. Wenn Sie **Berechtigungen festlegen** für **Azure (Cloudschlüssel)** ausgewählt haben, können Sie über diese Option Benutzer und Nutzungsrechte auswählen. 
     
-    Wenn Sie keine Benutzer auswählen und in diesem Bereich auf **OK** und dann im Bereich **Bezeichnung** auf **Speichern** klicken, geschieht Folgendes: Die Bezeichnung wird so konfiguriert, dass nur die Person, die sie anwendet, das Dokument oder die E-Mail uneingeschränkt öffnen kann. Diese Konfiguration wird gelegentlich als „Nur für mich“ bezeichnet und ist möglicherweise erforderlich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, wählen Sie nicht **Berechtigungen hinzufügen** aus. Nach dem Speichern der Bezeichnung wird Ihnen beim nächsten Öffnen des Bereichs **Schutz** für **Benutzer** die Option **IPC_USER_ID_OWNER** und für **Berechtigungen** die Option **Mitbesitzer** angezeigt, um diese Konfiguration widerzuspiegeln.
+    Wenn Sie keine Benutzer auswählen und **OK** in diesem Bereich auswählen, gefolgt von **Speichern** im Bereich " **Bezeichnung** ": die Bezeichnung ist so konfiguriert, dass Sie den Schutz anwendet, sodass nur die Person, die die Bezeichnung anwendet, das Dokument oder die e-Mail ohne Einschränkungen öffnen kann. Diese Konfiguration wird gelegentlich als „Nur für mich“ bezeichnet und ist möglicherweise erforderlich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, wählen Sie nicht **Berechtigungen hinzufügen** aus. Nach dem Speichern der Bezeichnung wird Ihnen beim nächsten Öffnen des Bereichs **Schutz** für **Benutzer** die Option **IPC_USER_ID_OWNER** und für **Berechtigungen** die Option **Mitbesitzer** angezeigt, um diese Konfiguration widerzuspiegeln.
     
     Um die Benutzer anzugeben, die geschützte Dokumente und E-Mails öffnen können sollen, wählen Sie **Berechtigungen hinzufügen**. Wählen Sie dann im Bereich **Berechtigungen hinzufügen** die ersten Benutzer und Gruppen aus, die die Rechte besitzen sollen, den von der ausgewählten Bezeichnung geschützten Inhalt nutzen zu können:
     
@@ -167,7 +167,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Bei Auswahl einer **Abteilungsvorlage** oder wenn Sie [Onboardingsteuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben:
     
-    - Benutzer, die sich außerhalb des konfigurierten Bereichs der Vorlage befinden oder von der Anwendung des Azure Rights Management-Schutzes ausgeschlossen sind, können die Bezeichnung weiterhin anzeigen, sie aber nicht anwenden. Wenn sie die Bezeichnung auswählen, wird die folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
+    - Benutzer, die sich außerhalb des konfigurierten Bereichs der Vorlage befinden oder von der Anwendung des Azure Rights Management-Schutzes ausgeschlossen sind, können die Bezeichnung weiterhin anzeigen, sie aber nicht anwenden. Wenn Sie die Bezeichnung auswählen, wird die folgende Meldung angezeigt: **Azure Information Protection diese Bezeichnung nicht anwenden können. Wenn dieses Problem weiterhin besteht, wenden Sie sich an Ihren Administrator.**
         
         Beachten Sie, dass immer alle veröffentlichten Vorlagen angezeigt werden, auch wenn Sie eine bereichsbezogene Richtlinie konfigurieren. Konfigurieren Sie z. B. eine bereichsbezogene Richtlinie für die Gruppe „Marketing“. Die Vorlagen, die Sie auswählen können, sind nicht auf Vorlagen beschränkt, die auf den Bereich „Marketing“ bezogen sind, und es ist möglich, eine abteilungsbezogene Vorlage auszuwählen, die Ihre ausgewählten Benutzer nicht verwenden können. Zur Vereinfachung der Konfiguration und zum Minimieren der Problembehandlung können Sie die Abteilungsvorlage gemäß der Bezeichnung in der bereichsbezogenen Richtlinie benennen. 
 
@@ -177,9 +177,9 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Mit der Option für benutzerdefinierte Berechtigungen können Benutzer angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook wählen (Standardeinstellung) oder Word, Excel, PowerPoint und den Datei-Explorer. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
     
-    Wenn Sie die Option für Outlook auswählen: Die Bezeichnung wird in Outlook angezeigt, und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
+    Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
     
-    Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt ist, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
+    Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt wird, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
 
 10. Klicken Sie auf **OK**, um den Bereich **Schutz** zu schließen und die Auswahl für **Benutzerdefiniert** bzw. die ausgewählte Vorlage für die Option **Schutz** im Bereich **Bezeichnung** anzuzeigen.
 
@@ -204,11 +204,11 @@ Wählen Sie für jedes folgende Beispiel im Bereich \<*Bezeichnungsname*> die Op
 
 ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
-### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Beispiel 1: Bezeichnung für die Anwendung von „Nicht weiterleiten“ zum Senden einer geschützten E-Mail an ein Gmail-Konto
+### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Beispiel 1: Bezeichnung für die Anwendung von „Nicht weiterleiten“ zum Senden einer geschützten E-Mail an ein Gmail-Konto
 
 Diese Bezeichnung ist nur in Outlook verfügbar und geeignet, wenn Exchange Online für die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert ist. Weisen Sie die Benutzer an, diesen Bezeichner auszuwählen, wenn sie eine geschützte E-Mail an ein Gmail-Konto (bzw. jedes andere E-Mail-Konto, das nicht zu ihrer Organisation gehört) senden müssen. 
 
-Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  Sie wählen anschließend die Bezeichnung aus, und die Option „Nicht weiterleiten“ wird der E-Mail automatisch hinzugefügt. Auf diese Weise können Empfänger die E-Mail nicht weiterleiten, drucken, etwas daraus kopieren oder die E-Mail über die Option **Speichern unter** außerhalb des Postfachs speichern. 
+Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  Sie wählen anschließend die Bezeichnung aus, und die Option „Nicht weiterleiten“ wird der E-Mail automatisch hinzugefügt. Das Ergebnis ist, dass die Empfänger die e-Mail nicht weiterleiten oder drucken, kopieren oder die e-Mail außerhalb Ihres Postfachs speichern können, indem Sie die Option **Speichern** unter verwenden. 
 
 1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
@@ -280,13 +280,13 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
     
 2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Gehen Sie im Bereich **Berechtigungen hinzufügen** wie folgt vor: Wählen Sie die Option **Hinzufügen \<Organisationsname> – Alle Mitglieder** aus, um sämtliche Benutzer in Ihrem Mandanten auszuwählen und ihnen Berechtigungen zu erteilen. Diese Einstellung schließt Gastkonten aus. Alternativ dazu klicken Sie auf **Verzeichnis durchsuchen**, um eine bestimmte Gruppe auszuwählen. Klicken Sie auf **Details eingeben**, und geben Sie die E-Mail-Adresse des Benutzers oder die Azure AD-Gruppe oder einen Domänennamen ein, um externen Benutzern Berechtigungen zu erteilen oder wenn Sie die E-Mail-Adresse lieber manuell eingeben möchten.
+3. Klicken Sie im Bereich **Berechtigungen hinzufügen** : um Benutzern in Ihrer Organisation Berechtigungen zu erteilen, wählen Sie **Hinzufügen \<Organisationsname >-Alle Mitglieder** aus, um alle Benutzer in Ihrem Mandanten auszuwählen. Diese Einstellung schließt Gastkonten aus. Alternativ dazu klicken Sie auf **Verzeichnis durchsuchen**, um eine bestimmte Gruppe auszuwählen. Klicken Sie auf **Details eingeben**, und geben Sie die E-Mail-Adresse des Benutzers oder die Azure AD-Gruppe oder einen Domänennamen ein, um externen Benutzern Berechtigungen zu erteilen oder wenn Sie die E-Mail-Adresse lieber manuell eingeben möchten.
     
     Wiederholen Sie diesen Schritt, um zusätzliche Benutzer anzugeben, die über dieselben Berechtigungen verfügen sollen.
 
 4. Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus, um die Berechtigungen, die Sie erteilen möchten, auszuwählen.
     
-    Anmerkung: Wählen Sie für E-Mails nicht die Option **Viewer** aus, und wenn Sie **Benutzerdefiniert** auswählen, stellen Sie sicher, dass Sie **Bearbeiten und speichern** einschließen.
+    Hinweis: Wählen Sie für E-Mails nicht die Option **Viewer** aus, und wenn Sie **Benutzerdefiniert** auswählen, stellen Sie sicher, dass Sie **Bearbeiten und speichern** hinzufügen.
     
     Um dieselben Berechtigungen wie bei der neuen Exchange Online-Option **Nur verschlüsseln** zu haben, wählen Sie **Benutzerdefiniert** aus. Gewähren Sie dann alle Berechtigungen außer **Speichern unter, Exportieren (EXPORT)** und **Vollzugriff (OWNER)** .
 
@@ -314,9 +314,9 @@ Diese Konfiguration hat den Vorteil, dass Sie keine Benutzer, Gruppen oder Domä
 6. Klicken Sie im Bereich **Bezeichnung** auf **Speichern**.
 
 
-### <a name="example-6-label-that-applies-just-for-me-protection"></a>Beispiel 6: Bezeichnung, die den Schutz „Nur für mich“ anwendet
+### <a name="example-6-label-that-applies-just-for-me-protection"></a>Beispiel 6: Bezeichnung, die "nur für mich"-Schutz anwendet
 
-Diese Konfiguration bildet das Gegenstück zur sicheren Kollaboration an Dokumenten: Mit Ausnahme eines [Administrators](configure-super-users.md) kann nur eine Person, die diese Bezeichnung anwendet, die geschützten Inhalte uneingeschränkt öffnen. Diese Konfiguration wird oft als „Nur für mich“-Schutz bezeichnet und eignet sich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann.
+Diese Konfiguration bietet das Gegenteil der sicheren Zusammenarbeit für Dokumente: mit Ausnahme eines Administratoren kann nur die Person, die die Bezeichnung [anwendet, den](configure-super-users.md)geschützten Inhalt ohne Einschränkungen öffnen. Diese Konfiguration wird oft als „Nur für mich“-Schutz bezeichnet und eignet sich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann.
 
 Die Bezeichnungskonfiguration wirkt zunächst einfach:
 

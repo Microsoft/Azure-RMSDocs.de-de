@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 44bf6317de33547a5be3c92f86b5d27f779c601a
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: e77a4696114dc7b7271db55ca846d5dfecff650f
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117602"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403738"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -26,7 +26,7 @@ ms.locfileid: "76117602"
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified Bezeichnung-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie weitere technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzerhandbuch](clientv2-user-guide.md)zu finden. 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -52,7 +52,7 @@ Der Azure Information Protection Unified Bezeichnung-Client umfasst Folgendes:
 
 - Ein PowerShell-Modul zum Ermitteln sensibler Informationen in Dateien und zum Anwenden oder Entfernen von Klassifizierungs Bezeichnungen und des Schutzes von Dateien. 
     
-    Der-Client umfasst Cmdlets zum Installieren und Konfigurieren einer Vorschauversion der [Azure Information Protection Scanner](../deploy-aip-scanner.md) , die als Dienst unter Windows Server ausgeführt wird. Mit diesem Dienst können Sie Dateien in Daten speichern wie Netzwerkfreigaben und SharePoint-Server Bibliotheken ermitteln, klassifizieren und schützen.
+    Der-Client umfasst Cmdlets zum Installieren und Konfigurieren des [Azure Information Protection Scanner](../deploy-aip-scanner.md) , der als Dienst unter Windows Server ausgeführt wird. Mit diesem Dienst können Sie Dateien in Daten speichern wie Netzwerkfreigaben und SharePoint-Server Bibliotheken ermitteln, klassifizieren und schützen.
 
 - Der Rights Management-Client, der mit dem Schutzdienst (Azure Rights Management) kommuniziert, um Dateien zu verschlüsseln und zu schützen.
 
@@ -71,7 +71,7 @@ Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn S
 
 - Sie möchten Skripts ausführen, die Dokumente mithilfe von PowerShell-Befehlen klassifizieren (und optional schützen).
 
-- Sie möchten einen Dienst testen, der sich derzeit in der Vorschau Phase befindet, mit der lokal gespeicherte Dateien ermittelt, klassifiziert (und optional geschützt) werden.
+- Sie möchten einen Dienst testen, der lokal gespeicherte Dateien entdeckt, klassifiziert (und optional schützt).
 
 - Sie möchten geschützte Dokumente anzeigen, wenn eine systemeigene Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
 
@@ -156,7 +156,7 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
 
 - Online Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung-Benutzerhandbuch](clientv2-user-guide.md)
 
@@ -164,7 +164,7 @@ Nachdem Sie den Azure Information Protection Unified Label-Client installiert ha
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Installieren des Azure Information Protection Scanners
 
-Der Scanner für den Unified-Bezeichnungs Client befindet sich zum Testen in der Vorschau Phase. Installieren Sie während dieser Vorschau die aktuelle Version der allgemeinen Verfügbarkeit des Unified-Bezeichnungs Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Der Scanner für den Unified-Bezeichnungs Client ist allgemein verfügbar. Installieren Sie die aktuelle Version des Unified-Bezeichnung-Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 Wenn Sie den Scanner zum ersten Mal auf einem Computer installieren, müssen Sie diesen Client herunterladen und installieren, und befolgen Sie dann die Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md).
 
@@ -183,7 +183,7 @@ Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Vers
 
 Wenn Sie ein Upgrade vom Azure Information Protection-Client (klassisch) unter Windows 7 ausführen, werden alle Office-Anwendungen während des Client Upgrades automatisch neu gestartet. Dieser automatische Neustart gilt nicht für spätere Betriebssysteme oder, wenn Sie ein Upgrade von einer älteren Version des Unified Bezeichnung-Clients durchführen.
 
-Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Beispielsweise haben Sie die aktuelle Vorschauversion zu Testzwecken installiert und müssen nun auf die aktuelle allgemein verfügbare Version zurückgreifen.
+Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Angenommen, Sie haben eine Vorschauversion zum Testen installiert und müssen nun zur aktuellen Version der allgemeinen Verfügbarkeit zurückkehren.
 
 Verwenden Sie den [Versions releaseverlauf und die Unterstützungs Richtlinie](unifiedlabelingclient-version-release-history.md) , um die Unterstützungs Richtlinie für den Azure Information Protection Unified-Bezeichnungs Client, die derzeit unterstützten Versionen und die Neuerungen und Änderungen für die unterstützten Releases zu verstehen. 
 
@@ -195,7 +195,7 @@ Anweisungen zum Aktualisieren des Scanners sind davon abhängig, ob Sie ein Upgr
 
 1. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
 
-2.  Aktualisieren Sie den Azure Information Protection Unified-Bezeichnungs Client, indem Sie die neueste Version des Unified-Bezeichnungs Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.
+2.    Aktualisieren Sie den Azure Information Protection Unified-Bezeichnungs Client, indem Sie die neueste Version des Unified-Bezeichnungs Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.
 
 3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`
 

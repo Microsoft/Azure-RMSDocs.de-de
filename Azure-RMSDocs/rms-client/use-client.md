@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fd48222d2b137c8c823e3d233562905da4d4ddc2
-ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
+ms.openlocfilehash: a4e7206bb02c29649d6e5807a445bb3970f35ca6
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215752"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404877"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -73,7 +73,7 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
     
     Für diese Benutzer ist Ihre Bezeichnung in Windows, Mac, IOS und Android sehr ähnlich, da Ihnen dieselben Bezeichnungen und die gleichen Richtlinien Einstellungen zur Verfügung stehen. Als Administrator verwalten Sie diese Bezeichnungen und Richtlinien Einstellungen im selben Verwaltungs Center.
 
-- Außerdem installieren Sie den Unified-Bezeichnung-Client für sich selbst, um die Vorschauversion des Azure Information Protection Scanners zu testen.
+- Außerdem installieren Sie den Unified-Bezeichnung-Client für sich selbst, um den Azure Information Protection Scanner zu testen.
 
 - Für eine Teilmenge der Benutzer stellen Sie den klassischen Client bereit, da diese Benutzer Bezeichnungen benötigen, die den Hyok-Schutz (Hold Your Own Key) anwenden.
     
@@ -99,13 +99,13 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
 |Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
-|Überprüfung für lokale Datenspeicher:| **Ja** | **Ja <br />(Vorschau)** | Nein |
+|Überprüfung für lokale Datenspeicher:| **Ja** | **Ja <br />** | Nein |
 |Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | Nein |
 |Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
 |Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
 |Visuelle Kennzeichnungen als Bezeichnungs Aktion (Kopfzeile, Fußzeile, Wasserzeichen):| **Ja** | **Ja** | **Ja**|
-|Visuelle Kennzeichnungen pro App:| **Ja** | **Ja* | Nein |
-|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** (Vorschau) | Nein |
+|Visuelle Kennzeichnungen pro App:| **Ja** | **Ja** | Nein |
+|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
 |Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |
@@ -179,8 +179,6 @@ Obwohl sich der Azure Information Protection Unified Bezeichnung-Client noch in 
 - Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen
 
 - Demorichtlinien
-
-- Begründung für das Entfernen eines Schutzes
 
 - Bestätigungsaufforderung möchten **Sie diese Bezeichnung löschen?** für Benutzer, wenn Sie die Richtlinien Einstellung nicht zur Begründung verwenden
 

@@ -16,11 +16,11 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: 0eda64683a498c69ff710319547b1349e1c1cfc5
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743591"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404248"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -64,7 +64,7 @@ Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrac
 
 Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, abhängig von Ihrem Abonnement für Azure Information Protection.
 
-|-Abonnement|Anweisungen|
+|Abonnement|Anweisungen|
 |----------------|---------------|
 |Azure Information Protection (eigenständig):|1. Wählen Sie im Azure-Portal unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) die Option **neue Supportanfrage** aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie im Bereich **Basics (Grundlagen** ) die Option **Technical** ( **Problemtyp** ) und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischer Support: inbegriffen**: Dies wird angezeigt, wenn Sie über kein Azure-Abonnement verfügen.|
 |Azure Information Protection und Office 365-Abonnement<br /><br />Azure Rights Management mit Office 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Microsoft 365-Verwaltungsportal sowie Telefonnummern.|
