@@ -1,10 +1,10 @@
 ---
 title: Bereitstellen der Azure Information Protection Scanner-vorherige Versionen
 description: Bereitstellungs Anweisungen für Versionen der Azure Information Protection Scanner, die älter sind als die aktuelle Version der allgemeinen Verfügbarkeit.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 986a9cfb4376f17d2a53aa78b512bb8ab16f2243
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 8e1dd6ba7076a62b8b5c65b89fe49a0cb3b4fb8c
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973263"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483098"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Bereitstellen vorheriger Versionen des Azure Information Protection Scanners
 

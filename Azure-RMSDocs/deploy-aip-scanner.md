@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/27/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,20 +12,22 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc2c9a134c222ad9ec8463e94dc5b355ade20d91
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 0e8d1e570b09e406ee20fcb14a0f5bf13cb8e760
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404316"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483217"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
-> Dieser Artikel ist für die aktuelle Version der allgemeinen Verfügbarkeit des Azure Information Protection Scanners mit dem Azure Information Protection Client (klassisch) und der Vorschauversion des Scanners für die aktuelle allgemein verfügbare Version von Azure Information Protection Unified-Bezeichnungs Client.
+> Dieser Artikel ist für die aktuelle Version der allgemeinen Verfügbarkeit des Azure Information Protection Scanners mit dem Azure Information Protection-Client (klassisch) und der allgemein verfügbaren Version des Azure Information Protection Unified Bezeichnung-Clients vorgesehen.
 > 
 > Wenn Sie den Scanner bereits installiert haben und ein Upgrade durchführen möchten, verwenden Sie die folgenden Upgradeanweisungen, und befolgen Sie dann die Anweisungen auf dieser Seite, und lassen Sie den Schritt zum Installieren der Überprüfung aus:
 > - Für den klassischen Client: [Aktualisieren der Azure Information Protection Scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
@@ -755,7 +757,7 @@ Wenn der Scanner so konfiguriert wurde, dass er manuell und nicht kontinuierlich
 
 Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
+Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen zu diesem und anderen Szenarien, in denen PowerShell verwendet wird, finden Sie in den folgenden Abschnitten der Administrator Handbücher:
 

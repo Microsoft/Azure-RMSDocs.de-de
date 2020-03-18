@@ -4,7 +4,7 @@ description: Anweisungen für die Aktivierung von Schutz im Azure-Portal, damit 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 003/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 990f65adea28711f9c90382197be3f4730cbef09
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 3e04a8380a723e0c66cc6bcbc4db3c5a50953a46
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972753"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482452"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Aktivieren des Rights Management Protection Service über die Azure-Portal
 

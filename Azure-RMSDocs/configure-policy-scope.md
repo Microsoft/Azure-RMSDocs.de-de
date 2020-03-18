@@ -4,7 +4,7 @@ description: Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer z
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d0a370950bb5853453106e59af3da9c9a2f8f463
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 1922348a9d6075eb9843588515a24a5896fc41cf
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972888"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482724"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien
 
@@ -56,6 +56,9 @@ Wenn Sie z.B. in der globalen Richtlinie über eine Bezeichnung namens **Vertrau
 3. Geben Sie einen Richtliniennamen und eine Beschreibung an, die nur für Administratoren im Azure-Portal angezeigt wird. Der Name muss für Ihren Mandanten eindeutig sein. Wählen Sie dann **angeben, welche Benutzer/Gruppen diese Richtlinie erhalten**. in den nachfolgenden Bereichen können Sie die Benutzer und Gruppen für diese Richtlinie suchen und auswählen. Die Bezeichnungen und Einstellungen, die Sie in dieser bereichsbezogenen Richtlinie konfigurieren, werden nur auf diese Benutzer angewendet.
     
     Aus Leistungsgründen wird die Gruppenmitgliedschaft für bereichsbezogene Richtlinien [zwischengespeichert](prepare.md#group-membership-caching-by-azure-information-protection).
+
+    > [!NOTE]
+    > Wählen Sie bis zu 200 Benutzer oder Gruppen aus. Wenn mehr als 200 Benutzer erforderlich sind, um die Bereichs bezogene Richtlinie zu erhalten, erstellen Sie eine neue Gruppe, fügen Sie der Gruppe relevante Benutzer hinzu, und legen Sie dann den Richtlinien Bereich auf die neue Gruppe fest. 
 
 4. Fügen Sie jetzt neue Bezeichnungen hinzu, oder konfigurieren Sie die bereichsbezogenen Richtlinieneinstellungen. Die globale Richtlinie wird immer zuerst angewendet, so können Sie die globale Richtlinie mit neuen Bezeichnungen ergänzen, und Sie können die globalen Einstellungen außer Kraft setzen. Die globale Richtlinie verfügt möglicherweise über keine Standardbezeichnung, und Sie konfigurieren eine andere Standardbezeichnung in verschiedenen bereichsbezogenen Richtlinien für bestimmte Abteilungen.
 
