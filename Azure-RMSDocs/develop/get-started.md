@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: ef9e600f05d4935a03e105cca370a8afa82fa5d9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 38f9c8b6d5b916e025409e1f639749d186c20faa
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792366"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068591"
 ---
 # <a name="get-started"></a>Erste Schritte
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leitfäden zum Einrichten der Entwicklungsumgebung für die einzelnen Betriebssysteme/Plattformen einen schnellen Einstieg in die Erstellung einer ersten Anwendung. Beginnen Sie wie folgt mit dem Erstellen der rechtlich geschützten Anwendung:
 
@@ -50,9 +52,9 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
 3. Sehen Sie sich die [Karte mit der SDK-Übersicht](api-reference-4-2.md) an.
 4. Wichtige **Versionsinformationen** und **Entwicklerleitfäden** finden Sie im Thema [Neuheiten](release-notes.md).
 
-   |Thema|Description|
+   |Thema|Beschreibung|
    |-----|-----------|
-   |[Neuerungen](release-notes.md)|Das MS RMS SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung.|
+   |[Neuigkeiten](release-notes.md)|Das MS RMS SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung.|
    |[Einrichten der Entwicklerumgebung](setup-developer-environment.md)|In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.|
    |[Codebeispiele](code-examples.md)|Das MS RMS SDK 4.2 enthält Beispielcode und funktionierende Projekte für einige unterstützte Betriebssysteme.|
    |[Communityressourcen](community-resources.md)|Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.|

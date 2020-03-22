@@ -13,14 +13,16 @@ ms.assetid: A348541C-17E0-4024-BF97-84B0099B0E69
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 7a7019e72e4d8d2b66c81fbc69542e140992467b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6d6986683529018ae8d7811fc8dc1bf91bf13a82
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60176821"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068603"
 ---
 # <a name="linux-setup"></a>Linux-Setup
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Verschiedene Linux-Distributionen können jetzt das Microsoft Rights Management SDK 4.x verwenden, mit dem sich integrierte Datenschutzfunktionen in einer Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) aktivieren lassen.
 
@@ -44,5 +46,5 @@ Bibliotheken und Beispiele wurden unter Windows und auch unter OS X erfolgreich 
 ## <a name="see-also"></a>Weitere Informationen:
 
 - [Erste Schritte](get-started.md)
-- [Neuerungen](release-notes.md)
+- [Neuigkeiten](release-notes.md)
 - [Begriffe und Konzepte für Entwickler](core-concepts.md)

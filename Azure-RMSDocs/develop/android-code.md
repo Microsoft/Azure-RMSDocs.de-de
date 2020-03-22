@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791342"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068383"
 ---
 # <a name="android-code-examples"></a>Codebeispiele für Android
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 In diesem Artikel wird das Codieren von Elementen für die Android-Version des Rights Management Services SDK veranschaulicht.
 
@@ -187,7 +189,7 @@ Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für An
                      }
    ```
 
-- **Schritt 3**: Überprüfen mit der Methode [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx), ob dieser Benutzer für diesen Inhalt über die Berechtigung **Bearbeiten** verfügt.
+- **Schritt 3**: Überprüfen mit der Methode **UserPolicy.accessCheck**, ob dieser Benutzer für diesen Inhalt über die Berechtigung [Bearbeiten](https://msdn.microsoft.com/library/dn790885.aspx) verfügt.
 
     **Quelle**: *TextEditorFragment.java*
 

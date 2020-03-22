@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791439"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068568"
 ---
-# <a name="ios-and-os-x-setup"></a>iOS- und OS X-Setup
+# <a name="ios-and-os-x-setup"></a>Einrichten von iOS und OS X
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Rights Management (Azure RMS) zu ermöglichen.
 
@@ -35,7 +37,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -105,7 +107,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 * [Erste Schritte](get-started.md)
 
-* [Neuerungen](release-notes.md)
+* [Neuigkeiten](release-notes.md)
 
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 

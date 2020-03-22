@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792667"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068423"
 ---
 # <a name="android-setup"></a>Android-Setup
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu aktivieren.
 
@@ -32,7 +34,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -84,7 +86,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
     ![Erstellen der Aktivität](../media/Android-setup-04.png)
 
--   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Bei Verwendung des Layoutnamens *activity\_main* können Sie den Standardnamen *MainActivity* übernehmen.
+-   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Bei Verwendung des Layoutnamens *activity*main *können Sie den Standardnamen \_MainActivity* übernehmen.
 
     ![Angeben eines Namens für die Aktivität](../media/Android-setup-05a.jpg)
 
@@ -99,7 +101,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 - Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
 - Um auf das SDK zu verweisen, müssen Sie das SDK in den Arbeitsbereich importieren.
 
-  Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **File** auf **Import**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
+  Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **Datei** auf **Importieren**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
 
   ![Importieren in den Arbeitsbereich](../media/Android-setup-07.png)
 
@@ -123,7 +125,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
   Um die Berechtigungen hinzuzufügen, klicken Sie auf **Add** und wählen dann **Uses Permissions**.
 
-  ![Hinzufügen der Berechtigungen](../media/Android-setup-11d.jpg)
+  ![Berechtigungen hinzufügen](../media/Android-setup-11d.jpg)
 
 - Sie können diesen Schritt überprüfen, indem Sie das Manifest in der Text-Editor-Ansicht anzeigen. Vergewissern Sie sich, dass die folgenden Zeilen angezeigt werden:
 
@@ -144,7 +146,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 [Erste Schritte](get-started.md)
 
-[Neuerungen](release-notes.md)
+[Neuigkeiten](release-notes.md)
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 

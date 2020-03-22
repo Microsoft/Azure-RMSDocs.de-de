@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f343194884ba299f0a003a975581b90fe423bcf9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: ef86511649f16740c4611766103b6985f350fdc9
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482962"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068363"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -538,36 +538,47 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
     - **Beschreibung der Benutzer Zustimmung**: `Allow the application to access the scanner for the signed-in user`
     - **Status**: **aktiviert** (Standard)
 
+
 14. Schließen Sie den Bereich " **aiponbehalfof-API verfügbar** machen" in diesem Bereich.
 
-15. Wählen Sie im Bereich **App-Registrierungen** die Option **+ neue Anwendungs Registrierung** aus, um jetzt Ihre native Anwendung zu erstellen.
+15. Wählen Sie **API-Berechtigungen**aus.
 
-16. Geben Sie im Bereich **Anwendung registrieren** die folgenden Einstellungen an, und klicken Sie dann auf **registrieren**:
+16. Wählen Sie im Bereich **aiponbehalfof** | **API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+
+17. Wählen Sie **Azure Right Management**aus, wählen Sie **Delegierte Berechtigungen** aus, und wählen Sie dann **geschützte Inhalte für Benutzer erstellen und zugreifen aus**.
+
+18. Klicken Sie auf **Berechtigung hinzufügen**.
+
+19. Wählen Sie im **Bereich API-Berechtigungen** im Bereich **Zustimmung erteilen** die Option **Administrator Zustimmung für <your tenant name>erteilen aus** , und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
+
+20. Wählen Sie im Bereich **App-Registrierungen** die Option **+ neue Anwendungs Registrierung** aus, um die native Anwendung jetzt zu erstellen.
+
+21. Geben Sie im Bereich **Anwendung registrieren** die folgenden Einstellungen an, und klicken Sie dann auf **registrieren**:
     - **Name**: `AIPClient`
     - **Unterstützte Konto Typen**: **nur Konten in diesem Organisations Verzeichnis**
     - **Umleitungs-URI (optional)** : **öffentlicher Client (Mobile & Desktop)** und `http://localhost`
 
-17. Kopieren Sie im Bereich **aipclient** den Wert der Anwendungs- **ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+22. Kopieren Sie im Bereich **aipclient** den Wert der Anwendungs- **ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Dieser Wert wird für den nativeappid-Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
-18. Wählen Sie im Bereich **aipclient** im Menü **Verwalten** die Option **Authentifizierung**aus.
+23. Wählen Sie im Bereich **aipclient** im Menü **Verwalten** die Option **Authentifizierung**aus.
 
-19. Geben Sie im Bereich **aipclient-Authentifizierung** Folgendes an, und wählen Sie dann **Speichern**aus:
+24. Geben Sie im Bereich **aipclient-Authentifizierung** Folgendes an, und wählen Sie dann **Speichern**aus:
     - Wählen Sie im Abschnitt **Erweiterte Einstellungen** die Option **ID-Token**aus.
     - Wählen Sie im Abschnitt **Standard Clienttyp** die Option **Ja**aus.
 
-20. Wählen Sie im Bereich **aipclient-Authentifizierung** im Menü **Verwalten** die Option API- **Berechtigungen**aus.
+25. Wählen Sie im Bereich **aipclient-Authentifizierung** im Menü **Verwalten** die Option API- **Berechtigungen**aus.
 
-21. Wählen Sie im Bereich **aipclient-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+26. Wählen Sie im Bereich **aipclient-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
 
-22. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs**aus.
+27. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs**aus.
 
-23. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
+28. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
 
-24. Wählen Sie im **Bereich API-Berechtigungen** im Bereich **Zustimmung erteilen** die Option **Administrator Zustimmung für \<Ihres Mandanten *namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
+29. Wählen Sie im **Bereich API-Berechtigungen** im Bereich **Zustimmung erteilen** die Option **Administrator Zustimmung für \<Ihres Mandanten *namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
 
-Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *WebAppId*, *WebAppKey* und *NativeAppId* benötigen. Aus unseren Beispielen:
+Sie haben nun die Konfiguration der beiden apps abgeschlossen, und Sie verfügen über die Werte, die Sie zum Ausführen von [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *webappid*, *webappkey* und *nativeappid*benötigen. Aus unseren Beispielen:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 

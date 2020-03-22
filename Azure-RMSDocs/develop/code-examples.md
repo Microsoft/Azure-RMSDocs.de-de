@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 40fcde97afba3278b57834b9c4740de9a5f3703d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 59348809863e457614dc1ec3152749b79fcfd84e
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792565"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068533"
 ---
 # <a name="code-examples"></a>Codebeispiele
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Das Microsoft Rights Management SDK 4.2 enthält Beispielcode und funktionierende Projekte für einige unterstützte Betriebssysteme.
 

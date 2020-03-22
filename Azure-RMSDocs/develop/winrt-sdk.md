@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 41ae437f06a3d90f391ead9dc843e86c1b54fcd8
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790724"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068681"
 ---
 # <a name="windows-store-setup"></a>Windows Store-Setup
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Windows Store-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Informationsschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.
 
@@ -32,10 +34,10 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 
-Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
+Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
 
 -   [Windows 8.1](https://windows.microsoft.com/windows-8/meet)-Betriebssystem
 -   [Windows SDK für Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
@@ -43,7 +45,7 @@ Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
 -   Das MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
 -   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx). Auch andere Authentifizierungsbibliotheken können verwendet werden.
 
-Im Thema zu den [Neuigkeiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
+Im Thema zu den [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
 
 ## <a name="optional"></a>Optional
 
@@ -52,8 +54,8 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 ## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
 
--   Öffnen Sie Visual Studio.
--   Klicken Sie auf **Datei**, auf **Neu**und anschließend auf **Projekt**.
+-   Öffnen Sie Visual Studio.
+-   Klicken Sie auf **Datei**, auf **Neu** und anschließend auf **Projekt**.
 -   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#** , und wählen Sie **Leere App (Windows)** aus. Klicken Sie anschließend auf **OK**.
 
     ![Erstellen eines neuen Projekts](../media/winrtsetup-newproj.png)
@@ -63,7 +65,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
     ![Hinzufügen eines Verweises](../media/winrtsetup-addref.png)
 
 -   Klicken Sie im Dialogfeld **Verweis hinzufügen** auf **Durchsuchen**, und wählen Sie die Datei *Microsoft.RightsManagment.dll* aus, die sich in dem Ordner befindet, in den Sie das SDK-Paket extrahiert haben.
--   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für **das Windows Visual C++-Laufzeitpaket für Windows**.
+-   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
 
     ![Hinzufügen von Erweiterungen](../media/winrtsetup-refmngr.png)
 
@@ -75,7 +77,7 @@ Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
 [Erste Schritte](get-started.md)
 
-[Neuerungen](release-notes.md)
+[Neuigkeiten](release-notes.md)
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 

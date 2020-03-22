@@ -14,15 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8c36466511749b6148f58c439702c8cd0f252a64
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792090"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068509"
 ---
-# <a name="windows-phone-setup"></a>Windows Phone-Setup
+# <a name="windows-phone-setup"></a>Einrichten von Windows Phone
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Windows Phone-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Informationsschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.
 
@@ -32,10 +33,10 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 
-Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
+Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
 
 -   Das [Windows 8.1](https://windows.microsoft.com/windows-8/meet)-Betriebssystem.
 -   [Windows Phone 8.1 Development Tools (SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive)
@@ -43,7 +44,7 @@ Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
 -   Das MS RMS SDK 4.2-Paket für Windows Phone. Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
 -   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx). Auch andere Authentifizierungsbibliotheken können verwendet werden.
 
-Im Thema zu den [Neuigkeiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
+Im Thema zu den [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
 
 Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklung](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx) an
 
@@ -61,7 +62,7 @@ Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklun
     ![Hinzufügen eines Verweises](../media/wpsetup-addref.png)
 
 -   Klicken Sie auf **Durchsuchen** unten links im Dialogfeld **Verweis hinzufügen**, und wählen Sie die *Microsoft.RightsManagment.dll*-Datei aus, die sich in dem Ordner befindet, in dem Sie das Paket extrahiert haben.
--   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für **das Windows Visual C++-Laufzeitpaket für Windows**.
+-   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
 
     ![Hinzufügen von Erweiterungen](../media/wpsetup-refmngr.png)
 
@@ -73,7 +74,7 @@ Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
 [Erste Schritte](get-started.md)
 
-[Neuerungen](release-notes.md)
+[Neuigkeiten](release-notes.md)
 
 [Kernkonzepte](core-concepts.md)
 
