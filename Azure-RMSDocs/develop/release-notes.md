@@ -12,16 +12,18 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 2a3ef40991e2ba4fd5bac9c9eca947f269a77f47
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303629"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068309"
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
-## <a name="whats-new"></a>Neues
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
+## <a name="whats-new"></a>Neuheiten
 
 In diesem Thema werden wichtige Änderungen und Funktionen in dieser neuen Version von RMS SDK v4. x beschrieben.
 
@@ -143,7 +145,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   **AD RMS-Unterstützung**: IT-Administratoren können RMS-fähige Apps auf mobilen Geräten mit den neuen Erweiterungen für mobile Geräte des AD RMS-Servers verwenden.
 -   **Offlineverarbeitung**: Endbenutzer können auf RMS-geschützte Daten offline zugreifen.
--   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) verwenden.
+-   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (Azure AD Authentication Library; ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) verwenden.
 -   **Getrennte Benutzeroberfläche**: Entwickler können ihre Benutzeroberfläche zum Schutz und zur Nutzung von RMS-geschützten Dokumenten konfigurieren.
 -   **Überarbeitete API**: Entwickler können ab sofort eine einfache und transparente Verschlüsselungs- und Entschlüsselungs-API verwenden, die mit minimalem Aufwand ein konsistentes RMS-Verhalten bietet.
 
@@ -163,7 +165,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   Bei Verwendung der Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) mit einer vom Wert *array.length* abweichenden Länge kann der Inhalt später nicht mit dem SDK verwendet werden.
 
-    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]*-Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
+    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]* -Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
 **iOS und OS X**
 
@@ -200,7 +202,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **Alle Plattformen**
 
-**F**: Ich sehe im Schutz-Workflow keine Benutzeroberfläche zur Auswahl von **benutzerdefinierten Berechtigungen**. Weshalb?
+**F**: Ich sehe im Schutz-Workflow keine Benutzeroberfläche zur Auswahl von **benutzerdefinierten Berechtigungen**. Warum?
 
 **A**: Dies ist ein bekanntes Problem, auf das später noch eingegangen wird.
 
@@ -208,7 +210,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **A**: Um Anmeldeinformationen für Azure AD RMS-Testorganisationen anzufordern, senden Sie eine E-Mail an <rmcstbeta@microsoft.com>.
 
-**F**: Ich sehe hier in der Dokumentation keine Erörterung der Testhierarchie. Weshalb?
+**F**: Ich sehe hier in der Dokumentation keine Erörterung der Testhierarchie. Warum?
 
 **A**: Es gibt bei den neuen AD RMS SDKs kein Testhierarchiekonzept. Sie arbeiten immer mit der Produktionshierarchie.
 
@@ -231,7 +233,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **A**: Xcode 5.0 mit iOS 7 und höher.
 
-**F**: Ich habe die cancel()-Methode für einen Vorgang aufgerufen, erhalte jedoch immer noch die Benachrichtigung, dass der Vorgang abgeschlossen wurde. Weshalb?
+**F**: Ich habe die cancel()-Methode für einen Vorgang aufgerufen, erhalte jedoch immer noch die Benachrichtigung, dass der Vorgang abgeschlossen wurde. Warum?
 
 **A**: Nicht alle Vorgänge können abgebrochen werden, weshalb ein Abbruchvorgang so gut wie möglich ausgeführt wird.
 
