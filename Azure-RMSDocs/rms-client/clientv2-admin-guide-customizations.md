@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/11/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 76109514c88b90826d2f258f86f2bc97dc7cbce1
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: d28386d43df47ff0aaacf039d6649e622077b6ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404945"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138312"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -302,158 +302,8 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen
 
-Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
-
-Es gibt zwei Methoden, mit denen Klassifizierungen aus anderen Bezeichnungs Lösungen entfernt werden können. Die erste Methode entfernt alle Formen aus Word-Dokumenten, bei denen der Shape-Name mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove**definiert wurde. mit der zweiten Methode können Sie textbasierte Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten entfernen oder ersetzen, wie in der erweiterten Eigenschaft **removeexternalcontentmarkinginapp** 
-
-### <a name="use-the-wordshapenametoremove-advanced-property"></a>Verwenden der erweiterten Eigenschaft wordshapenametoremove
-
-*Die Eigenschaft **wordshapenametoremove** Advanced wird von Version 2.6.101.0 und höher unterstützt.*
-
-Mit dieser Einstellung können Sie formbasierte Bezeichnungen aus Word-Dokumenten entfernen oder ersetzen, wenn diese visuellen Kennzeichnungen von einer anderen Bezeichnungs Lösung angewendet wurden. Die Form enthält z. b. den Namen einer alten Bezeichnung, die Sie nun zu Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Form zu verwenden.
-
-Um diese erweiterte Eigenschaft verwenden zu können, müssen Sie den Namen der Form im Word-Dokument suchen und diese dann in der erweiterten Eigenschaften Liste von **wordshapenametoremove** definieren. Der Dienst entfernt eine beliebige Form in Word, die mit einem Namen beginnt, der in der Liste der Formen in dieser erweiterten Eigenschaft definiert ist.
-
-Vermeiden Sie das Entfernen von Formen, die den zu ignorierenden Text enthalten, indem Sie den Namen aller zu entfernenden Formen definieren und das Überprüfen des Texts in allen Formen vermeiden, bei dem es sich um einen ressourcenintensiven Prozess handelt.
-
-Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wortformen angeben und Word im Schlüsselwert **removeexternalcontentmarkinginapp** enthalten ist, werden alle Formen auf den Text überprüft, den Sie im Wert von **externalcontentmarkingtoremove** angeben. 
-
-So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen:
-
-1. Zeigen Sie in Word den **Auswahl** Bereich an: Registerkarte " **Home** " > **Bearbeitungs** Gruppe > **Wählen Sie** die Option > **Auswahl**Bereich aus.
-
-2. Wählen Sie die Form auf der Seite aus, die Sie zum Entfernen markieren möchten. Der Name der von Ihnen markierten Form ist nun im Bereich **Auswahl** hervorgehoben.
-
-Verwenden Sie den Namen der Form, um einen Zeichen folgen Wert für den Schlüssel * * * * wordshapenametoremove * * * * anzugeben. 
-
-Beispiel: der Name der Form ist **DC**. Geben Sie den Wert `dc` an, um die Form mit diesem Namen zu entfernen.
-
-- Schlüssel: **wordshapenametoremove**
-
-- Wert: \<**Word-FormName**> 
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
-
-Wenn Sie mehr als eine Wort Form entfernen möchten, geben Sie so viele Werte an, wie die zu entfernenden Formen vorhanden sind.
-
-
-### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft
-Mit dieser Einstellung können Sie textbasierte Kopf-oder Fußzeilen aus Dokumenten entfernen oder ersetzen, wenn diese visuellen Kennzeichnungen durch eine andere Bezeichnungs Lösung angewendet wurden. Beispielsweise enthält die alte Fußzeile den Namen einer alten Bezeichnung, die Sie nun zu den Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Fußzeile zu verwenden.
-
-Wenn der Unified Label-Client diese Konfiguration in der Richtlinie abruft, werden die alten Kopf-und Fußzeilen entfernt oder ersetzt, wenn das Dokument in der Office-App geöffnet wird und jede Vertraulichkeits Bezeichnung auf das Dokument angewendet wird.
-
-Diese Konfiguration wird für Outlook nicht unterstützt. Beachten Sie außerdem, dass die Verwendung mit Word, Excel und PowerPoint sich negativ auf die Leistung dieser Apps für Benutzer auswirken kann. Mithilfe der Konfiguration können Sie Einstellungen für jede einzelne Anwendung definieren, z.B. die Suche nach Text in Kopf- oder Fußzeilen von Word-Dokumenten, jedoch nicht von Excel-Tabellen oder PowerPoint-Präsentationen.
-
-Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich, die Office-Anwendungs Typen (**W**Ord, E**X**cel, **P**owerpoint) nur auf die zu durchsuchenden Anwendungen einzuschränken.
-
-Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
-
-- Key: **RemoveExternalContentMarkingInApp**
-
-- Value: \<**Office-Anwendungstypen WXP**> 
-
-Beispiele:
-
-- Geben Sie **W** an, um nur Word-Dokumente zu durchsuchen.
-
-- Geben Sie **WP** an, um Word-Dokumente und PowerPoint-Präsentationen zu durchsuchen.
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
-
-Sie benötigen dann mindestens eine weitere erweiterte Clienteinstellung, **ExternalContentMarkingToRemove**, um die Inhalte der Kopf- oder Fußzeile anzugeben und diese zu entfernen oder zu ersetzen.
-
-### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Konfigurieren von ExternalContentMarkingToRemove
-
-Wenn Sie den Zeichenfolgenwert für den Schlüssel **ExternalContentMarkingToRemove** angeben, stehen drei Optionen zur Verfügung, die reguläre Ausdrücke verwenden:
-
-- Partielle Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
-    
-    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten diese Kopf- oder Fußzeilen vollständig entfernen. Geben Sie den Wert `*TEXT*` an.
-
-- Vollständige Übereinstimmung, um nur bestimmte Wörter aus der Kopf- oder Fußzeile zu entfernen.
-    
-    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten nur das Wort **TEXT** entfernen, wodurch die Zeichenfolge der Kopf- oder Fußzeile **TO REMOVE** entspricht. Geben Sie den Wert `TEXT ` an.
-
-- Vollständige Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
-    
-    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten die Kopf- oder Fußzeilen entfernen, die genau diese Zeichenfolge enthalten. Geben Sie den Wert `^TEXT TO REMOVE$` an.
-    
-
-Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß- und Kleinschreibung. Die maximale Zeichen folgen Länge beträgt 255 Zeichen und darf keine Leerzeichen enthalten. 
-
-Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder Tabstopps enthalten können, wird die Zeichenfolge, die Sie für einen Begriff oder einen Satz angeben, möglicherweise nicht erkannt. Geben Sie nach Möglichkeit immer ein einzelnes unterscheidendes Wort für den Wert an, und testen Sie die Ergebnisse, bevor Sie diese für die Produktion bereitstellen.
-
-Geben Sie für dieselbe Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
-
-- Key: **ExternalContentMarkingToRemove**
-
-- Value: \<**zu vergleichende Zeichenfolge; als regulärer Ausdruck definiert**> 
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
-
-#### <a name="multiline-headers-or-footers"></a>Mehrzeilige Kopf- oder Fußzeilen
-
-Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstellen Sie einen Schlüssel und einen Wert für jede Zeile. Angenommen, folgende Fußzeile mit zwei Zeilen ist vorhanden:
-
-**The file is classified as Confidential**
-
-**Label applied manually**
-
-Um diese mehrzeilige Fußzeile zu entfernen, erstellen Sie die folgenden zwei Einträge für die gleiche Bezeichnungs Richtlinie:
-
-- Key: **ExternalContentMarkingToRemove**
-
-- Key Value 1: **\*Confidential***
-
-- Key Value 2: **\*Label applied*** 
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-
-
-#### <a name="optimization-for-powerpoint"></a>Optimierung für PowerPoint
-
-In PowerPoint werden Fußzeilen als Formen implementiert. Wenn Sie vermeiden möchten, dass Formen entfernt werden, die den angegeben Text enthalten, jedoch keine Kopf- oder Fußzeilen sind, verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **PowerPointShapeNameToRemove**. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
-
-Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
-
-So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:
-
-1. Zeigen Sie in PowerPoint den Bereich **Auswahl** an: **Format** > **Anordnen** > **Auswahlbereich**.
-
-2. Wählen Sie die Form auf der Folie aus, die die Kopf- oder Fußzeile enthält. Der Name der ausgewählten Form wird nun im Bereich **Auswahl** hervorgehoben.
-
-Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel **PowerPointShapeNameToRemove** anzugeben. 
-
-Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
-
-- Key: **PowerPointShapeNameToRemove**
-
-- Value: \<**Name der PowerPoint-Form**> 
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
-
-Wenn Sie mehr als eine PowerPoint-Form entfernen möchten, geben Sie so viele Werte an, wie die zu entfernenden Formen vorhanden sind.
-
-Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüft. Wenn Sie diese Suche auf alle Folien ausweiten möchten (dieser Prozess ist jedoch wesentlich ressourcenintensiver), verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **RemoveExternalContentMarkingInAllSlides**:
-
-- Key: **RemoveExternalContentMarkingInAllSlides**
-
-- Wert: **TRUE**
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
-
+> [!NOTE]
+> Diese Konfiguration verfügt zurzeit über eine bekannte Einschränkung und wird in einer zukünftigen Version erneut veröffentlicht. 
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer
 

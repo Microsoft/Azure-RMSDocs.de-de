@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b91a5e495ef625595d3453d306b6352f36d07d1e
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 2adce92f9507a31feb3c2a8acd5f9d62979f187a
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138256"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -124,6 +124,8 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
 |Unterstützung für AD RMS:| **Ja** | Nein <sup>7</sup> | Nein |
+|Externe Inhalts Markierung in App entfernen| **Ja**| Nein| **Ja**|
+
 
 Fußnoten:
 

@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen zu Azure Information Protection und
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 13e6b4ea47c2aafeec24984c7db6aab99a16e9a0
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 586932ce196769a49e5901dbe6b1290e9d7390ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138295"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -82,9 +82,9 @@ Beide Clients werden bei der Installation **Azure Information Protection**angeze
 
 Verwenden Sie die angezeigte **Versions** Nummer, um den Client zu identifizieren:
 
-- Eine Version **1**, z. b. **1.53.10.0**, identifiziert den Azure Information Protection Client (klassisch).
+- Eine Version **1**, z. b. **1.54.59.0**, identifiziert den Azure Information Protection Client (klassisch).
 
-- Eine Version **2**, z. b. **2.2.14.0**, identifiziert den Azure Information Protection Unified-Bezeichnungs Client.
+- Eine Version **2**, z. b. **2.6.111.0**, identifiziert den Azure Information Protection Unified-Bezeichnungs Client.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Wann ist der richtige Zeitpunkt für die Migration meiner Bezeichnungen?
 
