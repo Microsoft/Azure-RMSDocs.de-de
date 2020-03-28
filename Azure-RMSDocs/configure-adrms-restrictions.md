@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 4fb1018d75717faeb2e19a1ac63bc74b9cb44b07
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 83fc8228b664acc067c6a604f3d438f39669a49a
+ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482690"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375632"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
@@ -194,7 +194,7 @@ Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die
 
 - Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Suchen der Lizenzierungs-URL: Klicken Sie auf den Clusternamen. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: https://rmscluster.contoso.com 
+- Suchen der Lizenzierungs-URL: Klicken Sie auf den Clusternamen. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: `https://rmscluster.contoso.com` 
     
     Wenn Sie über einen Extranetlizenzierungswert sowie über einen Intranetlizenzierungswert verfügen und diese verschieden sind: Geben Sie den Extranetwert nur an, wenn Sie geschützte Dokumente oder E-Mails für Partner freigeben, mit denen Sie Punkt-zu-Punkt-Vertrauensstellungen definiert haben. Verwenden Sie andernfalls den Intranetwert, und stellen Sie sicher, dass alle Clientcomputer, die AD RMS-Schutz mit Azure Information Protection verwenden, eine Verbindung über eine Intranetverbindung herstellen (z.B. verwenden Remotecomputer eine VPN-Verbindung).
 

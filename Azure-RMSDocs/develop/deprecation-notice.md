@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 7a590457f04daf57bd8143883a6a29c9dd0e7219
-ms.sourcegitcommit: e36c2dba68caac6e3d2b094bd38a67758665ca76
+ms.openlocfilehash: 81c1ae66ebe1580255469c7008996ea633ca358d
+ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78934438"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375592"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>RMS SDK 4,2-Hinweis zur Veraltung 
 
@@ -33,7 +33,7 @@ In früheren Versionen des-RMS SDK wird das Fixieren von Zertifikaten verwendet,
 
 Moderne Browser verwenden Zertifikat Transparenz Protokolle, um zu überprüfen, ob Zertifikate für berechtigte Domänen Besitzer ausgestellt wurden und dass diese Zertifikate von vertrauenswürdigen Stamm Zertifizierungsstellen ausgestellt werden.  
 
-Um moderne Browser besser unterstützen zu können, aktualisiert Microsoft am 15. September 2020 das Zertifikat für https://api.aadrm.com auf ein neues Zertifikat, das von einer global vertrauenswürdigen Stamm Zertifizierungsstelle ausgestellt wurde, die ausgestellte Zertifikate für Zertifikat Transparenz Protokolle meldet, denen von modernen Browsern vertraut wird. Wenn diese Änderung vollständig ist, können ältere Versionen von RMS SDK, die versuchen, das Zertifikat an das erwartete Stamm Zertifikat anzuhependen, dieses Zertifikat nicht finden. die Verbindung kann nicht hergestellt werden.  
+Um moderne Browser besser unterstützen zu können, aktualisiert Microsoft am 15. September 2020 das Zertifikat für `https://api.aadrm.com` auf ein neues Zertifikat, das von einer global vertrauenswürdigen Stamm Zertifizierungsstelle ausgestellt wurde, die ausgestellte Zertifikate für Zertifikat Transparenz Protokolle meldet, denen von modernen Browsern vertraut wird. Wenn diese Änderung vollständig ist, können ältere Versionen von RMS SDK, die versuchen, das Zertifikat an das erwartete Stamm Zertifikat anzuhependen, dieses Zertifikat nicht finden. die Verbindung kann nicht hergestellt werden.  
 
 ## <a name="client-impact"></a>Client Auswirkung 
 
