@@ -1,10 +1,10 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection – Phase 2
 description: Phase 2 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 4 bis 6 der Migration von AD RMS zu Azure Information Protection ab.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 1fbe3fd2f91b63e7111b4de92e95ec4cad20fa4f
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404044"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670188"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -54,7 +54,7 @@ Führen Sie das folgende Verfahren auf allen AD RMS-Clustern für alle vertrauen
 
     - Aktivieren Sie das Kontrollkästchen zum Speichern der vertrauenswürdigen Domänendatei in RMS Version 1.0 nicht.
 
-Wenn Sie alle vertrauenswürdigen Veröffentlichungsdomänen exportiert haben, können Sie mit dem Importieren dieser Daten in Azure Information Protection beginnen.
+Wenn Sie alle vertrauenswürdigen Veröffentlichungs Domänen exportiert haben, können Sie das Verfahren zum Importieren dieser Daten in Azure Information Protection starten.
 
 Beachten Sie, dass die vertrauenswürdigen Veröffentlichungsdomänen die SLC-Schlüssel (Server Licensor Certificate) zum Entschlüsseln zuvor geschützter Dateien enthalten. Daher ist es wichtig, dass Sie über die derzeit aktive Domäne hinaus auch sämtliche vertrauenswürdigen Veröffentlichungsdomänen exportieren (und später in Azure importieren).
 
@@ -77,7 +77,7 @@ Die aktuelle AD RMS-Bereitstellung verwendet eine der folgenden Konfigurationen 
 > [!NOTE]
 > Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](https://technet.microsoft.com/library/jj651024.aspx).
 
-Folgende zwei Optionen sind für die Azure Information Protection-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) in Azure Key Vault verwaltet. Das Szenario, bei dem Sie Ihren eigenen Azure Information Protection-Mandantenschlüssel verwalten, wird auch als „Bring Your Own Key“ (BYOK) bezeichnet. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
+Folgende zwei Optionen sind für die Azure Information Protection-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) in Azure Key Vault verwaltet. Wenn Sie Ihren eigenen Azure Information Protection Mandanten Schlüssel verwalten, wird er manchmal als "Bring your own Key" (Byok) bezeichnet. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
 Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migration zu verwenden ist. 
 

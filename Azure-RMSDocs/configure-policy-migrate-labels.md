@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a7413026bc85c93063c5eb490c559e52db63b718
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: ffb0d3b468940cb0497b0d7081520e06942bc096
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482316"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670193"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -99,15 +99,15 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
 |Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|
-|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
-|Visuelle Kennzeichnungen pro App|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
+|Benutzerdefinierter Schrift Grad und benutzerdefinierte Schriftfarbe durch RGB-Code für visuelle Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)  |Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen. <br /><br /> Der **benutzerdefinierte** Schriftart Typen (Arial, Courier und andere) wird vom Unified-Bezeichnungs Client nicht unterstützt.|
+|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Ja|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
+|Visuelle Kennzeichnungen pro App|Ja|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
 |"Nur für mich" Schutz |Ja|Die Admin Center erlauben Ihnen nicht, die von Ihnen geltenden Verschlüsselungseinstellungen zu speichern, ohne Benutzer anzugeben. Im Azure-Portal führt diese Konfiguration zu einer Bezeichnung, die den [Schutz "nur für mich](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)" betrifft. <br /><br /> Erstellen Sie alternativ eine Bezeichnung, die die Verschlüsselung anwendet und einen Benutzer mit beliebigen Berechtigungen angibt, und bearbeiten Sie dann die zugehörige Schutz Vorlage mithilfe von PowerShell. Verwenden Sie zunächst das Cmdlet [New-aipservicerighundefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition) (siehe Beispiel 3), und legen Sie dann [-aipservicetemplateproperty](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples) mit dem Parameter *rightiondefinitions* fest.|
 |Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
 
-Verwenden Sie die folgende Tabelle, um zu ermitteln, wie sich die gleiche Schutz Einstellung für eine Bezeichnung anders verhält, je nachdem, ob Sie vom Azure Information Protection Client (klassisch), vom Azure Information Protection Unified Label-Client oder von Office-Apps verwendet wird. , bei denen die Bezeichnung bereits integriert ist (auch bekannt als "Native Büro Bezeichnung"). Die Unterschiede im Bezeichnungs Verhalten können Ihre Entscheidung ändern, ob die Bezeichnungen veröffentlicht werden sollen, insbesondere wenn Sie über eine Kombination von Clients in Ihrer Organisation verfügen.
+Verwenden Sie die folgende Tabelle, um zu ermitteln, wie sich die gleiche Schutz Einstellung für eine Bezeichnung anders verhält, je nachdem, ob Sie vom Azure Information Protection Client (klassisch), vom Azure Information Protection Unified Label-Client oder von Office-Apps verwendet wird, deren Bezeichnung in integriert ist (auch bekannt als "Native Office-Bezeichnung"). Die Unterschiede im Bezeichnungs Verhalten können Ihre Entscheidung ändern, ob die Bezeichnungen veröffentlicht werden sollen, insbesondere wenn Sie über eine Kombination von Clients in Ihrer Organisation verfügen.
 
 Wenn Sie nicht sicher sind, wie Ihre Schutzeinstellungen konfiguriert sind, können Sie die Einstellungen im Bereich **Schutz** im Azure-Portal anzeigen. Eine Anleitung zu diesem Schritt finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -192,7 +192,7 @@ Weitere Informationen zum Konfigurieren der Richtlinien Einstellungen, der erwei
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Clients und Dienste, die einheitliche Bezeichnungen unterstützen
 
-Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheitliche Bezeichnung unterstützen, lesen Sie die Dokumentation, um zu überprüfen, ob Sie Vertraulichkeits Bezeichnungen verwenden können, die von einem der Admin Center veröffentlicht werden: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center. 
+Um zu bestätigen, ob die von Ihnen verwendeten Clients und Dienste vereinheitlichte Bezeichnungen unterstützen, lesen Sie die Dokumentation, um zu prüfen, ob Sie Vertraulichkeits Bezeichnungen verwenden können, die von einem der Admin Center veröffentlicht werden: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center. 
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 

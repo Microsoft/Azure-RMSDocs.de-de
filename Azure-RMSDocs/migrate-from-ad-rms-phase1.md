@@ -1,10 +1,10 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection – Phase 1
 description: Phase 1 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 1 bis 3 der Migration von AD RMS zu Azure Information Protection ab.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9bd7768d478301e090518f86bd119c99436ca8a3
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 7187ab8538122b7af64d8c261f4cc96632a15393
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79405081"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670161"
 ---
 # <a name="migration-phase-1---preparation"></a>Migrationsphase 1: Vorbereitung
 

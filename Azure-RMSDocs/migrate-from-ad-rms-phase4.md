@@ -1,10 +1,10 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection – Phase 4
 description: Phase 4 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 8 bis 9 der Migration von AD RMS zu Azure Information Protection ab.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 61a17f9d4b80dcc5ada82adeab4e215fc17b0963
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: b17f87f569b613a1583b82060b05bcbdeb943284
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934669"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670186"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
@@ -27,14 +27,14 @@ ms.locfileid: "74934669"
 
 Verwenden Sie die folgenden Informationen für Phase 4 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 8 bis 9 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
-## <a name="step-8-configure-irm-integration-for-exchange-online"></a>Schritt 8: Konfigurieren der IRM-Integration mit Exchange Online
+## <a name="step-8-configure-irm-integration-for-exchange-online"></a>Schritt 8. Konfigurieren der IRM-Integration mit Exchange Online
 
 > [!IMPORTANT]
 > Da Sie nicht steuern können, welche Empfänger migrierte Benutzer womöglich für geschützte E-Mails auswählen, stellen Sie sicher, dass alle Benutzer und E-Mail-aktivierte Gruppen in Ihrer Organisation über ein Konto in Azure AD verfügen, das mit Azure Information Protection verwendet werden kann. [Weitere Informationen](prepare.md)
 
 Gehen Sie unabhängig von der Topologie des von Ihnen ausgewählten Azure Information Protection-Mandantenschlüssels wie folgt vor:
 
-1. Damit Exchange Online E-Mails entschlüsseln kann, die durch AD RMS geschützt sind, muss die AD RMS-URL für Ihren Cluster mit dem Schlüssel übereinstimmen, der in Ihrem Mandanten verfügbar ist. Dieser Abgleich geschieht mithilfe des DNS-SRV-Datensatzes für Ihren AD RMS-Cluster, der auch verwendet wird, um Office-Clients für die Verwendung von Azure Information Protection neu zu konfigurieren. Wenn Sie den DNS-SRV-Bericht für die Clientkonfiguration in Schritt 7 nicht erstellt haben, erstellen Sie diesen Bericht jetzt, um Exchange Online zu unterstützen. [Anweisungen](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+1. Damit Exchange Online e-Mails entschlüsseln kann, die durch AD RMS geschützt sind, müssen Sie wissen, dass die AD RMS-URL für Ihren Cluster dem in Ihrem Mandanten verfügbaren Schlüssel entspricht. Dieser Abgleich geschieht mithilfe des DNS-SRV-Datensatzes für Ihren AD RMS-Cluster, der auch verwendet wird, um Office-Clients für die Verwendung von Azure Information Protection neu zu konfigurieren. Wenn Sie den DNS-SRV-Bericht für die Clientkonfiguration in Schritt 7 nicht erstellt haben, erstellen Sie diesen Bericht jetzt, um Exchange Online zu unterstützen. [Anweisungen](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
     
     Wenn dieser DNS-Eintrag vorhanden ist, können Benutzer, die Outlook im Web und mobile E-Mail-Clients verwenden, AD RMS-geschützte E-Mails in diesen Apps anzeigen. Zudem kann Exchange den von AD RMS importierten Schlüssel zum Entschlüsseln, Indizieren, Erfassen und Schützen von Inhalten verwenden, die durch AD RMS geschützt wurden.  
 
@@ -46,7 +46,7 @@ Gehen Sie unabhängig von der Topologie des von Ihnen ausgewählten Azure Inform
     
     - Wenn AzureRMSLicensingEnabled auf **FALSE** festgelegt ist, führen Sie `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` aus, führen Sie anschließend die Überprüfungsschritte vom Artikel [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen Funktionen der Office 365-Nachrichtenverschlüsselung, die auf Azure Information Protection aufgebaut sind)](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) durch, um sicherzustellen, dass Exchange Online nun zur Verwendung des Azure Rights Management-Diensts bereit ist. 
 
-## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Schritt 9: Konfigurieren der IRM-Integration für Exchange Server und SharePoint Server
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Schritt 9. Konfigurieren der IRM-Integration für Exchange Server und SharePoint Server
 
 Wenn Sie die Information Rights Management-Funktion (IRM) von Exchange Server oder SharePoint Server mit AD RMS verwendet haben, müssen Sie den Rights Management-Connector (RMS) bereitstellen, der als Kommunikationsschnittstelle (Relais) zwischen Ihren lokalen Servern und dem Schutzdienst für Azure Information Protection fungiert.
 
@@ -97,7 +97,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
-6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, z.B. indem Sie eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben.
+6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, z. B. indem Sie eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben.
 
 ### <a name="disable-irm-on-sharepoint-servers-and-remove-ad-rms-configuration"></a>Deaktivieren von IRM auf SharePoint Servern und Entfernen der AD RMS-Konfiguration
 
@@ -107,7 +107,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
 
 3.  Klicken Sie auf der Seite **Sicherheit** im Abschnitt **Informationsrichtlinie** auf **Verwaltung von Informationsrechten konfigurieren**.
 
-4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management** **Verwenden Sie IRM nicht auf diesem Server**, und klicken Sie dann auf **OK**.
+4.  Wählen Sie auf der Seite **Verwaltung von Informationsrechten konfigurieren** im Abschnitt **Verwaltung von Informationsrechten** die Option **IRM nicht auf diesem Server verwenden** aus, klicken Sie dann auf **OK**.
 
 5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners „\ProgramData\Microsoft\MSIPC\Server\\<*SID des Kontos, das SharePoint Server ausführt>* “.
 
