@@ -13,10 +13,10 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: 97008a7ecb7979780454bee990ae905d87655f45
-ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "73979970"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
@@ -29,7 +29,7 @@ Die folgende Abbildung zeigt ein Beispiel für Azure Information Protection in A
 
 ![Beispiel für die empfohlene Klassifizierung mit Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot des [Azure Information Protection-Clients (klassisch)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-client-classic"></a>Screenshot des [Azure Information Protection-Clients (klassisch)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 Nachdem Ihr Inhalt klassifiziert (und optional geschützt) wurde, können Sie nachverfolgen und steuern, wie er verwendet wird. Sie können die Datenflüsse analysieren, um Einblicke in Ihr Geschäft zu erhalten, riskante Verhalten zu erkennen und Korrekturmaßnahmen zu ergreifen, den Zugriff auf Dokumente zu verfolgen, Datenverluste oder Missbrauch zu verhindern usw.
 
@@ -41,7 +41,7 @@ Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiz
 
 ![E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung](./media/example-email-footerv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot des [Azure Information Protection-Clients (klassisch)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-client-classic"></a>Screenshot des [Azure Information Protection-Clients (klassisch)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## <a name="how-data-is-protected"></a>So werden die Daten geschützt
 
@@ -71,7 +71,7 @@ Azure Information Protection kann in vorhandene Endbenutzer-Workflows integriert
 
 ![Beispiel für die Azure Information Protection-Leiste in Excel](./media/excelproplus-infoprotect-bar.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot des [Azure Information Protection-Clients für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-client"></a>Screenshot des [Azure Information Protection-Clients für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
 
 Diese Information Protection-Leiste erleichtert es dem Endbenutzer, Bezeichnungen für die richtige Klassifizierung auszuwählen. Bei Bedarf können Bezeichnungen auch automatisch angewendet werden, um Unwägbarkeiten für Benutzer zu entfernen, und damit sie mit den Richtlinien Ihrer Organisation übereinstimmen.
 
@@ -103,7 +103,7 @@ Geschützte E-Mails, die an einen Benutzer in derselben Organisation gerichtet s
 
 ![Auswählen einer Bezeichnung, für die die Option „Nicht weiterleiten“ konfiguriert ist](./media/recipients-only-label2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot des [Azure Information Protection-Clients für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-client"></a>Screenshot des [Azure Information Protection-Clients für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 Alternativ können Sie anhand von E-Mail-Flussregeln, bei denen Rechteschutz angewendet wird, automatisch Schutz für Benutzer gewährleisten. 
 
