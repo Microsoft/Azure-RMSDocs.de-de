@@ -7,10 +7,10 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556077"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++)
@@ -56,7 +56,7 @@ Zunächst erstellen und konfigurieren Sie die erste Projektmappe und das erste P
 
 Nun erstellen Sie eine grundlegende Implementierung für eine Observer-Klasse des Dateiprofils, indem Sie die Klasse `mip::FileProfile::Observer` des SDK erweitern. Der Observer wird später instanziiert und verwendet, um den Ladevorgang des Profilobjekts der Datei zu überwachen und das Engine-Objekt zum Profil hinzuzufügen.
 
-1. Fügen Sie eine neue Klasse zu Ihrem Projekt hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
+1. Fügen Sie Ihrem Projekt eine neue Klasse hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
 
    - Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste erneut auf den Projektknoten, und wählen Sie **Hinzufügen** > **Klasse** aus.
    - Gehen Sie im Dialogfeld **Klasse hinzufügen** folgendermaßen vor:
@@ -65,7 +65,7 @@ Nun erstellen Sie eine grundlegende Implementierung für eine Observer-Klasse de
 
      [![Klasse in Visual Studio hinzufügen](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
 
-2. Nach dem Generieren der H- und der CPP-Datei für die Klasse werden beide Dateien in Editor-Gruppenregisterkarten geöffnet. Aktualisieren Sie jetzt jede Datei, um Ihre neue Observer-Klasse zu implementieren:
+2. Nach dem Generieren der H- und der CPP-Datei für die Klasse werden beide Dateien auf Editor-Gruppenregisterkarten geöffnet. Aktualisieren Sie jetzt jede Datei, um die neue Observer-Klasse zu implementieren:
 
    - Aktualisieren Sie „profile_observer.h“, indem Sie die generierte Klasse `profile_observer` auswählen/löschen. Entfernen Sie **nicht** die im vorherigen Schritt generierten Präprozessoranweisungen (#pragma, #include). Kopieren Sie anschließend die folgende Quelle, und fügen Sie sie in der Datei nach vorhandenen Präprozessoranweisungen ein:
 
@@ -83,7 +83,7 @@ Nun erstellen Sie eine grundlegende Implementierung für eine Observer-Klasse de
      };
      ```
 
-   - Aktualisieren Sie „profile_observer.cpp“, indem Sie die Implementierung der generierten Klasse `profile_observer` auswählen/löschen. Entfernen Sie **nicht** die im vorherigen Schritt generierten Präprozessoranweisungen (#pragma, #include). Kopieren Sie dann die folgenden Quelle, und fügen Sie sie in der Datei nach vorhandenen Präprozessoranweisungen ein:
+   - Aktualisieren Sie „profile_observer.cpp“, indem Sie die Implementierung der generierten Klasse `profile_observer` auswählen/löschen. Entfernen Sie **nicht** die im vorherigen Schritt generierten Präprozessoranweisungen (#pragma, #include). Kopieren Sie anschließend die folgende Quelle, und fügen Sie sie in der Datei nach vorhandenen Präprozessoranweisungen ein:
 
      ```cpp
      #include <future>

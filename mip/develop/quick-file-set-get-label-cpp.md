@@ -8,10 +8,10 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556026"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C++)
@@ -23,7 +23,7 @@ In diesem Schnellstart wird gezeigt, wie Sie weitere MIP-Datei-APIs nutzen. Durc
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 - Schließen Sie zuerst [Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)](quick-file-list-labels-cpp.md) ab. Darin wird eine Visual Studio-Startprojektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt. Dieser Schnellstart „Festlegen und Abrufen einer Vertraulichkeitsbezeichnung“ baut auf den vorherigen auf.
-- Optional: Lesen Sie sich die Konzepte zu [Dateihandlern im MSIP SDK](concept-handler-file-cpp.md) durch.
+- Optional: Sehen Sie sich die Konzepte zu [Dateihandlern im MIP SDK](concept-handler-file-cpp.md) an.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementieren einer Observer-Klasse zum Überwachen des Dateihandlerobjekts
 
@@ -33,7 +33,7 @@ Erstellen Sie eine grundlegende Implementierung für die Observer-Klasse für ei
 
 1. Öffnen Sie die Visual Studio-Projektmappe, an der Sie im vorherigen Artikel „Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)“ gearbeitet haben.
 
-2. Fügen Sie eine neue Klasse zu Ihrem Projekt hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
+2. Fügen Sie Ihrem Projekt eine neue Klasse hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
 
    - Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste erneut auf den Projektknoten, und wählen Sie **Hinzufügen** > **Klasse** aus.
    - Gehen Sie im Dialogfeld **Klasse hinzufügen** folgendermaßen vor:
@@ -60,7 +60,7 @@ Erstellen Sie eine grundlegende Implementierung für die Observer-Klasse für ei
      };
      ```
 
-   - Aktualisieren Sie „filehandler_observer.cpp“, indem Sie die generierte `filehandler_observer`-Klassenimplementierung auswählen/löschen. Entfernen Sie **nicht** die im vorherigen Schritt generierten Präprozessoranweisungen (#pragma, #include). Kopieren Sie dann die folgenden Quelle, und fügen Sie sie in der Datei nach vorhandenen Präprozessoranweisungen ein:
+   - Aktualisieren Sie „filehandler_observer.cpp“, indem Sie die generierte `filehandler_observer`-Klassenimplementierung auswählen/löschen. Entfernen Sie **nicht** die im vorherigen Schritt generierten Präprozessoranweisungen (#pragma, #include). Kopieren Sie anschließend die folgende Quelle, und fügen Sie sie in der Datei nach vorhandenen Präprozessoranweisungen ein:
 
      ```cpp
      void FileHandlerObserver::OnCreateFileHandlerSuccess(const std::shared_ptr<mip::FileHandler>& fileHandler, const std::shared_ptr<void>& context) {
@@ -220,7 +220,7 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    | Platzhalter | Wert |
    |:----------- |:----- |
    | \<input-file-path\> | Der vollständige Pfad zu einer Testeingabedatei. Beispiel: `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Ein lesbarer Inhaltsbezeichner. Beispiel: <ul><li>Verwenden Sie für eine Datei das Format Pfad\Dateiname: `"c:\Test\Test.docx"`.</li><li>Verwenden Sie für eine E-Mail das Format Betreff:Absender: `"RE: Audit design:user1@contoso.com"`.</li></ul> |
+   | \<content-identifier\> | Ein lesbarer Inhaltsbezeichner. Beispiele: <ul><li>Verwenden Sie für eine Datei das Format Pfad\Dateiname: `"c:\Test\Test.docx"`.</li><li>Verwenden Sie für eine E-Mail das Format Betreff:Absender: `"RE: Audit design:user1@contoso.com"`.</li></ul> |
    | \<label-id\> | Eine Vertraulichkeitsbezeichnungs-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wird. Beispiel: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Der vollständige Pfad zur Ausgabedatei, die eine bezeichnete Kopie der Eingabedatei ist. Beispiel: `"c:\\Test\\Test_labeled.docx"`. |
 

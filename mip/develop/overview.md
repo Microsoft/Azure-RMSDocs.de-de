@@ -7,13 +7,13 @@ ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 45d2e4fb96bb81d8eb7bb982502693e9d5ebf981
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556060"
 ---
-# <a name="overview"></a>Übersicht
+# <a name="overview"></a>Overview
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
@@ -22,7 +22,7 @@ Microsoft Information Protection (MSIP) stellt die Vereinheitlichung der Klassif
 - Die vereinheitlichte Verwaltung wird über Office 365, Azure Information Protection, Windows Information Protection und andere Microsoft-Dienste hinweg bereitgestellt. 
 - Drittanbieter können das MSIP SDK für die Integration in Anwendungen mithilfe eines konsistenten Standardschemas für die Bezeichnung von Daten und eines Schutzdiensts verwenden.
 
-* [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/)
+* [Was ist Office 365 Security & Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/)
 * [Was ist Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 * [Wie funktioniert der Schutz in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
