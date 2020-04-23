@@ -52,7 +52,7 @@ sections:
             values:
               - href: quick-file-set-get-label-cpp.md
               - href: quick-file-set-get-label-csharp.md
-  - title: Referenz
+  - title: Reference
     items:
       - type: list
         style: cards
