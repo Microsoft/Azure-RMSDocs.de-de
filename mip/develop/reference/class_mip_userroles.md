@@ -1,35 +1,35 @@
 ---
-title: mip::UserRoles-Klasse
-description: 'Dokumentiert die MIP:: userrollen-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klassen Benutzer Rollen
+description: 'Dokumentiert die userrollen:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d22f66c8fff22b54e5e7e30f425adc2c889e5db0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: bbff817578bb5ba1fe143c850632e25df8f78708
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489281"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764198"
 ---
-# <a name="class-mipuserroles"></a>mip::UserRoles-Klasse 
+# <a name="class-userroles"></a>Klassen Benutzer Rollen 
 Eine Gruppe von Benutzern und die ihnen zugeordneten Rollen.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public User Rollen (Konstante Std:: Vector\<Std:: String\>& users, Konstanten Std:: Vector\<Std:: String\>& Rollen)  |  Userrollen-Konstruktor.
-Public Konstanten Std:: Vector\<Std:: String\>& users () konstant  |  Ruft Benutzer ab, denen Rollen zugeordnet sind
+öffentliche Benutzer Rollen (Konstante Std::\<Vector Std:: String\>& users, Konstanten Std:: Vector\<Std:: String\>& Rollen)  |  UserRoles-Konstruktor
+Public Konstanten Std:: Vector\<Std:: String\>& users () Konstanten  |  Ruft Benutzer ab, denen Rollen zugeordnet sind
 Public Konstanten Std:: Vector\<Std:: String\>& Rollen () konstant  |  Ruft die Rollen ab, die einer Gruppe von Benutzern zugeordnet sind
   
 ## <a name="members"></a>Member
   
 ### <a name="userroles-function"></a>Userrollen-Funktion
-Userrollen-Konstruktor.
+UserRoles-Konstruktor
 
 Parameter:  
-* **users**: Gruppe von Benutzern, in der allen Mitgliedern die gleichen Rollen zugeordnet sind 
+* **Benutzer**: Gruppe von Benutzern, die die gleichen Rollen gemeinsam verwenden 
 
 
 * **roles**: Rollen, die allen Benutzern einer Gruppe zugeordnet sind

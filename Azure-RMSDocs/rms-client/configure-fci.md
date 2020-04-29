@@ -4,7 +4,7 @@ description: Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5d03aa523c22e66c79748cd378b67d7124686972
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: d3afd356ee64d337bf171488e8be6aa65049d7ee
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326512"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224732"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -31,7 +31,7 @@ Dieser Artikel enthält Anweisungen und ein Skript zur Verwendung mit dem Azure 
 Mit dieser Lösung können Sie automatisch alle Dateien in einem Ordner auf einem Dateiserver unter Windows Server oder automatisch Dateien schützen, die bestimmten Kriterien entsprechen. Das sind z. B. Dateien, die vertrauliche Informationen enthalten und entsprechend klassifiziert wurden. Diese Lösung stellt eine direkte Verbindung mit dem Azure Rights Management-Dienst von Azure Information Protection her, um die Dateien zu schützen, daher müssen Sie diesen Dienst für Ihre Organisation bereitgestellt haben.
 
 > [!NOTE]
-> Obwohl Azure Information Protection einen [Connector](../deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur nativen Schutz, z. B. Office-Dateien.
+> Obwohl Azure Information Protection einen [Connector](../deploy-rms-connector.md) enthält, der die Datei Klassifizierungs Infrastruktur unterstützt, unterstützt diese Lösung nur systemeigenen Schutz, z. –. Office-Dateien.
 > 
 > Um mehrere Dateitypen mit der Dateiklassifizierungsinfrastruktur von Windows Server zu unterstützen, müssen Sie das Windows PowerShell-Modul **AzureInformationProtection** verwenden, wie in diesem Artikel beschrieben wird. Die Azure Information Protection-Cmdlets unterstützen wie der Azure Information Protection-Client den generischen als auch systemeigenen Schutz, was bedeutet, dass außer Office-Dokumenten auch andere Dateitypen geschützt werden können. Weitere Informationen finden Sie unter [Vom Azure Information Protection-Client unterstützte Dateitypen](client-admin-guide-file-types.md) im Administratorhandbuch für den Azure Information Protection-Client.
 
@@ -83,7 +83,7 @@ Beachten Sie, dass bei Änderungen an der Rights Management-Vorlage für die Dat
 
 1.  Kopieren Sie die Inhalte des [Windows PowerShell-Skripts](fci-script.md) für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver. Fügen Sie die Inhalts des Skripts ein, und benennen Sie die Datei auf Ihrem Computer **RMS-Protect-FCI.ps1**.
 
-2.  Überprüfen Sie das Skript, und nehmen Sie folgende Änderungen vor:
+2.  Sehen Sie sich das Skript an, und nehmen Sie folgende Änderungen vor:
     
     - Suchen Sie nach der folgenden Zeichenfolge, und ersetzen Sie sie durch Ihre eigene „AppPrincipalId“, die Sie mit dem Cmdlet [Set-RMSServerAuthentication](/powershell/azureinformationprotection/vlatest/set-rmsserverauthentication) für die Verbindung mit dem Azure Rights Management-Dienst verwenden:
 
@@ -120,7 +120,7 @@ Beachten Sie, dass bei Änderungen an der Rights Management-Vorlage für die Dat
 
 3.  Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (sicherer), müssen Sie Windows PowerShell auf den Servern konfigurieren, auf denen es ausgeführt wird. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: **Set-ExecutionPolicy RemoteSigned**. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts, wenn diese auf diesem Server gespeichert sind (weniger sicher).
 
-    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie unter [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in der PowerShell-Dokumentationsbibliothek.
+    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie in der PowerShell-Dokumentationsbibliothek unter [about_Signing](https://technet.microsoft.com/library/hh847874.aspx).
 
 4.  Speichern Sie die Datei lokal auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen: Speichern Sie die Datei beispielsweise unter **C:\RMS-Protection**. Wenn Sie einen anderen Pfad oder Ordnernamen verwenden, wählen Sie einen Pfad und einen Ordner, der keine Leerzeichen enthält. Sichern Sie diese Datei mithilfe von NTFS-Berechtigungen, damit sie nur von autorisierten Benutzern geändert werden kann.
 
@@ -144,21 +144,21 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
 -   Erstellen Sie eine neue Klassifizierungsregel:
 
-    -   Auf der Registerkarte **Allgemein** :
+    -   Auf der Registerkarte **Allgemein**:
 
         -   **Name**: Geben Sie **Für RMS klassifizieren**
 
         -   **Enabled**: Behalten Sie die Standardeinstellung bei (das Kontrollkästchen ist aktiviert).
 
-        -   **Beschreibung**: Geben Sie **Alle Dateien im Ordner &lt;Ordnername&gt; für Rights Management klassifizieren** ein.
+        -   **Beschreibung**: Geben Sie **alle Dateien im &lt;Ordner namens&gt; Ordner für Rights Management klassifizieren**ein.
 
-            Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
+            Ersetzen Sie den * &lt;Ordnernamen&gt; * durch ihren gewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
 
         -   **Umfang**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
-    -   Auf der Registerkarte **Klassifizierung** :
+    -   Auf der Registerkarte **Klassifizierung**:
 
     -   **Klassifizierungsmethode**: Wählen Sie **Ordnerklassifizierung**
 
@@ -170,7 +170,7 @@ Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausfüh
 
 ### <a name="configure-the-classification-schedule"></a>Konfigurieren des Klassifizierungszeitplans
 
--   Auf der Registerkarte **Automatische Klassifizierung** :
+-   Auf der Registerkarte **Automatische Klassifizierung**:
 
     -   **Festen Zeitplan aktivieren**: Aktivieren Sie dieses Kontrollkästchen.
 
@@ -184,9 +184,9 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
 ### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>Erstellen einer benutzerdefinierten Dateiverwaltungsaufgabe (Schützen von Dateien mit RMS)
 
--   Erstellen Sie unter **Dateiverwaltungsaufgaben**eine neue Dateiverwaltungsaufgabe:
+-   Erstellen Sie unter **Dateiverwaltungsaufgaben** eine neue Dateiverwaltungsaufgabe:
 
-    -   Auf der Registerkarte **Allgemein** :
+    -   Auf der Registerkarte **Allgemein**:
 
         -   **Aufgabenname**: Geben Sie **Schützen von Dateien mit RMS**
 
@@ -194,13 +194,13 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
         -   **Beschreibung**: Geben Sie **Schützen von Dateien in &lt;Ordnername&gt; mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript** ein.
 
-            Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
+            Ersetzen Sie den * &lt;Ordnernamen&gt; * durch ihren gewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
 
         -   **Umfang**: Wählen Sie Ihren Ordner aus. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
-    -   Auf der Registerkarte **Aktion** :
+    -   Auf der Registerkarte **Aktion**:
 
         -   **Typ**: Wählen Sie **Benutzerdefiniert**
 
@@ -223,7 +223,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
             In diesem Befehl sind **[Quelldateipfad]** und **[Quelldateibesitzer-E-Mail]** FCI-spezifische Variablen. Geben Sie diese also genau wie im vorherigen Befehl ein. Die erste Variable wird von FCI verwendet, um automatisch die identifizierte Datei im Ordner anzugeben, und die zweite Variable wird verwendet, damit FCI automatisch die E-Mail-Adresse des benannten Besitzers der identifizierten Datei abrufen kann. Dieser Befehl wird für jede Datei im Ordner wiederholt, in unserem Beispiel für jede Datei im Ordner „C:\FileShare“, die außerdem noch RMS als Dateiklassifizierungseigenschaft aufweist.
 
             > [!NOTE]
-            > Durch den **-OwnerMail [Source File Owner Email]** -Parameter und seinen Wert wird sichergestellt, dass dem ursprünglichen Besitzer der Datei nach dem Schutz der Datei die Berechtigung "Rights Management-Besitzer" gewährt wird. Durch diese Konfiguration wird sichergestellt, dass der ursprüngliche Dateibesitzer über alle Rights Management-Rechte für seine eigenen Dateien verfügt. Wenn Dateien von einem Domänenbenutzer erstellt werden, wird die E-Mail-Adresse automatisch aus Active Directory abgerufen, wobei der Benutzerkontoname aus der Eigenschaft "Besitzer" der Datei verwendet wird. Hierzu muss sich der Dateiserver in derselben Domäne bzw. vertrauenswürdigen Domäne wie der Benutzer befinden.
+            > Durch den **-OwnerMail [Source File Owner Email]**-Parameter und seinen Wert wird sichergestellt, dass dem ursprünglichen Besitzer der Datei nach dem Schutz der Datei die Berechtigung "Rights Management-Besitzer" gewährt wird. Durch diese Konfiguration wird sichergestellt, dass der ursprüngliche Dateibesitzer über alle Rights Management-Rechte für seine eigenen Dateien verfügt. Wenn Dateien von einem Domänenbenutzer erstellt werden, wird die E-Mail-Adresse automatisch aus Active Directory abgerufen, wobei der Benutzerkontoname aus der Eigenschaft "Besitzer" der Datei verwendet wird. Hierzu muss sich der Dateiserver in derselben Domäne bzw. vertrauenswürdigen Domäne wie der Benutzer befinden.
             > 
             > Weisen Sie, sofern möglich, den ursprünglichen Besitzer geschützten Dokumenten zu, um sicherzustellen, dass diese Benutzer weiterhin die volle Kontrolle über die von ihnen erstellten Dateien haben. Wenn Sie aber die Variable [Quelldateibesitzer-E-Mail] wie im vorherigen Kommentar beschrieben verwenden und für eine Datei kein Domänenbenutzer als Besitzer definiert wurde (wenn z.B. ein lokales Konto zum Erstellen der Datei verwendet wurde, sodass der Besitzer als "SYSTEM" angezeigt wird), verursacht das Skript einen Fehler.
             > 
@@ -231,7 +231,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
     -   **Führen Sie den Befehl wie folgt aus**: Wählen Sie **Lokales System**
 
-    -   Auf der Registerkarte **Bedingung** :
+    -   Auf der Registerkarte **Bedingung**:
 
         -   **Eigenschaft**: Wählen Sie **RMS**
 
@@ -239,7 +239,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
         -   **Wert**: Wählen Sie **Ja**
 
-    -   Auf der Registerkarte **Zeitplan** :
+    -   Auf der Registerkarte **Zeitplan**:
 
         -   **Ausführen um**: Konfigurieren Sie Ihren bevorzugten Zeitplan.
 
@@ -251,15 +251,15 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
 1.  Führen Sie die Klassifizierungsregel aus:
 
-    1.  Klicken Sie auf **Klassifizierungsregeln** , &gt; **Klassifizierung mit allen Regeln jetzt ausführen**
+    1.  Klicken Sie auf **Klassifizierungsregeln** &gt; **Klassifizierung mit allen Regeln jetzt ausführen**
 
     2.  Klicken Sie auf **Warten, bis die Klassifizierung abgeschlossen ist**, und klicken Sie dann auf **OK**.
 
-2.  Warten Sie, bis das Dialogfeld **Klassifizierung wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Es sollte **1** für das Feld **Eigenschaften** und die Anzahl der Dateien im Ordner angezeigt werden. Überprüfen Sie mithilfe des Datei-Explorers die Eigenschaften der Dateien im ausgewählten Ordner. Auf der Registerkarte **Klassifizierung** sollte **RMS** als Eigenschaftsname und **Ja** für den **Wert**angezeigt werden.
+2.  Warten Sie, bis das Dialogfeld **Klassifizierung wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Es sollte **1** für das Feld **Eigenschaften** und die Anzahl der Dateien im Ordner angezeigt werden. Überprüfen Sie mithilfe des Datei-Explorers die Eigenschaften der Dateien im ausgewählten Ordner. Auf der Registerkarte **Klassifizierung** sollte **RMS** als Eigenschaftsname und **Ja** für den **Wert** angezeigt werden.
 
 3.  Führen Sie die Dateiverwaltungsaufgabe aus:
 
-    1.  Klicken Sie auf **Datei Verwaltungsaufgaben** &gt; **Dateien mit RMS schützen** &gt; **Datei Verwaltungsaufgabe jetzt ausführen**
+    1.  Klicken Sie auf **Dateiverwaltungsaufgaben** &gt; **Dateien mit RMS schützen** &gt; **Dateiverwaltungsaufgabe jetzt ausführen**
 
     2.  Klicken Sie auf **Warten, bis die Aufgabe abgeschlossen ist**, und klicken Sie dann auf **OK**.
 
@@ -282,7 +282,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     >     ```
     >     -   Wenn das Skript in dieser Windows PowerShell-Sitzung erfolgreich ausgeführt wurde, überprüfen Sie Ihre Einträge für **Executive** und **Argument** in der Dateiverwaltungsaufgaben-Aktion.  Wenn Sie **-OwnerEmail [Quelldateibesitzer-E-Mail]** angegeben haben, entfernen Sie diesen Parameter.
     > 
-    >         Wenn die Dateiverwaltungsaufgabe erfolgreich ohne **-OwnerEmail [Quelldateibesitzer-E-Mail]** funktioniert, überprüfen Sie, ob für die nicht geschützten Dateien anstelle von **SYSTEM** ein Domänenbenutzer als Dateibesitzer aufgeführt wird.  Verwenden Sie für diese Prüfung die Registerkarte **Sicherheit** für die Eigenschaften der Datei, und klicken Sie dann auf **Erweitert**. Der **Besitzer**-Wert wird sofort hinter dem **Name** in der Datei angezeigt. Überprüfen Sie außerdem, ob sich der Dateiserver in derselben Domäne bzw. einer vertrauenswürdigen Domäne befindet, um die E-Mail-Adresse des Benutzers in Active Directory Domain Services nachzuschlagen.
+    >         Wenn die Dateiverwaltungsaufgabe erfolgreich ohne **-OwnerEmail [Quelldateibesitzer-E-Mail]** funktioniert, überprüfen Sie, ob für die nicht geschützten Dateien anstelle von **SYSTEM** ein Domänenbenutzer als Dateibesitzer aufgeführt wird.  Verwenden Sie für diese Prüfung die Registerkarte **Sicherheit** für die Eigenschaften der Datei, und klicken Sie dann auf **Erweitert**. Der **Besitzer**-Wert wird sofort hinter dem **Name**n der Datei angezeigt. Überprüfen Sie außerdem, ob sich der Dateiserver in derselben Domäne bzw. einer vertrauenswürdigen Domäne befindet, um die E-Mail-Adresse des Benutzers in Active Directory Domain Services nachzuschlagen.
     > -   Wenn Sie die richtige Anzahl von Dateien im Bericht sehen, die Dateien aber nicht geschützt sind, versuchen Sie, die Dateien manuell mithilfe des [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) -Cmdlets zu schützen, um festzustellen, ob Fehler angezeigt werden.
 
 Wenn Sie sichergestellt haben, dass diese Aufgaben erfolgreich ausgeführt werden, können Sie den Dateiressourcen-Manager schließen. Neue Dateien werden automatisch klassifiziert und geschützt, wenn die geplanten Aufgaben ausgeführt werden. 
@@ -298,9 +298,9 @@ Führen Sie diese Zeile auch im Skript aus, wenn Sie eine neue Vorlage veröffen
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Ändern der Anweisungen zum selektiven Schutz von Dateien
 Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.
 
-Verwenden Sie zum Durchführen dieser Änderung eine der integrierten Klassifizierungseigenschaften (z.B. **personenbezogene Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung**und die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem Wert **Hoch**auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
+Verwenden Sie zum Durchführen dieser Änderung eine der integrierten Klassifizierungseigenschaften (z.B. **personenbezogene Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung** und die **Daten mit persönlich identifizierbaren Informationen**-Eigenschaft mit dem Wert **Hoch** auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
 
-Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS** -Eigenschaft, **Gleich**, **Ja**), die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem **Operator** -Wert **Gleich** und dem **Wert** **Hoch**aus.
+Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS**-Eigenschaft, **Gleich**, **Ja**), die **Daten mit persönlich identifizierbaren Informationen**-Eigenschaft mit dem **Operator**-Wert **Gleich** und dem **Wert****Hoch** aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

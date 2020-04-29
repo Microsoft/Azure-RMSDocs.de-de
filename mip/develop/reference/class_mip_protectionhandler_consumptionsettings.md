@@ -1,32 +1,32 @@
 ---
-title: 'MIP::P rotectionhandler:: consumptionsettings-Klasse'
-description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
+title: 'Class Protection Handler:: consumptionsettings'
+description: 'Dokumentiert die schutzhandler:: consumptionsettings-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 0f505d919f36819ce77285c77d6eebf7156d481c
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2dd4a02d33873cc6a72e4ba759ab2ac3519265e1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486782"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764460"
 ---
-# <a name="class-mipprotectionhandlerconsumptionsettings"></a>MIP::P rotectionhandler:: consumptionsettings-Klasse 
+# <a name="class-protectionhandlerconsumptionsettings"></a>Class Protection Handler:: consumptionsettings 
 Einstellungen zum Erstellen eines Schutz Handlers, um vorhandenen Inhalt zu nutzen.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public consumptionsettings (Konstante Std:: Vector\<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
-Public consumptionsettings (Konstanten Std:: Vector\<uint8_t\>& serializedprelicense, Konstanten Std:: Vector\<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
-Public consumptionsettings (Konstante Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
+Public consumptionsettings (Konstanten Std::\<Vector uint8_t\>& serializedprelicense, Konstanten Std:: Vector\<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
+Public consumptionsettings (Konst Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public Std:: shared_ptr\<publishinglicenseinfo\> getpublishinglicenseinfo () konstant  |  Holen Sie sich die Veröffentlichungs Lizenz, die dem geschützten Inhalt zugeordnet ist.
 public bool getisofflineonly () const  |  Ruft ab, ob die erstellungshandlererstellung http-Online Vorgänge zulässt.
-öffentliches void "tisofflineonly" (bool isofflineonly)  |  Legt fest, ob die schutzhandlererstellung http-Online Vorgänge zulässt.
-öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
-Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
+öffentliches void "* tisofflineonly" (bool isofflineonly)  |  Legt fest, ob die schutzhandlererstellung http-Online Vorgänge zulässt.
+öffentliches void setdelegateduseremail (konstant Std:: String& delegateduseremail)  |  Legt den Delegierten Benutzer fest.
+Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
   
 ## <a name="members"></a>Member
   
@@ -56,7 +56,7 @@ Parameter:
 * **LicenseInfo**: Veröffentlichen von Lizenzinformationen aus geschützten Inhalten
 
 
-Durch die Bereitstellung von publishinglicenseingefo (im Gegensatz zu einer reinen serialisierten Veröffentlichungs Lizenz) ist es nicht mehr erforderlich, dass MIP SDK die Veröffentlichungs Lizenz analysiert.
+Durch die Bereitstellung von [publishinglicenseingefo](class_mip_publishinglicenseinfo.md) (im Gegensatz zu einer reinen serialisierten Veröffentlichungs Lizenz) ist es nicht mehr erforderlich, dass MIP SDK die Veröffentlichungs Lizenz analysiert.
   
 ### <a name="getpublishinglicenseinfo-function"></a>Getpublishinglicenseingefo-Funktion
 Holen Sie sich die Veröffentlichungs Lizenz, die dem geschützten Inhalt zugeordnet ist.

@@ -1,19 +1,19 @@
 ---
-title: MIP::P roxyauthenticationerror-Klasse
-description: Dokumentiert die MIP::p roxyauthenticationerror-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Klasse proxyauthenticationerror
+description: 'Dokumentiert die proxyauthenticationerror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c0289f9b2f2a8a1163e62e6c6a96e3023f297194
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2787403c387bbe31b559e069104cb2af28dd0e6a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489621"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764580"
 ---
-# <a name="class-mipproxyauthenticationerror"></a>MIP::P roxyauthenticationerror-Klasse 
+# <a name="class-proxyauthenticationerror"></a>Klasse proxyauthenticationerror 
 Fehler bei der Proxy Authentifizierung.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -40,7 +40,7 @@ Ruft den Statuscode der HTTP-Antwort ab.
 ### <a name="category-enum"></a>Kategorieenum
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Unbekannt            | Unbekannter Netzwerkfehler.
+Unknown            | Unbekannter Netzwerkfehler.
 Failureresponsecode            | HTTP-Antwort Code zeigt einen Fehler an
 Badresponse            | Die HTTP-Antwort konnte nicht gelesen werden.
 Nicht expectedresponse            | Die HTTP-Antwort ist abgeschlossen, enthielt jedoch unerwartete Daten.
@@ -49,6 +49,6 @@ Proxy            | Proxy Fehler
 SSL            | SSL-Fehler
 Timeout            | Verbindungs Timeout
 Offline            | Der Vorgang erfordert eine Netzwerk Konnektivität.
-Throttled            | Fehler beim http-Vorgang aufgrund von Serverdaten Verkehrs Drosselung.
+Gedrosselt            | Fehler beim http-Vorgang aufgrund von Serverdaten Verkehrs Drosselung.
 Abgebrochen            | Der http-Vorgang wurde von der Anwendung abgebrochen.
 Kategorie des Netzwerk Fehlers.

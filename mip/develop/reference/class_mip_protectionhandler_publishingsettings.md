@@ -1,19 +1,19 @@
 ---
-title: MIP::P rotectionhandler::P ublishingsettings
-description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Class Protection Handler::P ublishingsettings
+description: Dokumentiert die Schutz Handler::p ublishingsettings-Klasse des MIP-SDK (Microsoft Information Protection).
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e61eb300cbc787ecbb7fd14ec5dcb060d4f47d0a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: fc1de565e103b840c1190b397c247caca515d5bd
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490760"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764420"
 ---
-# <a name="class-mipprotectionhandlerpublishingsettings"></a>MIP::P rotectionhandler::P ublishingsettings 
+# <a name="class-protectionhandlerpublishingsettings"></a>Class Protection Handler::P ublishingsettings 
 Einstellungen zum Erstellen eines Schutz Handlers zum Schutz neuer Inhalte.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -25,10 +25,12 @@ public bool getisauditedextractionallowed () konstant  |  Ruft ab, ob nicht-MIP-
 öffentliches void setisauditedextractionallowed (bool isauditedextractionallowed)  |  Legt fest, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 public bool getisdepretoredalgorithmpreferred () konstant  |  Ruft ab, ob der als veraltet markierte Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität bevorzugt wird oder nicht.
 öffentliches void setisdeprealisiedalgorithmpreferred (bool isdepretoredalgorithmpreferred)  |  Legt fest, ob der als veraltet markierte Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität bevorzugt wird oder nicht.
-öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
-Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
+öffentliches void setdelegateduseremail (konstant Std:: String& delegateduseremail)  |  Legt den Delegierten Benutzer fest.
+Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
 public bool ispublishingformatjson () konstant  |  Ruft ab, ob die zurückgegebene pl im JSON-Format vorliegt (das XML-Format ist besser akzeptiert und ist die Standardeinstellung).
 öffentliches void setpublishingformatjson (bool ispublishingformatjson)  |  Gibt an, ob die zurückgegebene pl im JSON-Format vorliegt (das XML-Format ist in größerem Umfang akzeptiert und ist die Standardeinstellung).
+öffentliches void setprelicenseuseremail (Konstanten Std:: String& prelicenseuseremail)  |  Legt den Benutzer vor der Lizenz fest.
+Public Konstanten Std:: String& getprelicenseuseremail () Konstanten  |  Ruft den Benutzer vor der Lizenzierung ab.
   
 ## <a name="members"></a>Member
   
@@ -99,3 +101,19 @@ Gibt an, ob die zurückgegebene pl im JSON-Format vorliegt (das XML-Format ist i
 Parameter:  
 * **ispublishingformatjson**:, wenn das JSON-Format aktiviert ist.
 
+
+  
+### <a name="setprelicenseuseremail-function"></a>Setprelicenseuseremail-Funktion
+Legt den Benutzer vor der Lizenz fest.
+
+Parameter:  
+* **prelicenseuseremail**: Benutzer vor der Lizenzierung
+
+
+Wenn kein Benutzer vor der Lizenzierung angegeben ist, wird keine vorab Lizenz abgerufen.
+  
+### <a name="getprelicenseuseremail-function"></a>Getprelicenseuseremail-Funktion
+Ruft den Benutzer vor der Lizenzierung ab.
+
+  
+**Gibt Folgendes zurück**: Benutzer vor der Lizenz

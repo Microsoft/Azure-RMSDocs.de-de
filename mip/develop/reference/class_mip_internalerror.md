@@ -1,19 +1,19 @@
 ---
-title: mip::InternalError-Klasse
-description: 'Dokumentiert die MIP:: InternalError-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class InternalError
+description: 'Dokumentiert die InternalError:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 84f9e878cac286726d305d08a605ff9432341acf
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 88fdcf356be109fe482b5c7a4f01ab08bc83748c
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489961"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762252"
 ---
-# <a name="class-mipinternalerror"></a>mip::InternalError-Klasse 
+# <a name="class-internalerror"></a>Class InternalError 
 Interner Fehler. Dieser Fehler tritt auf, wenn während der Ausführung etwas Unerwartetes passiert.
   
 ## <a name="summary"></a>Zusammenfassung

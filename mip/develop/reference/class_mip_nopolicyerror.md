@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: nopolicyerror-Klasse'
-description: 'Dokumentiert die MIP:: nopolicyerror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse nopolicyerror
+description: 'Dokumentiert die nopolicyerror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 513fdd196c31f32809e7f2238b1993fb4aeeccd0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: fdb4a1fbb86aa0c32276fdf27285ede912463462
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489842"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761240"
 ---
-# <a name="class-mipnopolicyerror"></a>MIP:: nopolicyerror-Klasse 
+# <a name="class-nopolicyerror"></a>Klasse nopolicyerror 
 Die Mandanten Richtlinie ist nicht für Klassifizierung/Bezeichnungen konfiguriert.
   
 ## <a name="summary"></a>Zusammenfassung

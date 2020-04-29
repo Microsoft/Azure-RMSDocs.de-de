@@ -1,19 +1,19 @@
 ---
-title: mip::LoggerDelegate-Klasse
-description: 'Dokumentiert die MIP:: loggerdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse loggerdelegat
+description: 'Dokumentiert die loggerdeleg:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c9e4f4db31c12a84f888964694ffa4c88585c884
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: e213f243a0e46bb804b224c7a0752a0b9b270103
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487734"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761820"
 ---
-# <a name="class-miploggerdelegate"></a>mip::LoggerDelegate-Klasse 
+# <a name="class-loggerdelegate"></a>Klasse loggerdelegat 
 Eine Klasse, die die Schnittstelle zur MIP SDK-Protokollierung definiert
   
 ## <a name="summary"></a>Zusammenfassung
@@ -25,7 +25,7 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
   
 ## <a name="members"></a>Member
   
-### <a name="init-function"></a>Init-Funktion
+### <a name="init-function"></a>„init“-Funktion
 Initialisiert die Protokollierung.
 
 Parameter:  

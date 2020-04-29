@@ -1,19 +1,19 @@
 ---
-title: mip::AddWatermarkAction-Klasse
-description: 'Dokumentiert die MIP:: addwatermarkaction-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: addwatermarkaction-Klasse
+description: 'Dokumentiert die addwatermarkaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 80ae66e54fe00ad96652b3568d49e256211dffc4
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: fe2cc80e5abb225a5e83c1b10c1c5f9f99401628
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490709"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763743"
 ---
-# <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction-Klasse 
+# <a name="class-addwatermarkaction"></a>addwatermarkaction-Klasse 
 Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung

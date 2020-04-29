@@ -1,41 +1,41 @@
 ---
-title: mip::ProtectionDescriptorBuilder-Klasse
-description: Dokumentiert die MIP::p rotectiondescriptorbuilder-Klasse des MIP-SDKs (Microsoft Information Protection).
+title: Class schutzdescriptorbuilder
+description: 'Dokumentiert die schutzdescriptorbuilder:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ed9d7085f7406e5c921843d32069f2f6af9f5807
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 11890665b02ade782edcff6c23296ab70c9368f8
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764477"
 ---
-# <a name="class-mipprotectiondescriptorbuilder"></a>mip::ProtectionDescriptorBuilder-Klasse 
-Erstellt einen Schutz Deskriptor, der den dem Inhalt zugeordneten Schutz beschreibt.
+# <a name="class-protectiondescriptorbuilder"></a>Class schutzdescriptorbuilder 
+Erstellt eine ProtectionDescriptor-Instanz, die den Schutz für ein Inhaltsobjekt beschreibt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliches MIP_API Std:: shared_ptr\<Schutz Deskriptor\> Build ()  |  Erstellt einen Schutz Deskriptor, dessen Zugriffsberechtigungen von dieser schutzdescriptorbuilder-Instanz definiert werden.
+Public MIP_API Std:: shared_ptr\<schutzdescriptor\> Build ()  |  Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.
 public void SetName(const std::string& value)  |  Legt den Namen für eine Schutzrichtlinie fest.
 public void SetDescription(const std::string& value)  |  Legt die Beschreibung der Schutzrichtlinie fest.
 öffentliches void setcontentvaliduntil (Konstante Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\>& Wert)  |  Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
 public void SetAllowOfflineAccess(bool value)  |  Legt fest, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
 public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der Schutzrichtlinie fest.
-public void "stencryptedappdata" (Konstanten Std:: Map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
-öffentliches void setsignetdappdata (Konstanten Std:: Map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
-public virtual ~ProtectionDescriptorBuilder()  | _Noch nicht dokumentiert._
+public void "stencryptedappdata" (Konstanten Std::\<Map Std:: String, Std::\> String& Wert)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
+öffentliches void setsignetdappdata (Konstanten Std:: map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
+öffentliches void setdoublekeyurl (Konstante Std:: String& doublekeyurl)  |  Legt die doppelte Schlüssel-URL fest, die für den benutzerdefinierten Schutz verwendet werden soll.
   
 ## <a name="members"></a>Member
   
 ### <a name="build-function"></a>Build-Funktion
-Erstellt einen Schutz Deskriptor, dessen Zugriffsberechtigungen von dieser schutzdescriptorbuilder-Instanz definiert werden.
+Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.
 
   
-**Gibt Folgendes zurück**: neue Schutz Deskriptor Instanz
+**Rückgabe**: neue ProtectionDescriptor-Instanz
   
 ### <a name="setname-function"></a>SetName-Funktion
 Legt den Namen für eine Schutzrichtlinie fest.
@@ -49,7 +49,7 @@ Parameter:
 Legt die Beschreibung der Schutzrichtlinie fest.
 
 Parameter:  
-* **value**: Richtlinienbeschreibung
+* **Wert**: Richtlinien Beschreibung
 
 
   
@@ -57,7 +57,7 @@ Parameter:
 Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
 
 Parameter:  
-* **value**: Ablaufzeit der Richtlinie
+* **Wert**: Ablaufzeit der Richtlinie
 
 
   
@@ -96,5 +96,9 @@ Parameter:
 
 Eine Anwendung kann ein Wörterbuch von anwendungsspezifischen Daten angeben, das vom Schutzdienst signiert wird. Diese signierten Daten sind durch „SetEncryptedAppData“ unabhängig von dem verschlüsselten Dataset.
   
-### <a name="protectiondescriptorbuilder-function"></a>~ Schutzdescriptorbuilder-Funktion
-_Noch nicht dokumentiert._
+### <a name="setdoublekeyurl-function"></a>Setdoublekeyurl-Funktion
+Legt die doppelte Schlüssel-URL fest, die für den benutzerdefinierten Schutz verwendet werden soll.
+
+Parameter:  
+* **Wert**: Double Key URL
+

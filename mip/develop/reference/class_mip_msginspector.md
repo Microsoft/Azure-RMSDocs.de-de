@@ -1,26 +1,26 @@
 ---
-title: 'MIP:: msginspector-Klasse'
-description: 'Dokumentiert die MIP:: msginspector-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse msginspector
+description: 'Dokumentiert die msginspector:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: d2c4f85989e5d9d77ebb540b0b4adfd64b8334c1
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 79a044099c09d799d77f4af11eb0b80ecc21d6d6
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489893"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761482"
 ---
-# <a name="class-mipmsginspector"></a>MIP:: msginspector-Klasse 
+# <a name="class-msginspector"></a>Klasse msginspector 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Konstante Std:: Vector\<uint8_t\>& GetBody ()  |  Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
+Public Konstanten Std:: Vector\<uint8_t\>& GetBody ()  |  Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
 öffentlicher BodyType getbodytype () Konstanten  |  Typ des Get-Texts.
-Public Konstanten Std:: Vector\<Std:: unique_ptr\<msgattachmentdata\>\>& getattachments () konstant.  |  Eine Liste der Anlage als Datenobjekte der Nachrichten Anlage erhalten.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<msgattachmentdata\> \>& getattachments () Konstanten  |  Eine Liste der Anlage als Datenobjekte der Nachrichten Anlage erhalten.
 Public Inspector Type GetInspector Type () Konstanten  |  Dateitypen erhalten.
 Public Std:: shared_ptr\<Stream\> GetFileStream () konstant  |  Den Dateistream erhalten.
   

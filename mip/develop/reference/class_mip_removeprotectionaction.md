@@ -1,19 +1,19 @@
 ---
-title: mip::RemoveProtectionAction-Klasse
-description: 'Dokumentiert die MIP:: removeschutzaction-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class removeschutzaction
+description: 'Dokumentiert die removeschutzaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: b77a6c77e5de432f03e1fece42e558064de4eac6
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 20a4bc96585afaebe3f85ffee6050ab130512791
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489502"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764384"
 ---
-# <a name="class-mipremoveprotectionaction"></a>mip::RemoveProtectionAction-Klasse 
+# <a name="class-removeprotectionaction"></a>Class removeschutzaction 
 Eine Aktionsklasse, die angibt, dass der Schutz aus dem Dokument entfernt wird.
   
 ## <a name="summary"></a>Zusammenfassung

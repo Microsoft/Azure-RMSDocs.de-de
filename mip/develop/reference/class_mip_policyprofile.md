@@ -1,33 +1,34 @@
 ---
-title: mip::PolicyProfile-Klasse
-description: Dokumentiert die MIP::p olicyprofile-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Class policyprofile
+description: 'Dokumentiert die policyprofile:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 515f780c269025175e99caed72e8da381ef88104
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9f70b8bfa1eee6e994b67c668b5144d6cb74ecad
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489774"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760910"
 ---
-# <a name="class-mippolicyprofile"></a>mip::PolicyProfile-Klasse 
-Die policyprofile-Klasse ist die Stamm Klasse für die Verwendung von Microsoft Information Protection-Vorgängen. Eine typische Anwendung benötigt nur ein policyprofile, aber Sie kann bei Bedarf mehrere Profile erstellen.
+# <a name="class-policyprofile"></a>Class policyprofile 
+Die PolicyProfile-Klasse ist die Stammklasse zum Verwenden von Microsoft Information Protection-Vorgängen. Eine gewöhnliche Anwendung benötigt nur eine PolicyProfile-Klasse, kann bei Bedarf aber mehrere erstellen.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die auf dem Profil festgelegten Einstellungen ab.
-Public Std:: shared_ptr\<AsyncControl\> listenginesasync (konstant Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+Public Std:: shared_ptr\<AsyncControl\> listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 Public Std:: Vector\<Std:: String\> listengines ()  |  Die Liste der Module.
-Public Std:: shared_ptr\<AsyncControl\> unloadengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
-öffentliches void unloadengine (Konstante Std:: String & ID)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
-Public Std:: shared_ptr\<AsyncControl\> addengineasync (konstant policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
-Public Std:: shared_ptr\<policyengine\> addengine (Konstanten policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
-Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (konstant Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+Public Std:: shared_ptr\<AsyncControl\> unloadengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
+öffentliches void unloadengine (Konstante Std:: String& ID)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
+Public Std:: shared_ptr\<AsyncControl\> addengineasync (konstant policyengine:: Settings& Settings, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
+Public Std:: shared_ptr\<policyengine\> addengine (Konstanten policyengine:: Settings& Settings, Konstanten Std:: shared_ptr\<void\>& context)  |  Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
+Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die angegebene Engine werden gelöscht.
+öffentliches void acquireauthtoken (Cloud Cloud, Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat) konstant  |  Löst einen Authentifizierungs Rückruf aus.
   
 ## <a name="members"></a>Member
   
@@ -44,7 +45,7 @@ Parameter:
 * **context**: Ein Parameter, der an die Beobachterfunktionen weitergegeben wird. 
 
 
-Policyprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+PolicyProfile::Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="listengines-function"></a>Listengines-Funktion
 Die Liste der Module.
@@ -56,19 +57,19 @@ Die Liste der Module.
 Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 
 Parameter:  
-* **id**: die eindeutige Engine-ID 
+* **ID**: die eindeutige Engine-ID. 
 
 
 * **context**: Ein Parameter, der verdeckt an die Beobachterfunktionen weitergeleitet wird. 
 
 
-Policyprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+PolicyProfile::Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="unloadengine-function"></a>Unloadengine-Funktion
 Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 
 Parameter:  
-* **id**: die eindeutige Engine-ID
+* **ID**: die eindeutige Engine-ID.
 
 
   
@@ -76,19 +77,19 @@ Parameter:
 Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
 
 Parameter:  
-* **Einstellungen**: das MIP::P olicyengine:: Settings-Objekt, das die Einstellungen der Engine angibt. 
+* **settings**: Das mip::PolicyEngine::Settings-Objekt, das die Engine-Einstellungen angibt. 
 
 
 * **context**: ein Parameter, der an die Observer-Funktionen und optional httpdelegat weitergeleitet wird. 
 
 
-Policyprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+PolicyProfile::Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="addengine-function"></a>Addengine-Funktion
 Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
 
 Parameter:  
-* **Einstellungen**: das MIP::P olicyengine:: Settings-Objekt, das die Einstellungen der Engine angibt. 
+* **settings**: Das mip::PolicyEngine::Settings-Objekt, das die Engine-Einstellungen angibt. 
 
 
 * **context**: ein Parameter, der verdeckt an den optionalen httpdelegaten weitergeleitet wird.
@@ -102,17 +103,30 @@ Parameter:
 Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
 
 Parameter:  
-* **id**: die eindeutige Engine-ID 
+* **ID**: die eindeutige Engine-ID. 
 
 
 * **context**: Ein Parameter, der an die Beobachterfunktionen weitergegeben wird. 
 
 
-Policyprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+PolicyProfile::Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="deleteengine-function"></a>Deleteengine-Funktion
 Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die angegebene Engine werden gelöscht.
 
 Parameter:  
-* **id**: die eindeutige Engine-ID
+* **ID**: die eindeutige Engine-ID.
 
+
+  
+### <a name="acquireauthtoken-function"></a>Acquireauthtoken-Funktion
+Löst einen Authentifizierungs Rückruf aus.
+
+Parameter:  
+* **Cloud**: Azure-Cloud 
+
+
+* **authdelegat**: Authentifizierungs Rückruf, der aufgerufen wird
+
+
+MIP speichert oder führt keine weiteren Aktionen mit dem vom Authentifizierungs Delegaten zurückgegebenen Wert aus. Diese Funktion wird für Anwendungen empfohlen, die nicht "angemeldet" sind, bis MIP ein Authentifizierungs Token anfordert. Sie ermöglicht einer Anwendung das Abrufen eines Tokens, bevor MIP tatsächlich ein Token benötigt.

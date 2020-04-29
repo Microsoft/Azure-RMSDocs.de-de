@@ -1,19 +1,19 @@
 ---
-title: mip::AddContentFooterAction-Klasse
-description: 'Dokumentiert die MIP:: addcontentfooteraction-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: addcontentfooteraction-Klasse
+description: 'Dokumentiert die addcontentfooteraction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 7313976d8856a3aa807245a5c48ac22bf16b469a
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 58c0767f2c880a52ef4a831e5d57670820187fc7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490743"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763769"
 ---
-# <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction-Klasse 
+# <a name="class-addcontentfooteraction"></a>addcontentfooteraction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Fußzeileninhalt hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -33,7 +33,7 @@ public int GetMargin() const  |  Ruft den Rand der Fußzeile im unteren Bereich 
 Eine API, mit der das Element des Fußzeileninhalts markiert wird.
 
   
-**Rückgabe**: Name, der für das UI-Element verwendet werden sollte, das den Fußzeileninhalt enthält. Der gleiche Name wird in removecontentfooteraction zurückgegeben, wenn die Inhalts Fußzeile entfernt werden muss.
+**Rückgabe**: Name, der für das UI-Element verwendet werden sollte, das den Fußzeileninhalt enthält. Wenn der Fußzeileninhalt entfernt werden muss, wird der gleiche Name in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) zurückgegeben.
   
 ### <a name="gettext-function"></a>Gettext-Funktion
 Ruft den Text ab, der im Fußzeileninhalt enthalten sein soll.
@@ -65,7 +65,7 @@ Ruft die Ausrichtung der Fußzeile ab.
   
 **Rückgabe**: Der ContentMarkAlignment-Enumerator: LEFT|RIGHT|CENTER. 
   
-**Siehe auch**: [contentmarkalignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Weitere Informationen finden Sie unter:** ContentMarkAlignment
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
 Ruft den Rand der Fußzeile im unteren Bereich ab

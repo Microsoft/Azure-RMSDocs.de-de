@@ -1,28 +1,28 @@
 ---
-title: class mip::HttpResponse
-description: 'Dokumentiert die MIP:: HttpResponse-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: HttpResponse-Klasse
+description: 'Dokumentiert die HttpResponse:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e24eef471b11daffadb84235edbc93ff14696c25
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 6e37613adce0397ed543c4df793a59e74795fb26
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488057"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762470"
 ---
-# <a name="class-miphttpresponse"></a>class mip::HttpResponse 
-Schnittstelle, die eine einzelne HTTP-Antwort beschreibt, die von der Client-App beim Überschreiben von httpdelegaten
+# <a name="class-httpresponse"></a>HttpResponse-Klasse 
+Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App beim Überschreiben des HttpDelegate implementiert wird.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ruft die Antwort-ID ab.
 public int32_t GetStatusCode() const  |  Ruft den Antwortstatuscode ab.
-öffentliche Konstante Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
-Public Konstanten Std:: Map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () konstant.  |  Ruft Anforderungsheader ab.
+Public Konstanten Std:: Vector\<uint8_t\>& GetBody ()-Konstanten  |  Ruft den Text der Anforderung ab.
+Public Konstanten Std:: map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () Konstanten  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member
   

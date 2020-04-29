@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: servicedisablederror-Klasse'
-description: 'Dokumentiert die MIP:: servicedisablederror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class servicedisablederror
+description: 'Dokumentiert die servicedisablederror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 1481e81707e84d7ba977d36bec152ba86b5e60b6
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ef521d9330df410bc14ad6ae856b837fc615cfbb
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489417"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760680"
 ---
-# <a name="class-mipservicedisablederror"></a>MIP:: servicedisablederror-Klasse 
+# <a name="class-servicedisablederror"></a>Class servicedisablederror 
 Der Benutzer konnte aufgrund eines deaktivierten diensdienstanbieter keinen Zugriff auf den Inhalt erhalten.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -34,7 +34,7 @@ Ruft den Umfang ab, für den der Dienst deaktiviert ist.
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Benutzer            | Der Dienst ist für den Benutzer deaktiviert.
-Gerät            | Der Dienst ist für das Gerät deaktiviert.
+Sicherungsmedium            | Der Dienst ist für das Gerät deaktiviert.
 Plattform            | Der Dienst ist für die Plattform deaktiviert.
-Mandant            | Der Dienst ist für den Mandanten deaktiviert.
+Tenant            | Der Dienst ist für den Mandanten deaktiviert.
 Beschreibt den Umfang, für den der Dienst deaktiviert ist.

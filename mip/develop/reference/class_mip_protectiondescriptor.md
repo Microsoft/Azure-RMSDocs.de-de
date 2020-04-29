@@ -1,19 +1,19 @@
 ---
-title: mip::ProtectionDescriptor-Klasse
-description: Dokumentiert die MIP::p rotectiondescriptor-Klasse des MIP-SDKs (Microsoft Information Protection).
+title: Klassen Schutz Deskriptor
+description: 'Dokumentiert die Schutz Deskriptor:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b4257be5475b1225f79efe00c11df4b79ee67ee9
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763943"
 ---
-# <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
+# <a name="class-protectiondescriptor"></a>Klassen Schutz Deskriptor 
 Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -27,13 +27,14 @@ public std::string GetTemplateId() const  |  Ruft ggf. die Schutzvorlagen-ID ab.
 public std::string GetLabelId() const  |  Ruft ggf. die Bezeichnungs-ID ab.
 Public Std:: String getContentID () Konstanten  |  Ruft ggf. die Inhalts-ID ab.
 Public Std:: Vector\<Userrights\> getuserrights () Konstanten  |  Ruft die Auflistung von Benutzerrechtszuordnungen ab.
-Public Std:: Vector\<userrollen\> getuserrollen () konstant.  |  Ruft die Auflistung von Benutzerrollenzuordnungen ab.
+Public Std:: Vector\<userrollen\> getuserrollen () konstant  |  Ruft die Auflistung von Benutzerrollenzuordnungen ab.
 öffentliches bool doescontentexpire () konstant  |  Überprüft, ob der Inhalt eine Ablaufzeit hat.
-Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getcontentvaliduntil () konstant.  |  Ruft den Ablaufzeitpunkt des Schutzes ab.
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getcontentvaliduntil () Konstanten  |  Ruft den Ablaufzeitpunkt des Schutzes ab.
 public bool DoesAllowOfflineAccess() const  |  Ruft ab, ob der Schutz den Zugriff auf Offlineinhalte erlaubt.
 public std::string GetReferrer() const  |  Ruft die Verweiseradresse des Schutzes ab.
-Public Std:: Map\<Std:: String, Std:: String\> getencryptedappdata () konstant.  |  Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
-Public Std:: Map\<Std:: String, Std:: String\> getsignetdappdata () Konstanten  |  Ruft anwendungsspezifische Daten ab, die signiert waren.
+Public Std:: map\<Std:: String, Std:: String\> getencryptedappdata () Konstanten  |  Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
+Public Std:: map\<Std:: String, Std:: String\> getsignetdappdata () Konstanten  |  Ruft anwendungsspezifische Daten ab, die signiert waren.
+Public Std:: String getdoublekeyurl () Konstanten  |  Ruft die doppelte Schlüssel-URL ab, die für den benutzerdefinierten Schutz verwendet werden soll.
   
 ## <a name="members"></a>Member
   
@@ -65,7 +66,7 @@ Ruft eine Beschreibung zum Schutz ab.
 Ruft ggf. die Schutzvorlagen-ID ab.
 
   
-**Rückgabe**: Vorlagen-ID
+**Gibt Folgendes zurück**: Vorlagen-ID
   
 ### <a name="getlabelid-function"></a>Getlabelid-Funktion
 Ruft ggf. die Bezeichnungs-ID ab.
@@ -83,7 +84,7 @@ Ruft ggf. die Inhalts-ID ab.
 Ruft die Auflistung von Benutzerrechtszuordnungen ab.
 
   
-**Gibt Folgendes zurück**: Auflistung von Benutzer-zu-Rechte-Zuordnungen der Wert der Userrights-Eigenschaft ist leer, wenn der aktuelle Benutzer keinen Zugriff auf diese Informationen hat (d. h., wenn der Benutzer nicht der Besitzer ist und nicht über das Recht "vieschreightsdata" verfügt).
+**Rückgabe**: Sammlung von Benutzerrechtszuordnungen: Der Wert der Eigenschaft [UserRights](class_mip_userrights.md) ist leer, wenn der aktuelle Benutzer keinen Zugriff auf diese Informationen hat (er also nicht der Besitzer ist und nicht über das Recht „VIEWRIGHTSDATA“ verfügt).
   
 ### <a name="getuserroles-function"></a>Getuserrollen-Funktion
 Ruft die Auflistung von Benutzerrollenzuordnungen ab.
@@ -119,10 +120,16 @@ Ruft die Verweiseradresse des Schutzes ab.
 Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
 
   
-**Returns**: App-spezifische Daten ein Schutz Handler kann ein Wörterbuch mit App-spezifischen Daten enthalten, die vom Schutzdienst verschlüsselt wurden. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über Schutz Deskriptor:: getsignetdappdata zugänglich sind.
+**Rückgabe**: App-spezifische Daten. Ein ProtectionHandler kann ein Wörterbuch mit App-spezifischen Daten enthalten, die durch den Schutzdienst verschlüsselt wurden. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, auf die über "schutzdeskriptor:: getsignetdappdata" zugegriffen werden kann.
   
 ### <a name="getsignedappdata-function"></a>Getsignetdappdata-Funktion
 Ruft anwendungsspezifische Daten ab, die signiert waren.
 
   
-**Returns**: App-spezifische Daten ein Schutz Handler kann ein Wörterbuch mit App-spezifischen Daten enthalten, die vom Schutzdienst signiert wurden. Diese signierten Daten sind unabhängig von den verschlüsselten Daten, auf die über Schutz Deskriptor:: getencryptedappdata zugegriffen werden kann.
+**Rückgabe**: App-spezifische Daten. Ein ProtectionHandler kann ein Wörterbuch mit App-spezifischen Daten enthalten, die durch den Schutzdienst signiert wurden. Diese signierten Daten sind unabhängig von den verschlüsselten Daten, auf die über "schutzdeskriptor:: getencryptedappdata" zugegriffen werden kann.
+  
+### <a name="getdoublekeyurl-function"></a>Getdoublekeyurl-Funktion
+Ruft die doppelte Schlüssel-URL ab, die für den benutzerdefinierten Schutz verwendet werden soll.
+
+  
+**Gibt Folgendes zurück**: doppelte Schlüssel-URL die doppelte Schlüssel-URL, die in benutzerdefinierten Anforderungen zum Schutz von Informationen mit einem zweiten Schlüssel verwendet wird.

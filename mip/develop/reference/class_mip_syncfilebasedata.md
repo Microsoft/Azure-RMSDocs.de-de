@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: syncfilebasedata-Klasse'
-description: 'Dokumentiert die MIP:: syncfilebasedata-Klasse des MIP-SDKs (Microsoft Information Protection).'
+title: syncfilebasedata-Klasse
+description: 'Dokumentiert die syncfilebasedata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 60209df41436f5409d2bf50e0fd0071eed8d74d6
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 1431ce00006692a9fdfff660c707e0b90fb9f50e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489383"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760704"
 ---
-# <a name="class-mipsyncfilebasedata"></a>MIP:: syncfilebasedata-Klasse 
+# <a name="class-syncfilebasedata"></a>syncfilebasedata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

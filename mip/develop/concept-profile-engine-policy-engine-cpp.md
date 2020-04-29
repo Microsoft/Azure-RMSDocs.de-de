@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 934fe6e054a6fe2b7f92b869e05d27a834d51366
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 6cfd75a3f56ebe12dc0c1caa3bd4e56438827af4
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555261"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764071"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK: Engine-Konzepte für die Richtlinien-API
 
@@ -21,13 +21,14 @@ ms.locfileid: "75555261"
 
 ### <a name="implementation-create-policy-engine-settings"></a>Implementierung: Erstellen von Einstellungen für die Richtlinien-Engine
 
-Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::PolicyEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::PolicyEngine::Settings`). Dieses Objekt speichert den eindeutigen Bezeichner der Engine, ein Objekt `mip::AuthDelegate` ihrer Implementierung, anpassbare Client Daten, die für das Debuggen oder Telemetrie verwendet werden können, und optional das Gebiets Schema.
 
-Hier erstellen wir ein `FileEngine::Settings` Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers:
+Hier erstellen wir ein `FileEngine::Settings` -Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers:
 
 ```cpp
 PolicyEngine::Settings engineSettings(
-  mip::Identity(mUsername), // mip::Identity.
+  mip::Identity(mUsername), // mip::Identity.  
+  authDelegateImpl,         // Auth delegate object
   "",                       // Client data. Customizable by developer, stored with engine.
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
@@ -37,10 +38,11 @@ Außerdem ist die Angabe einer benutzerdefinierten Engine-ID gültig:
 
 ```cpp
 PolicyEngine::Settings engineSettings(
-  "myEngineId", // string
-  "",           // Client data in string format. Customizable by developer, stored with engine.
-  "en-US",      // Locale. Default is en-US
-  false);       // Load sensitive information types for driving classification. Default is false.
+  "myEngineId",     // String
+  authDelegateImpl, // Auth delegate object
+  "",               // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",          // Locale. Default is en-US
+  false);           // Load sensitive information types for driving classification. Default is false.
 ```
 
 Als bewährte Methode sollte der erste Parameter (**id**) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer (am besten dem Benutzerprinzipalnamen) hergestellt werden kann.
@@ -51,22 +53,26 @@ Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-
 
 ```cpp
 
-  //auto profile will be std::shared_ptr<mip::Profile>
+  // Auto profile will be std::shared_ptr<mip::Profile>.
   auto profile = profileFuture.get();
 
-  //Create the PolicyEngine::Settings object
-  PolicyEngine::Settings engineSettings("UniqueID", "");
+  // Create the delegate
+  auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
 
-  //Create a promise for std::shared_ptr<mip::PolicyEngine>
+
+  // Create the PolicyEngine::Settings object.
+  PolicyEngine::Settings engineSettings("UniqueID", authDelegateImpl, "");
+
+  // Create a promise for std::shared_ptr<mip::PolicyEngine>.
   auto enginePromise = std::make_shared<std::promise<std::shared_ptr<mip::PolicyEngine>>>();
 
-  //Instantiate the future from the promise
+  // Instantiate the future from the promise.
   auto engineFuture = enginePromise->get_future();
 
-  //Add the engine using AddEngineAsync, passing in the engine settings and the promise
+  // Add the engine using AddEngineAsync, passing in the engine settings and the promise.
   profile->AddEngineAsync(engineSettings, enginePromise);
 
-  //get the future value and store in std::shared_ptr<mip::PolicyEngine>
+  // Get the future value and store in std::shared_ptr<mip::PolicyEngine>.
   auto engine = engineFuture.get();
 ```
 
@@ -113,4 +119,4 @@ for (const auto& label : labels) {
 }
 ```
 
-Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben wird, kann verwendet werden, um zuerst alle verfügbaren Bezeichnungen an den Benutzer zurückzugeben und anschließend ggf. die ID zu verwenden, wenn Bezeichnungen auf eine Datei angewendet werden sollen.
+Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben wird, kann verwendet werden, um zuerst alle verfügbaren Bezeichnungen an den Benutzer zurückzugeben und um anschließend ggf. die ID zu verwenden, wenn Bezeichnungen auf eine Datei angewendet werden sollen.

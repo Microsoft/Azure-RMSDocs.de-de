@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: applicationaktionstate-Klasse'
-description: 'Dokumentiert die MIP:: applicationaktionstate-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: applicationaktionstate-Klasse
+description: 'Dokumentiert die applicationaktionstate:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 70128f67f758145be2b03954d3385a8428d63fe9
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 389fd02b47153c6953fefad3ba068add6ff431ee
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490641"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763668"
 ---
-# <a name="class-mipapplicationactionstate"></a>MIP:: applicationaktionstate-Klasse 
+# <a name="class-applicationactionstate"></a>applicationaktionstate-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
@@ -22,7 +22,7 @@ ms.locfileid: "77490641"
 Public Std:: shared_ptr\<Bezeichnung\> getnewlabel () Konstanten  |  Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
 Public Std::p Air\<bool, Std:: String\> isdowngradebug () Konstanten  |  Bei der Implementierung sollte übergeben werden, ob eine vorhandene Bezeichnung herabgestuft wurde.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
-public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getnewlabelextendedproperties () konstant.  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
+public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \> getnewlabelextendedproperties () Konstanten  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
 public ActionType GetSupportedActions() const  |  Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
 public bool IsRecommendationEnabled () konstant  |  Gibt einen booleschen Wert zurück, der die empfohlene Aktion zurückgibt. Standardmäßig sollte true lauten, sofern der Benutzer nicht else angibt.
   
@@ -56,7 +56,7 @@ Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
   
 **Rückgabe**: Zuweisungsmethode STANDARD, PRIVILEGED, AUTO. 
   
-**Siehe auch**: [MIP:: accessmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Weitere Informationen finden Sie unter:** mip::AssignmentMethod
   
 ### <a name="getnewlabelextendedproperties-function"></a>Getnewlabelextendedproperties-Funktion
 Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.

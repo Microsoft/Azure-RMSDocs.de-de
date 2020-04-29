@@ -1,10 +1,10 @@
 ---
 title: Unterstützung von Azure Rights Management durch Apps von AIP
 description: Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z. b. Office-Apps) und Dienste (z. b. Exchange und SharePoint) den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und e-Mails Ihrer Organisation zu schützen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/02/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 795c260430305492b19aded923c01cf4d918b70f
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 9e14cd34dd31dda6942c028fa9a68778eaaaed3a
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935196"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224579"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Erfahren Sie anhand der folgenden Informationen, wie die am häufigsten verwendeten Anwendungen und Dienste für Endbenutzer den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und E-Mails Ihrer Organisation zu schützen. Diese Anwendungen sind unter anderem Word, Excel, PowerPoint und Outlook. Die Dienste sind unter anderem Exchange und SharePoint.
+Verwenden Sie die folgenden Informationen, um zu verstehen, wie die am häufigsten verwendeten Endbenutzer Anwendungen und-Dienste den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und e-Mails Ihrer Organisation zu schützen. Diese Anwendungen sind unter anderem Word, Excel, PowerPoint und Outlook. Die Dienste sind unter anderem Exchange und SharePoint.
 
 > [!NOTE]
 > Die Anwendungen und Versionen, die der Azure Rights Management-Dienst unterstützt, finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](./requirements-applications.md).
@@ -36,13 +36,13 @@ In den Fällen, in denen Benutzer den Schutz selber anwenden müssen, stellen Si
 
 Informationen dazu, wie diese Anwendungen für den Azure Rights Management-Dienst von Azure Information Protection konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
 
-Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Beispiele: 
+Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Beispiel: 
 
 - Exchange Online und Exchange Server verwenden die dienstseitige Indizierung, sodass die geschützten E-Mails eines Benutzers automatisch in ihren Suchergebnissen angezeigt werden. 
 
 - SharePoint Online und SharePoint-Server wenden Rights Management-Schutz auf Dateien nur beim Download an. Diese Implementierung bedeutet, dass die Indizierung und Suchergebnisse auf SharePoint von dieser Lösung zum Schutz von Dokumenten nicht betroffen sind. Wenn Sie jedoch ein Dokument haben, das Sie in SharePoint speichern möchten, und dieses Dokument nicht in den Suchergebnissen zurückgegeben werden sollte, schützen Sie es, bevor es in SharePoint hochgeladen wird.
 
-- Die Windows-Desktopsuche verwendet einen gemeinsam genutzten Index zwischen verschiedenen Benutzern des Geräts. Damit die Daten in den geschützten Dokumenten sicher bleiben, indiziert sie keine geschützten Dateien. Das bedeutet, dass Sie sicher sein können, dass Ihre Dateien mit sensiblen Daten nicht in den Suchergebnissen anderer Benutzer angezeigt werden, die sich an Ihrem PC anmelden oder eine Verbindung zu Ihrem PC herstellen könnten, obwohl Ihre Suchergebnisse keine Dateien enthalten, die Sie geschützt haben. 
+- Die Windows-Desktopsuche verwendet einen gemeinsam genutzten Index zwischen verschiedenen Benutzern des Geräts. Damit die Daten in den geschützten Dokumenten sicher bleiben, indiziert sie keine geschützten Dateien. Obwohl Ihre Suchergebnisse keine Dateien enthalten, die Sie geschützt haben, können Sie sicher sein, dass Ihre Dateien, die sensible Daten enthalten, nicht in den Suchergebnissen für andere Benutzer angezeigt werden, die sich möglicherweise an Ihrem PC anmelden oder eine Verbindung mit Ihrem PC herstellen. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -50,7 +50,7 @@ Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Anwendung
 
 -   [Office-Anwendungen und -Dienste](office-apps-services-support.md)
 
--   [Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) verwenden](file-server-support.md)
+-   [Dateiserver, die unter Windows Server ausgeführt werden und die Datei Klassifizierungs Infrastruktur (FCI) verwenden](file-server-support.md)
 
--   [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md)
+-   [Andere Anwendungen, die die RMS-APIs unterstützen](api-support.md)
 

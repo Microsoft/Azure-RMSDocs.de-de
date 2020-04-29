@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 987e44dcd5d5c690f581fd47a4047b65260b71d9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: f10f55393fe5b72d46897a8a894e5e9a44f2db46
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482837"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224698"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -27,16 +27,16 @@ ms.locfileid: "79482837"
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Sie können das neueste allgemein verfügbare Release und die aktuelle Vorschauversion (sofern verfügbar) im [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. 
 
-Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Client**und der Klassifizierung der **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Clients**und der Klassifizierung von **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
 
 Weitere Informationen finden Sie unter [Upgraden und Verwalten des Azure Information Protection-Clients](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Sie sind daran interessiert, den Azure Information Protection Unified Label-Client zu verwenden, da ihre Bezeichnungen aus Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center veröffentlicht werden? Wenn Sie den Unified-Bezeichnungs Client aus dem Microsoft Download Center herunterladen und anschließend installieren, können Sie das Upgrade Ihres Azure Information Protection-Clients auf den Unified-Bezeichnungs [Client](unifiedlabelingclient-version-release-history.md)durchführen.
+> Sie sind daran interessiert, den Azure Information Protection Unified Label-Client zu verwenden, da ihre Bezeichnungen aus dem Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center veröffentlicht werden? Wenn Sie den Unified-Bezeichnungs Client aus dem Microsoft Download Center herunterladen und anschließend installieren, können Sie das Upgrade Ihres Azure Information Protection-Clients auf den Unified-Bezeichnungs [Client](unifiedlabelingclient-version-release-history.md)durchführen.
 
 ### <a name="servicing-information-and-timelines"></a>Wartungsinformationen und Zeitachsen
 
@@ -48,6 +48,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|27.11.2018|
 |1.37.19.0|17.9.2018|
@@ -56,9 +57,9 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 |1.26.6.0|04/17/2018|
 |1.10.56.0|09/18/2017|
 |1.7.210.0|06/06/2017|
-|1.4.21.0|03/15/2017|
+|1.4.21.0|15.03.2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0.0|10/27/2016|
+|1.2.4.0.0|27.10.2016|
 |1.1.23.0|10/01/2016|
 
 Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
@@ -82,7 +83,7 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 
 Diese Version enthält nur Korrekturen. 
 
-**Korrekturen**:
+**Fixes**:
 
 - Das Problem ist behoben, wenn die durch iqp geschützten Dateien **Wiederherstellen** und/oder **Speichern** unter-Optionen nach dem Entfernen des Schutzes angezeigt werden. 
 
@@ -101,30 +102,6 @@ Unterstützt durch 08/12/2020
 Diese Version umfasst die msipc-Version 1.0.4008.0813 des RMS-Clients.
 
 Diese Version enthält allgemeine Korrekturen für Stabilität und Leistung.
-
-## <a name="version-153100"></a>Version 1.53.10.0
-
-**Veröffentlicht**: 07/15/2019
-
-Unterstützt durch 04/23/2020
-
-Diese Version umfasst die msipc-Version 1.0.3889.0419 des RMS-Clients.
-
-**Neue Funktionen:**
-
-- Neue erweiterte Client Einstellung zum Ausschließen von Outlook-Nachrichten aus der Richtlinien Einstellung **alle Dokumente und e-Mails müssen eine Bezeichnung aufweisen**. [Weitere Informationen](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-
-- Neue erweiterte Client Einstellung zur weiteren Anpassung der Einstellungen, mit denen Popup Meldungen in Outlook implementiert werden, die gesendete e-Mails warnen, rechtfertigen oder blockieren. Mit dieser neuen erweiterten Einstellung können Sie eine andere Aktion für e-Mail-Nachrichten ohne Anlagen festlegen. [Weitere Informationen](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
-
-**Korrekturen**:
-
-- Wenn Sie den Datei-Explorer verwenden, klicken Sie mit der rechten Maustaste auf die Bezeichnung einer Datei, für die der Schutz unabhängig von einer Bezeichnung angewendet wurde. dieser Schutz wird beibehalten. Ein Benutzer hat z. b. benutzerdefinierte Berechtigungen auf eine Datei angewendet.
-
-- Wenn Sie die Option "nicht weiterleiten" in einem e-Mail-Thread durch eine Bezeichnung ersetzen, die für benutzerdefinierte Berechtigungen konfiguriert ist und nicht weiterleiten, können die ursprünglichen Empfänger die e-Mail-Nachricht weiterhin öffnen.
-
-- Im folgenden Szenario wird ein Benutzer in der QuickInfo-QuickInfo nicht mehr angezeigt, dass die Bezeichnung automatisch von Ihnen festgelegt wurde: ein Benutzer erhält eine geschützte e-Mail mit einem angefügten Dokument, das nicht gekennzeichnet ist, aber automatisch geschützt wird. Wenn der Benutzer aus derselben Organisation wie der Absender das Dokument öffnet, wird die entsprechende Bezeichnung für die Schutzeinstellungen auf das Dokument angewendet.
-
-- Das minimale [Nutzungsrecht](../configure-usage-rights.md#usage-rights-and-descriptions) zum Ausführen des Cmdlets " [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) " lautet jetzt " **Speichern unter", "Exportieren** (exportieren)" und nicht " **Kopieren** " (extrahieren).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

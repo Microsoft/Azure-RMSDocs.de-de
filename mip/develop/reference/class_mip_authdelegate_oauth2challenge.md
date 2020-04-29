@@ -1,29 +1,29 @@
 ---
-title: 'MIP:: authdelegat:: OAuth2Challenge-Klasse'
-description: 'Dokumentiert die MIP:: authdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+title: 'Class authdelegat:: OAuth2Challenge'
+description: 'Dokumentiert die authdelegat:: oauth2challenge-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 8e3119e18d465c9ad66dd1cbbece003b96d1a3b7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: f8a350a8c9ddd68f484a98b0e63860d2965bd890
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489060"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763602"
 ---
-# <a name="class-mipauthdelegateoauth2challenge"></a>MIP:: authdelegat:: OAuth2Challenge-Klasse 
+# <a name="class-authdelegateoauth2challenge"></a>Class authdelegat:: OAuth2Challenge 
 eine Klasse, die alle Informationen enthält, die von der aufrufenden Anwendung benötigt werden, um ein oauth2-Token zu generieren.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public OAuth2Challenge (Konstante Std:: String & Authority, Konstanten Std:: String & Resource, Konstanten Std:: String & Scope, Konstante Std:: String & Claims)  |  Erstellen Sie ein neues OAuth2Challenge-Objekt.
-Public Konstanten Std:: String & getauthority () Konstanten  |  Die Autoritäts Zeichenfolge erhalten.
-Public Konstanten Std:: String & getResource () Konstanten  |  Die Ressourcen Zeichenfolge erhalten.
-Public Konstanten Std:: String & GetScope () Konstanten  |  Die Bereichs Zeichenfolge erhalten.
-Public Konstanten Std:: String & getclaims () Konstanten  |  Die Anspruchs Zeichenfolge erhalten.
+Public OAuth2Challenge (Konstante Std:: String& Authority, Konstanten Std:: String& Resource, Konstanten Std:: String& Scope, Konstante Std:: String& Claims)  |  Erstellen Sie ein neues OAuth2Challenge-Objekt.
+Public Konstanten Std:: String& getauthority () Konstanten  |  Die Autoritäts Zeichenfolge erhalten.
+Public Konstanten Std:: String& getResource () Konstanten  |  Die Ressourcen Zeichenfolge erhalten.
+Public Konstanten Std:: String& GetScope () Konstanten  |  Die Bereichs Zeichenfolge erhalten.
+Public Konstanten Std:: String& getclaims () Konstanten  |  Die Anspruchs Zeichenfolge erhalten.
   
 ## <a name="members"></a>Member
   

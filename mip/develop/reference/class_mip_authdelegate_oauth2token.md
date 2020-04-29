@@ -1,30 +1,30 @@
 ---
-title: 'MIP:: authdelegat:: OAuth2Token-Klasse'
-description: 'Dokumentiert die MIP:: authdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+title: 'Class authdelegat:: OAuth2Token'
+description: 'Dokumentiert die authdelegat:: oauth2token-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6053a282d162dc2b0f316b265fe6878a4c535a7f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 43f3e3d9abdab37620ca852411b2817a3848ba78
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490437"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763595"
 ---
-# <a name="class-mipauthdelegateoauth2token"></a>MIP:: authdelegat:: OAuth2Token-Klasse 
+# <a name="class-authdelegateoauth2token"></a>Class authdelegat:: OAuth2Token 
 Eine Klasse, die von einer Anwendung bereitgestellte zugriffstokeninformationen enthält.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliches OAuth2Token ()  |  Erstellen Sie ein neues OAuth2Token-Objekt.
-Public OAuth2Token (Konstante Std:: String & accesstoken)  |  Erstellen Sie ein neues OAuth2Token-Objekt aus dem JWT-Zugriffs Token.
-Public Konstanten Std:: String & getaccesstoken () konstant  |  Abrufen der zugriffstokenzeichenfolge.
-öffentliches void setaccesstoken (Konstante Std:: String & accesstoken)  |  Legen Sie die Zugriffs Token-Zeichenfolge fest.
-Public Konstante Std:: String & getErrorMessage () konstant  |  Erhalten Sie ggf. die Fehlermeldung.
-öffentliches void seterrormessage (Konstante Std:: String & ErrorMessage)  |  Legt die Fehlermeldung fest
+Public OAuth2Token (Konstante Std:: String& accesstoken)  |  Erstellen Sie ein neues OAuth2Token-Objekt aus dem JWT-Zugriffs Token.
+Public Konstanten Std:: String& getaccesstoken () konstant  |  Abrufen der zugriffstokenzeichenfolge.
+öffentliches void setaccesstoken (Konstante Std:: String& accesstoken)  |  Legen Sie die Zugriffs Token-Zeichenfolge fest.
+Public Konstante Std:: String& getErrorMessage () konstant  |  Erhalten Sie ggf. die Fehlermeldung.
+öffentliches void seterrormessage (Konstante Std:: String& ErrorMessage)  |  Legt die Fehlermeldung fest
   
 ## <a name="members"></a>Member
   

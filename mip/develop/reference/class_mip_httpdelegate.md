@@ -1,27 +1,27 @@
 ---
-title: class mip::HttpDelegate
-description: 'Dokumentiert die MIP:: httpdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse httpdelegat
+description: 'Dokumentiert die httpdeleg:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e629e15ed3a4754123f8ca71adee04d32bc3785f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: e1ddc8595e3cba2172228532a84ca68883cc0afd
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488108"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762826"
 ---
-# <a name="class-miphttpdelegate"></a>class mip::HttpDelegate 
+# <a name="class-httpdelegate"></a>Klasse httpdelegat 
 Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: shared_ptr\<httpoperation\> Send (Konstanten Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Sendet die HTTP-Anforderung.
-Public Std:: shared_ptr\<httpoperation\> SendAsync (Konstante Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& context, Konstanten Std:: function\<void (Std:: shared_ptr\<httpoperation\>)  |  HTTP-Anforderung asynchron senden.
-öffentliches void CancelOperation (Konstante Std:: String & RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
+Public Std:: shared_ptr\<httpoperation\> Send (Konstanten Std::\<shared_ptr HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& context)  |  Sendet die HTTP-Anforderung.
+Public Std:: shared_ptr\<httpoperation\> \<SendAsync (Konstante Std:: shared_ptr HttpRequest\>& Request, Konst Std:: shared_ptr\<void\>& context, Konstanten Std:: Function\<void (Std:: shared_ptr\<httpoperation)\>  |  HTTP-Anforderung asynchron senden.
+öffentliches void CancelOperation (Konstante Std:: String& RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
 öffentliches void cancelalloperations ()  |  Abbrechen fortlaufender HTTP-Anforderungen.
   
 ## <a name="members"></a>Member

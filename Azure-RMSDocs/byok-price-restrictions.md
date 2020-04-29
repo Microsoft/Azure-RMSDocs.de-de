@@ -1,10 +1,10 @@
 ---
 title: Byok-Details-Azure Information Protection
 description: Informieren Sie sich über die Details und Einschränkungen, wenn Sie von Kunden verwaltete Schlüssel (die als "Bring your own Key" bezeichnet werden, oder Byok) mit Azure Information Protection.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 11/22/2019
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a82afdeee9459b460b98a385102147c6c78ff28
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935179"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224562"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Byok-Details (Bring your own Key) für Azure Information Protection
 
@@ -27,7 +27,7 @@ ms.locfileid: "74935179"
 
 Organisationen mit einem Abonnement, das Azure Information Protection umfasst, können Ihren Azure Information Protection Mandanten so konfigurieren, dass er einen vom Kunden verwalteten Schlüssel verwendet und [seine Verwendung protokolliert](log-analyze-usage.md). Die vom Kunden verwaltete Schlüssel Konfiguration wird häufig als "Bring your own Key" oder Byok bezeichnet.
 
-Dieser vom Kunden verwaltete Schlüssel muss in Azure Key Vault gespeichert werden, für die ein Azure-Abonnement erforderlich ist. Sie müssen den Premiumtarif von Azure Key Vault verwenden, um einen HSM-geschützten Schlüssel nutzen zu können. Für die Verwendung eines Schlüssels in Azure Key Vault fällt eine monatliche Gebühr an. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/pricing/details/key-vault/).
+Dieser vom Kunden verwaltete Schlüssel muss in Azure Key Vault gespeichert werden, für die ein Azure-Abonnement erforderlich ist. Sie müssen den Premiumtarif von Azure Key Vault verwenden, um einen HSM-geschützten Schlüssel nutzen zu können. Für die Verwendung eines Schlüssels in Azure Key Vault fällt eine monatliche Gebühr an. Weitere Informationen finden Sie auf der [Seite Azure Key Vault Preise](https://azure.microsoft.com/pricing/details/key-vault/).
 
 Wenn Sie Azure Key Vault für Ihren Azure Information Protection-Mandantenschlüssel einsetzen, empfiehlt es sich, einen dedizierten Schlüsseltresor für diesen Schlüssel zu verwenden, um sicherzustellen, dass er nur vom Azure Rights Management-Dienst verwendet wird. Diese Konfiguration gewährleistet, dass Aufrufe anderer Dienste nicht zu einer Überschreitung der Key Vault-[Dienstgrenzwerte](/azure/key-vault/key-vault-service-limits) führen, wodurch die Antwortzeiten des Azure Rights Management-Diensts gedrosselt werden könnten.  
 

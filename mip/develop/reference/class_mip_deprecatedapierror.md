@@ -1,19 +1,19 @@
 ---
-title: MIP::D eprecatedapierror-Klasse
-description: Dokumentiert die MIP::d eprecatedapierror-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Klasse deprecatedapierror
+description: 'Dokumentiert die deprecatedapierror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 29811c9485e8d86c791342b50f57adfe14ecd9f1
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 875c82694ab816f6304bb4064d6d794128857a4d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488805"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763359"
 ---
-# <a name="class-mipdeprecatedapierror"></a>MIP::D eprecatedapierror-Klasse 
+# <a name="class-deprecatedapierror"></a>Klasse deprecatedapierror 
 Der Aufrufer hat eine veraltete API aufgerufen.
   
 ## <a name="summary"></a>Zusammenfassung

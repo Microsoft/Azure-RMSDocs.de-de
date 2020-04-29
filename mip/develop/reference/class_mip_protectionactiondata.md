@@ -1,32 +1,32 @@
 ---
-title: MIP::P rotectionaktiondata
-description: Dokumentiert die MIP::p rotectionaktiondata-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Class schutzaktionsdaten
+description: 'Dokumentiert die schutzaktiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6643efcd65996a251991dae2b359b361f6a8ad60
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 61489477c06e5781e0e013c7f59f263389398cc2
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489706"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763965"
 ---
-# <a name="class-mipprotectionactiondata"></a>MIP::P rotectionaktiondata 
+# <a name="class-protectionactiondata"></a>Class schutzaktionsdaten 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public schutzaktionstyp getschutztype () Konstanten  | _Noch nicht dokumentiert._
 public const std::string& GetTemplateId() const  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getdoublekeyverschlüsseltionurl () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String& getdoublekeyverschlüsseltionurl () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ schutzaktiondata ()  | _Noch nicht dokumentiert._
 öffentlicher Aktions DataType GetType () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | _Noch nicht dokumentiert._
-Public Std:: String getargumentvalue (Konstanten Std:: String & Key) konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | _Noch nicht dokumentiert._
+Public Std:: String getargumentvalue (Konstanten Std:: String& Key) konstant  | _Noch nicht dokumentiert._
 public const std::string& GetName() const  | _Noch nicht dokumentiert._
-Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> GetArguments () konstant.  | _Noch nicht dokumentiert._
+Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \> GetArguments () Konstanten  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   

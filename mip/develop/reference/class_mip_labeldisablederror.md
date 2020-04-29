@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: labeldisablederror-Klasse'
-description: 'Dokumentiert die MIP:: labeldisablederror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse "labeldisablederror"
+description: 'Dokumentiert die labeldisablederror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 9b3e740e1b456b7fffe500699a4fd0517a1a5646
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2535dd246f3ef71195a98e591f27b76d50d1f57b
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487972"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762014"
 ---
-# <a name="class-miplabeldisablederror"></a>MIP:: labeldisablederror-Klasse 
+# <a name="class-labeldisablederror"></a>Klasse "labeldisablederror" 
 Die Bezeichnung ist deaktiviert oder inaktiv.
   
 ## <a name="summary"></a>Zusammenfassung

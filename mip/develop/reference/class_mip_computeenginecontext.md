@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: computeenginecontext-Klasse'
-description: 'Dokumentiert die MIP:: computeenginecontext-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class computeenginecontext
+description: 'Dokumentiert die computeenginecontext:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 78109b683d163dfec80a3cf0831abd2f1d9c97de
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: c9ab006606e8895b80231a793b9d1714829195d1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490352"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763468"
 ---
-# <a name="class-mipcomputeenginecontext"></a>MIP:: computeenginecontext-Klasse 
+# <a name="class-computeenginecontext"></a>Class computeenginecontext 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

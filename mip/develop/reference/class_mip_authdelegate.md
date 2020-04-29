@@ -1,26 +1,26 @@
 ---
-title: 'MIP:: authdelegat-Klasse'
-description: 'Dokumentiert die MIP:: authdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+title: klassenauthdelegat
+description: 'Dokumentiert die authdelegat:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 30907f3bf4a08f72305a59290c8cbd891def44c9
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: a7cbc6789fc6baa8fbb01ffb8c6d6ea7e9294d4f
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490607"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763623"
 ---
-# <a name="class-mipauthdelegate"></a>MIP:: authdelegat-Klasse 
+# <a name="class-authdelegate"></a>klassenauthdelegat 
 Delegat für Vorgänge im Zusammenhang mit der Authentifizierung.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual bool AcquireOAuth2Token (Konstante MIP:: Identity & Identity, Reas OAuth2Challenge & Challenge, OAuth2Token & Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
-public virtual bool AcquireOAuth2Token (Konst MIP:: Identity & Identity, konstant OAuth2Challenge & Challenge, Konstante Std:: shared_ptr\<void\>& Kontext, OAuth2Token & Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
+public virtual bool AcquireOAuth2Token (Konstante Identität& Identität, konstant OAuth2Challenge& Challenge, OAuth2Token& Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
+public virtual bool AcquireOAuth2Token (Konstante Identität& Identität, konstant OAuth2Challenge& Challenge, Konstante Std:: shared_ptr\<void\>& context, OAuth2Token& Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
   
 ## <a name="members"></a>Member
   

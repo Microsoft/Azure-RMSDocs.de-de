@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 35caf958f2da92e624018d5ad7e57e734ec66904
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: db081e190157c8585cbe74ef05e3fb7e5b5b7940
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555210"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764096"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Engine-Objekt der File-API
 
@@ -29,13 +29,14 @@ Wie unter [Profile- und Engine-Objekte](concept-profile-engine-cpp.md) beschrieb
 
 ### <a name="create-file-engine-settings"></a>Erstellen der Dateiengineeinstellungen
 
-Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). Dieses Objekt speichert den eindeutigen Bezeichner der Engine `mip::AuthDelegate` , die Implementierungen, anpassbare Client Daten, die für das Debuggen oder Telemetriedaten verwendet werden können, und optional das Gebiets Schema.
 
-Hier erstellen wir mit der Identität des Anwendungs Benutzers ein `FileEngine::Settings` Objekt namens *EngineSettings* .
+Hier erstellen wir ein `FileEngine::Settings` -Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers.
 
 ```cpp
 FileEngine::Settings engineSettings(
   mip::Identity(mUsername), // mip::Identity.
+  authDelegateImpl,         // auth delegate object
   "",                       // Client data. Customizable by developer, stored with engine.
   "en-US",                  // Locale.
   false);                   // Load sensitive information types for driving classification.
@@ -45,10 +46,11 @@ Außerdem ist die Angabe einer benutzerdefinierten Engine-ID gültig:
 
 ```cpp
 FileEngine::Settings engineSettings(
-  "myEngineId", // string
-  "",           // Client data in string format. Customizable by developer, stored with engine.
-  "en-US",      // Locale. Default is en-US
-  false);       // Load sensitive information types for driving classification. Default is false.
+  "myEngineId",     // string
+  authDelegateImpl, // auth delegate object
+  "",               // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",          // Locale. Default is en-US
+  false);           // Load sensitive information types for driving classification. Default is false.
 ```
 
 Als bewährte Methode sollte der erste Parameter (`id`) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer hergestellt werden kann. Eine Angabe wie etwa die E-Mail-Adresse, der UPN oder eine AAD-Objekt-GUID würde sicherstellen, dass die ID sowohl eindeutig ist als auch aus dem lokalen Zustand geladen werden kann, ohne den Dienst aufzurufen.
@@ -61,8 +63,11 @@ Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-/Future
   //auto profile will be std::shared_ptr<mip::FileProfile>
   auto profile = profileFuture.get();
 
+  // Instantiate the AuthDelegate implementation.
+  auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
+
   //Create the FileEngine::Settings object
-  FileEngine::Settings engineSettings("UniqueID", "");
+  FileEngine::Settings engineSettings("UniqueID", authDelegateImpl, "");
 
   //Create a promise for std::shared_ptr<mip::FileEngine>
   auto enginePromise = std::make_shared<std::promise<std::shared_ptr<mip::FileEngine>>>();
@@ -116,7 +121,7 @@ for (const auto& label : labels) {
 }
 ```
 
-Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben wird, kann verwendet werden, um zuerst alle verfügbaren Bezeichnungen an den Benutzer zurückzugeben und anschließend ggf. die ID zu verwenden, wenn Bezeichnungen auf eine Datei angewendet werden sollen.
+Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben wird, kann verwendet werden, um zuerst alle verfügbaren Bezeichnungen an den Benutzer zurückzugeben und um anschließend ggf. die ID zu verwenden, wenn Bezeichnungen auf eine Datei angewendet werden sollen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

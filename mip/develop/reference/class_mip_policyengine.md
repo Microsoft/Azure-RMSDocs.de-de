@@ -1,45 +1,47 @@
 ---
-title: mip::PolicyEngine-Klasse
-description: Dokumentiert die MIP::p olicyengine-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Klasse policyengine
+description: 'Dokumentiert die policyengine:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 114b8dedb46a0e86eb73ff1f6fa58de81927b60e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 40072d56fd5bd1c577759991f7b98236a58e5ed2
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489825"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761134"
 ---
-# <a name="class-mippolicyengine"></a>mip::PolicyEngine-Klasse 
+# <a name="class-policyengine"></a>Klasse policyengine 
 Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Die Einstellungen der Richtlinien-Engine werden angezeigt.
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<Bezeichnung\>\>& listsensitivitylabels ()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& listsensitivitytypes () Konstanten  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
+public const Settings& GetSettings() const  |  Ruft die [Einstellungen](class_mip_policyengine_settings.md) der Richtlinien-Engine ab.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<-Bezeichnung\> \>& listsensitivitylabels ()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<sensitivitytypesrulepackage\> \>& listsensitivitytypes () Konstanten  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 public const std::string& GetMoreInfoUrl() const  |  Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
 public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
 Public Std:: shared_ptr\<Bezeichnung\> getdefaultsensitivitylabel ()  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
-Public Std:: shared_ptr\<Bezeichnung\> getlabelbyid (Konstante Std:: String & ID) Konstanten  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
+Public Std:: shared_ptr\<Bezeichnung\> getlabelbyid (Konstanten Std:: String& ID) Konstanten  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
 Public Std:: shared_ptr\<policyhandler\> kreatepolicyhandler (bool isauditdiscoveryaktivierte)  |  Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
-Public Konstanten Std:: String & getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
-Public Konstanten Std:: String & getsensitivitytypesdataxml () Konstanten  |  Ruft Daten der Vertraulichkeits Typen ab, die die Vertraulichkeits Typen beschreiben, die dieser Richtlinie zugeordnet sind.
-Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Ruft eine Liste benutzerdefinierter Einstellungen ab.
-Public Konstanten Std:: String & getpolicyfleid () Konstanten  |  Ruft die ID der Richtlinien Datei ab.
-Public Konstanten Std:: String & getsensitivityfleid () Konstanten  |  Ruft die ID der Vertraulichkeits Datei ab.
+Public Konstanten Std:: String& gettenantid () Konstanten  |  Ruft die der Engine zugeordnete Mandanten-ID ab.
+Public Konstanten Std:: String& getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
+Public Konstanten Std:: String& getsensitivitytypesdataxml () Konstanten  |  Ruft Daten der Vertraulichkeits Typen ab, die die Vertraulichkeits Typen beschreiben, die dieser Richtlinie zugeordnet sind.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft eine Liste benutzerdefinierter Einstellungen ab.
+Public Konstanten Std:: String& getpolicyfleid () Konstanten  |  Ruft die ID der Richtlinien Datei ab.
+Public Konstanten Std:: String& getsensitivityfleid () Konstanten  |  Ruft die ID der Vertraulichkeits Datei ab.
 public bool hasclassificationrules () konstant  |  Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
-Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () konstant.  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () Konstanten  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
+Public Ganzzahl ohne Vorzeichen int GetWxpMetadataVersion () Konstanten  |  Ruft die empfohlene WXP-Metadatenversion (Windows, Excel, PowerPoint) ab, die derzeit 0 für die alte Verifizierung 1 für die Co-Authoring-aktivierte Version ist.
   
 ## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
-Die Einstellungen der Richtlinien-Engine werden angezeigt.
+Ruft die Einstellungen der Richtlinien-Engine ab.
 
   
 **Rückgabe**: Einstellungen der Richtlinien-Engine. 
@@ -50,13 +52,13 @@ Die Einstellungen der Richtlinien-Engine werden angezeigt.
 Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
 
   
-**Rückgabe**: Liste der Vertraulichkeitsbezeichnungen.
+**Returns**: eine Liste von Vertraulichkeits Bezeichnungen.
   
 ### <a name="listsensitivitytypes-function"></a>Listsensitivitytypes-Funktion
 Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 
   
-**Rückgabe**: Liste der Vertraulichkeitsbezeichnungen. leer, wenn loadsensitivitytypesaktivierte false war (
+**Returns**: eine Liste von Vertraulichkeits Bezeichnungen. leer, wenn loadsensitivitytypesaktivierte false war (
   
 **Siehe auch**: policyengine:: Settings).
   
@@ -107,6 +109,12 @@ Parameter:
 
 
   
+### <a name="gettenantid-function"></a>Gettenantid-Funktion
+Ruft die der Engine zugeordnete Mandanten-ID ab.
+
+  
+**Gibt Folgendes zurück**: Mandanten-ID
+  
 ### <a name="getpolicydataxml-function"></a>Getpolicydataxml-Funktion
 Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
 
@@ -148,3 +156,9 @@ Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
 
   
 **Returns**: die Uhrzeit, zu der die Richtlinie zuletzt abgerufen wurde.
+  
+### <a name="getwxpmetadataversion-function"></a>GetWxpMetadataVersion-Funktion
+Ruft die empfohlene WXP-Metadatenversion (Windows, Excel, PowerPoint) ab, die derzeit 0 für die alte Verifizierung 1 für die Co-Authoring-aktivierte Version ist.
+
+  
+**Gibt Folgendes zurück**: unsignierte int-Werte, die die Version der Metadaten, die der Mandant für WXP-Dateien unterstützt

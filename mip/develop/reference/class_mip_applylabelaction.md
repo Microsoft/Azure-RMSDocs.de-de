@@ -1,25 +1,25 @@
 ---
-title: mip::ApplyLabelAction-Klasse
-description: 'Dokumentiert die MIP:: applylabelaction-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class applylabelaction
+description: 'Dokumentiert die applylabelaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e1551adddec611c6f9a0982c5a267fad39c436c4
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: df208a53f6cd6ec3806e91c28901a3005b801742
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490675"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763714"
 ---
-# <a name="class-mipapplylabelaction"></a>mip::ApplyLabelAction-Klasse 
+# <a name="class-applylabelaction"></a>Class applylabelaction 
 Aktionen zum Anwenden von Bezeichnungen veranlassen, dass die aufrufende Anwendung eine bestimmte Bezeichnung anwendet.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Konstante Std:: shared_ptr\<Bezeichnung\>& GetLabel () Konstanten  |  Holen Sie sich die erforderliche Bezeichnung.
+Public Konstanten Std:: shared_ptr\<-Bezeichnung\>& GetLabel () Konstanten  |  Holen Sie sich die erforderliche Bezeichnung.
 Public Konstanten Std:: Vector\<Std:: String\>& getclassificationids () Konstanten  |  Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
   
 ## <a name="members"></a>Member
@@ -34,4 +34,4 @@ Holen Sie sich die erforderliche Bezeichnung.
 Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
 
   
-**Gibt Folgendes zurück**: Konstante Std:: Vector < Std:: String > & eine Liste der Klassifizierungs-IDs, die dazu geführt haben, dass diese Bezeichnung angezeigt wird.
+**Gibt Folgendes zurück**: Konstante Std:: Vector<Std:: String>& eine Liste der Klassifizierungs-IDs, die dazu geführt haben, dass diese Bezeichnung angezeigt wird.

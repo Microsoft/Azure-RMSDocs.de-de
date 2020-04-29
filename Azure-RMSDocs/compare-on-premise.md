@@ -1,10 +1,10 @@
 ---
 title: Vergleich von Azure Information Protection und AD RMS – AIP
 description: Wenn Sie Active Directory Rights Management Services (AD RMS) bereits kennen oder bereitgestellt haben, fragen Sie sich vielleicht, wie sich Azure Information Protection in Bezug auf die Funktionen und Anforderungen unterscheidet.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/23/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d0cd811adcd773446c60a3442bb5687210931ed0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2eeae09e3fe8bca00eb7d80df60418a246c0ca86
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444838"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224545"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Vergleich von Azure Information Protection und AD RMS
 
@@ -50,9 +50,9 @@ Für andere Unterschiede verwenden Sie die folgende Tabelle für einen parallele
 |Unterstützt Funktionen für die Verwaltung von Informationsrechten (Information Rights Management, unm) in Microsoft Online Services und lokalen Microsoft-Server Produkten.|In werden die Funktionen zur Verwaltung von Informationsrechten (Information Rights Management, unm) für lokale Microsoft-Server Produkte und Exchange Online unterstützt.|
 |Aktiviert automatisch die sichere Kollaboration an Dokumenten mit jeder beliebigen Organisation, die ebenso Azure AD für die Authentifizierung verwendet.|Eine sichere Zusammenarbeit an Dokumenten außerhalb der Organisation erfordert, dass die Vertrauensstellung der Authentifizierung explizit in einer direkten Punkt-zu-Punkt-Beziehung zwischen den beiden Organisationen definiert ist. Sie müssen entweder vertrauenswürdige Benutzerdomänen (TUDs) oder Verbundvertrauensstellungen konfigurieren, die Sie mithilfe der Active Directory-Verbunddienste (AD FS) erstellen.|
 |Senden Sie eine geschützte E-Mail (optional mit Office-Dokumentanlagen, die automatisch geschützt sind) an Benutzer, wenn keine Vertrauensstellungsbeziehung für die Authentifizierung existiert. Dieses Szenario wird durch die Verwendung eines Verbunds mit sozialen Netzwerken oder einer Einmalkennung und eines Webbrowsers zur Ansicht möglich gemacht.|Unterstützt nicht das Senden geschützter E-Mails, wenn keine Vertrauensstellung für die Authentifizierung besteht.|
-|Unterstützt den Azure Information Protection Client (klassisch) und den Azure Information Protection Unified-Bezeichnungs Client für Schutz-und Nutzungs Aktivitäten.|Unterstützt den Azure Information Protection-Client (klassisch) für Schutz-und verbrauchsaktivitäten. <br /><br />Unterstützt den Azure Information Protection Unified-Bezeichnungs Client nur für die Verwendung, und Sie müssen die [Active Directory Rights Management Services Mobile-Geräte Erweiterung](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))installieren.
+|Unterstützt den Azure Information Protection Client (klassisch) und den Azure Information Protection Unified-Bezeichnungs Client für Schutz-und Nutzungs Aktivitäten.|Unterstützt den Azure Information Protection-Client (klassisch) für Schutz-und verbrauchsaktivitäten. <br /><br />Unterstützt den Azure Information Protection Unified-Bezeichnungs Client nur für die Verwendung, und Sie müssen die [Active Directory Rights Management Services Mobile-Geräte Erweiterung](./active-directory-rights-manage-mobile-device.md)installieren.
 |Unterstützt Multi-Factor Authentication (MFA) für Computer und mobile Geräte.<br /><br />Weitere Informationen finden Sie unter [Multi-Factor Authentication (MFA) und Azure Information Protection](./requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection).|Unterstützt Smartcard-Authentifizierung, wenn IIS so konfiguriert ist, dass Zertifikate angefordert werden.|
-|Unterstützt standardmäßig den Kryptografiemodus 2, um ein empfohlenes Sicherheitsniveau für Schlüssellängen und Verschlüsselungsalgorithmen bereitzustellen.|Unterstützt standardmäßig den Kryptografiemodus 1 und erfordert eine zusätzliche Konfiguration zur Unterstützung des Kryptografiemodus 2 für ein empfohlenes Sicherheitsniveau.<br /><br />Weitere Informationen finden Sie unter [AD RMS kryptografiemodi](https://go.microsoft.com/fwlink/?LinkId=266659).|
+|Unterstützt standardmäßig den Kryptografiemodus 2, um ein empfohlenes Sicherheitsniveau für Schlüssellängen und Verschlüsselungsalgorithmen bereitzustellen.|Unterstützt standardmäßig den Kryptografiemodus 1 und erfordert eine zusätzliche Konfiguration zur Unterstützung des Kryptografiemodus 2 für ein empfohlenes Sicherheitsniveau.<br /><br />Weitere Informationen finden Sie unter [AD RMS-Kryptografiemodi](https://go.microsoft.com/fwlink/?LinkId=266659).|
 |Erfordert eine Azure Information Protection Lizenz oder eine Azure Rights Management-Lizenz mit Office 365, um Inhalte zu schützen. <br /><br />Es ist keine Lizenz erforderlich, um Inhalte zu verwenden, die mit Azure Information Protection geschützt wurden (einschließlich Benutzern aus einer anderen Organisation).<br /><br />Weitere Informationen zur Lizenzierung, einschließlich der Unterschiede zwischen einer P1-und P2-Lizenz, finden Sie in der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) der Azure Information Protection Website.|Erfordert eine RMS-Lizenz, um Inhalte zu schützen, sowie zum Verwenden von Inhalten, die mit AD RMS geschützt wurden.<br /><br />Weitere Informationen zur Lizenzierung finden Sie unter [Client Zugriffs Lizenzen und Verwaltungs Lizenzen](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) , um allgemeine Informationen zu erhalten, wenden Sie sich jedoch an Ihren Microsoft-Partner oder Microsoft-Vertreter, um spezifische Informationen zu erhalten|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>Kryprotgrafiesteuerelemente zum Signieren und Verschlüsseln
@@ -70,7 +70,9 @@ Ausführlichere Anforderungen zur Verwendung von Azure Information Protection, z
 
 Wenn Sie von AD RMS zu Azure Information Protection migrieren möchten, finden Sie weitere Informationen unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
+Beginnen Sie mit [Active Directory Rights Management Services Erweiterung für mobile Geräte](./active-directory-rights-manage-mobile-device.md). 
+
 Möglicherweise interessieren Sie sich für die folgenden FAQs:
-- [Worin besteht der Unterschied zwischen Azure Information Protection und Microsoft Information Protection?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
-- [Worin besteht der Unterschied zwischen Azure Information Protection und Azure Rights Management?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
+- [Was ist der Unterschied zwischen Azure Information Protection und Microsoft Information Protection?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+- [Was ist der Unterschied zwischen Azure Information Protection und Azure Rights Management?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
 

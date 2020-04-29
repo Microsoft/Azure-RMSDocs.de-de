@@ -1,28 +1,28 @@
 ---
-title: 'MIP:: syncfilepolicydata-Klasse'
-description: 'Dokumentiert die MIP:: syncfilepolicydata-Klasse des MIP-SDKs (Microsoft Information Protection).'
+title: syncfilepolicydata-Klasse
+description: 'Dokumentiert die syncfilepolicydata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a9e08fa2f734f40e4a99aae4a6e141cec4eff6c0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 516b6ea2e3282ac17e4a17da979285ea23d76d05
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489349"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764326"
 ---
-# <a name="class-mipsyncfilepolicydata"></a>MIP:: syncfilepolicydata-Klasse 
+# <a name="class-syncfilepolicydata"></a>syncfilepolicydata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten labelgroupdata * getlabelgroupdata () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Vector\<Std:: unique_ptr\<policypackagedata\>\>& getpoliciespackagedata () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getupn () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::\<Vector Std:: unique_ptr\<policypackagedata\> \>& getpoliciespackagedata () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String& getupn () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: unordered_map\<Std:: String, Std:: String\>& getclassificationlist () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getuserobjectid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String& getuserobjectid () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ syncfilepolicydata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member

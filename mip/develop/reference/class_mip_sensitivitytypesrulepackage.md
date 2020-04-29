@@ -1,25 +1,25 @@
 ---
-title: 'MIP:: sensitivitytypesrulepackage-Klasse'
-description: 'Dokumentiert die MIP:: sensitivitytypesrulepackage-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse sensitivitytypesrulepackage
+description: 'Dokumentiert die sensitivitytypesrulepackage:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a00dc55d8c4250db6c83bde29f0c73436196af95
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b6f4f45c9532cb4c87bbe97cedd294184573c873
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489434"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764370"
 ---
-# <a name="class-mipsensitivitytypesrulepackage"></a>MIP:: sensitivitytypesrulepackage-Klasse 
+# <a name="class-sensitivitytypesrulepackage"></a>Klasse sensitivitytypesrulepackage 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: String & getrulepackageid () Konstanten  |  ID des Regel Pakets erhalten.
-Public Konstanten Std:: String & getrulepackage () Konstanten  |  Holen Sie sich das Regelpaket.
+Public Konstanten Std:: String& getrulepackageid () Konstanten  |  ID des Regel Pakets erhalten.
+Public Konstanten Std:: String& getrulepackage () Konstanten  |  Holen Sie sich das Regelpaket.
   
 ## <a name="members"></a>Member
   

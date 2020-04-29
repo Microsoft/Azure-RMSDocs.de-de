@@ -1,56 +1,63 @@
 ---
-title: mip::FileEngine::Settings-Klasse
-description: 'Dokumentiert die MIP:: fileengine-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: 'Class fileengine:: Settings'
+description: 'Dokumentiert die fileengine:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 6105a542c3c01b31598796912211f97562b25f08
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488788"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763265"
 ---
-# <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings-Klasse 
+# <a name="class-fileenginesettings"></a>Class fileengine:: Settings 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: String & EngineID, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  Fileengine:: Settings-Konstruktor zum Laden eines vorhandenen Moduls.
-öffentliche Einstellungen (Konstante Identität & Identität, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  File profile:: Settings-Konstruktor zum Erstellen einer neuen Engine.
+öffentliche Einstellungen (Konstante Std:: String& EngineID, Konst Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
+öffentliche Einstellungen (Konstante Identität& Identität, Konst Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileProfile::Settings-Konstruktor für die Erstellung einer neuen Engine
 public const std::string& GetEngineId() const  |  Gibt die Engine-ID zurück.
 public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
 public const Identity& GetIdentity() const  |  Gibt die Engine-Identität zurück.
 public void SetIdentity(const Identity& identity)  |  Legt die Engine-Identität fest.
 public const std::string& GetClientData() const  |  Gibt die Engine-Clientdaten zurück.
 public const std::string& GetLocale() const  |  Gibt das Engine-Gebietsschema zurück.
-öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& Wert)  |  Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
-Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
+öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \>& Wert)  |  Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID für die Engine fest.
 public const std::string& GetSessionId() const  |  Gibt die Sitzungs-ID für die Engine zurück.
-public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Legt die Basis-URL des Endpunkts der Schutzcloud fest, durch die die Cloudgrenze festgelegt ist.
+öffentliches void setcloud (Cloud Cloud)  |  Legt optional die zielcloud fest.
+öffentliche Cloud getcloud () konstant  |  Ruft die zielcloud ab, die von allen Service Requests verwendet wird.
+public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Legt die Basis-URL der Schutz-Cloud für die benutzerdefinierte Cloud fest.
 public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ruft die Basis-URL des Protection Cloud-Endpunkts ab
-öffentliches void setpolicycloudendpointbaseurl (Konstanten Std:: String & policycloudendpointbaseurl)  |  Legt die Basis-URL der richtliniencloud fest, die zum Angeben der cloudgrenze verwendet wird
-Public Konstanten Std:: String & getpolicycloudendpointbaseurl () Konstanten  |  Ruft die Basis-URL der richtliniencloud ab.
+öffentliches void setpolicycloudendpointbaseurl (Konstanten Std:: String& policycloudendpointbaseurl)  |  Legt die Basis-URL der Richtlinien-Cloud für die benutzerdefinierte Cloud fest.
+Public Konstanten Std:: String& getpolicycloudendpointbaseurl () Konstanten  |  Ruft die Basis-URL der richtliniencloud ab.
 öffentliches void setschutzonlyengine (boolescher Schutz)  |  Legt nur den Engine-Indikator für den Schutz fest – keine Richtlinie/Bezeichnung.
 public const bool IsProtectionOnlyEngine() const  |  Gibt nur den Engine-Indikator für den Schutz zurück – keine Richtlinie/Bezeichnung.
 public bool isloadsensitivitytypesaktivierte () Konstante  |  Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert sind.
 öffentliches void-enablepfile (boolescher Wert)  |  Legt das Flag fest, das angibt, ob pfiles erzeugt.
 Public Konstanten bool ispfileaktivierte ()  |  Rufen Sie das Flag ab, das angibt, ob pfiles erzeugt.
-öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
-Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
+öffentliches void setdelegateduseremail (konstant Std:: String& delegateduseremail)  |  Legt den Delegierten Benutzer fest.
+Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
 öffentliches void setlabelfilter (Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  |  Legt den Bezeichnungs Filter fest.
-Public Konstanten Std:: Vector\<labelfiltertype\>& getlabelfilter () konstant.  |  Ruft den Bezeichnungs Filter ab.
+Public Konstanten Std:: Vector\<labelfiltertype\>& getlabelfilter () Konstanten  |  Ruft den Bezeichnungs Filter ab.
+öffentliches void setauthdelegat (Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
+Public Std:: shared_ptr\<authdelegat\> getauthdelegat () Konstanten  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
   
 ## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
-Fileengine:: Settings-Konstruktor zum Laden eines vorhandenen Moduls.
+Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
 
 Parameter:  
-* **engineId**: Legen Sie diese auf die eindeutige Engine-ID fest, die von AddEngineAsync erzeugt wurde. 
+* **EngineID**: Legen Sie diese auf die eindeutige Engine-ID fest, die von addengineasync generiert wurde. 
+
+
+* **authdelegat**: der Authentifizierungs Delegat, der vom SDK zum Abrufen von Authentifizierungs Token verwendet wird, überschreibt den policyprofile:: Settings:: authdelegaten, wenn beide bereitgestellt werden. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
@@ -64,10 +71,13 @@ Parameter:
 
   
 ### <a name="settings-function"></a>Settings-Funktion
-File profile:: Settings-Konstruktor zum Erstellen einer neuen Engine.
+Der FileProfile::Settings-Konstruktor für die Erstellung einer neuen Engine
 
 Parameter:  
 * **identity**: Informationen zur Identität des Benutzers, der der neuen Engine zugeordnet ist. 
+
+
+* **authdelegat**: der Authentifizierungs Delegat, der vom SDK zum Abrufen von Authentifizierungs Token verwendet wird, überschreibt den policyprofile:: Settings:: authdelegaten, wenn beide bereitgestellt werden. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
@@ -115,22 +125,38 @@ Legt die Sitzungs-ID für die Engine fest.
 ### <a name="getsessionid-function"></a>Geungessionid-Funktion
 Gibt die Sitzungs-ID für die Engine zurück.
   
+### <a name="setcloud-function"></a>Setcloud-Funktion
+Legt optional die zielcloud fest.
+
+Parameter:  
+* **Cloud**: Cloud
+
+
+Wenn die Cloud nicht angegeben ist, wird standardmäßig die globale Cloud verwendet.
+  
+### <a name="getcloud-function"></a>Getcloud-Funktion
+Ruft die zielcloud ab, die von allen Service Requests verwendet wird.
+
+  
+**Gibt Folgendes zurück**: Cloud
+  
 ### <a name="setprotectioncloudendpointbaseurl-function"></a>Setschutzcloudendpointbaseurl-Funktion
-Legt die Basis-URL des Endpunkts der Schutzcloud fest, durch die die Cloudgrenze festgelegt ist.
+Legt die Basis-URL der Schutz-Cloud für die benutzerdefinierte Cloud fest.
 
 Parameter:  
 * **protectionCloudEndpointBaseUrl**: mit Schutzendpunkten verknüpfte Basis-URL
 
 
+Dieser Wert wird nur gelesen und muss für Cloud = Custom festgelegt werden.
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>Getschutzcloudendpointbaseurl-Funktion
 Ruft die Basis-URL des Protection Cloud-Endpunkts ab
 
   
-**Rückgabe**: mit Schutzendpunkten verknüpfte Basis-URL
+**Gibt zurück**: Basis-URL, die mit Schutz Endpunkten verknüpft ist dieser Wert wird nur gelesen und muss für Cloud = Custom festgelegt werden.
   
 ### <a name="setpolicycloudendpointbaseurl-function"></a>Setpolicycloudendpointbaseurl-Funktion
-Legt die Basis-URL der richtliniencloud fest, die zum Angeben der cloudgrenze verwendet wird
+Legt die Basis-URL der Richtlinien-Cloud für die benutzerdefinierte Cloud fest.
 
 Parameter:  
 * **policycloudendpointbaseurl**: Basis-URL, die Richtlinien Endpunkten zugeordnet ist
@@ -186,7 +212,7 @@ Parameter:
 * **labelfilter**: der Bezeichnungs Filter.
 
 
-Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.
+Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen. Wenn nicht festgelegt, werden "hyokprotection" und "doublekeyprotection" gefiltert.
   
 ### <a name="getlabelfilter-function"></a>Getlabelfilter-Funktion
 Ruft den Bezeichnungs Filter ab.
@@ -194,3 +220,17 @@ Ruft den Bezeichnungs Filter ab.
   
 **Gibt Folgendes zurück**: der Bezeichnungs Filter.
 Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.
+  
+### <a name="setauthdelegate-function"></a>Setauthdelegatfunktion
+Legen Sie den Autorisierungs Delegaten für die Engine fest.
+
+Parameter:  
+* **authdelegat**: der Authentifizierungs Delegat.
+
+
+  
+### <a name="getauthdelegate-function"></a>Getauthdelegatfunktion
+Holen Sie sich den Authentifizierungs Delegaten für die Engine.
+
+  
+**Gibt Folgendes zurück**: der Engine auth-Delegat.

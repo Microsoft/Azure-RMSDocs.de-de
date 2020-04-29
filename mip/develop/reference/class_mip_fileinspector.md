@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: filinput Spector-Klasse'
-description: 'Dokumentiert die MIP:: filinput Spector-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class filinput Spector
+description: 'Dokumentiert die filinput Spector:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c9fb9f6e6ea27a698f53a8e81de55606eb01ba42
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 7411026725983bc92a37275d56495b991cfa9570
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488720"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762948"
 ---
-# <a name="class-mipfileinspector"></a>MIP:: filinput Spector-Klasse 
+# <a name="class-fileinspector"></a>Class filinput Spector 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

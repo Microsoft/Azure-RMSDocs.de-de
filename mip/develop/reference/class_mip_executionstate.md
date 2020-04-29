@@ -1,19 +1,19 @@
 ---
-title: mip::ExecutionState-Klasse
-description: 'Dokumentiert die MIP:: executionstate-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse executionstate
+description: 'Dokumentiert die executionstate:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e0bf26124a7181dd8e6477a303868b51d6275c6e
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ff22cebbcb4a83015248c8f6990f04dfad4538e0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490080"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763302"
 ---
-# <a name="class-mipexecutionstate"></a>mip::ExecutionState-Klasse 
+# <a name="class-executionstate"></a>Klasse executionstate 
 Eine Schnittstelle für sämtliche Status, die für die Ausführung der Engine erforderlich sind.
 Clients sollten die Methoden nur aufrufen, um den erforderlichen Status abzurufen. Daher sollten Clients diese Schnittstelle aus Effizienzgründen implementieren, damit der entsprechende Status dynamisch und nicht im Voraus berechnet wird.
   
@@ -25,13 +25,14 @@ public std::string GetContentIdentifier() const  |  Ruft die Inhaltsbeschreibung
 public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
 Public Std::p Air\<bool, Std:: String\> isdowngradebug () Konstanten  |  Bei der Implementierung sollte übergeben werden, ob eine vorhandene Bezeichnung herabgestuft wurde.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
-public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getnewlabelextendedproperties () konstant.  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
-Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getcontentmetadata (Konst Std:: Vector\<Std:: String\>& Names, Konstanten Std:: Vector\<Std:: String\>& nameprefixes) konstant  |  Ruft die Metadatenelemente aus dem Inhalt ab.
+public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \> getnewlabelextendedproperties () Konstanten  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
+Public Std:: Vector\<MetadataEntry\> getcontentmetadata (Konst Std:: Vector\<Std:: String\>& Names, Konstanten Std:: Vector\<Std:: String\>& nameprefixes) Konstanten  |  Ruft die Metadatenelemente aus dem Inhalt ab.
 Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  |  Ruft den Deskriptor für den Schutz ab
 public ContentFormat GetContentFormat() const  |  Ruft das Inhaltsformat ab.
+public virtual Ganzzahl ohne Vorzeichen int GetContentMetadataVersion () konstant  |  Ruft die höchste Metadatenversion ab, die von der Anwendung für den Mandanten unterstützt wird.
 public ActionType GetSupportedActions() const  |  Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
-public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konstanten Std:: Vector\<Std:: shared_ptr\<classificationrequest\>\> &) Konstanten  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
-public virtual Std:: Map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
+public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (konstant Std::\<Vector Std:: shared_ptr\<classificationrequest\> \> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual Std:: map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
   
 ## <a name="members"></a>Member
   
@@ -68,7 +69,7 @@ Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
   
 **Rückgabe**: Zuweisungsmethode STANDARD, PRIVILEGED, AUTO. 
   
-**Siehe auch**: [MIP:: accessmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Weitere Informationen finden Sie unter:** mip::AssignmentMethod
   
 ### <a name="getnewlabelextendedproperties-function"></a>Getnewlabelextendedproperties-Funktion
 Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
@@ -94,7 +95,13 @@ Ruft das Inhaltsformat ab.
   
 **Rückgabe**: DEFAULT, EMAIL 
   
-**Siehe auch**: [MIP:: contentformat](mip-enums-and-structs.md#contentformat-enum)
+**Weitere Informationen finden Sie unter:** mip::ContentFormat
+  
+### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion-Funktion
+Ruft die höchste Metadatenversion ab, die von der Anwendung für den Mandanten unterstützt wird.
+
+  
+**Gibt Folgendes zurück**: Content Metadata Version. Wenn der Wert 0 ist, werden die Metadaten nicht versioniert. Wenn ein Dateiformat mehrere Versionen von Metadaten unterstützt, ermöglicht MIP, alle Metadaten zu verstehen und detaillierte Metadatenänderungen auf der Grundlage der Versions Werte zu melden.
   
 ### <a name="getsupportedactions-function"></a>Getsupportedactions-Funktion
 Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt

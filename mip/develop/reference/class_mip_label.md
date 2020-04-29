@@ -1,19 +1,19 @@
 ---
-title: mip::Label-Klasse
-description: 'Dokumentiert die MIP:: Label-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klassenbezeichnung
+description: 'Dokumentiert die Bezeichnung:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a108cdccef1747ec2b06a981f993fa8ad438d011
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 95eb7c523e7e627aff767169b9d35479839ac72d
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487989"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762192"
 ---
-# <a name="class-miplabel"></a>mip::Label-Klasse 
+# <a name="class-label"></a>Klassenbezeichnung 
 Eine Abstraktion für eine einzelne Microsoft Information Protection-Bezeichnung
   
 ## <a name="summary"></a>Zusammenfassung
@@ -25,11 +25,11 @@ public const std::string& GetDescription() const  |  Ruft die Beschreibung der B
 public const std::string& GetColor() const  |  Ruft die Farbe ab, in der die Bezeichnung angezeigt werden soll
 public int GetSensitivity() const  |  Ruft die Vertraulichkeit der Bezeichnung ab.
 public const std::string& GetTooltip() const  |  Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
-Public Konstanten Std:: String & getautotooltip () Konstanten  |  Hiermit wird die QuickInfo-Beschreibung der Klassifizierung angezeigt, die dazu führt, dass diese Bezeichnung angewendet wird.
+Public Konstanten Std:: String& getautotooltip () Konstanten  |  Hiermit wird die QuickInfo-Beschreibung der Klassifizierung angezeigt, die dazu führt, dass diese Bezeichnung angewendet wird.
 public bool IsActive() const  |  Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
 Public Std:: weak_ptr\<Bezeichnung\> GetParent () Konstanten  |  Ruft die übergeordnete Bezeichnung ab
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<Bezeichnung\>\>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
-Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<Bezeichnung\> \>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
 public ActionSource GetActionSource() const  |  Ruft die Aktions Quelle der Bezeichnung ab.
   
 ## <a name="members"></a>Member

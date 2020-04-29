@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/03/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9db865f64e2780d680a05cc8deae873b8cc975ea
-ms.sourcegitcommit: 1ade392edac5842adb14996012efb6e605c39d8c
+ms.openlocfilehash: 97390bec6bb31b6445a2975953b996e57865c6f4
+ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80382049"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82224715"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -42,6 +42,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
@@ -65,7 +66,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 **Veröffentlicht** 03/09/2020
 
-**Neue Funktionen:**
+**Neue Features:**
 
 - Allgemein verfügbare Version des [Scanners](../deploy-aip-scanner.md)zum Überprüfen und bezeichnen von Dokumenten in lokalen Daten speichern. 
 
@@ -88,7 +89,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 - Unterstützung für [Offline Beschriftungs Funktionen](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) mit Office-Apps im Unified-Bezeichnungs Client hinzugefügt.
 
 
-**Fixes**
+**Fehlerbehebungen:**
 
 - In Fällen, in denen Benutzer erfolglos versuchten, geschützte TIFF-Dateien und TIFF-Dateien zu öffnen, die von RightFax erstellt wurden, werden die TIFF-Dateien nun geöffnet und bleiben erwartungsgemäß stabil.  
 - Vorherige Beschädigungen geschützter txt-und PDF-Dateien werden aufgelöst.
@@ -105,13 +106,13 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 Unterstützt durch 09/09/2020
 
-**Neue Funktionen:**
+**Neue Features:**
 
 - Vorschauversion des [Scanners](../deploy-aip-scanner.md), um lokale Datenspeicher zu überprüfen und zu bezeichnen. Mit dieser Version des Scanners:
     
     - Wenn Sie die Scanner für die Verwendung desselben Scanner-Profils konfigurieren, können mehrere Scanner dieselbe SQL Server Datenbank gemeinsam nutzen. Diese Konfiguration erleichtert die Verwaltung mehrerer Scanner und führt zu schnelleren Scanzeiten. Wenn Sie diese Konfiguration verwenden, warten Sie immer, bis die Installation eines Scanners abgeschlossen ist, bevor Sie einen weiteren Scanner mit dem gleichen Profil installieren.
     
-    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren, und die Scannerdatenbank hat den Namen **AIPScannerUL_\<profile_name >** . Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
+    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren, und die Scannerdatenbank wird **\<AIPScannerUL_ profile_name>** benannt. Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
     
     - Sie können in allen Dokumenten eine Standard Bezeichnung festlegen, auch wenn Dokumente bereits mit der Bezeichnung versehen sind. Legen Sie in den Überprüfungs Profil-oder Repository-Einstellungen die Option **Dateien** neu bezeichnen auf ein fest **, und aktivieren** Sie das Kontrollkästchen neue **Bezeichnung Standard Bezeichnung erzwingen** .
     
@@ -150,7 +151,7 @@ Unterstützt durch 09/09/2020
 
 - Neues Cmdlet " [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)", um alle Protokolldateien aus "%LocalAppData%\microsoft\msip\logs" zu erfassen und Sie in einer einzelnen komprimierten Datei mit dem ZIP-Format zu speichern. Diese Datei kann dann an Microsoft-Support gesendet werden, wenn Sie zum Untersuchen eines gemeldeten Problems aufgefordert werden, Protokolldateien zu senden.
 
-**Fixes**
+**Fehlerbehebungen:**
 
 - Sie können mit dem Datei-Explorer erfolgreich Änderungen an einer geschützten Datei vornehmen und mit der rechten Maustaste klicken, nachdem ein Kennwort für die Datei entfernt wurde.
 
@@ -160,21 +161,10 @@ Unterstützt durch 09/09/2020
 
 **Weitere Änderungen**
 
-- Durch [Zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) werden nun die\>Ordner%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName. exe* anstelle des Ordners%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName\>* \mip gelöscht.
+- Durch [Zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) werden nun die Ordner%LocalAppData%\microsoft\msip\mip\\*\<ProcessName\> . exe* anstelle des Ordners%LocalAppData%\microsoft\msip\mip\\*\<ProcessName\>* \mip gelöscht.
 
 - " [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus) " enthält jetzt die Inhalts-ID für ein geschütztes Dokument.
 
-## <a name="version-22210"></a>Version 2.2.21.0
-
-**Veröffentlicht**: 09/03/2019
-
-Unterstützt durch 04/23/2020
-
-**Fixes**
-
-- Wenn Sie die erweiterte Einstellung [outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) verwenden, um eine andere Standard Bezeichnung für Outlook festzulegen, und die angegebene Bezeichnung keine Unterbezeichnungen für die Bezeichnungs Richtlinie hat, wird die Bezeichnung ordnungsgemäß angewendet.
-
-- Wenn der Azure Information Protection-Client in einer Office-App verwendet wird, wird ein Benutzer mit einem Active Directory Konto, das nicht für Single Sign-On konfiguriert ist, aufgefordert, sich für Azure Information Protection zu authentifizieren. Nach der erfolgreichen Authentifizierung wird der Client Status ordnungsgemäß in Online geändert, wodurch Bezeichnungs Funktionen aktiviert werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

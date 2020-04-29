@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: mipcontext-Klasse'
-description: 'Dokumentiert die MIP:: mipcontext-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class mipcontext
+description: 'Dokumentiert die mipcontext:: undefinierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 82c39cd6f716bde9232f6a5a461b2ffbfbae1dd0
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: cf191a1e770d13d84603fe593d63dedb98bbb14b
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489910"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761470"
 ---
-# <a name="class-mipmipcontext"></a>MIP:: mipcontext-Klasse 
+# <a name="class-mipcontext"></a>Class mipcontext 
 Mipcontext stellt den Status dar, der von allen Profilen, Engines und Handlern gemeinsam genutzt wird.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -22,11 +22,12 @@ Mipcontext stellt den Status dar, der von allen Profilen, Engines und Handlern g
 öffentliches void Herunterfahren ()  |  Beenden Sie MIP.
 public bool isfeatureaktivierte (flightingfeature-Funktion) konstant  |  Ruft ab, ob eine Funktion aktiviert ist.
 public const ApplicationInfo& GetApplicationInfo() const  |  Anwendungsbeschreibung erhalten.
-Public Konstanten Std:: String & getmippath () Konstanten  |  Dateipfad für Protokolle, Caches usw. erhalten
+Public Konstanten Std:: String& getmippath () Konstanten  |  Dateipfad für Protokolle, Caches usw. erhalten
 public bool isofflineonly ()  |  Nur offline-Einstellung erhalten.
 öffentliches LogLevel getmarkoldloglevel () konstant  |  Schwellenwert Protokollebene erhalten.
 Public Std:: shared_ptr\<loggerdelegat\> getloggerdelegat ()  |  Get Logger-Implementierung.
 öffentliches loggerdelegat * getrawloggerdelegat ()  |  Get Logger-Implementierung.
+Public Konstanten Std:: map\<flightingfeature, bool\>& getflightingfeatures () Konstanten  |  Get-flighting-Funktions Satz.
   
 ## <a name="members"></a>Member
   
@@ -73,10 +74,16 @@ Schwellenwert Protokollebene erhalten.
 Get Logger-Implementierung.
 
   
-**Rückgabe**: Protokollierung.
+**Rückgabe**: Protokollierung
   
 ### <a name="getrawloggerdelegate-function"></a>Getrawloggerdelegatfunktion
 Get Logger-Implementierung.
 
   
-**Rückgabe**: Protokollierung.
+**Rückgabe**: Protokollierung
+  
+### <a name="getflightingfeatures-function"></a>Getflightingfeatures-Funktion
+Get-flighting-Funktions Satz.
+
+  
+**Returns**: flighting Feature Map

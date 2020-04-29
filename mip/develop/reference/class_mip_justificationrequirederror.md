@@ -1,24 +1,24 @@
 ---
-title: mip::JustificationRequiredError-Klasse
-description: 'Dokumentiert die MIP:: Recht cationrequirements derror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class Recht cationrequirements derror
+description: 'Dokumentiert die "Recht cationrequirements derror:: nicht definierte"-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 610a76514416da4c2c14e8ed45fa32fca8f25efb
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2f654fef22571392b8e7bdb4b5c32888e2d9e3c1
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488006"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762237"
 ---
-# <a name="class-mipjustificationrequirederror"></a>mip::JustificationRequiredError-Klasse 
+# <a name="class-justificationrequirederror"></a>Class Recht cationrequirements derror 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual Std:: shared_ptr\<Fehler\> Klonen () Konstanten  |  Klont den Fehler
+public virtual Std:: shared_ptr\<Error\> Clone () konstant  |  Klont den Fehler
   
 ## <a name="members"></a>Member
   

@@ -1,36 +1,36 @@
 ---
-title: mip::PolicyProfile::Observer-Klasse
-description: Dokumentiert die MIP::p olicyprofile-Klasse des MIP-SDK (Microsoft Information Protection).
+title: 'Class policyprofile:: Observer'
+description: 'Dokumentiert die policyprofile:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 89411740e807bba1554da175d8c978601a45a7b6
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 5fc8dab4c74b613ff199d16c7b39205476b87249
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77487530"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760608"
 ---
-# <a name="class-mippolicyprofileobserver"></a>mip::PolicyProfile::Observer-Klasse 
-Beobachter Schnittstelle für Clients, um Benachrichtigungen für Profil bezogene Ereignisse zu erhalten.
-Alle Fehler erben von MIP:: Error. Der Client sollte die Engine nicht in dem Thread aufrufen, der den Beobachter aufruft.
+# <a name="class-policyprofileobserver"></a>Class policyprofile:: Observer 
+Observer-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für profilbezogene Ereignisse.
+Alle Fehler erben von mip::Error. Der Client sollte die Engine nicht in dem Thread aufrufen, der den Beobachter aufruft.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void onloadsuccess (Konstante Std:: shared_ptr\<policyprofile\>& Profile, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
-public virtual void onloadfailure (Konstante Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
-public virtual void onlistenginessuccess (Konstante Std:: Vector\<Std:: String\>& engineids, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
-public virtual void onlistenginesfailure (konstant Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Auflisten der Engines einen Fehler verursacht hat.
-öffentliches virtuelles void-onunloadenginesuccess (konstant Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich entladen wurde.
-public virtual void onunloadenginefailure (Konstante Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Entladen einer Engine einen Fehler verursacht hat.
-public virtual void onaddenginesuccess (Konstante Std:: shared_ptr\<policyengine\>& Engine, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
+public virtual void onloadsuccess (Konstante Std::\<shared_ptr policyprofile\>& Profile, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
+public virtual void onloadfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
+public virtual void onlistenginessuccess (Konstante Std::\<Vector Std:: String\>& engineids, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
+public virtual void onlistenginesfailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Auflisten der Engines einen Fehler verursacht hat.
+öffentliches virtuelles void-onunloadenginesuccess (Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich entladen wurde.
+öffentliches virtuelles void-onunloadenginefailure (Konstante Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Entladen einer Engine einen Fehler verursacht hat.
+public virtual void onaddenginesuccess (Konstante Std::\<shared_ptr policyengine\>& Engine, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
 public virtual void onaddenginestarting (bool requirespolicyfetch)  |  Wird vor der Erstellung der Engine aufgerufen, um zu beschreiben, ob die Richtlinien Daten der Engine vom Server abgerufen werden müssen oder ob Sie aus lokal zwischengespeicherten Daten erstellt werden können.
-public virtual void onaddenginefailure (konstant Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
-public virtual void ondeleteenginesuccess (Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
-public virtual void ondeleteenginefailure (konstant Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Löschen einer Engine einen Fehler verursacht hat.
+öffentliches virtuelles void-onaddenginefailure (Konstante Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
+öffentliches virtuelles void ondeleteenginesuccess (Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
+public virtual void ondeleteenginefailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Löschen einer Engine einen Fehler verursacht hat.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Wird aufgerufen, wenn sich die Richtlinie für die Engine mit der angegebenen ID geändert hat oder wenn die geladenen benutzerdefinierten Empfindlichkeits Typen geändert wurden.
   
 ## <a name="members"></a>Member
@@ -39,7 +39,7 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  Wird aufger
 Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
 
 Parameter:  
-* **profile**: Das aktuelle Profil, über das der Vorgang gestartet wird. 
+* **profile**: das aktuelle Profil, das verwendet wird, um den Vorgang zu starten. 
 
 
 * **context**: der an den LoadAsync-Vorgang über gegebene Kontext.
@@ -61,7 +61,7 @@ Parameter:
 Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
 
 Parameter:  
-* **engineIds**: Liste der verfügbaren Engine-IDs. 
+* **engineIds**: Liste der verfügbaren Engine-IDs 
 
 
 * **context**: der an den listenginesasync-Vorgang über gegebene Kontext.
@@ -122,7 +122,7 @@ Dieser optionale Rückruf kann von einer Anwendung verwendet werden, um darüber
 Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
 
 Parameter:  
-* **error**: Der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
+* **error**: der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
 
 
 * **context**: der an den addengineasync-Vorgang über gegebene Kontext.

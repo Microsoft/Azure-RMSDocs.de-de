@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: addwatermarkaktiondata-Klasse'
-description: 'Dokumentiert die MIP:: addwatermarkaktiondata-Klasse des MIP-SDKs (Microsoft Information Protection).'
+title: Klasse addwatermarkaktiondata
+description: 'Dokumentiert die addwatermarkaktiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 719d376cdf2b8b9d2d38de08ba74a654d562b605
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ea7bf76775e8b77f2272129f0c07d7b82bfdafb0
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763726"
 ---
-# <a name="class-mipaddwatermarkactiondata"></a>MIP:: addwatermarkaktiondata-Klasse 
+# <a name="class-addwatermarkactiondata"></a>Klasse addwatermarkaktiondata 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

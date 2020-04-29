@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 06a57fa7510722da9ed119c573abe2ef0db09407
-ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
+ms.openlocfilehash: bd786925f22774c3e9173a69d88a08618da299fe
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238485"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760712"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Support Richtlinie für Microsoft Information Protection (MIP) Software Development Kit (SDK)
 
-## <a name="servicing"></a>Deten 
+## <a name="servicing"></a>Wird gewartet 
 
 Jede allgemein verfügbare Version (General Availability, GA) wird sechs Monate lang unterstützt, nachdem die nächste GA-Version veröffentlicht wurde. In der Dokumentation sind möglicherweise keine Informationen zu nicht unterstützten Versionen enthalten. Korrekturen und neue Funktionen werden nur auf die neueste Version der allgemeinen Verfügbarkeit angewendet.
 
@@ -30,6 +30,63 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 > Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem SDK haben, sollten Sie überprüfen, ob es mit der neuesten Version der allgemeinen Verfügbarkeit behoben ist. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
 >  
 > Technische Unterstützung finden Sie im [Stack Overflow Microsoft Information Protection-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
+
+## <a name="version-16103"></a>Version 1.6.103
+
+**Veröffentlichungsdatum**: 16. April 2020
+
+### <a name="general-sdk-changes"></a>Allgemeine SDK-Änderungen
+
+- TLS 1,2 wird für alle nicht-ADRMS-http-Kommunikationssysteme erzwungen.
+- Migrierte IOS/MacOS-http-Implementierung von NSURLConnection zu nsurlsession.
+- Migrierte IOS-telemetriekomponente vom Aria SDK in das 1Ds SDK.
+- Die telemetriekomponente verwendet nun den httpdelegaten von MIP unter IOS, MacOS und Linux. (Bisher nur Win32).
+- Verbesserte Typsicherheit für die C-API.
+- Authdelegat wurde aus dem Profil in die Engine in den C++-, c#-und Java-APIs verschoben.
+- Authdelegat wurde von Konstruktor `Profile::Settings` von `Engine::Settings`in verschoben.
+- Kategorie zu nopolicyerror hinzugefügt, um weitere Informationen zur Ursache für die Fehler bei der Richtlinien Synchronisierung bereitzustellen
+- Hinzu `PolicyEngine::GetTenantId` gefügte Methode.
+- Hinzugefügte explizite Sovereign Cloud Unterstützung.
+  - Neue `Engine::Settings::SetCloud` Methode zum Festlegen der zielcloud (gcc High, 21-vianet usw.).
+  - Ein `Engine::Settings::SetCloudEndpointBaseUrl` vorhandener Methoden aufrufbedarf ist für erkannte Clouds nicht mehr erforderlich.
+- Aktivierter Bitcode für IOS-Binärdateien.
+
+### <a name="file-sdk"></a>Datei-SDK
+
+- Zu `IFileHandler::InspectAsync` c#-und Java-Wrapper hinzugefügt
+- Neue Unterstützung `FileProfile::AcquirePolicyAuthToken` für das Auslösen der Richtlinien Token-Erfassung, damit eine Anwendung den Tokencache bereinigen kann.    
+- `MsgInspector::GetAttachments`gibt `vector<shared_ptr<MsgAttachmentData>>` anstelle von zurück.`vector<unique_ptr<MsgAttachmentData>>`
+- `TelemetryConfiguration::isOptedOut`durch die Einstellung wird die Telemetrie nun vollständig deaktiviert. Zuvor wurde ein Satz minimaler Telemetriedaten gesendet.
+
+### <a name="policy-sdk"></a>Richtlinien-SDK
+
+- Neue Unterstützung für das Auslösen der tokenübernahme, damit eine Anwendung den Tokencache über `PolicyProfile::AcquireAuthToken`abrufen kann.
+- Hyok-Bezeichnungen werden standardmäßig gefiltert.
+- Die den gelöschten Bezeichnungen zugeordneten Metadaten werden nun entfernt.
+- Wenn eine zwischengespeicherte Bezeichnungs Richtlinie und vertraulichkeitsrichtlinie nicht übereinstimmen, wird der Richtlinien Cache nun gelöscht.
+- Neue Unterstützung für Versionierte Metadaten:
+  - Ein Dateiformat kann den Speicherort bzw. das Format seiner Bezeichnungs Metadaten aufweisen. In diesem Fall sollte eine Anwendung MIP mit allen Metadaten bereitstellen, und MIP bestimmt, welche Metadaten "true" sind.
+  - `ContentLabel::GetExtendedProperties`gibt jetzt `vector<MetadataEntry>` anstelle von `vector<pair<string, string>>`zurück.
+  - `MetadataAction::GetMetadataToAdd`gibt jetzt `vector<MetadataEntry>` anstelle von `vector<pair<string, string>>`zurück.
+  - `ExecutionState::GetContentMetadata`sollte jetzt anstelle `vector<MetadataEntry>` von `vector<pair<string, string>>`zurückgeben.
+  - `ExecutionState::GetContentMetadataVersion`Gibt die höchste Version der Metadaten zurück, die die Anwendung für das aktuelle Dateiformat erkennt (normalerweise 0).
+  - `PolicyEngine::GetWxpMetadataVersion`Gibt die Metadatenversion für Office-Dokumente gemäß der Konfiguration durch den Mandanten Administrator zurück (0 = Standard, 1 = coauth-fähiges Format).
+  - Äquivalente Änderungen in der C-API:
+    - `MIP_CC_ContentLabel_GetExtendedProperties`
+    - `MIP_CC_MetadataAction_GetMetadataToAdd`
+    - `mip_cc_metadata_callback`
+    - `mip_cc_document_state`
+    - `MIP_CC_PolicyEngine_GetWxpMetadataVersion`
+- `TelemetryConfiguration::isOptedOut`durch die Einstellung wird die Telemetrie nun vollständig deaktiviert. Zuvor wurde ein Satz minimaler Telemetriedaten gesendet. 
+
+### <a name="protection-sdk"></a>Schutz-SDK
+
+- Neue Unterstützung für Registrierung und Sperrung der doc-Nachverfolgung.
+- Neue Unterstützung für das Erstellen einer vorab Lizenz beim veröffentlichen.
+- Verfügbar gemachte öffentliches Microsoft SSL-Zertifikat, das von Protection Service verwendet wird.
+   - `GetMsftCert` und `GetMsftCertPEM`
+   - Wenn eine Anwendung die `HttpDelegate` Schnittstelle überschreibt, muss Sie von dieser Zertifizierungsstelle ausgegebene Server Zertifikate als vertrauenswürdig einstufen
+   - Diese Anforderung wird erwartet, dass Sie später in 2020 entfernt wurde.    
 
 ## <a name="version-15124"></a>Version 1.5.124
 
@@ -84,9 +141,9 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
   - MIP::P rotectionengine:: isfeaturesupported ()
 - Umfangreichere Details beim Abrufen von RMS-Vorlagen
 - **Wichtige Änderungen**
-  - `mip::ProtectionEngine::GetTemplates()` `vector<shared_ptr<string>>` Rückgabewert ersetzt durch `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
-  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()` Rückruf `shared_ptr<vector<string>>` Parameters ersetzt durch `vector<shared_ptr<mip::TemplateDescriptor>>`C++()
-  - Ischutzengine. gettemplates | Der async ()-Rückgabewert `List<string>` durch `List<TemplateDescriptor>`ersetzt. (C#)
+  - `mip::ProtectionEngine::GetTemplates()``vector<shared_ptr<string>>` Rückgabewert ersetzt durch `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()`Rückruf `shared_ptr<vector<string>>` Parameter ersetzt durch `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - Ischutzengine. gettemplates | Der async ()- `List<string>` Rückgabewert `List<TemplateDescriptor>`wurde durch ersetzt. (C#)
   - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param ersetzt durch mip_cc_template_descriptor * (C-API)
 
 ### <a name="c-api"></a>C-API
@@ -160,7 +217,7 @@ Mit dieser Version wird die Unterstützung für das Schutz-SDK im .net-Paket (Mi
 - RPMSG
   - Verschlüsselung
   - Unterstützung für die String8-Entschlüsselung hinzugefügt
-- Konfigurierbares Pfile-Erweiterungs Verhalten (Standard, <EXT>. Pfile oder P<EXT>)
+- Konfigurierbares Pfile-Erweiterungs Verhalten ( <EXT>Standard,. Pfile oder P<EXT>)
   - Schutz Settings:: setpfileextensionbehavior
 
 ### <a name="policy-sdk"></a>Richtlinien-SDK
@@ -174,7 +231,7 @@ Mit dieser Version wird die Unterstützung für das Schutz-SDK im .net-Paket (Mi
 - Previouslydeprecated-APIs entfernt
   - Entfernen von Schutz-Engine:: forateschutzhandlerfromdescriptor [Async] (Verwenden von schutzengine:: forateschutzhandlerforpublishing [Async])
   - Entfernen von Schutz-Engine:: forateschutzhandlerfrompublishinglicense [Async] (Verwenden von schutzengine:: forateschutzhandlerforverbrauch [Async])
-- Complete C# API
+- Vervollständigen der c#-API
 - Complete-C-API
   - C-API-normalisierungs Änderungen von v 1.3 C API Preview:
     - Umbenannte mip_cc_storage_type in mip_cc_cache_storage_type
@@ -207,38 +264,38 @@ Mit dieser Version wird die Unterstützung für das Schutz-SDK im .net-Paket (Mi
 
 **Veröffentlichungsdatum**: 22. August 2019
 
-### <a name="new-features"></a>Neue Features
+### <a name="new-features"></a>Neue Funktionen
 
-- `mip::MipContext` ist das neue Objekt der höchsten Ebene.
+- `mip::MipContext`ist das neue Objekt der höchsten Ebene.
 - Das Entschlüsseln geschützter Nachrichten Dateien wird jetzt unterstützt.
-- Die Überprüfung von Message. rpmsg-Dateien wird über `mip::FileInspector` und `mip::FileHandler::InspectAsync()`unterstützt.
+- Die Überprüfung von Message. rpmsg-Dateien `mip::FileInspector` wird `mip::FileHandler::InspectAsync()`über und unterstützt.
 - Der Cache auf dem Datenträger kann jetzt optional verschlüsselt werden.
 - Das Schutz-SDK unterstützt jetzt China-Sovereign Cloud.
 - Arm64-Unterstützung unter Android.
 - Arm64e-Unterstützung unter IOS.
 - Der Eul-Cache (Endbenutzer Lizenz) kann jetzt deaktiviert werden.
-- die Pfile-Verschlüsselung kann über `mip::FileEngine::EnablePFile` deaktiviert werden.
+- die Pfile-Verschlüsselung kann über`mip::FileEngine::EnablePFile`
 - Verbesserte Leistung für Schutz Vorgänge durch Reduzieren der Anzahl von HTTP-aufrufen
-- Die Details der Delegierten Identität wurden aus `mip::Identity` entfernt, und stattdessen wurden `DelegatedUserEmail` zu `mip::FileEngine::Settings`, `mip::ProtectionSettings`, `mip::PolicyEngine::Settings`und `mip::ProtectionHandler``PublishingSettings` und `ConsumptionSettings`hinzugefügt.
-- Funktionen, die zuvor LabelId zurückgegeben haben, geben nun ein `mip::Label` Objekt zurück.
+- Die Delegierten Identitäts Details wurden aus `mip::Identity` entfernt und stattdessen `DelegatedUserEmail` zu `mip::FileEngine::Settings`, `mip::ProtectionSettings`, `mip::PolicyEngine::Settings`und `mip::ProtectionHandler` `PublishingSettings` hinzugefügt `ConsumptionSettings`.
+- Funktionen, die zuvor LabelId zurückgegeben haben `mip::Label` , geben nun ein-Objekt zurück
 
 ### <a name="changes"></a>Änderungen
 
 * In früheren Versionen war es erforderlich, dass Sie `mip::ReleaseAllResources`aufgerufen haben. Version 1,3 ersetzt dies durch `mip::MipContext::~MipContext` oder `mip::MipContext::Shutdown`.
-* `ActionSource` aus `mip::LabelingOptions` entfernt und `mip::ExecutionState::GetNewLabelActionSource`
-* `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` durch `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`ersetzt.
-* `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` durch `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`ersetzt.
-* Umbenannte `mip::PublishingLicenseContext` in `mip::PublishingLicenseInfo` und aktualisiert, um umfangreiche Felder anstelle von unformatierten serialisierten Bytes zu enthalten.
-* `mip::PublishingLicenseInfo` enthält die für MIP relevanten Daten nach dem Testen einer Veröffentlichungs Lizenz (PL).
-* `mip::TemplateNotFoundError` und `mip::LabelNotFoundError` ausgelöst, wenn die Anwendung MIP eine Vorlagen-ID oder Bezeichnungs-ID übergibt, die nicht erkannt wird.
-* Unterstützung für Bezeichnungs basierten bedingten Zugriff über den claims-Parameter von `AcquireToken()` und `mip::AuthDelegate::OAuth2Challenge()`hinzugefügt. Diese Funktionalität wurde noch nicht über das Security and Compliance Center-Portal verfügbar gemacht.
+* Aus `ActionSource` `mip::LabelingOptions` und entfernt`mip::ExecutionState::GetNewLabelActionSource`
+* Ersetzt `mip::ProtectionEngine::CreateProtectionHandlerFromDescriptor` durch `mip::ProtectionEngine::CreateProtectionHandlerForPublishing`.
+* Ersetzt `mip::ProtectionEngine::CreateProtectionHandlerFromPublishingLicense` durch `mip::ProtectionEngine::CreateProtectionHandlerForConsumption`.
+* Wurde `mip::PublishingLicenseContext` in `mip::PublishingLicenseInfo` umbenannt und in aktualisiert, sodass Sie umfangreiche Felder anstelle von rohserialisierten Bytes enthalten.
+* `mip::PublishingLicenseInfo`enthält die für MIP relevanten Daten nach dem Testen einer Veröffentlichungs Lizenz (PL).
+* `mip::TemplateNotFoundError`und `mip::LabelNotFoundError` ausgelöst, wenn die Anwendung MIP eine Vorlagen-ID oder Bezeichnungs-ID übergibt, die nicht erkannt wird.
+* Unterstützung für den Bezeichnungs basierten bedingten Zugriff über den Claims- `AcquireToken()` Parameter `mip::AuthDelegate::OAuth2Challenge()`von und wurde hinzugefügt. Diese Funktionalität wurde noch nicht über das Security and Compliance Center-Portal verfügbar gemacht.
 
 
 ## <a name="version-120"></a>Version 1.2.0
 
 **Veröffentlichungsdatum**: 15. April 2019
 
-### <a name="new-features"></a>Neue Features
+### <a name="new-features"></a>Neue Funktionen
 
  - Die telemetriekomponente verwendet jetzt denselben HTTP-Stapel wie der restliche MIP, auch wenn Sie von der Client Anwendung mit httpdelegaten überschrieben wurde.
  - Client Anwendungen können das Threading Verhalten von asynchronen Aufgaben steuern, indem Sie taskdispatcherdelegat in Profilen überschreiben.
@@ -270,7 +327,7 @@ Mit dieser Version wird die Unterstützung für das Schutz-SDK im .net-Paket (Mi
     - MIP:: fileHandler:: Observer:: ongetdecryptedtemporaryfilesuccess
     - MIP:: File/Policy/Schutzprofile:: settaskdispatcherdelegat
     - MIP:: File/Policy/Schutzprofile:: settelemetryconfiguration
-    - MIP:: HttpRequest:: GetBody gibt Std:: Vector < uint8_t > anstelle von Std:: String zurück.
+    - MIP:: HttpRequest:: GetBody gibt Std:: Vector<uint8_t> anstelle von Std:: String zurück.
     - MIP:: HttpRequest:: GetId
     - MIP::P olicyengine:: getlastpolicyfetchtime
     - MIP::P olicyengine:: getpolicyid
@@ -287,7 +344,7 @@ Mit dieser Version wird die Unterstützung für das Schutz-SDK im .net-Paket (Mi
  - (Interface) MIP:: fileexecutionstate:: getdatastate sollte von Anwendungen implementiert werden, um anzugeben, wie eine Anwendung mit contentIdentifier interagiert.
  - (Interface) MIP:: httpdelegorschnittstelle erfordert die Methoden "CancelOperation" und "cancelalloperations".
  - (Interface) MIP:: httpdelegatschnittstelle "Send" und "SendAsync" geben MIP:: httpoperation anstelle von "MIP:: HttpResponse" zurück.
- - (Interface) MIP:: HttpResponse:: GetBody gibt Std:: Vector < uint8_t > anstelle von Std:: String zurück.
+ - (Interface) MIP:: HttpResponse:: GetBody gibt Std:: Vector<uint8_t> anstelle von Std:: String zurück.
  - (Interface) MIP:: HttpResponse-Schnittstelle erfordert die Implementierung der GetId-Methode.
  - MIP:: contentlabel:: getkreationtime gibt Std:: Chrono:: time_point anstelle von Std:: String zurück.
  - MIP:: fileengine:: up filehandlerasync akzeptiert nicht mehr den Parameter "contentIdentifier".
@@ -304,7 +361,7 @@ Mit dieser Version wird die Unterstützung für die folgenden Plattformen eingef
   - IOS SDK (Policy SDK)
   - Android SDK (Richtlinien-SDK und Schutz-SDK)
 
-### <a name="new-features"></a>Neue Features
+### <a name="new-features"></a>Neue Funktionen
 
 - ADRMS-Unterstützung
 - Schutz-SDK-Vorgänge sind tatsächlich asynchron (auf Win32) und ermöglichen gleichzeitige, nicht blockierende Verschlüsselungs-/Entschlüsselungs Vorgänge.
@@ -330,22 +387,22 @@ Mit dieser Version wird die Unterstützung für die folgenden Plattformen eingef
 
   - MIP:: noauthtokenerror wird ausgelöst, wenn der authdelegat der Anwendung ein leeres Token zurückgibt (aufgrund eines Abbruchs).
     - Gilt für die Erstellung von:
-      - MIP:: fileengine
-      - MIP:: fileHandler
+      - mip::FileEngine
+      - mip::FileHandler
       - mip::PolicyEngine
-      - MIP::P rotectionhandler
+      - mip::ProtectionHandler
   - MIP:: nopolicyerror wird ausgelöst, wenn der Mandant nicht für Bezeichnungen konfiguriert ist.
     - Gilt für die Erstellung von:
-      - MIP:: fileengine
+      - mip::FileEngine
       - mip::PolicyEngine
   - MIP:: servicedisablederror wird ausgelöst, wenn der RMS-Dienst für einen bestimmten Benutzer/Gerät/Plattform/Mandanten deaktiviert ist.
     - Gilt für die Erstellung von:
-      - MIP:: fileHandler
-      - MIP::P rotectionhandler
+      - mip::FileHandler
+      - mip::ProtectionHandler
   - MIP:: nopermissionserror wird ausgelöst, wenn ein Benutzer nicht über die Berechtigung zum Entschlüsseln eines Dokuments verfügt oder der Inhalt abgelaufen ist.
     - Gilt für die Erstellung von:
-      - MIP:: fileHandler
-      - MIP::P rotectionhandler
+      - mip::FileHandler
+      - mip::ProtectionHandler
 
 ## <a name="next-steps"></a>Nächste Schritte
 

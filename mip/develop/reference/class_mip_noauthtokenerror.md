@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: noauthdekenerror-Klasse'
-description: 'Dokumentiert die MIP:: noauthdekenerror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: noauthdekenerror-Klasse
+description: 'Dokumentiert die noauthdekenerror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ddeab6f67eb1965a2ba6cc93f40fbe69cbe63606
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9835f99fc80c902370dd512026fb05f7c1857a29
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489876"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81761436"
 ---
-# <a name="class-mipnoauthtokenerror"></a>MIP:: noauthdekenerror-Klasse 
+# <a name="class-noauthtokenerror"></a>noauthdekenerror-Klasse 
 Der Benutzer konnte aufgrund eines fehlenden Authentifizierungs Tokens keinen Zugriff auf den Inhalt erhalten.
   
 ## <a name="summary"></a>Zusammenfassung

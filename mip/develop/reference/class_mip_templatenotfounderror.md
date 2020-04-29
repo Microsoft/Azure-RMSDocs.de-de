@@ -1,34 +1,34 @@
 ---
-title: 'MIP:: templatenumerotfounderror-Klasse'
-description: 'Dokumentiert die MIP:: templatenumerotfounderror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse templatenumotfounderror
+description: 'Dokumentiert die templatenumotfounderror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: babcf77de224a75b2beec7e0b15c867698b49c15
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9c8a1f1d89c581950bc1760a7bcb339e10114c2a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489315"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764230"
 ---
-# <a name="class-miptemplatenotfounderror"></a>MIP:: templatenumerotfounderror-Klasse 
+# <a name="class-templatenotfounderror"></a>Klasse templatenumotfounderror 
 Die Vorlagen-ID wird vom RMS-Dienst nicht erkannt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: String mmess Age  | _Noch nicht dokumentiert._
-Public Std:: Map\<Std:: String, Std:: String\> mdebuginfo  | _Noch nicht dokumentiert._
+Public Std:: map\<Std:: String, Std:: String\> mdebuginfo  | _Noch nicht dokumentiert._
 public char const* what() const  |  Ruft die Fehlermeldung ab
-Public Std:: shared_ptr\<Fehler\> Clone ()-Konstante  |  Klont den Fehler
+Public Std:: shared_ptr\<Error\> Clone () konstant  |  Klont den Fehler
 public virtual ErrorType GetErrorType() const  |  Ruft den Fehlertyp ab
-Public Konstanten Std:: String & geterrorname () Konstanten  |  Ruft den Fehlernamen ab
-Public Konstanten Std:: String & getMessage () Konstanten  |  Ruft die Fehlermeldung ab
-öffentliches void SetMessage (Konstante Std:: String & msg)  |  Legt die Fehlermeldung fest
-öffentliches void adddebuginfo (Konstanten Std:: String & Key, Konstanten Std:: String & Wert)  |  Debuganformationen hinzufügen.
-Public Konstanten Std:: Map\<Std:: String, Std:: String\>& GetDebugInfo () Konstanten  |  Debuginformationen erhalten.
+Public Konstanten Std:: String& geterrorname () Konstanten  |  Ruft den Fehlernamen ab
+Public Konstanten Std:: String& getMessage () Konstanten  |  Ruft die Fehlermeldung ab
+öffentliches void SetMessage (Konstante Std:: String& msg)  |  Legt die Fehlermeldung fest
+öffentliches void adddebuginfo (Konstanten Std:: String& Key, Konstanten Std:: String& Wert)  |  Debuganformationen hinzufügen.
+Public Konstanten Std:: map\<Std:: String, Std:: String\>& GetDebugInfo () Konstanten  |  Debuginformationen erhalten.
   
 ## <a name="members"></a>Member
   
@@ -44,7 +44,7 @@ _Noch nicht dokumentiert._
 Ruft die Fehlermeldung ab
 
   
-**Rückgabe**: Fehlermeldung.
+**Gibt Folgendes zurück**: die Fehlermeldung
   
 ### <a name="clone-function"></a>Clone-Funktion
 Klont den Fehler
@@ -68,13 +68,13 @@ Ruft den Fehlernamen ab
 Ruft die Fehlermeldung ab
 
   
-**Rückgabe**: Fehlermeldung.
+**Gibt Folgendes zurück**: die Fehlermeldung.
   
 ### <a name="setmessage-function"></a>SetMessage-Funktion
 Legt die Fehlermeldung fest
 
 Parameter:  
-* **msg**: Fehlermeldung.
+* **msg**: die Fehlermeldung.
 
 
   

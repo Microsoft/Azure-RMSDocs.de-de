@@ -1,26 +1,26 @@
 ---
-title: 'MIP:: fileexecutionstate-Klasse'
-description: 'Dokumentiert die MIP:: fileexecutionstate-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Class fileexecutionstate
+description: 'Dokumentiert die fileexecutionstate:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: a55ad7b5d28a3115ea4f17f36a846011e82d7827
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: ca29755d4533d6b7dd51280c2fb71b631bbb9b5c
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490046"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763142"
 ---
-# <a name="class-mipfileexecutionstate"></a>MIP:: fileexecutionstate-Klasse 
+# <a name="class-fileexecutionstate"></a>Class fileexecutionstate 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
-public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konstante Std:: shared_ptr\<fileHandler\> &, Konstanten Std:: Vector\<Std:: shared_ptr\<classificationrequest\>\> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
-public virtual Std:: Map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
+public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konst Std:: shared_ptr\<fileHandler\> &, Konstanten Std::\<Vector Std:: shared_ptr\<classificationrequest\> \> &) Konstanten  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual Std:: map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
   
 ## <a name="members"></a>Member
   

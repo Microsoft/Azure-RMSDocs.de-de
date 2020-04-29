@@ -1,39 +1,39 @@
 ---
-title: mip::FileEngine-Klasse
-description: 'Dokumentiert die MIP:: fileengine-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klassen-fileengine
+description: 'Dokumentiert die fileengine:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 60be23f1cda4403936ba1e334ae437f6d82d3e20
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 03751a2a2c2e1a4457aacf3a28dd4e6ac2436b4a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490063"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763283"
 ---
-# <a name="class-mipfileengine"></a>mip::FileEngine-Klasse 
+# <a name="class-fileengine"></a>Klassen-fileengine 
 Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gibt die Engine-Einstellungen zurück.
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& listsensitivitytypes () Konstanten  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<sensitivitytypesrulepackage\> \>& listsensitivitytypes () Konstanten  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 Public Konstanten Std:: shared_ptr\<Bezeichnung\> getdefaultsensitivitylabel () Konstanten  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
-Public Std:: shared_ptr\<Bezeichnung\> getlabelbyid (Konstante Std:: String & ID) Konstanten  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<Bezeichnung\>\>& listsensitivitylabels ()  |  Eine Liste der Vertraulichkeitsbezeichnungen
+Public Std:: shared_ptr\<Bezeichnung\> getlabelbyid (Konstanten Std:: String& ID) Konstanten  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<-Bezeichnung\> \>& listsensitivitylabels ()  |  Eine Liste der Vertraulichkeitsbezeichnungen
 public const std::string& GetMoreInfoUrl() const  |  Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
-Public Konstanten Std:: String & getpolicyfleid () Konstanten  |  Ruft die ID der Richtlinien Datei ab.
-Public Konstanten Std:: String & getsensitivityfleid () Konstanten  |  Ruft die ID der Vertraulichkeits Datei ab.
+Public Konstanten Std:: String& getpolicyfleid () Konstanten  |  Ruft die ID der Richtlinien Datei ab.
+Public Konstanten Std:: String& getsensitivityfleid () Konstanten  |  Ruft die ID der Vertraulichkeits Datei ab.
 public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss.
-Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () konstant.  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
-Public Konstanten Std:: String & getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
-Public Std:: shared_ptr\<AsyncControl\> kreatefilehandlerasync (Konstante Std:: String & inputfilepath, Konstante Std:: String & actualfilepath, bool isauditdiscoveryaktivierte, Konstante Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& Kontext, Konstante Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateipfad.
-Public Std:: shared_ptr\<AsyncControl\> kreatefilehandlerasync (Konstante Std:: shared_ptr\<Stream\>& InputStream, Konstante Std:: String & actualfilepath, bool isauditdiscoveryaktivierte, Konst Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& context, Konstante Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateidatenstrom.
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () Konstanten  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
+Public Konstanten Std:: String& getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
+Public Std:: shared_ptr\<AsyncControl\> | atefilehandlerasync (Konstante Std:: String& inputfilepath, Konstante Std:: String& actualfilepath, bool\<isauditdiscoveryaktivierte, Konstante Std:: shared_ptr fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& Kontext, Konstanten Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateipfad.
+Public Std:: shared_ptr\<AsyncControl\> \<| atefilehandlerasync (Konstante Std:: shared_ptr\> Stream& InputStream, Konstante Std:: String& actualfilepath, bool isauditdiscoveryaktivierte, Konstante Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& Kontext, Konstanten Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateidatenstrom.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
-Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Ruft eine Liste benutzerdefinierter Einstellungen ab.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft eine Liste benutzerdefinierter Einstellungen ab.
 public bool hasclassificationrules () konstant  |  Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
   
 ## <a name="members"></a>Member
@@ -45,9 +45,9 @@ Gibt die Engine-Einstellungen zurück.
 Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 
   
-**Rückgabe**: Liste der Vertraulichkeitsbezeichnungen. leer, wenn loadsensitivitytypesaktivierte false war (
+**Returns**: eine Liste von Vertraulichkeits Bezeichnungen. leer, wenn loadsensitivitytypesaktivierte false war (
   
-**Siehe auch**: fileengine:: Settings).
+**Siehe auch**: [fileengine:: Settings](class_mip_fileengine_settings.md).
   
 ### <a name="getdefaultsensitivitylabel-function"></a>Getdefaultsensitivitylabel-Funktion
 Ruft die Standardvertraulichkeitsbezeichnung ab.
@@ -110,10 +110,10 @@ Parameter:
 * **isauditdiscoveryaktivierte**: gibt an, ob die Überwachungs Ermittlung aktiviert ist. 
 
 
-* **filehandlerobserver**: eine Klasse, die die fileHandler:: Observer-Schnittstelle implementiert. 
+* **fileHandlerObserver:** eine Klasse, die die FileHandler::Observer-Schnittstelle implementiert 
 
 
-* **context**: Clientkontext, der verdeckt an den Beobachter zurückgegeben wird. 
+* **Kontext**: Client Kontext, der an den Beobachter zurückgegeben wird. 
 
 
 
@@ -133,10 +133,10 @@ Parameter:
 * **isauditdiscoveryaktivierte**: gibt an, ob die Überwachungs Ermittlung aktiviert ist. 
 
 
-* **filehandlerobserver**: eine Klasse, die die fileHandler:: Observer-Schnittstelle implementiert. 
+* **fileHandlerObserver:** eine Klasse, die die FileHandler::Observer-Schnittstelle implementiert 
 
 
-* **context**: Clientkontext, der verdeckt an den Beobachter zurückgegeben wird. 
+* **Kontext**: Client Kontext, der an den Beobachter zurückgegeben wird. 
 
 
 

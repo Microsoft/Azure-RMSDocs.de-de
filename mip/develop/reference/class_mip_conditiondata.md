@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: conditiondata-Klasse'
-description: 'Dokumentiert die MIP:: conditiondata-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: conditiondata-Klasse
+description: 'Dokumentiert die conditiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: e50a7b2a26fb9b266fd0d732610f5522689d18f7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: aeb55d0178d8040c26e7c12f742b127f1bc5797c
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489009"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763411"
 ---
-# <a name="class-mipconditiondata"></a>MIP:: conditiondata-Klasse 
+# <a name="class-conditiondata"></a>conditiondata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

@@ -6,30 +6,29 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: 45234963d7401107dca26a4c461e92818226465b
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 7d6dded96c3d87cdbf925f85c675c10a68f182fb
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555227"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764028"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Schutz-API
 
-Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
+Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. 
 
 ## <a name="load-a-profile"></a>Laden eines Profils
 
-Da die Objekte `ProtectionProfileObserverImpl` und `AuthDelegateImpl` bereits definiert sind, können sie nun zum Instanziieren von `mip::ProtectionProfile` verwendet werden. Damit das `mip::ProtectionProfile`-Objekt erstellt werden kann, werden die [`mip::ProtectionProfile::Settings`](reference/class_mip_ProtectionProfile_settings.md)-Parameter benötigt.
+Nachdem der `ProtectionProfileObserverImpl` definiert ist, verwenden wir ihn, um zu instanziieren `mip::ProtectionProfile`. Zum Erstellen `mip::ProtectionProfile` des- [`mip::ProtectionProfile::Settings`](reference/class_mip_ProtectionProfile_settings.md)Objekts ist erforderlich.
 
 ### <a name="protectionprofilesettings-parameters"></a>ProtectionProfile::Settings-Parameter
 
-- `std::shared_ptr<MipContext>`: das `mip::MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
-- `mip::CacheStorageType`: definiert, wie der Zustand gespeichert wird: im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger und verschlüsselt.
-- `std::shared_ptr<mip::AuthDelegate>`: ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`
-- `std::shared_ptr<mip::ConsentDelegate>`: ein gemeinsam genutzter Zeiger der-Klasse [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: ein frei gegebener Zeiger auf das Profil `Observer` Implementierung (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `std::shared_ptr<MipContext>`: Das `mip::MipContext` -Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
+- `mip::CacheStorageType`: Definiert, wie der Zustand gespeichert wird: im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger und verschlüsselt.
+- `std::shared_ptr<mip::ConsentDelegate>`: Ein frei gegebener Zeiger der [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)-Klasse.
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: Ein frei gegebener Zeiger auf die `Observer` Profil Implementierung ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)in [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
-Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
+Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. 
 
 #### <a name="store-state-in-memory-only"></a>Speichern der Status im Arbeitsspeicher (ausschließlich)
 
@@ -44,8 +43,7 @@ mMipContext = mip::MipContext::Create(appInfo,
 
 ProtectionProfile::Settings profileSettings(
     mipContext,                                        // mipContext object
-    mip::CacheStorageType::InMemory,                   // use in memory storage
-    authDelegateImpl,                                  // auth delegate object
+    mip::CacheStorageType::InMemory,                   // use in memory storage    
     std::make_shared<ConsentDelegateImpl>(),           // new consent delegate
     std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile observer
 ```
@@ -63,8 +61,7 @@ mMipContext = mip::MipContext::Create(appInfo,
 
 ProtectionProfile::Settings profileSettings(
     mipContext,                                         // mipContext object
-    mip::CacheStorageType::OnDisk,                      // use on disk storage
-    authDelegateImpl,                                   // auth delegate object
+    mip::CacheStorageType::OnDisk,                      // use on disk storage    
     std::make_shared<ConsentDelegateImpl>(),            // new consent delegate
     std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile
 ```
@@ -77,7 +74,7 @@ auto profileFuture = profilePromise->get_future();
 ProtectionProfile::LoadAsync(profileSettings, profilePromise);
 ```
 
-Wenn ein Profil geladen und dieser Vorgang erfolgreich durchgeführt wird, wird `ProtectionProfileObserverImpl::OnLoadSuccess`, also die Implementierung von `mip::ProtectionProfile::Observer::OnLoadSuccess`, aufgerufen. Das sich ergebende Objekt oder der Ausnahmezeiger sowie der Kontext werden an die Funktion als Parameter übergeben. Beim Kontext handelt es sich auf einen Zeiger auf das `std::promise`-Objekt, das Sie erstellt haben, um den asynchronen Vorgang zu verarbeiten. Die Funktion legt nur den Wert des Promise an das ProtectionProfile-Objekt fest (Kontext). Wenn die Hauptfunktion `Future.get()` verwendet, kann das Ergebnis in einem neuen Objekt gespeichert werden.
+Wenn ein Profil geladen und dieser Vorgang erfolgreich durchgeführt wird, wird `ProtectionProfileObserverImpl::OnLoadSuccess`, also die Implementierung von `mip::ProtectionProfile::Observer::OnLoadSuccess`, aufgerufen. Das sich ergebende Objekt oder der Ausnahmezeiger sowie der Kontext werden an die Funktion als Parameter übergeben. Beim Kontext handelt es sich um einen Zeiger auf das `std::promise`-Objekt, das Sie erstellt haben, um den asynchronen Vorgang zu verarbeiten. Die Funktion legt nur den Wert des Promise an das ProtectionProfile-Objekt fest (Kontext). Wenn die Hauptfunktion `Future.get()` verwendet, kann das Ergebnis in einem neuen Objekt gespeichert werden.
 
 ```cpp
 //get the future value and store in profile.
@@ -97,8 +94,6 @@ int main()
 
     mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-    auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
-
     auto mipContext = mip::MipContext::Create(appInfo,
                         "mip_app_data",
                         mip::LogLevel::Trace,
@@ -107,8 +102,7 @@ int main()
 
     ProtectionProfile::Settings profileSettings(
         mipContext,                                    // mipContext object
-        mip::CacheStorageType::OnDisk,                 // use on disk storage
-        authDelegateImpl,                              // auth delegate object
+        mip::CacheStorageType::OnDisk,                 // use on disk storage        
         std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
         std::make_shared<ProfileObserver>());          // new protection profile observer
 

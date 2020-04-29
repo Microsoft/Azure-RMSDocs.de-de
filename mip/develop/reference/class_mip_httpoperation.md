@@ -1,19 +1,19 @@
 ---
-title: 'MIP:: httpoperation-Klasse'
-description: 'Dokumentiert die MIP:: httpoperation-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: httpoperation-Klasse
+description: 'Dokumentiert die httpoperation:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 4be7b54dd5df255c488043d84ebcfebbce7e6ac2
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 09fac96f16bf18e72d6217842728d48244b9c412
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489995"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81762808"
 ---
-# <a name="class-miphttpoperation"></a>MIP:: httpoperation-Klasse 
+# <a name="class-httpoperation"></a>httpoperation-Klasse 
 Schnittstelle, die einen einzelnen http-Vorgang beschreibt, der von der Client-App beim Überschreiben von httpdelegaten
   
 ## <a name="summary"></a>Zusammenfassung
@@ -29,7 +29,7 @@ public bool isabgeb Rochen ()  |  Gibt den Abbruch Status des Vorgangs an.
 Ruft die Vorgangs-ID ab.
 
   
-**Gibt Folgendes zurück**: Vorgangs-ID: die entsprechende HttpRequest und HttpResponse haben dieselbe ID.
+**Gibt Folgendes zurück**: Vorgangs-ID: die entsprechende [HttpRequest](class_mip_httprequest.md) und [HttpResponse](class_mip_httpresponse.md) haben dieselbe ID.
   
 ### <a name="getresponse-function"></a>GetResponse-Funktion
 Get-Antwort, falls vorhanden.

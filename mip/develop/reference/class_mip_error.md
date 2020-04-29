@@ -1,19 +1,19 @@
 ---
-title: mip::Error-Klasse
-description: 'Dokumentiert die MIP:: Error-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klassen Fehler
+description: 'Dokumentiert die Error:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: c27458e658af47d14d718dbbf9bc19e7687603fd
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 08e770c22f59bf0757039c623cb6ed1ed5b66cd7
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490097"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763339"
 ---
-# <a name="class-miperror"></a>mip::Error-Klasse 
+# <a name="class-error"></a>Klassen Fehler 
 Die Basisklasse für alle Fehler, die über eine ausgelöste Ausnahme oder als Rückgabewert vom MIP SDK gemeldet werden.
   
 ## <a name="summary"></a>Zusammenfassung

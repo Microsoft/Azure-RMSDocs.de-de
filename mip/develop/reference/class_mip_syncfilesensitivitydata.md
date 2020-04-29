@@ -1,27 +1,27 @@
 ---
-title: 'MIP:: syncfilesensitivitydata-Klasse'
-description: 'Dokumentiert die MIP:: syncfilesensitivitydata-Klasse des MIP-SDKs (Microsoft Information Protection).'
+title: syncfilesensitivitydata der Klasse
+description: 'Dokumentiert die syncfilesensitivitydata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: ab7b3286080d21bc09db12b39a470694cee9bb79
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 2a9b5c66b4e40ee8fb412323aa57db8713d9361e
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489366"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764297"
 ---
-# <a name="class-mipsyncfilesensitivitydata"></a>MIP:: syncfilesensitivitydata-Klasse 
+# <a name="class-syncfilesensitivitydata"></a>syncfilesensitivitydata der Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& getsensitivitytypesrulepackages () konstant.  | _Noch nicht dokumentiert._
+Public Konstanten Std::\<Vector Std:: shared_ptr\<sensitivitytypesrulepackage\> \>& getsensitivitytypesrulepackages () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ syncfilesensitivitydata ()  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getfleid () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & gettenantid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String& getfleid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String& gettenantid () Konstanten  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   

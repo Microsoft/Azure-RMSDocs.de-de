@@ -1,19 +1,19 @@
 ---
-title: mip::ContentLabel-Klasse
-description: 'Dokumentiert die MIP:: contentlabel-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse "contentlabel"
+description: 'Dokumentiert die contentlabel:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f131885572ab5ad3a2664a6b50162a011529bfbb
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: e69a4a8146eb7e7251645ef83a8db0926d383166
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77490335"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763399"
 ---
-# <a name="class-mipcontentlabel"></a>mip::ContentLabel-Klasse 
+# <a name="class-contentlabel"></a>Klasse "contentlabel" 
 Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.
 Sie enthält auch die Eigenschaften für eine bestimmte angewendete Bezeichnungsinstanz.
   
@@ -22,7 +22,7 @@ Sie enthält auch die Eigenschaften für eine bestimmte angewendete Bezeichnungs
 --------------------------------|---------------------------------------------
 Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getkreationtime () Konstanten  |  Ruft die Erstellungszeit der Bezeichnung ab
 public AssignmentMethod GetAssignmentMethod() const  |  Ruft die Zuweisungsmethode der Bezeichnung ab
-Public Konstante Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
+Public Konstante Std:: Vector\<MetadataEntry\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
 public bool IsProtectionAppliedFromLabel() const  |  Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
 Public Std:: shared_ptr\<Bezeichnung\> GetLabel () Konstanten  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
   
@@ -40,7 +40,7 @@ Ruft die Zuweisungsmethode der Bezeichnung ab
   
 **Rückgabe**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**Siehe auch**: [MIP:: accessmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Weitere Informationen finden Sie unter:** mip::AssignmentMethod
   
 ### <a name="getextendedproperties-function"></a>Getextendecodproperties-Funktion
 Ruft erweiterte Eigenschaften ab.

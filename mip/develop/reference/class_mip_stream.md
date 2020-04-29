@@ -1,19 +1,19 @@
 ---
-title: mip::Stream-Klasse
-description: 'Dokumentiert die MIP:: Stream-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klassen Datenstrom
+description: 'Dokumentiert die Stream:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 65e50fc9751b2ac38e2dae216e3e81cacba5c832
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: b2c8be3d6997985b62933d40bf855e48a20ca928
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489400"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764338"
 ---
-# <a name="class-mipstream"></a>mip::Stream-Klasse 
+# <a name="class-stream"></a>Klassen Datenstrom 
 Eine Klasse, die die Schnittstelle zwischen dem MIP SDK und dem streambasierten Inhalt definiert.
   
 ## <a name="summary"></a>Zusammenfassung
@@ -38,7 +38,7 @@ Parameter:
 * **buffer**: Zeiger auf einen Puffer 
 
 
-* **bufferLength**: Puffergröße. 
+* **BufferLength**: Puffergröße. 
 
 
 
@@ -52,7 +52,7 @@ Parameter:
 * **buffer**: Zeiger auf einen Puffer 
 
 
-* **bufferLength**: Puffergröße. 
+* **BufferLength**: Puffergröße. 
 
 
 
@@ -69,7 +69,7 @@ Leert den Stream.
 Sucht die aktuelle Position im Stream.
 
 Parameter:  
-* **Position**, nach der im Stream gesucht werden soll.
+* **Position**: für die Suche im Stream.
 
 
   
@@ -101,5 +101,5 @@ Ruft den Umfang des Inhalts im Stream ab.
 Legt die Größe des Streams fest.
 
 Parameter:  
-* **Größe des Streams**.
+* **Stream**: Größe.
 

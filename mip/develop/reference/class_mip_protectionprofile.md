@@ -1,37 +1,37 @@
 ---
-title: mip::ProtectionProfile-Klasse
-description: Dokumentiert die MIP::p rotectionprofile-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Class Protection profile
+description: 'Dokumentiert die Schutzprofile:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 14d52de8ff87a75aaf2c777eb55c427bbde72a12
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: d3a2f02a0dab5bba9b74b264348bcfd7e073f783
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77486731"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764406"
 ---
-# <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile-Klasse 
-Schutzprofile ist die Stamm Klasse für die Durchführung von Schutz Vorgängen.
-Eine Anwendung muss ein Schutzprofil erstellen, bevor Sie Schutz Vorgänge ausführen können.
+# <a name="class-protectionprofile"></a>Class Protection profile 
+ProtectionProfile ist die Stammklasse für Schutzvorgänge.
+Bevor Schutzvorgänge durchgeführt werden können, muss eine Anwendung ein ProtectionProfile erstellen.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Ruft Einstellungen ab, die von Schutzprofile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
-Public Std:: shared_ptr\<AsyncControl\> listenginesasync (konstant Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+public const Settings& GetSettings() const  |  Ruft während der Initialisierung und der Lebensdauer die von ProtectionProfile verwendeten Einstellungen ab.
+Public Std:: shared_ptr\<AsyncControl\> listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 Public Std:: Vector\<Std:: String\> listengines ()  |  Listet Engines auf
-Public Std:: shared_ptr\<AsyncControl\> addengineasync (Konstante Schutz-Engine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
-Public Std:: shared_ptr\<schutzengine\> addengine (Konstante Schutz-Engine:: Settings & Settings)  |  Fügt eine neue Schutz-Engine zum Profil hinzu
-Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (konstant Std:: String & EngineID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
+Public Std:: shared_ptr\<AsyncControl\> addengineasync (Konstante Schutz-Engine:: Settings& Settings, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
+Public Std:: shared_ptr\<schutzengine\> addengine (konstant Protection Engine:: Settings& Settings)  |  Fügt eine neue Schutz-Engine zum Profil hinzu
+Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (Konstanten Std:: String& EngineID, Konstante Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löscht die Schutz-Engine mit der angegebenen ID Alle Daten für die angegebene Engine werden gelöscht.
   
 ## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
-Ruft Einstellungen ab, die von Schutzprofile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
+Ruft während der Initialisierung und der Lebensdauer die von ProtectionProfile verwendeten Einstellungen ab.
 
   
 **Gibt Folgendes zurück**: Einstellungen, die von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendet werden
@@ -46,7 +46,7 @@ Parameter:
 
   
 **Gibt Folgendes zurück**: Async-Steuerelement Objekt.
-Schutzprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="listengines-function"></a>Listengines-Funktion
 Listet Engines auf
@@ -58,7 +58,7 @@ Listet Engines auf
 Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
 
 Parameter:  
-* **Einstellungen**: das MIP::P rotectionengine:: Settings-Objekt, das die Einstellungen der Engine angibt. 
+* **settings**: das mip::ProtectionEngine::Settings-Objekt, das die Einstellungen der Engine angibt 
 
 
 * **context**: Clientkontext, der verdeckt an die Beobachter zurückgegeben wird.
@@ -67,24 +67,24 @@ Parameter:
 
   
 **Gibt Folgendes zurück**: Async-Steuerelement Objekt.
-Schutzprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+ProtectionProfile::Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="addengine-function"></a>Addengine-Funktion
 Fügt eine neue Schutz-Engine zum Profil hinzu
 
 Parameter:  
-* **Einstellungen**: das MIP::P rotectionengine:: Settings-Objekt, das die Einstellungen der Engine angibt.
+* **settings**: das mip::ProtectionEngine::Settings-Objekt, das die Einstellungen der Engine angibt
 
 
 
   
-**Gibt Folgendes zurück**: neu erstellte Schutz-Engine
+**Rückgabe:** neu erstellte ProtectionEngine
   
 ### <a name="deleteengineasync-function"></a>Deleteengineasync-Funktion
 Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
 
 Parameter:  
-* **id**: die eindeutige Engine-ID 
+* **ID**: die eindeutige Engine-ID. 
 
 
 * **context**: Clientkontext, der verdeckt an die Beobachter zurückgegeben wird.
@@ -93,11 +93,11 @@ Parameter:
 
   
 **Gibt Folgendes zurück**: Async-Steuerelement Objekt.
-Schutzprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
+ProtectionProfile::Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="deleteengine-function"></a>Deleteengine-Funktion
 Löscht die Schutz-Engine mit der angegebenen ID Alle Daten für die angegebene Engine werden gelöscht.
 
 Parameter:  
-* **id**: die eindeutige Engine-ID
+* **ID**: die eindeutige Engine-ID.
 

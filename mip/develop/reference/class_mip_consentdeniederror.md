@@ -1,20 +1,20 @@
 ---
-title: class mip::ConsentDeniedError
-description: 'Dokumentiert die MIP:: genehmideniederror-Klasse des Microsoft Information Protection (MIP) SDK.'
+title: Klasse "genehmideniederror"
+description: 'Dokumentiert die "genehmideniederror:: nicht definierte"-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 07aa6d39bf14e6995d9dc60be88d02928105aa2f
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 9ae93f60a878827cd0a56253c84386534d10ab0a
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77488958"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81763456"
 ---
-# <a name="class-mipconsentdeniederror"></a>class mip::ConsentDeniedError 
-Einem Vorgang, der die Einwilligung vom Benutzer erfordert, wurde keine Einwilligung erteilt.
+# <a name="class-consentdeniederror"></a>Klasse "genehmideniederror" 
+Ein Vorgang, der die Einwilligung vom Benutzer erfordert, wurde nicht genehmigt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

@@ -1,30 +1,30 @@
 ---
-title: mip::ProtectionHandler-Klasse
-description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
+title: Klassen Schutz Handler
+description: 'Dokumentiert die schutzhandler:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: 4b245ea2a579aa3d9a0fddfb503830d75577c2b7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.date: 04/16/2020
+ms.openlocfilehash: 948db155cbeca6c36c10bac76f26d42952e11e90
+ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489655"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81764484"
 ---
-# <a name="class-mipprotectionhandler"></a>mip::ProtectionHandler-Klasse 
+# <a name="class-protectionhandler"></a>Klassen Schutz Handler 
 Verwaltet schutzbezogene Aktionen für eine bestimmte Schutzkonfiguration.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: shared_ptr\<Stream\> kreateprotectedstream (konstant Std:: shared_ptr\<Stream\>& backingstream, int64_t contentstartposition, int64_t contentsize)  |  Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
+Public Std:: shared_ptr\<Stream\> "upateprotectedstream" (Konstanten Std::\<shared_ptr\> Stream& backingstream, int64_t contentstartposition, int64_t contentsize)  |  Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Verschlüsselt einen Puffer.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Entschlüsselt einen Puffer.
-public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Berechnet die Größe des Inhalts (in Bytes), wenn er mit diesem Schutz Handler verschlüsselt werden soll.
-public int64_t GetBlockSize()  |  Ruft die Blockgröße (in Bytes) für den Verschlüsselungs Modus ab, der von diesem Schutz Handler verwendet wird.
-Public Std:: Vector\<Std:: String\> GetRights () Konstanten  |  Ruft die Rechte ab, die dem Benutzer/der Identität gewährt werden, der diesem Schutz Handler zugeordnet ist.
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Berechnet die Größe (in Byte) des Inhalts, wenn dieser mit diesem ProtectionHandler verschlüsselt werden würde.
+public int64_t GetBlockSize()  |  Ruft die Blockgröße (in Byte) für den Verschlüsselungsmodus ab, der von diesem ProtectionHandler verwendet wird.
+Public Std:: Vector\<Std:: String\> GetRights () Konstanten  |  Ruft die Rechte ab, die dem Benutzer bzw. der Identität erteilt werden, die diesem ProtectionHandler zugeordnet sind.
 public bool AccessCheck(const std::string& right) const  |  Überprüft, ob der Schutzhandler Benutzerzugriff auf das angegebene Recht gewährt.
 public const std::string GetIssuedTo()  |  Ruft den mit dem Schutzhandler verknüpften Benutzer ab.
 public const std::string GetOwner()  |  Ruft die E-Mail-Adresse des Inhaltsbesitzers ab
@@ -33,7 +33,9 @@ Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor ()  |  Ruft Schu
 public const std::string GetContentId()  |  Ruft den eindeutigen Bezeichner für das Dokument bzw. den Inhalt ab.
 public bool DoesUseDeprecatedAlgorithms()  |  Ruft ab, ob ein Schutzhandler veraltete Kryptografiealgorithmen für die Abwärtskompatibilität nutzt
 public bool IsAuditedExtractAllowed()  |  Ruft ab, ob ein Schutzhandler dem Benutzer das Recht „audited extract“ (Überwachtes Extrahieren) gewährt oder nicht.
-Public Konstanten Std:: Vector\<uint8_t\> getserializedpublishinglicense ()  |  Serialisieren des Schutz Handlers in eine Veröffentlichungs Lizenz (PL)
+Public Konstanten Std:: Vector\<uint8_t\>& getserializedpublishinglicense ()-Konstanten  |  Serialisiert ProtectionHandler in eine Veröffentlichungslizenz.
+Public Konstanten Std:: Vector\<uint8_t\>& getserializedprelicense (prelicen\format) konstant  |  Vorab Lizenz erhalten.
+Enumeration prelicenenformat  |  Prälizenzierungs Format.
   
 ## <a name="members"></a>Member
   
@@ -107,7 +109,7 @@ Parameter:
 **Rückgabe**: Tatsächliche Größe (in Bytes) des entschlüsselten Inhalts
   
 ### <a name="getprotectedcontentlength-function"></a>Getprotectedcontentlength-Funktion
-Berechnet die Größe des Inhalts (in Bytes), wenn er mit diesem Schutz Handler verschlüsselt werden soll.
+Berechnet die Größe (in Byte) des Inhalts, wenn dieser mit diesem ProtectionHandler verschlüsselt werden würde.
 
 Parameter:  
 * **unprotectedLength:** Größe (in Bytes) des nicht geschützten Inhalts 
@@ -121,13 +123,13 @@ Parameter:
 **Rückgabe**: Größe (in Bytes) des geschützten Inhalts
   
 ### <a name="getblocksize-function"></a>Getblocksize-Funktion
-Ruft die Blockgröße (in Bytes) für den Verschlüsselungs Modus ab, der von diesem Schutz Handler verwendet wird.
+Ruft die Blockgröße (in Byte) für den Verschlüsselungsmodus ab, der von diesem ProtectionHandler verwendet wird.
 
   
 **Rückgabe**: Blockgröße (in Bytes)
   
 ### <a name="getrights-function"></a>GetRights-Funktion
-Ruft die Rechte ab, die dem Benutzer/der Identität gewährt werden, der diesem Schutz Handler zugeordnet ist.
+Ruft die Rechte ab, die dem Benutzer bzw. der Identität erteilt werden, die diesem ProtectionHandler zugeordnet sind.
 
   
 **Rückgabe:** die dem Benutzer erteilten Rechte
@@ -186,7 +188,25 @@ Ruft ab, ob ein Schutzhandler dem Benutzer das Recht „audited extract“ (Übe
 **Rückgabe**: Angabe, ob ein Schutzhandler dem Benutzer das Recht „audited extract“ (überwachtes Extrahieren) gewährt oder nicht
   
 ### <a name="getserializedpublishinglicense-function"></a>Getserializedpublishinglicense-Funktion
-Serialisieren des Schutz Handlers in eine Veröffentlichungs Lizenz (PL)
+Serialisiert ProtectionHandler in eine Veröffentlichungslizenz.
 
   
 **Rückgabe**: serialisierte Veröffentlichungslizenz
+  
+### <a name="getserializedprelicense-function"></a>Getserializedprelicense-Funktion
+Vorab Lizenz erhalten.
+
+Parameter:  
+* **Format**: Prälizenzierungs Format
+
+
+
+  
+**Gibt Folgendes zurück**: die serialisierte Pre-License-Pre-License-Funktion ermöglicht es einem Benutzer, Inhalte sofort zu nutzen, ohne einen zusätzlichen http-aufzurufen. Der Schutz Handler muss mit einem Schutz Handler erstellt worden sein [::P ublishingsettings:: setprelicenseuseremail-](class_mip_protectionhandler_publishingsettings.md) Wert oder andernfalls wird ein leerer Vektor zurückgegeben.
+  
+### <a name="prelicenseformat-enum"></a>Prelicenenformat-Enumeration
+ Werte                         | Beschreibungen                                
+--------------------------------|---------------------------------------------
+Xml            | Von msipc verwendetes XML/SOAP-Legacy Format
+Json            | Vom MIP SDK und RMS SDK verwendetes JSON/Rest-Format
+Prälizenzierungs Format.
