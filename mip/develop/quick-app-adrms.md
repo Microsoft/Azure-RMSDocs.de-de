@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 32e2cc1cb3924c5a4181bd4cafaaf3f53f085c00
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: eafcf65b9478cc8a2d2c104c3e98194c40e9c941
+ms.sourcegitcommit: 80d7c1a1afb3e54fac434f10a7dca4f8076384a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764220"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255600"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Schnellstart: Schutz des Active Directory-Rechteverwaltungsservers (AD RMS)
 
@@ -26,12 +26,12 @@ Stellen Sie Folgendes sicher, sofern dies noch nicht geschehen ist:
 
 - Schließen Sie zuerst den [Schnellstart für die Initialisierung der Clientanwendung (C++)](quick-app-initialization-cpp.md) ab, in dem Sie eine Visual Studio-Projektmappe für den Einstieg erstellen.
 - Schließen Sie zuerst den [Schnellstart Auflisten der Vertraulichkeitsbezeichnungen (C++)](quick-file-list-labels-cpp.md) oder den [Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C#)](quick-file-list-labels-csharp.md) ab.
-- Stellen Sie AD RMS mit [Mobilgeräteerweiterung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) bereit.
-- Stellen Sie optional sicher, dass der [DNS SRV-Eintrag für AD RMS MDE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) veröffentlicht wurde.
+- Stellen Sie AD RMS mit [Mobilgeräteerweiterung](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device) bereit.
+- Stellen Sie optional sicher, dass der [DNS SRV-Eintrag für AD RMS MDE](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) veröffentlicht wurde.
 
 ## <a name="service-discovery"></a>Dienstermittlung
 
-Das SDK führt eine Dienstermittlung basierend auf dem über `FileEngineSettings` oder `ProtectionEngineSettings` bereitgestellten `mip::Identity`-Element aus. Dabei wird der UPN oder das E-Mail-Adresssuffix verwendet. Zuerst wird in der Domänenhierarchie nach dem *_rmsdisco*-Eintrag für MDE gesucht. Weitere Informationen zu diesem Prozess finden Sie unter [Festlegen der DNS SRV-Einträge für die AD RMS-Mobilgeräteerweiterung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Wenn dieser DNS SRV-Eintrag nicht gefunden wird, wird als Dienststandort standardmäßig der Azure Information Protection-Dienst verwendet.
+Das SDK führt eine Dienstermittlung basierend auf dem über `FileEngineSettings` oder `ProtectionEngineSettings` bereitgestellten `mip::Identity`-Element aus. Dabei wird der UPN oder das E-Mail-Adresssuffix verwendet. Zuerst wird in der Domänenhierarchie nach dem *_rmsdisco*-Eintrag für MDE gesucht. Weitere Informationen zu diesem Prozess finden Sie unter [Festlegen der DNS SRV-Einträge für die AD RMS-Mobilgeräteerweiterung](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Wenn dieser DNS SRV-Eintrag nicht gefunden wird, wird als Dienststandort standardmäßig der Azure Information Protection-Dienst verwendet.
 
 Wenn keine Identität verfügbar ist oder der DNS SRV-Eintrag für MDE nicht veröffentlicht wurde, kann der Dienstermittlungsprozess außer Kraft gesetzt werden, indem explizit der [Cloudendpunkt-URL](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function) festgelegt wird.
 
