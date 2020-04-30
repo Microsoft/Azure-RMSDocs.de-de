@@ -4,8 +4,12 @@
   items:
     - name: Was ist Azure Information Protection?
       href: what-is-information-protection.md
-    - name: Vergleich von Azure Information Protection und AD RMS
-      href: compare-on-premise.md
+    - name: Azure Information Protection und AD RMS
+      items:
+        - name: Vergleich von Azure Information Protection und AD RMS
+          href: compare-on-premise.md
+        - name: Verwalten der Active Directory-Erweiterungen für mobile Geräte
+          href: active-directory-rights-manage-mobile-device.md
     - name: Anforderungen
       items:
         - name: Übersicht
@@ -299,7 +303,7 @@
               href: ./rms-client/protected-pdf-readers.md
             - name: Windows
               href: ./rms-client/protected-pdf-readers-windows.md
-            - name: MacOS
+            - name: macOS
               href: ./rms-client/protected-pdf-readers-mac.md
             - name: iOS
               href: ./rms-client/protected-pdf-readers-ios.md
