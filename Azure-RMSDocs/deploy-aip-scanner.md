@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/16/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60aa5e0dffd1c5c8e71534a4c4676b66963d9076
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: e1920e66707135616fe1abb121ca709be452cb1c
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161366"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736795"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -297,6 +297,9 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     Für die restlichen Einstellungen in diesem Bereich sollten Sie diese nicht für diese anfängliche Konfiguration ändern, sondern als Standardwert für den **inhaltscanauftrag**beibehalten. Dies bedeutet, dass das Datenrepository die Einstellungen vom Inhalts Überprüfungs Auftrag erbt. 
     
     Wählen Sie **Speichern** aus.
+
+> [!IMPORTANT]
+> Obwohl das lokale Dateisystem gescannt werden kann, wird diese Konfiguration für Produktions Bereitstellungen nicht empfohlen und kann **nur** in Clustern mit einem einzelnen Knoten verwendet werden. Das Scannen von lokalen Ordnern durch Cluster mit mehreren Knoten wird nicht unterstützt. Wenn Sie einen Ordner auf dem lokalen Dateisystem scannen müssen, empfiehlt es sich, eine Freigabe zu erstellen und Sie mit einer Netzwerk-URL zu scannen.
 
 10. Wenn Sie ein weiteres Datenrepository hinzufügen möchten, wiederholen Sie die Schritte 8 und 9. 
 
@@ -674,7 +677,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
     
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
     
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     

@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/12/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: b7cc3bff14c5e16ca43fe8f204609e67b531e566
+ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403959"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "82736778"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -99,7 +99,7 @@ Die Azure Information Protection Clients verfügen über zusätzliche erforderli
 
 - Azure Information Protection-Client: [Voraussetzungen](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Anwendungen
+## <a name="applications"></a>Applications
 
 Die Azure Information Protection Clients können Dokumente und e-Mails mit den Office-Anwendungen **Word**, **Excel**, **PowerPoint**und **Outlook** aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
@@ -127,15 +127,15 @@ Informationen dazu, welche Office-Editionen den Datenschutzdienst unterstützen,
 
 ## <a name="firewalls-and-network-infrastructure"></a>Firewalls und Netzwerkinfrastruktur
 
-Wenn Sie eine Firewall oder ähnliche Interventionsnetzwerkgeräte verwenden, die so konfiguriert wurden, dass bestimmte Verbindungen erlaubt sind, sind die Netzwerkanforderungen im Office-Artikel [Office 365-URLs und IP-Adressbereiche](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) enthalten. Weitere Informationen finden Sie im Abschnitt **Microsoft 365 Common and Office Online (Microsoft 365 Common und Office Online)** .
+Wenn Sie eine Firewall oder ähnliche Interventionsnetzwerkgeräte verwenden, die so konfiguriert wurden, dass bestimmte Verbindungen erlaubt sind, sind die Netzwerkanforderungen im Office-Artikel [Office 365-URLs und IP-Adressbereiche](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) enthalten. Weitere Informationen finden Sie im Abschnitt **Microsoft 365 Common and Office Online (Microsoft 365 Common und Office Online)**.
 
-Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Information Protection:
+Zusätzlich zu den Informationen im Office-Artikel gilt speziell für Azure Information Protection Folgendes:
 
-- Damit der Unified Label-Client Bezeichnungen und Bezeichnungs Richtlinien herunterlädt: lassen Sie die URL * **. Protection.Outlook.com** über HTTPS zu.
+- Damit der Unified Label-Client Bezeichnungen und Bezeichnungs Richtlinien herunterlädt: lassen Sie die URL ***. Protection.Outlook.com** über HTTPS zu.
 
-- Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
+- Wenn Sie einen Webproxy verwenden, für den eine Authentifizierung erforderlich ist, müssen Sie diesen für die Verwendung der integrierten Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers konfigurieren.
 
-- Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z.B. zur Durchführung von Überprüfungen auf Paketebene) zur URL **aadrm.com**. Wenn Sie dies tun, wird die Anheftung von Zertifikaten unterbrochen, die RMS-Clients mit von Microsoft verwalteten Zertifizierungsstellen verwenden, um deren Kommunikation mit dem Azure Rights Management-Dienst zu sichern.
+- Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z.B. zur Durchführung von Überprüfungen auf Paketebene) zur URL **aadrm.com**. Ansonsten wird die Anheftung von Zertifikaten beendet, die von RMS-Clients für von Microsoft verwaltete Zertifizierungsstellen verwendet wird, um die Kommunikation mit dem Azure Rights Management-Dienst zu schützen.
     
     Mithilfe der folgenden PowerShell-Befehle können Sie feststellen, ob Ihre Client Verbindung beendet wurde, bevor Sie den Azure Rights Management-Dienst erreicht:
    
@@ -143,7 +143,7 @@ Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Inform
         $request.GetResponse()
         $request.ServicePoint.Certificate.Issuer
     
-    Das Ergebnis sollte anzeigen, dass die ausstellende Zertifizierungsstelle von einer Microsoft-Zertifizierungsstelle aus ist, beispielsweise: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es sehr wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
+    Das Ergebnis sollte anzeigen, dass die ausstellende Zertifizierungsstelle von einer Microsoft-Zertifizierungs `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`Stelle aus ist, beispielsweise:. Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es sehr wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
 
 ### <a name="on-premises-servers"></a>Lokale Server
 
@@ -159,13 +159,15 @@ Informationen zu den zusätzlichen Anforderungen für dieses Szenario finden Sie
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Gleichzeitige Verwendung von AD RMS mit Azure RMS
 
-Das folgende Bereitstellungsszenario wird nur unterstützt, wenn Sie AD RMS für [HYOK-Schutz](configure-adrms-restrictions.md) mit Azure Information Protection verwenden (Hold Your Own Key-Konfiguration):
+Die Verwendung von AD RMS und Azure RMS im folgenden Szenario zum Schützen von Inhalten durch denselben Benutzer in derselben Organisation wird **nur** in AD RMS für den [Hyok-Schutz](configure-adrms-restrictions.md) mit Azure Information Protection unterstützt (die "Hold Your Own Key"-Konfiguration).
 
 - Parallele Ausführung von AD RMS und Azure RMS in derselben Organisation (mit Ausnahme der Migration), wie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) beschrieben.
 
-Es gibt einen unterstützten Migrationspfad [von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und [von Azure Information Protection zu AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Wenn Sie Azure Information Protection bereitstellen und dann beschließen, diesen Clouddienst nicht mehr zu verwenden, finden Sie weitere Informationen unter [Außerbetriebsetzen und Deaktivieren von Azure Information Protection](decommission-deactivate.md).
+Es gibt einen unterstützten Migrationspfad [von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und [von Azure Information Protection zu AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Wenn Sie Azure Information Protection bereitstellen und dann beschließen, diesen Clouddienst nicht mehr zu verwenden, finden Sie weitere Informationen unter [Außerbetriebsetzen und Deaktivieren von Azure Information Protection](decommission-deactivate.md). 
 
-### <a name="service-tags"></a>Dienst Tags
+In anderen Szenarien, in denen beide Dienste in derselben Organisation aktiv sind, müssen die Dienste so konfiguriert werden, dass nur einer der Benutzerinhalte schützen kann. Dies kann mithilfe von Umleitungen bei einer [AD RMS zum Azure RMS der Migration](migrate-from-ad-rms-to-azure-rms.md) oder bei Verwendung von Dienst seitigen Konfigurationen für verschiedene Benutzer gleichzeitig konfiguriert werden, indem Dienst seitige Konfigurationen zum Erzwingen von Exklusivität verwendet werden: Azure RMS onboardingsteuerelemente im clouddienst und eine ACL für die Veröffentlichungs-URL, um den schreibgeschützten Modus für AD RMS festzulegen.   
+
+### <a name="service-tags"></a>Diensttags
 
 Stellen Sie sicher, dass Sie den Zugriff auf alle Ports für die folgenden Dienst Tags zulassen:
 
