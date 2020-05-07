@@ -1,22 +1,22 @@
 ---
-title: Herunterladen & Installieren des Azure Information Protection Unified Bezeichnung-Clients
+title: Herunterladen & installieren des Azure Information Protection Unified Bezeichnung-Clients
 description: Anweisungen für Benutzer zum Installieren des Azure Information Protection Unified Bezeichnung-Clients für Windows, damit Sie Ihre Dokumente und e-Mails klassifizieren und schützen können.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 535f7dde9f8dd0fd6fc709b4fe8bd0d2bc0f1fbf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 95c0af617e88b4201243f4b12381799d8202a595
+ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960870"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852080"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client
 
@@ -26,11 +26,10 @@ ms.locfileid: "75960870"
 
 Wenn Ihr Administrator den Azure Information Protection Unified-Bezeichnung-Client nicht für Sie installiert, können Sie dies selbst tun. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Beachten Sie auch Folgendes:
+Berücksichtigen Sie zudem Folgendes:
 
 - Der Azure Information Protection-Client für einheitliche Bezeichnungen erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 
-- Wenn Sie Windows 7 SP1 verwenden, erfordert der Azure Information Protection-Client für einheitliche Bezeichnungen das Update KB 2533623. Wenn Ihr PC dieses Update benötigt, es aber nicht installiert ist, wird die Installation zwar abgeschlossen, aber die Meldung angezeigt, dass der Azure Information Protection-Client für einheitliche Bezeichnungen dieses Update benötigt. Solange dieses Update nicht installiert ist, können Sie nicht alle Features des Azure Information Protection-Clients für einheitliche Bezeichnungen nutzen. 
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>So laden Sie den Azure Information Protection-Client für einheitliche Bezeichnungen herunter und installieren ihn
 

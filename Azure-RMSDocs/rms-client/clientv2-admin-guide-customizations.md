@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 760a4eddf40f344a47d335192e15d73d0d70dbaf
-ms.sourcegitcommit: 4c45794665891ba88fdb6a61b1bcd886035c13d3
+ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
+ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "82736761"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82799128"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -32,7 +32,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -647,7 +647,7 @@ Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom 
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Zum Beispiel:
+Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -675,7 +675,27 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
+## <a name="limit-cpu-consumption"></a>Begrenzen der CPU-Auslastung
+
+Ab der Überprüfungs Version 2.7. x. x empfiehlt es sich, die CPU-Auslastung mithilfe der folgenden erweiterten **scannermaxcpu** -und **scannermincpu** -Einstellungs Methode einzuschränken. 
+
+> [!IMPORTANT]
+> Die erweiterte Einstellungen **scannermaxcpu** und **scannermincpu** können nicht mit der Thread Einschränkungs Richtlinie verwendet werden. Um die CPU-Nutzung mithilfe der-Methode einzuschränken, müssen Sie die Verwendung der [Thread Einschränkungs Richtlinie](#limit-the-number-of-threads-used-by-the-scanner) , die Sie möglicherweise bereits eingerichtet haben, deaktivieren. 
+
+Zum Begrenzen der CPU-Auslastung auf dem Überprüfungs Computer können Sie zwei Erweiterte Einstellungen erstellen: **scannermaxcpu** und **scannermincpu**. 
+
+**Scannermaxcpu** ist standardmäßig auf 100 festgelegt, was bedeutet, dass es keine Beschränkung der maximalen CPU-Auslastung gibt. In diesem Fall versucht der Überprüfungsprozess, die gesamte verfügbare CPU-Zeit zu nutzen, um die Scan Raten zu maximieren.
+
+Wenn Sie **scannermaxcpu** auf einen niedrigeren Wert als 100 festlegen, wird die CPU-Auslastung in den letzten 30 Minuten vom Scanner überwacht. wenn die maximale CPU den von Ihnen festgelegten Grenzwert überschritten hat, wird die Anzahl der Threads, die neuen Dateien zugeordnet sind, verringert. Der Grenzwert für die Anzahl der Threads wird fortgesetzt, solange der CPU-Verbrauch höher als der für **scannermaxcpu**festgelegte Grenzwert ist.
+
+**Scannermincpu**ist nur aktiviert, wenn **scannermaxcpu** nicht gleich 100 ist. **Scannermincpu** kann nicht auf eine Zahl höher festgelegt werden, die höher als die **scannermaxcpu** -Nummer ist. Es wird empfohlen, **scannermincpu** mindestens 15 Punkte als den Wert von **scannermaxcpu**festzulegen.   
+
+Der Standardwert dieser Einstellung ist 50, d. h., wenn die CPU-Auslastung in den letzten 30 Minuten niedriger als dieser Wert ist, beginnt die Überprüfung, neue Threads hinzuzufügen, um weitere Dateien parallel zu scannen, bis die CPU-Auslastung die für **scannermaxcpu**-15 festgelegte Stufe erreicht. 
+
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Begrenzen der Anzahl der von der Überprüfung verwendeten Threads
+
+> [!IMPORTANT]
+> Wenn die folgende Thread Einschränkungs Richtlinie verwendet wird, werden die erweiterten Einstellungen **scannermaxcpu** und **scannermincpu** ignoriert. Um die CPU-Auslastung mithilfe der erweiterten Einstellungen **scannermaxcpu** und **scannermincpu** einzuschränken, brechen Sie die Verwendung von Richtlinien ab, die die Anzahl der Threads begrenzen. 
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
@@ -816,7 +836,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
