@@ -13,13 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068568"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972049"
 ---
 # <a name="ios-and-os-x-setup"></a>Einrichten von iOS und OS X
 
@@ -29,7 +29,7 @@ iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwen
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
-**Hinweis:**    Diese SDK bietet keine Unterstützung für iPod Touch.
+**Beachten Sie**  , dass das SDK keine iPod-Fingereingabe unterstützt.
 
 
 -   [Voraussetzungen](#prerequisites)
@@ -37,7 +37,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -76,17 +76,17 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
     ![Legen Sie einen Speicherort fest](../media/ios-add-dependencies-01a.png)
 
--   Aktivieren Sie das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)** .
+-   Aktivieren Sie das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
 
     Auf diese Weise bleibt der Verweis auf den SDK-Installationsordner erhalten, anstatt eine Kopie zu erstellen.
 
     ![Legen Sie den Verweis auf den SDK-Installationsordner fest](../media/iOS-create-groups.png)
 
--   Um das MS RMS SDK 4.2 für das Ressourcenpaket hinzuzufügen, ziehen Sie die Datei „MSRightsManagementResources.bundle“ aus dem Ordner „MSRightsManagement.framework/Resources“ in den Abschnitt **Frameworks** des Projektnavigators.
+-   Um das MS RMS SDK 4.2 für das Ressourcenpaket hinzuzufügen, ziehen Sie die Datei MSRightsManagementResources.bundle aus dem Ordner "MSRightsManagement.framework/Resources" in den Abschnitt **Frameworks** des Projektnavigators.
 
     ![Hinzufügen einer Ressourcengruppe](../media/iOS-add-resource-bundle-02a.png)
 
--   Aktivieren Sie wie beim Kopieren des Frameworks das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)** .
+-   Aktivieren Sie wie beim Kopieren des Frameworks das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
 -   Das SDK basiert auf anderen Frameworks wie: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** und **Security**. Um diese Frameworks hinzuzufügen, wechseln Sie zum Abschnitt **Linked Frameworks and Libraries** des Zielbereichs **Zusammenfassung**. Erweitern Sie diesen Abschnitt, um die Frameworks hinzuzufügen.
 
     Die Frameworks **UIKit** und **Foundation** sind erforderlich und in der Regel standardmäßig vorhanden.
@@ -103,7 +103,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 -   Sie können jetzt Ihre eigenen neuen iOS/OS X-Apps erstellen.
 
-### <a name="see-also"></a>Weitere Informationen:
+### <a name="see-also"></a>Weitere Informationen
 
 * [Erste Schritte](get-started.md)
 
@@ -111,4 +111,4 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-* [iOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx)
+* [IOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx)

@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: has-adal-ref
+ms.openlocfilehash: 05036616c77d559dc82a0334b99b548da724df18
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60179114"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971794"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
 
@@ -63,14 +64,14 @@ Die Version 4.2 basiert auf dem REST-Client mit betriebssystemspezifischen APIs 
 
 Die folgenden Anleitungen führen Sie durch betriebssystemspezifische Einrichtungsschritte für eine Anwendungsentwicklungsumgebung mithilfe häufig verwendeter Tools.
 
-[![iOS/OSX-Setup](../media/develop/ios-icon.png)](ios-sdk.md)
+[![IOS/OSX-Setup](../media/develop/ios-icon.png)](ios-sdk.md)
 [![Android-Setup](../media/develop/android-icon.png)](android-sdk.md)
-[![Windows Phone-Setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
-[![Windows Service-Setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+Einrichten von[![Windows-Dienst Setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
 [![Linux-Setup](../media/develop/linux-icon.png)](linux-setup.md)
 
 
-## <a name="how-tos"></a>Vorgehensweisen
+## <a name="how-tos"></a>Gewusst wie
 
 Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt der Implementierung Ihrer Anwendung. Dienstanwendungen werden mit dem RMS SDK 2.x erstellt. Benutzeranwendungen werden mit dem RMS SDK 4.x erstellt. Der Artikellink umfasst als Attribut den Anwendungstyp, d. h. Dienst oder Benutzer.
 
@@ -85,7 +86,7 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 
 ### <a name="security-and-authentication"></a>Sicherheit und Authentifizierung
 
-- [Konfigurieren Ihrer App-Dienstanwendung für die Azure Active Directory-Anmeldung](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Konfigurieren Ihrer APP Service-Anwendung für die Verwendung Azure Active Directory Anmelde namens](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [Verwenden der Azure Active Directory-Authentifizierung (ADAL)](how-to-use-adal-authentication.md)
 - [Konfigurieren von Azure RMS für die Authentifizierung (Dienst)](adal-auth.md)
 - [Festlegen des API-Sicherheitsmodus (Dienst)](setting-the-api-security-mode-api-mode.md)
@@ -125,7 +126,7 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 - [.MSG Dateiformat (Teil 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
 - [.MSG Dateiformat (Teil 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
-### <a name="api-reference"></a>API-Referenz
+### <a name="api-reference"></a>API-Verweis
 
 - [Windows-API-Referenz](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Windows SDK-Fehlercodes](https://msdn.microsoft.com/library/hh535248.aspx)
@@ -134,13 +135,12 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 - [Android-API-Referenz](https://msdn.microsoft.com/library/dn758245.aspx)
 - [Linux-API-Referenz](https://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
-### <a name="previous-versions"></a>Frühere Versionen
+### <a name="previous-versions"></a>Vorgängerversionen
 
 - Das [AD RMS-SDK](https://msdn.microsoft.com/library/cc530379.aspx) ist die erste Version des RMS-SDKs.
 - Das [AD RMS-Skripttool](https://msdn.microsoft.com/library/bb968797.aspx) ist ein Verwaltungstool für eine AD RMS-Installation.
 
-### <a name="see-also"></a>Weitere Informationen:
+### <a name="see-also"></a>Weitere Informationen
 
 - [Entwicklerterminologie](terms.md)
 - [Terminologie zu Azure Information Protection – ITPro](../terminology.md)
-

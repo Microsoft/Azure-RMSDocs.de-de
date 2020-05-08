@@ -13,13 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 5319ff8ca9424d1c1273df1bdf347abf65881209
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791299"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971862"
 ---
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
 
@@ -48,10 +48,10 @@ Nachdem der Dienst aktiviert wurde, benötigen Sie PowerShell-Komponenten für d
 - Stellen Sie sicher, dass RMS aktiviert ist: `enable-aipservice`
 - Rufen Sie Ihre Mandanten-ID ab, indem Sie Folgendes ausführen: `Get-AipServiceConfiguration`
 
->Notieren Sie den BPOSId-Wert (Mandanten-ID). Dieser ist in späteren Schritten erforderlich.
+>Notieren Sie den BPOSId-Wert (Mandanten-ID). Sie wird später benötigt.
 
-*Beispielausgabe*
-![Cmdlet-Ausgabe](../media/develop/output-of-Get-AadrmConfiguration.png)
+*Example output*Ausgabe der![
+Beispielausgabe](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Trennen Sie die Verbindung mit dem Dienst: `Disconnect-AipServiceService`
 
@@ -66,13 +66,13 @@ Führen Sie die folgenden Schritte aus, um einen Dienstprinzipal zu erstellen:
 - Geben Sie einen Namen für Ihre Dienstprinzipal an.
   > Notieren Sie den symmetrischen Schlüssel und die Anwendungsprinzipal-ID für die spätere Verwendung.
 
-*Beispielausgabe*
-![Cmdlet-Ausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
+*Example output*Ausgabe der![
+Beispielausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Fügen Sie Ihre Anwendungsprinzipal-ID, den symmetrischen Schlüssel und die Mandanten-ID zur Datei „App.config“ der Anwendung hinzu.
 
-*Beispieldatei für „App.config“* 
-![Cmdlet-Ausgabe](../media/develop/example-App.config-file.png)
+*Beispiel*
+![Ausgabe für die Cmdlet-Datei "App. config"](../media/develop/example-App.config-file.png)
 
 - *ClientID* und *RedirectUri* wurden Ihnen beim Registrieren Ihrer Anwendung in Azure zur Verfügung gestellt. Weitere Informationen zum Registrieren Ihrer Anwendung in Azure und zum Abrufen von *ClientID* und *RedirectUri* finden Sie unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md).
 
@@ -93,7 +93,7 @@ Im folgenden Diagramm sind der Architektur- und Prozessverlauf für die zu erste
 
 ## <a name="how-the-code-works"></a>Funktionsweise des Codes
 
-Im Beispiel zum Azure IP-Test beginnt die Lösung mit der Datei „Iprotect.cs“. Dies ist ein C#-Konsolenanwendungsprojekt, und wie bei jeder anderen AIP-fähigen Anwendung beginnen Sie mit beim Laden der Datei *„msipc.dll“* , wie in der `main()`-Methode veranschaulicht.
+Im Beispiel zum Azure IP-Test beginnt die Lösung mit der Datei „Iprotect.cs“. Dies ist ein C#-Konsolenanwendungsprojekt, und wie bei jeder anderen AIP-fähigen Anwendung beginnen Sie mit beim Laden der Datei *„msipc.dll“*, wie in der `main()`-Methode veranschaulicht.
 
     //Loads MSIPC.dll
     SafeNativeMethods.IpcInitialize();
@@ -132,7 +132,7 @@ Die Option zum Schützen mit Vorlage fährt mit dem Abrufen der Vorlagenliste vo
 
      public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
      {
-       // Gets the available templates for this tenant             
+       // Gets the available templates for this tenant
        Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
            false, true, null, null, symmetricKeyCredential);
 
@@ -161,7 +161,7 @@ Die Option zum Schützen mit Vorlage fährt mit dem Abrufen der Vorlagenliste vo
          {
            templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template             
+           // Encrypts the file using the selected template
            TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
            string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
@@ -176,7 +176,7 @@ Wenn Sie die Ad-hoc-Richtlinie auswählen, muss der Benutzer der Anwendung E-Mai
 
     if (issuerDisplayName.Trim() != "")
     {
-      // Gets the available issuers of rights policy templates.              
+      // Gets the available issuers of rights policy templates.
       // The available issuers is a list of RMS servers that this user has already contacted.
       try
       {
@@ -186,7 +186,7 @@ Wenn Sie die Ad-hoc-Richtlinie auswählen, muss der Benutzer der Anwendung E-Mai
                                                         false,
                                                         false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it             
+        // Creates the policy and associates the chosen user rights with it
         SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
                                                             templateIssuers.ElementAt(0));
         SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
@@ -197,7 +197,7 @@ Wenn Sie die Ad-hoc-Richtlinie auswählen, muss der Benutzer der Anwendung E-Mai
                                                                 issuerDisplayName,
                                                                 false));
 
-        //Encrypts the file using the ad hoc policy             
+        //Encrypts the file using the ad hoc policy
         string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
                                        filePath,
                                        handle,
@@ -230,4 +230,3 @@ Nachdem alles erstellt und ausgeführt wurde, sollte die Ausgabe der Anwendung w
    ![App-Ausgabe – Schritt 5](../media/develop/app-output-5.png)
 
 6. Abschließend geben Sie einige Richtlinienmetadaten ein: Richtlinienname, Beschreibung und Anzeigename des Ausstellers (Azure AD-Mandant) ![App-Ausgabe – Schritt 6](../media/develop/app-output-6.png)
-

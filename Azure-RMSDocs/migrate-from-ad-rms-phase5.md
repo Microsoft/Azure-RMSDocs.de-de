@@ -12,13 +12,13 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.custom: admin
-ms.openlocfilehash: 8efcf7554b7c701ca5dc4e1c90a72b1afd93c195
-ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
+ms.custom: admin, has-adal-ref
+ms.openlocfilehash: cf946837e928c976cb3c8bc18fb6063866d5087e
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
-ms.locfileid: "80670220"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971726"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -29,7 +29,7 @@ Verwenden Sie die folgenden Informationen für Phase 5 der Migration von AD RMS 
 
 ## <a name="step-10-deprovision-ad-rms"></a>Schritt 10. Aufheben der Bereitstellung von AD RMS
 
-Entfernen Sie den Dienstverbindungspunkt (Service Connection Point, SCP) aus Active Directory, um zu verhindern, dass Computer Ihre lokale Rights Management-Infrastruktur ermitteln. Dies ist für die vorhandenen Clients, die Sie migriert haben, optional, und zwar aufgrund der Umleitung, die Sie in der Registrierung konfiguriert haben (z. B. durch Ausführen des Migrationsskripts). Allerdings hindert das Entfernen des Dienstverbindungspunkts neue Clients und möglicherweise auf RMS bezogene Dienste und Tools am Auffinden des Dienstverbindungspunkts, wenn die Migration abgeschlossen ist. Hier sollten nur alle Computerverbindungen mit Azure Rights Management hergestellt werden. 
+Entfernen Sie den Dienstverbindungspunkt (Service Connection Point, SCP) aus Active Directory, um zu verhindern, dass Computer Ihre lokale Rights Management-Infrastruktur ermitteln. Dies ist für die vorhandenen Clients, die Sie migriert haben, optional, und zwar aufgrund der Umleitung, die Sie in der Registrierung konfiguriert haben (z. B. durch Ausführen des Migrationsskripts). Allerdings hindert das Entfernen des Dienstverbindungspunkts neue Clients und möglicherweise auf RMS bezogene Dienste und Tools am Auffinden des Dienstverbindungspunkts, wenn die Migration abgeschlossen ist. Hier sollten nur alle Computerverbindungen mit Azure Rights Management hergestellt werden.
 
 Stellen Sie zum Entfernen des Dienstverbindungspunkts sicher, dass Sie als Unternehmensadministrator einer Domäne angemeldet sind, und gehen Sie dann folgendermaßen vor:
 
@@ -41,11 +41,11 @@ Stellen Sie zum Entfernen des Dienstverbindungspunkts sicher, dass Sie als Unter
 
 4. Wählen Sie **Aktuellen SCP entfernen** aus, und klicken Sie dann auf **OK**.
 
-Überwachen Sie jetzt Ihre AD RMS-Server auf Aktivität. Beispielsweise durch Überprüfen der [Anforderungen im Systemintegritätsbericht](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx) und der [ServiceRequest-Tabelle](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) oder durch [Überwachung des Benutzerzugriffs auf geschützte Inhalte](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). 
+Überwachen Sie jetzt Ihre AD RMS-Server auf Aktivität. Beispielsweise durch Überprüfen der [Anforderungen im Systemintegritätsbericht](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx) und der [ServiceRequest-Tabelle](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) oder durch [Überwachung des Benutzerzugriffs auf geschützte Inhalte](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
 
 Wenn Sie bestätigt haben, dass RMS-Clients nicht mehr mit diesen Servern kommunizieren und Clients erfolgreich Azure Information Protection verwenden, können Sie die AD RMS-Serverrolle von diesen Servern entfernen. Wenn Sie dedizierte Server verwenden, bevorzugen Sie möglicherweise den Vorsichts Schritt zum ersten Herunterfahren der Server für einen bestimmten Zeitraum. So haben Sie Zeit, sicherzustellen, dass es keine gemeldeten Probleme gibt, die den Neustart dieser Server erfordern, um die Dienstkontinuität zu gewährleisten, während Sie untersuchen, weshalb Clients nicht Azure Information Protection verwenden.
 
-Nachdem Sie die Bereitstellung Ihrer AD RMS-Server aufgehoben haben, können Sie sich Ihre Vorlagen im Azure-Portal anschauen. Konvertieren Sie sie z.B. in Bezeichnungen, konsolidieren Sie sie, sodass Benutzer weniger Wahlmöglichkeiten haben, oder konfigurieren Sie sie neu. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](./configure-policy-templates.md).
+Nachdem Sie die Bereitstellung Ihrer AD RMS-Server aufgehoben haben, können Sie sich Ihre Vorlagen im Azure-Portal anschauen. Konvertieren Sie sie z.B. in Bezeichnungen, konsolidieren Sie sie, sodass Benutzer weniger Wahlmöglichkeiten haben, oder konfigurieren Sie sie neu. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](./configure-policy-templates.md).
 
 >[!IMPORTANT]
 > Am Ende dieser Migration können Ihre AD RMS-Cluster nicht mit Azure Information Protection und der HYOK-Option (Hold Your Own Key) verwendet werden. Wenn Sie sich dazu entscheiden, HYOK für die Azure Information Protection-Bezeichnung aufgrund der nun festliegenden Umleitungen zu verwenden, muss der AD RMS-Cluster, den Sie verwenden, über unterschiedliche Lizenzierungs-URLs für die in den Clustern verfügen, die Sie migriert haben.
@@ -56,19 +56,19 @@ Wenn migrierte Clients Office 2010 ausführen, kann es bei Benutzern zu Verzöge
 
 Umleitung über lokale Hostdatei:
 
-- Fügen Sie die folgende Zeile in der Datei local Hosts hinzu, und ersetzen Sie `<AD RMS URL FQDN>` durch den Wert für Ihren AD RMS Cluster, ohne Präfixe oder Webseiten:
-    
+- Fügen Sie die folgende Zeile in die Datei "local Hosts `<AD RMS URL FQDN>` " ein, und ersetzen Sie dabei durch den Wert für Ihren AD RMS-Cluster ohne Präfixe oder Webseiten:
+
         127.0.0.1 <AD RMS URL FQDN>
 
 Umleitung über DNS:
-    
+
 - Erstellen Sie einen neuen Host (a)-Datensatz für den AD RMS URL-voll qualifizierten Namen, der die IP-Adresse 127.0.0.1 aufweist.
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11 Durchführen der Clientmigrationstasks
 
 Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574.aspx) erstellt haben.
 
-Wenn diese DNS-Änderungen weitergegeben wurden, ermitteln und verwenden diese Clients automatisch den Azure Rights Management-Dienst. Mac-Computer, die Office Mac ausführen, speichern jedoch die Informationen von AD RMS zwischen. Für diese Computer kann der Vorgang bis zu 30 Tage dauern. 
+Wenn diese DNS-Änderungen weitergegeben wurden, ermitteln und verwenden diese Clients automatisch den Azure Rights Management-Dienst. Mac-Computer, die Office Mac ausführen, speichern jedoch die Informationen von AD RMS zwischen. Für diese Computer kann der Vorgang bis zu 30 Tage dauern.
 
 Suchen Sie im Schlüsselbund nach „adal“, und löschen Sie alle ADAL-Einträge, um Mac-Computer zum sofortigen Ausführen des Ermittlungsprozesses zu zwingen. Führen Sie dann folgende Befehle auf diesen Computern aus:
 
@@ -90,7 +90,7 @@ killall cfprefsd
 
 ````
 
-Wenn alle vorhandenen Windows-Computer zu Azure Information Protection migriert wurden, gibt es keinen Grund, weiterhin Onboarding-Steuerelemente zu verwenden und die **AIPMigrated**-Gruppe beizubehalten, die Sie für den Migrationsprozess erstellt haben. 
+Wenn alle vorhandenen Windows-Computer zu Azure Information Protection migriert wurden, gibt es keinen Grund, weiterhin Onboarding-Steuerelemente zu verwenden und die **AIPMigrated**-Gruppe beizubehalten, die Sie für den Migrationsprozess erstellt haben.
 
 Entfernen Sie zuerst die Onboarding-Steuerelemente, dann können Sie die Gruppe **AIPMigrated** und alle Methoden für die Softwarebereitstellung entfernen, die Sie zur Bereitstellung der Migrationsskripts erstellt haben.
 
@@ -103,7 +103,7 @@ So entfernen Sie die Onboarding-Steuerelemente:
 2. Führen Sie den folgenden Befehl aus, und geben Sie **Y** zur Bestätigung ein:
 
         Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
-    
+
     Beachten Sie, dass dieser Befehl alle Lizenzerzwingungen für den Schutzdienst Azure Rights Management entfernt, sodass alle Computer Dokumente und E-Mails schützen können.
 
 3. Bestätigen Sie, dass Onboarding-Steuerelemente nicht länger festgelegt sind:
@@ -112,13 +112,13 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
-Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden den Task an folgendem Speicherort: **Microsoft** > **Windows** > **Active Directory Rights Management Services-Client**
+Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diese Aufgabe unter folgendem Speicherort: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
 
-## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12. Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
+## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12 Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 
 Dieser Schritt ist nach Abschluss der Migration erforderlich, wenn Ihre AD RMS Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat, da dieser Modus einen 1024-Bit-Schlüssel und SHA-1 verwendet. Diese Konfiguration wird als unzureichender Schutzgrad angesehen. Microsoft unterstützt nicht die Verwendung niedrigerer Schlüssellängen wie z. b. 1024-Bit-RSA-Schlüssel und die damit verbundene Verwendung von Protokollen, die unzureichende Schutz Ebenen bieten, z. b. SHA-1.
 
-Die erneute Schlüssel Erstellung führt zu Schutz, der den RMS-Kryptografiemodus 2 verwendet. Dies führt zu einem 2048-Bit-Schlüssel und SHA-256. 
+Die erneute Schlüssel Erstellung führt zu Schutz, der den RMS-Kryptografiemodus 2 verwendet. Dies führt zu einem 2048-Bit-Schlüssel und SHA-256.
 
 Auch wenn Ihre AD RMS-Bereitstellung den Kryptografiemodus 2 verwendet hat, wird dieser Schritt empfohlen, da ein neuer Schlüssel dabei hilft, Ihren Mandanten vor potenziellen Sicherheitsverletzungen Ihres AD RMS-Schlüssels zu schützen.
 
@@ -129,10 +129,10 @@ Der Wechsel von einem Schlüssel zu einem anderen geschieht nicht sofort, sonder
 So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
 - **Wenn Ihr Mandanten Schlüssel von Microsoft verwaltet wird**: führen Sie das PowerShell-Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, und geben Sie den Schlüssel Bezeichner für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert angeben, der angegeben werden soll, indem Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
-    
+
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Wenn Ihr Mandanten Schlüssel von Ihnen verwaltet wird (Byok)** : Wiederholen Sie in Azure Key Vault den Schlüssel Erstellungs Vorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet " [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) " erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
+- **Wenn Ihr Mandanten Schlüssel von Ihnen verwaltet wird (Byok)**: Wiederholen Sie in Azure Key Vault den Schlüssel Erstellungs Vorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet " [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) " erneut aus, um den URI für diesen neuen Schlüssel anzugeben.
 
 Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](./operations-tenant-key.md).
 
@@ -140,4 +140,3 @@ Weitere Informationen zum Verwalten des Azure Information Protection-Mandantensc
 ## <a name="next-steps"></a>Nächste Schritte
 
 Nachdem Sie die Migration nun abgeschlossen haben, können Sie sich die [Roadmap für die Bereitstellung](deployment-roadmap.md) ansehen, um die ggf. erforderlichen weiteren Bereitstellungsaufgaben zu ermitteln.
-

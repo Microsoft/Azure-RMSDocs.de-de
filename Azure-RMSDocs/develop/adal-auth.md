@@ -13,13 +13,13 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: ef2e1755c6a86984227b09c95020a26a976a2c52
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791663"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971964"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Konfigurieren Ihrer App für die ADAL-Authentifizierung
 
@@ -27,13 +27,13 @@ Dieses Thema beschreibt die Schritte zum Konfigurieren Ihrer App für die ADAL-b
 
 ## <a name="azure-authentication-setup"></a>Einrichten der Azure-Authentifizierung
 
-Folgendes wird benötigt:
+Sie benötigen Folgendes:
 
 - Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie im Artikel zum [Registrieren für RMS for Individuals](../rms-for-individuals-user-sign-up.md).
 - Ein Abonnement für Microsoft Azure Rights Management (ein kostenloses [RMS für Einzelpersonen](https://technet.microsoft.com/library/dn592127.aspx)-Konto ist ausreichend).
 
 > [!NOTE]
-> Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Ihr IT-Administrator sollte das Abonnement zudem mit einem *Geschäfts-, Schul- oder Unikonto* und nicht mit einem *Microsoft-Konto* (z.B. Hotmail) erstellen.
+> Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Außerdem sollte Ihr IT-Administrator ein Geschäfts-, *Schul-oder unikonto*abonnieren, anstatt eine *Microsoft-Konto* (z.b. Hotmail).
 
 Nach der Registrierung für Microsoft Azure:
 
@@ -43,7 +43,7 @@ Nach der Registrierung für Microsoft Azure:
 
 - Navigieren Sie nach unten zur **Active Directory**-Anwendung auf der linken Seite des Portals.
 
-![Auswählen von „Active Directory“](../media/AzureADPick.png)
+![Active Directory auswählen](../media/AzureADPick.png)
 
 - Wenn Sie noch kein Verzeichnis erstellt haben, wählen Sie die Schaltfläche **Neu** aus, die sich in der unteren linken Ecke des Portals befindet.
 
@@ -96,11 +96,10 @@ Nach der Registrierung für Microsoft Azure:
 
 ![Klicken des Häkchens](../media/choosecheck01.png)
 
-- Nun können Sie Ihrer Anwendung für Azure RMS eine Abhängigkeit hinzufügen. Wählen Sie zum Hinzufügen der Abhängigkeit den neuen Eintrag **Microsoft Rights Management Services** unter **Berechtigungen für andere Anwendungen** aus, und aktivieren Sie das Kontrollkästchen **Create and access protected content for users** (Geschützten Inhalt für Benutzer erstellen und darauf zugreifen) in der Dropdownliste bei **Delegierte Berechtigungen:** .
+- Nun können Sie Ihrer Anwendung für Azure RMS eine Abhängigkeit hinzufügen. Wählen Sie zum Hinzufügen der Abhängigkeit den neuen Eintrag **Microsoft Rights Management Services** unter **Berechtigungen für andere Anwendungen** aus, und aktivieren Sie das Kontrollkästchen **Create and access protected content for users** (Geschützten Inhalt für Benutzer erstellen und darauf zugreifen) in der Dropdownliste bei **Delegierte Berechtigungen:**.
 
 ![Einrichten von Berechtigungen](../media/AddDependency.png)
 
-- Speichern Sie Ihre Anwendung, damit die Änderungen beibehalten werden, indem Sie das Symbol **Speichern** im unteren, mittleren Bereich des Portals auswählen.
+- Speichern Sie Ihre Anwendung, um die Änderungen beizubehalten, indem Sie das Symbol **Speichern** im unteren, mittleren Bereich des Portals auswählen.
 
 ![Auswählen von SPEICHERN](../media/SaveApplication.png)
-

@@ -13,17 +13,17 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: ddbccdb25a654fe7ac5d8618303ac1af7221cd56
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 4577131a2bd6fc248a69594645543c455c62d5bf
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68794091"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971981"
 ---
 # <a name="how-to-use-adal-authentication"></a>Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung
 
-Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory-Authentifizierungsbibliothek (ADAL).
+Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory Authentication Library (ADAL).
 
 Durch das Aktualisieren der Anwendung zur Verwendung der ADAL-Authentifizierung anstatt des Microsoft Online-Anmelde-Assistenten haben Sie und Ihre Kunden folgende Möglichkeiten:
 
@@ -112,8 +112,8 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-- [Data Types (Datentypen)](https://msdn.microsoft.com/library/hh535288.aspx)
-- [Environment properties (Umgebungseigenschaften)](https://msdn.microsoft.com/library/hh535247.aspx)
+- [Datentypen](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Umgebungseigenschaften](https://msdn.microsoft.com/library/hh535247.aspx)
 - [IpcCreateOAuth2Token](https://msdn.microsoft.com/library/mt661866.aspx)
 - [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
 - [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)

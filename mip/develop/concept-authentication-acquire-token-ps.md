@@ -6,22 +6,23 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: ddc962f97e6e7d6b0e7ff091821fa83063e9f068
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.custom: has-adal-ref
+ms.openlocfilehash: c66199f7ae22f6b4dca4406e847f41b56317beae
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555856"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971658"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Abrufen eines Zugriffstoken (PowerShell)
 
 Im gezeigten Beispiel wird veranschaulicht, wie ein externes PowerShell-Skript aufgerufen wird, um ein OAuth2-Token abzurufen. Ein gültiges OAuth2-Zugriffs Token ist für die Implementierung des Authentifizierungs Delegaten erforderlich.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Complete [(MIP) SDK-Setup und-Konfiguration](setup-configure-mip.md). Neben anderen Aufgaben registrieren Sie Ihre Client Anwendung in Ihrem Azure Active Directory-Mandanten (Azure AD). Azure AD geben eine Anwendungs-ID (auch als Client-ID bezeichnet) an, die in der tokenerwerbs-Logik verwendet wird.
 
-Dieser Code ist nicht für die Verwendung in der Produktion bestimmt. Sie kann nur für die Entwicklung und das Verständnis von Authentifizierungs Konzepten verwendet werden. 
+Dieser Code ist nicht für die Verwendung in der Produktion bestimmt. Sie kann nur für die Entwicklung und das Verständnis von Authentifizierungs Konzepten verwendet werden.
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
@@ -61,9 +62,9 @@ namespace sample {
 
 ## <a name="mint-a-token"></a>Erstellen eines Token
 
-Erstellen Sie zuletzt ein Token, das der mToken-Variablen hinzugefügt werden soll. Im nachfolgenden Beispiel wird das PowerShell-Skript veranschaulicht, das verwendet werden kann, um unter Windows schnell ein OAuth2-Token über die Active Directory-Authentifizierungsbibliothek und PowerShell abzurufen. Dieses Token darf nur für den Office 365 Security & Compliance Center-Endpunkt verwendet werden. Aus diesem Grund schlagen die Aktionen zum Schutz fehl, wenn die Ressourcen-URL nicht aktualisiert wird. 
+Erstellen Sie zuletzt ein Token, das der mToken-Variablen hinzugefügt werden soll. Im nachfolgenden Beispiel wird das PowerShell-Skript veranschaulicht, das verwendet werden kann, um unter Windows schnell ein OAuth2-Token über die Active Directory-Authentifizierungsbibliothek und PowerShell abzurufen. Dieses Token darf nur für den Office 365 Security & Compliance Center-Endpunkt verwendet werden. Aus diesem Grund schlagen die Aktionen zum Schutz fehl, wenn die Ressourcen-URL nicht aktualisiert wird.
 
-### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>Installieren von [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) über den PS-Katalog
+### <a name="install-adalps-from-ps-gallery"></a>Installieren von [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) über den PS-Katalog
 
 Sie können diesen Schritt überspringen, wenn Sie ihn zuvor in der [(MIP) SDK-Einrichtung und-Konfiguration](setup-configure-mip.md)abgeschlossen haben.
 
@@ -77,7 +78,7 @@ Install-Module -Name ADAL.PS
 #Install the ADAL.PS package if it's not installed.
 if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 
-$authority = "https://login.windows.net/common/oauth2/authorize" 
+$authority = "https://login.windows.net/common/oauth2/authorize"
 #this is the security and compliance center endpoint
 $resourceUrl = "https://syncservice.o365syncservice.com/"
 #replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
@@ -89,5 +90,3 @@ $response.AccessToken | clip
 ```
 
 Kopieren Sie das Token aus der Zwischenablage in auth.cpp als Wert für `string mToken`. Sie ersetzen also „your token here“ im obenstehenden Code. Es ist unter Umständen erforderlich, das Skript erneut auszuführen. Dies ist davon abhängig, wie lange es dauert, die folgenden Schritte auszuführen.
-
-

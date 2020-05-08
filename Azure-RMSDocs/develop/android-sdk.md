@@ -13,13 +13,13 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: ef1306dbcbd4727f4e6c0207e328e7df3da8ed74
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068423"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971896"
 ---
 # <a name="android-setup"></a>Android-Setup
 
@@ -34,7 +34,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -43,9 +43,9 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 -   Java ab Java 1.6.
 -   [Android Developer Tools (ADT)-Plug-In](https://developer.android.com/studio/install). Hinweis – Sie werden unter Umständen aufgefordert, Eclipse zum Abschließen der Installation neu zu starten.
 
-     
 
--   Das MS RMS SDK 4.2-Paket für Android. Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
+
+-   Das MS RMS SDK 4.2-Paket für Android. Weitere Informationen finden Sie unter " [Get Started](get-started.md)".
 
     Dieses SDK kann zur Anwendungsentwicklung für Android 4.0.3 (API-Ebene 15) und höher eingesetzt werden.
 
@@ -53,9 +53,9 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     Weitere Informationen finden Sie unter [ADAL für Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android).
 
-    **Hinweis**  Wenn Ihre Anwendung die ADAL-Bibliothek nicht als OAuth 2.0-Authentifizierungsbibliothek verwendet, sollten Sie folgende Hinweise zu Android lesen: [Some SecureRandom Thoughts (Überlegungen zu SecureRandom)](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Hinweis**  wenn die Anwendung die Adal-Bibliothek nicht als OAuth 2,0-Authentifizierungs Bibliothek verwendet, sollten Sie diese Anleitung für Android, [einige SecureRandom-Gedanken](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html), lesen.
 
-     
+
 
 Unter [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Versionshinweise und häufig gestellte Fragen (FAQ).
 
@@ -65,15 +65,15 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 ## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
-**Hinweis**  MS RMS SDK 4,2 Preview-Version: in dieser Vorschauversion wurden die Screenshots nicht aktualisiert, um die Änderung des Namens der Paare von com/Microsoft/Protection zu com/Microsoft/righungmanagment anzuzeigen. Der Text wurde allerdings aktualisiert.
+**Hinweis**  MS RMS SDK 4,2 Preview-Version: in dieser Vorschauversion wurden die Bildschirmfotos nicht aktualisiert, um die Änderung des Namens der Paare von com/Microsoft/Protection zu com/Microsoft/righungmanagment anzuzeigen. Der Text wurde allerdings aktualisiert.
 
- 
+
 -   Öffnen Sie die Eclipse-Entwicklungsumgebung.
 -   Um ein neues Android-Anwendungsprojekt zu erstellen, klicken Sie im Menü **File** auf **New**, klicken Sie auf **Project**, und wählen Sie dann **Android Application Project** aus.
 
     ![Erstellen einer neuen Android-Anwendung](../media/Android-setup-01c.png)
 
--   Geben Sie den Namen der Anwendung ein. Projektname und Paketname werden auf der Grundlage des Anwendungsnamens eingetragen.
+-   Geben Sie den Anwendungsnamen ein. Projektname und Paketname werden auf der Grundlage des Anwendungsnamens eingetragen.
 -   Klicken Sie auf **Weiter**, und wählen Sie aus, wo der Arbeitsbereich erstellt werden soll.
 
     ![Eingeben des Anwendungsnamens](../media/Android-setup-02a.jpg)
@@ -86,7 +86,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
     ![Erstellen der Aktivität](../media/Android-setup-04.png)
 
--   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Bei Verwendung des Layoutnamens *activity*main *können Sie den Standardnamen \_MainActivity* übernehmen.
+-   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Sie können *mainactivity* als Standardnamen mit dem Layoutnamen *Activity\_Main*belassen.
 
     ![Angeben eines Namens für die Aktivität](../media/Android-setup-05a.jpg)
 
@@ -98,14 +98,14 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 **Verweisen auf das SDK**
 
-- Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
+- Navigieren Sie zu dem Ordner, in dem Sie das *\_ADRMS\_Android SDK. zip*extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
 - Um auf das SDK zu verweisen, müssen Sie das SDK in den Arbeitsbereich importieren.
 
   Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **Datei** auf **Importieren**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
 
   ![Importieren in den Arbeitsbereich](../media/Android-setup-07.png)
 
-- Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben, und wählen Sie ihn aus. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
+- Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in dem Sie das *ADRMS\_Android\_SDK. zip*extrahiert haben. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
 
   ![Navigieren zum Auswählen des Ordners](../media/Android-setup-08c.jpg)
 
@@ -121,11 +121,11 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 - Klicken Sie auf **OK**.
 
-  Da das MS RMS SDK 4.2 eine Verbindung mit AAD RM herstellt, müssen der Anwendung die Berechtigungen **INTERNET** und **ACCESS\_NETWORK\_STATE** gewährt werden. Öffnen Sie dazu die Datei *AndroidManifest.xml* im Stammverzeichnis des Projekts.
+  Da MS RMS SDK 4,2 eine Verbindung mit Aad RM herstellt, muss die Anwendung über das **Internet** verfügen und auf den **\_Netzwerk\_Status zugreifen**. Öffnen Sie dazu die Datei *AndroidManifest.xml* im Stammverzeichnis des Projekts.
 
   Um die Berechtigungen hinzuzufügen, klicken Sie auf **Add** und wählen dann **Uses Permissions**.
 
-  ![Berechtigungen hinzufügen](../media/Android-setup-11d.jpg)
+  ![Hinzufügen von Berechtigungen](../media/Android-setup-11d.jpg)
 
 - Sie können diesen Schritt überprüfen, indem Sie das Manifest in der Text-Editor-Ansicht anzeigen. Vergewissern Sie sich, dass die folgenden Zeilen angezeigt werden:
 
@@ -138,11 +138,11 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
   <uses-permission/>
   ```
 
-**Hinweis**  Das SDK verwendet *android.support.v4*
+**Beachten Sie**  , dass das SDK *Android. Support. v4* verwendet.
 
 -   Sie können jetzt Ihre eigenen neuen Android-Apps erstellen.
 
-### <a name="see-also"></a>Weitere Informationen:
+### <a name="see-also"></a>Weitere Informationen
 
 [Erste Schritte](get-started.md)
 
@@ -151,5 +151,3 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
 [Android-API-Referenz](https://msdn.microsoft.com/library/dn758245.aspx)
-
-

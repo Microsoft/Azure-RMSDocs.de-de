@@ -13,19 +13,19 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 8744ea8dfd7213030c741e6e760c506e0d795db4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 987b9bb711f96d6622fb1972f13d50fa8cbbfa3d
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792263"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972028"
 ---
 # <a name="testing-your-application"></a>Testen der Anwendung
 
 Hier erfahren Sie, wie Sie das Testen einer Anwendung vorbereiten.
 
-## <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a>Instructions
 
 Sie können mit Azure RMS oder mit einem RMS-Server Tests durchführen, der unter Windows Server läuft.  Testen Sie zuerst mit Azure RMS und dann mit dem RMS-Server (falls für Ihre Bereitstellung erforderlich).
 
@@ -46,7 +46,6 @@ Diese Anleitung geht nicht auf Details ein. Informationen zum Konfigurieren des 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 * [Exemplarische Vorgehensweise: Installieren und Konfigurieren eines RMS-Servers](how-to-install-and-configure-an-rms-server.md)
-* [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md)
+* [Vorgehensweise: Verwenden der Adal-Authentifizierung](how-to-use-adal-authentication.md)
 * [Installieren des SDK](install-the-rms-sdk.md)
 * [Hinweise zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
-

@@ -13,13 +13,13 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: be43f28a737b45926e247caf2bce932484641052
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068383"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971913"
 ---
 # <a name="android-code-examples"></a>Codebeispiele für Android
 
@@ -91,7 +91,7 @@ Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für An
                     catch (IOException e)
                     {
                       …
-                    }  
+                    }
               }
             };
             try
@@ -110,7 +110,7 @@ Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für An
 
 - **Schritt 2:** Richten Sie die Authentifizierung mithilfe der Active Directory Authentication Library (ADAL) ein.
 
-    **Quelle**: *MsipcAuthenticationCallback.java*.
+    **Quelle**: *msipcauthenticationcallback. Java*.
 
     **Beschreibung:** In diesem Schritt wird die ADAL verwendet, um eine [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx)-Schnittstelle mit den Beispielparametern für die Authentifizierung zu implementieren. Weitere Informationen finden Sie unter [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
@@ -189,7 +189,7 @@ Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für An
                      }
    ```
 
-- **Schritt 3**: Überprüfen mit der Methode **UserPolicy.accessCheck**, ob dieser Benutzer für diesen Inhalt über die Berechtigung [Bearbeiten](https://msdn.microsoft.com/library/dn790885.aspx) verfügt.
+- **Schritt 3**: Überprüfen mit der Methode [UserPolicy.accessCheck](https://msdn.microsoft.com/library/dn790885.aspx), ob dieser Benutzer für diesen Inhalt über die Berechtigung **Bearbeiten** verfügt.
 
     **Quelle**: *TextEditorFragment.java*
 
@@ -250,7 +250,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
               …
       }
     ```
-    
+
 
 - **Schritt 2**: Erstellen einer [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) mithilfe der ersten Vorlage in der Liste.
 
@@ -295,7 +295,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
               …
       }
     ```
-    
+
 
 -  **Schritt 3**: Erstellen eines [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx)-Objekts und Schreiben von Inhalt in dieses Objekt.
 
@@ -491,7 +491,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
       ...
     }
     ```
-    
+
 
 - **Schritt 3**: Lesen von Inhalt aus dem [CustomProtectedInputStream](https://msdn.microsoft.com/library/dn758271.aspx)-Objekt in die *mDecryptedContent*-Instanz und anschließendes Schließen.
 
@@ -504,7 +504,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
       mUserPolicy = customProtectedInputStream.getUserPolicy();
       ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
-      int nRead;                      
+      int nRead;
       byte[] dataChunk = new byte[16384];
 
       try
@@ -527,7 +527,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
       }
     }
     ```
-    
+
 
 ### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mithilfe einer benutzerdefinierten Richtlinie
 
@@ -535,7 +535,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
 
     **Quelle**: *MsipcTaskFragment.java*
 
-    **Beschreibung:** In der Praxis würden die Objekte [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) und [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) mithilfe von Benutzereingaben über die Geräteschnittstelle erstellt werden.
+    **Beschreibung**: in der Praxis würden die folgenden Objekte mithilfe von Benutzereingaben von der Geräteschnittstelle erstellt werden. [Userrights](https://msdn.microsoft.com/library/dn790911.aspx) und [policydescriptor](https://msdn.microsoft.com/library/dn790843.aspx).
 
     ``` java
       // create userRights list

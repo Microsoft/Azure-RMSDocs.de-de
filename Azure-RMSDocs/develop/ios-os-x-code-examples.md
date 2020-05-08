@@ -13,13 +13,13 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.custom: dev
-ms.openlocfilehash: 34e7a531d117daaef54480c027effedb56c97137
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.custom: dev, has-adal-ref
+ms.openlocfilehash: 7ed06af67d004845de7a5a55090da9fc3b40388c
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068404"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971998"
 ---
 # <a name="iosos-x-code-examples"></a>Codebeispiele für iOS/OS X
 
