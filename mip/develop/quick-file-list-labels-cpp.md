@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 330ceb37e0c8324a083bf5c5d7240035b9b86a0a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.custom: has-adal-ref
+ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556043"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971607"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)
 
@@ -26,11 +27,11 @@ Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfül
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Hinzufügen von Logik zur Liste der Vertraulichkeitsbezeichnungen
 
-Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organisation Logik mithilfe des FileEnginge-Objekts hinzu. 
+Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organisation Logik mithilfe des FileEnginge-Objekts hinzu.
 
 1. Öffnen Sie die Visual Studio-Projektmappe, die Sie im vorherigen Artikel „Schnellstart: Initialisierung der Clientanwendung (C++)“ erstellt haben.
 
-2. Öffnen Sie mithilfe des **Projektmappen-Explorers** die CPP-Datei im Projekt, die die Implementierung der `main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben. 
+2. Öffnen Sie mithilfe des **Projektmappen-Explorers** die CPP-Datei im Projekt, die die Implementierung der `main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
 3. Fügen Sie Folgendes der `using`-Anweisung nach `using mip::FileEngine;` oben in der Datei hinzu:
 
@@ -54,23 +55,23 @@ Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organi
       }
    }
    system("pause");
-   ``` 
+   ```
 
 ## <a name="create-a-powershell-script-to-generate-access-tokens"></a>Erstellen eines PowerShell-Skripts zum Generieren von Zugriffstoken
 
-Verwenden Sie das folgende PowerShell-Skript, um die Zugriffstoken zu generieren, die vom SDK in Ihrer `AuthDelegateImpl::AcquireOAuth2Token`-Implementierung gefordert werden. Das Skript nutzt das Cmdlet `Get-ADALToken` aus dem ADAL.PS-Modul, das Sie zuvor bei der „Einrichtung und Konfiguration des MIP SDKs“ installiert haben. 
+Verwenden Sie das folgende PowerShell-Skript, um die Zugriffstoken zu generieren, die vom SDK in Ihrer `AuthDelegateImpl::AcquireOAuth2Token`-Implementierung gefordert werden. Das Skript nutzt das Cmdlet `Get-ADALToken` aus dem ADAL.PS-Modul, das Sie zuvor bei der „Einrichtung und Konfiguration des MIP SDKs“ installiert haben.
 
 1. Erstellen Sie eine PowerShell-Skriptdatei (mit der Erweiterung „.ps1“), und fügen Sie das folgende Skript in die Datei ein:
 
    - Die Variablen `$authority` und `$resourceUrl` werden später im nachfolgenden Abschnitt aktualisiert.
-   - Aktualisieren Sie `$appId` und `$redirectUri`, sodass diese den Werten entsprechen, die in Ihrer Azure AD-Anwendungsregistrierung angegeben wurden. 
+   - Aktualisieren Sie `$appId` und `$redirectUri`, sodass diese den Werten entsprechen, die in Ihrer Azure AD-Anwendungsregistrierung angegeben wurden.
 
    ```powershell
-   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token()
    $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
    $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
-   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
+   $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
@@ -78,7 +79,7 @@ Verwenden Sie das folgende PowerShell-Skript, um die Zugriffstoken zu generieren
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
-Letztendlich erstellen und testen Sie die Clientanwendung. 
+Letztendlich erstellen und testen Sie die Clientanwendung.
 
 1. Verwenden Sie F6 (**Projektmappe erstellen**) zum Erstellen der Clientanwendung. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
@@ -122,7 +123,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-### <a name="problems-during-execution-of-powershell-script"></a>Probleme bei der Ausführung des PowerShell-Skripts 
+### <a name="problems-during-execution-of-powershell-script"></a>Probleme bei der Ausführung des PowerShell-Skripts
 
 | Zusammenfassung | Fehlermeldung | Lösung |
 |---------|---------------|----------|

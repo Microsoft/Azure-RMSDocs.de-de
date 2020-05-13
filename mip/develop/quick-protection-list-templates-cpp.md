@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
-ms.openlocfilehash: 11011510bbc3124ecd400632045837be306f157d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: c3de3c7de8a604221732dd0398e019721b51116b
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766455"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972134"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>Schnellstart: Auflisten von Schutzvorlagen (C++)
 
@@ -110,7 +111,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 4. Nachdem das Zugriffstoken in die Eingabeaufforderung aus Schritt 2 eingefügt wurden, sollten in der Konsolenausgabe die Schutzvorlagen für den authentifizierten Benutzer angezeigt werden, ähnlich wie im folgenden Beispiel:
 
-   ```console 
+   ```console
    *** Template List:
    Name: Confidential \ All Employees : a74f5027-f3e3-4c55-abcd-74c2ee41b607
    Name: Highly Confidential \ All Employees : bb7ed207-046a-4caf-9826-647cff56b990

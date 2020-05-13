@@ -6,12 +6,13 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 0a71ac710aec82c7a5de16c7f603ccdfe4803f79
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.custom: has-adal-ref
+ms.openlocfilehash: ec6439747b7a826a09851739a96ccdec3f5705f4
+ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766302"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82972117"
 ---
 # <a name="quickstart-list-templates-c"></a>Schnellstart: Auflisten von Vorlagen (C#)
 
@@ -22,7 +23,7 @@ Dieser Schnellstart zeigt, wie Sie die Schutz-API im MIP SDK verwenden, um die f
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 - Bearbeiten Sie zunächst den [Schnellstart Initialisierung der Clientanwendung – Schutz-API (C#)](quick-protection-app-initialization-csharp.md), in dem Sie eine Visual Studio-Startprojektmappe erstellen. Der vorliegende Schnellstart zum Auflisten von Schutzvorlagen basiert darauf, dass zuvor eine Startprojektmappe erstellt wurde.
-- Optional: Sehen Sie sich die Konzepte in [RMS-Vorlagen](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) an. 
+- Optional: Sehen Sie sich die Konzepte in [RMS-Vorlagen](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) an.
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>Hinzufügen von Logik zum Auflisten der Schutzvorlagen
 
@@ -35,15 +36,15 @@ Fügen Sie Logik zum Auflisten der für einen Benutzer verfügbaren Schutzvorlag
 3. Fügen Sie gegen Ende des `Main()`-Texts, oberhalb des Abschnitts zum Herunterfahren der Anwendung für die `Main()`-Funktion (an der Stelle, an der Sie im vorherigen Schnellstart aufgehört haben) den folgenden Code ein:
 
   ```csharp
-  // List protection templates using protectionEngine and display the list  
-  
+  // List protection templates using protectionEngine and display the list
+
   var templates=protectionEngine.GetTemplates();
 
   for(int i = 0; i < templates.Count; i++)
   {
       Console.WriteLine("{0}: {1}", i.ToString(), templates[i].Name + " : " + templates[i].Id);
   }
-  
+
   Console.WriteLine("Press a key to continue...");
   ```
 
@@ -55,7 +56,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, *kann* die Anwendung Sie jedes Mal zur Authentifizierung über ADAL auffordern, wenn das SDK Ihre `AcquireToken()`-Methode aufruft. Wenn bereits zwischengespeicherte Anmeldeinformationen vorhanden sind, werden Sie nicht zur Anmeldung aufgefordert. Die Liste der Bezeichnungen wird sofort angezeigt.
 
-     [![Anmeldung in Visual Studio zum Erhalten des Tokens](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox) 
+     [![Anmeldung in Visual Studio zum Erhalten des Tokens](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
    - Möglicherweise müssen Sie Ihre Zustimmung erteilen, um der Anwendung den Zugriff auf die MIP-APIs zu gewähren, während die Ausführung unter dem Anmeldekonto erfolgt. Dies geschieht, wenn der Azure AD-Anwendungsregistrierung nicht (wie in der Einrichtung und Konfiguration des MIP SDKs beschrieben) vorab zugestimmt wurde, oder wenn Sie sich mit einem Konto von einem anderen Mandanten anmelden (der sich von dem unterscheidet, bei dem Ihre Anwendung registriert ist). Klicken Sie einfach auf **Akzeptieren**, damit Ihre Einwilligung erfasst wird.
 
