@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/08/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 51691ed4ae5e6a8cebdc372f4be21e25bf12db27
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 56194d242f6b079fc04765c8ceeeac5cddbf557d
+ms.sourcegitcommit: 93376be8c80776e572f1233812ef39fbabbbd0b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972066"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550853"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -28,7 +28,7 @@ ms.locfileid: "82972066"
 
 Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen.
 
-Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified**-Bezeichnungs Client und der Klassifizierung von **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection Unified**-Bezeichnungs Client und der Klassifizierung von **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
 
 Weitere Informationen finden Sie unter [aktualisieren und Verwalten des Azure Information Protection Unified Bezeichnung-Clients](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -63,7 +63,6 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 ## <a name="version-27930"></a>Version 2.7.93.0
-Einheitlicher Bezeichnungs Client (allgemeine Verfügbarkeit) 
 
 Unified Bezeichnung Scanner (Public Preview) Version 2.7.93.0
 
@@ -134,7 +133,7 @@ Unterstützt durch 09/09/2020
     
     - Wenn Sie die Scanner für die Verwendung desselben Scanner-Profils konfigurieren, können mehrere Scanner dieselbe SQL Server Datenbank gemeinsam nutzen. Diese Konfiguration erleichtert die Verwaltung mehrerer Scanner und führt zu schnelleren Scanzeiten. Wenn Sie diese Konfiguration verwenden, warten Sie immer, bis die Installation eines Scanners abgeschlossen ist, bevor Sie einen weiteren Scanner mit dem gleichen Profil installieren.
     
-    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren, und die Scannerdatenbank wird **\<AIPScannerUL_ profile_name>** benannt. Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
+    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren, und die Scannerdatenbank wird **AIPScannerUL_ \< profile_name>** benannt. Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
     
     - Sie können in allen Dokumenten eine Standard Bezeichnung festlegen, auch wenn Dokumente bereits mit der Bezeichnung versehen sind. Legen Sie in den Überprüfungs Profil-oder Repository-Einstellungen die Option **Dateien** neu bezeichnen auf ein fest **, und aktivieren** Sie das Kontrollkästchen neue **Bezeichnung Standard Bezeichnung erzwingen** .
     
@@ -183,7 +182,7 @@ Unterstützt durch 09/09/2020
 
 **Weitere Änderungen**
 
-- Durch [Zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) werden nun die Ordner%LocalAppData%\microsoft\msip\mip\\*\<ProcessName\> . exe* anstelle des Ordners%LocalAppData%\microsoft\msip\mip\\*\<ProcessName\>* \mip gelöscht.
+- Durch [Zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) werden nun die Ordner%LocalAppData%\microsoft\msip\mip \\ * \< ProcessName \> . exe* anstelle des Ordners%LocalAppData%\microsoft\msip\mip \\ * \< ProcessName \> *\mip gelöscht.
 
 - " [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus) " enthält jetzt die Inhalts-ID für ein geschütztes Dokument.
 
