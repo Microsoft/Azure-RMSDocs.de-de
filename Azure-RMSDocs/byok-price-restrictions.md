@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d94783b491dd9ff0b099a68e009809cd7ec965fb
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: dd07fe942f9f715dea6d6dc17d5c5d00e2da0d65
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224562"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746342"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Byok-Details (Bring your own Key) für Azure Information Protection
 
@@ -59,7 +59,7 @@ Weitere Informationen zu Azure Key Vault finden Sie unter [Was ist Azure Key Vau
 
 ## <a name="byok-support-for-services-and-clients"></a>Byok-Unterstützung für Dienste und Clients
 
-Byok und die [Verwendungs Protokollierung](log-analyze-usage.md) arbeiten nahtlos mit jeder Anwendung zusammen, die in den Azure-Rights Management-Dienst integriert ist, der von Azure Information Protection zum Schutz von Daten verwendet wird. Dazu gehören Clouddienste wie SharePoint Online, lokale Server mit Exchange und SharePoint, für die der Azure Rights Management-Dienst unter Verwendung des RMS-Connectors eingesetzt wird, sowie Clientanwendungen wie Office 2019, Office 2016 und Office 2013. 
+Byok und die [Verwendungs Protokollierung](log-analyze-usage.md) arbeiten nahtlos mit jeder Anwendung zusammen, die in den Azure-Rights Management-Dienst integriert ist, der von Azure Information Protection zum Schutz von Daten verwendet wird. Dies schließt Clouddienste wie Microsoft SharePoint, lokale Server, die Exchange und SharePoint ausführen, die den Azure Rights Management Service mithilfe des RMS-Verbindungs Diensts verwenden, sowie Client Anwendungen wie Office 2019, Office 2016 und Office 2013 ein. 
 
 Sie erhalten Schlüssel Verwendungs Protokolle, jede Anwendung, die Anforderungen an den Azure Rights Management-Dienst sendet.
 

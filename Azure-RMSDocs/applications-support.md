@@ -12,18 +12,18 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9e14cd34dd31dda6942c028fa9a68778eaaaed3a
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: cc23496dc8ceedeb463205147a076d8a98d58c75
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224579"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746158"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie die folgenden Informationen, um zu verstehen, wie die am häufigsten verwendeten Endbenutzer Anwendungen und-Dienste den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und e-Mails Ihrer Organisation zu schützen. Diese Anwendungen sind unter anderem Word, Excel, PowerPoint und Outlook. Die Dienste sind unter anderem Exchange und SharePoint.
+Verwenden Sie die folgenden Informationen, um zu verstehen, wie die am häufigsten verwendeten Endbenutzer Anwendungen und-Dienste den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und e-Mails Ihrer Organisation zu schützen. Diese Anwendungen sind unter anderem Word, Excel, PowerPoint und Outlook. Die Dienste umfassen Exchange und Microsoft SharePoint.
 
 > [!NOTE]
 > Die Anwendungen und Versionen, die der Azure Rights Management-Dienst unterstützt, finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](./requirements-applications.md).
@@ -40,7 +40,7 @@ Suchdienste können auf unterschiedliche Weise in Rights Management integriert w
 
 - Exchange Online und Exchange Server verwenden die dienstseitige Indizierung, sodass die geschützten E-Mails eines Benutzers automatisch in ihren Suchergebnissen angezeigt werden. 
 
-- SharePoint Online und SharePoint-Server wenden Rights Management-Schutz auf Dateien nur beim Download an. Diese Implementierung bedeutet, dass die Indizierung und Suchergebnisse auf SharePoint von dieser Lösung zum Schutz von Dokumenten nicht betroffen sind. Wenn Sie jedoch ein Dokument haben, das Sie in SharePoint speichern möchten, und dieses Dokument nicht in den Suchergebnissen zurückgegeben werden sollte, schützen Sie es, bevor es in SharePoint hochgeladen wird.
+- SharePoint in Microsoft 365 und SharePoint Server wenden Rights Management Schutz auf Dateien nur beim Download an. Diese Implementierung bedeutet, dass die Indizierung und Suchergebnisse auf SharePoint von dieser Lösung zum Schutz von Dokumenten nicht betroffen sind. Wenn Sie jedoch ein Dokument haben, das Sie in SharePoint speichern möchten, und dieses Dokument nicht in den Suchergebnissen zurückgegeben werden sollte, schützen Sie es, bevor es in SharePoint hochgeladen wird.
 
 - Die Windows-Desktopsuche verwendet einen gemeinsam genutzten Index zwischen verschiedenen Benutzern des Geräts. Damit die Daten in den geschützten Dokumenten sicher bleiben, indiziert sie keine geschützten Dateien. Obwohl Ihre Suchergebnisse keine Dateien enthalten, die Sie geschützt haben, können Sie sicher sein, dass Ihre Dateien, die sensible Daten enthalten, nicht in den Suchergebnissen für andere Benutzer angezeigt werden, die sich möglicherweise an Ihrem PC anmelden oder eine Verbindung mit Ihrem PC herstellen. 
 
@@ -52,5 +52,5 @@ Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Anwendung
 
 -   [Dateiserver, die unter Windows Server ausgeführt werden und die Datei Klassifizierungs Infrastruktur (FCI) verwenden](file-server-support.md)
 
--   [Andere Anwendungen, die die RMS-APIs unterstützen](api-support.md)
+-   [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md)
 

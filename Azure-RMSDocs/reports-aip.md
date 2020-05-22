@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29c41a53bef195a1a80d728fdf40cfc262533373
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799162"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747166"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -27,7 +27,7 @@ ms.locfileid: "82799162"
 > [!NOTE]
 > Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.
 
-Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Berücksichtigen Sie zudem Folgendes:
+Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Außerdem:
 
 - Unternehmensweite Überwachung bezeichneter und geschützter Dokumente und E-Mails
 
@@ -176,7 +176,7 @@ Details:
     
     - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
     
-        - **Sicherheits Leser**
+        - **Sicherheitsleseberechtigter**
         - **Globaler Leser**
 
 2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
@@ -223,7 +223,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
     
 2. Navigieren Sie zu den Menü Optionen **Verwalten** , und wählen Sie **Analyse konfigurieren (Vorschau)** aus.
 
-3. Im Bereich **Azure Information Protection Log Analytics** wird eine Liste aller Log Analytics Arbeitsbereiche angezeigt, die sich im Besitz Ihres Mandanten befinden. Führen Sie eines der folgenden Verfahren aus:
+3. Im Bereich **Azure Information Protection Log Analytics** wird eine Liste aller Log Analytics Arbeitsbereiche angezeigt, die sich im Besitz Ihres Mandanten befinden. Führen Sie einen der folgenden Schritte aus:
     
     - So erstellen Sie einen neuen Log Analytics Arbeitsbereich: Wählen Sie **neuen Arbeitsbereich erstellen**aus, und geben Sie im **Bereich Log Analytics-Arbeitsbereich** die angeforderten Informationen an.
     
@@ -233,7 +233,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 
 4. Wenn Sie über Azure Information Protection Clients (klassisch) verfügen, aktivieren Sie das Kontrollkästchen **tiefere Analysen in Ihre sensiblen Daten aktivieren** , wenn Sie die eigentlichen Daten speichern möchten, die als sensible Informationen identifiziert werden. Weitere Informationen zu dieser Einstellung finden Sie im Abschnitt [Inhalts Übereinstimmungen für eine tiefere Analyse](#content-matches-for-deeper-analysis) auf dieser Seite.
 
-5. Klicken Sie auf **OK**.
+5. Wählen Sie **OK** aus.
 
 Sie sind jetzt bereit, die Berichte anzuzeigen.
 
@@ -309,8 +309,8 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 |Protectedbefore|Ob der Inhalt vor der Änderung geschützt wurde: Ja/Nein |
 |Schutz Eigentümer vor|Rights Management Besitzer vor der Änderung |
 |Userbegrün dung|Begründung beim Herabstufen oder Entfernen der Bezeichnung|
-|LastModifiedBy|Benutzer im UPN-Format, von dem die Datei zuletzt geändert wurde. Nur für Office und SharePoint Online verfügbar|
-|LastModifiedDate & gt|UTC im Format yyyy-mm-ddThh: mm: SS: verfügbar für Office & nur SharePoint Online |
+|LastModifiedBy|Benutzer im UPN-Format, von dem die Datei zuletzt geändert wurde. Nur für Office und SharePoint verfügbar|
+|LastModifiedDate & gt|UTC im Format yyyy-mm-ddThh: mm: SS: nur für Office und SharePoint verfügbar |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Beispiele für InformationProtectionEvents

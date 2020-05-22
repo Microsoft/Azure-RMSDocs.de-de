@@ -12,19 +12,19 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 2adce92f9507a31feb3c2a8acd5f9d62979f187a
-ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
+ms.openlocfilehash: 2f192ffc2572bbec4f9292155d482534dbcc94d5
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80138256"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746284"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 
 Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Dokumente und E-Mails einer Organisation bereit:
@@ -37,7 +37,7 @@ Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Do
 
 Alle diese Clients können in Office-Anwendungen integriert werden, aber der Unified-Bezeichnungs Client und der klassische Client müssen separat installiert werden und zusätzliche Features und Komponenten unterstützen. Diese Clients enthalten beispielsweise Unterstützung für den Datei-Explorer, sodass Sie Dateien außerhalb von Office klassifizieren und schützen können. Zu den zusätzlichen Komponenten gehören ein Viewer für geschützte PDF-Dokumente und geschützte Images sowie ein Scanner für lokale Datenspeicher.
 
-Der RMS-Client bietet nur Schutz. Dieser Client wird automatisch mit einigen Anwendungen installiert, z. b. Office-Anwendungen, den Azure Information Protection Clients und RMS-fähigen Anwendungen von Softwareanbietern. Er kann jedoch auch [eigenständig installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396) werden, um das [Synchronisieren von Dateien von IRM-geschützten Bibliotheken und OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668) zu unterstützen sowie für Entwickler, die den Rights Management-Schutz in branchenspezifische Anwendungen integrieren möchten.
+Der RMS-Client bietet nur Schutz. Dieser Client wird automatisch mit einigen Anwendungen installiert, z. b. Office-Anwendungen, den Azure Information Protection Clients und RMS-fähigen Anwendungen von Softwareanbietern. Sie kann jedoch auch [von sich selbst installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396)werden, um die [Synchronisierung von Dateien aus mit unm geschützten Bibliotheken und onedrive](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)zu unterstützen, sowie für Entwickler, die den Rights Management-Schutz in Branchen Anwendungen integrieren möchten.
 
 ## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Wählen Sie aus, welche Bezeichnung für Windows-Computer verwendet werden soll.
 
@@ -84,13 +84,13 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
 
 - Sie verfügen über lokale Datenspeicher mit Dokumenten, die auf sensible Informationen überprüft oder klassifiziert und geschützt werden müssen. Zur Verwendung in der Produktion stellen Sie den klassischen-Client auf Servern bereit, um den Azure Information Protection Scanner auszuführen.
 
-## <a name="compare-the-labeling-clients-for-windows-computers"></a>Vergleichen der Beschriftungs Clients für Windows-Computer
+## <a name="compare-the-labeling-clients-for-windows-computers"></a>Vergleichen der Bezeichnungsclients für Windows-Computer
 
 Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den drei Bezeichnungs enden Clients für Windows-Computer unterstützt werden.
 
 In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
 
-|Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
+|Funktion|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
 |Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
@@ -101,8 +101,8 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | **Ja** |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
-|Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
-|Überprüfung für lokale Datenspeicher:| **Ja** | **Ja <br />** | Nein |
+|Anpassungen wie z.B. folgende:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
+|Überprüfung für lokale Datenspeicher:| **Ja** | **Zwar<br />** | Nein |
 |Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | Nein |
 |Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
 |Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
@@ -111,19 +111,19 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
-|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |
+|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein  | Nein  |
 |PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
 |Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja**| Nein |
-|HYOK-Unterstützung:| **Ja** | Nein | Nein |
-|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein |
-|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein |
+|HYOK-Unterstützung:| **Ja** | Nein  | Nein  |
+|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein  |Nein  |
+|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein  | Nein  |
 |Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>6</sup> | Nein |
-|Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein |
-|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein |
-|Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
+|Geschützte Dokumente widerrufen:| **Ja** | Nein  | Nein  |
+|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein  | Nein  |
+|Unterstützung für Kontowechsel:| Nein  | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
-|Unterstützung für AD RMS:| **Ja** | Nein <sup>7</sup> | Nein |
+|Unterstützung für AD RMS:| **Ja** | Nr. <sup>7</sup> | Nein |
 |Externe Inhalts Markierung in App entfernen| **Ja**| Nein| **Ja**|
 
 
@@ -133,7 +133,7 @@ Fußnoten:
 
 <sup>2</sup> diese Einstellungen und viele weitere werden als erweiterte Einstellungen unterstützt, [die Sie mit PowerShell konfigurieren](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
-<sup>3</sup> wird vom Datei-Explorer und PowerShell unterstützt. In Office-Apps können Benutzer **Dateiinformationen** >  > **schützen** auswählen, um den **Zugriff einzuschränken**.
+<sup>3</sup> wird vom Datei-Explorer und PowerShell unterstützt. In Office-Apps können Benutzer **Dateiinformationen**  >  **Schutz Dokument**  >  **einschränken Zugriff**auswählen.
 
 <sup>4</sup> es wird nicht unterstützt, den Schutz von Container Dateien (zip) zu entfernen.
 
@@ -150,7 +150,7 @@ Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azu
 
 |Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
-|Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
+|Einrichtung:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
 |Verwalten der Information Protection-Leiste in Office-Apps:|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Schützen** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App ausgeblendet, aber in neu geöffneten Apps weiterhin automatisch angezeigt <br /><br /> Für Administratoren: <br /><br />– Richtlinieneinstellungen zum automatischen Anzeigen oder Ausblenden der Leiste beim ersten Öffnen einer App sowie zum Steuern, ob die Leiste bei neu geöffneten Apps automatisch ausgeblendet wird, nachdem ein Benutzer die Leiste in einer App ausgeblendet hat|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App und in neu geöffneten Apps ausgeblendet <br /><br />Für Administratoren: <br /><br />-PowerShell-Einstellung zum Verwalten des Balkens |
 |Bezeichnungsfarbe: | Konfigurieren im Azure-Portal | Nach der Bezeichnungs Migration beibehalten und mit [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) konfigurierbar|

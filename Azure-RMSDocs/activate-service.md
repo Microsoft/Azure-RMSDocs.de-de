@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 181320c5046137d96816723c9b9ae55979998453
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 3b4dd50ba7afd8a6d3d1c85e66b6cfab12fa88ed
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403619"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746415"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Aktivieren des Schutz Dienstanbieter von Azure Information Protection
 
@@ -38,9 +38,9 @@ Wenn der Schutzdienst für Azure Information Protection für Ihre Organisation a
 
 Wenn Sie über einen Serviceplan verfügen, der Azure Rights Management einschließt, müssen Sie den Dienst möglicherweise nicht aktivieren:
 
-- **Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und Ende Februar 2018 oder danach erworben wurde**, wird der Dienst automatisch aktiviert. Sie müssen den Dienst nur dann aktivieren, wenn Sie oder ein anderer globaler Administrator Ihrer Organisation Azure Rights Management deaktiviert hat.
+- **Wenn Ihr Abonnement, das Azure Rights Management oder Azure Information Protection umfasst, bis Ende Februar 2018 oder höher abgerufen wurde:** Der Dienst wird automatisch für Sie aktiviert. Sie müssen den Dienst nur dann aktivieren, wenn Sie oder ein anderer globaler Administrator Ihrer Organisation Azure Rights Management deaktiviert hat.
 
-- **Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und vor oder während Februar 2018 erworben wurde**, beginnt Microsoft damit den, Azure Information Protection-Dienst für diese Abonnements zu aktivieren, wenn Ihr Mandant Exchange Online verwendet. Bei diesen Abonnements beginnt das Rollout der automatischen Aktivierung am 1. August 2018. Der Dienst wird für Sie aktiviert, sofern Sie bei Ausführung von **Get-IRMConfiguration** nicht feststellen, dass **AutomaticServiceUpdateEnabled** auf [false](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) festgelegt ist. 
+- **Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und vor oder während Februar 2018 erworben wurde**, beginnt Microsoft damit den, Azure Information Protection-Dienst für diese Abonnements zu aktivieren, wenn Ihr Mandant Exchange Online verwendet. Bei diesen Abonnements beginnt das Rollout der automatischen Aktivierung am 1. August 2018. Der Dienst wird für Sie aktiviert, sofern Sie bei Ausführung von [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) nicht feststellen, dass **AutomaticServiceUpdateEnabled** auf **false** festgelegt ist. 
 
 Wenn keines der nachfolgenden Szenarien auf Sie zutrifft, müssen Sie den Schutzdienst manuell aktivieren. 
 
@@ -77,7 +77,7 @@ Alternativ können Sie die folgenden PowerShell-Befehle verwenden:
 
 4. Um den Dienst zu aktivieren, führen Sie [enable-aipservice](/powershell/module/aipservice/enable-aipservice)aus.
 
-## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Konfigurieren der Onboardingsteuerungsrichtlinien für eine Bereitstellung in Phasen
 Wenn Sie nicht möchten, dass alle Benutzer Dokumente und e-Mails direkt mithilfe von Azure Information Protection schützen können, können Sie die Onboarding-Steuerelemente für Benutzer mithilfe des PowerShell-Befehls [Set-aipserviceonboardingcontrolpolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) konfigurieren. Sie können diesen Befehl ausführen, bevor oder nachdem Sie den Azure Rights Management-Dienst aktivieren.
 
 Wenn Sie beispielsweise möchten, dass zunächst nur Administratoren der Gruppe "IT-Abteilung" (die die Objekt-ID "fbb99ded-32a0-45f1-b038-38b519009503" hat) in der Lage sein sollen, Inhalte zu Testzwecken zu schützen, verwenden Sie den folgenden Befehl:
@@ -110,5 +110,5 @@ Wenn der Schutzdienst für Ihre Organisation aktiviert ist, verwenden Sie die Ro
 
 Beispielsweise können Sie [Vorlagen](configure-policy-templates.md) verwenden, um es den Benutzern zu erleichtern, Schutz auf Dateien anzuwenden, ihre lokalen Server mit dem Schutzdienst zu verbinden, indem Sie den [Rights Management-Connector](deploy-rms-connector.md)installieren und den [Azure Information Protection Client](./rms-client/aip-client.md) bereitstellen, der den Schutz aller Dateitypen auf allen Geräten unterstützt. 
 
-Office-Dienste (z.B. Exchange Online und SharePoint Online) erfordern zusätzliche Konfigurationsschritte, bevor Sie deren IRM-Features (Information Rights Management) verwenden können. Informationen dazu, wie Ihre Anwendungen mit dem Schutzdienst (Azure-Rights Management) funktionieren, finden Sie [unter Unterstützung des Azure Rights Management-Dienstanbieter durch Anwendungen](applications-support.md).
+Office-Dienste, wie z. b. Exchange Online und Microsoft SharePoint, erfordern zusätzliche Konfigurationen, bevor Sie Ihre Informationen Rights Management (unm)-Features verwenden können. Informationen dazu, wie Ihre Anwendungen mit dem Schutzdienst (Azure-Rights Management) funktionieren, finden Sie [unter Unterstützung des Azure Rights Management-Dienstanbieter durch Anwendungen](applications-support.md).
 

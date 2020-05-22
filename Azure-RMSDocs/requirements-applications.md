@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 81c95640f22e6234a3cc6d3487db6c12345a57b8
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 34484e732362adba288a9dfe8656df155b526b36
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404112"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746734"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -48,7 +48,7 @@ Informationen über die Tabellenspalten:
 
 |**Gerätebetriebssystem**|Word, Excel, PowerPoint|E-Mail|Weitere Dateitypen|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 365-Apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office für das Web (Anzeigen geschützter Dokumente) [[2]](#footnote-2)<br /><br />Webbrowser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Outlook von Office 365 ProPlus<br /><br />Webbrowser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio von Office 365-apps, Office 2019 und Office 2016: vsdm, vsdx, VSSM, VSTM, vssx, vstx <br /><br />Azure Information Protection-Client für Windows: Text, Bilder, PFILE<br /><br />SealPath RMS-Plug-In für AutoCAD: .dwg|
+|**Windows**|Office 365-Apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office für das Web (Anzeigen geschützter Dokumente) [[2]](#footnote-2)<br /><br />Webbrowser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Outlook 2016 <br /><br />Outlook 2019 <br /><br />Outlook von Office 365 ProPlus<br /><br />Webbrowser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Visio von Office 365-apps, Office 2019 und Office 2016: vsdm, vsdx, VSSM, VSTM, vssx, vstx <br /><br />Azure Information Protection-Client für Windows: Text, Bilder, PFILE<br /><br />SealPath RMS-Plug-In für AutoCAD: .dwg|
 |**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office für das Web [[2]](#footnote-2)<br /><br />TITUS-Dokumentation<br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work<br /><br />Citrix-WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook für iPad und iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Webbrowser [[4]](#footnote-4)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)<br /><br />TITUS-Dokumentation: PFILE|
 |**Android**|GigaTrust App für Android<br /><br />Office für das Web [[2]](#footnote-2)<br /><br />Office Mobile (es sei denn, Sie verwenden Vertraulichkeits Bezeichnungen, sind auf das Anzeigen und bearbeiten geschützter Dokumente beschränkt) <br /><br />Webbrowser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work <br /><br />GigaTrust App für Android [[5]](#footnote-5)<br /><br />Citrix-WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook für Android [[5]](#footnote-5)<br /><br />Samsung E-Mail (S3 und neuer) [[5]](#footnote-5)<br /><br />TITUS-Klassifizierung für mobile Geräte <br /><br />Webbrowser [[4]](#footnote-4)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)|
 |**macOS**|Office 365-Apps<br /><br />Office 2019 für Mac<br /><br />Office 2016 für Mac<br /><br />Office für das Web [[2]](#footnote-2)<br /><br />Webbrowser [[3]](#footnote-3)|Outlook 2019 für Mac<br /><br /> Outlook 2016 für Mac<br /><br />Webbrowser [[4]](#footnote-4)|RMS-Freigabe-App (Anzeige von geschützten Texten, Abbildungen und generisch geschützten Dateien)|
@@ -56,12 +56,12 @@ Informationen über die Tabellenspalten:
 |**Blackberry 10**|Webbrowser [[3]](#footnote-3)|Blackberry-E-Mail [[5]](#footnote-5) <br /><br />Webbrowser [[4]](#footnote-4)|Nicht unterstützt|
 
 ###### <a name="footnote-1"></a>Fußnote 1
-Aktionen: 
+Dies umfasst Folgendes: 
 - Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
 - Office 365 ProPlus-Apps
 
 ###### <a name="footnote-2"></a>Fußnote 2
-Wird nur mit SharePoint Online und OneDrive for Business unterstützt, und die Dokumente sind vor dem Upload in eine geschützte Bibliothek ungeschützt.
+Wird nur mit Microsoft SharePoint und onedrive unterstützt, und die Dokumente sind ungeschützt, bevor Sie in eine geschützte Bibliothek hochgeladen werden.
 
 ###### <a name="footnote-3"></a>Fußnote 3
 Für [Anlagen in Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM), die durch die [Office 365-Nachrichtenverschlüsselung mit den neuen Funktionen](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) geschützt sind
@@ -137,7 +137,7 @@ Weitere Informationen zur Verwendung der App finden Sie unter [Häufig gestellte
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Weitere Informationen zum Azure Information Protection-Client für Windows
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 - Azure Information Protection Client Administrator Handbücher:
     - [Einheitlicher Bezeichnungs Client](./rms-client/clientv2-admin-guide.md)
@@ -155,7 +155,7 @@ Laden Sie die relevante App über die Links auf der [Microsoft Azure Information
 
 Für Mac-Computer stellt die Rights Management-Freigabe-App einen Viewer für geschützte PDF-Dateien (.ppdf), geschützte Textbilder und allgemein geschützte Dateien bereit. Sie kann auch Bilddateien, jedoch keine anderen Dateien schützen. Verwenden Sie zum Schützen von Office-Dateien auf diesen Computern Office für Mac oder Office 365 ProPlus. 
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 -   [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](https://technet.microsoft.com/dn451248)
 
@@ -176,7 +176,7 @@ Weitere Informationen finden Sie im [Azure Information Protection-Entwicklerhand
 
 Folgende Anwendungen werden zurzeit nicht von Azure RMS unterstützt:
 
-- Microsoft OneDrive for Business für SharePoint Server 2013
+- Microsoft onedrive für SharePoint Server 2013
 
 - XPS-Viewer
 

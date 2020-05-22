@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb9393c637b71771789efcdcfa7b9b5aeb378226
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 6dc8a5aa43b6f5d3dc53c014dd770fa87ff683a5
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82230813"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746372"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services-Mobilgeräteerweiterung
 
@@ -28,7 +28,7 @@ Sie können die Erweiterung für mobile Geräte für Active Directory Rights Man
 - Verwenden Sie die Azure Information Protection-App für die Nutzung geschützter Bilddateien (einschließlich jpg, GIF und TIF).
 - Verwenden Sie die Azure Information Protection-APP, um eine beliebige Datei zu öffnen, die generisch geschützt ist (Pfile-Format).
 - Verwenden Sie die Azure Information Protection-App zum Öffnen einer Office-Datei (Word, Excel, PowerPoint), bei der es sich um eine PDF-Kopie (PDF-und ppdf-Format) handelt.
-- Verwenden Sie die Azure Information Protection-App zum Öffnen geschützter e-Mail-Nachrichten (rpmsg) und geschützter PDF-Dateien in SharePoint Online.
+- Verwenden Sie die Azure Information Protection-App zum Öffnen geschützter e-Mail-Nachrichten (rpmsg) und geschützter PDF-Dateien in Microsoft SharePoint.
 - Verwenden Sie einen AIP-fähigen PDF-Viewer für die plattformübergreifende Anzeige oder zum Öffnen von PDF-Dateien, die mit einer beliebigen AIP-fähigen Anwendung geschützt wurden.
 - Verwenden Sie Ihre intern entwickelten AIP-fähigen apps, die mithilfe des [MIP SDK](https://aka.ms/mipsdkdocs)geschrieben wurden.
 
@@ -47,7 +47,7 @@ Stellen Sie vor der Installation der AD RMS-Erweiterung für mobile Geräte sich
 
 |Anforderung|Weitere Informationen|
 |---------------|------------------------|
-|Eine vorhandene AD RMS Bereitstellung auf Windows Server 2019, 2016, 2012 R2 oder 2012, die Folgendes umfasst:<br /><br /> -Ihr AD RMS Cluster muss über das Internet zugänglich sein. <br /><br /> -AD RMS muss eine voll Microsoft SQL Server basierte Datenbank auf einem separaten Server und nicht die interne Windows-Datenbank verwenden, die häufig zum Testen auf demselben Server verwendet wird. <br /><br />-Das Konto, das Sie zum Installieren der Erweiterung für mobile Geräte verwenden, muss über Systemadministrator Rechte für die SQL Server Instanz verfügen, die Sie für die AD RMS verwenden. <br /><br />-Die AD RMS Server müssen für die Verwendung von SSL/TLS mit einem gültigen x. 509-Zertifikat konfiguriert werden, das von den Clients für mobile Geräte als vertrauenswürdig eingestuft wird.<br /><br /> Wenn sich die AD RMS Server hinter einer Firewall befinden oder mithilfe eines Reverseproxys veröffentlicht werden, müssen Sie zusätzlich zum Veröffentlichen des **/_wmcs-** Ordners im Internet auch den Ordner "/My" (z. b. **\/\/_https: RMSserver.contoso.com/My**) veröffentlichen.|Ausführliche Informationen zu AD RMS Voraussetzungen und Bereitstellungs Informationen finden Sie im Abschnitt "Voraussetzungen" in diesem Artikel.|
+|Eine vorhandene AD RMS Bereitstellung auf Windows Server 2019, 2016, 2012 R2 oder 2012, die Folgendes umfasst:<br /><br /> -Ihr AD RMS Cluster muss über das Internet zugänglich sein. <br /><br /> -AD RMS muss eine voll Microsoft SQL Server basierte Datenbank auf einem separaten Server und nicht die interne Windows-Datenbank verwenden, die häufig zum Testen auf demselben Server verwendet wird. <br /><br />-Das Konto, das Sie zum Installieren der Erweiterung für mobile Geräte verwenden, muss über Systemadministrator Rechte für die SQL Server Instanz verfügen, die Sie für die AD RMS verwenden. <br /><br />-Die AD RMS Server müssen für die Verwendung von SSL/TLS mit einem gültigen x. 509-Zertifikat konfiguriert werden, das von den Clients für mobile Geräte als vertrauenswürdig eingestuft wird.<br /><br /> Wenn sich die AD RMS Server hinter einer Firewall befinden oder mithilfe eines Reverseproxys veröffentlicht werden, müssen Sie zusätzlich zum Veröffentlichen des **/_wmcs-** Ordners im Internet auch den Ordner "/My" (z. b. **_https: \/ \/ RMSserver.contoso.com/My**) veröffentlichen.|Ausführliche Informationen zu AD RMS Voraussetzungen und Bereitstellungs Informationen finden Sie im Abschnitt "Voraussetzungen" in diesem Artikel.|
 |AD FS auf Ihrem Windows-Server bereitgestellt:<br /><br /> -Die AD FS Serverfarm muss über das Internet zugänglich sein (Sie haben Verbund Server Proxys bereitgestellt). <br /><br />-Die Formular basierte Authentifizierung wird nicht unterstützt. Sie müssen die integrierte Windows-Authentifizierung verwenden. <br /><br /> **Wichtig**: AD FS müssen auf dem Computer, auf dem AD RMS ausgeführt wird, und der Erweiterung für mobile Geräte einen anderen Computer ausführen.|Dokumentation zu AD FS finden Sie im [Bereitstellungs Handbuch für Windows Server AD FS](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on) in der Windows Server-Bibliothek.<br /><br /> AD FS muss für die Mobilgeräteerweiterung konfiguriert werden. Anweisungen hierzu finden Sie im Abschnitt **Konfigurieren von AD FS für die AD RMS Erweiterung für mobile Geräte** in diesem Thema.|
 |Mobile Geräte müssen den PKI-Zertifikaten auf dem RMS-Server (oder den Servern) Vertrauen.|Wenn Sie Ihre Server Zertifikate von einer öffentlichen Zertifizierungsstelle erwerben, wie z. b. VeriSign oder Comodo, ist es wahrscheinlich, dass Mobile Geräte bereits der Stamm Zertifizierungsstelle für diese Zertifikate Vertrauen, damit diese Geräte den Server Zertifikaten ohne zusätzliche Konfiguration Vertrauen.<br /><br /> Wenn Sie jedoch eine eigene interne Zertifizierungsstelle verwenden, um die Server Zertifikate für RMS bereitzustellen, müssen Sie zusätzliche Schritte ausführen, um das Zertifikat der Stamm Zertifizierungsstelle auf den mobilen Geräten zu installieren. Wenn dies nicht der Fall ist, können mobile Geräte keine Verbindung mit dem RMS-Server herstellen.|
 |SRV-Einträge im DNS|Erstellen Sie einen oder mehrere SRV-Einträge in Ihrer/Ihren Unternehmensdomäne(n):<br /><br />1: Erstellen eines Datensatzes für jedes e-Mail-Domänen Suffix, das Benutzer verwenden werden <br /><br />2: Erstellen Sie einen Datensatz für jeden FQDN, der von ihren RMS-Clustern verwendet wird, um Inhalte zu schützen, ohne den Cluster Namen einzuschließen. <br /><br />Diese Datensätze müssen in jedem Netzwerk aufgelöst werden können, das von den mobilen Geräten, die eine Verbindung herstellen, verwendet wird. Dies umfasst das Intranet, wenn Ihre mobilen Geräte eine Verbindung über das Intranet<br /><br /> Wenn Benutzer Ihre e-Mail-Adresse von Ihrem mobilen Gerät angeben, wird das Domänen Suffix verwendet, um zu ermitteln, ob Sie eine AD RMS-Infrastruktur oder Azure AIP verwenden sollten. Wenn der SRV-Eintrag gefunden wird, werden Clients zu dem AD RMS-Server umgeleitet, der auf diese URL reagiert.<br /><br /> Wenn Benutzer geschützte Inhalte mit einem mobilen Gerät nutzen, sucht die Client Anwendung in DNS nach einem Datensatz, der mit dem voll qualifizierten Namen in der URL des Clusters übereinstimmt, mit dem der Inhalt geschützt wurde (ohne den Cluster Namen). Das Gerät wird dann zu dem im DNS-Eintrag angegebenen AD RMS-Cluster geleitet und erhält eine Lizenz zum Öffnen des Inhalts. In den meisten Fällen ist der RMS-Cluster mit dem RMS-Cluster identisch, der die Inhalte schützt.<br /><br /> Weitere Informationen zum Angeben der SRV-Einträge finden Sie im Abschnitt **angeben der DNS-SRV-Einträge für die AD RMS-Erweiterung für mobile Geräte** in diesem Thema.|
@@ -123,10 +123,10 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 
 - Verwenden Sie die folgenden Einstellungen, um AD FS für die AD RMS-Erweiterung für mobile Geräte manuell zu konfigurieren:
 
-|**Configuration**|**Wert**|
+|**Konfiguration**|**Wert**|
 |-----|-----|
 |**Vertrauende Seite Vertrauensstellung**|_api. RMS. Rest. com|
-|**Anspruchsregel**|**Attribut Speicher**: Active Directory <br /><br />E-Mail- **Adressen**: e-Mail-Adresse<br /><br>**Benutzer Prinzipal Name**: UPN<br /><br /> **Proxy Adresse**: _https:\/\/Schemas.xmlsoap.org/Claims/proxyAddresses|
+|**Anspruchsregel**|**Attribut Speicher**: Active Directory <br /><br />E-Mail- **Adressen**: e-Mail-Adresse<br /><br>**Benutzer Prinzipal Name**: UPN<br /><br /> **Proxy Adresse**: _https: \/ \/ Schemas.xmlsoap.org/Claims/proxyAddresses|
 
 > [!TIP]
 > Schritt-für-Schritt-Anleitungen für eine Beispiel Bereitstellung von AD RMS mit AD FS finden Sie unter Bereitstellen von [Active Directory Rights Management Services mit Active Directory-Verbunddienste (AD FS)](https://docs.microsoft.com/office365/troubleshoot/active-directory/set-up-adfs-for-single-sign-on).
@@ -148,10 +148,10 @@ Add-AdfsClient -Name "Fabrikam application for MIP" -ClientId "96731E97-2204-4D7
 ### <a name="specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension"></a>Festlegen der DNS-SRV-Einträge für die AD RMS-Mobilgeräteerweiterung
 
 Sie müssen DNS-SRV-Einträge für jede E-Mail-Domäne erstellen, die Ihre Benutzer verwenden. Wenn alle Ihre Benutzer untergeordnete Domänen aus einer einzigen übergeordneten Domäne verwenden und alle Benutzer aus diesem zusammenhängenden Namespace denselben RMS-Cluster verwenden, reicht ein SVR-Eintrag in der übergeordneten Domäne aus, damit RMS die entsprechenden DMS-Einträge findet.
-Die SRV-Datensätze haben das folgende Format: _rmsdisco. _http. _tcp. \<rmsclusterfqdn>\<portNumber>\<rmsclusterf>
+Die SRV-Datensätze haben das folgende Format: _rmsdisco. _http. _tcp. \<rmsclusterfqdn>\< PortNumber>\< rmsclusterf>
 
 > [!NOTE]
-> Geben Sie 443 für \<die portNumber-> an. Obwohl Sie eine andere Portnummer in DNS angeben können, verwenden Geräte mit der Erweiterung für mobile Geräte immer 443.
+> Geben Sie 443 für die \< PortNumber-> an. Obwohl Sie eine andere Portnummer in DNS angeben können, verwenden Geräte mit der Erweiterung für mobile Geräte immer 443.
 
 Beispiel: Wenn es in Ihrer Organisation Benutzer mit den folgenden E-Mail-Adressen gibt:
   - _user@contoso.com
@@ -164,20 +164,20 @@ Wenn Sie die DNS-Server Rolle unter Windows Server verwenden, verwenden Sie die 
 
 |Feld|Wert|
 |------|------|
-|Domain|_tcp....
+|Domäne|_tcp....
 |Dienst|_rmsdisco
-|Protocol|_http
-|Priority|0
+|Protokoll|_http
+|Priorität|0
 |Weight|0
 |Portnummer|443
 |Host, der diesen Dienst anbietet|_rmsserver....
 
 |Feld|Wert|
 |------|------|
-|Domain|_tcp. fabrikam. com
+|Domäne|_tcp. fabrikam. com
 |Dienst|_rmsdisco
-|Protocol|_http
-|Priority|0
+|Protokoll|_http
+|Priorität|0
 |Weight|0
 |Portnummer|443
 |Host, der diesen Dienst anbietet|_rmsserver....|
@@ -190,10 +190,10 @@ Wenn Sie die DNS-Server Rolle unter Windows Server verwenden, verwenden Sie die 
 
 |Feld|Wert|
 |------|------|
-|Domain|_tcp....
+|Domäne|_tcp....
 |Dienst|_rmsdisco
-|Protocol|_http
-|Priority|0
+|Protokoll|_http
+|Priorität|0
 |Weight|0
 |Portnummer|443
 |Host, der diesen Dienst anbietet|_rmsserver....|
@@ -230,9 +230,9 @@ Wenn Sie über einen Proxy Server zwischen dem AD RMS Cluster und den AD FS Serv
 <system.net>
 ```
 1. Nehmen Sie die folgenden Änderungen vor, und speichern Sie dann die Datei:
-- Ersetzen \<Sie Proxy-Server> durch den Namen oder die Adresse des Proxy Servers.
-- Ersetzen \<Sie Port> durch die Portnummer, für deren Verwendung der Proxy Server konfiguriert ist.
-- Ersetzen \<Sie AD FS URL-> durch die URL des Verbund Dienstanbieter. Fügen Sie das http-Präfix nicht ein.
+- Ersetzen \< Sie Proxy-Server> durch den Namen oder die Adresse des Proxy Servers.
+- Ersetzen \< Sie Port> durch die Portnummer, für deren Verwendung der Proxy Server konfiguriert ist.
+- Ersetzen Sie \< AD FS URL-> durch die URL des Verbund Dienstanbieter. Fügen Sie das http-Präfix nicht ein.
 
     > [!NOTE]
     > Weitere Informationen zum Überschreiben der Proxy Einstellungen finden Sie in der Dokumentation zur [Proxykonfiguration](https://msdn.microsoft.com/library/dkwyc043(v=vs.110).aspx) .

@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f361c96b3b1143b59d431124988eca84f66d8ec9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 38853e038b708950228473e703e364e0a021ec6e
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933547"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746352"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
@@ -27,28 +27,28 @@ ms.locfileid: "74933547"
 > [!NOTE]
 > Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Information Protection bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung der Rights Management-Funktionen für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
 >
-> Klicken Sie bei Office-Anwendungen z. B. auf das Hilfesymbol, und geben Sie Suchbegriffe wie **Rights Management** oder **IRM**ein. Informationen zum Azure Information Protection-Client für Windows finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md).
+> Klicken Sie bei Office-Anwendungen z. B. auf das Hilfesymbol, und geben Sie Suchbegriffe wie **Rights Management** oder **IRM** ein. Informationen zum Azure Information Protection-Client für Windows finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md).
 
-Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen, um Anwendungen, den Azure Information Protection-Client und Dienste zu konfigurieren. Beispielsweise Office-Anwendungen wie Word 2019, Word 2016 und Word 2013. Auch Dienste wie Exchange Online (Transportregeln, Verhinderung von Datenverlust, Unterbinden der Weiterleitung und Nachrichtenverschlüsselung) und SharePoint Online (geschützte Bibliotheken). Informationen dazu, wie diese Anwendungen und Dienste den Datenschutzdienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
+Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen, um Anwendungen, den Azure Information Protection-Client und Dienste zu konfigurieren. Beispielsweise Office-Anwendungen wie Word 2019, Word 2016 und Word 2013. Außerdem Dienste wie Exchange Online (Transport Regeln, Verhinderung von Datenverlust, nicht weiterleiten und Nachrichten Verschlüsselung) und Microsoft SharePoint (geschützte Bibliotheken). Informationen dazu, wie diese Anwendungen und Dienste den Datenschutzdienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
 -   [Office 365: Konfiguration für Onlinedienste](configure-office365.md)
 
-    -   [Exchange Online: unm-Konfiguration](configure-office365.md#exchangeonline-irm-configuration)
+    -   [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online und onedrive for Business: unm-Konfiguration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint in Microsoft 365 und onedrive: unm-Konfiguration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration)
 
 - [Office-Anwendungen: Konfiguration für Clients](configure-office-apps.md)
 
-    -   [Office 365-apps, Office 2019, Office 2016 und Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
+    -   [Office 365-Apps, Office 2019, Office 2016 und Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
-    -   [Office 2010](configure-office-apps.md#office2010)
+    -   [Office 2010](configure-office-apps.md#office2010)
 
 -   [Azure Information Protection-Client: Installation und Konfiguration für Clients](configure-client.md)
 
-Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
+Informationen zum Konfigurieren von lokalen Servern, z. b. Exchange Server und SharePoint Server, finden Sie unter Bereitstellen [des Azure Rights Management-Verbindungs](deploy-rms-connector.md)Punkts.
 
 Zusätzlich zu diesen Anwendungen und Diensten gibt es noch andere Anwendungen, die die Rights Management-APIs unterstützen. Diese Kategorie umfasst Branchenanwendungen, die intern mithilfe des Rights Management-SDK geschrieben wurden, sowie Anwendungen von Softwareherstellern, die mithilfe des Rights Management-SDK geschrieben wurden. Befolgen Sie für diese Anwendungen die Anweisungen, die zusammen mit der jeweiligen Anwendung bereitgestellt werden.
 

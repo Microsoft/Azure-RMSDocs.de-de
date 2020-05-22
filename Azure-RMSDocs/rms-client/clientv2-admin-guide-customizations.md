@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a3386f37b6f8197abe56b4db3138de402eaca7d
-ms.sourcegitcommit: f21f3abf9754d3cd1ddfc6eb00d61277962b88e1
+ms.openlocfilehash: aff9e38a43779f9297d9371fa4bc034b36885875
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82799128"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746312"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -86,7 +86,7 @@ Das Angeben des Namens der Bezeichnungs Richtlinie für den PowerShell- *Identit
 
 - Der **Anzeige Name** ist der Name der Bezeichnung, die Benutzern angezeigt wird, und Sie muss in allen Bezeichnungen nicht eindeutig sein. Beispielsweise sehen **Benutzer eine unter** geordnete Bezeichnung für " **vertraulich** " und eine andere **untergeordnete** Bezeichnung für die Bezeichnung " **streng vertraulich** ". Diese untergeordneten Bezeichnungen sehen beide denselben Namen, sind jedoch nicht die gleiche Bezeichnung und haben andere Einstellungen.
 
-Verwenden Sie zum Konfigurieren der erweiterten Einstellungen für die Bezeichnung den Wert " **Name** ". Um z. b. die Bezeichnung in der folgenden Abbildung zu identifizieren, geben `-Identity "All Company"`Sie Folgendes an:
+Verwenden Sie zum Konfigurieren der erweiterten Einstellungen für die Bezeichnung den Wert " **Name** ". Um z. b. die Bezeichnung in der folgenden Abbildung zu identifizieren, geben Sie Folgendes an `-Identity "All Company"` :
 
 ![Verwenden Sie "Name" anstelle von "Anzeige Name", um eine Vertraulichkeits Bezeichnung zu identifizieren.](../media/labelname_scc.png)
 
@@ -120,7 +120,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
-|Additionalpprefixextensions|[Unterstützung für \<das Ändern von ext>. Pfile-zu\<-P-ext-> mithilfe dieser erweiterten Eigenschaft](#additionalpprefixextensions)
+|Additionalpprefixextensions|[Unterstützung für das Ändern von \< ext>. Pfile-zu-P- \< ext-> mithilfe dieser erweiterten Eigenschaft](#additionalpprefixextensions)
 |Attachmentaction|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |Attachmentaktiontip|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |Disablemandatoryinoutlook|[Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling)
@@ -243,7 +243,7 @@ Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen fo
 
 - Schlüssel: **OutlookDefaultLabel**
 
-- Wert: \<Bezeichnungs- **GUID**> oder **None**
+- Wert: Bezeichnungs- \< **GUID**> oder **None**
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
 
@@ -261,7 +261,7 @@ Sie können dieses Standardverhalten für eine ausgewählte Bezeichnungs Richtli
 
 - Schlüssel: **pfilesupportedextensions**
 
-- Wert: ** \<Zeichen folgen Wert>** 
+- Wert: ** \< Zeichen folgen Wert>** 
 
 Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu identifizieren:
 
@@ -287,19 +287,19 @@ Mit dieser Einstellung können Sie ändern, welche Dateitypen geschützt sind, a
 
 ### <a name="additionalpprefixextensions"></a>Additionalpprefixextensions
 
-Der Unified-Bezeichnungs Client \<unterstützt das Ändern von ext>. Pfile-zu\<-P-ext> mithilfe der erweiterten Eigenschaft **additionalpprefixextensions**. Diese erweiterte Eigenschaft wird mit einem Rechtsklick, PowerShell und Scanner unterstützt. Alle apps weisen ein ähnliches Verhalten auf.   
+Der Unified-Bezeichnungs Client unterstützt das Ändern von \< ext>. Pfile-zu-P- \< ext> mithilfe der erweiterten Eigenschaft **additionalpprefixextensions**. Diese erweiterte Eigenschaft wird mit einem Rechtsklick, PowerShell und Scanner unterstützt. Alle apps weisen ein ähnliches Verhalten auf.   
 
 - Schlüssel: **additionalpprefixextensions**
 
-- Wert: ** \<Zeichen folgen Wert>** 
+- Wert: ** \< Zeichen folgen Wert>** 
 
 Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu identifizieren:
 
 | Zeichenfolgenwert| Client und Scanner|
 |-------------|---------------|
-|\*|Alle Pfile-Erweiterungen werden\<zu P ext>|
+|\*|Alle Pfile-Erweiterungen werden zu P \< ext>|
 |\<NULL-Wert>| Der Standardwert verhält sich wie der Standardschutz Wert.|
-|ConvertTo-JSON (". DWG", ". zip")|Zusätzlich zur vorherigen Liste werden ". DWG" und ". zip" zu P\<ext>| 
+|ConvertTo-JSON (". DWG", ". zip")|Zusätzlich zur vorherigen Liste werden ". DWG" und ". zip" zu P \< ext>| 
 
 Beispiel 1: PowerShell-Befehl verhält sich wie das Standardverhalten, bei dem der Schutz von ". DWG" zu ". dwg. Pfile" wird:
 
@@ -313,7 +313,7 @@ Beispiel 3: PowerShell-Befehl zum Ändern von ". DWG" in ". pdwg" Wenn Sie diese
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-Mit dieser Einstellung werden die folgenden Erweiterungen (". txt", ". xml", ". bmp", ". JT", ". jpg", ". JPEG", ". jpe", ". jif", ". JFI", ". JFI", ". png", ". TIF", ". TIFF", ". gif") wird immer zu P\<ext>. Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
+Mit dieser Einstellung werden die folgenden Erweiterungen (". txt", ". xml", ". bmp", ". JT", ". jpg", ". JPEG", ". jpe", ". jif", ". JFI", ". JFI", ". png", ". TIF", ". TIFF", ". gif") wird immer zu P \< ext>. Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
 **Additionalpprefixextensions** funktioniert nur, wenn der Schutz von pfiles mit der erweiterten Eigenschaft " [**pfilesupportedextension**](#pfilesupportedextension) " aktiviert ist. 
 
 Beispielsweise in einem Fall, in dem der folgende Befehl verwendet wird:
@@ -386,7 +386,7 @@ Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#how-to-con
 
 Diese Einstellung gilt für den Fall, dass Benutzer eine Bezeichnung Dokumente an eine e-Mail anfügen und die e-Mail-Nachricht nicht selbst bezeichnen. In diesem Szenario wird automatisch eine Bezeichnung für Sie ausgewählt, basierend auf den Klassifizierungs Bezeichnungen, die auf die Anlagen angewendet werden. Die höchste Klassifizierungs Bezeichnung ist ausgewählt.
 
-Die Anlage muss eine physische Datei sein, es darf sich nicht um einen Link zu einer Datei handeln (beispielsweise um einen Link zu einer Datei in SharePoint oder OneDrive for Business).
+Die Anlage muss eine physische Datei und kein Link zu einer Datei sein (z. b. ein Link zu einer Datei in Microsoft SharePoint oder onedrive).
 
 Sie können diese Einstellung auf " **empfohlen**" festlegen, damit Benutzer mit einer anpassbaren QuickInfo aufgefordert werden, die ausgewählte Bezeichnung auf Ihre e-Mail-Nachricht anzuwenden. Benutzer können die Empfehlung akzeptieren oder ablehnen. Oder Sie können diese Einstellung auf " **automatisch**" festlegen, wobei die ausgewählte Bezeichnung automatisch angewendet wird, Benutzer aber die Bezeichnung entfernen oder eine andere Bezeichnung auswählen können, bevor Sie die e-Mail senden.
 
@@ -403,7 +403,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Schlüssel 2: **attachmentaktiontip**
 
-- Schlüsselwert 2: "\<angepasste QuickInfo->"
+- Schlüsselwert 2: "angepasste QuickInfo- \<>"
 
 Die angepasste QuickInfo unterstützt nur eine einzige Sprache.
 
@@ -421,7 +421,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Key: **ReportAnIssueLink**
 
-- Wert: ** \<http-Zeichenfolge>**
+- Wert: ** \< http-Zeichenfolge>**
 
 Beispielwert für eine Website: `https://support.contoso.com`
 
@@ -518,7 +518,7 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
     
     - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
 
-Sie haben beispielsweise die Einstellung für den erweiterten Client " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookjustifytreuddomains** " und " **contoso.com**" an. Dies hat zur Folge, dass ein Benutzer eine e-Mail an john@sales.contoso.com senden kann, wenn er **vertraulich \ alle Mitarbeiter** heißt, aber das Senden einer e-Mail mit derselben Bezeichnung an ein Gmail-Konto blockiert wird.
+Sie haben beispielsweise die Einstellung für den erweiterten Client " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookjustifytreuddomains** " und " **contoso.com**" an. Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, john@sales.contoso.com Wenn er **vertraulich \ alle Mitarbeiter** heißt, aber das Senden einer e-Mail mit derselben Bezeichnung an ein Gmail-Konto blockiert wird.
 
 PowerShell-Beispiel Befehle, deren Bezeichnung "Global" lautet:
 
@@ -707,7 +707,7 @@ Wenn Sie den Wert zu Testzwecken zum ersten Mal konfigurieren, empfehlen wir Ihn
 
 - Schlüssel: **Scannerkonfigurations-Level**
 
-- Wert: ** \<Anzahl der gleichzeitigen Threads>**
+- Wert: ** \< Anzahl der gleichzeitigen Threads>**
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Scanner" hat:
 
@@ -786,7 +786,7 @@ Erweiterte Clienteinstellung:
 
 - Key: **labelbycustomproperties**
 
-- Wert: die **Bezeichnung sichere Inseln enthält interne Klassifizierungen,\* . Verbrennungs. \***
+- Wert: die **Bezeichnung sichere Inseln enthält interne Klassifizierungen,. \* Intern. \* **
 
 Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Allgemein" lautet:
 
@@ -923,7 +923,7 @@ Wenn Sie einer Bezeichnung eine untergeordnete Bezeichnung hinzufügen, können 
 
 - Schlüssel: **defaultsublabelid**
 
-- Wert: \<GUID für untergeordnete Bezeichnung>
+- Wert: \< GUID für untergeordnete Bezeichnung>
 
 Beispiel für einen PowerShell-Befehl, bei dem die übergeordnete Bezeichnung "Confidential" heißt und die untergeordnete Bezeichnung "All Employees" eine GUID von 8faka7b8-8d20-48a3-8ea2-0F 96310a848e:
 
@@ -938,7 +938,7 @@ Wenn Sie diese Einstellung konfigurieren, wird das Standardverhalten geändert, 
 Für Word, Excel und PowerPoint wird die automatische Klassifizierung für Dokumente ständig im Hintergrund ausgeführt.
 
 Das Verhalten für Outlook ändert sich nicht.
-Wenn der Azure Information Protection Unified-Bezeichnungs Client in regelmäßigen Abständen Dokumente für die von Ihnen angegebenen Bedingungs Regeln prüft, aktiviert dieses Verhalten die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint Online gespeichert sind. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden.
+Wenn der Azure Information Protection Unified-Bezeichnungs Client regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungs Regeln prüft, ermöglicht dieses Verhalten die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint gespeichert werden. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden.
 
 Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird.
 
@@ -959,13 +959,13 @@ Diese Konfiguration verwendet [Erweiterte Einstellungen](#how-to-configure-advan
 
 Verwenden Sie diese erweiterte Einstellung, um eine Farbe für eine Bezeichnung festzulegen. Um die Farbe anzugeben, geben Sie einen Hexadezimal Code für die Komponenten rot, grün und blau (RGB) der Farbe ein. Beispielsweise ist #40e0d0 der RGB-Hexadezimalwert für türkis.
 
-Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der [ \<Seite Color>](https://developer.mozilla.org/docs/Web/CSS/color_value) aus den MSDN-Webdocs. Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
+Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der Seite [ \< Color>](https://developer.mozilla.org/docs/Web/CSS/color_value) aus den MSDN-Webdocs. Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
 
 Um die erweiterte Einstellung für die Farbe einer Bezeichnung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnung ein:
 
 - Schlüssel: **Farbe**
 
-- Wert: \<RGB-Hexadezimalwert>
+- Wert: RGB-hexadezimal \< Wert>
 
 Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Public" lautet:
 

@@ -1,5 +1,5 @@
 ---
-title: Protokoll & Analysieren der Schutz Verwendung von Azure Information Protection
+title: Protokoll & analysieren der Schutz Verwendung von Azure Information Protection
 description: Informationen und Anweisungen zur Verwendung der Verwendungs Protokollierung für den Schutzdienst von Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 63fbe078b6f1a5cbae120e869cc139dda9c8850e
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 234c661133aa61dfa3636671d903fb78c364a678
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404197"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83747111"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection
 
@@ -30,7 +30,7 @@ Anschließend können Sie diese Schutz Verwendungs Protokolle verwenden, um die 
 
 -   **Analyse hinsichtlich geschäftlicher Erkenntnisse**
 
-    Die vom Schutzdienst generierten Protokolle können in ein Repository ihrer Wahl importiert werden (z. b. eine Datenbank, ein OLAP-System (Online Analytical Processing) oder ein Map-Reduce-System), um die Informationen zu analysieren und Berichte zu erzeugen. Beispielsweise können Sie feststellen, wer auf Ihre geschützten Daten zugreift. Sie können ermitteln, auf welche geschützten Daten Benutzer zugreifen, von welchen Geräten aus und von wo. Sie können herausfinden, ob Benutzer geschützte Inhalte erfolgreich lesen können. Sie können ferner identifizieren, welche Personen ein wichtiges Dokument gelesen haben, das geschützt it.
+    Die vom Schutzdienst generierten Protokolle können in ein Repository ihrer Wahl importiert werden (z. b. eine Datenbank, ein OLAP-System (Online Analytical Processing) oder ein Map-Reduce-System), um die Informationen zu analysieren und Berichte zu erzeugen. Beispielsweise können Sie feststellen, wer auf Ihre geschützten Daten zugreift. Sie können ermitteln, auf welche geschützten Daten Benutzer zugreifen, von welchen Geräten aus und von wo. Sie können herausfinden, ob Benutzer geschützte Inhalte erfolgreich lesen können. Sie können ferner identifizieren, welche Personen ein wichtiges Dokument gelesen haben, das geschützt ist.
 
 -   **Überwachung auf Missbrauch**
 
@@ -38,18 +38,18 @@ Anschließend können Sie diese Schutz Verwendungs Protokolle verwenden, um die 
 
     Beispielsweise können Sie sich benachrichtigen lassen, wenn ein plötzlicher Anstieg der Personen zu verzeichnen ist, die geschützte Daten außerhalb der Standardarbeitszeiten lesen, was darauf hindeuten kann, dass ein böswilliger Benutzer Informationen sammelt, um sie an die Konkurrenz zu verkaufen. Oder wenn derselbe Benutzer innerhalb eines kurzen Zeitraums offensichtlich von zwei verschiedenen IP-Adressen aus auf Daten zugreift, was darauf hindeuten kann, dass ein Benutzerkonto kompromittiert wurde.
 
--   **Durchführen forensischer Analysen**
+-   **Ausführen forensischer Analysen**
 
-    Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie diese Protokollierung verwenden, weil Personen, die geschützte Inhalte verwenden, immer eine Rights Management Lizenz erhalten müssen, um Dokumente und Bilder zu öffnen, die durch Azure Information Protection geschützt sind, auch wenn diese Dateien verschoben werden. e-Mail oder Kopieren auf USB-Laufwerke oder andere Speichergeräte. Dies bedeutet, dass Sie diese Protokolle als definitive Informationsquelle für die forensische Analyse verwenden können, wenn Sie Ihre Daten mit Azure Information Protection schützen.
+    Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie diese Protokollierung verwenden, weil Personen, die geschützte Inhalte verwenden, immer eine Rights Management Lizenz erhalten müssen, um Dokumente und Bilder zu öffnen, die durch Azure Information Protection geschützt sind, auch wenn diese Dateien per e-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie diese Protokolle als definitive Informationsquelle für die forensische Analyse verwenden können, wenn Sie Ihre Daten mit Azure Information Protection schützen.
 
 Zusätzlich zu dieser Verwendungsprotokollierung stehen folgende Protokollierungsoptionen zur Verfügung:
 
-|Protokollierungsoption|Beschreibung|
+|Protokollierungsoption|BESCHREIBUNG|
 |----------------|---------------|
 |Administratorprotokoll|Protokolliert administrative Aufgaben für den Schutzdienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie im PowerShell-Cmdlet " [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog)".|
 |Dokumentkontrolle|Ermöglicht Benutzern das Nachverfolgen und Widerrufen von Dokumenten, die sie mit dem Azure Information Protection-Client nachverfolgt haben. Globale Administratoren können diese Dokumente im Auftrag von Benutzern nachverfolgen. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
 |Clientereignisprotokolle|Benutzeraktivität für den Azure Information Protection-Client, protokolliert im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste**: **Azure Information Protection**. <br /><br />Weitere Informationen finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
-|Clientprotokolldateien|Problembehandlungsprotokolle für den Azure Information Protection-Client, die sich unter **%localappdata%\Microsoft\MSIP** befinden. <br /><br />Diese Dateien werden vom Microsoft Support benötigt.|
+|Protokolldateien des Clients|Problembehandlungsprotokolle für den Azure Information Protection-Client, die sich unter **%localappdata%\Microsoft\MSIP** befinden. <br /><br />Diese Dateien werden vom Microsoft Support benötigt.|
 
 Darüber hinaus werden Informationen aus den Azure Information Protection-Clientnutzungsprotokollen und der Azure Information Protection-Überprüfung gesammelt und zusammengefasst, um im Azure-Portal Berichte zu erstellen. Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md).
 
@@ -87,7 +87,7 @@ Zum Herunterladen Ihrer Verwendungs Protokolle verwenden Sie das aipservice-Powe
     
     * Um Protokolle für einen Datumsbereich (z.B. 1.2.2016 bis 14.2.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
-Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z. B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Get-aipserviceuserlog-Befehl ruft dann die Protokolle für diese UTC-Zeitspanne ab.
+Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z.B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Get-aipserviceuserlog-Befehl ruft dann die Protokolle für diese UTC-Zeitspanne ab.
 
 Die kleinste Zeitspanne, die Sie für ein Herunterladen angeben können, ist ein ganzer Tag.
 
@@ -112,7 +112,7 @@ Jedes BLOB ist im erweiterten W3C-Protokollformat. Es beginnt mit den folgenden 
 
 **#Software: RMS**
 
-**#Version: 1.1**
+**#Version: 1,1**
 
 Die erste Zeile identifiziert, dass es sich hierbei um Schutz Protokolle aus Azure Information Protection handelt. Die zweite Zeile gibt an, dass der Rest des BLOBs die Spezifikation der Version 1.1 einhält. Wir empfehlen, dass alle Anwendungen, die diese Protokolle analysieren, diese beiden Zeilen überprüfen, bevor sie die Analyse des Rests des BLOBs fortsetzen.
 
@@ -123,21 +123,21 @@ In der dritten Zeile wird eine Liste von Feldnamen aufgezählt, die durch Tabsto
 Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Felder sind in derselben Reihenfolge wie die vorangehende Zeile, auch durch Tabstopps getrennt. Verwenden Sie die folgende Tabelle, um die Felder zu interpretieren.
 
 
-|   Feldname   | W3C-Datentyp |                                                                                                                                                                          Beschreibung                                                                                                                                                                          |                                                            Beispielwert                                                            |
+|   Feldname   | W3C-Datentyp |                                                                                                                                                                          BESCHREIBUNG                                                                                                                                                                          |                                                            Beispielwert                                                            |
 |----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|      date      |     Date      |                                                                                                                     Das UTC-Datum, an dem die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                                     |                                                             2013-06-25                                                              |
-|      time      |     Zeit      |                                                                                                            Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                            |                                                              21:59:28                                                               |
+|      Datum      |     Datum      |                                                                                                                     Das UTC-Datum, an dem die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                                     |                                                             2013-06-25                                                              |
+|      time      |     Time      |                                                                                                            Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                            |                                                              21:59:28                                                               |
 |     row-id     |     Text      |                                                                           Eindeutige GUID für diesen Protokolldatensatz. Wenn ein Wert nicht vorhanden ist, verwenden Sie zum Identifizieren des Eintrags die Korrelations-ID.<br /><br />Dieser Wert ist hilfreich, wenn Sie Protokolle aggregieren oder in ein anderes Format kopieren.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
 |  request-type  |     Name      |                                                                                                                                                            Der Name der angeforderten RMS-API.                                                                                                                                                            |                                                           AcquireLicense                                                            |
-|    user-id     |    String     |                                                               Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"** , der auch gilt, wenn die Anforderungstypen anonym sind.                                                                |                                                          ‘joe@contoso.com’                                                          |
-|     Ergebnis     |    String     |                                                                                                                  'Success', wenn die Anforderung erfolgreich verarbeitet wurde.<br /><br />Der Fehlertyp in einfachen Anführungszeichen zeigt an, wenn die Anforderung fehlgeschlagen ist.                                                                                                                   |                                                              'Success'                                                              |
+|    user-id     |    String     |                                                               Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.                                                                |                                                          ‘joe@contoso.com’                                                          |
+|     result     |    String     |                                                                                                                  'Success', wenn die Anforderung erfolgreich verarbeitet wurde.<br /><br />Der Fehlertyp in einfachen Anführungszeichen zeigt an, wenn die Anforderung fehlgeschlagen ist.                                                                                                                   |                                                              'Success'                                                              |
 | correlation-id |     Text      |                                                                                                 Eine GUID, die das RMS-Clientprotokoll und das Serverprotokoll für eine bestimmte Anforderung gemeinsam haben.<br /><br />Dieser Wert kann bei der Behandlung von Clientproblemen hilfreich sein.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |
 |   content-id   |     Text      |                                                                      Eine GUID in geschweiften Klammern, die den geschützten Inhalt identifiziert (z. B. ein Dokument).<br /><br />Dieses Feld hat nur dann einen Wert, wenn „request-type“ den Wert „AcquireLicense“ hat, und ist bei allen anderen Anforderungstypen leer.                                                                       |                                               {bb4af47b-cfed-4719-831d-71b98191a4f2}                                                |
 |  owner-email   |    String     |                                                                                                                       Die E-Mail-Adresse des Besitzers des Dokuments.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.                                                                                                                        |                                                          alice@contoso.com                                                          |
-|     issuer     |    String     |                                                                                                                          Die E-Mail-Adresse des Ausstellers des Dokuments. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.                                                                                                                          |                       alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
+|     Issuer (Aussteller)     |    String     |                                                                                                                          Die E-Mail-Adresse des Ausstellers des Dokuments. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.                                                                                                                          |                       alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'                       |
 |  template-id   |    String     |                                                                                                                    ID der Vorlage, die zum Schützen des Dokuments verwendet wurde. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.                                                                                                                     |                                               {6d9371a6-4e2d-4e97-9a38-202233fed26e}                                                |
 |   file-name    |    String     | Dateiname eines geschützten Dokuments, das mit dem Azure Information Protection-Client für Windows nachverfolgt wird. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist. |                                                       TopSecretDocument.docx                                                        |
-| date-published |     Date      |                                                                                                                          Das Datum, an dem das Dokument geschützt wurde.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
+| date-published |     Datum      |                                                                                                                          Das Datum, an dem das Dokument geschützt wurde.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.                                                                                                                           |                                                         2015-10-15T21:37:00                                                         |
 |     c-info     |    String     |                                                                                   Informationen zur Clientplattform, von der die Anforderung gesendet wird.<br /><br />Die spezifische Zeichenfolge variiert in Abhängigkeit von der Anwendung (z. B. Betriebssystem oder Browser).                                                                                   | 'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64' |
 |      c-ip      |    Adresse    |                                                                                                                                                       Die IP-Adresse des Clients, von dem die Anforderung stammt.                                                                                                                                                        |                                                            64.51.202.144                                                            |
 |  admin-aktion  |     Bool      |                                                                                                                                    Gibt an, ob ein Administrator auf die Website zur Dokumentennachverfolgung im Administratormodus zugegriffen hat.                                                                                                                                    |                                                                True                                                                 |
@@ -146,9 +146,9 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 #### <a name="exceptions-for-the-user-id-field"></a>Ausnahmen für das Feld „user-id“
 Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die Anforderung stammt, gibt es zwei Ausnahmen, bei denen der Wert keinem echten Benutzer entspricht:
 
--   Der Wert **'microsoftrmsonline@&lt;IhreMandantenID&gt;.rms.&lt;Region&gt;.aadrm.com'** .
+-   Der Wert **'microsoftrmsonline@&lt;IhreMandantenID&gt;.rms.&lt;Region&gt;.aadrm.com'**.
 
-    Dies zeigt an, dass die Anforderung von einem Office 365-Dienst wie Exchange Online oder SharePoint Online stammt. In der Zeichenfolge steht *&lt;IhreMandantenID&gt;* für die GUID Ihres Mandanten und *&lt;Region&gt;* für die Region, in der Ihr Mandant registriert ist. Beispielsweise steht **Na** für Nordamerika, **Eu** für Europa und **ap** für Asien.
+    Dies gibt an, dass ein Office 365-Dienst, wie z. b. Exchange Online oder Microsoft SharePoint, die Anforderung sendet. In der Zeichenfolge ist * &lt; yourtenantid &gt; * die GUID für Ihren Mandanten und die * &lt; Region &gt; * ist die Region, in der Ihr Mandant registriert ist. **na** steht beispielsweise für Nordamerika, **eu** für Europa und **ap** für Asien.
 
 -   Wenn Sie den RMS-Verbindungsdienst verwenden.
 
@@ -157,7 +157,7 @@ Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die A
 #### <a name="typical-request-types"></a>Typische Anforderungstypen
 Es gibt viele Anforderungs Typen für den Schutzdienst, aber in der folgenden Tabelle sind einige der am häufigsten verwendeten Anforderungs Typen aufgeführt.
 
-|Anforderungstyp|Beschreibung|
+|Anforderungstyp|BESCHREIBUNG|
 |----------------|---------------|
 |AcquireLicense|Ein Client von einem Windows-basierten Computer fordert eine Lizenz für geschützte Inhalte an.|
 |AcquirePreLicense|Ein Client fordert im Auftrag des Benutzers eine Lizenz für geschützte Inhalte an.|
@@ -171,8 +171,8 @@ Es gibt viele Anforderungs Typen für den Schutzdienst, aber in der folgenden Ta
 |DeleteTemplateById|Vom Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage nach Vorlagen-ID zu löschen.|
 |DocumentEventsCsv|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Herunterladen der CSV-Datei für ein einziges Dokument.|
 |ExportTemplateById|Vom Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage anhand einer Vorlagen-ID zu exportieren.|
-|FEErstellenEndUserLicenseV1|Ähnlich wie bei der „AcquireLicense“-Anforderung, aber von mobilen Geräten aus.|
-|FEErstellenPublishingLicenseV1|Identisch mit „Certify“ und „GetClientLicensorCert“ in Kombination, von mobilen Clients aus.|
+|FECreateEndUserLicenseV1|Ähnlich wie bei der „AcquireLicense“-Anforderung, aber von mobilen Geräten aus.|
+|FECreatePublishingLicenseV1|Identisch mit „Certify“ und „GetClientLicensorCert“ in Kombination, von mobilen Clients aus.|
 |FEGetAllTemplates|Von einem Mobilgerät (Front-End) wird ein Aufruf ausgelöst, um die Vorlagen abzurufen.|
 |FindServiceLocationsForUser|Ein Aufruf zum Abfragen von URLs wird ausgelöst, die zum Aufrufen von „Certify“ oder von „AcquireLicense“ verwendet werden.|
 |GetAllDocs|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Laden der Seite **Alle Dokumente** für einen Benutzer oder zum Durchsuchen aller Dokumente des Mandanten. Verwenden Sie diesen Wert in den Feldern „admin-action“ (Adminaktion) und „acting-as-user“ (Fungiert als Benutzer):<br /><br />- „admin-action“ ist leer: Einem Benutzer wird die Seite **Alle Dokumente** für seine eigenen Dokumente angezeigt.<br /><br />- „admin-action“ ist TRUE und „acting-as-user“ ist leer: Einem Administrator werden alle Dokumente für seinen Mandanten angezeigt.<br /><br />- „admin-action“ ist TRUE und „acting-as-user“ ist nicht leer: Einem Administrator wird die Seite **Alle Dokumente** für einen Benutzer angezeigt.|

@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 6d9dc21d2541ab9aeb6d6fc6772781e1c23c1f2e
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
+ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326369"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83746950"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>PDF-Leser, die Microsoft Information Protection unterstützen
 
@@ -31,15 +31,15 @@ Ein PDF-Dokument, das geschützt wurde, enthält wahrscheinlich vertrauliche Inf
 
 Wählen Sie das Gerät aus, das Sie zum Installieren eines PDF-Readers verwenden, der geschützte PDF-Dokumente öffnen kann. Alle diese Leser können geschützte Dokumente öffnen, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen:
 
-- **Computer**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
+- **Computer**: [Windows](protected-pdf-readers-windows.md)  |  [MacOS](protected-pdf-readers-mac.md)
 
-- **Mobile Geräte**: [Android](protected-pdf-readers-android.md) | [IOS](protected-pdf-readers-ios.md)
+- **Mobile Geräte**: [Android](protected-pdf-readers-android.md)  |  [IOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>Unterstützung für vorherige Formate
 
 Die PDF-Reader in der folgenden Tabelle unterstützen geschützte PDF-Dokumente, die eine ppdf-Dateinamenerweiterung und ältere Formate mit der Dateinamenerweiterung ". pdf" aufweisen. 
 
-Derzeit verwenden SharePoint Online und SharePoint (lokal) ein älteres Ordnerformat für PDF-Dokumente in IRM-geschützten Bibliotheken.
+Derzeit verwendet Microsoft SharePoint ein älteres Format für PDF-Dokumente in durch unm geschützten Bibliotheken.
 
 
 |Betriebssystem|Unterstützte Reader|
