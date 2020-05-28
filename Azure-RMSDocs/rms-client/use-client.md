@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 51d5ea830335e86007a3caabbbf724d16c33f97b
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
+ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825447"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84022947"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -90,7 +90,7 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 
 In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
 
-|Feature|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
+|Funktion|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
 |Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
@@ -111,7 +111,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
-|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein  | Nein  |
+|PDF-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein  | Nein  |
 |PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
 |Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja**| Nein |
@@ -124,7 +124,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Unterstützung für Kontowechsel:| Nein  | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
 |Unterstützung für AD RMS:| **Ja** | Nr. <sup>7</sup> | Nein |
-|Externe Inhalts Markierung in App entfernen| **Ja**| Nein| **Ja**|
+|Externe Inhalts Markierung in App entfernen| **Ja**| Nein| Nein |
 
 
 Fußnoten:
