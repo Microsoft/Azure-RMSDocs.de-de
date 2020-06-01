@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30729a98d058b062cbf16c156c1f0f175cfa2164
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 8ebee0a98fecacb015f0e95a60d657c76cfd9329
+ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746797"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "84238726"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -55,7 +55,7 @@ Wenn Sie diesen Benutzern nicht über eine dieser Konfigurationen Zugriff auf di
 
 Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Bezeichnungen weiterhin Bezeichnungen und Richtlinien sowohl im Azure-Portal als auch in den Admin-Centers verwalten.
 
-## <a name="before-you-begin"></a>Vorbereitung
+## <a name="before-you-begin"></a>Voraussetzungen
 
 Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig. Stellen Sie daher sicher, dass Sie die folgenden Änderungen und Überlegungen beachten:
 
@@ -210,7 +210,7 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 
 - Microsoft SharePoint, onedrive for Work-oder School-, onedrive for Home-, Teams-und Office 365-Gruppen (in der Vorschau)
     
-    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites (öffentliche Vorschau)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) und [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive (Public Preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites (öffentliche Vorschau)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) und [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 - Microsoft Defender Advanced Threat Protection
 

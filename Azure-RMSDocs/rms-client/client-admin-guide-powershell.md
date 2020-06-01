@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/19/2020
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef86511649f16740c4611766103b6985f350fdc9
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: f844fa7220a4d608e6757099992c967052367d00
+ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068363"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "84238763"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -26,13 +26,13 @@ ms.locfileid: "80068363"
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Wenn Sie den Azure Information Protection-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch Cmdlets, die Azure Information Protection für die Bezeichnung verwenden. Beispiel:
+Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch Cmdlets, die Azure Information Protection für die Bezeichnung verwenden. Zum Beispiel:
 
-|Cmdlet für die Bezeichnung|Beispielsyntax|
+|Cmdlet für die Bezeichnung|Beispielverwendung|
 |----------------|---------------|
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Für einen freigegebenen Ordner werden alle Dateien mit einer bestimmten Bezeichnung ermittelt.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Überprüfen Sie bei einem freigegebenen Ordner die Dateiinhalte, und versehen Sie Dateien ohne Bezeichnung automatisch gemäß den von Ihnen festgelegten Bedingungen mit Bezeichnungen.|
@@ -40,7 +40,7 @@ Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** insta
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 > [!TIP]
-> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie für den lokalen Computer** > **Computer Konfiguration** > **Administrative Vorlagen** > **alle Einstellungen** > **lange Win32-Pfade aktivieren** 
+> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie**  >  für lokale Computer **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **Alle Einstellungen**  >  **Lange Win32-Pfade aktivieren** 
 > 
 > Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
 >
@@ -67,7 +67,7 @@ Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätz
     - Zutreffend, wenn Sie die ausschließliche Klassifizierung oder die Klassifizierung mit Rights Management-Schutz verwenden: Sie verfügen über ein Abonnement, das Azure Information Protection (z. B. „Enterprise Mobility + Security“) enthält.
     - Zutreffend, wenn Sie den ausschließlichen Schutz mit dem Azure Rights Management-Dienst verwenden: Sie verfügen über ein Abonnement, das den Azure Rights Management-Dienst (z. B. Office 365 E3 und Office 365 E5) enthält.
 
-- [Active Directory Rights Management Services](#active-directory-rights-management-services)
+- [Active Directory-Rechteverwaltungsdienste](#active-directory-rights-management-services)
 
     - Zutreffend, wenn Sie den ausschließlichen Schutz mit der lokalen Version von Azure Rights Management, Active Directory Rights Management Services (AD RMS), verwenden.
 
@@ -77,7 +77,7 @@ Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätz
 Lesen Sie diesen Abschnitt, bevor Sie die PowerShell-Befehle verwenden, wenn Ihre Organisation Azure Information Protection für die Klassifizierung und den Schutz oder nur den Azure Rights Management-Dienst für den Datenschutz verwendet.
 
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ sind weitere Komponenten für die Azure Information Protection-Bezeichnung und den Azure Rights Management-Datenschutzdienst erforderlich:
 
@@ -148,7 +148,7 @@ Führen Sie das Cmdlet Get-aipserviceconfiguration aus dem Azure RMS Windows Pow
 
 1. Wenn dieses Modul nicht bereits auf Ihrem Computer installiert ist, finden Sie weitere Informationen unter [Installieren des aipservice-PowerShell-Moduls](../install-powershell.md).
 
-2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
+2. Starten Sie Windows PowerShell mit der Option **als Administrator ausführen** .
 
 3. Stellen Sie die Verbindung mit dem Azure Rights Management-Dienst mithilfe des Cmdlets `Connect-AipService` her:
     
@@ -185,7 +185,7 @@ Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolService
 
 1. Wenn das MSOnline-Modul nicht bereits auf Ihrem Computer installiert ist, führen Sie `Install-Module MSOnline` aus.
 
-2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
+2. Starten Sie Windows PowerShell mit der Option **als Administrator ausführen** .
 
 3. Verwenden Sie das Cmdlet **Connect-MsolService** zum Herstellen der Verbindung mit Azure AD:
 
@@ -316,7 +316,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiel:
+Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -329,7 +329,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet `Get-RMSFileStatus` verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiel:
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet `Get-RMSFileStatus` verwenden, um zu prüfen, ob die Datei geschützt ist. Zum Beispiel:
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -339,7 +339,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiel:
+Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Zum Beispiel:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -356,7 +356,7 @@ Beachten Sie: Wenn die Rights Management-Vorlagen geändert werden, müssen Sie 
 Lesen Sie diesen Abschnitt, bevor Sie damit beginnen, Dateien mithilfe der PowerShell-Befehle zu schützen bzw. deren Schutz aufzuheben, wenn in Ihrer Organisation nur Active Directory Rights Management Services verwendet werden.
 
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ muss das für den Schutz bzw. die Aufhebung des Schutzes verwendete Konto über die Berechtigungen zum Lesen und Ausführen verfügen, um auf „ServerCertification.asmx“ zugreifen zu können:
 
@@ -432,7 +432,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiel:
+Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -445,7 +445,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiel: 
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Zum Beispiel: 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -455,7 +455,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Sie müssen die Nutzungsrechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen Administrator für AD RMS sein, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiel:
+Sie müssen die Nutzungsrechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen Administrator für AD RMS sein, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Zum Beispiel:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -490,19 +490,19 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com/) an.
 
-2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory** > **Verwalten** Sie > **App-Registrierungen**. 
+2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory**  >  **Manage**  >  **App-Registrierungen**. 
 
 3. Wählen Sie **+ neue Registrierung**aus, um Ihre Web-App/API-Anwendung zu erstellen. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
 
-   - **Name**: `AIPOnBehalfOf`
+   - **Name**:`AIPOnBehalfOf`
         
         Wenn Sie möchten, können Sie auch einen anderen Namen angeben. Der Name muss pro Mandant eindeutig sein.
     
     - **Unterstützte Konto Typen**: **nur Konten in diesem Organisations Verzeichnis**
     
-    - **Umleitungs-URI (optional)** : **Web** und `http://localhost`
+    - **Umleitungs-URI (optional)**: **Web** und`http://localhost`
 
-4. Kopieren Sie im Bereich **aiponbehalfof** den Wert für die **Anwendungs-ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Dieser Wert wird für den *webappid* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+4. Kopieren Sie im Bereich **aiponbehalfof** den Wert für die **Anwendungs-ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `57c3c1c3-abf9-404e-8b2b-4652836c8c66` . Dieser Wert wird für den *webappid* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
 5. Wählen Sie im Bereich **aiponbehalfof** im Menü **Verwalten** die Option **Authentifizierung**aus.
 
@@ -514,69 +514,65 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 9. Geben Sie unter **geheimen Client Schlüssel hinzufügen**Folgendes an, und wählen Sie dann **Hinzufügen**aus:
     
-    - **Beschreibung**: `Azure Information Protection client`
+    - **Beschreibung**:`Azure Information Protection client`
     - **Läuft**ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
 
-9. Kopieren Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
+9. Kopieren Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` . Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
     
     Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
 
 10. Wählen Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Menü **Verwalten** die **Option API**verfügbar machen aus.
 
-11. Wählen Sie im Bereich **aiponbehalfof-macht eine API** den Wert für die **Option Anwendungs-ID-URI** **festlegen** aus, und ändern Sie im Wert Anwendungs- **ID-URI** den Wert **API** zu **http**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+11. Wählen Sie im Bereich **aiponbehalfof-macht eine API** den Wert für die **Option Anwendungs-ID-URI** **festlegen** aus, und ändern Sie im Wert Anwendungs- **ID-URI** den Wert **API** zu **http**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `http://d244e75e-870b-4491-b70d-65534953099e` . 
     
     Wählen Sie **Speichern** aus.
 
 12. Wählen Sie im Bereich **aiponbehalfof-API verfügbar** machen die Option **+ Bereich hinzufügen**aus.
 
 13. Geben Sie im **Bereich Bereich hinzufügen** Folgendes an, und verwenden Sie die vorgeschlagenen Zeichen folgen als Beispiele, und wählen Sie dann **Bereich hinzufügen**aus:
-    - **Bereichs Name**: `user-impersonation`
-    - **Wer kann zustimmen?** : **Administratoren und Benutzer**
-    - **Anzeige Name der Administrator Zustimmung**: `Access Azure Information Protection scanner`
-    - **Beschreibung der Administrator Zustimmung**: `Allow the application to access the scanner for the signed-in user`
-    - **Anzeige Name der Benutzer Zustimmung**: `Access Azure Information Protection scanner`
-    - **Beschreibung der Benutzer Zustimmung**: `Allow the application to access the scanner for the signed-in user`
+    - **Bereichsname**: `user-impersonation`
+    - **Wer kann zustimmen?**: **Administratoren und Benutzer**
+    - **Anzeigename der Administratoreinwilligung**: `Access Azure Information Protection scanner`
+    - **Beschreibung der Administratoreinwilligung**: `Allow the application to access the scanner for the signed-in user`
+    - **Anzeige Name der Benutzer Zustimmung**:`Access Azure Information Protection scanner`
+    - **Beschreibung der Benutzer Zustimmung**:`Allow the application to access the scanner for the signed-in user`
     - **Status**: **aktiviert** (Standard)
 
 
 14. Schließen Sie den Bereich " **aiponbehalfof-API verfügbar** machen" in diesem Bereich.
 
-15. Wählen Sie **API-Berechtigungen**aus.
+15. Wählen Sie **API-Berechtigungen anfordern** aus.
 
-16. Wählen Sie im Bereich **aiponbehalfof** | **API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+16. Wählen Sie im Bereich **aiponbehalfof**  |  **API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
 
 17. Wählen Sie **Azure Right Management**aus, wählen Sie **Delegierte Berechtigungen** aus, und wählen Sie dann **geschützte Inhalte für Benutzer erstellen und zugreifen aus**.
 
 18. Klicken Sie auf **Berechtigung hinzufügen**.
 
-19. Wählen Sie im **Bereich API-Berechtigungen** im Bereich **Zustimmung erteilen** die Option **Administrator Zustimmung für <your tenant name>erteilen aus** , und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
+19. Wählen Sie im **Bereich API-Berechtigungen** im Abschnitt **Zustimmung erteilen** die Option **Administrator Zustimmung erteilen für <your tenant name> ** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
 
 20. Wählen Sie im Bereich **App-Registrierungen** die Option **+ neue Anwendungs Registrierung** aus, um die native Anwendung jetzt zu erstellen.
 
 21. Geben Sie im Bereich **Anwendung registrieren** die folgenden Einstellungen an, und klicken Sie dann auf **registrieren**:
-    - **Name**: `AIPClient`
+    - **Name**:`AIPClient`
     - **Unterstützte Konto Typen**: **nur Konten in diesem Organisations Verzeichnis**
-    - **Umleitungs-URI (optional)** : **öffentlicher Client (Mobile & Desktop)** und `http://localhost`
+    - **Umleitungs-URI (optional)**: **öffentlicher Client (Mobile & Desktop)** und`http://localhost`
 
-22. Kopieren Sie im Bereich **aipclient** den Wert der Anwendungs- **ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+22. Kopieren Sie im Bereich **aipclient** den Wert der Anwendungs- **ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` . 
     
     Dieser Wert wird für den nativeappid-Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
 23. Wählen Sie im Bereich **aipclient** im Menü **Verwalten** die Option **Authentifizierung**aus.
 
-24. Geben Sie im Bereich **aipclient-Authentifizierung** Folgendes an, und wählen Sie dann **Speichern**aus:
-    - Wählen Sie im Abschnitt **Erweiterte Einstellungen** die Option **ID-Token**aus.
-    - Wählen Sie im Abschnitt **Standard Clienttyp** die Option **Ja**aus.
+24. Wählen Sie im Bereich **aipclient-Authentifizierung** im Menü **Verwalten** die Option **API-Berechtigungen**aus.
 
-25. Wählen Sie im Bereich **aipclient-Authentifizierung** im Menü **Verwalten** die Option API- **Berechtigungen**aus.
+25. Wählen Sie im Bereich **aipclient-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
 
-26. Wählen Sie im Bereich **aipclient-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+26. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs**aus.
 
-27. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs**aus.
+27. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
 
-28. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
-
-29. Wählen Sie im **Bereich API-Berechtigungen** im Bereich **Zustimmung erteilen** die Option **Administrator Zustimmung für \<Ihres Mandanten *namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
+28. Wählen Sie im **Bereich API-Berechtigungen** im Abschnitt **Zustimmung erteilen** die Option **Administrator Zustimmung erteilen für \<*your tenant name*> ** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
 
 Sie haben nun die Konfiguration der beiden apps abgeschlossen, und Sie verfügen über die Werte, die Sie zum Ausführen von [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *webappid*, *webappkey* und *nativeappid*benötigen. Aus unseren Beispielen:
 
@@ -630,7 +626,7 @@ Allgemeine Schritte:
 
 2. Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (eine Signatur erhöht die Sicherheit), muss Windows PowerShell auf dem Computer konfiguriert werden, auf dem die Befehle zum Bezeichnen ausgeführt werden. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: `Set-ExecutionPolicy RemoteSigned`. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts, wenn diese auf diesem Computer gespeichert sind (weniger sicher).
 
-    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie unter [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in der PowerShell-Dokumentationsbibliothek.
+    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie in der PowerShell-Dokumentationsbibliothek unter [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 3. Kopieren Sie dieses PowerShell-Skript auf den Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, und löschen Sie das Original auf Ihrem Computer. Beispiel: Sie kopieren das PowerShell-Skript in „C:\Scripts\Aipauthentication.ps1“ auf einem Windows Server-Computer.
 
@@ -640,9 +636,9 @@ Allgemeine Schritte:
 
 2. Öffnen Sie auf dem Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, die Aufgabenplanung, und erstellen Sie einen neuen Task. Konfigurieren Sie diesen Task so, dass er als Dienstkonto ausgeführt wird, mit dem Dateien bezeichnet und geschützt werden. Konfigurieren Sie anschließend die folgenden Werte für die **Aktionen**:
 
-   - **Aktion**: `Start a program`
-   - **Programm/Skript**: `Powershell.exe`
-   - **Argumente hinzufügen (optional)** : `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **Aktion**:`Start a program`
+   - **Programm/Skript**:`Powershell.exe`
+   - **Argumente hinzufügen (optional)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      Geben Sie als Argumentzeile Ihren eigenen Pfad und Dateinamen an, wenn diese vom Beispiel abweichen.
 
@@ -657,7 +653,7 @@ Allgemeine Schritte:
     Löschen Sie optional den Task. Wenn das Token abläuft, müssen Sie diese Schritte wiederholen. Daher ist es unter Umständen praktischer, den konfigurierten Task zu behalten, damit er einfacher erneut ausgeführt werden kann, wenn Sie das neue PowerShell-Skript mit dem neuen Tokenwert kopieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Zum Beispiel: 
 
     Get-Help Get-RMSTemplate -online
 
@@ -667,7 +663,7 @@ Weitere Informationen, die möglicherweise zur Unterstützung des Azure Informat
 
 - [Clientdateien und Nutzungsprotokollierung](client-admin-guide-files-and-logging.md)
 
-- [Dokumentenverfolgung](client-admin-guide-document-tracking.md)
+- [Dokumentkontrolle](client-admin-guide-document-tracking.md)
 
 - [Unterstützte Dateitypen](client-admin-guide-file-types.md)
 

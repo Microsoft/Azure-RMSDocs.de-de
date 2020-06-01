@@ -4,7 +4,7 @@ description: Verwendung des Azure Rights Management-Diensts über AIP zum Schutz
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/04/2019
+ms.date: 05/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 113a69605c1971047c7afef6a5f153ef5026d251
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 3dcb4d386e5a7c6fca1506f04b478f93da251f5a
+ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747193"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "84238752"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -81,10 +81,10 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > 
 > - Die gleichzeitige gemeinsame Bearbeitung eines Dokuments durch mehrere Personen wird nicht unterstützt. Um ein Dokument in einer durch IRM geschützten Bibliothek zu bearbeiten, müssen Sie es zuerst auschecken und herunterladen und können es dann in Ihrer Office-Anwendung bearbeiten. Daher kann nur jeweils eine Person ein Dokument bearbeiten.
 
-Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder onedrive hochladen, können Sie bei Bibliotheken, die nicht durch nicht-Schutz geschützt sind, nicht mit dieser Datei arbeiten: Zusammenstellung, Office für das Web, Suche, Dokument Vorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
+Wenn Sie für Bibliotheken, die nicht durch einen unm-Schutz geschützt sind, den Schutz nur auf eine Datei anwenden, die Sie dann in SharePoint oder onedrive hochladen, können Sie die folgenden Aktionen nicht ausführen: Co-Authoring, Office für das Web, Search, Dokument Vorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (DLP).
 
-> [!TIP]
-> Verwenden Sie anstelle von SharePoint-unm die Verwendung von Vertraulichkeits Bezeichnungen, die Verschlüsselung anwenden, und aktivieren Sie dann die [Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive (Public Preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> [!IMPORTANT]
+> SharePoint-IRiM kann in Kombination mit Vertraulichkeits Bezeichnungen verwendet werden, die den Schutz anwenden. Wenn Sie beide Funktionen gleichzeitig verwenden, ändert sich das Verhalten für geschützte Dateien. Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Wenn Sie den SharePoint IRM-Schutz verwenden, wendet der Azure Rights Management-Dienst Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen dazu, wie Dokumente vor dem herunterladen geschützt werden, finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in onedrive und SharePoint](https://technet.microsoft.com/library/dn905447.aspx) .
 
