@@ -1,32 +1,31 @@
 ---
 title: Konfigurieren optischer Kennzeichnungen für eine Azure Information Protection-Bezeichnung – AIP
 description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 64f1d03931e346d7f27ce35a3837c336a4468e7a
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: a0a0f5e712c0313b281fc2bafa64719ed61d2e03
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746829"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249860"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-
->[!NOTE] 
+>[!NOTE]
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen. 
+Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
 
 Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
 
@@ -35,15 +34,15 @@ Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
 - Wasserzeichen gelten für Word, Excel und PowerPoint:
 
     - Excel: Wasserzeichen sind nur im Modus „Seitenlayout“ und „Seitenansicht“ sichtbar sowie beim Drucken.
-    
+
     - PowerPoint: Wasserzeichen werden als Hintergrundbild auf den Folienmaster angewendet. Stellen Sie sicher, dass auf der Registerkarte **Ansicht** im **Folienmaster** die Option **Hintergrundbilder ausblenden** aktiviert ist.
 
 - Mehrere Zeilen werden für Wasserzeichen und für Kopf- und Fußzeilen in Word, Excel und PowerPoint unterstützt. Wenn Sie mehrere Zeilen für die Kopf- oder Fußzeile einer Bezeichnung angeben, die in Outlook angewendet wird, werden die Zeilen verkettet. Ziehen Sie in diesem Szenario die Verwendung der Konfiguration zum [Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) in Betracht.
 
 - Maximale Zeichenfolgenlänge:
-    
+
     - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Dieser Grenzwert schließt Zeichen ein, die nicht in Excel angezeigt werden, wie z.B. Formatierungscodes. Wenn dieses Limit erreicht wurde, wird die eingegebene Zeichenfolge in Excel nicht angezeigt.
-    
+
     - Die maximale Zeichenfolgenlänge für Wasserzeichen beträgt 255 Zeichen.
 
 - Sie können einfach eine Textzeichenfolge angeben oder [Variablen](#using-variables-in-the-text-string) verwenden, um die Textzeichenfolge dynamisch zu erstellen, wenn die Kopfzeile, die Fußzeile oder das Wasserzeichen angewendet wird.
@@ -61,7 +60,7 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 - In einer Office-App werden die visuellen Kennzeichnungen aus einer Bezeichnung angewendet, wenn die Bezeichnung angewendet wird. Visuelle Kennzeichnungen werden ebenfalls angewendet, wenn ein bezeichnetes Dokument geöffnet und erstmals gespeichert wird.  
 
 - Wenn ein Dokument über den Datei-Explorer, über PowerShell oder über die Azure Information Protection-Überprüfung bezeichnet wird, werden optische Kennzeichnungen nicht sofort übernommen. Sie werden vom Azure Information Protection-Client angewendet, wenn das Dokument in einer Office-App geöffnet und erstmals gespeichert wird.
-    
+
     Eine Ausnahme stellt die Verwendung von [Autosave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) mit Office-Apps für Dateien dar, die in Microsoft SharePoint, onedrive for Work oder School oder onedrive for Home gespeichert sind: Wenn die automatische Speicherung aktiviert ist, werden visuelle Kennzeichnungen nicht angewendet, es sei denn, Sie konfigurieren die [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) , um die Klassifizierung so zu aktivieren, dass Sie fortlaufend im Hintergrund ausgeführt wird. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>So konfigurieren Sie visuelle Kennzeichnungen für eine Bezeichnung
@@ -104,13 +103,11 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 - `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
 > [!NOTE]
->Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet.
+>Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet. Wenn Sie z. b. die Zeichenfolge `Document: ${Item.Name}  Classification: ${Item.Label}` für die Fußzeile der **allgemeinen** Bezeichnung angeben, wird der auf ein Dokument namens "Project. docx" angewendete FooterText **Document: Project. docx Classification: General**.
 
-Beispiel: Wenn Sie die Zeichenfolge `Document: ${Item.Name}  Classification: ${Item.Label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
-
-> [!NOTE]
-> Die Verwendung der `${User.Name}` Variablen und/oder wird `${User.PrincipalName}` zurzeit vom Azure Information Protection Unified-Bezeichnungs Client nicht unterstützt. 
-
+<!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
+> Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
+-->
 >[!TIP]
 > Sie können auch einen [Feldcode verwenden, um den](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) Bezeichnungs Namen in ein Dokument oder eine Vorlage einzufügen.
 
@@ -158,7 +155,7 @@ Wenn die angegebene Schriftart nicht verfügbar ist, verwendet der Client die Sc
 
 Sie können aus der Liste der Farben auswählen oder eine benutzerdefinierte Farbe eingeben, indem Sie ein hexadezimales Tripel für die Komponenten Rot, Grün und Blau (RGB) der Farbe eingeben. Beispielsweise ist **#40e0d0** der RGB-Hexadezimalwert für türkis. 
 
-Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der Seite [ \< Color>](https://developer.mozilla.org/docs/Web/CSS/color_value) aus den MSDN-Webdocs. Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
+Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) Seite der MSDN-Webdokumentation. Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

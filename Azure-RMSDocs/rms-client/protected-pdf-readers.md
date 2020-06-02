@@ -1,10 +1,10 @@
 ---
 title: Reader für geschützte PDF-Dokumente für Microsoft Azure Information Protection
 description: Installieren eines Readers für PDF-Dokumente, die für Klassifizierung und Schutz bezeichnet werden
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,18 +14,20 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: c3501f151d8c894abc92408192a7ef86d28ad8df
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 755424c1f3c813ca517ae4afcbe1e4d7a134276f
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746950"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250042"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>PDF-Leser, die Microsoft Information Protection unterstützen
 
 Wenn Sie ein PDF-Dokument öffnen müssen, das von Microsoft Information Protection geschützt ist, verwenden Sie die folgenden Links und Informationen.
 
-Ein PDF-Dokument, das geschützt wurde, enthält wahrscheinlich vertrauliche Informationen. Zur zusätzlichen Sicherheit wird das Dokument verschlüsselt, sodass nicht autorisierte Personen es nicht lesen können. Um dieses Dokument zu öffnen, benötigen Sie einen Reader (manchmal auch als Viewer bezeichnet), mit dem überprüft wird, ob Ihnen Berechtigungen zum Öffnen des Dokuments erteilt wurden, und dann für Sie entschlüsselt werden.
+Ein PDF-Dokument, das geschützt wurde, enthält wahrscheinlich vertrauliche Informationen. Zur zusätzlichen Sicherheit wird das Dokument verschlüsselt, sodass nicht autorisierte Personen es nicht lesen können, und dass autorisierte Personen keine Bildschirme oder Screenshots freigeben können, die das Dokument anzeigen. 
+
+Um dieses Dokument zu öffnen, benötigen Sie einen Reader (manchmal auch als Viewer bezeichnet), mit dem überprüft wird, ob Ihnen Berechtigungen zum Öffnen des Dokuments erteilt wurden, und dann für Sie entschlüsselt werden.
 
 ## <a name="install-pdf-readers-for-your-device"></a>Installieren von PDF-Lesern für Ihr Gerät
 

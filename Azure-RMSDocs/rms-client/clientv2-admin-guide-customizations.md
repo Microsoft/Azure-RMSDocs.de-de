@@ -1,10 +1,10 @@
 ---
 title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-Beschriftungs Client
 description: Informationen zum Anpassen des Azure Information Protection Unified Bezeichnung-Clients für Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/25/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fdfbd6bded95a8fc2c156a34fb17f5241b65cf70
-ms.sourcegitcommit: 47a6def47b8a121eb5aa8071863a765bfc31fc9d
+ms.openlocfilehash: c1e662644bd84fd1ec6ba40d838ace505693fd68
+ms.sourcegitcommit: a4e367f8a51074a4cbde14943ca4d24918138ef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "83825462"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256592"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -120,7 +120,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
-|Additionalpprefixextensions|[Unterstützung für das Ändern von \< ext>. Pfile-zu-P- \< ext-> mithilfe dieser erweiterten Eigenschaft](#additionalpprefixextensions)
+|Additionalpprefixextensions|[Unterstützung für das Ändern von \<EXT> . Pfile in P mit \<EXT> dieser erweiterten Eigenschaft](#additionalpprefixextensions)
 |Attachmentaction|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |Attachmentaktiontip|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |Disablemandatoryinoutlook|[Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling)
@@ -149,6 +149,8 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |Runauditinformationtypesdiscovery|[Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
+|Scannerssattributestoskip | [Dateien während Scans in Abhängigkeit von Dateiattributen überspringen oder ignorieren](#skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview)
+|Usecopyandkonservientschsowner | [Beibehalten von NTFS-Besitzern während der Bezeichnung](#preserve-ntfs-owners-during-labeling-public-preview)
 
 PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Richtlinien Einstellungen für eine Bezeichnungs Richtlinie mit dem Namen "Global":
 
@@ -225,7 +227,7 @@ Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-
 
 Wenn Sie diese Einstellung konfigurieren, wird das [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) -Cmdlet **Set-aipfilelabel** aktiviert, um das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien zu ermöglichen.
 
-- Schlüssel: **Set-labelpolicy**
+- Schlüssel: **enablecontainersupport**
 
 - Wert: **true**
 
@@ -243,7 +245,7 @@ Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen fo
 
 - Schlüssel: **OutlookDefaultLabel**
 
-- Wert: Bezeichnungs- \< **GUID**> oder **None**
+- Wert: \<**label GUID**> oder **None**
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
 
@@ -261,14 +263,14 @@ Sie können dieses Standardverhalten für eine ausgewählte Bezeichnungs Richtli
 
 - Schlüssel: **pfilesupportedextensions**
 
-- Wert: ** \< Zeichen folgen Wert>** 
+- Wert**\<string value>** 
 
 Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu identifizieren:
 
 | Zeichenfolgenwert| Client| Scanner|
 |-------------|-------|--------|
 |\*|Standardwert: Schutz auf alle Dateitypen anwenden|Anwenden von Schutz auf alle Dateitypen|
-|\<NULL-Wert>| Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien| Standardwert: Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien|
+|\<null value>| Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien| Standardwert: Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien|
 |ConvertTo-JSON (". jpg", ". png")|Zusätzlich zu den Office-Dateitypen und PDF-Dateien, wenden Sie den Schutz auf die angegebenen Dateinamen Erweiterungen an. | Zusätzlich zu den Office-Dateitypen und PDF-Dateien, wenden Sie den Schutz auf die angegebenen Dateinamen Erweiterungen an.
 
 Beispiel 1: PowerShell-Befehl für den Unified Client zum Schutz von nur Office-Dateitypen und PDF-Dateien, bei denen die Bezeichnung "Client" lautet:
@@ -287,19 +289,19 @@ Mit dieser Einstellung können Sie ändern, welche Dateitypen geschützt sind, a
 
 ### <a name="additionalpprefixextensions"></a>Additionalpprefixextensions
 
-Der Unified-Bezeichnungs Client unterstützt das Ändern von \< ext>. Pfile-zu-P- \< ext> mithilfe der erweiterten Eigenschaft **additionalpprefixextensions**. Diese erweiterte Eigenschaft wird mit einem Rechtsklick, PowerShell und Scanner unterstützt. Alle apps weisen ein ähnliches Verhalten auf.   
+Der Unified-Bezeichnungs Client unterstützt das Ändern von \<EXT> . Pfile in P \<EXT> mithilfe der erweiterten Eigenschaft **additionalpprefixextensions**. Diese erweiterte Eigenschaft wird mit einem Rechtsklick, PowerShell und Scanner unterstützt. Alle apps weisen ein ähnliches Verhalten auf.   
 
 - Schlüssel: **additionalpprefixextensions**
 
-- Wert: ** \< Zeichen folgen Wert>** 
+- Wert**\<string value>** 
 
 Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu identifizieren:
 
 | Zeichenfolgenwert| Client und Scanner|
 |-------------|---------------|
-|\*|Alle Pfile-Erweiterungen werden zu P \< ext>|
-|\<NULL-Wert>| Der Standardwert verhält sich wie der Standardschutz Wert.|
-|ConvertTo-JSON (". DWG", ". zip")|Zusätzlich zur vorherigen Liste werden ". DWG" und ". zip" zu P \< ext>| 
+|\*|Alle Pfile-Erweiterungen werden P\<EXT>|
+|\<null value>| Der Standardwert verhält sich wie der Standardschutz Wert.|
+|ConvertTo-JSON (". DWG", ". zip")|Zusätzlich zur vorherigen Liste werden ". DWG" und ". zip" zu "P".\<EXT>| 
 
 Beispiel 1: PowerShell-Befehl verhält sich wie das Standardverhalten, bei dem der Schutz von ". DWG" zu ". dwg. Pfile" wird:
 
@@ -313,7 +315,7 @@ Beispiel 3: PowerShell-Befehl zum Ändern von ". DWG" in ". pdwg" Wenn Sie diese
 
     Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
 
-Mit dieser Einstellung werden die folgenden Erweiterungen (". txt", ". xml", ". bmp", ". JT", ". jpg", ". JPEG", ". jpe", ". jif", ". JFI", ". JFI", ". png", ". TIF", ". TIFF", ". gif") wird immer zu P \< ext>. Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
+Mit dieser Einstellung werden die folgenden Erweiterungen (". txt", ". xml", ". bmp", ". JT", ". jpg", ". JPEG", ". jpe", ". jif", ". jff", ". JFI", ". png", ". TIF", ". TIFF", ". gif") werden immer P \<EXT> . Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
 **Additionalpprefixextensions** funktioniert nur, wenn der Schutz von pfiles mit der erweiterten Eigenschaft " [**pfilesupportedextension**](#pfilesupportedextension) " aktiviert ist. 
 
 Beispielsweise in einem Fall, in dem der folgende Befehl verwendet wird:
@@ -342,8 +344,155 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen
 
-> [!NOTE]
-> Diese Konfiguration verfügt zurzeit über eine bekannte Einschränkung und wird in einer zukünftigen Version erneut veröffentlicht. 
+Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Es gibt zwei Methoden, mit denen Klassifizierungen aus anderen Bezeichnungs Lösungen entfernt werden können. Die erste Methode entfernt alle Formen aus Word-Dokumenten, bei denen der Shape-Name mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove**definiert wurde. mit der zweiten Methode können Sie textbasierte Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten entfernen oder ersetzen, wie in der erweiterten Eigenschaft **removeexternalcontentmarkinginapp** 
+
+### <a name="use-the-wordshapenametoremove-advanced-property"></a>Verwenden der erweiterten Eigenschaft wordshapenametoremove
+
+*Die Eigenschaft **wordshapenametoremove** Advanced wird von Version 2.6.101.0 und höher unterstützt.*
+
+Mit dieser Einstellung können Sie formbasierte Bezeichnungen aus Word-Dokumenten entfernen oder ersetzen, wenn diese visuellen Kennzeichnungen von einer anderen Bezeichnungs Lösung angewendet wurden. Die Form enthält z. b. den Namen einer alten Bezeichnung, die Sie nun zu Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Form zu verwenden.
+
+Um diese erweiterte Eigenschaft verwenden zu können, müssen Sie den Namen der Form im Word-Dokument suchen und diese dann in der erweiterten Eigenschaften Liste von **wordshapenametoremove** definieren. Der Dienst entfernt eine beliebige Form in Word, die mit einem Namen beginnt, der in der Liste der Formen in dieser erweiterten Eigenschaft definiert ist.
+
+Vermeiden Sie das Entfernen von Formen, die den zu ignorierenden Text enthalten, indem Sie den Namen aller zu entfernenden Formen definieren und das Überprüfen des Texts in allen Formen vermeiden, bei dem es sich um einen ressourcenintensiven Prozess handelt.
+
+Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wortformen angeben und Word im Schlüsselwert **removeexternalcontentmarkinginapp** enthalten ist, werden alle Formen auf den Text überprüft, den Sie im Wert von **externalcontentmarkingtoremove** angeben. 
+
+So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen:
+
+1. Zeigen Sie in Word den **Auswahl** Bereich an: Registerkarte " **Home** " > **Bearbeitungs** Gruppe > **Wählen Sie** die Option > **Auswahl**Bereich aus.
+
+2. Wählen Sie die Form auf der Seite aus, die Sie zum Entfernen markieren möchten. Der Name der von Ihnen markierten Form ist nun im Bereich **Auswahl** hervorgehoben.
+
+Verwenden Sie den Namen der Form, um einen Zeichen folgen Wert für den Schlüssel * * * * wordshapenametoremove * * * * anzugeben. 
+
+Beispiel: der Name der Form ist **DC**. Geben Sie den Wert `dc` an, um die Form mit diesem Namen zu entfernen.
+
+- Schlüssel: **wordshapenametoremove**
+
+- Wert: \<**Word shape name**> 
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+Wenn Sie mehr als eine Wort Form entfernen möchten, geben Sie so viele Werte an, wie die zu entfernenden Formen vorhanden sind.
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft
+Mit dieser Einstellung können Sie textbasierte Kopf-oder Fußzeilen aus Dokumenten entfernen oder ersetzen, wenn diese visuellen Kennzeichnungen durch eine andere Bezeichnungs Lösung angewendet wurden. Beispielsweise enthält die alte Fußzeile den Namen einer alten Bezeichnung, die Sie nun zu den Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Fußzeile zu verwenden.
+
+Wenn der Unified Label-Client diese Konfiguration in der Richtlinie abruft, werden die alten Kopf-und Fußzeilen entfernt oder ersetzt, wenn das Dokument in der Office-App geöffnet wird und jede Vertraulichkeits Bezeichnung auf das Dokument angewendet wird.
+
+Diese Konfiguration wird für Outlook nicht unterstützt. Beachten Sie außerdem, dass die Verwendung mit Word, Excel und PowerPoint sich negativ auf die Leistung dieser Apps für Benutzer auswirken kann. Mithilfe der Konfiguration können Sie Einstellungen für jede einzelne Anwendung definieren, z.B. die Suche nach Text in Kopf- oder Fußzeilen von Word-Dokumenten, jedoch nicht von Excel-Tabellen oder PowerPoint-Präsentationen.
+
+Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich, die Office-Anwendungs Typen (**W**Ord, E**X**cel, **P**owerpoint) nur auf die zu durchsuchenden Anwendungen einzuschränken.
+Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
+- Key: **RemoveExternalContentMarkingInApp**
+
+- Wert: \<**Office application types WXP**> 
+
+Beispiele:
+
+- Geben Sie **W** an, um nur Word-Dokumente zu durchsuchen.
+
+- Geben Sie **WP** an, um Word-Dokumente und PowerPoint-Präsentationen zu durchsuchen.
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
+
+Sie benötigen dann mindestens eine weitere erweiterte Clienteinstellung, **ExternalContentMarkingToRemove**, um die Inhalte der Kopf- oder Fußzeile anzugeben und diese zu entfernen oder zu ersetzen.
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Konfigurieren von ExternalContentMarkingToRemove
+
+Wenn Sie den Zeichenfolgenwert für den Schlüssel **ExternalContentMarkingToRemove** angeben, stehen drei Optionen zur Verfügung, die reguläre Ausdrücke verwenden:
+
+- Partielle Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
+
+    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten diese Kopf- oder Fußzeilen vollständig entfernen. Geben Sie den Wert `*TEXT*` an.
+
+- Vollständige Übereinstimmung, um nur bestimmte Wörter aus der Kopf- oder Fußzeile zu entfernen.
+
+    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten nur das Wort **TEXT** entfernen, wodurch die Zeichenfolge der Kopf- oder Fußzeile **TO REMOVE** entspricht. Geben Sie den Wert `TEXT ` an.
+
+- Vollständige Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
+
+    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten die Kopf- oder Fußzeilen entfernen, die genau diese Zeichenfolge enthalten. Geben Sie den Wert `^TEXT TO REMOVE$` an.
+
+
+Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß- und Kleinschreibung. Die maximale Zeichen folgen Länge beträgt 255 Zeichen und darf keine Leerzeichen enthalten. 
+
+Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder Tabstopps enthalten können, wird die Zeichenfolge, die Sie für einen Begriff oder einen Satz angeben, möglicherweise nicht erkannt. Geben Sie nach Möglichkeit immer ein einzelnes unterscheidendes Wort für den Wert an, und testen Sie die Ergebnisse, bevor Sie diese für die Produktion bereitstellen.
+
+Geben Sie für dieselbe Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
+
+- Key: **ExternalContentMarkingToRemove**
+
+- Wert: \<**string to match, defined as regular expression**> 
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
+
+#### <a name="multiline-headers-or-footers"></a>Mehrzeilige Kopf- oder Fußzeilen
+
+Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstellen Sie einen Schlüssel und einen Wert für jede Zeile. Angenommen, folgende Fußzeile mit zwei Zeilen ist vorhanden:
+
+**The file is classified as Confidential**
+
+**Label applied manually**
+
+Um diese mehrzeilige Fußzeile zu entfernen, erstellen Sie die folgenden zwei Einträge für die gleiche Bezeichnungs Richtlinie:
+
+- Key: **ExternalContentMarkingToRemove**
+
+- Schlüsselwert 1: ** \* vertraulich***
+
+- Schlüsselwert 2: ** \* Bezeichnung angewendet*** 
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
+
+
+#### <a name="optimization-for-powerpoint"></a>Optimierung für PowerPoint
+
+In PowerPoint werden Fußzeilen als Formen implementiert. Wenn Sie vermeiden möchten, dass Formen entfernt werden, die den angegeben Text enthalten, jedoch keine Kopf- oder Fußzeilen sind, verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **PowerPointShapeNameToRemove**. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
+
+Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
+
+So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:
+
+1. Zeigen Sie in PowerPoint den Bereich **Auswahl** an: **Format** > **Anordnen** > **Auswahlbereich**.
+
+2. Wählen Sie die Form auf der Folie aus, die die Kopf- oder Fußzeile enthält. Der Name der ausgewählten Form wird nun im Bereich **Auswahl** hervorgehoben.
+
+Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel **PowerPointShapeNameToRemove** anzugeben. 
+
+Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
+
+- Key: **PowerPointShapeNameToRemove**
+
+- Wert: \<**PowerPoint shape name**> 
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+
+Wenn Sie mehr als eine PowerPoint-Form entfernen möchten, geben Sie so viele Werte an, wie die zu entfernenden Formen vorhanden sind.
+
+Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüft. Wenn Sie diese Suche auf alle Folien ausweiten möchten (dieser Prozess ist jedoch wesentlich ressourcenintensiver), verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **RemoveExternalContentMarkingInAllSlides**:
+
+- Key: **RemoveExternalContentMarkingInAllSlides**
+
+- Wert: **true**
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer
 
@@ -403,7 +552,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Schlüssel 2: **attachmentaktiontip**
 
-- Schlüsselwert 2: "angepasste QuickInfo- \<>"
+- Schlüsselwert 2: " \<customized tooltip> "
 
 Die angepasste QuickInfo unterstützt nur eine einzige Sprache.
 
@@ -421,7 +570,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Key: **ReportAnIssueLink**
 
-- Wert: ** \< http-Zeichenfolge>**
+- Wert**\<HTTP string>**
 
 Beispielwert für eine Website: `https://support.contoso.com`
 
@@ -467,19 +616,19 @@ Beispiel Wert für mehrere Bezeichnungs-GUIDs als durch Trennzeichen getrennte Z
     
     - Schlüssel: **outlookwarnuntreudkollaborationlabel**
     
-    - Wert: \< **Bezeichnungs-GUIDs, durch Trennzeichen getrennt**>
+    - Wert: \<**label GUIDs, comma-separated**>
 
 - Legitimationsmeldungen:
     
     - Schlüssel: **outlookjustilyuntreudkollaborationlabel**
     
-    - Wert: \< **Bezeichnungs-GUIDs, durch Trennzeichen getrennt**>
+    - Wert: \<**label GUIDs, comma-separated**>
 
 - Blockiermeldungen:
     
     - Schlüssel: **outlookblockuntreudkollaborationlabel**
     
-    - Wert: \< **Bezeichnungs-GUIDs, durch Trennzeichen getrennt**>
+    - Wert: \<**label GUIDs, comma-separated**>
 
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
@@ -504,19 +653,19 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
     
     - Schlüssel: **outlookwarntreuddomains**
     
-    - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
+    - Wert**\<**domain names, comma separated**>**
 
 - Legitimationsmeldungen:
     
     - Schlüssel: **outlookjustifytreuddomains**
     
-    - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
+    - Wert**\<**domain names, comma separated**>**
 
 - Blockiermeldungen:
     
     - Schlüssel: **outlookblocktreuhänddomains**
     
-    - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
+    - Wert**\<**domain names, comma separated**>**
 
 Sie haben beispielsweise die Einstellung für den erweiterten Client " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookjustifytreuddomains** " und " **contoso.com**" an. Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, john@sales.contoso.com Wenn er **vertraulich \ alle Mitarbeiter** heißt, aber das Senden einer e-Mail mit derselben Bezeichnung an ein Gmail-Konto blockiert wird.
 
@@ -573,7 +722,7 @@ Geben Sie für dieselbe Bezeichnungs Richtlinie die folgenden Zeichen folgen ein
 
 - Key: **outlookoverride unlabeledcollaborationextensions**
 
-- Wert: **\<** Dateinamen Erweiterungen zum Anzeigen von Nachrichten, durch Kommas getrennt**>**
+- Wert**\<**file name extensions to display messages, comma separated**>**
 
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
@@ -709,7 +858,7 @@ Wenn Sie den Wert zu Testzwecken zum ersten Mal konfigurieren, empfehlen wir Ihn
 
 - Schlüssel: **Scannerkonfigurations-Level**
 
-- Wert: ** \< Anzahl der gleichzeitigen Threads>**
+- Wert**\<number of concurrent threads>**
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Scanner" hat:
 
@@ -925,7 +1074,7 @@ Wenn Sie einer Bezeichnung eine untergeordnete Bezeichnung hinzufügen, können 
 
 - Schlüssel: **defaultsublabelid**
 
-- Wert: \< GUID für untergeordnete Bezeichnung>
+- Wert: \<sublabel GUID>
 
 Beispiel für einen PowerShell-Befehl, bei dem die übergeordnete Bezeichnung "Confidential" heißt und die untergeordnete Bezeichnung "All Employees" eine GUID von 8faka7b8-8d20-48a3-8ea2-0F 96310a848e:
 
@@ -961,13 +1110,13 @@ Diese Konfiguration verwendet [Erweiterte Einstellungen](#how-to-configure-advan
 
 Verwenden Sie diese erweiterte Einstellung, um eine Farbe für eine Bezeichnung festzulegen. Um die Farbe anzugeben, geben Sie einen Hexadezimal Code für die Komponenten rot, grün und blau (RGB) der Farbe ein. Beispielsweise ist #40e0d0 der RGB-Hexadezimalwert für türkis.
 
-Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der Seite [ \< Color>](https://developer.mozilla.org/docs/Web/CSS/color_value) aus den MSDN-Webdocs. Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
+Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) Seite der MSDN-Webdokumentation. Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
 
 Um die erweiterte Einstellung für die Farbe einer Bezeichnung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnung ein:
 
 - Schlüssel: **Farbe**
 
-- Wert: RGB-hexadezimal \< Wert>
+- Wert: \<RGB hex value>
 
 Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Public" lautet:
 
@@ -1054,6 +1203,56 @@ Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
 - Ablauf **Verfolgung**: ausführliche Protokollierung (die Standardeinstellung für Clients).
 
 Mit dieser Registrierungs Einstellung werden die Informationen, die an Azure Information Protection für die [zentrale Berichterstattung](../reports-aip.md)gesendet werden, nicht geändert.
+
+## <a name="skip-or-ignore-files-during-scans-depending-on-file-attributes-public-preview"></a>Dateien während Scans in Abhängigkeit von Dateiattributen überspringen oder ignorieren (öffentliche Vorschau)
+
+Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Standardmäßig scannt der Azure Information Protection Unified-Beschriftungs Scanner alle relevanten Dateien. Möglicherweise möchten Sie jedoch bestimmte Dateien definieren, die übersprungen werden sollen, z. b. für archivierte Dateien oder Dateien, die verschoben wurden. 
+
+Aktivieren Sie die Überprüfung, um bestimmte Dateien basierend auf Ihren Dateiattributen mithilfe der erweiterten **scannerfsattributestoskip** -Einstellung zu überspringen. Listen Sie im Einstellungs Wert die Dateiattribute auf, mit denen die Datei übersprungen werden kann, wenn Sie alle auf **true**festgelegt sind. Diese Liste von Dateiattributen verwendet die-und die-Logik.
+
+Die folgenden PowerShell-Beispiel Befehle veranschaulichen, wie diese erweiterte Einstellung mit der Bezeichnung "Global" verwendet wird.
+
+**Schreibgeschützte und archivierte Dateien überspringen**
+
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
+
+**Lese-oder archivierte Dateien überspringen**
+
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+
+> [!TIP]
+> Es wird empfohlen, dass Sie die Überprüfung für das Überspringen von Dateien mit den folgenden Attributen in Erwägung ziehen:
+> * FILE_ATTRIBUTE_SYSTEM
+> * FILE_ATTRIBUTE_HIDDEN
+> * FILE_ATTRIBUTE_DEVICE
+> * FILE_ATTRIBUTE_OFFLINE
+> * FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
+> * FILE_ATTRIBUTE_RECALL_ON_OPEN
+> * FILE_ATTRIBUTE_TEMPORARY
+
+Eine Liste aller Dateiattribute, die in der erweiterten Einstellung **scannerf sattributestoskip** definiert werden können, finden Sie unter [Win32-Datei Attribut Konstanten](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants) .
+
+## <a name="preserve-ntfs-owners-during-labeling-public-preview"></a>Beibehalten von NTFS-Besitzern während der Bezeichnung (öffentliche Vorschau)
+
+Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Standardmäßig behalten die Bezeichnung Scanner, PowerShell und Datei-Explorer-Erweiterung den NTFS-Besitzer nicht bei, der vor der Bezeichnung definiert wurde. 
+
+Um sicherzustellen, dass der NTFS-Besitzer Wert beibehalten wird, legen Sie für die ausgewählte Bezeichnungs Richtlinie die erweiterte Einstellung **usecopyandkonservientfsowner** auf **true** fest.
+
+> [!CAUTION]
+> Definieren Sie diese erweiterte Einstellung nur, wenn Sie eine zuverlässige Netzwerkverbindung mit geringer Latenz zwischen dem Scanner und dem gescannten Repository sicherstellen können. Ein Netzwerkfehler während des automatischen Bezeichnungs Prozesses kann dazu führen, dass die Datei verloren geht.
+
+PowerShell-Beispiel Befehl, wenn Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie den Azure Information Protection Unified Bezeichnung-Client angepasst haben, finden Sie in den folgenden Ressourcen weitere Informationen, die Sie möglicherweise benötigen, um diesen Client zu unterstützen:

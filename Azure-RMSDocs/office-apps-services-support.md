@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3dcb4d386e5a7c6fca1506f04b478f93da251f5a
-ms.sourcegitcommit: 77cdbe5d289aec591bb11d966296a7fe3851ee79
+ms.openlocfilehash: 8dc7cc5f8e7c7a09293fedf0b4bb9874df339437
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "84238752"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249877"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -31,6 +31,9 @@ Diese Anwendungen bieten native Unterstützung für Azure Rights Management und 
 Benutzer können z.B. ein Word-Dokument so konfigurieren, dass es nur von Personen in Ihrer Organisation geöffnet werden kann. Sie können alternativ steuern, ob ein Excel-Arbeitsblatt bearbeitet werden kann oder schreibgeschützt ist oder nicht gedruckt werden kann. Für Dateien mit zeitlicher Relevanz kann eine Ablaufzeit konfiguriert werden, nach deren Erreichen kein Zugriff auf die Datei mehr möglich ist. Diese Konfiguration kann direkt von Benutzern oder durch Anwenden einer Schutzvorlage vorgenommen werden. Für Outlook können Benutzer außerdem die Option **Nicht weiterleiten** auswählen, um Datenlecks zu verhindern.
 
 Wenn Sie bereit sind, Office-Apps zu konfigurieren, sehen Sie [Office-Apps: Konfiguration für Clients](configure-office-apps.md).
+
+> [!NOTE]
+> Aufgrund einer Einschränkung in den jüngsten Windows-Updates werden Dateien, die an e-Mails angefügt sind, möglicherweise nach dem Öffnen der Datei gesperrt.
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online und Exchange Server
 Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Optionen für Azure Information Protection konfigurieren. Mit dieser Konfiguration kann Exchange die folgenden Lösungen zum Schutz bereitstellen:

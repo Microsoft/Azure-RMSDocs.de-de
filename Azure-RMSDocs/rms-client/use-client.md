@@ -1,10 +1,10 @@
 ---
 title: Der Client für Azure Information Protection-aip
 description: Microsoft Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Daten einer Organisation bereit. Der Client (Azure Information Protection-Client oder Rights Management-Client) ist in Anwendungen integriert, die auf Computern und mobilen Geräten ausgeführt werden.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7361835c845e1d6ade369b0222c14425acbd8de6
-ms.sourcegitcommit: d746a5beaabb019599407d5a96380ec687858c79
+ms.openlocfilehash: 13128b48be4dd4e64e767e121551c4c2e8692e78
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84022947"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84250043"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -37,7 +37,7 @@ Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Do
 
 Alle diese Clients können in Office-Anwendungen integriert werden, aber der Unified-Bezeichnungs Client und der klassische Client müssen separat installiert werden und zusätzliche Features und Komponenten unterstützen. Diese Clients enthalten beispielsweise Unterstützung für den Datei-Explorer, sodass Sie Dateien außerhalb von Office klassifizieren und schützen können. Zu den zusätzlichen Komponenten gehören ein Viewer für geschützte PDF-Dokumente und geschützte Images sowie ein Scanner für lokale Datenspeicher.
 
-Der RMS-Client bietet nur Schutz. Dieser Client wird automatisch mit einigen Anwendungen installiert, z. b. Office-Anwendungen, den Azure Information Protection Clients und RMS-fähigen Anwendungen von Softwareanbietern. Sie kann jedoch auch [von sich selbst installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396)werden, um die [Synchronisierung von Dateien aus mit unm geschützten Bibliotheken und onedrive](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668)zu unterstützen, sowie für Entwickler, die den Rights Management-Schutz in Branchen Anwendungen integrieren möchten.
+Der RMS-Client bietet nur Schutz. Dieser Client wird automatisch mit einigen Anwendungen installiert, z. b. Office-Anwendungen, den Azure Information Protection Clients und RMS-fähigen Anwendungen von Softwareanbietern. Sie kann jedoch auch [von sich selbst installiert](https://www.microsoft.com/download/details.aspx?id=38396)werden, um die [Synchronisierung von Dateien aus mit unm geschützten Bibliotheken und onedrive](https://docs.microsoft.com/onedrive/deploy-on-windows)zu unterstützen, sowie für Entwickler, die den Rights Management-Schutz in Branchen Anwendungen integrieren möchten.
 
 ## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Wählen Sie aus, welche Bezeichnung für Windows-Computer verwendet werden soll.
 
@@ -52,7 +52,7 @@ Die Auswahl der Bezeichnung Client für Ihre Windows-Computer kann von dem verwe
 
 - Der Azure Information Protection-Client (klassisch) lädt die Bezeichnung und die Richtlinien Einstellungen aus dem Azure-Portal herunter.
 
-Da der Unified-Bezeichnungs Client und der klassische Client eine separate Installation für Office erfordern, müssen Sie diese Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. 
+Da der Unified-Bezeichnungs Client und der klassische Client eine separate Installation für Office erfordern, müssen Sie diese Clients aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren. 
 
 Welchen Client sollten Sie verwenden?
 

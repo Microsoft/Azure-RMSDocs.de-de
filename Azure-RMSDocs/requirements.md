@@ -4,7 +4,7 @@ description: Identifizieren Sie die Voraussetzungen für die Bereitstellung von 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/21/2020
+ms.date: 05/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 240dc9112d49ff2a3ad3c4e6f886062ca6529d97
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746253"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249843"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection Anforderungen
 
@@ -85,9 +85,9 @@ Die folgenden Betriebssysteme unterstützen die Azure Information Protection Uni
 
 - **Windows 8** (x86, x64)
 
-- **Windows Server 2019**
+- **Windows Server 2019**
 
-- **Windows Server 2016**
+- **Windows Server 2016**
 
 - **Windows Server 2012 R2** und **Windows Server 2012**
 
@@ -128,7 +128,7 @@ Die Azure Information Protection Clients können Dokumente und e-Mails mithilfe 
 
 - **Office-Apps, Mindestversion 1805**, Build 9330,2078 aus Office 365 Business oder Microsoft 365 Business. 
 
-Diese Edition wird nur unterstützt, wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist, auch bekannt als Azure Information Protection für Office 365.
+    Diese Edition wird nur unterstützt, wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist, auch bekannt als Azure Information Protection für Office 365.
 
 - **Office 365 ProPlus**
 
@@ -156,14 +156,15 @@ Weitere Informationen finden Sie [unter Anwendungen, die Azure Rights Management
 
 Wenn Sie über eine Firewall oder ähnliche zwischengeschaltete Netzwerkgeräte verfügen, die so konfiguriert sind, dass Sie bestimmte Verbindungen zulässt, sind die Anforderungen an die Netzwerk Konnektivität in diesem Office-Artikel aufgeführt: [Office 365-URLs und IP-Adressbereiche > Microsoft 365 Common und Office Online](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#microsoft-365-common-and-office-online).
 
-Azure Information Protection weist die folgenden zusätzlichen Anforderungen auf:
+Azure Information Protection hat die folgenden zusätzlichen Anforderungen:
 
 - **Einheitlicher**Bezeichnungs Client. Zum Herunterladen von Bezeichnungen und Bezeichnungs Richtlinien lassen Sie die folgende URL über HTTPS zu: ***. Protection.Outlook.com**
 
 - **Webproxys**. Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie den Proxy so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory Anmelde Informationen des Benutzers verwendet.
 
+    
 - **TLS-Client-zu-Dienst-Verbindungen**. Beenden Sie keine TLS-Client-zu-Dienst-Verbindungen, z. b. zur Durchführung der Überprüfung auf Paketebene, für die **aadrm.com** -URL. Ansonsten wird die Anheftung von Zertifikaten beendet, die von RMS-Clients für von Microsoft verwaltete Zertifizierungsstellen verwendet wird, um die Kommunikation mit dem Azure Rights Management-Dienst zu schützen.
-
+     
     Verwenden Sie die folgenden PowerShell-Befehle, um zu bestimmen, ob Ihre Client Verbindung beendet wurde, bevor Sie den Azure Rights Management-Dienst erreicht:
     
         $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
@@ -174,6 +175,8 @@ Azure Information Protection weist die folgenden zusätzlichen Anforderungen auf
     
     Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es sehr wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
 
+- **TLS-Version 1,2 oder höher** (einheitlicher Bezeichnungs Client). Der Unified-Bezeichnungs Client erfordert eine TLS-Version von 1,2 oder höher, um die Verwendung kryptografisch sicherer Protokolle sicherzustellen und den Sicherheitsrichtlinien von Microsoft auszurichten.
+    
 ### <a name="on-premises-servers"></a>Lokale Server
 
 Die folgenden lokalen Server werden mit dem Azure Rights Management-Dienst von Azure Information Protection unterstützt:

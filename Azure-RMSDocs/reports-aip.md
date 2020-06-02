@@ -13,19 +13,16 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cfa11ca1f0a0ba345b35d5e669ca58802157565
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: ea0081e4f81a3ea123c3ff58e57334b46df00521
+ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747166"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84249894"
 ---
-# <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
+# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
-> [!NOTE]
-> Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.
 
 Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Außerdem:
 
@@ -121,7 +118,13 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Die Client-Betriebssystemversion.
 
-Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann unabhängig von Azure Information Protection von Benutzern eingesehen werden, die über Zugriffsrechte für diesen Arbeitsbereich verfügen. Details hierzu finden Sie im Abschnitt [Erforderliche Berechtigungen für Azure Information Protection-Analysen](#permissions-required-for-azure-information-protection-analytics). Informationen zum Verwalten des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten des Zugriffs auf den Log Analytics-Arbeitsbereich mit Azure-Berechtigungen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions).
+Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann unabhängig von Azure Information Protection von Benutzern eingesehen werden, die über Zugriffsrechte für diesen Arbeitsbereich verfügen. 
+
+Weitere Informationen finden Sie unter:
+
+- [Erforderliche Berechtigungen für Azure Information Protection-Analysen](#permissions-required-for-azure-information-protection-analytics)
+- [Verwalten des Zugriffs auf den Log Analytics-Arbeitsbereich mit Azure-Berechtigungen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions)
+- [Azure Information Protection Überwachungs Protokoll Verweis](audit-logs.md)
 
 Um zu verhindern, dass Azure Information Protection von Clients (klassisch) diese Daten senden, legen Sie die [Richtlinien Einstellung](configure-policy-settings.md) Überwachungs **Daten senden auf Azure Information Protection Analytics** auf **aus**fest:
 
@@ -171,7 +174,7 @@ Details:
         - **Azure Information Protection-Administrator**
         - **Sicherheitsadministrator**
         - **Complianceadministrator**
-        - **Kompatibilitäts Daten Administrator**
+        - **Compliancedatenadministrator**
         - **Globaler Administrator**
     
     - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
@@ -233,7 +236,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 
 4. Wenn Sie über Azure Information Protection Clients (klassisch) verfügen, aktivieren Sie das Kontrollkästchen **tiefere Analysen in Ihre sensiblen Daten aktivieren** , wenn Sie die eigentlichen Daten speichern möchten, die als sensible Informationen identifiziert werden. Weitere Informationen zu dieser Einstellung finden Sie im Abschnitt [Inhalts Übereinstimmungen für eine tiefere Analyse](#content-matches-for-deeper-analysis) auf dieser Seite.
 
-5. Wählen Sie **OK** aus.
+5. Klicken Sie auf **OK**.
 
 Sie sind jetzt bereit, die Berichte anzuzeigen.
 
