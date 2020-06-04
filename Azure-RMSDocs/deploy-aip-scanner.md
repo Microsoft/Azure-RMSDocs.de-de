@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/05/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7d410c7cf697005750790fdb705c2a6e358aeec
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
+ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249911"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326317"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -239,7 +239,7 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     
     Optional können Sie eine Beschreibung für administrative Zwecke angeben, damit Sie den Cluster Namen des Scanners leichter identifizieren können.
 
-    Klicken Sie auf **Speichern**.
+    Wählen Sie **Speichern** aus.
 5. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Inhalts Scanaufträge**aus.
 6. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Hinzufügen**aus.
  
@@ -278,12 +278,8 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     Platzhalter und WebDav-Speicherorte werden nicht unterstützt.
     
     Beispiele:
-    
-    - Für einen lokalen Pfad: `C:\Folder`
-    
+      
     - Für eine Netzwerkfreigabe: `C:\Folder\Filename`
-    
-    - Für einen UNC-Pfad: `\\Server\Folder`
     
     - Für eine SharePoint-Bibliothek: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
@@ -296,7 +292,7 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     
     Für die restlichen Einstellungen in diesem Bereich sollten Sie diese nicht für diese anfängliche Konfiguration ändern, sondern als Standardwert für den **inhaltscanauftrag**beibehalten. Dies bedeutet, dass das Datenrepository die Einstellungen vom Inhalts Überprüfungs Auftrag erbt. 
     
-    Klicken Sie auf **Speichern**.
+    Wählen Sie **Speichern** aus.
 
 > [!IMPORTANT]
 > Obwohl das lokale Dateisystem gescannt werden kann, wird diese Konfiguration für Produktions Bereitstellungen nicht empfohlen und kann **nur** in Clustern mit einem einzelnen Knoten verwendet werden. Das Scannen von lokalen Ordnern durch Cluster mit mehreren Knoten wird nicht unterstützt. Wenn Sie einen Ordner auf dem lokalen Dateisystem scannen müssen, empfiehlt es sich, eine Freigabe zu erstellen und Sie mit einer Netzwerk-URL zu scannen.
@@ -699,7 +695,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
     
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
     
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
