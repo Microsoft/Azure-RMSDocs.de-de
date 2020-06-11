@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd9f9358ad9abaafc2fc67de8beb548173d9fee9
-ms.sourcegitcommit: e31562d4f8856782b332b238e8fef4932e3dfab8
+ms.openlocfilehash: 9bafeded86eeaedf588335932dead370831c3568
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82161349"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666097"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen
 
@@ -70,15 +70,15 @@ Zusätzliche Dateitypen unterstützen die Klassifizierung, wenn sie zudem gesch�
 
 Beispiele:
 
-- Wenn die Bezeichnung " **General** Sensitivität" die Klassifizierung anwendet und keinen Schutz anwendet: Sie könnten die **Allgemeine** Bezeichnung auf eine Datei namens "Sales. pdf" anwenden, aber Sie können diese Bezeichnung nicht auf eine Datei namens "Sales. txt" anwenden. 
+- Wenn die Bezeichnung **General** Sensitivität die Klassifizierung anwendet und keinen Schutz anwendet: Sie können die **Allgemeine** Bezeichnung auf eine Datei mit dem Namen sales.pdf anwenden, aber Sie können diese Bezeichnung nicht auf eine Datei mit dem Namen sales.txt anwenden. 
 
-- Wenn die **Vertraulichkeits Bezeichnung "vertraulich \ alle Mitarbeiter** " Klassifizierung und Schutz anwendet: Sie können diese Bezeichnung auf eine Datei namens "Sales. pdf" und eine Datei mit dem Namen "Sales. txt" anwenden. Sie können den Schutz auch ohne die Klassifizierung auf diese Dateien anwenden.
+- Wenn die **Vertraulichkeits Bezeichnung "vertraulich \ alle Mitarbeiter** " Klassifizierung und Schutz anwendet: Sie können diese Bezeichnung auf eine Datei namens "sales.pdf" und eine Datei mit dem Namen "sales.txt" anwenden. Sie können den Schutz auch ohne die Klassifizierung auf diese Dateien anwenden.
 
 ## <a name="file-types-supported-for-protection"></a>Für den Schutz unterstützte Dateitypen
 
 Der Azure Information Protection Unified Bezeichnung-Client unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben.
 
-|Art des Schutzes|Systemeigenes Format|Allgemein|
+|Art des Schutzes|Systemeigen|Allgemein|
 |----------------------|----------|-----------|
 |BESCHREIBUNG|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Sicherheitsebene, zu der Dateikapselung mithilfe des Dateityps PFILE und Authentifizierung gehören, um zu überprüfen, ob ein Benutzer berechtigt ist, die Datei zu öffnen.|
 |Schutz|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Der Schutz der Dateien wird auf folgende Weise erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
@@ -191,7 +191,7 @@ Ohne zusätzliche Konfiguration verwendet der Azure Information Protection Unifi
 
 |Anwendungstyp|Dateityp|
 |--------------------------------|-------------------------------------|
-|Wort|Post docx;. docm;. dot;. dotm;. dotx|
+|Word|Post docx;. docm;. dot;. dotm;. dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
 |PDF |.pdf|
@@ -207,7 +207,7 @@ In den folgenden Abschnitten finden Sie Konfigurationsanweisungen zum Überprüf
 
 Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) können ZIP-Dateien überprüfen, wenn Sie die folgenden Anweisungen befolgen:
 
-1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) auf dem Computer, auf dem die Überprüfung ausgeführt wird.
+1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/help/2687447/description-of-office-2010-filter-pack-sp2) auf dem Computer, auf dem die Überprüfung ausgeführt wird.
 
 2. Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben und die ZIP-Datei mit einer Bezeichnung klassifiziert und geschützt werden soll, geben Sie die Dateinamenerweiterung. zip mit der erweiterten PowerShell-Einstellung " **pfilesupportedextensions**" an, wie in [PowerShell-Konfiguration beschrieben, um zu ändern, welche Dateitypen](../deploy-aip-scanner.md#scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected) vor den Überprüfungs Anweisungen für die Scanner geschützt sind.
 
@@ -216,7 +216,7 @@ Beispielszenario nach dem Ausführen dieser Schritte:
 
 Eine Datei mit dem Namen **accounts.zip** enthält Excel-Kalkulationstabellen mit Kreditkartennummern. Sie haben eine **Vertraulichkeits Bezeichnung namens Confidential \ Finance**, die für die Ermittlung von Kreditkartennummern konfiguriert ist, und wendet die Bezeichnung automatisch mit Schutz an, der den Zugriff auf die Finanzgruppe einschränkt. 
 
-Nach der Überprüfung der Datei klassifiziert der Unified-Bezeichnungs Client aus der PowerShell-Sitzung diese Datei als **vertraulich \ Finanzen**, wendet den generischen Schutz auf die Datei an, sodass nur Mitglieder der Finanzgruppen Sie entpacken können, und benennt die Datei **Accounts. zip. Pfile**um.
+Nach der Überprüfung der Datei klassifiziert der Unified-Bezeichnungs Client aus der PowerShell-Sitzung diese Datei als **vertraulich \ Finanzen**, wendet den generischen Schutz auf die Datei an, sodass nur Mitglieder der Finanzgruppen Sie Entzippen können, und benennt die Datei **accounts.zip. Pfile**um.
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>Überprüfen von TIFF-Dateien unter Verwendung der OCR
 
@@ -229,7 +229,7 @@ Nachdem Sie die vom Azure Information Protection Unified Bezeichnung-Client unte
 
 - [Anpassungen](clientv2-admin-guide-customizations.md)
 
-- [Clientdateien und Verwendungsprotokollierung](clientv2-admin-guide-files-and-logging.md)
+- [Clientdateien und Nutzungsprotokollierung](clientv2-admin-guide-files-and-logging.md)
 
 - [PowerShell-Befehle](clientv2-admin-guide-powershell.md)
 

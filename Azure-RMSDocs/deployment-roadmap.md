@@ -1,10 +1,10 @@
 ---
 title: Roadmap für die Bereitstellung von Azure Information Protection
 description: Führen Sie diese Schritte aus, um Azure Information Protection für Ihre Organisation vorzubereiten, zu implementieren und zu verwalten.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,19 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 88ddfd13cdee34b20f8d1014a0d564654fa594e1
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 9852c792e732a0d84326e7dfc6f8b291af56fcad
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746934"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665859"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Führen Sie die folgenden Schritte aus (empfohlen), um Azure Information Protection für Ihre Organisation vorzubereiten, zu implementieren und zu verwalten.
 
@@ -149,7 +152,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
     Wenn Sie SharePoint und Exchange lokal verwenden und deren Funktionen zur Verwaltung von Informationsrechten (IRM) nutzen möchten, installieren und konfigurieren Sie den Rights Management-Connector. Weitere Informationen finden Sie unter Bereitstellen [des Azure Rights Management-Verbindungs-Connector](./deploy-rms-connector.md).
 
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Schritt 6: Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten
-Sie sind nun bereit, die Verwendung der von Ihnen konfigurierten Bezeichnungen in Ihrem Unternehmen zu überwachen und zu bestätigen, dass Sie sensible Informationen schützen. Weitere Informationen zur Unterstützung dieser Phase der Bereitstellung finden Sie unter:
+Nun können Sie überwachen, wie Ihre Organisation die von Ihnen konfigurierten Bezeichnungen verwendet, und sicherstellen, dass vertrauliche Informationen geschützt werden. Weitere Informationen zur Unterstützung dieser Phase der Bereitstellung finden Sie unter:
 
 - [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md) (derzeit in der Vorschau)
 
@@ -219,7 +222,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Schritt 4: Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten
 
-Sie können jetzt Ihre Daten schützen und die Nutzung des Schutzdiensts durch Ihre Organisation protokollieren. Weitere Informationen zur Unterstützung dieser Bereitstellungs Phase finden Sie unter unterstützen von [Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](./help-users.md) und [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](./log-analyze-usage.md).
+Sie sind jetzt bereit, Ihre Daten zu schützen und zu protokollieren, wie Ihr Unternehmen den Schutzdienst verwendet. Weitere Informationen zur Unterstützung dieser Bereitstellungs Phase finden Sie unter unterstützen von [Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](./help-users.md) und [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](./log-analyze-usage.md).
 
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Schritt 5: Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
 

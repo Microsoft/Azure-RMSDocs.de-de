@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: de442c9ea7c28bba55e7dbeebfdf458254e98678
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 751add440b97259d6c897af385581f4b5efb9d2f
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483285"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665499"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -27,7 +27,7 @@ ms.locfileid: "79483285"
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen erhalten möchten als im [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md) vorhanden sind. 
 
@@ -72,7 +72,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Sollten Sie den Azure Information Protection-Client bereitstellen?
 
-Stellen Sie den Azure Information Protection Client bereit, wenn Sie [in Office 365 Security & Compliance Center keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden Aktionen:
+Stellen Sie den Azure Information Protection Client bereit, wenn Sie [im Security & Compliance Center von Office 365 keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden Aktionen:
 
 - Sie möchten Dokumente und E-Mails durch Auswählen von Bezeichnungen innerhalb Ihrer Office-Anwendungen (Word, Excel, PowerPoint, Outlook) klassifizieren (und optional schützen).
 
@@ -116,7 +116,7 @@ Der Link **Weitere Infos** verweist standardmäßig auf die [Azure Information P
 
 Der Link **Problem melden** wird nur angezeigt, wenn Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#add-report-an-issue-for-users) angeben. Wenn Sie diese Einstellung konfigurieren, müssen Sie einen HTTP-Link angeben, z. B. die E-Mail-Adresse Ihres Helpdesks.
 
-Die Option **Protokolle exportieren** erfasst automatisch Protokolldateien für den Azure Information Protection-Client und hängt diese an, wenn Sie darum gebeten wurden, diese an den Microsoft Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden.
+Die Option **Protokolle exportieren** erfasst automatisch Protokolldateien für den Azure Information Protection-Client und hängt diese an, wenn Sie darum gebeten wurden, diese an den Microsoft Support zu senden. Diese Option kann auch von Endbenutzern genutzt werden, um diese Protokolldateien an Ihren Helpdesk zu senden.
 
 Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die derzeit heruntergeladene Azure Information Protection-Richtlinie und setzt die Benutzereinstellungen für den Azure Rights Management-Dienst zurück.
 
@@ -141,13 +141,13 @@ Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die d
     
     In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER \software\microsoft\office\15.0\common\identity
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER \software\microsoft\office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER \software\microsoft\office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER \software\microsoft\office\16.0\Common\DRM
     
     - HKEY_CURRENT_USER \software\classes\local settings\software\microsoft\msipc    
 
@@ -165,7 +165,7 @@ Wenn die Meldung **Dieser Client ist nicht für Office Professional Plus lizenzi
 
 Verwenden Sie die Informationen unter **Version**, um zu bestätigen, welche Version des Clients installiert ist. Klicken Sie auf den Link **Neuigkeiten**, um den [Versionsveröffentlichungsverlauf](client-version-release-history.md) des Clients zu lesen und zu überprüfen, ob es sich um die neueste Version handelt und die entsprechenden Fixes und neuen Features installiert sind.
 
-## <a name="support-for-multiple-languages"></a>Unterstützung mehrerer Sprachen
+## <a name="support-for-multiple-languages"></a>Unterstützung für mehrere Sprachen
 
 Der Azure Information Protection-Client unterstützt alle Sprachen, die Office 365 unterstützt. Eine Liste dieser Sprachen finden Sie im Abschnitt **Office 365, Exchange Online-Schutz und Power BI** auf der Office-Seite zur [internationalen Verfügbarkeit](https://products.office.com/business/international-availability).
 
@@ -179,7 +179,7 @@ Nachdem Sie den Azure Information Protection-Client installiert haben, stellen S
 
 - Anweisungen für Onlinebenutzer: [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md)
 
-- Download des anpassbaren Benutzerhandbuchs: [Azure Information Protection End User Adoption Guide (Benutzerhandbuch für die Einführung in Azure Information Protection)](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Upgraden und Verwalten des Azure Information Protection-Clients
 
@@ -187,7 +187,7 @@ Das Azure Information Protection-Team aktualisiert den Azure Information Protect
 
 Wenn Sie Windows Update verwenden, aktualisiert der Azure Information Protection-Client automatisch die Version für die allgemeine Verfügbarkeit des Clients, unabhängig davon, wie der Client installiert wurde. Neue Clientreleases werden wenige Wochen nach der Release im Katalog veröffentlicht.
 
-Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Version aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. Installieren Sie dann die neue Version, um ein Upgrade des Clients auszuführen. Vorschauversionen lassen sich nur mit dieser Methode aktualisieren.
+Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) herunterladen. Installieren Sie dann die neue Version, um ein Upgrade des Clients auszuführen. Vorschauversionen lassen sich nur mit dieser Methode aktualisieren.
 
 Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Beispielsweise haben Sie die aktuelle Vorschauversion zu Testzwecken installiert und müssen nun auf die aktuelle allgemein verfügbare Version zurückgreifen.
 
@@ -204,9 +204,9 @@ Verwenden Sie die folgenden Anweisungen, um die Überprüfung von einer allgemei
 
 Ab Version 1.48.204.0 ändert der Upgradeprozess von vorherigen Versionen automatisch den Scanner, sodass er seine Konfigurationseinstellungen vom Azure-Portal abruft. Ferner wird das Schema für die Konfigurationsdatenbank des Scanners aktualisiert, und diese Datenbank wird über AzInfoProtection umbenannt:
 
-- Wenn Sie keinen eigenen Profilnamen angeben, wird die Konfigurationsdatenbank in **AIPScanner_\<Computername>** umbenannt. 
+- Wenn Sie keinen eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_ \<computer_name> **umbenannt. 
 
-- Wenn Sie einen eigenen Profilnamen angeben, wird die Konfigurationsdatenbank in **AIPScanner_\<Profilname>** umbenannt.
+- Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_ \<profile_name> **umbenannt.
 
 Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden jedoch die folgenden Schritte empfohlen:
 
@@ -216,7 +216,7 @@ Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden 
 
 2. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
 
-3. Aktualisieren Sie den Azure Information Protection Client, indem Sie die aktuelle allgemein verfügbare Version aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)installieren.
+3. Aktualisieren Sie den Azure Information Protection Client, indem Sie die aktuelle allgemein verfügbare Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)installieren.
 
 4. Führen Sie den Befehl „Update-AIPScanner“ in einer PowerShell-Sitzung mit dem Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile Europe`
 
@@ -257,7 +257,7 @@ Wenn Sie wissen, dass Sie die Überprüfungs Konfigurations Datenbank für die G
 
 Verwenden Sie eine der folgenden Optionen zur Deinstallation des Clients:
 
-- Deinstallieren Sie ein Programm über die Systemsteuerung: Klicken Sie auf **Microsoft Azure Information Protection** > **Deinstallieren**
+- Deinstallieren eines Programms mithilfe der Systemsteuerung: Klicken Sie auf **Microsoft Azure Information Protection**  >  **deinstallieren** .
 
 - Führen Sie die ausführbare Datei (z. B. **AzInfoProtection.exe**) erneut aus, und klicken Sie auf der Seite **Setup ändern** auf **Deinstallieren**. 
 
@@ -272,7 +272,7 @@ Wenn Sie den Azure Information Protection-Client bereits installiert haben, helf
 
 - [Clientdateien und Nutzungsprotokollierung](client-admin-guide-files-and-logging.md)
 
-- [Dokumentenverfolgung](client-admin-guide-document-tracking.md)
+- [Dokumentkontrolle](client-admin-guide-document-tracking.md)
 
 - [Unterstützte Dateitypen](client-admin-guide-file-types.md)
 

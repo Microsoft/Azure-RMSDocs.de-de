@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 363fc709334ac3974ec657d72c44e88a2e9c828a
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: fc00f88734712c8ee9a60c334989d5ed5be8854c
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404384"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665893"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -32,7 +32,7 @@ ms.locfileid: "79404384"
 > 
 > Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter Informationen zu [Sensitivitäts Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) aus der Dokumentation zur Microsoft 365 Konformität.
 
-Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist.
+Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/download/details.aspx?id=53018)installiert ist.
 
 Die Richtlinie enthält Bezeichnungen und Einstellungen:
 
@@ -72,13 +72,13 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
     
   - **Complianceadministrator**
     
-  - **Kompatibilitäts Daten Administrator**
+  - **Compliancedatenadministrator**
     
   - **Sicherheitsadministrator**
     
-    **Sicherheits Leser** - nur [Azure Information Protection Analytics](reports-aip.md)
+    **Sicherheits Leser**  -  Nur [Azure Information Protection Analytics](reports-aip.md)
     
-    Nur **globale Reader** - - [Azure Information Protection Analytics](reports-aip.md)
+    **Globaler Reader**  -  Nur [Azure Information Protection Analytics](reports-aip.md)
     
   - **Globaler Administrator**
     
@@ -102,7 +102,7 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 4. Beachten Sie die Seite **Schnellstart**, die automatisch geöffnet wird, wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen. Durchsuchen Sie die empfohlenen Ressourcen, oder verwenden Sie andere Menüoptionen. Verwenden Sie das folgende Verfahren, um Bezeichnungen, die Benutzer auswählen können, zu konfigurieren.
 
-Wenn Sie das nächste Mal auf den **Azure Information Protection** Bereich zugreifen, wird automatisch die Option **Labels** ausgewählt, damit Sie Bezeichnungen für alle Benutzer anzeigen und konfigurieren können. Über das Menü **Allgemein** können Sie zur **Schnellstart**-Seite zurückkehren.
+Wenn Sie das nächste Mal auf den **Azure Information Protection** Bereich zugreifen, wird automatisch die Option **Labels** ausgewählt, damit Sie Bezeichnungen für alle Benutzer anzeigen und konfigurieren können. Sie können zur Seite **Schnellstart** zurückkehren, indem Sie Sie im Menü **Allgemein** auswählen.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -169,9 +169,9 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 Wenn eine Bezeichnung auf ein Dokument oder eine E-Mail angewendet wird, wird die Bezeichnung hinter den Kulissen in den Metadaten gespeichert, so dass Anwendungen und Dienste die Bezeichnung lesen können:
 
-- In e-Mails werden diese Informationen in der Datei "x-Header: **msip_labels: MSIP_Label_\<GUID > _Enabled = true** " gespeichert. 
+- In e-Mails werden diese Informationen in der Datei "x-Header: **msip_labels: MSIP_Label_ \<GUID> _Enabled = true** " gespeichert. 
 
-- Für Word-Dokumente (. doc und. docx), Excel-Kalkulations Tabellen (XLS und. xlsx), PowerPoint-Präsentationen (PPT und PPTX) und PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID > _Enabled = true**
+- Für Word-Dokumente (doc und DOCX), Excel-Kalkulations Tabellen (. xls und. xlsx), PowerPoint-Präsentationen (. ppt und. pptx) und PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_ \<GUID> _Enabled = true**
 
 Bei e-Mails werden die Bezeichnungs Informationen gespeichert, wenn die e-Mail gesendet wird. Bei Dokumenten werden die Bezeichnungs Informationen gespeichert, wenn die Datei gespeichert wird. 
 
@@ -181,9 +181,9 @@ Um die GUID für eine Bezeichnung zu identifizieren, suchen Sie den Bezeichnungs
 
 Beispiele zum Anpassen der Azure Information Protection-Richtlinie und das resultierende Verhalten für Benutzer finden Sie in den folgenden Tutorials:
 
-- [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
+- [Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
 
-- [Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md)
+- [Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md)
 
 Informationen zur Leistung Ihrer Richtlinie finden Sie unter [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md).
 

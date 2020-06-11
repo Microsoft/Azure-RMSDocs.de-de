@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 95c0af617e88b4201243f4b12381799d8202a595
-ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
+ms.openlocfilehash: b1c86b828cccb660bc56168ce9bbb7f5dfbcce83
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852080"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666080"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client
 
@@ -26,7 +26,7 @@ ms.locfileid: "82852080"
 
 Wenn Ihr Administrator den Azure Information Protection Unified-Bezeichnung-Client nicht für Sie installiert, können Sie dies selbst tun. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Berücksichtigen Sie zudem Folgendes:
+Außerdem:
 
 - Der Azure Information Protection-Client für einheitliche Bezeichnungen erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 
@@ -35,7 +35,7 @@ Berücksichtigen Sie zudem Folgendes:
 
 Vergewissern Sie sich vor der Installation des Azure Information Protection Unified Label-Clients, dass der Administrator oder das Helpdesk die [Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) zum klassifizieren und schützen von Dokumenten und e-Mails verwenden.
 
-1. Laden Sie **AzInfoProtection_UL. exe** aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunter.
+1. Laden Sie **AzInfoProtection_UL.exe** aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunter.
 
 2. Führen Sie die heruntergeladene ausführbare Datei aus, und klicken Sie auf **Ja**, wenn Sie aufgefordert werden, den Vorgang fortzusetzen.
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 83fc8228b664acc067c6a604f3d438f39669a49a
-ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
+ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "80375632"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84666029"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "80375632"
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Anhand der folgenden Informationen erfahren Sie, was der HYOK-Schutz für Azure Information Protection ist, und wie er sich vom cloudbasierten Standardschutz unterscheidet. Stellen Sie sicher, dass Sie verstehen, wann der HYOK-Schutz, die unterstützten Szenarios, die Einschränkungen und die Voraussetzungen geeignet sind, bevor Sie ihn verwenden. 
 
@@ -158,7 +158,7 @@ Eine AD RMS-Bereitstellung muss die folgenden Anforderungen erfüllen, um den HY
 
 - Benutzer haben eine Version von Office, die Information Rights Management (IRM) unterstützt, und mindestens Office 2013 Professional Plus mit Service Pack 1, ausgeführt unter Windows 7 Service Pack 1 oder höher. Beachten Sie, dass Office 2010 und Office 2007 für dieses Szenario nicht unterstützt werden.
     
-    - Für Office 2016, Microsoft Installer (. msi)-basierte Edition: Sie haben [Update 4018295 für Microsoft Office 2016 installiert, das am 6. März 2018 veröffentlicht wurde](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+    - Für Office 2016, auf Microsoft Installer (.msi) basierte Ausgabe: Sie haben [Update 4018295 für Microsoft Office 2016 vom 6. März 2018](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295) installiert.
 
 > [!IMPORTANT]
 > Zum Erfüllen der hohen Sicherheit des HYOK-Schutzes wird empfohlen, dass Ihre AD RMS-Server sich nicht in Ihrem Umkreisnetzwerk befinden und nur von verwalteten Geräten verwendet werden. 
@@ -174,7 +174,7 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
 
     `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
     
-    Geben Sie für den \<Zeichenfolgenwert> einen der folgenden Einträge an:
+    Geben Sie für den \<string value> einen der folgenden Informationen an:
     
     - Für AD RMS-Cluster mit SSL/TLS:
 
@@ -188,7 +188,7 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 
-Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)** -Schutz konfigurieren, müssen Sie die Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Zusätzlich müssen Sie entweder eine Vorlage angeben, die Sie für die Berechtigungen konfiguriert haben, die Benutzern erteilt werden, oder Sie lassen die Benutzer die Berechtigungen und Benutzer definieren. 
+Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müssen Sie die Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Zusätzlich müssen Sie entweder eine Vorlage angeben, die Sie für die Berechtigungen konfiguriert haben, die Benutzern erteilt werden, oder Sie lassen die Benutzer die Berechtigungen und Benutzer definieren. 
 
 Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die Konsole von Active Directory Rights Management Services suchen:
 
