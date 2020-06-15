@@ -21,13 +21,19 @@
               href: quick-file-list-labels-cpp.md
             - name: Festlegen/Abrufen von Vertraulichkeitsbezeichnungen (C++)
               href: quick-file-set-get-label-cpp.md
+            - name: Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C++)
+              href: quick-file-justify-actions-cpp.md
+            - name: Erneute Veröffentlichung einer Datei-API (C++)
+              href: quick-file-republishing-cpp.md
+            - name: Verarbeiten von E-Mail-Dateien (.msg-Dateien) (C++)
+              href: quick-email-msg-cpp.md
         - name: Protection-API
           items:
             - name: Anwendungsinitialisierung (C++)
               href: quick-protection-app-initialization-cpp.md
-            - name: Auflisten von Vorlagen
+            - name: Auflisten von Vorlagen (C++)
               href: quick-protection-list-templates-cpp.md
-            - name: Verschlüsseln/Entschlüsseln von Text
+            - name: Verschlüsseln/Entschlüsseln von Text (C++)
               href: quick-protection-encrypt-decrypt-text-cpp.md
     - name: 'C#'
       items:
@@ -39,13 +45,19 @@
               href: quick-file-list-labels-csharp.md
             - name: 'Festlegen/Abrufen von Vertraulichkeitsbezeichnungen (C#)'
               href: quick-file-set-get-label-csharp.md
+            - name: 'Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C#)'
+              href: quick-file-justify-actions-csharp.md
+            - name: 'Erneute Veröffentlichung einer Datei-API (C#)'
+              href: quick-file-republishing-csharp.md
+            - name: 'Verarbeiten von E-Mail-Dateien (.msg-Dateien) (C#)'
+              href: quick-email-msg-csharp.md
         - name: Protection-API
           items:
             - name: 'Anwendungsinitialisierung (C#)'
               href: quick-protection-app-initialization-csharp.md
-            - name: Auflisten von Vorlagen
+            - name: 'Auflisten von Vorlagen (C#)'
               href: quick-protection-list-templates-csharp.md
-            - name: Verschlüsseln/Entschlüsseln von Text
+            - name: 'Verschlüsseln/Entschlüsseln von Text (C#)'
               href: quick-protection-encrypt-decrypt-text-csharp.md
 - name: Konzepte
   items:
@@ -119,6 +131,14 @@
           href: concept-async-observers-protection-cpp.md
     - name: SDK-Telemetrie
       href: concept-mip-telemetry.md
+    - name: Anwendungsfälle
+      items:
+        - name: 'Datei-API: Aktionsbegründung zum Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C++)'
+          href: concept-justification-cpp.md
+        - name: 'Datei-API: Erneute Veröffentlichung einer Datei-API (C++)'
+          href: concept-republishing-cpp.md
+        - name: 'Datei-API: Verarbeiten von E-Mail-Dateien (.msg-Dateien) (C++)'
+          href: concept-email-cpp.md
 - name: Reference
   items:
     - name: C++-Bibliothek
