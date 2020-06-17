@@ -4,23 +4,25 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4456dd292fe6049a432aaebe56cba36dc4a3d7d1
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 01149b9f12fce4c88f250548eaa86dd87eeaa689
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404707"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802866"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+> **Kunden mit erweitertem Microsoft-Support für Windows 7 und Office 2010 können auch Azure Information Protection Unterstützung für diese Versionen erhalten. Wenden Sie sich an Ihren Support, um ausführliche Informationen zu erhalten.*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -28,7 +30,7 @@ Wenn Sie den Azure Information Protection Unified Bezeichnung-Client installiere
 
 Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**installiert, das über Cmdlets für die Bezeichnung verfügt. Beispiel:
 
-|Cmdlet für die Bezeichnung|Beispielsyntax|
+|Cmdlet für die Bezeichnung|Beispielverwendung|
 |----------------|---------------|
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Für einen freigegebenen Ordner werden alle Dateien mit einer bestimmten Bezeichnung ermittelt.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Überprüfen Sie bei einem freigegebenen Ordner die Dateiinhalte, und versehen Sie Dateien ohne Bezeichnung automatisch gemäß den von Ihnen festgelegten Bedingungen mit Bezeichnungen.|
@@ -36,7 +38,7 @@ Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**instal
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 > [!TIP]
-> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie für den lokalen Computer** > **Computer Konfiguration** > **Administrative Vorlagen** > **alle Einstellungen** > **lange Win32-Pfade aktivieren** 
+> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie**  >  für lokale Computer **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **Alle Einstellungen**  >  **Lange Win32-Pfade aktivieren** 
 > 
 > Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
 >
@@ -75,7 +77,7 @@ Wenn Sie die Cmdlets für die Bezeichnung ausführen, werden die Befehle in Ihre
 
 Außerdem müssen Sie ein Zugriffs Token von Azure AD anfordern, mit dem Anmelde Informationen für den Delegierten Benutzer zum Authentifizieren bei Azure Information Protection festgelegt und gespeichert werden.
 
-Auf dem Computer, auf dem das aipauthentication-Cmdlet ausgeführt wird, werden die Bezeichnungs Richtlinien mit Bezeichnungen, die dem Delegierten Benutzerkonto zugewiesen sind, mithilfe Ihres Bezeichnungs Verwaltungs Centers (z. b. Office 365 Security & Compliance Center heruntergeladen.
+Auf dem Computer, auf dem das aipauthentication-Cmdlet ausgeführt wird, werden die Bezeichnungs Richtlinien mit Bezeichnungen, die dem Delegierten Benutzerkonto zugewiesen sind, mithilfe Ihres Bezeichnungs Verwaltungs Centers (z. b. Office 365 Security & Compliance Center) heruntergeladen.
 
 > [!NOTE]
 > Wenn Sie für verschiedene Benutzer Bezeichnung-Richtlinien verwenden, müssen Sie möglicherweise eine neue Bezeichnungs Richtlinie erstellen, die alle ihre Bezeichnungen veröffentlicht und die Richtlinie nur für dieses Delegierte Benutzerkonto veröffentlicht.
@@ -99,7 +101,7 @@ Für das Delegierte Benutzerkonto:
 
 1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com/) an.
 
-2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory** > **Verwalten** Sie > **App-Registrierungen**. 
+2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory**  >  **Manage**  >  **App-Registrierungen**. 
 
 3. Wählen Sie **+ neue Registrierung**aus. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
 
@@ -109,24 +111,24 @@ Für das Delegierte Benutzerkonto:
     
     - **Unterstützte Konto Typen**: **nur Konten in diesem Organisations Verzeichnis**
     
-    - **Umleitungs-URI (optional)** : **Web** und `https://localhost`
+    - **Umleitungs-URI (optional)**: **Web** und`https://localhost`
 
-4. Kopieren Sie im Bereich **AIP-delegateduser** den Wert für die **Anwendungs-ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+4. Kopieren Sie im Bereich **AIP-delegateduser** den Wert für die **Anwendungs-ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
-5. Wählen Sie in der Rand Leiste die Option **Verwalten** > **Zertifikate & Geheimnissen**aus.
+5. Wählen Sie in der Rand Leiste die Option Zertifikate **Verwalten**  >  **& geheimen**Schlüssel aus.
 
 6. Wählen Sie im Bereich **AIP-delegateduser-Zertifikate &** geheimen Schlüssel im Bereich geheime **Client** Schlüssel die Option **+ neuer geheimer Client**Schlüssel aus.
 
 7. Geben Sie unter **geheimen Client Schlüssel hinzufügen**Folgendes an, und wählen Sie dann **Hinzufügen**aus:
     
-    - **Beschreibung**: `Azure Information Protection unified labeling client`
+    - **Beschreibung**:`Azure Information Protection unified labeling client`
     - **Läuft**ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
 
-8. Kopieren Sie im Bereich **AIP-delegateduser--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
+8. Kopieren Sie im Bereich **AIP-delegateduser--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` . Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
     
     Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
 
-9. Wählen Sie in der Rand Leiste die Option **Verwalten** > **API-Berechtigungen**aus.
+9. Wählen Sie in der Rand **Manage**Leiste  >  **API-Berechtigungen**verwalten aus.
 
 10. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
 
@@ -151,7 +153,7 @@ Für das Delegierte Benutzerkonto:
 
 18. Wählen Sie **Berechtigungen hinzufügen** aus.
 
-19. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **Administrator Zustimmung für \<*Ihres Mandanten namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
+19. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **Administrator Zustimmung erteilen \<*your tenant name*> für** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
     
     Die API-Berechtigungen sollten wie folgt aussehen:
     
@@ -160,7 +162,7 @@ Für das Delegierte Benutzerkonto:
 Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlossen haben, können Sie " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit den Parametern " *AppID*" und " *appsecret*" ausführen. Außerdem benötigen Sie Ihre Mandanten-ID. 
 
 > [!TIP]
->Sie können Ihre Mandanten-ID schnell kopieren, indem Sie Azure-Portal: **Azure Active Directory** >  ** > Eigenschaften** > **Verzeichnis-ID** **Verwalten** .
+>Sie können Ihre Mandanten-ID schnell kopieren, indem Sie Azure-Portal: **Azure Active Directory**  >  **Manage**  >  **Properties**  >  **Directory ID**.
 
 1. Öffnen Sie Windows PowerShell mit der **Option als Administrator ausführen**. 
 
@@ -178,7 +180,7 @@ Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlo
 > Wenn der Computer nicht über Internet Zugriff verfügen kann, ist es nicht erforderlich, die app in Azure AD zu erstellen und Set-aipauthentication auszuführen. Befolgen Sie stattdessen die Anweisungen für nicht [verbundene Computer](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung die Cmdlet-Hilfe benötigen, geben Sie `Get-Help <cmdlet name> -online`ein. Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen, geben Sie ein `Get-Help <cmdlet name> -online` . Beispiel: 
 
     Get-Help Set-AIPFileLabel -online
 

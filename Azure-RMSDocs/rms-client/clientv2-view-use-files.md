@@ -4,23 +4,25 @@ description: Anweisungen zum Anzeigen einer geschützten Datei, die erfordert, d
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7ef8129e7a97dbd0a9903e177221beb938108b7a
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 452e7779c6c6b1f9227dcea80a49f3402d0375f2
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960810"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802809"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>
+> **Kunden mit erweitertem Microsoft-Support für Windows 7 und Office 2010 können auch Azure Information Protection Unterstützung für diese Versionen erhalten. Wenden Sie sich an Ihren Support, um ausführliche Informationen zu erhalten.*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -66,7 +68,7 @@ Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azur
 4. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
 
 > [!TIP]
-> Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Um auf diese Option zuzugreifen, wählen Sie in einer Office-App die **Vertraulichkeits** Schaltfläche > **Hilfe und Feedback** > **Einstellungen zurücksetzen**aus. 
+> Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Um auf diese Option zuzugreifen, wählen Sie in einer Office-App die Schaltfläche **Sensitivität** aus, > Einstellungen für **Hilfe und Feedback**  >  **Zurücksetzen**. 
 > 
 > [Weitere Informationen zur Option „Einstellungen zurücksetzen“](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

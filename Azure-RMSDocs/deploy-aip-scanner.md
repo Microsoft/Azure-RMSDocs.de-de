@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/03/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb4afc770cdfe2e930a7309e8fde9d48a9d73fd7
-ms.sourcegitcommit: f527c6247c04e934811dea53ff7e4dcd61bbf15d
+ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84326317"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802937"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -169,7 +169,7 @@ In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu insta
     
     Füllen Sie die Datenbank mit dem folgenden Skript auf: 
 
-    Wenn dies nicht vorhanden ist (Select * from Master. sys. server_principals WHERE sid = SUSER_SID (' Domäne \ Benutzer ')) beginnen Sie mit dem Deklarieren von @T nvarchar (500) Set @T = ' Create Login ' + QUOTENAME (' Domäne \ User ') + ' from Windows ' exec ( @T ) End 
+    Wenn diese Option nicht vorhanden ist (Select * from master.sys. server_principals WHERE sid = SUSER_SID (' Domäne \ Benutzer ')) beginnen Sie das Deklarieren von @T nvarchar (500) Set @T = ' Create Login ' + QUOTENAME (' domain\user ') + ' from Windows ' exec ( @T ) End 
 
 Um einen Benutzer zu erstellen und db_owner Berechtigungen für diese Datenbank zu erteilen, bitten Sie den sysadmin, folgende Aufgaben durchzuführen:
 
@@ -279,7 +279,7 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     
     Beispiele:
       
-    - Für eine Netzwerkfreigabe: `C:\Folder\Filename`
+    - Für eine Netzwerkfreigabe: `\\Server\Folder`
     
     - Für eine SharePoint-Bibliothek: `http://sharepoint.contoso.com/Shared%20Documents/Folder`
     
@@ -458,7 +458,7 @@ Führen Sie den folgenden Befehl in der PowerShell-Sitzung aus, um Probleme mit 
 
 Das Tool zum Überprüfen der Diagnose führt die folgenden Überprüfungen durch und exportiert Protokolle:
 
-|Prüfen|Mögliches Ergebnis|
+|Azure Functions|Mögliches Ergebnis|
 |-----------|----------|
 |Daten Bank Überprüfung| ist auf dem neuesten Stand, ist verfügbar.|
 |Netzwerk Überprüfung| Auf URLs kann zugegriffen werden|
@@ -602,7 +602,7 @@ Die Überprüfung aktualisiert die Richtlinie gemäß den folgenden Triggern:
 > [!TIP]
 > Wenn Sie die Richtlinie früher als das Standardintervall aktualisieren müssen, z. b. während eines Testzeitraums: 
 >
-> - Scanner vom klassischen Client: Löschen Sie die Richtlinien Datei **Policy. MSIP** manuell aus **%LocalAppData%\microsoft\msip\policy.MSIP**.
+> - Scanner vom klassischen Client: Löschen Sie die Richtlinien Datei manuell, **Policy.msip** von **% LocalAppData% \Microsoft\MSIP\Policy.msip**.
 >
 > - Scanner vom Unified-Bezeichnungs Client: Löschen Sie den Inhalt manuell aus **%LocalAppData%\microsoft\msip\mip \\ < *ProcessName*> \mip**.
 >

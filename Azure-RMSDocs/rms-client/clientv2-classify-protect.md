@@ -4,23 +4,25 @@ description: Anleitungen zur Klassifizierung und zum Schutz Ihrer Dokumente und 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/08/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 06ac8dd5923fb4275aeaa833bf40f0ac660e1c26
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: c0ac91178b2460a2400f0cdc9bed6e51565f1ef2
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973074"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802913"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: klassifizieren und schützen mit dem Azure Information Protection Unified-Beschriftungs Client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>
+> **Kunden mit erweitertem Microsoft-Support für Windows 7 und Office 2010 können auch Azure Information Protection Unterstützung für diese Versionen erhalten. Wenden Sie sich an Ihren Support, um ausführliche Informationen zu erhalten.*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -54,7 +56,7 @@ Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewäh
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
-Wählen Sie zum Festlegen einer Bezeichnung, z. b. "**vertrauliche** \ **alle Mitarbeiter**", **vertraulich** und dann **alle Mitarbeiter**aus. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten.
+Um eine Bezeichnung festzulegen, z. b. "**vertrauliche**  \  **alle Mitarbeiter**", wählen Sie **vertraulich** und dann **alle Mitarbeiter**aus. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten.
 
 Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn Sie die Azure Information Protection Leiste angezeigt haben und die Bezeichnungen nicht auf der Leiste angezeigt werden, die Sie auswählen können, klicken Sie zuerst auf das Symbol " **Bezeichnung bearbeiten** " neben dem Wert der aktuellen Bezeichnung.
 
@@ -80,7 +82,7 @@ Mögliche Gründe:
 
 - Wenn Ihr Administrator kürzlich eine neue Bezeichnung für Sie konfiguriert hat, schließen Sie alle Instanzen der Office-App und öffnen Sie sie anschließend erneut. Durch diese Aktion werden Änderungen an den Bezeichnungen gesucht.
 
-- Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Um dies zu überprüfen **, klicken Sie auf Vertraulichkeit** > **Hilfe und Feedback**. Prüfen Sie im Dialogfeld, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
+- Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Klicken Sie zum Überprüfen auf **Sensitivität**  >  **Hilfe und Feedback**. Prüfen Sie im Dialogfeld, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
     
     Sie benötigen Office Professional Plus nicht, wenn Sie über Office-Apps von Office 365 Business oder Microsoft 365 Business verfügen, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
 

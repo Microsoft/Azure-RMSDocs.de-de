@@ -1,10 +1,10 @@
 ---
 title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-Beschriftungs Client
 description: Informationen zum Anpassen des Azure Information Protection Unified Bezeichnung-Clients für Windows.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8d9914a696355d376847a85a20b8918856aac5f5
-ms.sourcegitcommit: a44977027d3fbc33b580fd034700ea91d6a2548b
+ms.openlocfilehash: 901b036a333e5d801888176a020a8f60932ec2c8
+ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627682"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84802973"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>
+> **Kunden mit erweitertem Microsoft-Support für Windows 7 und Office 2010 können auch Azure Information Protection Unterstützung für diese Versionen erhalten. Wenden Sie sich an Ihren Support, um ausführliche Informationen zu erhalten.*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -32,7 +34,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -796,11 +798,11 @@ Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom 
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Zum Beispiel:
+Beispiel:
 
-- Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
+- Mit dieser Einstellung können Sie feststellen, dass ein Benutzer auf Financial.docx mit der Bezeichnung **vertraulich \ Sales**zugegriffen hat.
 
-- Ohne diese Einstellung können Sie sehen, dass "Financial. docx" 6 Kreditkartennummern enthält.
+- Ohne diese Einstellung sehen Sie, dass Financial.docx 6 Kreditkartennummern enthält.
     
     - Wenn Sie zusätzlich [Inhaltsübereinstimmungen für umfassendere Analysen](../reports-aip.md#content-matches-for-deeper-analysis) aktivieren, sind außerdem die tatsächlichen Kreditkartennummern einsehbar.
 
@@ -987,7 +989,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1221,10 +1223,10 @@ Die folgenden PowerShell-Beispiel Befehle veranschaulichen, wie diese erweiterte
 
 **Lese-oder archivierte Dateien überspringen**
 
-Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Beispiel:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE”}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_ARCHIVE"}
 
 > [!TIP]
 > Es wird empfohlen, dass Sie die Überprüfung für das Überspringen von Dateien mit den folgenden Attributen in Erwägung ziehen:
