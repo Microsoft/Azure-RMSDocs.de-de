@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 67c43e4b0dc24421e7fdb16ebadf32309dec9005
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: c1efdbcf7d6738b5dd1d0cfb6b5d4495cec60f4b
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802937"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126712"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -239,7 +239,7 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     
     Optional können Sie eine Beschreibung für administrative Zwecke angeben, damit Sie den Cluster Namen des Scanners leichter identifizieren können.
 
-    Wählen Sie **Speichern** aus.
+    Klicken Sie auf **Speichern**.
 5. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Inhalts Scanaufträge**aus.
 6. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Hinzufügen**aus.
  
@@ -292,7 +292,7 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
     
     Für die restlichen Einstellungen in diesem Bereich sollten Sie diese nicht für diese anfängliche Konfiguration ändern, sondern als Standardwert für den **inhaltscanauftrag**beibehalten. Dies bedeutet, dass das Datenrepository die Einstellungen vom Inhalts Überprüfungs Auftrag erbt. 
     
-    Wählen Sie **Speichern** aus.
+    Klicken Sie auf **Speichern**.
 
 > [!IMPORTANT]
 > Obwohl das lokale Dateisystem gescannt werden kann, wird diese Konfiguration für Produktions Bereitstellungen nicht empfohlen und kann **nur** in Clustern mit einem einzelnen Knoten verwendet werden. Das Scannen von lokalen Ordnern durch Cluster mit mehreren Knoten wird nicht unterstützt. Wenn Sie einen Ordner auf dem lokalen Dateisystem scannen müssen, empfiehlt es sich, eine Freigabe zu erstellen und Sie mit einer Netzwerk-URL zu scannen.
@@ -449,9 +449,11 @@ Da der Zeitplan als fortlaufend konfiguriert wurde, startet der Scanner automati
 
 ## <a name="troubleshooting-using-scanner-diagnostic-tool"></a>Problembehandlung mithilfe des Scanner-Diagnosetools
 
-Führen Sie den folgenden Befehl in der PowerShell-Sitzung aus, um Probleme mit Scanner zu beheben:
+Führen Sie die folgenden Befehle in der PowerShell-Sitzung aus, um Probleme mit Scanner zu beheben:
 
-        Start-AIPScannerDiagnostics
+        $scanner_account_creds= Get-Credential 
+        Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+
 
 1. Führen Sie nur den Befehl "-onauftrag% scanner_account%" aus. 
 2. Beachten Sie, dass dieser Befehl kein Voraussetzungs Überprüfungs Tool ist. Das Tool überprüft, ob die aktuelle Überprüfungs Bereitstellung fehlerfrei ist. Stellen Sie sicher, dass dieser Befehl nur ausgeführt wird, nachdem die Bereitstellung des Scanners vollständig ist und die Profil Konfiguration vollständig ist 
@@ -695,7 +697,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
     
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
     
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     

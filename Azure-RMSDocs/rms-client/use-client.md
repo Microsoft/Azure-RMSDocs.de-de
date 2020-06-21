@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 13128b48be4dd4e64e767e121551c4c2e8692e78
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: e069abcc246848a48dc0edb014bdea0e128d03b1
+ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84250043"
+ms.lasthandoff: 06/21/2020
+ms.locfileid: "85126695"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -54,17 +54,53 @@ Die Auswahl der Bezeichnung Client für Ihre Windows-Computer kann von dem verwe
 
 Da der Unified-Bezeichnungs Client und der klassische Client eine separate Installation für Office erfordern, müssen Sie diese Clients aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren. 
 
-Welchen Client sollten Sie verwenden?
+Anhand der folgenden Abschnitte können Sie bestimmen, welcher Client für Ihre Organisation am besten geeignet ist:
 
-- Verwenden Sie den **Bezeichnungs Client, der in Office** für Ihre Windows-Computer integriert ist, wenn Sie über Office 365-apps verfügen, die mindestens Version 1910 haben. Sie möchten dieselben Bezeichnungen und Richtlinien Einstellungen verwenden, die auch von MacOS, IOS und Android verwendet werden können, und Sie benötigen keine Features in Ihren Office-Apps, für die der Unified Label-Client oder der klassische Client erforderlich ist. Diese Features enthalten die Information Protection Leiste unter dem Menüband zur einfacheren Auswahl und Sichtbarkeit von Bezeichnungen. 
-    
-    Dieser Client unterstützt das Wechseln von Konten, und da er kein Office-Add-in verwendet, hat er eine bessere Leistung in Office-Apps als die Verwendung eines der Azure Information Protection Clients. Da die Bezeichnung in Office integriert ist, gibt es keine separate Installation und Wartung für diesen Bezeichnungs Client. Außerdem kann es im Gegensatz zu einem Office-Add-in nicht deaktiviert werden.
+- [Integrierter Office-Beschriftungs Client](#built-in-office-labeling-client)
+- [Azure Information Protection-Client für einheitliche Bezeichnungen](#azure-information-protection-unified-labeling-client)
+- [Azure Information Protection des klassischen Clients](#azure-information-protection-classic-client)
+- [Verwenden mehrerer Clients in derselben Umgebung](#using-multiple-clients-in-the-same-environment)
 
-- Verwenden Sie den **Azure Information Protection Unified** Label-Client auf Windows-Computern für Bezeichnungen und Richtlinien Einstellungen, die auch von MacOS, IOS und Android verwendet werden können. Sie möchten Dateien unabhängig von Office 365-apps bezeichnen, und Sie benötigen keine Features, die nur vom klassischen Client unterstützt werden. Diese Features umfassen derzeit den Schutz von Inhalten mit einem lokalen Schlüssel (Hyok) und eine allgemein verfügbare Version des Scanners für lokale Datenspeicher.
+Weitere Informationen finden Sie unter: [ausführliche Vergleiche der AIP-Clients](#detailed-comparisons-for-the-azure-information-protection-clients) und [Features, die für den Unified-Bezeichnungs Client nicht geplant](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)sind.
 
-- Installieren Sie den **Azure Information Protection-Client (klassisch)** auf Windows-Computern, wenn Sie eine Version des Clients benötigen, die über Features verfügt, die noch nicht mit dem Unified-Bezeichnungs Client verfügbar sind. Obwohl dieser Client die gleichen Bezeichnungen wie die von MacOS, IOS und Android verwenden kann, verfügt er über unterschiedliche Richtlinien Einstellungen. Der Kompromiss besteht also in der Verwaltung mithilfe eines anderen Verwaltungs Portals und einer anderen Benutzer Darstellung für Benutzer.
+> [!NOTE]
+> Mit der neuesten Version des Unified-Bezeichnungs Clients wird die Parität der Features mit dem klassischen Client geschlossen. Wenn diese Lücke geschlossen wird, können Sie davon ausgehen, dass neue Features nur dem Unified-Beschriftungs Client hinzugefügt werden. 
+>
+> Es wird empfohlen, dass Sie den Unified-Bezeichnungs Client bereitstellen, wenn der aktuelle Funktionsumfang und seine Funktionalität ihren Geschäftsanforderungen entsprechen.
+> 
 
-Mit der neuesten Version des Unified-Bezeichnungs Clients wird die Parität der Features mit dem klassischen Client geschlossen. Wenn diese Lücke geschlossen wird, können Sie davon ausgehen, dass neue Features nur dem Unified-Beschriftungs Client hinzugefügt werden. Aus diesem Grund wird empfohlen, den Unified-Bezeichnungs Client bereitzustellen, wenn der aktuelle Funktionsumfang und seine Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](../configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client.
+### <a name="built-in-office-labeling-client"></a>Integrierter Office-Beschriftungs Client
+
+Der Bezeichnungs Client, der in Microsoft Office integriert ist:
+
+- Erfordert einen Windows-Computer mit Office 365-Anwendungen, mindestens Version 1910
+- Ermöglicht das Freigeben von Bezeichnungen und Richtlinien Einstellungen, die auch von macOS, IOS und Android verwendet werden können.
+- Unterstützt Wechsel Konten
+- Bietet eine bessere Leistung in Office-Anwendungen
+- Erfordert keine separate Installation und Wartung
+- Kann nicht deaktiviert werden.
+
+**Verwenden** Sie den integrierten Office-Beschriftungs Client nicht, wenn Sie Funktionen benötigen, die nur von den klassischen oder vereinheitlichten Kunden, wie z. b. der Information Protection Leiste unter dem Menüband bereitgestellt werden. Diese Leiste ermöglicht die Auswahl und Sichtbarkeit von Bezeichnungen.
+
+### <a name="azure-information-protection-unified-labeling-client"></a>Azure Information Protection-Client für einheitliche Bezeichnungen
+
+Der Unified Label-Client erfordert einen Windows-Computer und ermöglicht das Freigeben von Bezeichnungen und Richtlinien Einstellungen, die auch von macOS, IOS und Android verwendet werden können.
+
+**Verwenden** Sie den Unified Label-Client nicht, wenn die aktuellen Unified Label-Features nicht Ihren Geschäftsanforderungen entsprechen oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](../configure-policy-migrate-labels.md)haben.
+
+### <a name="azure-information-protection-classic-client"></a>Azure Information Protection des klassischen Clients
+
+Der klassische Client:
+
+- Erfordert einen Windows-Computer
+- Bietet Zugriff auf Features, die noch nicht auf dem Unified-Bezeichnungs Client verfügbar sind, wie z. b. das Speichern Ihres eigenen lokalen Schlüssels (Hyok) und eine allgemeine Verfügbarkeits Version des Scanners für lokale Datenspeicher. 
+- Ermöglicht das Freigeben von Bezeichnungen für macOS, IOS und Android.
+
+Der klassische Client hat jedoch unterschiedliche Richtlinien Einstellungen für macOS, IOS und Android. Obwohl Sie möglicherweise die zusätzlichen Features verwenden möchten, müssen Sie mit einem separaten Verwaltungs Portal und Benutzeroberflächen arbeiten, um Inhalte über Betriebssysteme hinweg zu schützen.
+
+**Verwenden** Sie den klassischen Client nicht, wenn Sie neuere Features nur im Unified-Bezeichnungs Client verfügbar machen möchten, oder um eine zentralisierte, einheitliche Benutzerfunktion bereitzustellen.
+
+### <a name="using-multiple-clients-in-the-same-environment"></a>Verwenden mehrerer Clients in derselben Umgebung
 
 Sie können verschiedene Clients in derselben Umgebung verwenden, um unterschiedliche Geschäftsanforderungen zu unterstützen, wie im folgenden Beispiel für die Bereitstellung veranschaulicht. In einer gemischten Client Umgebung empfiehlt es sich, einheitliche Bezeichnungen zu verwenden, damit Clients denselben Satz von Bezeichnungen für die einfache Verwaltung verwenden. Neue Kunden haben standardmäßig einheitliche Bezeichnungen, da sich Ihre Mandanten auf der vereinheitlichten Beschriftungs Plattform befinden. Weitere Informationen finden Sie unter [wie kann ich feststellen, ob mein Mandant auf der Unified-Beschriftungs Plattform ist?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
@@ -74,7 +110,7 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
 
 - Für die Mehrheit der Benutzer stellen Sie den Azure Information Protection Unified-Bezeichnungs Client bereit, da dieser Client die geschäftlichen Anforderungen für diese Benutzer erfüllt. 
     
-    Für diese Benutzer ist Ihre Bezeichnung in Windows, Mac, IOS und Android sehr ähnlich, da Ihnen dieselben Bezeichnungen und die gleichen Richtlinien Einstellungen zur Verfügung stehen. Als Administrator verwalten Sie diese Bezeichnungen und Richtlinien Einstellungen im selben Verwaltungs Center.
+    Für diese Benutzer ist Ihre Bezeichnung in Windows, Mac, IOS und Android ähnlich, da Ihnen dieselben Bezeichnungen und die gleichen Richtlinien Einstellungen zur Verfügung stehen. Als Administrator verwalten Sie diese Bezeichnungen und Richtlinien Einstellungen im selben Verwaltungs Center.
 
 - Außerdem installieren Sie den Unified-Bezeichnung-Client für sich selbst, um den Azure Information Protection Scanner zu testen.
 
@@ -88,7 +124,7 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
 
 Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den drei Bezeichnungs enden Clients für Windows-Computer unterstützt werden.
 
-In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
+In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, macOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
 
 |Funktion|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
@@ -101,7 +137,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | **Ja** |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
-|Anpassungen wie z.B. folgende:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
+|Anpassungen wie z.B. folgende:<br />– Standardbezeichnung für E-Mails<br />: Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
 |Überprüfung für lokale Datenspeicher:| **Ja** | **Zwar<br />** | Nein |
 |Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | Nein |
 |Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
@@ -111,16 +147,16 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
-|PDF-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein  | Nein  |
+|PDF-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein  |
 |PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
 |Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja**| Nein |
-|HYOK-Unterstützung:| **Ja** | Nein  | Nein  |
-|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein  |Nein  |
-|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein  | Nein  |
+|HYOK-Unterstützung:| **Ja** | Nein | Nein  |
+|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein  |
+|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein  |
 |Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>6</sup> | Nein |
-|Geschützte Dokumente widerrufen:| **Ja** | Nein  | Nein  |
-|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein  | Nein  |
+|Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein  |
+|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein  |
 |Unterstützung für Kontowechsel:| Nein  | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
 |Unterstützung für AD RMS:| **Ja** | Nr. <sup>7</sup> | Nein |
