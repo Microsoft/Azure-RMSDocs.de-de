@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 14dda765c2cf695d0da3ee23d4012103b346905a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: af90e644608c99d6b5d628ff0d57e8cc48b5e162
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483336"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665978"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -55,7 +55,7 @@ Voraussetzungen für dieses Tutorial:
 
 4. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert.
     
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
     
     Wenn Sie den Client für einheitliche Bezeichnungen anstelle des klassischen Clients verwenden, sehen Sie sich die folgenden Anweisungen an, die erläutern, wie Sie die erweiterten PowerShell-Einstellungen für die entsprechenden Konfigurationen in diesem Tutorial verwenden:
     

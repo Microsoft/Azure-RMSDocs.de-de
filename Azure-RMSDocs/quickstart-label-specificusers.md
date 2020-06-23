@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5af1ddc73f536bf35f05ebe34ae9704a6edfea0a
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 9c2459303d6d0f86866791f6cda01aaa28064b9a
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483064"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665604"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer
 
@@ -50,7 +50,7 @@ Voraussetzungen für diesen Schnellstart:
 
 4. So testen Sie die neue Bezeichnung: Der Azure Information Protection-Client (klassisch) muss auf einem Windows-Computer installiert sein. 
     
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen.
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen.
      
     Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der Dokumentation zur Microsoft 365-Compliance. [Weitere Informationen: Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 

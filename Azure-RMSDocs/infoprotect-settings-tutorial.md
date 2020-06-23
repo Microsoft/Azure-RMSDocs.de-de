@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1412567cdc0b7d6dcb1365c7aad3fceaa9dc44ba
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 175657a4dffd1dfde76c4521576253aeadeced22
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483302"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665842"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -54,7 +54,7 @@ Voraussetzungen für dieses Tutorial:
 
 3. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert (mindestens Windows 7 mit Service Pack 1). 
     
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
     
     Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie Informationen zu Richtlinieneinstellungen für Vertraulichkeitsbezeichnungen in der Dokumentation zur Microsoft 365-Compliance. Weitere Informationen finden Sie unter [Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
