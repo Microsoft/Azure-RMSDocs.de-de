@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "78973169"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665706"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
@@ -40,13 +40,13 @@ Voraussetzungen für diesen Schnellstart:
 
 2. Einer der folgenden Azure Information Protection-Clients ist auf Ihrem Computer installiert:
     
-    - Der klassische Client: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
+    - Der klassische Client: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
     
-    - Der Client für einheitliche Bezeichnungen: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection_UL.exe** herunter.
+    - Der Client für einheitliche Bezeichnungen: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018), und laden Sie **AzInfoProtection_UL.exe** herunter.
     
 3. SQL Server Express ist ebenfalls auf Ihrem Computer installiert.
     
-    Wenn diese SQL Server-Edition noch nicht installiert ist, können Sie sie über das [Microsoft Download Center](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express) herunterladen und die Standardinstallation auswählen.
+    Wenn diese SQL Server-Edition noch nicht installiert ist, können Sie sie über das [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express) herunterladen und die Standardinstallation auswählen.
 
 4. Ihr Domänenkonto ist mit Azure AD synchronisiert.
 
@@ -137,7 +137,7 @@ Nun können Sie den Scanner mit dem Scannerprofil installieren, das Sie eben ers
     
         Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
     
-    Wenn Sie aufgefordert werden, geben Sie Ihre Anmeldeinformationen für den Scanner im Format \<Domänen-/Benutzername> und dann Ihr Kennwort an. 
+    Wenn Sie aufgefordert werden, geben Sie Ihre Anmeldeinformationen für den Scanner im Format \<domain\user name> und dann Ihr Kennwort an. 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Starten der Überprüfung und Überprüfen des erfolgreichen Abschlusses
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 904898a5832a2c178ca7e1a8308d95998e926ad7
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: e218d27a877263d450e965b3a8a6ec97d527dacb
+ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79483319"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84665995"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -52,7 +52,7 @@ Voraussetzungen für dieses Tutorial:
 
 3. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert (mindestens Windows 7 mit Service Pack 1). 
     
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Dokumentation zur Microsoft 365-Compliance](/microsoft-365/compliance/sensitivity-labels).
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Dokumentation zur Microsoft 365-Compliance](/microsoft-365/compliance/sensitivity-labels).
 
 4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
@@ -122,7 +122,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
 4. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist. Diese Option verwendet den Azure Rights Management-Dienst zum Schützen von Dokumenten und E-Mails. Stellen Sie sicher, dass die Option **Berechtigungen festlegen** ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
 
-5. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **Hinzufügen\<Organisationsname> – Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
+5. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **Hinzufügen > \<organization name> > Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
     
     ![Allen Mitgliedern Berechtigungen für den Schutz einer Azure Information Protection-Bezeichnung erteilen.](./media/info-protect-protection-all-members.png) 
     
