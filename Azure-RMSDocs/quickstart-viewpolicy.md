@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c3c38ea55406b85dabda3e94101d268a9505c085
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 38f18cebc7d819d0a5afeb3c3a14b1b56ef0aca6
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "77423086"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049053"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -149,4 +149,4 @@ Bei Verwendung des Clients für einheitliche Bezeichnungen:
 
 - Weitere Informationen finden Sie in der Dokumentation für die Microsoft 365-Compliance unter [Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels)
 
-Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
+Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
