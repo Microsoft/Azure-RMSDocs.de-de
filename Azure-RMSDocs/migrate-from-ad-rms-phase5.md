@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: cf946837e928c976cb3c8bc18fb6063866d5087e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971726"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049121"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -56,9 +56,11 @@ Wenn migrierte Clients Office 2010 ausführen, kann es bei Benutzern zu Verzöge
 
 Umleitung über lokale Hostdatei:
 
-- Fügen Sie die folgende Zeile in die Datei "local Hosts `<AD RMS URL FQDN>` " ein, und ersetzen Sie dabei durch den Wert für Ihren AD RMS-Cluster ohne Präfixe oder Webseiten:
+- Fügen Sie die folgende Zeile in die Datei "local Hosts" ein, und ersetzen Sie dabei `<AD RMS URL FQDN>` durch den Wert für Ihren AD RMS-Cluster ohne Präfixe oder Webseiten:
 
-        127.0.0.1 <AD RMS URL FQDN>
+    ```sh
+    127.0.0.1 <AD RMS URL FQDN>
+    ```
 
 Umleitung über DNS:
 
@@ -72,7 +74,7 @@ Wenn diese DNS-Änderungen weitergegeben wurden, ermitteln und verwenden diese C
 
 Suchen Sie im Schlüsselbund nach „adal“, und löschen Sie alle ADAL-Einträge, um Mac-Computer zum sofortigen Ausführen des Ermittlungsprozesses zu zwingen. Führen Sie dann folgende Befehle auf diesen Computern aus:
 
-````
+````sh
 
 rm -r ~/Library/Cache/MSRightsManagement
 
@@ -98,21 +100,26 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
 1. Stellen Sie in einer PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
 
-        Connect-AipService
+    ```ps
+    Connect-AipService
 
-2. Führen Sie den folgenden Befehl aus, und geben Sie **Y** zur Bestätigung ein:
+2. Run the following command, and enter **Y** to confirm:
 
-        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```ps
+    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
+    ```
 
     Beachten Sie, dass dieser Befehl alle Lizenzerzwingungen für den Schutzdienst Azure Rights Management entfernt, sodass alle Computer Dokumente und E-Mails schützen können.
 
 3. Bestätigen Sie, dass Onboarding-Steuerelemente nicht länger festgelegt sind:
 
-        Get-AipServiceOnboardingControlPolicy
+    ```ps    
+    Get-AipServiceOnboardingControlPolicy
+    ```
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
-Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diese Aufgabe unter folgendem Speicherort: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
+Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diese Aufgabe unter folgendem Speicherort: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services Client**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12 Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -130,7 +137,10 @@ So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
 - **Wenn Ihr Mandanten Schlüssel von Microsoft verwaltet wird**: führen Sie das PowerShell-Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, und geben Sie den Schlüssel Bezeichner für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert angeben, der angegeben werden soll, indem Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
 
-        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+        
+    ```ps
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
+    ```
 
 - **Wenn Ihr Mandanten Schlüssel von Ihnen verwaltet wird (Byok)**: Wiederholen Sie in Azure Key Vault den Schlüssel Erstellungs Vorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet " [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) " erneut aus, um den URI für diesen neuen Schlüssel anzugeben.
 

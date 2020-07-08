@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7e1ec5241cfedf89b33258115afbc1ee86eae3b3
-ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
+ms.openlocfilehash: 9543490585d01e9592ec63d53775ff46ad3fc415
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507636"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049104"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -56,7 +56,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
            
       - Windows Server 2012 (x64)
         
-      - Windows Server 2012 R2 (x64)
+      - Windows Server 2012 R2 (x64)
         
       - Windows Server 2016 (x64)
         
@@ -74,7 +74,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
 
     Siehe [Anforderungen für Azure Information Protection](./requirements.md).
 
-    Beachten Sie Folgendes: Wenn Sie über Computer verfügen, auf denen Office 2010 ausgeführt wird, müssen Sie den [Azure Information Protection Client oder den Azure Information Protection Unified-Bezeichnungs Client für Benutzer](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)installieren, da diese Clients die Möglichkeit bieten, Benutzer für Clouddienste zu authentifizieren. Für spätere Versionen von Office sind diese Clients für die Klassifizierung und Bezeichnung erforderlich, und der Azure Information Protection Client ist optional, wird jedoch empfohlen, wenn Sie nur Daten schützen möchten. Weitere Informationen finden Sie in den Administrator Handbüchern für den [Azure Information Protection Client](./rms-client/client-admin-guide.md) und den [Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide.md).
+    Beachten Sie Folgendes: Wenn Sie über Computer verfügen, auf denen Office 2010 ausgeführt wird, müssen Sie den [Azure Information Protection Client oder den Azure Information Protection Unified-Bezeichnungs Client für Benutzer](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)installieren, da diese Clients die Möglichkeit bieten, Benutzer für Clouddienste zu authentifizieren. Für spätere Versionen von Office sind diese Clients für die Klassifizierung und Bezeichnung erforderlich, und der Azure Information Protection Client ist optional, wird jedoch empfohlen, wenn Sie nur Daten schützen möchten. Weitere Informationen finden Sie in den Administrator Handbüchern für den [Azure Information Protection Client](./rms-client/client-admin-guide.md) und den [Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide.md).
 
     Sie benötigen zwar ein Azure Information Protection-Abonnement, bevor Sie von AD RMS aus migrieren können, aber wir empfehlen, den Rights Management-Dienst für Ihren Mandanten nicht vor dem Start der Migration zu aktivieren. Sie führen diesen Aktivierungsschritt während der Migration aus, nachdem Sie die Schlüssel und Vorlagen aus AD RMS exportiert und in Ihren Azure Information Protection-Mandanten importiert haben. Wenn der Rights Management-Dienst bereits aktiviert wurde, können Sie dennoch von AD RMS migrieren, aber es sind einige zusätzliche Schritte notwendig.
 
@@ -97,7 +97,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
 
 - **Wenn Sie Ihren eigenen Azure Information Protection-Mandantenschlüssel mithilfe eines HSM-geschützten Schlüssels verwalten möchten:**
 
-    - Für diese optionale Konfiguration sind Azure Key Vault und ein Azure-Abonnement erforderlich, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/pricing/details/key-vault/). 
+    - Für diese optionale Konfiguration sind Azure Key Vault und ein Azure-Abonnement erforderlich, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Weitere Informationen finden Sie auf der [Seite Azure Key Vault Preise](https://azure.microsoft.com/pricing/details/key-vault/). 
 
 
 ### <a name="cryptographic-mode-considerations"></a>Überlegungen zum Kryptografiemodus
@@ -146,7 +146,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
     Wenn Sie nicht alle Clients auf einmal migrieren können, sondern die Migration in Batches ausführen werden, verwenden Sie Onboardingsteuerelemente, und stellen Sie ein Skript zur Ausführung vor der Migration bereit. Wenn Sie allerdings alles gleichzeitig migrieren, anstatt die Migration in Phasen abzuwickeln, können Sie diesen Schritt überspringen.
 
-- **Schritt 3:Vorbereiten Ihrer Exchange-Bereitstellung für die Migration vor**
+- **Schritt 3: Vorbereiten Ihrer Exchange-Bereitstellung für die Migration**
 
     Dieser Schritt ist erforderlich, wenn Sie derzeit die IRM-Funktion von Exchange Online oder Exchange lokal zum Schutz von E-Mails nutzen. Wenn Sie allerdings alles gleichzeitig migrieren, anstatt die Migration in Phasen abzuwickeln, können Sie diesen Schritt überspringen.
 
@@ -166,7 +166,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
     - **Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln**:
 
-        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure Information Protection-Mandantenschlüssel (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert die meisten Konfigurationsschritte, da Sie zunächst den Software Schlüssel extrahieren und in ein lokales HSM importieren und dann die zusätzlichen Schritte ausführen müssen, um den Schlüssel aus Ihrem lokalen nchiffre HSM in ein Azure Key Vault HSM zu übertragen und die Azure-Rechte zu autorisieren. Verwaltungsdienst zur Verwendung des Schlüssel Tresors, in dem der Schlüssel gespeichert wird.
+        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure Information Protection-Mandantenschlüssel (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert die meisten Konfigurationsschritte, da Sie zunächst den Software Schlüssel extrahieren und in ein lokales HSM importieren und dann die zusätzlichen Schritte ausführen müssen, um den Schlüssel aus Ihrem lokalen nchiffre-HSM in ein Azure Key Vault HSM zu übertragen und den Azure Rights Management-Dienst zu autorisieren, den Schlüssel Tresor zu verwenden, in dem der Schlüssel gespeichert wird.
 
 - **Schritt 5: Aktivieren des Azure-Rights Management Dienstanbieter**
 
@@ -208,7 +208,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
     
     Wenn Office 2010 auf Ihren Windows-Computern ausgeführt wird, überprüfen Sie, ob Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** deaktivieren müssen.
 
-- **Schritt 12: Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels**
+- **Schritt 12: neuschlüssel Ihres Azure Information Protection Mandanten Schlüssels**
 
     Dieser Schritt wird empfohlen, wenn Sie sich vor der Migration nicht im Kryptografiemodus 2 befunden haben.
 

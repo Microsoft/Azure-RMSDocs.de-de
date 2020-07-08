@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9fccaa7995b47dbabd9f0308eb206965cdaa7392
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: ba24185e8f8da86bc3801aa9307ae35f671a6c09
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117900"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049019"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -47,7 +47,7 @@ Wenn der Connector keine Verbindung mit dem Azure Rights Management-Dienst herst
 
 Lesen Sie wie bei allen Ereignisprotokolleinträgen die Meldung, um weitere Einzelheiten zu erfahren.
 
-Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Beispielsweise ändert ein anderer Administrator die Konfiguration des Webproxyservers so, dass RMS-Verbindungs Server nicht mehr auf das Internet zugreifen können (Fehler 3001) oder ein Computer Konto aus einer Gruppe entfernt wird, die Sie als autorisiert zur Verwendung des Connectors angegeben haben (Warnung 2001). .
+Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Beispielsweise ändert ein anderer Administrator die Konfiguration des Webproxyservers so, dass RMS-Verbindungs Server nicht mehr auf das Internet zugreifen können (Fehler 3001) oder ein Computer Konto aus einer Gruppe entfernt wird, die Sie als autorisiert zur Verwendung des Connectors angegeben haben (Warnung 2001).
 
 ### <a name="event-log-ids-and-descriptions"></a>Ereignisprotokoll-IDs und Beschreibungen
 
@@ -171,7 +171,7 @@ Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikato
 
 Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
 
-## <a name="logging"></a>Logging
+## <a name="logging"></a>Protokollierung
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn der RMS-Verbindungsdienst zum Schützen und Nutzen von Inhalten verwendet wird, enthält das Feld „Benutzer-ID“ in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**. Dieser Name wird automatisch für den RMS-Connector erstellt.
 
@@ -181,15 +181,17 @@ Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, k�
 
 1. Wechseln Sie unter **%programfiles%\Microsoft Rights Management connector\Web Service** zur Datei „web.config“.
 
-2. Suchen Sie nach der folgenden Zeile:
+2. Suchen Sie die folgende Zeile:
 
-        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 3. Ersetzen Sie diese Zeile durch folgenden Text:
-
-        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```sh
+    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+    ```
 
 4.  Halten Sie IIS an, und starten Sie die Dienste neu, um die Ablaufverfolgung zu aktivieren. 
 
 5.  Nachdem Sie die benötigten Ablaufverfolgungen erfasst haben, stellen Sie die Zeile in Schritt 3 wieder her. Anschließend halten Sie IIS erneut an und starten die Dienste neu.
-

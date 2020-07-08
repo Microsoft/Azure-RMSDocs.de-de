@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b96c9d12277ec85ca1a726907eb5d8c6ca7c391
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 628942a2cf49c934928b8e67908ba40cd4d5898a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935417"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86049036"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
@@ -35,9 +35,10 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
 
 1. Verwenden Sie auf einer Arbeitsstation mit Internetverbindung das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) , um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen:
 
-    ```
+    ```ps
     Connect-AipService
     ```
+    
     Wenn Sie dazu aufgefordert werden, geben Sie die Administratoranmeldeinformationen des Azure Rights Management-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
 
 2. Verwenden Sie das [Import-aipservicetpd-](/powershell/module/aipservice/import-aipservicetpd) Cmdlet, um jede exportierte XML-Datei (Trusted Publishing Domain) hochzuladen. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben. 
@@ -46,10 +47,13 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
     
     Führen Sie z.B. zuerst folgenden Befehl aus, um ein Kennwort zu speichern:
     
-        $TPD_Password = Read-Host -AsSecureString
-    
-    Geben Sie das Kennwort ein, das Sie für den Export der ersten Konfigurationsdatendatei angegeben haben. Führen Sie den folgenden Befehl aus, und bestätigen Sie, dass Sie diese Aktion ausführen möchten („E:\contosokey1.xml“ dient hier als Beispiel für diese Konfigurationsdatei):
+    ```ps
+    $TPD_Password = Read-Host -AsSecureString
     ```
+
+    Geben Sie das Kennwort ein, das Sie für den Export der ersten Konfigurationsdatendatei angegeben haben. Führen Sie den folgenden Befehl aus, und bestätigen Sie, dass Sie diese Aktion ausführen möchten („E:\contosokey1.xml“ dient hier als Beispiel für diese Konfigurationsdatei):
+
+    ```ps
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
@@ -57,7 +61,7 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
 
 4.  Verwenden Sie das [Disconnect-aipserviceservice-](/powershell/module/aipservice/disconnect-aipservice) Cmdlet, um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
-    ```
+    ```ps
     Disconnect-AipServiceService
     ```
 
