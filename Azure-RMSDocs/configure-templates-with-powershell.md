@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 12456200687cd907bb82a8b489414d3c9fa91bbe
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 6f37e0dc2132c85985135c512a6e369641a1bf01
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934924"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047047"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>PowerShell-Referenz für Schutzvorlagen
 
@@ -38,20 +38,18 @@ Die folgenden Cmdlets unterstützen das Erstellen und Verwalten von Schutzvorlag
 
 - [Export-aipservicetemplate](/powershell/module/aipservice/export-aipservicetemplate)
 
-- [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
+- [Get-aipservicetemplate](/powershell/module/aipservice/get-aipservicetemplate)
 
-- [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
+- [Get-aipservicetemplateproperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
 
-- [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
+- [Import-aipservicetemplate](/powershell/module/aipservice/import-aipservicetpd)
 
-- [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
+- [New-aipservicerighzdefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
 
 - [Remove-aipservicetemplate](/powershell/module/aipservice/remove-aipservicetemplate)
 
-- [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
+- [Set-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
 
-
-
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 

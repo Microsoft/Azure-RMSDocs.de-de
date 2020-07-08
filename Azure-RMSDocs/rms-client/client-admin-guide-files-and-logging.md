@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 19c515db9da3d83c0663f41321b4327ffdd4108a
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 676a58b6dc16a8a61b1a528f5b5d0a043c427c09
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482997"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048951"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
@@ -45,7 +45,7 @@ Clientprotokolldateien und aktuell installierte Richtliniendatei:
 
 ## <a name="usage-logging-for-the-azure-information-protection-client"></a>Verwendungsprotokollierung für den Azure Information Protection-Client
 
-Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste** > **Azure Information Protection**. Die Ereignisse umfassen die folgenden Informationen:
+Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisprotokoll **Anwendungs-und Dienst Protokolle**  >  **Azure Information Protection**. Die Ereignisse umfassen die folgenden Informationen:
 
 - Clientversion, Richtlinien-ID
 
@@ -85,7 +85,7 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
     
     - Empfohlen
     
-    - Automatic  
+    - Automatisch  
     
     - System (zum Anmelden und Herunterladen der Richtlinie)
     
@@ -107,7 +107,7 @@ Nachdem Sie alle Protokolldateien ermittelt haben, die dem Azure Information Pro
 
 - [Anpassungen](client-admin-guide-customizations.md)
 
-- [Dokumentenverfolgung](client-admin-guide-document-tracking.md)
+- [Dokumentkontrolle](client-admin-guide-document-tracking.md)
 
 - [Unterstützte Dateitypen](client-admin-guide-file-types.md)
 

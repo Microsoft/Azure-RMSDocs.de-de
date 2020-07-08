@@ -13,21 +13,21 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 58053a5ee3dae935a3d160f14bc610d2487e03d2
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: a038d70cfbeb75f4bcabbfab0391582cdb0b5e87
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747055"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047370"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
@@ -146,7 +146,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Key: **ReportAnIssueLink**
 
-- Wert: ** \< http-Zeichenfolge>**
+- Wert**\<HTTP string>**
 
 Beispielwert für eine Website: `https://support.contoso.com`
 
@@ -198,9 +198,9 @@ Wenn Sie die Richtlinie aus dem Azure-Portal exportieren, wird eine ZIP-Datei he
     |Policy1.3.msip |Version 1.8 – 1.29|
     |Policy1.4.msip |Version 1.32 und höher|
     
-2. Benennen Sie die identifizierte Datei in " **Policy. MSIP**" um, und kopieren Sie Sie in den Ordner " **%LocalAppData%\microsoft\msip** " auf Computern, auf denen der Azure Information Protection-Client installiert ist. 
+2. Benennen Sie die identifizierte Datei in " **Policy.msip**" um, und kopieren Sie Sie in den Ordner " **%LocalAppData%\microsoft\msip** " auf Computern, auf denen der Azure Information Protection-Client installiert ist. 
 
-Wenn auf dem Computer, auf dem der Computer ausgeführt wird, die aktuelle GA-Version des Azure Information Protection Scanners ausgeführt wird, müssen Sie zusätzliche Konfigurationsschritte ausführen. Weitere Informationen finden Sie unter [Einschränkung: der Scanner-Server kann keine Internet Konnektivität](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) aus den Überprüfungs Anweisungen für die Überprüfung haben.
+Wenn auf dem Computer, auf dem der Computer ausgeführt wird, die aktuelle GA-Version des Azure Information Protection Scanners ausgeführt wird, müssen Sie zusätzliche Konfigurationsschritte ausführen. Weitere Informationen finden Sie unter [Einschränkung: der Scanner-Server kann keine Internet Konnektivität](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) in den Voraussetzungen für die Überprüfungs Bereitstellung aufweisen.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ausblenden oder Anzeigen der Schaltfläche „Nicht weiterleiten“ in Outlook
 
@@ -331,7 +331,7 @@ Die resultierenden Aktionen aus den Popup Meldungen werden in den lokalen Window
 
 Beispielereigniseintrag aus einer Legitimationsmeldung:
 
-```
+```ps
 Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
@@ -342,6 +342,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
+
 In den folgenden Abschnitten finden Sie Konfigurations Anweisungen für jede erweiterte Client Einstellung, und Sie können Sie mit dem folgenden [Tutorial anzeigen: Konfigurieren von Azure Information Protection zum Steuern der über Freigabe von Informationen mithilfe von Outlook](../infoprotect-oversharing-tutorial.md).
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
@@ -357,19 +358,19 @@ Beispielwert für mehrere Bezeichnungs-IDs als kommagetrennte Zeichenfolge: `dcf
     
     - Schlüssel: **outlookwarnuntreudkollaborationlabel**
     
-    - Wert: \< **Bezeichnungs-IDs, durch Trennzeichen getrennt**>
+    - Wert: \<**label IDs, comma-separated**>
 
 - Legitimationsmeldungen:
     
     - Schlüssel: **outlookjustilyuntreudkollaborationlabel**
     
-    - Wert: \< **Bezeichnungs-IDs, durch Trennzeichen getrennt**>
+    - Wert: \<**label IDs, comma-separated**>
 
 - Blockiermeldungen:
     
     - Schlüssel: **outlookblockuntreudkollaborationlabel**
     
-    - Wert: \< **Bezeichnungs-IDs, durch Trennzeichen getrennt**>
+    - Wert: \<**label IDs, comma-separated**>
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>So nehmen Sie Domänen Namen für Popup Nachrichten aus, die für bestimmte Bezeichnungen konfiguriert sind
 
@@ -385,19 +386,19 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
     
     - Schlüssel: **outlookwarntreuddomains**
     
-    - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
+    - Wert**\<**domain names, comma separated**>**
 
 - Legitimationsmeldungen:
     
     - Schlüssel: **outlookjustifytreuddomains**
     
-    - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
+    - Wert**\<**domain names, comma separated**>**
 
 - Blockiermeldungen:
     
     - Schlüssel: **outlookblocktreuhänddomains**
     
-    - Wert: **\<** Domänen Namen, durch Kommas getrennt**>**
+    - Wert**\<**domain names, comma separated**>**
 
 Sie haben beispielsweise die Einstellung für den erweiterten Client " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookblocktreuhänddomains** " und " **contoso.com**" an. Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, john@sales.contoso.com Wenn er **vertraulich \ alle Mitarbeiter** heißt, aber das Senden einer e-Mail mit derselben Bezeichnung an ein Gmail-Konto blockiert wird.
 
@@ -440,7 +441,7 @@ In diesem Beispiel führt ein PDF-Dokument ohne Bezeichnung nicht zu Warn-, rech
 
 - Key: **outlookoverride unlabeledcollaborationextensions**
 
-- Wert: **\<** Dateinamen Erweiterungen zum Anzeigen von Nachrichten, durch Kommas getrennt**>**
+- Wert**\<**file name extensions to display messages, comma separated**>**
 
 #### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>So geben Sie eine andere Aktion für e-Mail ohne Anlagen an
 
@@ -489,7 +490,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Schlüssel: **OutlookDefaultLabel**
 
-- Wert: \<**Bezeichnungs-ID**> oder **None** (Keine)
+- Wert: \<**label ID**> oder **None**
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden
 
@@ -579,7 +580,7 @@ Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Cl
 
 Sie könnten diese Einstellung zum Beispiel für alle Benutzer benötigen, wenn Sie einen PDF-Reader verwenden, der den ISO-Standard für die PDF-Verschlüsselung nicht unterstützt. Oder Sie müssen sie möglicherweise für einige Benutzer konfigurieren, wenn Sie nach und nach zu einem PDF-Reader wechseln, der das neue Format unterstützt. Ein weiterer möglicher Grund für die Verwendung dieser Einstellung besteht, wenn Sie signierten PDF-Dokumenten Schutz hinzufügen müssen. Signierte PDF-Dokumente können zusätzlich mit dem PPDF-Format geschützt werden, da dieser Schutz als Wrapper für die Datei implementiert wird. 
 
-Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden. Darüber hinaus schützt die Überprüfung nicht mehr standardmäßig PDF-Dokumente. Wenn Sie möchten, dass PDF-Dokumente durch die Überprüfung geschützt werden sollen, wenn EnablePDFv2Protection auf „False“ festgelegt ist, müssen Sie die [Registrierung bearbeiten](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected).
+Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden. Darüber hinaus schützt die Überprüfung nicht mehr standardmäßig PDF-Dokumente. Wenn Sie möchten, dass PDF-Dokumente durch den Scanner geschützt werden **,** Wenn **EnablePDFv2Protection** auf false festgelegt ist, müssen Sie [die Registrierung bearbeiten](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect).
 
 Weitere Informationen zu dieser neuen PDF-Verschlüsselung finden Sie im Blogbeitrag [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
@@ -595,9 +596,11 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiel:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
     
-        Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+    ```ps
+    Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+    ```
 
 2. Beachten Sie bei der Ausgabe die folgenden Parameterwerte:
     
@@ -607,13 +610,17 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Entscheiden Sie, ob Sie den Benutzer fortsetzen oder den Benutzer (der Wert, der für den **rmsissuer**angezeigt wird) zum Entfernen der Bezeichnung und zum erneuten Anwenden der Bezeichnung sowie ihrer ursprünglichen benutzerdefinierten Berechtigungen auffordern.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
-    
-        Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Zum Beispiel: 
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiel:
+    ```ps    
+    Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    ```
+
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
     
-        Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+    ```ps    
+    Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+    ```
 
 Die Datei behält die PDF-Erweiterung, wird jedoch wie zuvor klassifiziert und mit dem ISO-Standard für die PDF-Verschlüsselung geschützt.
 
@@ -736,7 +743,7 @@ Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich,
 
 - Key: **RemoveExternalContentMarkingInApp**
 
-- Wert: \< **Office-Anwendungs Typen WXP**> 
+- Wert: \<**Office application types WXP**> 
 
 Beispiele:
 
@@ -769,7 +776,7 @@ Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder T
 
 - Key: **ExternalContentMarkingToRemove**
 
-- Wert: \< **Zeichenfolge für den Abgleich, als regulärer Ausdruck definiert**> 
+- Wert: \<**string to match, defined as regular expression**> 
 
 #### <a name="multiline-headers-or-footers"></a>Mehrzeilige Kopf- oder Fußzeilen
 
@@ -807,7 +814,7 @@ Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form 
 
 - Key: **PowerPointShapeNameToRemove**
 
-- Wert: \< **Name der PowerPoint-Form**> 
+- Wert: \<**PowerPoint shape name**> 
 
 Wenn mehr als eine PowerPoint-Form entfernt werden soll, erstellen Sie so viele **PowerPointShapeNameToRemove**-Schlüssel wie Sie Formen entfernen möchten. Geben Sie für jeden Eintrag den Namen der zu entfernenden Form an.
 
@@ -834,7 +841,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Schlüssel 1: **SyncPropertyName**
 
-- Schlüssel 1 Wert: \< **Eigenschaftsname**> 
+- Wert von Schlüssel 1:\<**property name**> 
 
 - Schlüssel 2: **SyncPropertyState**
 
@@ -862,11 +869,11 @@ Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet,
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden, die Informationen sind jedoch auf die Bezeichnungs Aktivität beschränkt.
 
-Beispiel:
+Zum Beispiel:
 
-- Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
+- Mit dieser Einstellung können Sie feststellen, dass ein Benutzer auf Financial.docx mit der Bezeichnung **vertraulich \ Sales**zugegriffen hat.
 
-- Ohne diese Einstellung können Sie sehen, dass "Financial. docx" 6 Kreditkartennummern enthält.
+- Ohne diese Einstellung sehen Sie, dass Financial.docx 6 Kreditkartennummern enthält.
     
     - Wenn Sie auch eine [tiefere Analyse Ihrer sensiblen Daten](../reports-aip.md#content-matches-for-deeper-analysis)ermöglichen, können Sie zusätzlich sehen, was diese Kreditkartennummern sind.
 
@@ -893,7 +900,7 @@ Wenn Sie den Wert zu Testzwecken zum ersten Mal konfigurieren, empfehlen wir Ihn
 
 - Schlüssel: **Scannerkonfigurations-Level**
 
-- Wert: ** \< Anzahl der gleichzeitigen Threads>**
+- Wert**\<number of concurrent threads>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Deaktivieren der niedrigen Integritätsebene für den Scanner
 
@@ -901,7 +908,7 @@ Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-config
 
 Die Vorschauversion der Azure Information Protection-Überprüfung wird standardmäßig mit einer niedrigen Integritätsebene ausgeführt. Diese Einstellung bietet eine höhere Sicherheitsisolationsstufe, beeinträchtigt jedoch die Leistung. Eine niedrige Integritätsebene eignet sich, wenn Sie den Scanner mit einem Konto ausführen, das privilegierte Zugriffsrechte hat (z.B. ein lokales Administratorkonto), da diese Einstellung den Computer schützt, der den Scanner ausführt.
 
-Wenn das Dienstkonto, das den Scanner ausführt, nur über die unter [Voraussetzungen für die Azure Information Protection-Überprüfung](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt, ist eine niedrige Integritätsebene weder erforderlich noch empfehlenswert, da sie sich negativ auf die Leistung auswirkt. 
+Wenn das Dienst Konto, unter dem die Überprüfung ausgeführt wird, jedoch nur die in den [Voraussetzungen der Überprüfungs Bereitstellung](../deploy-aip-scanner-prereqs.md)dokumentierten Rechte hat, ist die Ebene mit niedriger Integrität nicht erforderlich und wird nicht empfohlen, da sich dies negativ auf die Leistung auswirkt. 
 
 Weitere Informationen zu den Windows-Integritätsebenen finden Sie unter [What is the Windows Integrity Mechanism? (Was ist der Windows-Integritätsmechanismus?)](https://msdn.microsoft.com/library/bb625957.aspx).
 
@@ -921,7 +928,7 @@ Wenn dieses Timeout Problem aufgrund von großen Dateien auftritt, können Sie d
 
 - Schlüssel: **contentextractiontimeout**
 
-- Wert: ** \< hh: min: Sek.>**
+- Wert**\<hh:min:sec>**
 
 Der Dateityp kann Einfluss darauf haben, wie lange es dauert, eine Datei zu scannen. Beispiel für Scanzeiten:
 
@@ -945,7 +952,7 @@ Um den Timeout Zeitraum für die Dateiverarbeitung zu ändern, konfigurieren Sie
 
 - Schlüssel: **fileprocessingtimeout**
 
-- Wert: ** \< hh: min: Sek.>**
+- Wert**\<hh:min:sec>**
 
 ## <a name="change-the-local-logging-level"></a>Ändern des lokalen Protokolliergrads
 
@@ -957,7 +964,7 @@ Zum Ändern des Protokolliergrads für diese Dateien konfigurieren Sie die folge
 
 - Schlüssel: **LogLevel**
 
-- Wert: ** \< Protokolliergrad>**
+- Wert**\<logging level>**
 
 Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
 
@@ -985,11 +992,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Regel für den Exchange-E-Mail-Verkehr. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Beispiel:
+     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Zum Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-EA17-4f DB-8F 01-93a3e71333b8_Enabled = true**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     

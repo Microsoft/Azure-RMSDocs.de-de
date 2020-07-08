@@ -13,25 +13,25 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 70560867707fd58dc5b4580ab67006ea6fb4ce13
-ms.sourcegitcommit: fea4df7be8fe83aa12820becc812ccf26d7adefb
+ms.openlocfilehash: f53e43cedf64572aa4bc6afd20cc88f8e84f643c
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852062"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047318"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection-Benutzerhandbuch
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 
 Sie benötigen lediglich einen Computer, auf dem mindestens Windows 8 ausgeführt wird. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
 
 
-## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun?
+## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
 - [Herunterladen und Installieren des Azure Information Protection-Clients](install-client-app.md)
 

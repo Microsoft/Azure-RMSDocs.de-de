@@ -13,24 +13,24 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 73ba9a365b38804c8caf0d9e9b06e8b53be8560a
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: ee4a8cedd056da0baca75d3b475884618e081fbf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326489"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046469"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure)](configure-fci.md) beschrieben.
 
 Dieses Skript verwendet die Mindestversion **1.3.155.2** für das Modul „AzureInformationProtection“. Führen Sie zum Überprüfen der Version den folgenden Befehl aus: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Haftungs&#42;&#42;Ausschluss: Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird ohne jegliche Gewährleistung bereitgestellt.*
+*&#42;&#42;Haftungsausschluss&#42;&#42;: Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird ohne jegliche Gewährleistung bereitgestellt.*
 
 ```
 <#

@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 44e4adaacfd23ae4bc2feb78405b69ca89a10bbf
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c37a9c2e09626406eac2060c76375177ba49f118
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559644"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048390"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installieren des PowerShell-Moduls für AIPService
 
@@ -28,12 +28,13 @@ Verwenden Sie die folgenden Informationen, um das Windows PowerShell-Modul für 
 Sie können dieses PowerShell-Modul verwenden, um den Schutzdienst (Azure Rights Management) über die Befehlszeile zu verwalten, indem Sie einen beliebigen Windows-Computer verwenden, der über eine Internetverbindung verfügt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für Azure Information Protection unterstützt Skripts für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden [Sie unter Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
+
 In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung des aipservice-PowerShell-Moduls für den Schutzdienst von Azure Information Protection aufgeführt.
 
-|Anforderungen|Weitere Informationen|
+|Anforderung|Weitere Informationen|
 |---------------|--------------------|
-|Mindestversion von Windows PowerShell: 3,0|Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben. <br /><br /> Wenn Sie eine neuere Version von Windows PowerShell installieren müssen, finden Sie weitere Informationen dazu unter [Aktualisieren einer vorhandenen Version von Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
-|Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version des Microsoft .NET Frameworks ist in den neueren Betriebssystemen enthalten, daher sollten Sie Sie manuell installieren müssen, wenn das Client Betriebssystem niedriger als Windows 8,0 ist oder wenn das Server Betriebssystem niedriger als Windows Server 2012 ist.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion des Microsoft .NET Frameworks ist für einige der Klassen erforderlich, die das aipservice-Modul verwendet.|
+|Mindestens erforderliche Version von Windows PowerShell: 3.0|Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben. <br /><br /> Falls Sie eine höhere Version von Windows PowerShell installieren müssen, lesen Sie die Informationen unter [Aktualisieren einer vorhandenen Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
+|Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist im Lieferumfang neuerer Betriebssysteme enthalten. Deshalb sollten Sie eine manuelle Installation nur dann durchführen müssen, wenn Sie ein Clientbetriebssystem vor Windows 8.0 oder ein Serverbetriebssystem vor Windows Server 2012 verwenden.|Wenn die Mindestversion des Microsoft .NET Frameworks nicht bereits installiert ist, können Sie [Microsoft .NET Framework 4,5](https://www.microsoft.com/download/details.aspx?id=30653)herunterladen.<br /><br />Diese Mindestversion des Microsoft .NET Frameworks ist für einige der Klassen erforderlich, die das aipservice-Modul verwendet.|
 
 ## <a name="if-you-have-the-aadrm-module-installed"></a>Wenn Sie das aadrm-Modul installiert haben
 
@@ -43,13 +44,15 @@ Das neuere Modul verfügt über Aliase für die Cmdlet-Namen im älteren Modul, 
 
 Wenn Sie das aadrm-Modul von der PowerShell-Katalog installiert haben, starten Sie zum Deinstallieren eine PowerShell-Sitzung mit der Option **als Administrator ausführen** , und geben Sie Folgendes ein:
 
-    Uninstall-Module -Name AADRM
+```ps
+Uninstall-Module -Name AADRM
+```
 
 Wenn Sie das aadrm-Modul mit dem Azure Rights Management-Verwaltungs Tool installiert haben, verwenden Sie **Programme und Funktionen** , um **Windows Azure AD Rights Management Administration**zu deinstallieren.
 
 ## <a name="how-to-install-the-aipservice-module"></a>Installieren des aipservice-Moduls
 
-Das aipservice-Modul befindet sich auf dem [PowerShell-Katalog](https://www.powershellgallery.com/) und ist im Microsoft Download Center nicht verfügbar. 
+Das aipservice-Modul befindet sich auf dem [PowerShell-Katalog](https://www.powershellgallery.com/) und ist im Microsoft Download Center nicht verfügbar.
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>So installieren Sie das aipservice-Modul über das PowerShell-Katalog
 
@@ -59,46 +62,51 @@ Weitere Informationen zum aipservice-Modul auf dem PowerShell-Katalog finden Sie
 
 Um das aipservice-Modul zu installieren, starten Sie eine PowerShell-Sitzung mit der Option **als Administrator ausführen** , und geben Sie Folgendes ein:
 
-    Install-Module -Name AIPService
+```ps
+Install-Module -Name AIPService
+```
 
-Wenn Sie vor dem Installieren von einem nicht vertrauenswürdigen Repository gewarnt werden, können Sie Y zum Bestätigen drücken. Oder drücken Sie N, und konfigurieren Sie die PowerShell-Katalog mit dem Befehl `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` als vertrauenswürdiges Repository, und führen Sie dann den Befehl erneut aus, um das aipservice-Modul zu installieren.  
+Wenn Sie vor dem Installieren von einem nicht vertrauenswürdigen Repository gewarnt werden, können Sie Y zum Bestätigen drücken. Oder drücken Sie N, und konfigurieren Sie die PowerShell-Katalog als vertrauenswürdiges Repository mit dem Befehl, und führen Sie `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` dann den Befehl erneut aus, um das aipservice-Modul zu installieren.  
 
 Wenn Sie eine frühere Version des aipservice-Moduls aus dem Katalog installiert haben, aktualisieren Sie Sie auf den neuesten Wert, indem Sie Folgendes eingeben:
 
-    Update-Module -Name AIPService
-
+```ps
+Update-Module -Name AIPService
+```
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 Überprüfen Sie in einer Windows PowerShell-Sitzung die Version des installierten Moduls. Diese Überprüfung ist besonders wichtig, wenn Sie ein Upgrade von einer älteren Version durchgeführt haben:
 
-```
+```ps
 (Get-Module AIPService –ListAvailable).Version
 ```
 
-Hinweis: Wenn dieser Befehl fehlschlägt, führen Sie zuerst **Import-Module aipservice**aus.
+> [!NOTE]
+> Wenn dieser Befehl fehlschlägt, führen Sie zuerst **Import-Module aipservice**aus.
+> 
 
 Geben Sie Folgendes ein, um die verfügbaren Cmdlets anzuzeigen:
 
-```
+```ps
 Get-Command -Module AIPService
 ```
 
-Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Beispiele:
+Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Zum Beispiel:
 
-```
+```powershell
 Get-Help Connect-AipService -online
 ```
 
 Weitere Informationen finden Sie unter:
 
--   Vollständige Liste der verfügbaren Cmdlets: [aipservice-Modul](/powershell/module/aipservice/?view=azureipps#aipservice)
+- Vollständige Liste der verfügbaren Cmdlets: [aipservice-Modul](/powershell/module/aipservice/?view=azureipps#aipservice)
 
--   Liste der Haupt Konfigurationsszenarien, die PowerShell unterstützen: [Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md)
+- Liste der Haupt Konfigurationsszenarien, die PowerShell unterstützen: [Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md)
 
 Bevor Sie Befehle ausführen können, mit denen der Schutzdienst konfiguriert wird, müssen Sie eine Verbindung mit dem Dienst herstellen, indem Sie das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) verwenden.
 
-Wenn Sie Ihre Konfigurations Befehle ausgeführt haben, sollten Sie als bewährte Vorgehensweise die Verbindung mit dem Dienst mithilfe des [Disconnect-aipservice](/powershell/module/aipservice/disconnect-aipservice) -Cmdlets trennen. Wenn Sie die Verbindung nicht trennen, wird sie nach einiger Zeit der Inaktivität automatisch getrennt. Aufgrund des Verhaltens zum automatischen Trennen der Verbindung kann es vorkommen, dass Sie während einer PowerShell-Sitzung gelegentlich die Verbindung neu herstellen müssen. 
+Wenn Sie Ihre Konfigurations Befehle ausgeführt haben, sollten Sie als bewährte Vorgehensweise die Verbindung mit dem Dienst mithilfe des [Disconnect-aipservice](/powershell/module/aipservice/disconnect-aipservice) -Cmdlets trennen. Wenn Sie die Verbindung nicht trennen, wird sie nach einiger Zeit der Inaktivität automatisch getrennt. Aufgrund des Verhaltens zum automatischen Trennen der Verbindung kann es vorkommen, dass Sie während einer PowerShell-Sitzung gelegentlich die Verbindung neu herstellen müssen.
 
 > [!NOTE]
 > Wenn der Schutzdienst noch nicht aktiviert ist, können Sie dies nach dem Herstellen einer Verbindung mit dem Dienst durchführen, indem Sie das Cmdlet [enable-aipservice](/powershell/module/aipservice/enable-aipservice) verwenden.
-

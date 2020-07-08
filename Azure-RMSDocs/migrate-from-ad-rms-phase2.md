@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1fbe3fd2f91b63e7111b4de92e95ec4cad20fa4f
-ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
+ms.openlocfilehash: 9b13f31a13d447dcd620f986cac17c74f0a7de17
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
-ms.locfileid: "80670188"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048662"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -26,8 +26,8 @@ ms.locfileid: "80670188"
 
 Verwenden Sie die folgenden Informationen für Phase 2 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 4 bis 6 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Schritt 4. Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Schritt 4: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection
 Dieser Schritt ist ein zweistufiger Vorgang:
 
 1. Exportieren Sie die Konfigurationsdaten aus AD RMS, indem Sie die vertrauenswürdigen Veröffentlichungsdomänen (TPDs) in eine XML-Datei exportieren. Dieser Vorgang ist für alle Migrationen gleich.
@@ -42,7 +42,7 @@ Führen Sie das folgende Verfahren auf allen AD RMS-Clustern für alle vertrauen
 
 1. Melden Sie sich beim AD RMS-Cluster als Benutzer mit AD RMS-Administratorberechtigungen an.
 
-2. Erweitern Sie in der AD RMS-Verwaltungskonsole (**Active Directory-Rechteverwaltungsdienste**) den AD RMS-Clusternamen und dann **Vertrauensrichtlinien**, und klicken Sie anschließend auf **Vertrauenswürdige Veröffentlichungsdomänen**.
+2. Erweitern Sie in der AD RMS-Verwaltungskonsole (**Active Directory-Rechteverwaltungsdienste**) den Namen des AD RMS-Clusters, erweitern Sie dann die **Vertrauensrichtlinien**, und klicken Sie auf **Vertrauenswürdige Veröffentlichungsdomänen**.
 
 3. Wählen Sie im Ergebnisbereich die vertrauenswürdige Veröffentlichungsdomäne aus, und klicken Sie dann im Aktionsbereich auf **Vertrauenswürdige Veröffentlichungsdomäne exportieren**.
 
@@ -60,8 +60,8 @@ Beachten Sie, dass die vertrauenswürdigen Veröffentlichungsdomänen die SLC-Sc
 
 Zum Beispiel verfügen Sie über mehrere vertrauenswürdige Veröffentlichungsdomänen, wenn Sie ein Upgrade Ihrer AD RMS-Server von Kryptografiemodus 1 auf Kryptografiemodus 2 durchgeführt haben. Wenn Sie die vertrauenswürdigen Veröffentlichungsdomänen mit den archivierten Schlüsseln, die den Kryptografiemodus 1 verwendet haben, nicht exportieren und importieren, werden die Benutzer nach Abschluss der Migration keine Inhalte öffnen können, die mit dem Schlüssel für den Kryptografiemodus 1 geschützt wurden.
 
-
 ### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importieren der Konfigurationsdaten in Azure Information Protection
+
 Die genaue Vorgehensweise bei diesem Schritt richtet sich nach der aktuellen Konfiguration Ihrer AD RMS-Bereitstellung und Ihrer bevorzugten Topologie für Ihren Azure Information Protection-Mandantenschlüssel.
 
 Die aktuelle AD RMS-Bereitstellung verwendet eine der folgenden Konfigurationen für den Schlüssel Ihres lizenzgebenden Serverzertifikats (SLC):
@@ -79,15 +79,15 @@ Die aktuelle AD RMS-Bereitstellung verwendet eine der folgenden Konfigurationen 
 
 Folgende zwei Optionen sind für die Azure Information Protection-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) in Azure Key Vault verwaltet. Wenn Sie Ihren eigenen Azure Information Protection Mandanten Schlüssel verwalten, wird er manchmal als "Bring your own Key" (Byok) bezeichnet. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
-Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migration zu verwenden ist. 
+Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migration zu verwenden ist.
 
 |Aktuelle AD RMS-Bereitstellung|Auswählen der Azure Information Protection-Mandantenschlüsseltopologie|Migrationsanweisungen|
 |-----------------------------|----------------------------------------|--------------------------|
-|Kennwortschutz in der AD RMS-Datenbank|Microsoft-verwaltet|Gehen Sie das Verfahren zur **Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln** unterhalb dieser Tabelle durch.<br /><br />Dies ist der einfachste Migrationspfad, bei dem Sie nur Ihre Konfigurationsdaten an Azure Information Protection übertragen müssen.|
+|Kennwortschutz in der AD RMS-Datenbank|Microsoft-verwaltet|Weitere Informationen finden **Sie in der Migration Software geschützter Schlüssel zu Software geschütztem Schlüssel** nach dieser Tabelle.<br /><br />Dies ist der einfachste Migrationspfad, bei dem Sie nur Ihre Konfigurationsdaten an Azure Information Protection übertragen müssen.|
 |HSM-Schutz mithilfe eines nCipher nShield-Hardware Sicherheits Moduls (HSM) |Kundenverwaltet (BYOK)|Gehen Sie das Verfahren zur **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.<br /><br />Dazu ist das Azure Key Vault-BYOK-Toolset erforderlich, und es müssen drei Verfahren ausgeführt werden, um erst den Schlüssel aus Ihrem lokalen HSM an die Azure Key Vault-HSMs zu übertragen, dann den Azure Rights Management-Dienst für die Verwendung Ihres Mandantenschlüssels zu autorisieren und schließlich Ihre Konfigurationsdaten an Azure Information Protection zu übertragen.|
-|Kennwortschutz in der AD RMS-Datenbank|Kundenverwaltet (BYOK)|Gehen Sie das Verfahren **Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln** unter dieser Tabelle durch.<br /><br />Dazu ist das Azure Key Vault-BYOK-Toolset erforderlich, und es müssen vier Verfahren ausgeführt werden, um erst den Softwareschlüssel zu extrahieren und in ein lokales HSM zu importieren, dann den Schlüssel aus Ihrem lokalen HSM an die Azure Information Protection-HSMs zu übertragen, die Key Vault-Daten an Azure Information Protection zu übertragen und schließlich Ihre Konfigurationsdaten an Azure Information Protection zu übertragen.|
-|HSM-Schutz mithilfe eines Hardware Sicherheits Moduls (HSM) von einem anderen Lieferanten als nchiffre |Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres HSM, um Anweisungen zur Übertragung Ihres Schlüssels aus diesem HSM in eine nCipher nShield Hardware Security Module (HSM) zu erhalten. Gehen Sie anschließend die Anweisungen für das Verfahren **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.|
-|Kennwortschutz mithilfe eines externen Kryptografieanbieters|Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres Kryptografieanbieters, um Anweisungen zur Übertragung Ihres Schlüssels in ein nCipher nShield-Hardware Sicherheitsmodul (HSM) zu erhalten. Gehen Sie anschließend die Anweisungen für das Verfahren **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.|
+|Kennwortschutz in der AD RMS-Datenbank|Kundenverwaltet (BYOK)|Weitere Informationen finden Sie im Verfahren Migration **Software geschützter Schlüssel zu HSM-geschützten Schlüsseln** nach dieser Tabelle.<br /><br />Dazu ist das Azure Key Vault-BYOK-Toolset erforderlich, und es müssen vier Verfahren ausgeführt werden, um erst den Softwareschlüssel zu extrahieren und in ein lokales HSM zu importieren, dann den Schlüssel aus Ihrem lokalen HSM an die Azure Information Protection-HSMs zu übertragen, die Key Vault-Daten an Azure Information Protection zu übertragen und schließlich Ihre Konfigurationsdaten an Azure Information Protection zu übertragen.|
+|HSM-Schutz mithilfe eines Hardware Sicherheits Moduls (HSM) von einem anderen Lieferanten als nchiffre |Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres HSM, um Anweisungen zur Übertragung Ihres Schlüssels aus diesem HSM in eine nCipher nShield Hardware Security Module (HSM) zu erhalten. Befolgen Sie dann die Anweisungen für das Verfahren Migration **HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** nach dieser Tabelle.|
+|Kennwortschutz mithilfe eines externen Kryptografieanbieters|Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres Kryptografieanbieters, um Anweisungen zur Übertragung Ihres Schlüssels in ein nCipher nShield-Hardware Sicherheitsmodul (HSM) zu erhalten. Befolgen Sie dann die Anweisungen für das Verfahren Migration **HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** nach dieser Tabelle.|
 
 Wenn Sie einen HSM-geschützten Schlüssel haben, den Sie nicht exportieren können, können Sie immer noch zu Azure Information Protection migrieren, indem Sie Ihren AD RMS-Cluster für einen schreibgeschützten Modus konfigurieren. In diesem Modus kann zuvor geschützter Inhalt zwar geöffnet werden, jedoch verwendet neu geschützter Inhalt einen neuen Mandantenschlüssel, der von Ihnen (BYOK) oder von Microsoft verwaltet wird. Weitere Informationen finden Sie unter [An update is available for Office to support migrations from AD RMS to Azure RMS (Ein Update ist für Office verfügbar, um Migrationen von AD RMS auf Azure RMS zu unterstützen)](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
@@ -96,7 +96,7 @@ Bevor Sie mit diesen Schlüssel-Migrationsverfahren beginnen, stellen Sie sicher
 > [!NOTE]
 > Verwenden Sie ungeachtet der Speichermethode bewährte Sicherheitsmethoden zum Schutz dieser Dateien, da diese Daten Ihren privaten Schlüssel enthalten.
 
-Um Schritt 4 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad aus: 
+Um Schritt 4 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad aus:
 
 - [Softwaregeschützter Schlüssel zu softwaregeschütztem Schlüssel](migrate-softwarekey-to-softwarekey.md)
 - [HSM-geschützter Schlüssel zu HSM-geschütztem Schlüssel](migrate-hsmkey-to-hsmkey.md)
@@ -107,14 +107,18 @@ Um Schritt 4 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad
 Öffnen Sie eine PowerShell-Sitzung, und führen Sie die folgenden Befehle aus.
 
 1. Stellen Sie eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
-    
-        Connect-AipService
+
+    ```ps
+    Connect-AipService
+    ```
 
 2. Aktivieren des Azure Rights Management-Diensts:
-    
-        Enable-AipService
 
-**Was geschieht, wenn Ihr Azure Information Protection-Mandant bereits aktiviert wurde?** Wenn der Azure Rights Management-Dienst bereits für Ihre Organisation aktiviert ist, und Sie benutzerdefinierte Vorlagen erstellt haben, die Sie nach der Migration verwenden möchten, müssen Sie diese Vorlagen exportieren und importieren. Diese Prozedur wird im nächsten Schritt behandelt. 
+    ```ps
+    Enable-AipService
+    ```
+
+**Was geschieht, wenn Ihr Azure Information Protection-Mandant bereits aktiviert wurde?** Wenn der Azure Rights Management-Dienst bereits für Ihre Organisation aktiviert ist, und Sie benutzerdefinierte Vorlagen erstellt haben, die Sie nach der Migration verwenden möchten, müssen Sie diese Vorlagen exportieren und importieren. Diese Prozedur wird im nächsten Schritt behandelt.
 
 ## <a name="step-6-configure-imported-templates"></a>Schritt 6: Konfigurieren importierter Vorlagen
 
@@ -128,15 +132,15 @@ Die Änderungen an der Vorlage, die Sie für diesen Schritt möglicherweise vorn
 
 - Wenn Sie vor der Migration benutzerdefinierte Vorlagen in Azure Information Protection erstellt haben, müssen Sie diese manuell exportieren und erneut importieren.
 
-- Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, müssen Sie möglicherweise Benutzer oder Gruppen manuell hinzufügen. 
-    
+- Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, müssen Sie möglicherweise Benutzer oder Gruppen manuell hinzufügen.
+
     In AD RMS hat die Gruppe JEDER Rechte an alle Benutzer erteilt, die von Ihrer lokalen Active Directory-Instanz authentifiziert wurden, und diese Gruppe wird von Azure Information Protection nicht unterstützt. Das nächste Äquivalent dazu ist eine Gruppe, die automatisch für alle Benutzer im Azure AD-Mandanten erstellt wird. Wenn Sie die Gruppe JEDER für Ihre AD RMS-Vorlagen verwendet haben, müssen Sie möglicherweise Benutzer und die ihnen zu erteilenden Rechte hinzufügen.
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Prozedur, falls Sie benutzerdefinierte Vorlagen vor der Migration erstellt haben
 
-Wenn Sie vor der Migration (entweder vor oder nach der Aktivierung des Azure Rights Management-Diensts) benutzerdefinierte Vorlagen erstellt haben, sind diese nach der Migration nicht für Benutzer verfügbar, selbst wenn sie zuvor auf **Veröffentlicht** festgelegt wurden. Sie müssen folgende Schritte ausführen, um Benutzern die Vorlagen zur Verfügung zu stellen: 
+Wenn Sie vor der Migration (entweder vor oder nach der Aktivierung des Azure Rights Management-Diensts) benutzerdefinierte Vorlagen erstellt haben, sind diese nach der Migration nicht für Benutzer verfügbar, selbst wenn sie zuvor auf **Veröffentlicht** festgelegt wurden. Sie müssen folgende Schritte ausführen, um Benutzern die Vorlagen zur Verfügung zu stellen:
 
-1. Identifizieren Sie diese Vorlagen, und notieren Sie sich Ihre Vorlagen-ID, indem [Sie "Get-aipservicetemplate](/powershell/module/aipservice/get-aipservicetemplate)" ausführen. 
+1. Identifizieren Sie diese Vorlagen, und notieren Sie sich Ihre Vorlagen-ID, indem [Sie "Get-aipservicetemplate](/powershell/module/aipservice/get-aipservicetemplate)" ausführen.
 
 2. Exportieren Sie die Vorlagen mithilfe des Azure RMS PowerShell-Cmdlets [Export-aipservicetemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
@@ -146,35 +150,36 @@ Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivi
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Prozedur, wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben
 
-Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, heißt die ähnlichste Gruppe in Azure Information Protection **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<mandantenname>.onmicrosoft.com**. Für Contoso kann diese Gruppe folgendermaßen aussehen: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
+Wenn Ihre Vorlagen in AD RMS die Gruppe **jeder** verwendet haben, wird die nächstgelegene Gruppe in Azure Information Protection mit dem Namen **allpersonal-7184ab3f-CCD1-46f 3-8233-3E09E9CF0E66@ \<tenant_name> . onmicrosoft.com**benannt. Diese Gruppe könnte z. b. wie folgt aussehen: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong> Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
 
-Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen** an.
+Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Zum Hinzufügen dieser Gruppe werden mit der Option **Add \<organization name> -all-** Member angezeigt.
 
 Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Using Windows PowerShell to Administer AD RMS (Verwalten von AD RMS mit Windows PowerShell)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-Sie können externe Benutzer problemlos zu Vorlagen hinzufügen, wenn Sie diese Vorlagen im Azure-Portal in Bezeichnungen konvertieren. Wählen Sie dann im Bereich **Berechtigungen hinzufügen** die Option **Details eingeben** aus, um die e-Mail-Adressen für diese Benutzer manuell anzugeben. 
+Sie können externe Benutzer problemlos zu Vorlagen hinzufügen, wenn Sie diese Vorlagen im Azure-Portal in Bezeichnungen konvertieren. Wählen Sie dann im Bereich **Berechtigungen hinzufügen** die Option **Details eingeben** aus, um die e-Mail-Adressen für diese Benutzer manuell anzugeben.
 
 Weitere Informationen zu dieser Konfiguration finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management-Schutz](./configure-policy-protection.md).
 
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Windows PowerShell-Beispielskript zum Bestimmen von AD RMS-Vorlagen, die die Gruppe JEDER enthalten
+
 Dieser Abschnitt enthält das Beispielskript, mit dessen Hilfe Sie AD RMS-Vorlagen, in denen die Gruppe „Jeder“ definiert ist, wie im vorherigen Abschnitt beschrieben bestimmen können.
 
-**Haftungsausschluss**: Dieses Beispielskript wird unter keinem Microsoft-Standardsupportprogramm oder -dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
+**Haftungsausschluss**: Dieses Beispielskript wird unter keinem Microsoft-Standardsupportprogramm oder -dienst unterstützt. Es wird in der vorliegenden Form ohne jegliche Gewährleistung bereitgestellt.
 
-```
-import-module adrmsadmin 
+```ps
+import-module adrmsadmin
 
-New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force 
+New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force
 
 $ListofTemplates=dir MyRmsAdmin:\RightsPolicyTemplate
 
-foreach($Template in $ListofTemplates) 
-{ 
+foreach($Template in $ListofTemplates)
+{
                 $templateID=$Template.id
 
                 $rights = dir MyRmsAdmin:\RightsPolicyTemplate\$Templateid\userright
 
-     $templateName=$Template.DefaultDisplayName 
+     $templateName=$Template.DefaultDisplayName
 
         if ($rights.usergroupname -eq "anyone")
 
@@ -189,10 +194,10 @@ foreach($Template in $ListofTemplates)
 
                            write-host ANYONE  -ForegroundColor Red
                          }
- } 
+ }
 Remove-PSDrive MyRmsAdmin -force
 ```
 
-
 ## <a name="next-steps"></a>Nächste Schritte
+
 Wechseln Sie zu [Phase 3: Clientseitige Konfiguration](migrate-from-ad-rms-phase3.md).

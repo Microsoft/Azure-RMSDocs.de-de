@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 329fa5594a1bf58b4acbeae10cda8202f35df4c6
-ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
+ms.openlocfilehash: f958923e0952c2d305eaa9c193385eac6531334e
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
-ms.locfileid: "80670211"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048645"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -26,16 +26,16 @@ ms.locfileid: "80670211"
 
 Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken den Schritt 7 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
-## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Schritt 7: Neukonfigurieren von Windows-Computern zur Verwendung von Azure Information Protection
+## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Schritt 7. Neukonfigurieren von Windows-Computern zur Verwendung von Azure Information Protection
 
 Für Windows-Computer, die Office 365-Apps, Office 2019- oder Office 2016-Klick-und-Los-Desktop-Apps verwenden:
 
 - Sie können diese Clients mit der DNS-Umleitung so neu konfigurieren, dass sie Azure Information Protection verwenden. Dies ist die bevorzugte Methode der Clientmigration, da sie die unkomplizierteste ist. Diese Methode ist allerdings auf Klick-und-Los-Desktopanwendungen von Office 2016 und höher für Windows-Computer beschränkt.
-    
+
     Für diese Methode müssen Sie einen neuen SRV-Eintrag erstellen und für Benutzer auf dem AD RMS-Veröffentlichungsendpunkt eine NTFS-DENY-Berechtigung festlegen.
 
 - Für Windows-Computer, die keine Office 2016- oder Office 2019-Klick-und-Los-Desktop-Apps verwenden:
-    
+
     Sie können die DNS-Umleitung nicht verwenden und müssen stattdessen Änderungen an der Registrierung vornehmen. Wenn Sie eine Mischung aus Office-Versionen verwenden, die nur zum Teil mit DNS-Umleitung umgehen können, können Sie diese einzelne Methode für alle Windows-Computer oder eine Kombination aus der DNS-Umleitung und dem Ändern der Registrierung verwenden. 
     
     Änderungen der Registrierung werden Ihnen erleichtert, da Sie Skripts, die zum Download zur Verfügung stehen, bearbeiten und bereitstellen können. 
@@ -48,25 +48,27 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
 1. Erstellen Sie einen DNS-SRV-Eintrag im folgenden Format:
     
-    `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
+    ```sh
+    _rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.
+    ```
     
-    Geben Sie für *\<AD RMS cluster>* den FQDN Ihres AD RMS-Clusters an. Dies kann zum Beispiel **rmscluster.contoso.com** sein.
+    Geben Sie für den voll qualifizierten Namen *\<AD RMS cluster>* Ihres AD RMS Clusters an. Dies kann zum Beispiel **rmscluster.contoso.com** sein.
     
     Wenn Sie nur über einen AD RMS-Cluster in dieser Domäne verfügen, können Sie alternativ auch nur den Domänennamen des AD RMS-Clusters angeben. In unserem Beispiel ist dies **contoso.com**. Wenn Sie den Domänennamen in diesem Eintrag angeben, gilt die Umleitung für jeden AD RMS-Cluster in der Domäne.
     
-    Die *\<port>* -Nummer wird ignoriert.
+    Die *\<port>* Zahl wird ignoriert.
     
-    Ersetzen Sie Ihre eigene [Azure Rights Management-Dienst-URL für Ihren Mandanten](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) durch die *\<URL Ihres Mandanten\>* .
+    Geben Sie für Ihren Mandanten *\<your tenant URL\>* Ihre eigene [Azure Rights Management-Dienst-URL an](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
     
     Wenn Sie die DNS-Serverrolle in Windows Server verwenden, können Sie sich beim Festlegen der SRV-Eintragseigenschaften in der DNS-Manager-Konsole an der folgenden Tabelle orientieren:
     
     |Feld|Wert|  
     |-----------|-----------|  
     |**Domäne**|_tcp.rmscluster.contoso.com|  
-    |**Dienst**|_rmsredir|  
+    |**Service**|_rmsredir|  
     |**Protokoll**|_http|  
     |**Priority**|0|  
-    |**Gewichtung**|0|  
+    |**Weight**|0|  
     |**Portnummer**|80|  
     |**Host, der diesen Dienst anbietet**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
@@ -78,7 +80,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
     c. Klicken Sie mit der rechten Maustaste auf **Lizenzierung** , und wählen Sie **zur Inhaltsansicht wechseln**
 
-    d. Klicken Sie im Detailfenster mit der rechten Maustaste auf **License. asmx** > **Eigenschaften** > **Bearbeiten** .
+    d. Klicken Sie im Detailfenster mit der rechten Maustaste auf **License. asmx**-  >  **Eigenschaften**  >  **Bearbeiten** .
 
     e. Wählen Sie im Dialogfeld **Berechtigungen für Lizenz. asmx** entweder **Benutzer** aus, wenn Sie die Umleitung für alle Benutzer festlegen möchten, oder klicken Sie auf **Hinzufügen** , und geben Sie dann eine Gruppe an, die die Benutzer enthält, die Sie umleiten möchten.
     
@@ -86,7 +88,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     
     f. Wählen Sie für die ausgewählte Gruppe **Verweigern** für die Berechtigungen **Lesen & Ausführen** und **Lesen** aus, und klicken Sie anschließend zweimal auf **OK**.
 
-    g. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 365-Apps, Office 2019 oder Office 2016 ausführt, nach dem SRV-Eintrag sucht:
+    B. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 365-Apps, Office 2019 oder Office 2016 ausführt, nach dem SRV-Eintrag sucht:
     
     **Fehlermeldung 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists)** (Mit den bereitgestellten Anmeldeinformationen haben Sie keine Berechtigung zum Anzeigen dieses Verzeichnisses oder dieser Seite (Zugriff aufgrund von Zugriffssteuerungslisten verweigert)).
 
@@ -121,7 +123,9 @@ Das Konfigurationsskript für den Benutzer (Migrate-User.cmd) konfiguriert die E
 
 Beide Skripts enthalten eine Versionsnummer und werden nicht erneut ausgeführt, bis diese Versionsnummer geändert wird. Das bedeutet, dass Sie die Skripts belassen können, bis die Migration abgeschlossen ist. Wenn Sie jedoch Änderungen an dem Skript vornehmen, das von Benutzern und Computern erneut auf deren Windows-Computern ausgeführt werden soll, aktualisieren Sie die folgende Zeile in beiden Skripts auf einen höheren Wert:
 
-    SET Version=20170427
+```sh
+SET Version=20170427
+```
 
 Das Konfigurationsskript für Benutzer wurde dafür entworfen, nach dem Konfigurationsskript für den Client ausgeführt zu werden und verwendet bei dieser Überprüfung die Versionsnummer. Es wird angehalten, wenn das Konfigurationsskript für den Client mit der gleichen Version nicht ausgeführt wurde. Durch diese Überprüfung wird sichergestellt, dass die beiden Skripts in der richtigen Reihenfolge ausgeführt werden. 
 
@@ -131,16 +135,17 @@ Wenn Sie nicht alle Ihre Windows-Clients gleichzeitig migrieren können, führen
 
 1. Kehren Sie zu den Migrationsskripts **Migrate-Client.cmd** und **Migrate-User.cmd** zurück, die Sie zuvor beim Herunterladen dieser Skripts in der [Vorbereitungsphase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration) extrahiert haben.
 
-2. Befolgen Sie die Anweisungen in **Migrate-Client.cmd**, um das Skript so zu bearbeiten, dass es die Azure Rights Management-Dienst-URL Ihres Mandanten sowie die Servernamen Ihrer Extranet- und Intranetlizenzierungs-URLs des AD RMS-Clusters enthält. Erhöhen Sie dann wie zuvor erläutert die Version des Skripts. Zum Nachverfolgen von Skript Versionen empfiehlt es sich, das heutige Datum im folgenden Format zu verwenden: YYYYMMDD
+2. Befolgen Sie die Anweisungen in **Migrate-Client. cmd** , um das Skript so zu ändern, dass es die URL des Azure-Rights Management Dienstanbieter Ihres Mandanten enthält, sowie die Servernamen für Ihre AD RMS Cluster-extranetlizenzierungs-URL und die URL für die Intranet Erhöhen Sie dann wie zuvor erläutert die Version des Skripts. Zum Nachverfolgen von Skript Versionen empfiehlt es sich, das heutige Datum im folgenden Format zu verwenden: YYYYMMDD
     
    > [!IMPORTANT]
    > Achten Sie auch hier wieder darauf, keine zusätzlichen Leerzeichen vor oder nach Ihren Adressen einzufügen.
    > 
-   > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Beispiel: https://rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:<strong>443</strong>. 
+   > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Beispiel: https://rms.treyresearch.net:443/_wmcs/licensing Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:<strong>443</strong>. 
     
-   Wenn Sie Ihre Azure Rights Management-Dienst-URL für *&lt;IhreMandantenURL&gt;* abrufen müssen, erhalten Sie die nötigen Informationen darüber unter [To identify your Azure Rights Management service URL (So identifizieren Sie Ihre Azure Rights Management-Dienst-URL)](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+   Wenn Sie Ihre Azure Rights Management Service-URL für * &lt; yourtenanturl &gt; *abrufen müssen, informieren Sie sich unter, [um Ihre Azure Rights Management Dienst-URL zu identifizieren](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. Konfigurieren Sie Ihre Skriptbereitstellungsmethoden mithilfe der Anweisungen am Anfang dieses Schritts, um **Migrate-Client.cmd** und **Migrate-User.cmd** auf den Windows-Clientcomputern auszuführen, die von den Mitgliedern der Gruppe „AIPMigrated“ verwendet werden. 
 
 ## <a name="next-steps"></a>Nächste Schritte
+
 Fahren Sie mit [Phase 4: Unterstützung der Dienstekonfiguration](migrate-from-ad-rms-phase4.md) fort, um die Migration fortzusetzen.

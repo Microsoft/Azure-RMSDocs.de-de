@@ -11,21 +11,21 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: a2ebb835d4d71c24d8b7206cb44fde6a33ccbb6e
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 9a912db81e293575d74000d79ddc4f6592ab8046
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84666029"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046316"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Anhand der folgenden Informationen erfahren Sie, was der HYOK-Schutz für Azure Information Protection ist, und wie er sich vom cloudbasierten Standardschutz unterscheidet. Stellen Sie sicher, dass Sie verstehen, wann der HYOK-Schutz, die unterstützten Szenarios, die Einschränkungen und die Voraussetzungen geeignet sind, bevor Sie ihn verwenden. 
 
@@ -71,7 +71,7 @@ Verwenden Sie Bezeichner von Azure Information Protection, um den HYOK-Schutz an
 
 In der folgenden Tabelle werden die unterstützten Szenarios für den Schutz von Inhalten mithilfe von Bezeichnern aufgelistet, die für HYOK konfiguriert sind und Inhalte öffnen (bzw. verarbeiten), die vom HYOK-Schutz geschützt werden.
 
-|Plattform|Anwendung|Unterstützt|
+|Plattform|Application|Unterstützt|
 |----------------------|----------|-----------|
 |Windows|Azure Information Protection-Client mit Office 365-Apps, Office 2019, Office 2016 und Office 2013 <br /><br />Word, Excel, PowerPoint|Schutz: Ja<br /><br />Verbrauch: Ja|
 |Windows|Azure Information Protection-Client mit Office 365-Apps, Office 2019, Office 2016 und Office 2013 <br /><br />Outlook|Schutz: Ja<br /><br />Verbrauch: Ja|
@@ -172,19 +172,25 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
 
 1. Erstellen Sie auf jedem AD RMS-Server im Cluster den folgenden Registrierungseintrag:
 
-    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
-    
+    ``` md
+    Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"
+    ```
+
     Geben Sie für den \<string value> einen der folgenden Informationen an:
     
     - Für AD RMS-Cluster mit SSL/TLS:
-
-            https://<cluster_name>/_wmcs/certification/certification.asmx
     
+        ``` md
+        https://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
+
     - Für AD RMS-Cluster ohne SSL/TLS (nur für Testnetzwerke):
         
-            http://<cluster_name>/_wmcs/certification/certification.asmx
+        ``` md
+        http://<cluster_name>/_wmcs/certification/certification.asmx
+        ```
 
-2. Starten Sie IIS neu.
+2. Starten Sie die IIS neu.
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 

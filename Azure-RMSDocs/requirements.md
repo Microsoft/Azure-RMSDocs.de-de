@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24797e570dada67ca304667b2e4d64147aa17580
-ms.sourcegitcommit: fa16364879823b86b4e56ac18a1fc8de5a5dae57
+ms.openlocfilehash: bcb3006bdd7575385d37be066b627ef49f770c70
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84249843"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047710"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection Anforderungen
 
@@ -85,13 +85,13 @@ Die folgenden Betriebssysteme unterstützen die Azure Information Protection Uni
 
 - **Windows 8** (x86, x64)
 
-- **Windows Server 2019**
+- **Windows Server 2019**
 
 - **Windows Server 2016**
 
 - **Windows Server 2012 R2** und **Windows Server 2012**
 
-Mit [beiden Clients](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) können Benutzer Ihre Dokumente und e-Mails klassifizieren und bezeichnen.
+Mit [beiden Clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) können Benutzer Ihre Dokumente und e-Mails klassifizieren und bezeichnen.
 
 Weitere Informationen zur Unterstützung früherer Windows-Versionen erhalten Sie von Ihrem Microsoft-Konto oder Supportmitarbeiter.
 
@@ -104,7 +104,7 @@ Wenn Sie mit virtuellen Computern arbeiten, überprüfen Sie, ob der Softwareanb
 
 Beispielsweise müssen Sie für Citrix-Lösungen möglicherweise [Citrix Application Programming Interface (API) Hooks](https://support.citrix.com/article/CTX107825) für Office, den Azure Information Protection Unified-Bezeichnungs Client oder den Azure Information Protection-Client deaktivieren. 
 
-Diese Anwendungen verwenden die folgenden Dateien: " **Winword. exe**", " **Excel. exe**", " **Outlook. exe**", " **POWERPNT. exe**", " **MSIP. app. exe**", " **MSIP. Viewer. exe** ".
+Diese Anwendungen verwenden die folgenden Dateien: **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
 
 ### <a name="server-support"></a>Serverunterstützung
 
@@ -116,13 +116,13 @@ Außerdem werden Server Core und Nano Server nicht unterstützt.
 
 ### <a name="additional-requirements-per-client"></a>Zusätzliche Anforderungen pro Client
 
-Für jeden Azure Information Protection Client gelten zusätzliche Voraussetzungen. Details hierzu finden Sie in den folgenden Abschnitten:
+Für jeden Azure Information Protection Client gelten zusätzliche Voraussetzungen. Einzelheiten dazu finden Sie unter:
 
 - [Azure Information Protection vereinheitlichte Client Voraussetzungen](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
 - [Azure Information Protection Client Voraussetzungen](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Anwendungen
+## <a name="applications"></a>Applications
 
 Die Azure Information Protection Clients können Dokumente und e-Mails mithilfe von Microsoft **Word**, **Excel**, **PowerPoint**und **Outlook** aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
@@ -166,10 +166,12 @@ Azure Information Protection hat die folgenden zusätzlichen Anforderungen:
 - **TLS-Client-zu-Dienst-Verbindungen**. Beenden Sie keine TLS-Client-zu-Dienst-Verbindungen, z. b. zur Durchführung der Überprüfung auf Paketebene, für die **aadrm.com** -URL. Ansonsten wird die Anheftung von Zertifikaten beendet, die von RMS-Clients für von Microsoft verwaltete Zertifizierungsstellen verwendet wird, um die Kommunikation mit dem Azure Rights Management-Dienst zu schützen.
      
     Verwenden Sie die folgenden PowerShell-Befehle, um zu bestimmen, ob Ihre Client Verbindung beendet wurde, bevor Sie den Azure Rights Management-Dienst erreicht:
-    
-        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
-        $request.GetResponse()
-        $request.ServicePoint.Certificate.Issuer
+
+    ```ps
+    $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+    $request.GetResponse()
+    $request.ServicePoint.Certificate.Issuer
+    ```
 
     Das Ergebnis sollte anzeigen, dass die ausstellende Zertifizierungsstelle von einer Microsoft-Zertifizierungsstelle aus ist, beispielsweise: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US` . 
     

@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7eb260815def6727fcdbd393fd9453ac89cb8baf
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 956eccb942893d6d8850185449118f4027895a81
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960732"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047506"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Nachdem Sie Ihre Dokumente mithilfe von Azure Information Protection geschützt haben, können Sie nachverfolgen, wie andere mit Ihren geschützten Dokumenten verfahren. Bei Bedarf können Sie auch den Zugriff auf diese Dokumente widerrufen, wenn Benutzer nicht mehr in der Lage sein sollen, sie zu lesen. Hierfür verwenden Sie die **Website zum Nachverfolgen von Dokumenten**. Auf diese Website können Sie über Windows-Computer, Mac-Computer und sogar Tablets und Smartphones zugreifen.
 
@@ -32,13 +32,13 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten ausführen:
 
-- Wenn Sie die Freigabe eines Dokuments aufheben müssen: 
+- Wenn Sie die Freigabe eines Dokuments stoppen müssen: 
     
     - Klicken Sie auf **Zugriff widerrufen**. Beachten Sie den Zeitraum, für den das Dokument weiterhin verfügbar ist. Entscheiden Sie, ob Sie Personen wissen lassen möchten, dass Sie den Zugriff auf das Dokument widerrufen, das Sie zuvor freigegeben haben, indem Sie eine benutzerdefinierte Meldung bereitstellen. Wenn Sie den Zugriff auf ein Dokument widerrufen, wird das freigegebene Dokument nicht gelöscht, aber autorisierte Benutzer können es nicht mehr öffnen:
         
         ![Symbol zum Widerrufen des Zugriffs auf der Website für die Dokumentenverfolgung](../media/tracking-site-revoke-access-icon.png)
         
-- Wenn Sie das Dokument nach Excel exportieren möchten: 
+- Wenn Sie nach Excel exportieren möchten: 
     
     - Klicken Sie auf **Nach CSV exportieren**, sodass Sie dann die Daten ändern und eigene Ansichten und Diagramme erstellen können:
          
@@ -54,7 +54,7 @@ Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten a
     
     - Administratoren für Azure Information Protection können auf das Administratorsymbol klicken, um geschützte Dokumente für Benutzer nachzuverfolgen und wieder zu sperren, wenn diese Benutzer Ihre Dokumente über die Website zum Nachverfolgen von Dokumenten registriert haben. Dieses Symbol wird ausschließlich Administratoren angezeigt:
         
-        ![Adminsymbol auf der Website zur Dokumentenverfolgung](../media/tracking-site-admin-icon.png)
+        ![Administratorsymbol auf der Website für die Dokumentkontrolle](../media/tracking-site-admin-icon.png)
         
         Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin
 
@@ -73,7 +73,7 @@ In den Office-Anwendungen, Word, Excel und PowerPoint:
 
 1. Öffnen Sie das geschützte Dokument, das Sie nachverfolgen oder widerrufen möchten.
 
-2. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen** > **Nachverfolgen und widerrufen**:
+2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Schutz** auf **schützen**nach  >  **verfolgen und widerrufen**:
 
     ![Option „Verwendung nachverfolgen“](../media/track-usage-callout.png)
     
@@ -118,7 +118,7 @@ Nachdem Sie das geschützte Dokument mithilfe der Office-Apps oder des Datei-Exp
 ## <a name="other-instructions"></a>Sonstige Anweisungen
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
-- [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
+- [Wie möchten Sie vorgehen?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 Weitere Informationen finden Sie im [Administratorhandbuch](client-admin-guide.md) unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](client-admin-guide-document-tracking.md).

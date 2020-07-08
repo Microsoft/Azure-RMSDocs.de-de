@@ -13,18 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b71300cd48df45d68b785e758e066de96ac4dca7
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 27ede6b0721f57e2825f2c938eb01cf203552245
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404792"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048356"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie die Informationen in diesem Artikel zum Planen und Verwalten Ihres Azure Information Protection-Mandantenschlüssels. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als "Bring Your Own Key" (kurz BYOK) bezeichnet.
+Verwenden Sie die Informationen in diesem Artikel zum Planen und Verwalten Ihres Azure Information Protection-Mandantenschlüssels. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als „Bring Your Own Key“ (BYOK) bezeichnet.
 
 Der Azure Information Protection-Mandantenschlüssel
 
@@ -51,7 +51,7 @@ Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am b
     
     Dies ist die einfachste Möglichkeit mit dem geringsten Verwaltungsaufwand. In den meisten Fällen müssen Sie noch nicht einmal wissen, dass Sie einen Mandantenschlüssel besitzen. Sie registrieren sich einfach für Azure Information Protection, und der restliche Schlüsselverwaltungsprozess wird von Microsoft erledigt.
 
-- **Von Ihnen verwaltet (BYOK)** : Verwenden Sie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) zusammen mit Azure Information Protection, um die vollständige Kontrolle über Ihren Mandantenschlüssel zu erlangen. Erstellen Sie den Schlüssel für diese Mandantenschlüsseltopologie entweder in Key Vault direkt oder lokal. Wenn Sie ihn lokal erstellen, übertragen oder importieren Sie ihn anschließend auf bzw. in Key Vault. Konfigurieren Sie dann Azure Information Protection, um den Schlüssel zu verwenden. Verwalten Sie den Schlüssel in Azure Key Vault.
+- **Von Ihnen verwaltet (BYOK)**: Verwenden Sie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) zusammen mit Azure Information Protection, um die vollständige Kontrolle über Ihren Mandantenschlüssel zu erlangen. Erstellen Sie den Schlüssel für diese Mandantenschlüsseltopologie entweder in Key Vault direkt oder lokal. Wenn Sie ihn lokal erstellen, übertragen oder importieren Sie ihn anschließend auf bzw. in Key Vault. Konfigurieren Sie dann Azure Information Protection, um den Schlüssel zu verwenden. Verwalten Sie den Schlüssel in Azure Key Vault.
     
 
 ### <a name="more-information-about-byok"></a>Nähere Informationen zu BYOK
@@ -111,7 +111,7 @@ In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring
 
 |Anforderung|Weitere Informationen|
 |---------------|--------------------|
-|Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie noch keins haben, können Sie sich ein [kostenlose Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Verwenden Sie [Azure PowerShell](/powershell/azure/overview) -Cmdlets, um zu bestätigen, dass Sie über ein Azure-Abonnement verfügen, das Sie für Byok verwenden können: <br /><br /> 1. Starten Sie eine Azure PowerShell Sitzung mit der Option **als Administrator ausführen** , und melden Sie sich als globaler Administrator für Ihren Azure Information Protection Mandanten mit `Connect-AzAccount` an. Kopieren Sie anschließend die resultierende Tokenzeichenfolge, und fügen Sie Sie mithilfe eines Browsers in `https://microsoft.com/devicelogin`ein. <br /><br /> Weitere Informationen finden Sie [unter Anmelden mit Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass die Werte für Name und ID Ihres Abonnements angezeigt werden, ihre Azure Information Protection Mandanten-ID und der Status aktiviert ist: `Get-AzSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis**: Zusätzlich zu den Voraussetzungen für Byok müssen Sie, wenn Sie von AD RMS zu Azure Information Protection mithilfe von Software Schlüssel zu Hardware Schlüsseln migrieren, mindestens eine Version von 11,62 verwenden, wenn Sie Thales Firmware für Ihr HSM verwenden.|
+|Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie über kein Abonnement verfügen, können Sie sich für ein [kostenloses Konto](https://azure.microsoft.com/pricing/free-trial/)registrieren. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Verwenden Sie [Azure PowerShell](/powershell/azure/overview) -Cmdlets, um zu bestätigen, dass Sie über ein Azure-Abonnement verfügen, das Sie für Byok verwenden können: <br /><br /> 1. Starten Sie eine Azure PowerShell Sitzung mit der Option **als Administrator ausführen** , und melden Sie sich als globaler Administrator für Ihren Azure Information Protection-Mandanten mithilfe von an. `Connect-AzAccount` Kopieren Sie anschließend die resultierende Tokenzeichenfolge in mithilfe eines Browsers, und fügen Sie Sie in `https://microsoft.com/devicelogin` ein. <br /><br /> Weitere Informationen finden Sie [unter Anmelden mit Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass die Werte für Name und ID Ihres Abonnements angezeigt werden, ihre Azure Information Protection Mandanten-ID und der Status aktiviert ist:`Get-AzSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis**: Zusätzlich zu den Voraussetzungen für Byok müssen Sie, wenn Sie von AD RMS zu Azure Information Protection mithilfe von Software Schlüssel zu Hardware Schlüsseln migrieren, mindestens eine Version von 11,62 verwenden, wenn Sie Thales Firmware für Ihr HSM verwenden.|
 |Für die Verwendung eines HSM-geschützten Schlüssels, den Sie lokal erstellen: <br /><br />– Alle Voraussetzungen, die für Key Vault-BYOK aufgeführt sind. |Siehe die [Voraussetzungen für BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis**: Zusätzlich zu den Voraussetzungen für Byok müssen Sie, wenn Sie von AD RMS zu Azure Information Protection mithilfe von Software Schlüssel zu Hardware Schlüsseln migrieren, mindestens eine Version von 11,62 verwenden, wenn Sie Thales Firmware für Ihr HSM verwenden.|
 |Wenn der Schlüsseltresor, der Ihren Mandantenschlüssel enthalten soll, Virtual Network-Dienstendpunkte für Azure Key Vault verwendet: <br /><br />– Erlauben Sie vertrauenswürdigen Microsoft-Diensten, diese Firewall zu umgehen.|Weitere Informationen finden Sie im Blog [Virtual Network Service Endpoints for Azure Key Vault (Virtual Network-Dienstendpunkte für Azure Key Vault)](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
 |Das aipservice-PowerShell-Modul für Azure Information Protection.|Installationsanweisungen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](./install-powershell.md).|
@@ -128,9 +128,11 @@ Treffen Sie Ihre Entscheidung vorrangig anhand von Konformitätsgründen. Die Mi
 
 - Da alle kryptografischen Aufrufe zum Schutz mit Ihrem Azure Information Protection-Mandantenschlüssel verkettet sind, möchten Sie sicherlich die Netzwerklatenz minimieren, die durch diese Aufrufe hervorgerufen wird. Erstellen Sie dafür Ihren Schlüsseltresor in derselben Azure-Region oder -Instanz wie Ihren Azure Information Protection-Mandanten.
 
-Um den Speicherort Ihres Azure Information Protection Mandanten zu identifizieren, verwenden Sie das PowerShell-Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) , und identifizieren Sie die Region aus den URLs. Beispiel:
+Um den Speicherort Ihres Azure Information Protection Mandanten zu identifizieren, verwenden Sie das PowerShell-Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) , und identifizieren Sie die Region aus den URLs. Zum Beispiel:
 
-    LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+```ps
+LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+```
 
 **rms.na.aadrm.com** weist z.B. auf die Region Nordamerika hin.
 
@@ -139,8 +141,8 @@ Anhand der folgenden Tabelle können Sie ermitteln, welche Azure-Region oder -In
 |Azure-Region oder -Instanz|Empfohlener Speicherort für Ihren Schlüsseltresor|
 |---------------|--------------------|
 |rms.**na**.aadrm.com|**USA, Norden-Mitte** oder **USA, Osten**|
-|rms.**eu**.aadrm.com|**Europa, Norden** oder **Europa, Westen**|
-|rms.**ap**.aadrm.com|**Ostasien** oder **Südostasien**|
+|rms.**eu**.aadrm.com|**Nordeuropa** oder **West Europa**|
+|rms.**ap**.aadrm.com|**Asien, Osten** oder **Südostasien**|
 |rms.**sa**.aadrm.com|**USA, Westen** oder **USA, Osten**|
 |rms.**govus**.aadrm.com|**USA, Mitte** oder **USA, Osten 2**|
 |RMS.**aadrm.US**|**US gov Virginia** oder **US gov Arizona**|
@@ -157,7 +159,7 @@ Verwenden Sie keinen 1024-Bit-Schlüssel als aktiven Mandanten Schlüssel, da er
 
 Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
 
-Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration, und die Vorgänge sind verschlüsseln, entschlüsseln, wrapkey, unwrapkey, Sign und Verify. Mit dem folgenden PowerShell-Befehl können Sie die zulässigen Vorgänge eines Schlüssels überprüfen: `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`. Fügen Sie bei Bedarf zugelassene Vorgänge hinzu, indem Sie " [Update-azkeyvaultkey](/powershell/module/az.keyvault/update-azkeyvaultkey) " und den *keyops* -Parameter verwenden.
+Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration, und die Vorgänge sind verschlüsseln, entschlüsseln, wrapkey, unwrapkey, Sign und Verify. Mit dem folgenden PowerShell-Befehl können Sie die zulässigen Vorgänge eines Schlüssels überprüfen: `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps` . Fügen Sie bei Bedarf zugelassene Vorgänge hinzu, indem Sie " [Update-azkeyvaultkey](/powershell/module/az.keyvault/update-azkeyvaultkey) " und den *keyops* -Parameter verwenden.
 
 Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Um den Schlüssel verwenden zu können, müssen Sie Azure Information Protection konfigurieren, indem Sie die Schlüsseltresor-URL angeben.
 
@@ -165,7 +167,7 @@ Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure
 
 Konfiguration mithilfe des Azure-Portals:
 
-1. Navigieren Sie zu **Key vaults** >  **\<*your key vault name*>**  > **Access policies** > **Add new** (Schlüsseltresore)(Ihr Schlüsseltresorname)(Zugriffsrichtlinien)(Neu hinzufügen).
+1. Navigieren Sie zu **Schlüssel**Tresore  >  **\<*your key vault name*>**  >  **Zugriffsrichtlinien**  >  **Hinzufügen neu**.
 
 2. Wählen Sie im Bereich **Zugriffs Richtlinie hinzufügen** im Listenfeld **aus Vorlage konfigurieren (optional)** **Azure Information Protection Byok** aus, und klicken Sie auf **OK**.
     
@@ -176,17 +178,23 @@ Konfiguration mithilfe des Azure-Portals:
 
 Konfiguration mithilfe von PowerShell:
 
-- Führen Sie das Key Vault PowerShell-Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)aus, und erteilen Sie dem Azure Rights Management-Dienst Prinzipal mithilfe der GUID **00000012-0000-0000-C000-000000000000**Berechtigungen. Beispiel:
-    
-        Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+- Führen Sie das Key Vault PowerShell-Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)aus, und erteilen Sie dem Azure Rights Management-Dienst Prinzipal mithilfe der GUID **00000012-0000-0000-C000-000000000000**Berechtigungen. Zum Beispiel:
+
+    ```ps
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+    ```
 
 Sie können Azure Information Protection jetzt so konfigurieren, dass dieser Schlüssel als Azure Information Protection-Mandantenschlüssel Ihrer Organisation verwendet wird. Stellen Sie unter Verwendung des Azure RMS-Cmdlets zunächst eine Verbindung mit dem Azure Rights Management-Dienst her, und melden Sie sich an:
 
+```ps
     Connect-AipService
+```
 
-Führen Sie dann das [Cmdlet use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey)aus, und geben Sie dabei die Schlüssel-URL an. Beispiel:
+Führen Sie dann das [Cmdlet use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey)aus, und geben Sie dabei die Schlüssel-URL an. Zum Beispiel:
 
+```ps
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
+```
 
 > [!IMPORTANT]
 > In diesem Beispiel ist „aaaabbbbcccc111122223333“ die Version des zu verwendenden Schlüssels. Wenn Sie die Version nicht angeben, wird ohne Warnung die aktuelle Version des Schlüssels verwendet, und der Befehl scheint zu funktionieren. Wenn Ihr Schlüssel in Key Vault später jedoch aktualisiert (erneuert) wird, funktioniert der Azure Rights Management-Dienst nicht mehr für Ihren Mandanten, auch wenn Sie den Befehl "Use-aipservicekeyvaultkey" erneut ausführen.

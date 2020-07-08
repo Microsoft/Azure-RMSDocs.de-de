@@ -12,18 +12,18 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2219c1267d9c271106a7605f1947990bd1ea21a6
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: d3cdbbeb2b2cd81036c9d736d63fd467ea7770c2
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482673"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046215"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection-Client: Installation und Konfiguration für Clients
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE] 
+>[!NOTE]
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Computer, auf denen Office 2010 ausgeführt wird, benötigen entweder den Azure Information Protection Client (klassisch) oder den Azure Information Protection Unified-Bezeichnung-Client, um sich beim Azure Information Protection Dienst zu authentifizieren.
@@ -59,12 +59,12 @@ Verwenden Sie die Links auf der [Seite Microsoft Azure Information Protection](h
 
 Da die Azure Information Protection Viewer-APP das Microsoft InTune App Software Development Kit verwendet, können Sie die Azure Information Protection Viewer-App für diese Geräte bereitstellen und verwalten, wenn IOS-und Android-Geräte von InTune angemeldet werden:
 
-1. [Hinzufügen der Azure Information Protection-App zu Intune](/intune/apps-add) 
+1. [Hinzufügen der Azure Information Protection-App zu Intune](/intune/apps-add)
 
 2. Führen Sie dazu eine der beiden folgenden Aktionen aus:
-    
+
     - Bereitstellen der App durch [Zuweisen zu Benutzern](/intune/apps-deploy)
-    
+
     - Verwalten der App durch Verwendung von [App-Schutzrichtlinien](/intune/app-protection-policies)
 
 Zusätzliche Informationen zum Hinzufügen der Azure Information Protection-App zu Intune:
@@ -72,8 +72,10 @@ Zusätzliche Informationen zum Hinzufügen der Azure Information Protection-App 
 - Für ios: Suchen Sie die app in InTune, und fügen Sie Sie hinzu.
 
 - Für Android: Verwenden Sie beim Hinzufügen der APP die folgende **AppStore-URL**:
-        
-        https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+
+    ```md
+    https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
+    ```
 
 Wenn die Azure Information Protection-App für eine App-Schutzrichtlinie für Android-Geräte konfiguriert wurde, kann diese App nicht nur geschützte Texte, Bilder und PDF-Dokumente öffnen, sondern auch Audio- und Videodateien. Weitere Informationen finden Sie unter [Anzeigen von Mediendateien mit der Azure Information Protection-App](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 

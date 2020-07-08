@@ -1,10 +1,10 @@
 ---
 title: Erste Schritte – AIP-App für iOS und Android
 description: Anzeigen von E-Mails oder Dateien mit der Azure Information Protection-App für iOS und Android
-author: rkarlin
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,38 +12,53 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cfae5de653497a448d10e0ac65c10ea2a6e9e4f3
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960845"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048696"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
 *Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Bevor Sie den Anweisungen auf dieser Seite folgen, stellen Sie sicher, dass Sie die [Häufig gestellten Fragen für die Azure Information Protection-App für iOS und Android gelesen haben](mobile-app-faq.md). Auf dieser Seite wird die Funktion der App beschrieben und angegeben, welche Geräte unterstützt werden. Außerdem werden grundlegende Informationen zur Verwendung der App zur Verfügung gestellt.
+Auf dieser Seite wird beschrieben, wie Sie die Azure Information Protection-Apps für IOS oder Android testen.
 
-Die meisten Benutzer verwenden in der Regel die Azure Information Protection-App, wenn sie eine geschützte E-Mail oder Datei öffnen müssen. Wenn Sie jedoch ein Administrator sind, der die App für die Benutzer testen oder einfach nur vor der Verwendung ausprobieren möchte, können Sie die folgenden Anweisungen verwenden.
+Die meisten Benutzer verwenden in der Regel die Azure Information Protection-App, wenn sie eine geschützte E-Mail oder Datei öffnen müssen. Wenn Sie jedoch ein Administrator sind, der die APP für Ihre Benutzer testet, oder wenn Sie ihn einfach ausprobieren möchten, bevor Sie ihn benötigen, verwenden Sie die nachfolgenden Anweisungen, um geschützte Dateien auf Ihrem Gerät anzuzeigen.
+
+> [!IMPORTANT]
+> Bevor Sie beginnen, lesen Sie die Anforderungen und Anweisungen dazu, [was die Azure Information Protection-App für IOS oder Android ist?](mobile-app-faq.md)
+> 
+
+## <a name="access-a-protected-file-from-your-device"></a>Zugreifen auf eine geschützte Datei von Ihrem Gerät aus
+
+Um das AIP-Mobile App zu testen, stellen Sie sicher, dass Sie auf einen der folgenden Typen geschützter Dateien von Ihrem Gerät aus zugreifen können:
+
+|Dateityp  |Instructions  |
+|---------|---------|
+|**Eine rpmsg-Datei**     | Eine durch Rechte geschützte e-Mail-Nachricht. Wenn Ihre Mobile e-Mail-App den Rights Management-Schutz von Daten nicht nativ unterstützt, werden geschützte e-Mails als e-Mail-Anhänge angezeigt. </br></br>Verwenden Sie ein anderes Gerät, z.b. Outlook, von einem Windows-Computer aus, um sich selbst eine durch Rechte geschützte e-Mail-Nachricht zu senden, auf die Sie über Ihr mobiles Gerät zugreifen können </br></br>**Hinweis:** Eine Liste der e-Mail-Clients, die Rights Management unterstützen, finden Sie in der Spalte **e-Mail** in [RMS-fähigen Anwendungen](../requirements-applications.md#rms-enlightened-applications). |
+|**Eine durch Rechte geschützte PDF-Datei**     | 1. schützen Sie auf einem Windows-Computer eine PDF-Datei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung-Client](clientv2-classify-protect.md) Client. </br>2. senden Sie die geschützte PDF-Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie an Ihre eigene e-Mail-Adresse        |
+|**Eine ptxt-oder pjpg-oder ppng-Datei**     | 1. schützen Sie auf einem Windows-Computer eine Text-oder Bilddatei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung-Client](clientv2-classify-protect.md) Client. </br></br>2. senden Sie die geschützte Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie für Ihre eigene e-Mail-Adresse frei. </br></br>**Hinweis:** Weitere Informationen finden Sie [unter Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) .   |
+| | |
+
+### <a name="open-the-protected-file-on-your-mobile"></a>Öffnen Sie die geschützte Datei auf Ihrem Mobilgerät.
+
+1. Tippen Sie auf den e-Mail-Anhang oder-Link, um den geschützten Inhalt zu
+
+1. Wenn Sie dazu aufgefordert werden, wählen Sie die **AIP Viewer** -App aus, um den geschützten Inhalt anzuzeigen.
+
+1. Melden Sie sich bei entsprechender Aufforderung mit Ihrem Geschäfts-oder Schul Konto an, oder wählen Sie ein Zertifikat aus.
+
+Nachdem die Anwendung authentifiziert wurde, zeigt die AIP Viewer-APP die e-Mail oder Datei an.
 
 > [!NOTE]
-> Öffnen Sie nicht zuerst die App, und wählen Sie anschließend Dokumente und E-Mails aus, die angezeigt werden sollen. Öffnen Sie stattdessen Ihr Dokument oder die E-Mail, und wählen Sie dann die App aus, um das Dokument oder die E-Mail anzusehen.
->
-> Versuchen Sie außerdem erst, sich in der App anzumelden, wenn Sie dazu aufgefordert werden.
-
-Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilgerät aus auf die Dateien, die die App unterstützt, zugreifen. Zum Beispiel:
-
-- **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus keinen Datenschutz durch Rechteverwaltung unterstützt. 
-    
-    Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der e-Mail-Clients, von denen Rights Management System eigen unterstützt wird, finden Sie in der Spalte **e-Mail** der ersten Tabelle [unter Anwendungen, die die Azure-Rights Management Datenschutzseite unterstützen](../requirements-applications.md)
-
-- **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie auf einem Windows-Computer einen Azure Information Protection Client ( [klassischer](client-classify-protect.md) oder einheitlicher Bezeichnungs [Client](clientv2-classify-protect.md)), um eine PDF-Datei zu schützen. senden Sie diese durch Rechte geschützte PDF-Datei dann als Anlage in einer e-Mail an sich selbst. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
-
-- **Eine ptxt-oder pjpg-oder ppng**-Datei: Verwenden Sie auf einem Windows-Computer einen Azure Information Protection-Client, um eine Text-oder Bilddatei zu schützen, und senden Sie diese geschützte Datei als e-Mail-Anlage. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) im Administratorhandbuch zum Azure Information Protection-Client. 
-
-Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tippen Sie auf den E-Mail-Anhang oder den Link. Wenn Sie aufgefordert werden, eine App zum Öffnen auszuwählen, wählen Sie die **AIP Viewer**-App. Anschließend werden Sie gebeten, sich mit Ihrem Arbeits- oder Schulkonto anzumelden oder aufgefordert, ein Zertifikat auszuwählen. Nachdem diese Anmeldeinformationen authentifiziert sind, zeigt Ihnen die Azure Information Protection-App die E-Mail oder Datei zum Lesen an.
+> Öffnen Sie immer die AIP-APP, indem Sie geschützte Inhalte öffnen. Versuchen Sie nicht, sich bei der App anzumelden, bis Sie dazu aufgefordert werden, oder öffnen Sie eine geschützte Datei in der AIP Viewer-app.
+> 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Besuchen Sie unsere [Yammer-Website](https://www.yammer.com/AskIPTeam), wenn Sie Fragen zu dieser App haben, die nicht in den [Häufig gestellten Fragen](mobile-app-faq.md) behandelt werden, oder Feedback geben möchten.
+Verwenden Sie eine der folgenden Methoden, um Feedback zu den mobilen AIP-apps bereitzustellen:
+
+- Wechseln Sie zu **Einstellungen**  >  **Feedback senden** .
+- Veröffentlichen Sie Ihre Frage auf unserer [Yammer-Website](https://www.yammer.com/AskIPTeam)

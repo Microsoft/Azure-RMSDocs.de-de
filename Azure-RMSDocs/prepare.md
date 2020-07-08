@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7f9dd0059b0fc3e24d709d7a0237b93a49ee92c1
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 880e3b8acd3d17bcb3aec424e3aef96c2aeadbaf
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746392"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048305"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -129,20 +129,25 @@ Sie können mithilfe von Azure AD PowerShell überprüfen, ob Benutzer und Grupp
 
 Stellen Sie beispielsweise mithilfe des V1-PowerShell-Moduls für Azure Active Directory ([MSOnline](/powershell/module/msonline/?view=azureadps-1.0)) in einer PowerShell-Sitzung zunächst eine Verbindung mit dem Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an:
 
-    Connect-MsolService
-
+```ps
+Connect-MsolService
+```
 
 Hinweis: Wenn dieser Befehl nicht funktioniert, können Sie `Install-Module MSOnline` ausführen, um das MSOnline-Modul zu installieren.
 
 Konfigurieren Sie anschließend die PowerShell-Sitzung so, dass die Werte nicht abgeschnitten werden:
 
-    $Formatenumerationlimit =-1
+```ps
+$Formatenumerationlimit =-1
+```
 
 ### <a name="confirm-user-accounts-are-ready-for-azure-information-protection"></a>Bestätigen, dass Benutzerkonten für Azure Information Protection bereit sind
 
 Um die Benutzerkonten zu bestätigen, führen Sie den folgenden Befehl aus:
 
-    Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+```ps
+Get-Msoluser | select DisplayName, UserPrincipalName, ProxyAddresses
+```
 
 Ihre erste Überprüfung besteht jetzt darin, sicherzustellen, dass die Benutzer, die Sie mit Azure Information Protection verwenden möchten, angezeigt werden.
 
@@ -150,7 +155,7 @@ Ihre erste Überprüfung besteht jetzt darin, sicherzustellen, dass die Benutzer
 
 Wenn die Spalte **ProxyAddresses** nicht aufgefüllt wurde, wird der Wert von **UserPrincipalName** verwendet, um den Benutzer für den Azure Rights Management-Dienst zu autorisieren.
 
-Beispiel:
+Zum Beispiel:
 
 
 |  Anzeigename   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -183,7 +188,9 @@ In den meisten Fällen entspricht der Wert für „UserPrincipalName“ einem de
 
 Verwenden Sie den folgenden Befehl, um Gruppenkonten zu bestätigen:
 
-    Get-MsolGroup | select DisplayName, ProxyAddresses
+```ps
+Get-MsolGroup | select DisplayName, ProxyAddresses
+```
 
 Stellen Sie sicher, dass die Gruppen, die Sie mit Azure Information Protection verwenden möchten, angezeigt werden. Die Gruppenmitglieder der angezeigten Gruppen können mithilfe der E-Mail-Adressen in der Spalte **ProxyAddresses** für den Azure Rights Management-Dienst autorisiert werden.
 
@@ -191,7 +198,9 @@ Stellen Sie sicher, dass die Gruppen, die Sie mit Azure Information Protection v
 
 In den beiden Konfigurationsszenarien des Azure Rights Management-Diensts, in denen Sicherheitsgruppen verwendet werden, können Sie mit dem folgenden PowerShell-Befehl die Objekt-ID und den Anzeigenamen suchen, die zum Identifizieren dieser Gruppen verwendet werden können. Sie können diese Gruppen auch im Azure-Portal suchen und die Werte für Objekt-ID und Anzeigenamen kopieren:
 
-    Get-MsolGroup | where {$_.GroupType -eq "Security"}
+```ps
+Get-MsolGroup | where {$_.GroupType -eq "Security"}
+```
 
 ## <a name="considerations-for-azure-information-protection-if-email-addresses-change"></a>Überlegungen für Azure Information Protection bei E-Mail-Adressänderungen
 

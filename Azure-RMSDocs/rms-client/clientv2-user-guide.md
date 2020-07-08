@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6af0a1208fc0f647470e57b10d7b73e64fb98573
-ms.sourcegitcommit: 9277d126f67179264c54fe2bce8463fef9e0b422
+ms.openlocfilehash: ec5ef3ff70aaa13035ccc588fdd4d45219623b7b
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84802823"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86046571"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch) 
 
@@ -25,7 +25,7 @@ ms.locfileid: "84802823"
 >
 > **Kunden mit erweitertem Microsoft-Support für Windows 7 und Office 2010 können auch Azure Information Protection Unterstützung für diese Versionen erhalten. Wenden Sie sich an Ihren Support, um ausführliche Informationen zu erhalten.*
 >
-> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Der Azure Information Protection Unified Bezeichnung-Client für Windows hilft Ihnen dabei, wichtige Dokumente und e-Mails vor Personen zu schützen, die Sie nicht sehen dürfen, auch wenn Ihre e-Mail weitergeleitet wird oder Ihr Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 

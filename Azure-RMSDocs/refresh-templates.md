@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 00ddb823fca83f09d40ad30c8242b3a8e5ce71a8
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: f4bb3bcf13def75a90945757203a3b2cd5d05d5d
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483047"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86047693"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -27,7 +27,7 @@ ms.locfileid: "79483047"
 >[!NOTE] 
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection verwenden, werden Schutz Vorlagen automatisch auf Client Computer heruntergeladen, sodass Benutzer Sie aus Ihren Anwendungen auswählen können. Möglicherweise müssen Sie aber zusätzliche Schritte durchführen, wenn Sie die Vorlagen ändern:
+Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection verwenden, werden Schutz Vorlagen automatisch auf Client Computer heruntergeladen, sodass Benutzer Sie aus Ihren Anwendungen auswählen können. Allerdings müssen Sie möglicherweise zusätzliche Schritte ausführen, wenn Sie Änderungen an der Vorlage vornehmen:
 
 |Anwendung oder Dienst|Aktualisierungsmethode nach Änderungen|
 |--------------------------|---------------------------------------------|
@@ -47,7 +47,7 @@ Wenn Client Anwendungen Vorlagen herunterladen müssen (anfänglich oder aktuali
 Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Office 2019, Office 2016 oder Office 2013 ausgeführt wird, können Sie den automatischen Zeitplan ändern, sodass geänderte Vorlagen auf Computern häufiger als gemäß dem Standardwert aktualisiert werden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
 > [!WARNING]
-> Die unsachgemäße Verwendung des Registrierungs-Editors kann zu schwerwiegenden Problemen führen, die eine Neuinstallation des Betriebssystems erforderlich machen können. Microsoft kann nicht garantieren, dass Probleme, die aufgrund einer unsachgemäßen Verwendung des Registrierungs-Editors entstehen, behoben werden können. Die Verwendung des Registrierungs-Editors erfolgt auf eigene Gefahr.
+> Durch eine unsachgemäße Verwendung des Registrierungs-Editors können schwerwiegende Fehler auftreten, die möglicherweise eine Neuinstallation des Betriebssystems erforderlich machen. Microsoft kann nicht garantieren, dass Probleme, die aufgrund einer unsachgemäßen Verwendung des Registrierungs-Editors entstehen, behoben werden können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
 
 ### <a name="to-change-the-automatic-schedule"></a>So ändern Sie den automatischen Zeitplan
 
@@ -77,7 +77,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
 
 1. Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime**. Die Daten könnten beispielsweise als **2015-04-20T15:52** angezeigt werden. Löschen Sie „2015-04-20T15:52“, sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
-   **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*Benutzeralias*>
+   **Registrierungs Pfad:** HKEY_CURRENT_USER \software\classes\local settings\software\microsoft\msipc \\ < *MicrosoftRMS_FQDN*> \TEMPLATE \\ < *user_alias*>
 
    **Typ:** REG_SZ
 
@@ -106,13 +106,15 @@ In diesen Versionen von Office für Mac werden Vorlagen aktualisiert, wenn Sie g
 
 1. Öffnen Sie das Terminal, und geben Sie den folgenden Befehl ein:
     
-        defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```sh
+    defaults write ~/Library/Containers/com.microsoft.Outlook/Data/Library/Preferences/com.microsoft.Outlook ResetRMSCache 1
+    ```
 
 2. Starten Sie Outlook für Mac neu.
 
 3. Erstellen Sie eine neue e-Mail, wählen Sie **verschlüsseln**aus, und **überprüfen**Sie die Anmelde Informationen.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md)
 

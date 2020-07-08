@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 4168a75bebb9fb34ce4ba36c0d10b4b78c67dac4
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: 24bc2db20b7dc469a8c6fb3d39e2f399be12c0c6
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83747122"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048560"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
@@ -41,7 +41,7 @@ AzureInformationProtection|Der Name des PowerShell-Moduls für den Azure Informa
 Azure Information Protection-Client (klassisch)|Manchmal mit *klassischem Client*abgekürzt.<br /><br />Die ursprüngliche Clientseite Azure Information Protection, mit der Benutzer, Administratoren und Dienste die Bezeichnungen und Einstellungen Ihrer Azure Information Protection Richtlinie verwenden können. Wird nun durch den Azure Information Protection Unified Bezeichnung-Client ersetzt.|
 |Azure Information Protection-Bezeichnung|Ein Element, das immer einen Klassifizierungswert auf Dokumente und E-Mails anwendet und sie auch schützen kann. Wenn eine Bezeichnung angewendet wird, wird die Bezeichnungsinformation in den Metadaten für Anwendungen und Dienste gespeichert, damit diese gelesen und (optional) auf sie reagiert werden kann.|
 |Azure Information Protection-Richtlinie|Vom Administrator definierte Konfiguration für Clients und Dienste, die Azure Information Protection-Bezeichnungen und -Richtlinieneinstellungen verwenden.|
-|Azure Information Protection-Überprüfung|Ein auf Windows Server ausgeführter Dienst, mit dem Sie Dokumente auf lokalen Ordnern, Netzwerkfreigaben sowie SharePoint Server-Websites und -Bibliotheken ermitteln, klassifizieren und schützen können.|
+|Azure Information Protection-Überprüfung|Ein Dienst, der unter Windows Server ausgeführt wird und das ermitteln, klassifizieren und schützen von Dokumenten auf Netzwerkfreigaben und SharePoint-Server Websites und-Bibliotheken ermöglicht.|
 |Azure Information Protection-Client für einheitliche Bezeichnungen|Manchmal als einheitlicher Bezeichnungs *Client*abgekürzt.<br /><br />Der-Client für Windows-Computer, mit denen Benutzer, Administratoren und Dienste die Vertraulichkeits Bezeichnungen und Bezeichnungs Richtlinien Einstellungen aus dem Office 365 Security & Compliance Center, dem Microsoft 365 Security Center und dem Microsoft 365 Compliance Center verwenden können. Ersetzt den Azure Information Protection Client (klassisch).|
 |Azure RMS|Siehe *Azure Rights Management*.|
 |Azure Information Protection-Viewer|Eine auf Windows-Computern und mobilen Geräten ausgeführte App zum Anzeigen geschützter Dateien.|

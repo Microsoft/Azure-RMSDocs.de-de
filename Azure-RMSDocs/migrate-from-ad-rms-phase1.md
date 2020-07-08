@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7187ab8538122b7af64d8c261f4cc96632a15393
-ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
+ms.openlocfilehash: caf40f0ec6cbd2363f58aa403ec1f74c54b57d66
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2020
-ms.locfileid: "80670161"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048679"
 ---
 # <a name="migration-phase-1---preparation"></a>Migrationsphase 1: Vorbereitung
 
@@ -26,36 +26,41 @@ ms.locfileid: "80670161"
 
 Verwenden Sie die folgenden Informationen für Phase 1 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren behandeln die Schritte 1 bis 3 von [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und bereiten Ihre Umgebung für die Migration vor, ohne Ihre Benutzer zu beeinflussen.
 
-
 ## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Schritt 1: Installieren des aipservice-PowerShell-Moduls und identifizieren ihrer Mandanten-URL
 
 Installieren Sie das aipservice-Modul, damit Sie den Dienst konfigurieren und verwalten können, der den Datenschutz für Azure Information Protection bereitstellt.
 
 Anweisungen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](./install-powershell.md).
 
-Um einige der Migrationsanweisungen abzuschließen, müssen Sie die Azure Rights Management-Dienst-URL für Ihren Mandanten kennen, damit Sie sie ersetzen können, wenn Sie Verweise auf *\<Ihre Mandanten-URL\>* sehen. Die Azure Rights Management-Dienst-URL weist das folgende Format auf: **{GUID}.rms.[Region].aadrm.com**.
+Um einige der Migrations Anweisungen auszuführen, müssen Sie die URL des Azure-Rights Management Dienstanbieter für Ihren Mandanten kennen, damit Sie Sie ersetzen können, wenn Verweise auf angezeigt werden *\<Your Tenant URL\>* . Die Azure Rights Management-Dienst-URL weist das folgende Format auf: **{GUID}.rms.[Region].aadrm.com**.
 
-Beispiel: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+Beispiel: **5c6bb73b-1038-4eec-863d-49bded473437.RMS.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>So identifizieren Sie Ihre Azure Rights Management-Dienst-URL
 
 1. Stellen Sie eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie die Anmeldeinformationen für den globalen Administrator Ihres Mandanten an, wenn Sie dazu aufgefordert werden:
-    
-        Connect-AipService
-    
-2. Abrufen der Konfiguration Ihres Mandanten:
-    
-        Get-AipServiceConfiguration
-    
-3. Kopieren Sie den Wert für die **LicensingIntranetDistributionPointUrl**, und entfernen Sie `/_wmcs\licensing` aus dieser Zeichenfolge. 
-    
-    Was zurück bleibt, ist Ihre Azure Rights Management-Dienst-URL für Ihren Azure Rights Management-Mandanten. Dieser Wert wird auf mit *Ihre Mandanten-URL* in den folgenden Migrationsanweisungen abgekürzt.
-    
-    Sie können überprüfen, ob Sie den korrekten Wert besitzen, indem Sie den folgenden PowerShell-Befehl ausführen.
-    
-            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
-## <a name="step-2-prepare-for-client-migration"></a>Schritt 2: Vorbereitung für die Clientmigration
+    ```ps
+    Connect-AipService
+    ```
+
+2. Abrufen der Konfiguration Ihres Mandanten:
+
+    ```ps
+    Get-AipServiceConfiguration
+    ```
+
+3. Kopieren Sie den Wert für die **LicensingIntranetDistributionPointUrl**, und entfernen Sie `/_wmcs\licensing` aus dieser Zeichenfolge.
+
+    Was zurück bleibt, ist Ihre Azure Rights Management-Dienst-URL für Ihren Azure Rights Management-Mandanten. Dieser Wert wird auf mit *Ihre Mandanten-URL* in den folgenden Migrationsanweisungen abgekürzt.
+
+    Sie können überprüfen, ob Sie den korrekten Wert besitzen, indem Sie den folgenden PowerShell-Befehl ausführen.
+
+    ```ps
+    (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+    ```
+
+## <a name="step-2-prepare-for-client-migration"></a>Schritt 2: Vorbereitung für die Clientmigration
 
 Für die meisten Migrationen ist es nicht sehr praktisch, alle Clients auf einmal zu migrieren, also werden Sie diese eher in Batches migrieren. Das bedeutet, dass einige Clients über einen Zeitraum Azure Information Protection und einige noch immer AD RMS verwenden. Um jeweils zuvor migrierte und migrierte Benutzer zu unterstützen, verwenden Sie Onboarding-Steuerelemente, und stellen Sie ein Skript vor der Migration bereit. Dieser Schritt ist während der Migration erforderlich, damit Benutzer, die noch nicht migriert haben, Inhalt verwenden, der durch migrierte Benutzer geschützt wurde, die jetzt Azure Rights Management verwenden.
 
@@ -65,19 +70,23 @@ Für die meisten Migrationen ist es nicht sehr praktisch, alle Clients auf einma
 
 2. Konfigurieren Sie diese Gruppe für Onboarding-Steuerelemente, um nur Benutzern in dieser Gruppe zu erlauben, Azure Rights Management zu verwenden, um Inhalte zu schützen. Stellen Sie dazu in einer PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
 
-        Connect-AipService
+    ```ps
+    Connect-AipService
+    ```
 
     Konfigurieren Sie anschließend diese Gruppe für Onboarding-Steuerelemente, und ersetzen Sie Ihre Objekt-ID der Gruppe mit jener in diesem Beispiel. Geben Sie anschließend **Y** zur Bestätigung ein, wenn Sie dazu aufgefordert werden:
 
-        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
+    ```ps
+    Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
+    ```
 
 3. [Laden Sie die folgende Datei herunter](https://go.microsoft.com/fwlink/?LinkId=524619), die Clientmigrationsskripts enthält:
-    
+
     **Migration-Scripts.zip**
-    
-4. Extrahieren Sie die Dateien, und befolgen Sie die Anweisungen in **Prepare-Client.cmd**, damit dieses den Servernamen für Ihre Extranetlizenzierungs-URL des AD RMS-Clusters enthält. 
-    
-    So suchen Sie nach diesem Namen: Klicken Sie in der Active Directory Rights Management Services-Konsole auf den Clusternamen. Kopieren Sie unter **Clusterdetails** den Servernamen aus dem Wert **Lizenzierung** aus dem Abschnitt Extranetcluster-URLs. Zum Beispiel: **rmscluster.contoso.com**.
+
+4. Extrahieren Sie die Dateien, und befolgen Sie die Anweisungen in **Prepare-Client.cmd**, damit dieses den Servernamen für Ihre Extranetlizenzierungs-URL des AD RMS-Clusters enthält.
+
+    So suchen Sie nach diesem Namen: Klicken Sie in der Active Directory Rights Management Services-Konsole auf den Clusternamen. Kopieren Sie unter **Clusterdetails** den Servernamen aus dem Wert **Lizenzierung** aus dem Abschnitt Extranetcluster-URLs. Beispiel: **rmscluster.contoso.com**.
 
     > [!IMPORTANT]
     > Diese Anleitung behandelt auch das Ersetzen der Beispieladressen **adrms.contoso.com** durch de Adressen Ihrer AD RMS-Server. Wenn Sie diese Änderungen vornehmen, sollten Sie auf zusätzliche Leerzeichen vor und hinter Ihren Adressen achten. Da sie das Migrationsskript fehlschlagen lassen und schwer als Problemursache zu identifizieren sind, dürfen dort keine Leerzeichen vorhanden sein. Nach dem Einfügen von Text fügen einige Bearbeitungstools automatisch ein Leerzeichen an.
@@ -89,64 +98,66 @@ Für die meisten Migrationen ist es nicht sehr praktisch, alle Clients auf einma
 
 ## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Schritt 3: Vorbereiten Ihrer Exchange-Bereitstellung für die Migration vor
 
-Wenn Sie Exchange lokal oder Exchange Online verwenden, verfügen Sie womöglich über den zuvor integrierten Exchange-Knoten mit Ihrer AD RMS-Bereitstellung. In diesem Schritt konfigurieren Sie sie so, damit Sie die vorhandene AD RMS-Konfiguration verwenden, um Inhalt zu unterstützen, der durch Azure RMS geschützt ist. 
+Wenn Sie Exchange lokal oder Exchange Online verwenden, verfügen Sie womöglich über den zuvor integrierten Exchange-Knoten mit Ihrer AD RMS-Bereitstellung. In diesem Schritt konfigurieren Sie sie so, damit Sie die vorhandene AD RMS-Konfiguration verwenden, um Inhalt zu unterstützen, der durch Azure RMS geschützt ist.
 
-Stellen Sie sicher, dass Sie über Ihre [Azure Rights Management-Dienst-URL für Ihren Mandanten](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) verfügen, damit Sie diesen Wert mit *&lt;IhrerMandantenURL&gt;* in den folgenden Befehlen austauschen können. 
+Stellen Sie sicher, dass Sie über Ihre [Azure Rights Management-Dienst-URL für Ihren Mandanten](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) verfügen, damit Sie diesen Wert mit *&lt;IhrerMandantenURL&gt;* in den folgenden Befehlen austauschen können.
 
 **Wenn Sie über den integrierten Exchange Online-Dienst mit AD RMS verfügen**: Öffnen Sie eine Exchange Online PowerShell-Sitzung, und führen Sie die folgenden PowerShell-Befehle entweder nacheinander oder in einem Skript aus:
 
-    $irmConfig = Get-IRMConfiguration
-    $list = $irmConfig.LicensingLocation
-    $list += "<YourTenantURL>/_wmcs/licensing"
-    Set-IRMConfiguration -LicensingLocation $list
-    Set-IRMConfiguration -internallicensingenabled $false
-    Set-IRMConfiguration -internallicensingenabled $true 
+```ps
+$irmConfig = Get-IRMConfiguration
+$list = $irmConfig.LicensingLocation
+$list += "<YourTenantURL>/_wmcs/licensing"
+Set-IRMConfiguration -LicensingLocation $list
+Set-IRMConfiguration -internallicensingenabled $false
+Set-IRMConfiguration -internallicensingenabled $true 
+```
 
-**Wenn Sie Exchange lokal mit AD RMS integriert haben**: Fügen Sie zuerst auf jedem Exchange-Server Registrierungswerte für jede Exchange-Organisation hinzu, und führen Sie dann PowerShell-Befehle aus: 
+**Wenn Sie Exchange lokal mit AD RMS integriert haben**: Fügen Sie zuerst auf jedem Exchange-Server Registrierungswerte für jede Exchange-Organisation hinzu, und führen Sie dann PowerShell-Befehle aus:
 
 Registrierungswerte für Exchange 2013 und Exchange 2016:
 
-**Registrierungspfad:**
+**Registrierungs Pfad:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Typ:** Reg_SZ
 
-**Wert:** https://\<Ihre Mandanten-URL\>/_wmcs/licensing
+**Wert:**`https://\<Your Tenant URL\>/_wmcs/licensing`
 
-**Daten:** https://\<AD RMS-Extranetlizenzierungs-URL\>/_wmcs/licensing
+**Daten:**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 
 ---
 
 Registrierungswerte für Exchange 2010:
 
-**Registrierungspfad:**
+**Registrierungs Pfad:**
 
 HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
 
 **Typ:** Reg_SZ
 
-**Wert:** https://\<Ihre Mandanten-URL\>/_wmcs/licensing
+**Wert:** https:// \<Your Tenant URL\> /_wmcs/licensing
 
-**Daten:** https://\<AD RMS-Extranetlizenzierungs-URL>/_wmcs/licensing
+**Daten:** https:// \<AD RMS Extranet Licensing URL> /_wmcs/licensing
 
 ---
 
 PowerShell-Befehle, die Sie entweder einzeln oder in einem Skript ausführen können
 
-    $irmConfig = Get-IRMConfiguration
-    $list = $irmConfig.LicensingLocation
-    $list += "<YourTenantURL>/_wmcs/licensing"
-    Set-IRMConfiguration -LicensingLocation $list
-    Set-IRMConfiguration -internallicensingenabled $false
-    Set-IRMConfiguration -RefreshServerCertificates
-    Set-IRMConfiguration -internallicensingenabled $true
-    IISReset
-
+```ps
+$irmConfig = Get-IRMConfiguration
+$list = $irmConfig.LicensingLocation
+$list += "<YourTenantURL>/_wmcs/licensing"
+Set-IRMConfiguration -LicensingLocation $list
+Set-IRMConfiguration -internallicensingenabled $false
+Set-IRMConfiguration -RefreshServerCertificates
+Set-IRMConfiguration -internallicensingenabled $true
+IISReset
+```
 
 Nach dem Ausführen dieser Befehle für Exchange Online oder lokales Exchange unterstützt Ihre Exchange-Bereitstellung, wenn sie konfiguriert wurde, von AD RMS geschützten Inhalt zu unterstützen, auch den Inhalt, der von Azure RMS nach der Migration geschützt wird. Ihre Exchange-Bereitstellung verwendet weiterhin AD RMS, um geschützten Inhalt bis zu einem späteren Schritt in der Migration zu schützen.
 
-
 ## <a name="next-steps"></a>Nächste Schritte
-Gehen Sie unter [Phase 2: Serverseitige Konfiguration](migrate-from-ad-rms-phase2.md).
 
+Gehen Sie unter [Phase 2: Serverseitige Konfiguration](migrate-from-ad-rms-phase2.md).
