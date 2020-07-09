@@ -1,9 +1,9 @@
 ---
 title: Außer Betrieb nehmen und Deaktivieren von Azure RMS
 description: Informationen und Anweisungen für den Fall, dass Sie den cloudbasierten Schutzdienst von Azure Information Protection nicht mehr verwenden möchten.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9086c5d59f815e4bcc4e29cc4b90747e17b5cb65
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: b4892290dc9063f987f2432d5124e43ac509ec89
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934907"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136660"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Außerbetriebsetzen und Deaktivieren des Schutzes für Azure Information Protection
 
@@ -28,7 +28,7 @@ Sie steuern immer, ob Ihre Organisation Inhalt mithilfe des Azure Rights Managem
 
 Wenn Sie keinen weiteren Zugriff auf zuvor geschützte Inhalte mehr benötigen, deaktivieren Sie den Dienst, und lassen Sie Ihr Abonnement für Azure Information Protection ablaufen. Dies ist zum Beispiel angebracht, nachdem Sie das Testen von Azure Information Protection abgeschlossen haben, und bevor Sie es in einer Produktionsumgebung bereitstellen.
 
-Wenn Sie jedoch Azure Information Protection in Produktions-und geschützten Dokumenten und e-Mails bereitgestellt haben, stellen Sie sicher, dass Sie über eine Kopie Ihres Azure Information Protection Mandanten Schlüssels und eine geeignete vertrauenswürdige Veröffentlichungs Domäne (TPD) verfügen, bevor Sie Azure deaktivieren. Rights Management-Dienst. Stellen Sie sicher, dass Sie über eine Kopie Ihres Schlüssels und der TPD verfügen, bevor Ihr Abonnement abläuft, um sicherzustellen, dass Sie den Zugriff auf Inhalte, die von Azure Rights Management geschützt wurden, nach dem Deaktivieren des Dienstanbieter erhalten. 
+Wenn Sie jedoch Azure Information Protection in Produktions-und geschützten Dokumenten und e-Mails bereitgestellt haben, stellen Sie sicher, dass Sie über eine Kopie Ihres Azure Information Protection Mandanten Schlüssels und eine geeignete vertrauenswürdige Veröffentlichungs Domäne (Trusted Publishing Domain, TPD) verfügen, bevor Sie den Azure Rights Management-Dienst deaktivieren. Stellen Sie sicher, dass Sie über eine Kopie Ihres Schlüssels und der TPD verfügen, bevor Ihr Abonnement abläuft, um sicherzustellen, dass Sie den Zugriff auf Inhalte, die von Azure Rights Management geschützt wurden, nach dem Deaktivieren des Dienstanbieter erhalten. 
 
 Wenn Sie die BYOK-Lösung (Bring Your Own Key) verwendet haben, bei der Sie Ihren eigenen Schlüssel in einem HSM erstellen und verwalten, verfügen Sie bereits über Ihren Azure Information Protection-Mandantenschlüssel. Außerdem verfügen Sie über eine passende TPD, wenn Sie die Anweisungen befolgt haben, die sich [auf einen zukünftigen cloudausgang vorbereiten](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631). Wenn Ihr Mandanten Schlüssel jedoch von Microsoft verwaltet wurde (Standardeinstellung), lesen Sie die Anweisungen zum Exportieren Ihres Mandanten Schlüssels im Artikel [Vorgänge für Ihren Azure Information Protection Mandanten Schlüssel](operations-tenant-key.md) .
 
@@ -37,16 +37,16 @@ Wenn Sie die BYOK-Lösung (Bring Your Own Key) verwendet haben, bei der Sie Ihre
 
 Wenn Sie über Ihren Azure Information Protection Mandanten Schlüssel und die TPD verfügen, können Sie Rights Management lokal bereitstellen (AD RMS) und ihren Mandanten Schlüssel als eine vertrauenswürdige Veröffentlichungs Domäne (Trusted Publishing Domain, TPD) importieren. Ihnen stehen dann die folgenden Optionen für die Außerbetriebsetzung Ihrer Azure Information Protection-Bereitstellung zur Verfügung:
 
-|Wenn dies auf Sie zutrifft, ...|… Vorgehensweise|
+|Wenn dies auf Sie zutrifft, ...|… gehen Sie wie folgt vor:|
 |----------------------------|--------------|
 |Sie möchten, dass alle Benutzer weiterhin Rights Management verwenden, wobei sie jedoch eine lokale Lösung statt Azure Information Protection verwenden sollen →|Leiten Sie Ihre Clients mit dem Registrierungsschlüssel **licensingredirection** für Office 2016 oder Office 2013 an die lokale Bereitstellung um. Anweisungen hierzu finden Sie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** für Office 2010, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)beschrieben.|
 |Sie möchten die Rights Management-Technologie überhaupt nicht mehr verwenden    →|Gewähren Sie einem designierten Administrator [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diesen Benutzer.<br /><br />Dieser Administrator kann dann das PowerShell-Modul dieses Clients verwenden, um Dateien in Ordnern, die durch Azure Information Protection geschützt wurden, Massen entschlüsselt. Dateien werden auf die ungeschützte Einstellung zurückgesetzt und können deshalb ohne Rights Management-Technologie wie Azure Information Protection oder AD RMS gelesen werden. Da dieses PowerShell-Modul sowohl mit Azure Information Protection als auch mit AD RMS verwendet werden kann, haben Sie die Möglichkeit, Dateien vor oder nach dem Deaktivieren des Schutz Dienstanbieter von Azure Information Protection oder einer Kombination zu entschlüsseln.|
-|Sie sind nicht in der Lage, alle Dateien zu identifizieren, die durch Azure Information Protection geschützt wurden. Oder Sie möchten, dass alle Benutzer geschützte Dateien, die ausgelassen wurden, automatisch lesen können →|Stellen Sie eine Registrierungs Einstellung auf allen Client Computern bereit, indem Sie den Registrierungsschlüssel **licensingredirection** für Office 2016 und Office 2013 verwenden, wie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients beschrieben. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** , wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)beschrieben.<br /><br />Stellen Sie außerdem eine weitere Registrierungseinstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **DisableCreation** auf **1** fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.|
-|Sie möchten einen kontrollierten, manuellen Wiederherstellungsdienst für Dateien verwenden, die übergangen wurden    →|Gewähren Sie designierten Benutzern in einer Datenwiederherstellungsgruppe [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diese Benutzer, sodass diese den Dateischutz aufheben können, wenn diese Aktion von Standardbenutzern angefordert wird.<br /><br />Stellen Sie auf allen Computern die Registrierungseinstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **DisableCreation** auf **1** fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.|
+|Sie sind nicht in der Lage, alle Dateien zu identifizieren, die durch Azure Information Protection geschützt wurden. Oder Sie möchten, dass alle Benutzer geschützte Dateien, die ausgelassen wurden, automatisch lesen können →|Stellen Sie eine Registrierungs Einstellung auf allen Client Computern bereit, indem Sie den Registrierungsschlüssel **licensingredirection** für Office 2016 und Office 2013 verwenden, wie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients beschrieben. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** , wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)beschrieben.<br /><br />Stellen Sie außerdem eine weitere Registrierungs Einstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **disablecreation** auf **1**fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)beschrieben.|
+|Sie möchten einen kontrollierten, manuellen Wiederherstellungsdienst für Dateien verwenden, die übergangen wurden    →|Gewähren Sie designierten Benutzern in einer Datenwiederherstellungsgruppe [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diese Benutzer, sodass diese den Dateischutz aufheben können, wenn diese Aktion von Standardbenutzern angefordert wird.<br /><br />Stellen Sie auf allen Computern die Registrierungs Einstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **disablecreation** auf **1**fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)beschrieben.|
 
 Weitere Informationen zu den Vorgehensweisen in dieser Tabelle finden Sie in den folgenden Ressourcen:
 
-- Informationen zu AD RMS und Bereitstellungsreferenzen finden Sie unter [Active Directory-Rechteverwaltungsdienste (Übersicht)](https://technet.microsoft.com/library/hh831364.aspx).
+- Weitere Informationen zu AD RMS und Bereitstellungs Referenzen finden Sie unter [Active Directory Rights Management Services Übersicht](https://technet.microsoft.com/library/hh831364.aspx).
 
 - Anweisungen zum Importieren Ihres Azure Information Protection-Mandantenschlüssels als eine TPD-Datei finden Sie unter [Hinzufügen einer vertrauenswürdigen Veröffentlichungsdomäne](https://technet.microsoft.com/library/cc771460.aspx).
 
@@ -66,17 +66,17 @@ Verwenden Sie eines der folgenden Verfahren, um den Schutzdienst (Azure-Rights M
     
     Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.
 
-2. Klicken Sie auf der Seite **Rights Management** auf **Deaktivieren**.
+2. Klicken Sie auf der Seite **Rechteverwaltung** auf **Deaktivieren**.
 
-3.  Wenn die Aufforderung **Möchten Sie Rights Management deaktivieren?** angezeigt wird, klicken Sie auf **Deaktivieren**.
+3.  Wenn Sie gefragt werden möchten **Sie Rights Management Deaktivieren?** klicken Sie auf **Deaktivieren**.
 
-Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die Option zum Aktivieren angezeigt werden.
+Es sollten jetzt **Rights Management ist nicht aktiviert** und die Option zum Aktivieren angezeigt werden.
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>So deaktivieren Sie Rights Management über das Azure-Portal
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
 
-    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
 2. Wählen Sie im Bereich erste **Azure Information Protection** die Option **Schutz Aktivierung**aus. 
 

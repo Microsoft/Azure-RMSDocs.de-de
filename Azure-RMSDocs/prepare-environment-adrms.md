@@ -1,9 +1,9 @@
 ---
 title: Vorbereiten der Umgebung für Azure RMS und AD RMS
 description: Leitfaden für Administratoren, wenn Sie Azure Rights Management mit AD RMS bereitgestellt haben.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5fba2e27abaf59e9b9b50322baa0d93b2af93aa9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935383"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136950"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management bei AD RMS
 
@@ -45,7 +45,7 @@ Wenn Sie zu Azure Information Protection migrieren, geht weder der Zugriff auf z
 
 Unabhängig davon, ob Sie sich für eine Migration zu Azure Information Protection entscheiden oder die Einschränkungen Ihrer aktuellen AD RMS-Bereitstellung akzeptieren, müssen Sie zuerst sicherstellen, dass der Azure Rights Management-Dienst deaktiviert ist. Führen Sie die Schritte für das Szenario aus, das auf Sie zutrifft:
 
-- [Ihr Abonnement mit Azure Rights Management wurde im Februar 2018 oder danach erworben](#your-subscription-was-purchased-during-or-after-february-2018)
+- [Ihr Abonnement, das Azure Rights Management umfasst, wurde während oder nach dem 2018. Februar erworben.](#your-subscription-was-purchased-during-or-after-february-2018)
 
 - [Ihr Abonnement wurde im Februar 2018 oder davor erworben, und Sie verfügen über Exchange Online](#your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online)
 
@@ -68,17 +68,17 @@ Verwenden Sie eine der folgenden Vorgehensweisen, um Azure Rights Management zu 
     
     Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.
 
-2. Klicken Sie auf der Seite **Rights Management** auf **Deaktivieren**.
+2. Klicken Sie auf der Seite **Rechteverwaltung** auf **Deaktivieren**.
 
 3.  Wenn die Aufforderung **Möchten Sie Rights Management deaktivieren?** angezeigt wird, klicken Sie auf **Deaktivieren**.
 
-Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die Option zum Aktivieren angezeigt werden.
+Es sollten jetzt **Rights Management ist nicht aktiviert** und die Option zum Aktivieren angezeigt werden.
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>So deaktivieren Sie Rights Management über das Azure-Portal
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
-    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
     Wenn Sie noch nicht auf den Azure Information Protection Bereich zugegriffen haben, lesen Sie die einmaligen [zusätzlichen Schritte](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) zum Hinzufügen dieses Bereichs zum Portal.
 
@@ -88,7 +88,7 @@ Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die 
 
 Die Informationsleiste zeigt daraufhin **Deactivation finished successfully** (Deaktivierung erfolgreich ausgeführt) an, und **Deaktivieren** wird nun durch **Aktivieren** ersetzt. 
 
-### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen Sie mit der Planung der Migration
+### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen mit der Planung für die Migration
 
 Informationen hierzu finden Sie im Migrationsleitfaden [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -105,7 +105,7 @@ Verwenden Sie den folgenden Exchange Online PowerShell-[Set-IRMConfiguration](/p
 
 [Weitere Informationen](https://support.office.com/article/protection-features-in-azure-information-protection-rolling-out-to-existing-office-365-tenants-7ad6f58e-65d7-4c82-8e65-0b773666634d) 
 
-### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen Sie mit der Planung der Migration
+### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen mit der Planung für die Migration
 
 Informationen hierzu finden Sie im Migrationsleitfaden [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
@@ -114,18 +114,18 @@ Informationen hierzu finden Sie im Migrationsleitfaden [Migrieren von AD RMS zu 
 
 Der Aktivierungs Bereich für den **Azure Information Protection Schutz** verfügt über eine Option zum Aktivieren des Azure Rights Management-Dienstanbieter.  
 
-Wenn Sie auch AD RMS verwenden, wählen Sie nicht die Option **Aktivieren** aus. Wenn der Azure Rights Management-Dienst nicht aktiviert ist, können Sie Azure Information Protection weiterhin für Bezeichnungen verwenden, die nur für die Klassifizierung gelten. Eine spezielle Standardrichtlinie wurde für Sie erstellt, die den Datenschutz nicht einschließt, und diese Konfigurationsoptionen bleiben nicht verfügbar, bis der Azure Rights Management-Dienst aktiviert ist.
+Wenn Sie auch AD RMS verwenden, wählen Sie nicht die Option **Aktivieren** aus. Wenn der Azure Rights Management-Dienst nicht aktiviert ist, können Sie dennoch Azure Information Protection für Bezeichnungen verwenden, die nur für die Klassifizierung gelten. Eine spezielle Standardrichtlinie wird für Sie erstellt, die keinen Schutz von Daten beinhaltet, und diese Konfigurationsoptionen sind bis zur Aktivierung des Azure Rights Management-Diensts nicht verfügbar.
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Schritt 1: Konfigurieren Sie Ihre Azure Information Protection-Richtlinie für die Klassifizierung und Bezeichnung – ohne Schutz
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Schritt 1: Konfigurieren der Azure Information Protection-Richtlinie für die Klassifizierung und Bezeichnung – ohne Schutz
 
 Im Bereich **Azure Information Protection-Bezeichnungen** können Sie die Bezeichnungen anzeigen und konfigurieren, die keine Optionen für den Datenschutz enthalten. Weitere Informationen zum Konfigurieren der Bezeichnungen und Richtlinieneinstellungen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
 
-### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen Sie mit der Planung der Migration
+### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen mit der Planung für die Migration
 
 Informationen hierzu finden Sie im Migrationsleitfaden [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 ### <a name="step-3-configure-labels-for-protection"></a>Schritt 3: Konfigurieren Sie die Bezeichnungen für den Schutz
 
-Nachdem Sie den Azure Rights Management-Dienst im Rahmen des Migrationsprozesses aktiviert haben, können Sie Bezeichnungen für den Schutz von Daten konfigurieren. Wenn Sie jedoch Benutzer in Batches migrieren, sollten Sie sicherstellen, dass Bezeichnungen, die Schutz anwenden, nur auf die migrierten Benutzer ausgerichtet sind.
+Nachdem Sie den Azure Rights Management-Dienst im Rahmen der Migration aktiviert haben, können Sie Bezeichnungen für den Schutz von Daten konfigurieren. Wenn Sie jedoch Benutzer in Batches migrieren, sollten Sie sicherstellen, dass Bezeichnungen, die Schutz anwenden, nur auf die migrierten Benutzer ausgerichtet sind.
 
 

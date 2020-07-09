@@ -1,9 +1,9 @@
 ---
 title: Übersicht über die Azure Information Protection-Richtlinie
 description: Informieren Sie sich über Bezeichnungen und Einstellungen in einer Azure Information Protection Richtlinie, die auf den Azure Information Protection Client heruntergeladen wird.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce71b20cd070f7a082d6175dfef67afad8abe22d
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 925b34d7bfb246b01642c898ffd4e9ae9d5f73c5
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048339"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136380"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Übersicht über die Azure Information Protection-Richtlinie
 

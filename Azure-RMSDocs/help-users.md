@@ -1,9 +1,9 @@
 ---
 title: Unterstützen von Benutzern beim Schützen von Dateien mithilfe von Azure RMS – AIP
 description: Informationen, anhand derer Sie Unterstützung für Benutzer, Administratoren und Ihren Helpdesk bieten können, nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection bereitgestellt und konfiguriert haben.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 0c828903f4849dd63de95a401b88acdc4f92dd7e
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933360"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136594"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -26,7 +26,7 @@ ms.locfileid: "74933360"
 
 Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt und konfiguriert haben, können Sie Ihren Benutzern und Administratoren sowie Ihrem Helpdesk Hilfe und Anleitung bieten:
 
--   **Endbenutzerinformationen:**
+-   **Endbenutzer Informationen**
     
     Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. Wenn Sie [Vorlagen](configure-policy-templates.md) konfiguriert haben, sollten Sie Anleitungen zur Auswahl bereitstellen, wenn der Vorlagenname und die Beschreibung nicht aussagekräftig genug sind, um die richtige Vorlage auswählen zu können.
     
@@ -35,7 +35,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
     > -   [Azure RMS-Dokumentenverfolgung und -widerruf](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
--   **Administratorinformationen**
+-   **Administrator Informationen**
     
     Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. 
     
@@ -49,13 +49,13 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
     Darüber hinaus finden Sie einige der möglicherweise auftretenden Probleme in den folgenden Kategorien:
     
-    - **Hilfe bei der Anmeldung**
+    - **Anmelde Hilfe**
         
         Benutzer werden möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert, wenn mit dem Azure Rights Management-Dienst ein Benutzer authentifiziert werden muss und dazu keine zwischengespeicherten Anmeldeinformationen verwendet werden können. Die erforderlichen Anmeldeinformationen gelten üblicherweise für das Geschäfts-, Schul- oder Unikonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Obwohl Azure Rights Management AD-Konten authentifizieren kann, können einige Anwendungen auch geschützte Inhalte öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Stellen Sie Benutzern und Ihrem Helpdesk Anweisungen bereit, welches Konto zu verwenden ist, wenn Benutzer nach Anmeldeinformationen gefragt werden, wenn sie über Anwendungen verfügen, die den Azure Rights Management-Dienst verwenden.
         
-    - **Probleme beim Schützen oder Nutzen von Inhalten**
+    - **Probleme beim schützen oder nutzen von Inhalten**
         
         Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
         
@@ -80,13 +80,13 @@ Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [A
 Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Zudem wird die Schaltfläche **Schützen** nicht im Menüband oder die Option **Klassifizieren und schützen** nicht im Datei-Explorer angezeigt. Mithilfe dieser Ergänzungen können Dokumente und E-Mails einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
 
 > [!TIP]
-> Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
+> Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung von Informationsschutz mit diesen Anwendungen zu finden, suchen Sie nach **IRM** und dem Anwendungsnamen und der Version.
 
 #### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Schützen eines Dokuments in Word von Office 365 ProPlus
 
 1.  Erstellen Sie in Microsoft Word ein Dokument.
 
-2.  Über das Menü **Datei** : **Info** > **Dokument schützen** >  den **Zugriff beschränken**.
+2.  Über das Menü **Datei** : **Info**  >  **Schutz Dokument**  >   **Einschränken des Zugriffs**.
 
 3. Wählen Sie dann eine Vorlage aus, um schnell die entsprechenden Nutzungsrechte anzuwenden, oder klicken Sie auf **Zugriff beschränken**, und wählen Sie die Nutzungsrechte selbst aus.
 
@@ -95,7 +95,7 @@ Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information 
 
 3.  Speichern Sie das Dokument.
 
-Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert. Wenn Sie nicht autorisiert sind, um das Dokument zu öffnen, wird es nicht geöffnet. Wenn sie zum Öffnen des Dokuments autorisiert sind, wird es mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
+Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert. Wenn Sie nicht autorisiert sind, um das Dokument zu öffnen, wird es nicht geöffnet. Wenn Sie zum Öffnen des Dokuments autorisiert sind, wird es mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
 
 Beispielsweise gestattet ein Nutzungsrecht „Nur anzeigen“ dem Benutzer nicht das Bearbeiten oder Speichern des Dokuments, auch nicht, wenn es vorher an einen anderen Speicherort kopiert wird. 
 
@@ -105,11 +105,11 @@ Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsb
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Auf der Registerkarte **Optionen** : **Berechtigung** > Wählen Sie eine Option aus. Beispiel: **Nicht weiterleiten** oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Auf der Registerkarte **Optionen** : **Berechtigung** > wählen Sie eine Option aus. Beispiel: **nicht weiterleiten**oder ** \<Company Name> -vertraulich**oder ** \<Company Name> -vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
-Ähnlich wie beim Anzeigen eines geschützten Dokuments werden die Empfänger beim Öffnen der geschützten E-Mail zunächst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
+Ähnlich wie beim Anzeigen eines geschützten Dokuments werden die Empfänger beim Öffnen der geschützten E-Mail zunächst authentifiziert. Wenn Sie zum Anzeigen der e-Mail-Nachricht autorisiert sind, wird Sie mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
 
 Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** geschützt ist, steht die Schaltfläche „Weiterleiten“ nicht auf dem Menüband zur Verfügung.
 
@@ -117,10 +117,10 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1. Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, klicken Sie auf **Berechtigungen ändern** , und wählen Sie dann eine Option aus der Dropdown-Dropdown Beispiel: **verschlüsseln** oder **\<Firmen Name >-Confidential**.
+2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, klicken Sie auf **Berechtigungen ändern** , und wählen Sie dann eine Option aus der Dropdown-Dropdown Beispiel: **verschlüsseln** oder ** \<Company Name> -vertraulich**.
 
 3. Senden Sie die Nachricht.
 
-Ähnlich wie beim Anzeigen eines geschützten Dokuments werden die Empfänger beim Öffnen der E-Mail zunächst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
+Ähnlich wie beim Anzeigen eines geschützten Dokuments werden die Empfänger beim Öffnen der E-Mail zunächst authentifiziert. Wenn Sie zum Anzeigen der e-Mail-Nachricht autorisiert sind, wird Sie mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
 
 Beispielsweise ist bei der Standardoption **Nicht weiterleiten** die Option **Weiterleiten** im Nachrichtenfenster nicht verfügbar.

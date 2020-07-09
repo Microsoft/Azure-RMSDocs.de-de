@@ -1,9 +1,9 @@
 ---
 title: Verwalten personenbezogener Daten für Azure Information Protection
 description: Informationen zu den personenbezogenen Daten, die von Azure Information Protection verwendet werden, und wie Sie diese anzeigen, exportieren und löschen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b808fd6e3c1080d7c6d9f06384408bd196aadc45
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71966880"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136806"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -91,7 +91,7 @@ Führen Sie das Cmdlet [Get-aipservicesuperuser](/powershell/module/aipservice/g
 
 Führen Sie das Cmdlet [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog) aus, um ein Protokoll der Administrator Aktionen für den Schutzdienst (Azure Rights Management) von Azure Information Protection zu erhalten. Dieses Protokoll enthält personenbezogene Daten in der Form von E-Mail-Adressen und IP-Adressen. Das Protokoll ist im Klartextformat. Nachdem es heruntergeladen wurde, können die genauen Angaben eines bestimmten Administrators offline gesucht werden.
 
-Beispiele:
+Beispiel:
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>Verwendungs Protokolle für den Schutzdienst
 Führen Sie das Cmdlet [Get-aipserviceuserlog](/powershell/module/aipservice/get-aipserviceuserlog) aus, um ein Protokoll mit Endbenutzer Aktionen abzurufen, die den Schutzdienst von Azure Information Protection verwenden. Dieses Protokoll enthält möglicherweise personenbezogene Daten in der Form von E-Mail-Adressen und IP-Adressen. Das Protokoll ist im Klartextformat. Nachdem es heruntergeladen wurde, können die genauen Angaben eines bestimmten Administrators offline gesucht werden.
 
-Beispiele:
+Beispiel:
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Führen Sie das Cmdlet [Get-aipservicedocumentlog](/powershell/module/aipservice/get-aipservicedocumentlog) aus, um Informationen über einen bestimmten Benutzer von der Website für die Dokument Nachverfolgung abzurufen. Verwenden Sie das Cmdlet [Get-aipservicetrackinglog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) , um die mit den Dokument Protokollen verknüpften Überwachungsinformationen zu erhalten.
 
-Beispiele:
+Beispiel:
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -195,7 +195,7 @@ Wenn Bezeichnungen und Schutz auf Dokumente und E-Mails angewendet werden, werde
 
 - RMS-Client: %localappdata%\Microsoft\MSIPC\msip\Logs
 
-Zusätzlich protokolliert der Azure Information Protection-Client diese personebezogenen Daten im lokalen Windows-Ereignisprotokoll unter **Anwendungen und Dienstprotokolle** > **Azure Information Protection**.
+Außerdem protokolliert der Azure Information Protection Client diese personenbezogenen Daten in den lokalen Windows-Ereignisprotokoll **-Anwendungs-und Dienst Protokollen**  >  **Azure Information Protection**.
 
 Wenn der Azure Information Protection-Client den Scanner ausführt, werden personenbezogene Daten auf dem Windows Server-Computer, der den Scanner ausführt, unter %localappdata%\Microsoft\MSIP\Scanner\Reports gespeichert.
 
@@ -214,7 +214,7 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
 
 - **Complianceadministrator**
 
-- **Kompatibilitäts Daten Administrator**
+- **Compliancedatenadministrator**
 
 - **Sicherheitsadministrator**
 
@@ -222,7 +222,7 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
 
 - **Globaler Administrator**
 
-- **Globaler Reader**
+- **Globaler Leser**
 
 Personenbezogene Daten, die Sie mit dem aipservice-Modul (oder dem älteren Modul, aadrm) anzeigen und angeben, können nur für Benutzer zugänglich gemacht werden, denen die Rollen **Azure Information Protection Administrator**, **Compliance-Administrator**, Kompatibilitäts **Daten Administrator**oder **globaler Administrator** von Azure Active Directory oder der Rolle globaler Administrator für den Schutzdienst zugewiesen wurden.
 
@@ -236,7 +236,7 @@ Sie können keine E-Mail-Adressen für Administratoren und delegierte Administra
 
 ### <a name="protection-templates"></a>Schutzvorlagen
 
-Führen Sie das [Set-aipservicetemplateproperty-](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet aus, um die Schutz Vorlage zu aktualisieren. Da sich die personenbezogenen Daten in der `RightsDefinitions`-Eigenschaft befinden, müssen Sie auch das Cmdlet [New-aipservicerighundefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) verwenden, um ein Rechte Definitions Objekt mit den aktualisierten Informationen zu erstellen, und das Rechte Definitions Objekt mit dem `Set-AipServiceTemplateProperty`-Cmdlet verwenden.
+Führen Sie das [Set-aipservicetemplateproperty-](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet aus, um die Schutz Vorlage zu aktualisieren. Da sich die persönlichen Daten innerhalb der- `RightsDefinitions` Eigenschaft befinden, müssen Sie auch das [New-aipservicerighundefinition-](/powershell/module/aipservice/new-aipservicerightsdefinition) Cmdlet verwenden, um ein Rechte Definitions Objekt mit den aktualisierten Informationen zu erstellen, und das Rechte Definitions Objekt mit dem `Set-AipServiceTemplateProperty` Cmdlet verwenden.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Administratoren und Delegierte Administratoren für den Schutzdienst
 
@@ -252,7 +252,7 @@ Wenn Sie die E-Mail-Adresse eines delegierten Administrators aktualisieren müss
 
 2. Fügen Sie mit [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator) den Benutzer und die neue e-Mail-Adresse hinzu.
 
-## <a name="deleting-personal-data"></a>Löschen von persönlichen Daten
+## <a name="deleting-personal-data"></a>Löschen von personenbezogenen Daten
 Sie können E-Mail-Adressen für bereichsbezogene Richtlinien und Schutzeinstellungen in der Azure Information Protection-Richtlinie löschen. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md) und [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md). 
 
 Sie können die gleichen Informationen für die Schutzeinstellungen mithilfe von PowerShell-Cmdlets aus dem [aipservice-Modul](/powershell/module/aipservice)löschen.
@@ -267,8 +267,8 @@ Wenn Sie personenbezogene Daten in den Clientprotokolldateien und in den Scanner
 
 Verwenden Sie die folgenden drei Schritte, um anzufordern, dass Microsoft persönliche Daten in Dokumenten Verfolgungs Protokollen, Verwaltungs Protokollen oder Verwendungs Protokollen für den Schutzdienst löscht. 
 
-**Schritt 1: Initiieren der Löschanforderung**
-[Wenden Sie sich an den Microsoft-Support](information-support.md#to-contact-microsoft-support), und öffnen Sie eine Azure Information Protection-Supportanfrage für das Löschen von Daten aus Ihrem Mandanten. Sie müssen nachweisen, dass Sie der Administrator des Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Während Sie Ihre Anforderung übermitteln, müssen Sie zusätzliche Informationen bereitstellen, die von den Daten abhängig sind, die gelöscht werden sollen.
+**Schritt 1: Initiieren der DELETE-Anforderung** 
+ [Wenden Sie](information-support.md#to-contact-microsoft-support) sich an Microsoft-Support, um eine Azure Information Protection Support Anfrage mit einer Anforderung zum Löschen von Daten aus Ihrem Mandanten zu öffnen. Sie müssen nachweisen, dass Sie der Administrator des Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Während Sie Ihre Anforderung übermitteln, müssen Sie zusätzliche Informationen bereitstellen, die von den Daten abhängig sind, die gelöscht werden sollen.
 
 - Wenn Sie das Verwaltungsprotokoll löschen möchten, stellen Sie das **Enddatum** bereit. Alle Verwaltungsprotokolle bis zu diesem Enddatum werden gelöscht.
 - Wenn Sie Nutzungsprotokolle löschen möchten, stellen Sie das **Enddatum** bereit. Alle Nutzungsprotokolle bis zu diesem Enddatum werden gelöscht.
@@ -280,13 +280,13 @@ Diese Daten werden dauerhaft gelöscht. Sie können nicht wiederhergestellt werd
 
 **Schritt 3: Bestätigung der Löschung** Sie erhalten eine E-Mail von Microsoft Customer Support Services (CSS), in der bestätigt wird, dass die Daten gelöscht wurden. 
 
-## <a name="exporting-personal-data"></a>Exportieren von persönlichen Daten
+## <a name="exporting-personal-data"></a>Exportieren von personenbezogenen Daten
 Wenn Sie die PowerShell-Cmdlets aipservice oder aadrm verwenden, werden die personenbezogenen Daten als PowerShell-Objekt für die Suche und den Export verfügbar gemacht. Das PowerShell-Objekt kann in das JSON-Format konvertiert und mithilfe des `ConvertTo-Json`-Cmdlets gespeichert werden.
 
-## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Einschränken der Verwendung von personenbezogenen Daten für die Profilerstellung oder für Marketing ohne Zustimmung
+## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Einschränken der Verwendung der personenbezogenen Daten für die Profilerstellung oder das Marketing ohne Zustimmung
 Azure Information Protection befolgt die [Datenschutzrichtlinien](https://privacy.microsoft.com/privacystatement) von Microsoft für die Profilerstellung oder für Marketing auf Grundlage von personenbezogenen Daten.
 
-## <a name="auditing-and-reporting"></a>Nachverfolgung und Berichterstellung
+## <a name="auditing-and-reporting"></a>Überwachung und Berichterstellung
 Nur Benutzer, denen [Administrator Berechtigungen](#securing-and-controlling-access-to-personal-information) zugewiesen wurden, können das aipservice-oder addrm-Modul verwenden, um personenbezogene Daten zu suchen und zu exportieren. Diese Vorgänge werden im Verwaltungsprotokoll aufgezeichnet. Dieses können Sie herunterladen.
 
 Bei Löschaktionen fungiert die Supportanforderung als Nachverfolgung und Berichterstellung für von Microsoft durchgeführte Aktionen. Nach dem Löschen stehen die gelöschten Daten nicht für die Suche und den Export zur Verfügung, und der Administrator kann dies mithilfe der Get-Cmdlets aus dem aipservice-Modul überprüfen.

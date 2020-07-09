@@ -1,9 +1,9 @@
 ---
 title: Serverunterstützung für den Azure RMS-Datenschutz – AIP
 description: Lokale Serverprodukte, die den Azure Rights Management-Dienst von Azure Information Protection über den Rights Management-Connector verwenden können.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e8ce88ed734177fd35c733f115f157c94b70627d
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: f19ce90a0ac95ae14a8795f1f8c181fb4f3acd49
+ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117934"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86136356"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Lokale Server mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -48,9 +48,9 @@ Für die Verwendung des Connectors müssen Sie die Verzeichnissynchronisierung z
 
     -   Windows Server 2016
 
-    -   Windows Server 2012 R2
-
     -   Windows Server 2012 R2
+
+    -   Windows Server 2012
 
 
     > 
