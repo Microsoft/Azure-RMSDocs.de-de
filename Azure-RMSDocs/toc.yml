@@ -173,8 +173,26 @@
           href: secure-collaboration-documents.md
         - name: Konfigurieren von Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
           href: configure-exo-rules.md
-        - name: Bereitstellen der Azure Information Protection-Überprüfung
-          href: deploy-aip-scanner.md
+        - name: Azure Information Protection-Scanner für einheitliche Bezeichnungen
+          items:
+            - name: Übersicht
+              href: deploy-aip-scanner.md
+            - name: Voraussetzungen für den Scanner für einheitliche Bezeichnungen
+              href: deploy-aip-scanner-prereqs.md
+            - name: Konfigurieren und Installieren des Scanners für einheitliche Bezeichnungen
+              href: deploy-aip-scanner-configure-install.md
+            - name: Ausführen des Scanners für einheitliche Bezeichnungen
+              href: deploy-aip-scanner-manage.md
+        - name: Klassischer Azure Information Protection-Scanner
+          items:
+            - name: Übersicht
+              href: deploy-aip-scanner-classic.md
+            - name: Voraussetzungen für den klassischen Scanner
+              href: deploy-aip-scanner-prereqs-classic.md
+            - name: Konfigurieren und Installieren des klassischen Scanners
+              href: deploy-aip-scanner-configure-install-classic.md
+            - name: Ausführen des klassischen Scanners
+              href: deploy-aip-scanner-manage-classic.md
         - name: Berichterstellung für Azure Information Protection
           href: reports-aip.md
         - name: Bereitstellen des RMS-Verbindungsdiensts
@@ -297,6 +315,12 @@
                       href: ./rms-client/client-protection-only-mode.md
                     - name: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
                       href: ./rms-client/upgrade-client-app.md
+        - name: Azure Information Protection-Apps für iOS und Android
+          items:
+            - name: Übersicht
+              href: ./rms-client/mobile-app-faq.md
+            - name: Einstieg in die Verwendung mobiler AIP-Apps
+              href: ./rms-client/mobile-app-get-started.md
         - name: Unterstützte PDF-Reader
           items:
             - name: Übersicht
