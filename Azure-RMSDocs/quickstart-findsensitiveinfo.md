@@ -1,32 +1,32 @@
 ---
 title: 'Schnellstart: Suchen nach vertraulichen Informationen mit dem Azure Information Protection-Scanner'
 description: Verwenden Sie den Azure Information Protection-Scanner, um nach vertraulichen Informationen in lokal gespeicherten Dateien zu suchen.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 07/01/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: ea56aa73d4bd2e3cb6988a2df65022662562b0a4
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 82900a08a630987c52b2352725f3542e50b9c50a
+ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665706"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86048407"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-In dieser Schnellstartanleitung erteilen Sie SharePoint die Berechtigung, Überprüfungen zu erlauben, und Sie installieren und konfigurieren den Azure Information Protection-Scanner, um nach vertraulichen Informationen in Dateien zu suchen, die sich in einem lokalen Datenspeicher befinden. Beispiel: Ein lokaler Ordner, eine Netzwerkfreigabe oder SharePoint Server.
+In dieser Schnellstartanleitung erteilen Sie SharePoint die Berechtigung, Überprüfungen zu erlauben, und Sie installieren und konfigurieren die Azure Information Protection-Überprüfung, um nach vertraulichen Informationen in Dateien zu suchen, die sich in einem lokalen Datenspeicher befinden, zum Beispiel in der Netzwerkfreigabe oder in einem SharePoint-Server.
 
 > [!NOTE]
 > Sie können diese Schnellstartanleitung mit der aktuellen allgemein verfügbaren Version des Azure Information Protection-Clients (klassisch) oder des Azure Information Protection-Clients für einheitliche Bezeichnungen verwenden, der den Scanner enthält.
 >  
-> Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
+> Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
 
 Für diese Konfiguration benötigen Sie maximal 15 Minuten.
 
@@ -58,7 +58,7 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
 
 Führen Sie als ersten Test, um zu bestätigen, dass der Scanner ausgeführt wird, folgende Schritte durch:
 
-1. Erstellen Sie auf Ihrem Computer einen lokalen Ordner. Beispiel: **TestScanner** auf Ihrem lokalen C-Laufwerk.
+1. Erstellen Sie einen neuen Ordner auf einer zugänglichen Netzwerkfreigabe. Nennen Sie diesen Ordner z. B. **TestScanner**.
 
 2. Erstellen und speichern Sie ein Word-Dokument in diesem Ordner, das den Text **Credit card: 4242-4242-4242-4242** enthält.
 
@@ -107,7 +107,7 @@ Bevor Sie den Scanner installieren, erstellen Sie im Azure-Portal ein Profil daf
     
     Die Einstellungen konfigurieren den Scanner so, dass eine einmalige Ermittlung aller Dateien in Ihrem angegebenen Datenrepository durchgeführt wird. Bei dieser Überprüfung wird nach allen bekannten vertraulichen Informationstypen gesucht. Sie müssen dabei nicht zuerst Ihre Azure Information Protection-Bezeichnungen oder Einstellungen konfigurieren.
 
-6. Nachdem Sie das Profil erstellt und gespeichert haben, können Sie zur Option **Repositorys konfigurieren** zurückkehren, um Ihren lokalen Ordner als den Datenspeicher anzugeben, der überprüft werden soll.
+6. Nachdem Sie das Profil erstellt und gespeichert haben, können Sie zur Option **Repositorys konfigurieren** zurückkehren, um Ihren Netzwerkordner als den Datenspeicher anzugeben, der überprüft werden soll.
     
     Klicken Sie im Bereich **Neues Profil hinzufügen** auf die Option **Repositorys konfigurieren**, um das den Bereich **Repositorys** zu öffnen:
     
@@ -117,7 +117,7 @@ Bevor Sie den Scanner installieren, erstellen Sie im Azure-Portal ein Profil daf
     
     ![Hinzufügen eines Datenrepositorys für den Azure Information Protection-Scanner](./media/scanner-repository-add.png)
 
-8. Geben Sie im Bereich **Repository** Ihren lokalen Ordner an, den Sie im ersten Schritt erstellt haben. Beispiel: `C:\TestScanner`
+8. Geben Sie im Bereich **Repository** den Ordner an, den Sie im ersten Schritt erstellt haben. Beispiel: `\\server\TestScanner`
     
     Nehmen Sie keine Änderungen an den restlichen Einstellungen in diesem Bereich vor, sondern behalten Sie diese als **Profilstandard** bei. So werden die Einstellungen vom Datenrepository aus dem Scannerprofil übernommen. 
     
@@ -133,10 +133,12 @@ Nun können Sie den Scanner mit dem Scannerprofil installieren, das Sie eben ers
 
 1. Starten Sie eine PowerShell-Sitzung mit der Option **Als Administrator ausführen**.
 
-2. Verwenden Sie den folgenden Befehl, um den Scanner zu installieren und dabei den Namen Ihres eigenen Computers sowie den Profilnamen anzugeben, den Sie im Azure-Portal gespeichert haben:
-    
-        Install-AIPScanner -SqlServerInstance <your computer name>\SQLEXPRESS -Profile <profile name>
-    
+2. Verwenden Sie den folgenden Befehl, um den Scanner zu installieren und dabei den Namen Ihrer Netzwerkfreigabe sowie den Profilnamen anzugeben, den Sie im Azure-Portal gespeichert haben:
+
+    ```ps
+    Install-AIPScanner -SqlServerInstance <your network share name>\SQLEXPRESS -Profile <profile name>
+    ```
+
     Wenn Sie aufgefordert werden, geben Sie Ihre Anmeldeinformationen für den Scanner im Format \<domain\user name> und dann Ihr Kennwort an. 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Starten der Überprüfung und Überprüfen des erfolgreichen Abschlusses
@@ -164,19 +166,16 @@ In Excel zeigen die ersten beiden Spalten Ihr Datenspeicherrepository und den Da
 ## <a name="scan-your-own-data"></a>Überprüfen eigener Daten
 
 1. Bearbeiten Sie Ihr Scannerprofil, und fügen Sie ein neues Datenrepository hinzu, geben Sie jedoch diesmal Ihren eigenen lokalen Datenspeicher an, der auf vertrauliche Informationen geprüft werden soll.     
-    Sie können einen lokalen Ordner, eine Netzwerkfreigabe (UNC-Pfad) oder eine SharePoint Server-URL für eine SharePoint-Website oder -Bibliothek angeben. 
+    Sie können eine Netzwerkfreigabe (UNC-Pfad) oder eine SharePoint Server-URL für eine SharePoint-Website oder -Bibliothek angeben. 
     
-    - Beispiel für einen lokalen Ordner:
-        
-            D:\Data\Finance
-    
-    - Beispiel für eine Netzwerkfreigabe
-        
-            \\NAS\HR
-    
-    - Beispiel für einen SharePoint-Ordner:
-        
-            http://sp2016/Shared Documents
+    - **Beispiel für eine Netzwerkfreigabe**
+        ```sh        
+        \\NAS\HR
+        ```
+    - **Beispiel für einen SharePoint-Ordner**
+        ```sh
+        http://sp2016/Shared Documents
+        ```
 
 2. Starten Sie den Scanner erneut: Stellen Sie im Bereich **Azure Information Protection – Profile** sicher, dass Ihr Profil ausgewählt ist, und klicken Sie dann auf die Option **Jetzt scannen**:
     
@@ -192,7 +191,9 @@ In einer Produktionsumgebung würden Sie den Scanner auf einem Windows-Server ü
 
 Um Ressourcen zu bereinigen, die für diese Produktionsbereitstellung bereit sind, führen Sie in der PowerShell-Sitzung den folgenden Befehl aus, um den Scanner zu deinstallieren:
 
-    Uninstall-AIPScanner
+```ps
+Uninstall-AIPScanner
+```
 
 Starten Sie den Computer neu.
 
