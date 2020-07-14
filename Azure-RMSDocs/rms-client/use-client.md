@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,19 +12,19 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e069abcc246848a48dc0edb014bdea0e128d03b1
-ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
+ms.openlocfilehash: 56d58578527a6df64091ed4c1569999ddad4fd69
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85126695"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281935"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 
 Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Dokumente und E-Mails einer Organisation bereit:
@@ -147,7 +147,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
-|PDF-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein  |
+|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein  |
 |PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
 |Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja**| Nein |

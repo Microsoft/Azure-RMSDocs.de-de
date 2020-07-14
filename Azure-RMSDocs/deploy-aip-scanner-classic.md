@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 65c3a37f68676616d7342879d9621a143842f4bf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
+ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049539"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281952"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Was ist der klassische Azure Information Protection-Scanner?
 
@@ -80,7 +80,7 @@ Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschloss
 
 Der Scanner berücksichtigt auch alle Dateilisten, die explizit für die Überprüfung definiert oder von der Überprüfung ausgeschlossen werden sollen. Dateilisten gelten standardmäßig für alle Daten Depots und können auch nur für bestimmte Depots definiert werden.
 
-Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Zum Beispiel:
+Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Beispiel:
 
 ![Konfigurieren der zu überprüfenden Dateitypen für den Azure Information Protection-Scanner](./media/scanner-file-types.png)
 
@@ -115,15 +115,6 @@ Der AIP-Scanner kann die Dateien unter den folgenden Umständen nicht bezeichnen
 **Beispiel:** Nach dem Überprüfen von txt-Dateien kann die Überprüfung keine Bezeichnung anwenden, die nur für die Klassifizierung konfiguriert ist, da der txt-Dateityp nur Klassifizierung unterstützt.
 
 Wenn die Bezeichnung jedoch für die Klassifizierung und den Schutz konfiguriert ist und der txt-Dateityp für die Überprüfung enthalten ist, kann der Scanner die Datei bezeichnen.
-
-## <a name="upgrading-your-scanner"></a>Aktualisieren Ihres Scanners
-
-Wenn Sie den Scanner bereits installiert haben und ein Upgrade durchführen möchten, finden Sie weitere Informationen unter [Aktualisieren der Azure Information Protection Scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-
-[Konfigurieren](deploy-aip-scanner-configure-install.md) und verwenden Sie dann wie gewohnt [Ihren Scanner](deploy-aip-scanner-manage.md) , und überspringen Sie die Schritte zur Installation des Scanners.
-
->[!NOTE]
-> Wenn Sie über eine Version des Scanners verfügen, die älter als 1.48.204.0 ist und Sie nicht zur Aktualisierung bereit sind, finden Sie weitere Informationen unter Bereitstellen [vorheriger Versionen des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner-previousversions.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
