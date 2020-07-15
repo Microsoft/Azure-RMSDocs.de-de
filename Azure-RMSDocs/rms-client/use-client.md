@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 56d58578527a6df64091ed4c1569999ddad4fd69
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: 08c5658ed0997da058e2542826d336581bba4bb7
+ms.sourcegitcommit: 76bb452442ed42f066ee23fb3bcd9fef92440b22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281935"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308503"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -134,7 +134,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Empfohlene oder automatische Bezeichnung:<br />-Für Outlook| **Ja** | **Ja** | Nein |
 |Obligatorische Bezeichnung:| **Ja** | **Ja** | Nein |
 |Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Nicht weiterleiten für e-Mails| **Ja** | **Ja** | **Ja** |
-|Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | **Ja** |
+|Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint| **Ja** | **Ja** | **Ja** |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
 |Anpassungen wie z.B. folgende:<br />– Standardbezeichnung für E-Mails<br />: Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
