@@ -1,17 +1,17 @@
 ---
 title: 'Vorgehensweise: Herabstufen/entfernen einer Bezeichnung, die eine Begründung erfordert (c#)'
-description: In diesem Artikel erfahren Sie, wie Sie eine Bezeichnung Herabstufen oder entfernen, die eine Begründung erfordert.
+description: In diesem Artikel erfahren Sie, wie Sie eine Bezeichnung herabstufen oder entfernen, für die eine Begründung erforderlich ist.
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: cdf128d5d01db0362fac1b76c1e0d81a15e55432
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: 88c55d973dde25e1571750e51e36f5fa726770f5
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548342"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403220"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK-Datei-API-Aktions Begründung für das Herabstufen einer Vertraulichkeits Bezeichnung in einer Datei (c#)
 
@@ -21,18 +21,18 @@ In diesem Schnellstart wird die Behandlung eines Vorgangs für eine Herabstufung
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Vervollständigen der [Schnellstartanleitung: Set/Get sensisensilabels (c#)](quick-file-set-get-label-csharp.md) First, das eine Starter-Visual Studio-Projekt Mappe erstellt, um die Vertraulichkeits Bezeichnungen einer Organisation aufzulisten und Vertraulichkeits Bezeichnungen in einer Datei festzulegen und zu lesen. Die Schnellstartanleitung "Gewusst wie: Herabstufen/entfernen einer Bezeichnung, die eine Begründung erfordert c#" basiert auf der vorherigen Version.
-- Optional: Überprüfen Sie die [Konzepte von Datei Handlern](concept-handler-file-cpp.md) in den MIP SDK-Konzepten.
+- Vervollständigen des [Schnellstarts: Set/Get Sensitivität Labels (c#)](quick-file-set-get-label-csharp.md) , mit dem eine Starter-Visual Studio-Projekt Mappe erstellt wird, um die Vertraulichkeits Bezeichnungen einer Organisation aufzulisten und Vertraulichkeits Bezeichnungen festzulegen und aus einer Datei zu lesen. Die Schnellstartanleitung "Gewusst wie: Herabstufen/entfernen einer Bezeichnung, die eine Begründung erfordert c#" basiert auf der vorherigen Version.
+- Optional: Lesen Sie sich die Konzepte zu [Dateihandlern im MIP-SDK](concept-handler-file-cpp.md) durch.
 
-## <a name="add-logic-to-set-a-lower-label-to-a-protected-file"></a>Hinzufügen von Logik zum Festlegen einer niedrigeren Bezeichnung auf eine geschützte Datei
+## <a name="add-logic-to-set-a-lower-label-to-a-protected-file"></a>Hinzufügen von Logik zum Festlegen einer niedrigeren Bezeichnung für eine geschützte Datei
 
 Fügen Sie Logik hinzu, um mithilfe des dateihandlerobjekts eine Vertraulichkeits Bezeichnung für eine Datei festzulegen.
 
 1. Öffnen Sie die Visual Studio-Projekt Mappe, die Sie im vorherigen Abschnitt "Schnellstart: Set/Get Sensitivitäts Labels (c#)" erstellt haben.
 
-2. Öffnen Sie mithilfe Projektmappen-Explorer die CS-Datei in Ihrem Projekt, das die Implementierung der- `Main()` Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
+2. Öffnen Sie im Projektmappen-Explorer die CS-Datei des Projekts, die die Implementierung der `Main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
-3. Aktualisieren `<label-id>` Sie den Wert aus dem vorherigen Schnellstart in eine Vertraulichkeits Bezeichnung, die eine Begründung für die Herabsetzung erfordert In dieser Schnellstartanleitung legen wir diese Bezeichnung zuerst fest und versuchen dann, Sie in weiteren Schritten über Code Ausschnitte zu verringern.
+3. Aktualisieren Sie den `<label-id>`-Wert aus dem vorherigen Schnellstart auf eine Vertraulichkeitsbezeichnung, die eine Begründung für die Herabstufung voraussetzt. Während dieses Schnellstarts legen Sie diese Bezeichnung zunächst fest und versuchen dann, sie in weiteren Schritten über Codeausschnitte herabzustufen.
 
 4. `Main()` `Console.ReadKey()` Fügen Sie den folgenden Code am Ende des Texts unter und über den Block "Herunterfahren der Anwendung" (wo Sie im vorherigen Schnellstart aufgehört haben) hinzu.
 
@@ -92,15 +92,14 @@ Fügen Sie Logik hinzu, um mithilfe des dateihandlerobjekts eine Vertraulichkeit
     ````csharp
     downgradeHandler = null;
     commitHandler = null;
-
     ````
 
 6. Ersetzen Sie die Platzhalterwerte im Quellcode durch die folgenden Werte:
 
    | Platzhalter | Wert |
    |:----------- |:----- |
-   | \<downgraded-labled-output\> | Der Ausgabedatei Pfad, in dem die geänderte Datei gespeichert werden soll. |
-   | \<new-label-id\> | Eine Vorlagen-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wurde, z `bb7ed207-046a-4caf-9826-647cff56b990` . b.:. Stellen Sie sicher, dass die Empfindlichkeit niedriger ist als die zuvor geschützte Datei Bezeichnung. |
+   | \<downgraded-labled-output\> | Der Ausgabedateipfad, in dem die geänderte Datei gespeichert werden soll |
+   | \<new-label-id\> | Eine Vorlagen-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wurde, z `bb7ed207-046a-4caf-9826-647cff56b990` . b.:. Stellen Sie sicher, dass die Vertraulichkeit niedriger als die der vorherigen Bezeichnung der geschützten Datei ist. |
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 

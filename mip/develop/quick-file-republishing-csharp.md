@@ -6,18 +6,18 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: d82424c03fe8c2e050bbd4095706fa675de5ed6e
-ms.sourcegitcommit: a1feede30ac1f54e900e52eb45b3e6634e0f13f3
+ms.openlocfilehash: 2b6e0b866144c4883ece29936c1a23cc946c5976
+ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84548206"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403339"
 ---
-# <a name="microsoft-information-protection-sdk---file-api-re-publishing-quickstart-c"></a>Schnellstart für die Neuveröffentlichung der Microsoft Information Protection SDK-Datei-API (c#)
+# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Schnellstart: Microsoft Information Protection SDK-Datei-API-Wiederveröffentlichung (c#)
 
 ## <a name="overview"></a>Übersicht
 
-Eine Übersicht zu diesem Szenario und zu seiner Verwendung finden Sie unter [Veröffentlichen im MIP SDK](concept-republishing-cpp.md).
+Eine Übersicht zu diesem Szenario und zu seiner Verwendung finden Sie unter [Veröffentlichen im MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -31,63 +31,68 @@ Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfül
 
 1. Öffnen Sie die Visual Studio-Projekt Mappe, die Sie im vorherigen Artikel "Schnellstart: Set/Get sensisensilabels (c#)" erstellt haben.
 
-2. Öffnen Sie mithilfe Projektmappen-Explorer die CS-Datei in Ihrem Projekt, das die Implementierung der- `Main()` Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
+2. Öffnen Sie im Projektmappen-Explorer die CS-Datei des Projekts, die die Implementierung der `Main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
 3. `Main()` `Console.ReadKey()` Fügen Sie den folgenden Code am Ende des Texts unter und über den Block "Herunterfahren der Anwendung" (wo Sie im vorherigen Schnellstart aufgehört haben) hinzu.
 
-    ```csharp
+```csharp
+string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
 
-        string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
+//Create a fileHandler for consumption for the Protected File.
+var protectedFileHandler = Task.Run(async () => 
+                            await fileEngine.CreateFileHandlerAsync(protectedFilePath,// inputFilePath
+                                                                    protectedFilePath,// actualFilePath
+                                                                    false, //isAuditDiscoveryEnabled
+                                                                    null)).Result; // fileExecutionState
 
-            //Create a fileHandler for consumption for the Protected File.
-            var protectedFileHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(protectedFilePath,// inputFilePath
-                                                                                          protectedFilePath,// actualFilePath
-                                                                                          false, //isAuditDiscoveryEnabled
-                                                                                          null)).Result; // fileExecutionState
+// Store protection handler from file
+var protectionHandler = protectedFileHandler.Protection;
 
-            // Store protection handler from file
-            var protectionHandler = protectedFileHandler.Protection;
+//Check if the user has the 'Edit' right to the file
+if (protectionHandler.AccessCheck("Edit"))
+{
+    // Decrypt file to temp path
+    var tempPath = Task.Run(async () => await protectedFileHandler.GetDecryptedTemporaryFileAsync()).Result;
 
-            //Check if the user has the 'Edit' right to the file
-            if (protectionHandler.AccessCheck("Edit"))
-            {
-                // Decrypt file to temp path
-                var tempPath = Task.Run(async () => await protectedFileHandler.GetDecryptedTemporaryFileAsync()).Result;
+    /*
+        Your own application code to edit the decrypted file belongs here. 
+    */
 
-                /// Write code here to perform further operations for edit ///
+    /// Follow steps below for re-protecting the edited file. ///
+    // Create a new file handler using the temporary file path.
+    var republishHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(tempPath, tempPath, false)).Result;
 
-                /// Follow steps below for re-protecting the edited file. ///
-                // Create a new file handler using the temporary file path.
-                var republishHandler = Task.Run(async () => await fileEngine.CreateFileHandlerAsync(tempPath, tempPath, false)).Result;
+    // Set protection using the ProtectionHandler from the original consumption operation.
+    republishHandler.SetProtection(protectionHandler);
 
-                // Set protection using the ProtectionHandler from the original consumption operation.
-                republishHandler.SetProtection(protectionHandler);
+    // New file path to save the edited file
+    string reprotectedFilePath = "<reprotected-file-path>" // New file path for saving reprotected file.
 
-                // New file path to save the edited file
-                string reprotectedFilePath = "<reprotected-file-path>" // New file path for saving reprotected file.
+    // Write changes
+    var reprotectedResult = Task.Run(async () => await republishHandler.CommitAsync(reprotectedFilePath)).Result;
 
-                // Write changes
-                var reprotectedResult = Task.Run(async () => await republishHandler.CommitAsync(reprotectedFilePath)).Result;
-
-                var protectedLabel = protectedFileHandler.Label;
-                Console.WriteLine(string.Format("Originally protected file: {0}", protectedFilePath));
-                Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", protectedLabel.Label.Id, protectedFileHandler.Protection.Owner, protectedLabel.IsProtectionAppliedFromLabel.ToString()));
-                var reprotectedLabel = republishHandler.Label;
-                Console.WriteLine(string.Format("Reprotected file: {0}", reprotectedFilePath));
-                Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", reprotectedLabel.Label.Id, republishHandler.Protection.Owner, reprotectedLabel.IsProtectionAppliedFromLabel.ToString()));
-                Console.WriteLine("Press a key to continue.");
-                Console.ReadKey();
-
-            }
-
-    ```
+    var protectedLabel = protectedFileHandler.Label;
+    Console.WriteLine(string.Format("Originally protected file: {0}", protectedFilePath));
+    Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", 
+                        protectedLabel.Label.Id, 
+                        protectedFileHandler.Protection.Owner, 
+                        protectedLabel.IsProtectionAppliedFromLabel.ToString()));
+    var reprotectedLabel = republishHandler.Label;
+    Console.WriteLine(string.Format("Reprotected file: {0}", reprotectedFilePath));
+    Console.WriteLine(string.Format("File LabelID: {0} \r\nProtectionOwner: {1} \r\nIsProtected: {2}", 
+                        reprotectedLabel.Label.Id, 
+                        republishHandler.Protection.Owner, 
+                        reprotectedLabel.IsProtectionAppliedFromLabel.ToString()));
+    Console.WriteLine("Press a key to continue.");
+    Console.ReadKey();
+}
+```
 
 4. Am Ende von Main () finden Sie den Block für das Herunterfahren der Anwendung, der im vorherigen Schnellstart erstellt wurde
 
     ````csharp
         protectedFileHandler = null;
         protectionHandler = null;
-
     ````
 
 5. Ersetzen Sie die Platzhalterwerte im Quellcode durch die folgenden Werte:
