@@ -4,29 +4,43 @@ description: Installieren Sie einen Reader unter Windows für PDF-Dokumente, die
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: a027b6200fb3bd728aca8fe1a92e7c61aeeeef87
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 95f2e0376af2fcdaeae7898a378ea8cafed2eb59
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960852"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437817"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installieren eines PDF-Readers für Windows
 
-[![Windows Symbol](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
+[![Windows-Symbol](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
-Wenn Sie auf Ihrem Windows-Computer ein geschütztes PDF-Dokument öffnen müssen, installieren Sie das Adobe-Plug-in für den Adobe Acrobat Reader.
+Wenn Sie auf Ihrem Windows-Computer ein geschütztes PDF-Dokument öffnen müssen, verwenden Sie den neuen [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL) -Browser, oder installieren Sie das Adobe-Plug-in für den Adobe Acrobat Reader.
+
+## <a name="use-microsoft-edge-to-view-protected-files"></a>Verwenden von Microsoft Edge zum Anzeigen geschützter Dateien
+
+**Unterstützte Versionen**: Windows 10 und frühere Versionen über Windows 7
+
+Anleitung:
+
+1. Überprüfen Sie, welche [Microsoft Edge-Version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) auf Ihrem System installiert ist. 
+1. Wenn die Microsoft Edge-Version 83.0.478.37 oder höher ist, können Sie geschützte Dateien direkt im Edge-Browser öffnen. 
+1. Um PDF-Dateien in SharePoint zu öffnen **Open**, klicken Sie auf Öffnen  >  **in Browser**öffnen. 
+:::image type="content" source="../media/edge_open_browser.png" alt-text="Öffnen Sie eine geschützte PDF-Datei in SharePoint, indem Sie die Option in Browser öffnen auswählen.":::
+
+
+## <a name="use-adobe-acrobat-reader-to-view-protected-files"></a>Verwenden von Adobe Acrobat Reader zum Anzeigen geschützter Dateien
 
 **Unterstützte Versionen**: Windows 10 und frühere Versionen über Windows 8
 
-Anweisungen: 
+Anleitung: 
 
 1. Lesen Sie die [allgemeinen Nutzungsbedingungen für Adobe](https://www.adobe.com/legal/terms.html).
 

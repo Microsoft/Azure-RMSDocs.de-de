@@ -1,10 +1,10 @@
 ---
 title: Der Client für Azure Information Protection-aip
 description: Microsoft Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Daten einer Organisation bereit. Der Client (Azure Information Protection-Client oder Rights Management-Client) ist in Anwendungen integriert, die auf Computern und mobilen Geräten ausgeführt werden.
-author: batamig
+author: mlottner
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 07/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 08c5658ed0997da058e2542826d336581bba4bb7
-ms.sourcegitcommit: 76bb452442ed42f066ee23fb3bcd9fef92440b22
+ms.openlocfilehash: 53f9b0b11c89e66fccc10243d48bc2835884ea35
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308503"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437834"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -160,7 +160,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Unterstützung für Kontowechsel:| Nein  | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
 |Unterstützung für AD RMS:| **Ja** | Nr. <sup>7</sup> | Nein |
-|Externe Inhalts Markierung in App entfernen| **Ja**| Nein| Nein |
+|Externe Inhalts Markierung in App entfernen:| **Ja**| **Ja**| Nein|
 
 
 Fußnoten:

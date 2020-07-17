@@ -4,29 +4,41 @@ description: Installieren eines Readers auf Macintosh-Computern für PDF-Dokumen
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/04/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: edb58bdd93ff573015decb8edf3b68e4fecd212c
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: fc4f9356017096439c09d6d8c1f6d886801cbf18
+ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326455"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437800"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installieren eines PDF-Readers für MacOS
 
 [![IOS-Symbol](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
-Wenn Sie ein geschütztes PDF-Dokument auf dem Macintosh-Computer öffnen müssen, installieren Sie das Adobe-Plug-in für den Adobe Acrobat Reader.
+Wenn Sie ein geschütztes PDF-Dokument auf dem Macintosh-Computer öffnen müssen, verwenden Sie den neuen [Microsoft Edge](https://www.microsoft.com/edge?form=MY01BL&OCID=MY01BL), oder installieren Sie das Adobe-Plug-in für den Adobe Acrobat Reader.
+
+## <a name="use-microsoft-edge-to-view-protected-files"></a>Verwenden von Microsoft Edge zum Anzeigen geschützter Dateien
+
+**Unterstützte Versionen**: 10,12 und höher
+
+Anleitung: 
+
+1. Überprüfen Sie, welche [Microsoft Edge-Version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) auf Ihrem System installiert ist. 
+1. Wenn die Microsoft Edge-Version 83.0.478.37 oder höher ist, können Sie geschützte Dateien direkt im Edge-Browser öffnen. 
+1. Um PDF-Dateien in SharePoint zu öffnen **Open**, klicken Sie auf Öffnen  >  **in Browser**öffnen. 
+
+## <a name="use-adobe-acrobat-reader-to-view-protected-files"></a>Verwenden von Adobe Acrobat Reader zum Anzeigen geschützter Dateien
 
 **Unterstützte Versionen**: 10,12-10,14
 
-Anweisungen:
+Anleitung:
 
 1. Lesen Sie die [allgemeinen Nutzungsbedingungen für Adobe](https://www.adobe.com/legal/terms.html).
 
