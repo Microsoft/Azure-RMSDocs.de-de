@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cfcbc67d67375e1513373c26d935a5acdc041911
-ms.sourcegitcommit: b7c4a6c3c343b53775cc4ffdecb966c32766dd6a
+ms.openlocfilehash: cbffb68eb997b5d539ddd31a1f85fb25bb797976
+ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716046"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86471738"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection Überwachungs Protokoll Referenz (öffentliche Vorschau)
 
@@ -82,7 +82,7 @@ Für die folgenden Aktivitäten werden **Zugriffs Verweigerungs** Überwachungs 
 
 | Gemeldet von      | Plattform                       | Application              | Aktion/Beschreibung      |
 | ---------------- | ------------------------------ | ------------------------ | --------------- |
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer weniger sensiblen Bezeichnung aktualisiert wird.|
+|Azure Information Protection:</br>-Klassischer Scanner und Client</br>-Unified Beschriftung Scanner und Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer weniger sensiblen Bezeichnung aktualisiert wird.|
 | Microsoft Defender ATP            | Windows                        | OS                       | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer weniger sensiblen Bezeichnung aktualisiert wird. |
 | Microsoft Information Protection (MIP) SDK          | Any                            | Drittanbieteranwendungen | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer weniger sensiblen Bezeichnung aktualisiert wird.<br>Wird nur generiert, wenn von der Drittanbieter Anwendung unterstützt. |
 
@@ -103,7 +103,7 @@ Für die folgenden Aktivitäten werden **Zugriffs Verweigerungs** Überwachungs 
 
 | Gemeldet von                                                                      | Plattform                       | Application              | Aktion/Beschreibung                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine neue Bezeichnung angewendet wird.                                                                  |
+| Azure Information Protection:</br>-Klassischer Scanner und Client</br>-Unified Beschriftung Scanner und Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine neue Bezeichnung angewendet wird.                                                                  |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Wird jedes Mal generiert, wenn eine neue Dokument Bezeichnung angewendet wird.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Drittanbieteranwendungen | Wird jedes Mal generiert, wenn eine neue Dokument Bezeichnung angewendet wird.<br>Wird nur generiert, wenn von der Drittanbieter Anwendung unterstützt. |
 
@@ -122,7 +122,7 @@ Für die folgenden Aktivitäten werden **neue Schutz** Überwachungs Protokolle 
 
 | Gemeldet von                                                                      | Plattform                       | Application              | Aktion/Beschreibung                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine Bezeichnung entfernt wird.                                                                  |
+| Azure Information Protection:</br>-Klassischer Scanner und Client</br>-Unified Beschriftung Scanner und Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine Bezeichnung entfernt wird.                                                                  |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Wird jedes Mal generiert, wenn eine Bezeichnung entfernt wird.                                                                  |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Drittanbieteranwendungen | Wird jedes Mal generiert, wenn eine Bezeichnung entfernt wird.<br>Wird nur generiert, wenn von der Drittanbieter Anwendung unterstützt. |
 
@@ -141,6 +141,6 @@ Zum **Entfernen von Schutz** Überwachungsprotokollen werden die folgenden Aktiv
 
 | Gemeldet von                                                                      | Plattform                       | Application              | Aktion/Beschreibung                                                                                      |
 | -------------------------------------------------------------------------------- | ------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer sensitiven Bezeichnung aktualisiert wird.                                                                   |
+| Azure Information Protection:</br>-Klassischer Scanner und Client</br>-Unified Beschriftung Scanner und Client | Windows, SharePoint, ein Laufwerk | Office                   | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer sensitiven Bezeichnung aktualisiert wird.                                                                   |
 | Microsoft Defender ATP                                                                            | Windows                        | OS                       | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer sensitiven Bezeichnung aktualisiert wird.                                                                   |
 | Microsoft Information Protection (MIP) SDK                                                                          | Any                            | Drittanbieteranwendungen | Wird jedes Mal generiert, wenn eine Dokument Bezeichnung mit einer sensitiven Bezeichnung aktualisiert wird.<br>Wird nur generiert, wenn von der Drittanbieter Anwendung unterstützt. |

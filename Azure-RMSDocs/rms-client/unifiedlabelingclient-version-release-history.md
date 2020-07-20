@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection vereinheitlichte Bezeichnung für den Client Versionsverlauf & Unterstützungs Richtlinie
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aca29a142c0735755c343535b3df43e175c59e80
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
+ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048611"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86471722"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -63,7 +63,17 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## <a name="version-27960"></a>Version 2.7.96.0 
+## <a name="version-27990"></a>Version 2.7.99.0
+
+Unified-Beschriftungs Scanner und Client Version 2.7.99.0
+
+**Korrekturen und Verbesserungen:**
+
+Behobene Probleme bei Datei Bezeichnungs Aktionen für **neue Beschriftungs** Überwachungs Protokolle.
+
+Weitere Informationen finden Sie unter [Version 2.7.96.0](#version-27960) und [Azure Information Protection Audit Log Reference (Public Preview)](../audit-logs.md).
+
+## <a name="version-27960"></a>Version 2.7.96.0
 
 Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
@@ -95,9 +105,14 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
+
+> [!IMPORTANT]
+> In dieser Version generieren Datei Bezeichnungs Aktionen keine neuen Überwachungs Protokolle für die **Bezeichnung** .
+> Wenn Sie die Überprüfung im Modus **erzwingen = on** ausführen, wird empfohlen, ein Upgrade auf [Version 2.7.99.0](#version-27990)durchzuführen.
+> 
 
 **Erzwingen von TLS 1.2**
 
