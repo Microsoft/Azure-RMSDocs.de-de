@@ -12,19 +12,19 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9852c792e732a0d84326e7dfc6f8b291af56fcad
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 63a3fcc9ee6b7e59ceab31eb63455d53929d028c
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665859"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927810"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Führen Sie die folgenden Schritte aus (empfohlen), um Azure Information Protection für Ihre Organisation vorzubereiten, zu implementieren und zu verwalten.
 
@@ -121,7 +121,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 ### <a name="step-5-configure-labels-and-settings-applications-and-services-for-data-protection"></a>Schritt 5: Konfigurieren von Bezeichnungen und Einstellungen, Anwendungen und Diensten für den Schutz von Daten
 
-1. Aktualisieren ihrer Bezeichnungen zum Anwenden des Schutzes
+1. **Aktualisieren ihrer Bezeichnungen zum Anwenden des Schutzes**
     
     Informationen zum Azure Information Protection-Client (klassisch) finden [Sie unter Konfigurieren einer Bezeichnung für Rights Management Schutz](./configure-policy-protection.md).
     
@@ -129,25 +129,30 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
     
     Beachten Sie, dass Benutzer Bezeichnungen für die Anwendung des Rights Management-Schutzes auch dann in Outlook verwenden können, wenn Exchange nicht für Information Rights Management (IRM) konfiguriert ist. Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM oder die [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
 
-2. Konfigurieren von Office-Anwendungen und -Diensten
+2. **Konfigurieren von Office-Anwendungen und -Diensten**
     
     Konfigurieren Sie Office-Anwendungen und-Dienste für die Features zur Verwaltung von Informationsrechten (Information Rights Management, unm) in Microsoft SharePoint oder Exchange Online. Weitere Informationen finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
 
-3. Konfigurieren des Administratorfeatures für die Datenwiederherstellung
+3. **Konfigurieren des Administratorfeatures für die Datenwiederherstellung**
     
     Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen – Data Leak Prevention, Gateways zur Inhaltsverschlüsselung (Content Encryption Gateways, CEG) und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder Datenwiederherstellung](./configure-super-users.md).
 
-4. Massenklassifizierung und -schützen vorhandener Dateien
+4. **Massenklassifizierung und -schützen vorhandener Dateien**
     
-    Führen Sie nun für Ihre lokalen Datenspeicher den [Azure Information Protection-Scanner](deploy-aip-scanner.md) im Erzwingungsmodus aus, sodass Dateien automatisch mit einer Bezeichnung versehen werden. Verwenden Sie für cloudbasierte Datenspeicher [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security).
+    Führen Sie nun für Ihre lokalen Datenspeicher den [Azure Information Protection-Scanner](deploy-aip-scanner.md) im Erzwingungsmodus aus, sodass Dateien automatisch mit einer Bezeichnung versehen werden.
     
-    Für Dateien auf PCs können Sie PowerShell-Cmdlets verwenden, um Dateien zu klassifizieren und zu schützen. Weitere Informationen finden Sie in den folgenden Administrator Handbüchern:
+    Verwenden Sie für Dateien auf PCs PowerShell-Cmdlets, um Dateien zu klassifizieren und zu schützen. Weitere Informationen finden Sie in den folgenden Administrator Handbüchern:
     
     - Azure Information Protection-Client (klassisch): [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md)
     
     - Azure Information Protection Unified-Bezeichnungs Client: [Verwenden von PowerShell mit dem Azure Information Protection Unified-Beschriftungs Client](./rms-client/clientv2-admin-guide-powershell.md)
 
-6. Bereitstellen des Connectors für durch IRM geschützte Bibliotheken unter SharePoint Server und durch IRM geschützte E-Mails für Exchange lokal
+    Verwenden Sie für cloudbasierte Datenspeicher [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+
+    > [!TIP]
+    > Obwohl das klassifizieren und schützen vorhandener Dateien in einem Massen Vorgang nicht zu den Haupt Anwendungsfällen von Cloud App Security gehört, können Sie mithilfe von [dokumentierten](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) Problem Umgehungen Ihre Dateien klassifizieren und schützen.
+
+6. **Bereitstellen des Connectors für durch IRM geschützte Bibliotheken unter SharePoint Server und durch IRM geschützte E-Mails für Exchange lokal**
     
     Wenn Sie SharePoint und Exchange lokal verwenden und deren Funktionen zur Verwaltung von Informationsrechten (IRM) nutzen möchten, installieren und konfigurieren Sie den Rights Management-Connector. Weitere Informationen finden Sie unter Bereitstellen [des Azure Rights Management-Verbindungs-Connector](./deploy-rms-connector.md).
 
