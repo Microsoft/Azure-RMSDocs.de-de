@@ -4,7 +4,7 @@ description: Identifizieren Sie die Voraussetzungen für die Bereitstellung von 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/25/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bcb3006bdd7575385d37be066b627ef49f770c70
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ebe0b506862e87e8dc99b9995eb0529f10805207
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047710"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927657"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection Anforderungen
 
@@ -67,7 +67,7 @@ Bedingter Zugriff wird in der Vorschauversion für Dokumente unterstützt, die m
 
 Weitere Informationen finden Sie unter:
 
-- [Azure Active Directory-Anforderungen für Azure Information Protection](requirements-azure-ad.md)
+- [Azure Active Directory-Anforderungen für Azure Information Protection](requirements-azure-ad.md)
 
 - [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md)
 
@@ -87,7 +87,7 @@ Die folgenden Betriebssysteme unterstützen die Azure Information Protection Uni
 
 - **Windows Server 2019**
 
-- **Windows Server 2016**
+- **Windows Server 2016**
 
 - **Windows Server 2012 R2** und **Windows Server 2012**
 
@@ -122,23 +122,23 @@ Für jeden Azure Information Protection Client gelten zusätzliche Voraussetzung
 
 - [Azure Information Protection Client Voraussetzungen](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Applications
+## <a name="applications"></a>Anwendungen
 
 Die Azure Information Protection Clients können Dokumente und e-Mails mithilfe von Microsoft **Word**, **Excel**, **PowerPoint**und **Outlook** aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
-- **Office-Apps, Mindestversion 1805**, Build 9330,2078 aus Office 365 Business oder Microsoft 365 Business. 
+- **Office-Apps, Mindestversion 1805**, Build 9330,2078 aus [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
 
     Diese Edition wird nur unterstützt, wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist, auch bekannt als Azure Information Protection für Office 365.
 
-- **Office 365 ProPlus**
+- **[Microsoft 365-Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2019**
+- **[Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
 
-- **Office Professional Plus 2016**
+- **[Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
 
-- **Office Professional Plus 2013 mit Service Pack 1**
+- **[Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 mit Service Pack 1**
 
-- **Office Professional Plus 2010 mit Service Pack 2**
+- **[Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 mit Service Pack 2**
 
 Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt, und Bezeichnungen, die Schutz anwenden, werden für Benutzer nicht angezeigt. 
 

@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbb72857b460dc223a9bb7504ecb52d21f1fb70f
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 9196f02e63f7eb433237613fe44c43cf74ab3262
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136950"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869027"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management bei AD RMS
 
@@ -41,7 +41,7 @@ Die Kombination aus Azure Rights Management-Dienst aktiviert und Azure Rights Ma
 
 Wenn AD RMS für Ihre Organisation bereitgestellt ist, überlegen Sie, ob Sie zu Azure Information Protection migrieren können. Azure Information Protection bietet viele Vorteile gegenüber AD RMS. Hierzu gehören z.B. eine bessere Unterstützung für mobile Geräte und die Integration in Office 365-Dienste sowie Exchange Server und SharePoint Server. Weitere Informationen finden Sie unter [Vergleich von Azure Information Protection und AD RMS](compare-on-premise.md).
 
-Wenn Sie zu Azure Information Protection migrieren, geht weder der Zugriff auf zuvor geschützte Inhalte verloren noch müssen Sie den Schutz Ihrer Inhalte aufheben und die Inhalte erneut schützen. Dokumente und E-Mails, die durch AD RMS geschützt wurden, können weiterhin geöffnet werden, nachdem die Bereitstellung von AD RMS aufgehoben wurde.
+Wenn Sie zu Azure Information Protection migrieren, verlieren Sie nicht den Zugriff auf zuvor geschützte Inhalte, und Sie müssen Ihre Inhalte nicht schützen oder erneut schützen. Dokumente und e-Mails, die durch AD RMS geschützt wurden, können auch nach der Aufhebung der Bereitstellung von AD RMS geöffnet werden.
 
 Unabhängig davon, ob Sie sich für eine Migration zu Azure Information Protection entscheiden oder die Einschränkungen Ihrer aktuellen AD RMS-Bereitstellung akzeptieren, müssen Sie zuerst sicherstellen, dass der Azure Rights Management-Dienst deaktiviert ist. Führen Sie die Schritte für das Szenario aus, das auf Sie zutrifft:
 

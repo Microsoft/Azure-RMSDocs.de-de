@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 14b3c9d4db202abb18555eb695fe7e3e0769af40
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 5e6cffeb02cb22f65a5108e96ffa1b0cc8974142
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136318"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869095"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -57,7 +57,8 @@ Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neu
 
 Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 
-- Eine Anleitung zur Nutzung eines anderen verwalteten Schlüssels finden Sie unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+- Informationen zum erneuten Schlüssel für einen anderen Schlüssel, den Sie verwalten, finden Sie unter [Planen und Implementieren Ihres Azure Information Protection Mandanten Schlüssels](plan-implement-tenant-key.md).
+
     
     Wenn Sie für einen durch HSM geschützten Schlüssel, den Sie lokal erstellt und an Key Vault übermittelt haben, neue Schlüssel erstellen, können Sie die gleiche Sicherheitsumgebung sowie Zugriffskarten verwenden wie bei Ihrem aktuellen Schlüssel.
 

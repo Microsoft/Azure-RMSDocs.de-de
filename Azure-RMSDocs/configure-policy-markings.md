@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8057d0599cdd1f01dc32adb6b7e20b359f9fea0e
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048254"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927368"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -84,8 +84,6 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
 Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderungen automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 
 ## <a name="using-variables-in-the-text-string"></a>Verwenden von Variablen in der Textzeichenfolge
-
-Die folgenden Variablen sind allgemein verfügbar, wenn Azure Information Protection klassischen Client verwendet wird und die öffentliche Vorschau verfügbar ist, wenn der Azure Information Protection Unified-Beschriftungs Client verwendet wird.  
 
 Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, die Fußzeile oder das Wasserzeichen verwenden:
 

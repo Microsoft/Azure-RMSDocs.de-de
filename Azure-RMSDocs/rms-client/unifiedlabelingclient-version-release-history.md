@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab32ff15dc64476e5958c94bc3ce7424713ccf85
-ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
+ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86471722"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868789"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -95,17 +95,23 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 **Neue Features für den Unified-Bezeichnungs Client:**
 
-- [Ausrichtungpopups](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) werden jetzt für Änderungen angezeigt, die an Standard Bezeichnungen im Unified Label-Client vorgenommen werden.
+- [**Ausrichtungpopups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) werden jetzt für Änderungen angezeigt, die an Standard Bezeichnungen im Unified Label-Client vorgenommen werden.
     
 - Reibungslosere Integration mit visuellen Inhalts Markierungen, die von Office angewendet werden. Weitere Informationen zum Konfigurieren von Inhalts Markierungen in Office-Dokumenten finden [Sie unter Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information](../configure-policy-markings.md)Protection.
 
 - Die neue **wordshapenametoremove** Advanced-Eigenschaft ermöglicht das Entfernen von Inhalts Markierungen in Word-Dokumenten, die von Anwendungen von Drittanbietern erstellt wurden. Erfahren Sie mehr darüber, wie [Sie vorhandene Shape-Namen identifizieren und mithilfe von **wordshapenametoremove**zum Entfernen definieren](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions).
 
+- Unterstützung für **Double Key Encryption (DKE)** (Public Preview). 
+
+    Nun können Sie den Unified-Bezeichnungs Client verwenden, um hochgradig sensiblen Inhalt zu schützen, während Sie die vollständige Kontrolle über Ihren Schlüssel behalten. DKE erfordert zwei Schlüssel für den Zugriff auf geschützte Inhalte: ein Schlüssel wird in Azure gespeichert, und der andere Schlüssel wird vom Kunden gespeichert. 
+
+    Weitere Informationen zu den standardmäßigen cloudbasierten Mandanten Stamm Schlüsseln finden [Sie unter Planning and Implementierungs your Azure Information Protection Tenant Key](../plan-implement-tenant-key.md). Informationen zum Implementieren der doppelten Schlüssel Verschlüsselung finden Sie unter [doppelte Schlüssel Verschlüsselung](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in der Microsoft 365-Dokumentation.
+
 **Es wurden neue Überwachungs Protokolle für entfernte Dateien generiert.**
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
 

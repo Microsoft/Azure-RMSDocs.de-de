@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 635732301320538d58e9b34011291bce0fe07ce4
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a10e0f8c1af8134de0665ce3255cf42be4900783
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136574"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869061"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -54,7 +54,7 @@ Um einen anderen Schlüssel als aktiven Mandanten Schlüssel für Azure Informat
 (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 ```
 
-Information dazu, wie Sie Ihre Mandantenschlüsseltopologie so ändern, dass diese vom Kunden verwaltet wird (BYOK), finden Sie unter [Implementing BYOK for your Azure Information Protection tenant key (Implementieren von BYOK für Ihren Azure Information Protection-Mandantenschlüssel)](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+Informationen zum Ändern der Schlüssel Topologie in eine vom Kunden verwaltete (Byok) finden Sie unter [Planen und Implementieren Ihres Azure Information Protection Mandanten Schlüssels](plan-implement-tenant-key.md).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Microsoft ist für die Sicherung Ihres Mandantenschlüssels verantwortlich, sodass von Ihnen keine weitere Aktion erforderlich ist.

@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32880671c46efb9cb82f13235f98ac42566b65fc
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048900"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86868993"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -30,7 +30,7 @@ ms.locfileid: "86048900"
 
 Wenn Sie den Azure Information Protection-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch Cmdlets, die Azure Information Protection für die Bezeichnung verwenden. Zum Beispiel:
+Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch Cmdlets, die Azure Information Protection für die Bezeichnung verwenden. Beispiel:
 
 |Cmdlet für die Bezeichnung|Beispielverwendung|
 |----------------|---------------|
@@ -54,12 +54,6 @@ Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Prot
 
 Wenn Sie derzeit das Modul als ein Benutzer installieren und die Cmdlets auf dem gleichen Computer als ein anderer Benutzer ausführen, müssen Sie zuerst den Befehl `Import-Module AzureInformationProtection` ausführen. In diesem Szenario wird das Modul beim erstmaligen Ausführen eines Cmdlets nicht automatisch geladen.
 
-Das aktuelle Release des Moduls „AzureInformationProtection“ weist die folgenden Einschränkungen auf:
-
-- Sie können den Schutz von persönlichen Outlook-Ordnern (PST-Dateien) aufheben, aber Sie können diese Dateien oder andere Containerdateien derzeit nicht mithilfe dieses PowerShell-Moduls systemeigen schützen.
-
-- Sie können den Schutz von geschützten Outlook-E-Mails (RPMSG-Dateien) aufheben, wenn sie sich im persönlichen Outlook-Ordner (PST) befinden, aber Sie können den Schutz von RPMSG-Dateien nicht außerhalb eines persönlichen Ordners aufheben.
-
 Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätzlichen Voraussetzungen und Anweisungen, die Ihrer Bereitstellung entsprechen:
 
 - [Azure Information Protection und Azure Rights Management-Dienst](#azure-information-protection-and-azure-rights-management-service)
@@ -71,6 +65,7 @@ Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätz
 
     - Zutreffend, wenn Sie den ausschließlichen Schutz mit der lokalen Version von Azure Rights Management, Active Directory Rights Management Services (AD RMS), verwenden.
 
+Weitere Informationen finden Sie in der relevanten Sammlung [Azure Information Protection bekannter Probleme](../known-issues.md#powershell-support-for-the-azure-information-protection-client).
 
 ## <a name="azure-information-protection-and-azure-rights-management-service"></a>Azure Information Protection und Azure Rights Management-Dienst
 
@@ -338,7 +333,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx
 ```
 
-Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
+Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiel:
 
 ```ps
 Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -355,7 +350,7 @@ InputFile                          EncryptedFile
 \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 ```
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet `Get-RMSFileStatus` verwenden, um zu prüfen, ob die Datei geschützt ist. Zum Beispiel:
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet `Get-RMSFileStatus` verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiel:
 
 ```ps
 Get-RMSFileStatus -File \Server1\Documents\Test1.docx
@@ -369,7 +364,7 @@ FileName                              Status
 \Server1\Documents\Test1.docx         Protected
 ```
 
-Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Zum Beispiel:
+Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiel:
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -476,7 +471,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx   
 ```
 
-Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
+Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiel:
 
 ```ps
 Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
@@ -493,7 +488,7 @@ InputFile                          EncryptedFile
 \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 ```
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Zum Beispiel: 
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiel: 
 
 ```ps
 Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
@@ -507,7 +502,7 @@ FileName                              Status
 \\Server1\Documents\Test1.docx        Protected
 ```
 
-Sie müssen die Nutzungsrechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen Administrator für AD RMS sein, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Zum Beispiel:
+Sie müssen die Nutzungsrechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen Administrator für AD RMS sein, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiel:
 
 ```ps
 Unprotect-RMSFile C:\test.docx -InPlace
@@ -668,7 +663,7 @@ Allgemeine Schritte:
 
 3. Ändern Sie anhand der Anweisungen im vorhergehenden Abschnitt diesen Befehl. Geben Sie dabei Ihre eigenen Werte für die Parameter **WebAppId**, **WebAppkey** und **NativeAppId** an. Zu diesem Zeitpunkt besitzen Sie den Wert für den **Token**-Parameter noch nicht. Sie geben ihn später an. 
 
-    Zum Beispiel: 
+    Beispiel: 
 
     ```ps
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>
@@ -684,7 +679,7 @@ Allgemeine Schritte:
     (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
     ```
 
-    Zum Beispiel: 
+    Beispiel: 
 
     ```ps
     (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
@@ -723,7 +718,7 @@ Allgemeine Schritte:
     Löschen Sie optional den Task. Wenn das Token abläuft, müssen Sie diese Schritte wiederholen. Daher ist es unter Umständen praktischer, den konfigurierten Task zu behalten, damit er einfacher erneut ausgeführt werden kann, wenn Sie das neue PowerShell-Skript mit dem neuen Tokenwert kopieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Zum Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Beispiel: 
 
 ```ps
 Get-Help Get-RMSTemplate -online

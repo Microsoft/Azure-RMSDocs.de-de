@@ -15,19 +15,19 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 1fd421e047c4a157a1632635ac091ae1be952029
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: 7530329b1f3e25eabb622087a575d5c6e34c66b3
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665451"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869146"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen und Support für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informationen zum Bereitstellen und Unterstützen von Azure Information Protection in Ihrer Organisation.
 
@@ -37,6 +37,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 |Abrufen von Hilfe zum Produkt|Lesen Sie den Abschnitt [Supportoptionen und Communityressourcen](#support-options-and-community-resources) auf dieser Seite.|
 |Abonnementinformationen und die unterstützten Features überprüfen|Sehen Sie sich die Abonnementinformationen und die Featureliste auf der [Azure Information Protection-Preisseite](https://azure.microsoft.com/pricing/details/information-protection) an.|
 |Finden von Antworten zu den häufig gestellten Fragen zur Lizenzierung|Lesen Sie sich die [häufig gestellten Fragen](https://azure.microsoft.com/pricing/details/information-protection#faq) zur Lizenzierung durch.|
+|Durchsuchen oder Durchsuchen einer Liste der aktuellen bekannten Probleme | Weitere Informationen finden Sie auf der Seite [bekannte Probleme Azure Information Protection](known-issues.md) .
 |Eine neue Funktion oder eine Funktionsänderung anfordern|Besuchen Sie die Seite [UserVoice](https://msip.uservoice.com) für Azure Information Protection, und melden Sie sich mit Ihrer Unternehmens-E-Mail-Adresse an.|
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die [Yammer-Website](https://www.yammer.com/AskIPTeam) für Azure Information Protection.|
 |Verstehen eines bestimmten Azure Information Protection-Begriffes|Suchen Sie auf der Seite [Terminologie zu Azure Information Protection](terminology.md) nach dem Begriff oder der Abkürzung.|
@@ -66,7 +67,7 @@ Unter Umständen sind Sie zu **FastTrack** berechtigt: Sie können den FastTrack
 
 Andere Kunden verwenden die in der folgenden Tabelle angegebenen Supportkanäle – abhängig vom Abonnement für Azure Information Protection:
 
-|Subscription|Instructions|
+|Subscription|Anweisungen|
 |----------------|---------------|
 |Azure Information Protection (eigenständig)|1. Wählen Sie im Azure-Portal unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) die Option **neue Supportanfrage** aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie im Bereich **Basics (Grundlagen** ) die Option **Technical** ( **Problemtyp** ) und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder ein Testabonnement für Azure besitzen.<br /><br /> - **Technical support - Included** (Technischer Support: inbegriffen): Diese Option wird angezeigt, wenn Sie kein Azure-Abonnement besitzen.|
 |Azure Information Protection und ein Office 365-Abonnement<br /><br />Azure Rights Management mit einem Office 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Microsoft 365-Verwaltungsportal sowie Telefonnummern.|

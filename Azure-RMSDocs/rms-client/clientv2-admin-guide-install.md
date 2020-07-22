@@ -1,22 +1,22 @@
 ---
 title: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 description: Anweisungen und Informationen für Administratoren zum Bereitstellen des Azure Information Protection Unified Bezeichnung-Clients für Windows in Unternehmensnetzwerken.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fd0ca7caa2a32e35774bccedee867d0f7cafee68
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 24471ecb326009495082e697f96ea241eafd9d39
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048798"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927640"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -76,11 +76,17 @@ ms.locfileid: "86048798"
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection Unified Bezeichnung-Clients sind lokale Administrator Berechtigungen erforderlich.
 
-## <a name="applications"></a>Applications
+## <a name="applications"></a>Anwendungen
 
 Der Azure Information Protection Unified Label-Client kann Dokumente und e-Mails mit den Office-Anwendungen Word, Excel, PowerPoint und Outlook aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
-Office-Apps, Mindestversion 1805, Build 9330,2078 aus Office 365 Business oder Microsoft 365 Business, wenn dem Benutzer eine Lizenz für Azure Rights Management (auch bekannt als Azure Information Protection für Office 365) Office 365 ProPlus Office Professional Plus 2019 Office Professional Plus 2016 Office Professional Plus 2013 mit Service Pack 1 Office Professional Plus 2010 mit Service Pack 2 zugewiesen ist
+Office-Apps Minimum Version 1805, Build 9330,2078 aus [Microsoft 365 apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) , wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist (auch bekannt als Azure Information Protection für Office 365).
+
+- [Microsoft 365-Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
+- [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
+- [Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 mit Service Pack 1
+- [Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 mit Service Pack 2
 
 Andere Editionen (z. b. **Standard**) von Office können Dokumente und e-Mails nicht mithilfe eines Rights Management Dienstanbieter schützen. Für diese Editionen wird Azure Information Protection nur für die **Bezeichnung** unterstützt. Folglich werden Bezeichnungen, die Schutz anwenden, den Benutzern auf der Schaltfläche "Azure Information Protection Sensitivität" oder der Leiste nicht angezeigt.
 

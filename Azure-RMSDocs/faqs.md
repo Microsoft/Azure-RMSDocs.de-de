@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a62ebab99a6cf9672942dcc7b447c29365c6440b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 82280d50bdd16139e53d4906e908f7efcb9b6281
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048484"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927385"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -75,7 +75,7 @@ Wenn sich Ihr Mandant nicht auf der Unified-Beschriftungs Plattform befindet, wi
 
 Sie können auch prüfen, indem Sie zu **Azure Information Protection**  >  Unified-**Manage**  >  **Bezeichnung**verwalten wechseln und den **einheitlichen** Bezeichnungs Status anzeigen:
 
-|Status |BESCHREIBUNG  |
+|Status |Beschreibung  |
 |---------|---------|
 |**Aktiviert**     |  Ihr Mandant befindet sich auf der Unified-Beschriftungs Plattform. </br>Sie können Bezeichnungen im Microsoft 365 Compliance Center [erstellen, konfigurieren und veröffentlichen](/microsoft-365/compliance/create-sensitivity-labels) .       |
 |**Nicht aktiviert**    |  Ihr Mandant befindet sich nicht auf der Unified-Beschriftungs Plattform. </br>Migrations Anweisungen und Anleitungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen](configure-policy-migrate-labels.md).       |
@@ -96,7 +96,7 @@ Wenn Sie ein Administrator sind und nicht sicher sind, welcher Client verwendet 
 
 Wenn Sie ein Benutzer sind, der überprüfen möchte, ob der klassische oder einheitliche Bezeichnungs Client installiert ist, klicken Sie auf **Hilfe und Feedback** , um das Dialogfeld **Microsoft Azure Information Protection** anzuzeigen. 
 
-Zum Beispiel:
+Beispiel:
 
 :::image type="content" source="media/client-about.png" alt-text="Ermitteln, ob der klassische oder der einheitliche Client installiert ist":::
 
@@ -132,7 +132,7 @@ Azure Information Protection (AIP) bietet Klassifizierung, Bezeichnung und Schut
 
 Der Inhalt wird mithilfe des Azure-Rights Management Dienstanbieter geschützt, der nun eine Komponente von aip ist. 
 
-Weitere Informationen finden Sie unter [wie werden Daten geschützt](what-is-information-protection.md#how-data-is-protected) und [Was ist Azure Rights Management?](what-is-azure-rms.md).
+Weitere Informationen finden Sie unter [wie werden Daten geschützt](what-is-information-protection.md#how-aip-protects-your-data) und [Was ist Azure Rights Management?](what-is-azure-rms.md).
 
 ## <a name="whats-the-role-of-identity-management-for-azure-information-protection"></a>Was ist die Rolle der Identitätsverwaltung für Azure Information Protection?
 
@@ -277,7 +277,7 @@ Wenn ein Benutzer ein durch Azure Information Protection geschütztes Dokument �
 
 Weitere Informationen und einige detaillierte Beispiele finden Sie in dem folgenden Blogbeitrag: [Conditional Access policies for Azure Information Protection (Richtlinien zum bedingten Zugriff für Azure Information Protection)](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/).
 
-Weitere Informationen:
+Zusätzliche Informationen:
 
 |Thema  |Details  |
 |---------|---------|
@@ -285,7 +285,7 @@ Weitere Informationen:
 |**Administratorkonten**     |Es wird empfohlen, dass Sie Ihren Richtlinien für den bedingten Zugriff keine Administrator Konten hinzufügen, da diese Konten nicht auf den Bereich Azure Information Protection im Azure-Portal zugreifen können.         |
 |**MFA-und B2B-Zusammenarbeit**     | Wenn Sie MFA in Ihren Richtlinien für bedingten Zugriff für die Zusammenarbeit mit anderen Unternehmen (B2B) verwenden, müssen Sie [Azure AD B2B-Zusammenarbeit](/azure/active-directory/b2b/what-is-b2b) verwenden und Gastkonten für die Benutzer erstellen, mit denen Sie in dem anderen Unternehmen zusammenarbeiten möchten.        |
 |**Eingabe Aufforderungen für Nutzungsbedingungen**     |  Mit der Azure AD Vorschauversion vom Dezember 2018 können Sie [Benutzer auffordern, Nutzungsbedingungen zu akzeptieren](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) , bevor Sie ein geschütztes Dokument zum ersten Mal öffnen.       |
-|**Cloud-apps**     |  Wenn Sie für den bedingten Zugriff auf mehrere Cloud-Apps zurückgreifen, wird Ihnen unter Umständen **Microsoft Azure Information Protection** nicht in der Auswahlliste angezeigt. </br></br>Verwenden Sie in diesem Fall das Suchfeld oben in der Liste. Geben Sie „Microsoft Azure Information Protection“ ein, um die verfügbaren Apps zu filtern. Sofern Sie über ein unterstütztes Abonnement verfügen, können Sie nun **Microsoft Azure Information Protection** auswählen.        |
+|**Cloud-Apps**     |  Wenn Sie für den bedingten Zugriff auf mehrere Cloud-Apps zurückgreifen, wird Ihnen unter Umständen **Microsoft Azure Information Protection** nicht in der Auswahlliste angezeigt. </br></br>Verwenden Sie in diesem Fall das Suchfeld oben in der Liste. Geben Sie „Microsoft Azure Information Protection“ ein, um die verfügbaren Apps zu filtern. Sofern Sie über ein unterstütztes Abonnement verfügen, können Sie nun **Microsoft Azure Information Protection** auswählen.        |
 
 
 ## <a name="i-see-azure-information-protection-is-listed-as-a-security-provider-for-microsoft-graph-securityhow-does-this-work-and-what-alerts-will-i-receive"></a>Ich sehe, dass Azure Information Protection als Sicherheitsanbieter für Microsoft Graph Security aufgeführt wird. Wie funktioniert das, und welche Warnungen erhalte ich?

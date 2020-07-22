@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9543490585d01e9592ec63d53775ff46ad3fc415
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ced3f46a5050a60ae33a1a0caab2375bd27d9ee7
+ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049104"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869129"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -109,6 +109,8 @@ So bestätigen Sie den AD RMS-Kryptografiemodus:
 - Für Windows Server 2012 R2 und Windows 2012: AD RMS-Clustereigenschaften > Registerkarte **Allgemein**. 
 
 ### <a name="migration-limitations"></a>Einschränkungen bei der Migration
+
+<!--These aren't actually limitations, but really just a description of how this feature works. Shouldn't be doc'd as lims, but rather simplified and clarified. Leaving this here, take a new look at this page. -->
 
 - Wenn Sie Softwareanwendungen und Clients verwenden, die nicht vom Rights Management-Dienst von Azure Information Protection unterstützt werden, können diese die Inhalte, die durch Azure Rights Management geschützt sind, weder schützen noch nutzen. Überprüfen Sie die Abschnitte unterstützte Anwendungen und Clients unter [Anforderungen für Azure Information Protection](./requirements.md).
 
