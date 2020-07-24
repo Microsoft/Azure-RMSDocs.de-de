@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792017"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135605"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
 
@@ -94,7 +94,9 @@ Verwenden Sie schließlich diese API, um das nachverfolgte Dokument beim Nachver
 
 Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten für die Dokumentnachverfolgung und das Aufrufen für die Registrierung beim Nachverfolgungssystem zeigt.
 
-      C++
+**C++**:
+
+  ```cpp
       HRESULT hr = S_OK;
       LPCWSTR wszOutputFile = NULL;
       wstring wszWorkingFile;
@@ -124,7 +126,7 @@ Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten f
      /* the context to use for the call */
      PCIPC_PROMPT_CTX pContext;
 
-     wstring wstrContentName(“MyDocument.txt”);
+     wstring wstrContentName("MyDocument.txt");
      bool sendLicenseRegistrationNotificationEmail = FALSE;
 
      hr = IpcRegisterLicense( pSerializedLicense,
@@ -132,6 +134,7 @@ Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten f
                         pContext,
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
+  ```
 
 ## <a name="add-a-track-usage-button-to-your-app"></a>Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App
 
@@ -139,11 +142,11 @@ Das Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App ist gen
 
 - Verwenden der Inhalts-ID
   - Rufen Sie die Inhalts-ID mit [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) oder der [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) ab, wenn die Lizenz serialisiert ist, und verwenden Sie die Lizenzeigenschaft **IPC_LI_CONTENT_ID**. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
-  - Verwenden Sie bei den Metadaten **ContentId** und **Issuer** das folgende Format: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - Verwenden Sie die Metadaten **contentid** und **Aussteller** , und verwenden Sie das folgende Format:`https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Beispiel – `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- Wenn Sie nicht auf die Metadaten zugreifen können (d.h., Sie untersuchen die ungeschützte Version des Dokuments), können Sie **Content_Name** im folgenden Format verwenden: `https://track.azurerms.com/#/?q={ContentName}`
+- Wenn Sie keinen Zugriff auf diese Metadaten haben (d. h., Sie untersuchen die ungeschützte Version des Dokuments), können Sie die **Content_Name** im folgenden Format verwenden:`https://track.azurerms.com/#/?q={ContentName}`
 
   Beispiel: https://track.azurerms.com/#/?q=Secret!.txt
 
@@ -151,9 +154,9 @@ Der Client muss lediglich einen Browser mit der entsprechenden URL öffnen. Im P
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [License metadata property types (Lizenzmetadaten-Eigenschaftstypen)](https://msdn.microsoft.com/library/dn974062.aspx)
-* [Notification preference (Benachrichtigungseinstellung)](https://msdn.microsoft.com/library/dn974063.aspx)
-* [Notification type (Benachrichtigungtyp)](https://msdn.microsoft.com/library/dn974064.aspx)
+* [Lizenzmetadaten-Eigenschaftstypen](https://msdn.microsoft.com/library/dn974062.aspx)
+* [Benachrichtigungseinstellungen](https://msdn.microsoft.com/library/dn974063.aspx)
+* [Benachrichtigungstyp](https://msdn.microsoft.com/library/dn974064.aspx)
 * [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
 * [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
 * [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)

@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60178232"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135622"
 ---
 # <a name="file-api-configuration"></a>Datei-API-Konfiguration
 
@@ -27,7 +27,7 @@ Das Datei-API-Verhalten kann durch Einstellungen in der Registrierung konfigurie
 
 Die Datei-API bietet zwei Arten von Schutz – systemeigenen Schutz und PFile-Schutz.
 
--   **Systemeigener Schutz** – die Datei ist in einem AD RMS-Format geschützt, das auf dem MIME-Typ (Dateinamenerweiterung) basiert.
+-   Systemeigener Schutz –die Datei ist in einem AD RMS-Format geschützt, das auf dem MIME-Typ (Dateinamenerweiterung) basiert.
 -   **PFile-Schutz** – die Datei ist im AD RMS-PFile-Format (Protected File) geschützt.
 
 Weitere Informationen zu unterstützten Dateiformaten finden Sie unter **Datei-API-Unterstützungsdetails** in diesem Artikel.
@@ -46,7 +46,7 @@ Die folgenden Abschnitte beschreiben die Schlüssel und Schlüsselwerte, die die
 
 **Typ**: Key
 
-**Beschreibung**: Gibt Konfigurationsinformationen für eine bestimmte Erweiterung an, z. B. „.txt“, „.jpg“ usw.
+**Beschreibung**: gibt Konfigurationsinformationen für eine bestimmte Dateierweiterung an. beispielsweise txt, JPG usw.
 
 - Das Platzhalterzeichen „*“ ist zulässig. Eine Einstellung für eine bestimmte Erweiterung hat jedoch Vorrang vor der Platzhaltereinstellung. Das Platzhalterzeichen wirkt sich nicht auf Einstellungen für Microsoft Office-Dateien aus. Diese müssen explizit nach Dateityp deaktiviert werden.
 - Verwenden Sie „.“, um Dateien ohne Erweiterung anzugeben.
@@ -59,20 +59,20 @@ Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens
 
 **Typ**: REG_SZ
 
-**Beschreibung**: Enthält einen von drei Werten:
+**Beschreibung**: enthält einen von drei Werten:
 
-- **Off**: Die Verschlüsselung ist deaktiviert.
-
-> [!Note]
-> Diese Einstellung hat keinen Einfluss auf die Entschlüsselung. Jede verschlüsselte Datei, die mit PFile- oder systemeigenen Schutz verschlüsselt ist, kann entschlüsselt werden, sofern der Benutzer über die Berechtigung **EXTRACT** verfügt.
-
-- **Native**:  Es wird die native Verschlüsselung verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p*zzz* verschlüsselt, wobei *zzz* die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z.B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Im Folgenden finden Sie eine Liste der Dateierweiterungen, auf die der native Schutz angewendet werden kann.
-
-- **Pfile**: Es wird die PFile-Verschlüsselung verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
-
+- **Off**: Verschlüsselung ist deaktiviert.
 
 > [!Note]
-> Diese Einstellung hat keinen Einfluss auf Office-Dateiformate. Wenn der `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption`-Wert z. B. auf „Pfile&quot; festgelegt wird, werden DOCX-Dateien weiterhin mit dem nativen Schutz verschlüsselt, und die verschlüsselte Datei hat weiterhin die Dateierweiterung DOCX.
+> Diese Einstellung hat keinen Einfluss auf die Entschlüsselung. Jede verschlüsselte Datei, die mit nativem oder Pfile-Schutz verschlüsselt ist, kann entschlüsselt werden, solange der Benutzer über das **extract** -Recht verfügt.
+
+- **Native**: Systemeigene Verschlüsselung wird verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p*zzz* verschlüsselt, wobei *zzz* die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z.B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Im Folgenden finden Sie eine Liste der Dateierweiterungen, auf die der native Schutz angewendet werden kann.
+
+- **Pfile**: PFile-Verschlüsselung wird verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
+
+
+> [!Note]
+> Diese Einstellung hat keinen Einfluss auf Office-Dateiformate. Wenn der `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` Wert z. b. auf "Pfile" festgelegt ist, werden docx-Dateien weiterhin mit System eigenem Schutz verschlüsselt, und die verschlüsselte Datei hat weiterhin die Dateierweiterung ". docx".
 
 Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten.
 
@@ -92,19 +92,19 @@ Native Unterstützung kann für einen beliebigen Dateitypen (Erweiterung) hinzug
 
 -   Dateierweiterungen: DOC, DOT, XLA, XLS, XLT, PPS, PPT, DOCM, DOCX, DOTM, DOTX, XLAM, XLSB, XLSM, XLSX, XLTM, XLTX, XPS, POTM, POTX, PPSX, PPSM, PPTM, PPTX, THMX, VSDX, VSDM, VSSX, VSSM, VSTX, VSTM. 
 -   Protection type = Native (default): „sample.docx“ wird in „sample.docx“ verschlüsselt.
--   Schutztyp = Pfile: hat für Office-Dateien dieselbe Auswirkung wie der Schutztyp „Nativ“.
--   Abgeschrieben Deaktiviert die Verschlüsselung.
+-   Protection type = Pfile: hat für Office-Dateien dieselbe Auswirkung wie nativ.
+-   Off: deaktiviert Verschlüsselung.
 
 **PDF-Dateien**
 
 -   Protection type = Native: „sample.pdf“ wird als „sample.ppdf“ verschlüsselt und benannt.
 -   Protection type = Pfile: „sample.pdf“ wird als „sample.pdf.pfile“ verschlüsselt und benannt.
--   Abgeschrieben Deaktiviert die Verschlüsselung.
+-   Off: deaktiviert Verschlüsselung.
 
 **Alle anderen Dateiformate**
 
--   Protection type = Pfile: sample.*zzz* wird als „sample.*zzz*.pfile“ verschlüsselt und benannt, wobei *zzz* die ursprüngliche Dateierweiterung ist.
--   Abgeschrieben Deaktiviert die Verschlüsselung.
+-   Schutztyp = Pfile: Sample. *zzz* ist verschlüsselt und benannte Stichprobe. *zzz*. Pfile; wobei *zzz* die ursprüngliche Dateierweiterung ist.
+-   Off: deaktiviert Verschlüsselung.
 
 ### <a name="examples"></a>Beispiele
 
@@ -146,7 +146,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## <a name="related-articles"></a>Zugehörige Artikel
+## <a name="related-articles"></a>Verwandte Artikel
 
 - [Hinweise für Entwickler](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)

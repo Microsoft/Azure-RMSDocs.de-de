@@ -14,17 +14,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4a9f0b375f9e152d44f4d5b5251a9259456db53c
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792423"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135707"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung
 Mit dem Microsoft Rights Management SDK 4.2 wird das Hochladen von Diagnose- und Leistungsprotokollen über eine einzelne Geräteeigenschaft verwaltet.
 
-## <a name="overview"></a>Overview ##
+## <a name="overview"></a>Übersicht ##
 Sie können die Benutzerfreundlichkeit und Problembehandlung für Benutzer verbessern, indem Sie automatische Uploads von Diagnose-, Leistungs- und Telemetrieprotokolldaten auf Server von Microsoft aktivieren. 
 
 > [!IMPORTANT] 
@@ -51,50 +51,64 @@ In allen folgenden Beispielcodeausschnitten kann die aufrufende Anwendung die Ei
 ### <a name="android"></a>Android ###
 Automatische Protokollierung aktivieren
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    SharedPreferences.Editor editor = preferences.edit();
-    editor.putBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, true);
-    editor.commit();
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+SharedPreferences.Editor editor = preferences.edit();
+editor.putBoolean("IpcCustomerExperienceDataCollectionEnabled", true);
+editor.commit();
+```
 
 Aktuelle Einstellung für Protokollierungssteuerungs-Flag abrufen
 
-    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-    Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```java
+SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
+```
 
 ## <a name="ios"></a>iOS ##
 Automatische Protokollierung aktivieren
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setBool:FALSE forKey:@&quot;IpcCustomerExperienceDataCollectionEnabled”];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+```objectivec
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setBool:FALSE forKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Aktuelle Einstellung für Protokollierungssteuerungs-Flag abrufen
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcCustomerExperienceDataCollectionEnabled&quot;];
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcCustomerExperienceDataCollectionEnabled"];
+```
 
 Protokollebenensteuerung festlegen
 
-    NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
-      [prefs setInteger:1 forKey:@&quot;IpcLogLevel”];
-      [[NSUserDefaults standardUserDefaults] synchronize];
+```java
+NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:1 forKey:@"IpcLogLevel"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+```
 
 Einstellung für Protokollebenensteuerung abrufen
 
-    [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+```java
+[[NSUserDefaults standardUserDefaults] boolForKey:@"IpcLogLevel"];
+```
 
 ## <a name="windows"></a>Windows ##
 Automatische Protokollierung aktivieren
 
-    CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```cpp
+CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
+```
 
 Weitere Informationen zu optionalen Einstellungen finden Sie unter [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Aktuelle Einstellung für Protokollierungssteuerungs-Flag abrufen
 
-    CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
-
+```cpp
+CustomerExperienceOptions loggingOption = CustomerExperienceConfiguration::Option;
+```
 
 **Hinweis**: Die obigen Windows-Codeausschnitte sind in C++ geschrieben. Aktualisieren Sie die Syntax für C\# mit „.“ anstelle von „::“.
 
-**Linux/C++** : Dieses SDK verfügt über einige grundlegende Funktionen für die Protokollierung, die nicht so umfangreich wie die Funktionen anderer Plattformen sind. Weitere Informationen finden Sie im Abschnitt **Troubleshooting** der Datei „README.md“ unter [RMS SDK for portable C++](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting) (RMS SDK für portables C++).
+**Linux/C++**: Dieses SDK verfügt über einige grundlegende Funktionen für die Protokollierung, die nicht so umfangreich wie die Funktionen anderer Plattformen sind. Weitere Informationen finden Sie im Abschnitt **Troubleshooting** der Datei „README.md“ unter [RMS SDK for portable C++](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting) (RMS SDK für portables C++).
