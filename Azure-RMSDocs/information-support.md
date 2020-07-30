@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 7530329b1f3e25eabb622087a575d5c6e34c66b3
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 5c90580a099d1eab3d6d9cca297fda24d7339820
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869146"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298205"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen und Support für Azure Information Protection
 
@@ -38,7 +38,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 |Abonnementinformationen und die unterstützten Features überprüfen|Sehen Sie sich die Abonnementinformationen und die Featureliste auf der [Azure Information Protection-Preisseite](https://azure.microsoft.com/pricing/details/information-protection) an.|
 |Finden von Antworten zu den häufig gestellten Fragen zur Lizenzierung|Lesen Sie sich die [häufig gestellten Fragen](https://azure.microsoft.com/pricing/details/information-protection#faq) zur Lizenzierung durch.|
 |Durchsuchen oder Durchsuchen einer Liste der aktuellen bekannten Probleme | Weitere Informationen finden Sie auf der Seite [bekannte Probleme Azure Information Protection](known-issues.md) .
-|Eine neue Funktion oder eine Funktionsänderung anfordern|Besuchen Sie die Seite [UserVoice](https://msip.uservoice.com) für Azure Information Protection, und melden Sie sich mit Ihrer Unternehmens-E-Mail-Adresse an.|
+|Eine neue Funktion oder eine Funktionsänderung anfordern|Besuchen Sie die Seite [UserVoice](https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip) für Azure Information Protection, und melden Sie sich mit Ihrer Unternehmens-E-Mail-Adresse an.|
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Besuchen Sie die [Yammer-Website](https://www.yammer.com/AskIPTeam) für Azure Information Protection.|
 |Verstehen eines bestimmten Azure Information Protection-Begriffes|Suchen Sie auf der Seite [Terminologie zu Azure Information Protection](terminology.md) nach dem Begriff oder der Abkürzung.|
 
@@ -46,7 +46,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 Die offizielle Roadmap für Azure Information Protection finden Sie jetzt in der [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 
-Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu wichtigen neuen Releases im [Enterprise Mobility + Security-Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Kleinere Releases werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection angekündigt, und unter Umständen finden Sie es auch sinnvoll, sich auf der [UserVoice-Website](https://msip.uservoice.com) über den Status angeforderter Features zu informieren.
+Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu wichtigen neuen Releases im [Enterprise Mobility + Security-Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Kleinere Releases werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection angekündigt, und unter Umständen finden Sie es auch sinnvoll, sich auf der [UserVoice-Website](https://office365.uservoice.com/forums/928576-microsoft-information-protection-mip) über den Status angeforderter Features zu informieren.
 
 Zusätzliche und detailliertere Informationen finden Sie im [technischen Blog zu Azure Information Protection](https://aka.ms/AIPblog) (in englischer Sprache). 
 

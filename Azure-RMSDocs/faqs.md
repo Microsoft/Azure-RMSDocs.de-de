@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 82280d50bdd16139e53d4906e908f7efcb9b6281
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: c72d1764ace998b21c17be97639239da2a6a6c19
+ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927385"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334180"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -75,7 +75,7 @@ Wenn sich Ihr Mandant nicht auf der Unified-Beschriftungs Plattform befindet, wi
 
 Sie können auch prüfen, indem Sie zu **Azure Information Protection**  >  Unified-**Manage**  >  **Bezeichnung**verwalten wechseln und den **einheitlichen** Bezeichnungs Status anzeigen:
 
-|Status |Beschreibung  |
+|Status |BESCHREIBUNG  |
 |---------|---------|
 |**Aktiviert**     |  Ihr Mandant befindet sich auf der Unified-Beschriftungs Plattform. </br>Sie können Bezeichnungen im Microsoft 365 Compliance Center [erstellen, konfigurieren und veröffentlichen](/microsoft-365/compliance/create-sensitivity-labels) .       |
 |**Nicht aktiviert**    |  Ihr Mandant befindet sich nicht auf der Unified-Beschriftungs Plattform. </br>Migrations Anweisungen und Anleitungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen](configure-policy-migrate-labels.md).       |
@@ -267,7 +267,7 @@ Weitere Informationen finden Sie [unter Unterstützte vollständige Listen Datei
 > 
 
 > [!TIP]
-> Power BI unterstützt jetzt die Klassifizierung mithilfe von Vertraulichkeits Bezeichnungen und kann den Schutz von diesen Bezeichnungen auf Daten anwenden, die in die folgenden Dateiformate exportiert werden: PDF, XLS und. ppt. Weitere Informationen finden Sie unter [Datenschutz in Power BI (Vorschau)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
+> Power BI unterstützt jetzt die Klassifizierung mithilfe von Vertraulichkeits Bezeichnungen und kann den Schutz von diesen Bezeichnungen auf Daten anwenden, die in die folgenden Dateiformate exportiert werden: PDF, XLS und. ppt. Weitere Informationen finden Sie unter [Datenschutz in Power BI (Vorschauversion)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
 > 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Azure Information Protection wird als verfügbare Cloud App für den bedingten Zugriff genannt. Wie funktioniert das?
 
