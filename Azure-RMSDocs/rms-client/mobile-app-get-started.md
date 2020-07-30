@@ -12,12 +12,12 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b50f89c9f8d0a965b630c82461f1190bb893938
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 622786bc1192d6727ef748df970adeb53733f4f8
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048696"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298083"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
@@ -35,9 +35,9 @@ Die meisten Benutzer verwenden in der Regel die Azure Information Protection-App
 
 Um das AIP-Mobile App zu testen, stellen Sie sicher, dass Sie auf einen der folgenden Typen geschützter Dateien von Ihrem Gerät aus zugreifen können:
 
-|Dateityp  |Instructions  |
+|Dateityp  |Anweisungen  |
 |---------|---------|
-|**Eine rpmsg-Datei**     | Eine durch Rechte geschützte e-Mail-Nachricht. Wenn Ihre Mobile e-Mail-App den Rights Management-Schutz von Daten nicht nativ unterstützt, werden geschützte e-Mails als e-Mail-Anhänge angezeigt. </br></br>Verwenden Sie ein anderes Gerät, z.b. Outlook, von einem Windows-Computer aus, um sich selbst eine durch Rechte geschützte e-Mail-Nachricht zu senden, auf die Sie über Ihr mobiles Gerät zugreifen können </br></br>**Hinweis:** Eine Liste der e-Mail-Clients, die Rights Management unterstützen, finden Sie in der Spalte **e-Mail** in [RMS-fähigen Anwendungen](../requirements-applications.md#rms-enlightened-applications). |
+|**Eine rpmsg-Datei**     | Eine durch Rechte geschützte e-Mail-Nachricht. Wenn Ihre Mobile e-Mail-App den Rights Management-Schutz von Daten nicht nativ unterstützt, werden geschützte e-Mails als e-Mail-Anhänge angezeigt. </br></br>Verwenden Sie ein anderes Gerät, z.b. Outlook, von einem Windows-Computer aus, um sich selbst eine durch Rechte geschützte e-Mail-Nachricht zu senden, auf die Sie über Ihr mobiles Gerät zugreifen können </br></br>**Hinweis:** Eine Liste der e-Mail-Clients, die Rights Management unterstützen, finden Sie unter **e-Mail-** Zeilen in [Anwendungen, die Azure Rights Management Datenschutz unterstützen](../requirements-applications.md). |
 |**Eine durch Rechte geschützte PDF-Datei**     | 1. schützen Sie auf einem Windows-Computer eine PDF-Datei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung-Client](clientv2-classify-protect.md) Client. </br>2. senden Sie die geschützte PDF-Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie an Ihre eigene e-Mail-Adresse        |
 |**Eine ptxt-oder pjpg-oder ppng-Datei**     | 1. schützen Sie auf einem Windows-Computer eine Text-oder Bilddatei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung-Client](clientv2-classify-protect.md) Client. </br></br>2. senden Sie die geschützte Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie für Ihre eigene e-Mail-Adresse frei. </br></br>**Hinweis:** Weitere Informationen finden Sie [unter Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) .   |
 | | |

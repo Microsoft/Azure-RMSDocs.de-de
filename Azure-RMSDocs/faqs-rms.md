@@ -12,19 +12,19 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 21a174d8daca5376cd4071d579a50628e1a4d91c
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: c88186c163d1f712c657d9270a7a738289fac6b4
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665791"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298239"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021****eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Haben Sie eine Frage zum Datenschutzdienst Azure Rights Management (Azure RMS) aus Azure Information Protection? Vielleicht finden Sie hier eine Antwort.
 
@@ -59,7 +59,7 @@ Weitere Informationen zu dieser Änderung finden Sie in der Blogankündigung: [O
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Wo finde ich Informationen zu Lösungen von Drittanbietern, die in Azure RMS integriert werden können?
 
-Viele Softwareanbieter verfügen bereits über Lösungen oder implementieren Lösungen, die sich in Azure Rights Management integrieren lassen, und die Liste wächst rasant. Sie können die Liste mit den [RMS-basierten Lösungen](requirements-applications.md#rms-enlightened-solutions) überprüfen und die neuesten Updates von [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) auf Twitter erhalten. Lesen Sie auch den [Entwicklerleitfaden](./develop/developers-guide.md), und stellen Sie spezifische Integrationsfragen auf der [Yammer ](https://www.yammer.com/AskIPTeam)-Website von Azure Information Protection.
+Viele Softwareanbieter verfügen bereits über Lösungen oder implementieren Lösungen, die sich in Azure Rights Management integrieren lassen, und die Liste wächst rasant. Möglicherweise ist es hilfreich, die Liste der [RMS-fähigen Anwendungen](requirements-applications.md#) zu überprüfen und die neuesten Updates von [Microsoft Mobility@MSFTMobility ](https://twitter.com/MSFTMobility) auf Twitter zu erhalten. Lesen Sie auch den [Entwicklerleitfaden](./develop/developers-guide.md), und stellen Sie spezifische Integrationsfragen auf der [Yammer ](https://www.yammer.com/AskIPTeam)-Website von Azure Information Protection.
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Gibt es ein Management Pack oder einen ähnlichen Überwachungsmechanismus für den RMS-Connector?
 
@@ -139,7 +139,8 @@ Damit dieses Szenario unterstützt wird, muss Exchange Online für Azure Rights 
 Weitere Informationen zu den neuen Funktionen, zu denen auch die Unterstützung aller E-Mail-Konten auf allen Geräten gehört, finden Sie im folgenden Blogbeitrag: [Ankündigung neuer Funktionen, die in der Office 365-Nachrichtenverschlüsselung verfügbar sind](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Welche Geräte und Dateitypen werden von Azure RMS unterstützt?
-Eine Liste der Geräte, die Azure Rights Management Service unterstützen, finden Sie unter [Clientgeräte, die Azure Rights Management-Datenschutz unterstützen](./requirements-client-devices.md). Da zurzeit nicht alle unterstützten Geräte alle Rights-Management-Funktionen unterstützen können, sollten Sie auch die Tabelle für [RMS-basierte Anwendungen](./requirements-applications.md#rms-enlightened-applications) überprüfen.
+
+Eine Liste der Geräte, die Azure Rights Management Service unterstützen, finden Sie unter [Clientgeräte, die Azure Rights Management-Datenschutz unterstützen](./requirements.md#client-devices). Da derzeit nicht alle unterstützten Geräte alle Rights Management Funktionen unterstützen, achten Sie auch darauf, die Tabellen auf [RMS-Anwendungen](./requirements-applications.md)zu überprüfen.
 
 Azure Rights Management Service kann alle Dateitypen unterstützen. Für Text-, Bild-, Microsoft Office-Dateien (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen stellt Azure Rights Management nativen Schutz bereit, der sowohl Verschlüsselung als auch Durchsetzung von Rechten (Berechtigungen) umfasst. Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz Dateikapselung und Authentifizierung, um zu überprüfen, ob ein Benutzer berechtigt ist, die Datei zu öffnen.
 
@@ -162,7 +163,7 @@ So schützen Sie eine E-Mail-Nachricht oder ein Dokument: Klicken Sie auf der Re
 So verfolgen Sie ein Dokument nach, nachdem Sie es geschützt haben: Auf einem Windows-Computer, auf dem der Azure Information Protection-Client installiert ist, registrieren Sie das Dokument mithilfe einer Office-Anwendung oder des Datei-Explorers bei der Dokumentnachverfolgungs-Website. Anweisungen hierzu finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente](./rms-client/client-track-revoke.md). Auf Ihrem Mac können Sie nun über Ihren Webbrowser zur Website für die Dokumentenverfolgung (https://track.azurerms.com)) navigieren, um dieses Dokument nachzuverfolgen und zu widerrufen.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Wenn ich ein durch RMS geschütztes Office-Dokument öffne, wird die zugehörige temporäre Datei ebenfalls durch RMS geschützt?
-Nein. In diesem Szenario enthält die zugehörige temporäre Datei keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei ist die temporäre Datei offensichtlich nicht für die Freigabe vorgesehen und würde auf dem Gerät verbleiben, geschützt durch lokale Sicherheitsmechanismen wie BitLocker und EFS.
+Nein In diesem Szenario enthält die zugehörige temporäre Datei keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei ist die temporäre Datei offensichtlich nicht für die Freigabe vorgesehen und würde auf dem Gerät verbleiben, geschützt durch lokale Sicherheitsmechanismen wie BitLocker und EFS.
 
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>Eine Funktion, die ich Suche, scheint nicht mit SharePoint-geschützten Bibliotheken zu funktionieren – ist die Unterstützung für meine Funktion geplant?
 Derzeit unterstützt Microsoft SharePoint RMS-geschützte Dokumente mithilfe von unm-geschützten Bibliotheken, die Rights Management Vorlagen, die dokumentenverfolgung und einige andere Funktionen nicht unterstützen. Weitere Informationen finden Sie im Abschnitt [SharePoint in Microsoft 365 und SharePoint Server](./office-apps-services-support.md#sharepoint-in-microsoft-365-and-sharepoint-server) im Artikel [Office-Anwendungen und-Dienste](./office-apps-services-support.md) .

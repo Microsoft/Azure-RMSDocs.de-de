@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/02/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cec682216c07f93b36d189f3c385dc935b2f887d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
+ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869657"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87378283"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme-Azure Information Protection
 
@@ -86,12 +86,12 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 
 |Funktion  |Bekannte Probleme  |
 |---------|---------|
-|Mehrere Versionen von Office    | Die Azure Information Protection Clients, einschließlich der klassischen und einheitlichen Bezeichnung, unterstützen nicht mehrere Office-Versionen auf demselben Computer oder das Wechseln von Benutzerkonten in Office.       |
-|Unterstützung von "unm" in Office 2016 | Die [drmencryptproperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) -Registrierungs Einstellung, die die metadatenverschlüsselung in in Office 2016 steuert, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
-|Inhalts Markierungen in Word    | Azure Information Protection Inhalts [Markierungen](configure-policy-markings.md) werden möglicherweise in den Microsoft Word-Fußzeilen ausgeblendet, wenn der Fußzeile auch eine Tabelle enthält. Weitere Informationen finden Sie unter [Wenn visuelle Kennzeichnungen angewendet werden](configure-policy-markings.md#when-visual-markings-are-applied). |
-|Inhalts Markierungen in e-Mails | Das Markieren dynamischer Inhalte, z. b. das Hinzufügen von Kopf-und Fußzeilen mit Makros zu e-Mails, wird nur bei Verwendung des Azure Information Protection Clients für Outlook unterstützt. </br></br>Das Markieren dynamischer Inhalte wird in der systemeigenen Outlook-Anwendung oder in Outlook Online nicht unterstützt. |
-|An e-Mails angefügte Dateien |Aufgrund einer Einschränkung in den jüngsten Windows-Updates, wenn [Microsoft Outlook durch Azure Rights Management geschützt ist](office-apps-services-support.md), können Dateien, die an e-Mails angefügt sind, nach dem Öffnen der Datei gesperrt werden. |
-|Nachrichten Zusammenführung    |  Das Feature für die Office-e- [Mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) -Zusammenführung wird von keiner Azure Information Protection Funktion unterstützt       |
+|**Mehrere Versionen von Office**    | Die Azure Information Protection Clients, einschließlich der klassischen und einheitlichen Bezeichnung, unterstützen nicht mehrere Office-Versionen auf demselben Computer oder das Wechseln von Benutzerkonten in Office.       |
+|**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist, wird die Azure Information Protection Leiste möglicherweise in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt. </br></br>Um sicherzustellen, dass die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus.**    |
+|**Unterstützung von "unm" in Office 2016**| Die [drmencryptproperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) -Registrierungs Einstellung, die die metadatenverschlüsselung in Office 2016 steuert, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
+|**Inhalts Markierungen in Word**    | Azure Information Protection Inhalts [Markierungen](configure-policy-markings.md) werden möglicherweise in den Microsoft Word-Fußzeilen ausgeblendet, wenn der Fußzeile auch eine Tabelle enthält. Weitere Informationen finden Sie unter [Wenn visuelle Kennzeichnungen angewendet werden](configure-policy-markings.md#when-visual-markings-are-applied). |
+|**An e-Mails angefügte Dateien** |Aufgrund einer Einschränkung in den jüngsten Windows-Updates, wenn [Microsoft Outlook durch Azure Rights Management geschützt ist](office-apps-services-support.md), können Dateien, die an e-Mails angefügt sind, nach dem Öffnen der Datei gesperrt werden. |
+|**Nachrichten Zusammenführung**    |  Das Feature für die Office-e- [Mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) -Zusammenführung wird von keiner Azure Information Protection Funktion unterstützt       |
 | | |
 
 <!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.
@@ -114,7 +114,7 @@ Das Veröffentlichen von Richtlinien kann bis zu 24 Stunden dauern.
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
     
-    Weitere Informationen finden Sie unter:
+    Weitere Informationen finden Sie unter
 
     - [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
     - [**Einheitlicher**Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)

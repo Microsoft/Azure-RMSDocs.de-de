@@ -4,19 +4,19 @@ description: Erfahren Sie mehr über Active Directory Erweiterungen für mobile 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2020
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f20ebed9647570e1f9395791f346eb175a3a8c5e
-ms.sourcegitcommit: 43c9a5c3130a3a8e2ee2644207d07382bed09679
+ms.openlocfilehash: 4351fbd3a7cbbcfbc49df69c1103a6d3a90fb920
+ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880000"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87255147"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services-Mobilgeräteerweiterung
 
@@ -82,7 +82,7 @@ $TransformRules = @"
 @RuleTemplate = "LdapClaims"
 @RuleName = "Jwt Token"
 c:[Type ==
-"https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+"http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
 Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types =
 ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -123,7 +123,7 @@ Write-Host "Microsoft Rights Management Mobile Device Extension Configured"
 
 - Verwenden Sie die folgenden Einstellungen, um AD FS für die AD RMS-Erweiterung für mobile Geräte manuell zu konfigurieren:
 
-|**Configuration**|**Wert**|
+|**Konfiguration**|**Wert**|
 |-----|-----|
 |**Vertrauende Seite Vertrauensstellung**|_api. RMS. Rest. com|
 |**Anspruchsregel**|**Attribut Speicher**: Active Directory <br /><br />E-Mail- **Adressen**: e-Mail-Adresse<br /><br>**Benutzer Prinzipal Name**: UPN<br /><br /> **Proxy Adresse**: _https: \/ \/schemas.xmlSOAP.org/Claims/proxyAddresses|

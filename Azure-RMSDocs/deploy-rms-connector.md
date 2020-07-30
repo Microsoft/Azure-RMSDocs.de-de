@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 405989dae3fb7f37edc4fdd8b213ae5dae3ac592
-ms.sourcegitcommit: f32928f7dcc03111fc72d958cda9933d15065a2b
+ms.openlocfilehash: f69c7071c7e4bb257d4325f4404c51a6e0a81046
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84665910"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298273"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Bereitstellen des Azure Rights Management-Verbindungsdiensts
 
@@ -42,7 +42,7 @@ Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Se
 > [!NOTE]
 > Wenn Sie mehrere Dateitypen (nicht nur Office-Dokumente) mit der Dateiklassifizierungsinfrastruktur schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [AzureInformationProtection-Cmdlets](/powershell/azureinformationprotection/vlatest/aip).
 
-Informationen zu den Versionen dieser lokalen Server, die vom RMS-Connector unterstützt werden, finden Sie unter [Lokale Server, die Azure RMS unterstützen](requirements-servers.md).
+Informationen zu den Versionen dieser lokalen Server, die vom RMS-Connector unterstützt werden, finden Sie unter [Lokale Server, die Azure RMS unterstützen](requirements.md#supported-on-premises-servers-for-azure-rights-management-data-protection).
 
 
 ### <a name="support-for-hybrid-scenarios"></a>Unterstützung für Hybridszenarios

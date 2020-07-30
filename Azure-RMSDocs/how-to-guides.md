@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a6f657db4cce2d62562ff7f20c28aae2f6e8af3
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
+ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136231"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87298222"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Schrittanleitungen für häufige Szenarien, in denen Azure Information Protection verwendet wird
 
@@ -28,9 +28,9 @@ Es gibt viele Möglichkeiten, wie Sie mit Azure Information Protection Dokumente
 
 Die erfolgreichsten Bereitstellungen sind diejenigen, bei denen spezielle Anwendungsfälle identifiziert werden, die die größten geschäftlichen Vorteile für die Organisation bieten. Verwenden Sie die folgende Liste an gängigen Szenarien und Anweisungen, um Ihre Bereitstellung durchzuführen.
 
-## <a name="common-scenarios"></a>Häufige Szenarien
+## <a name="common-scenarios"></a>Häufige Szenarios
 
-|Szenario: Gewünschter Vorgang|Instructions|
+|Szenario: Gewünschter Vorgang|Anweisungen|
 |----------------|---------------|
 |Nach vertraulichen Informationen suchen, die meine Organisation lokal speichert|[Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien](quickstart-findsensitiveinfo.md)|
 |Es Benutzern einfacher machen, E-Mails, die vertrauliche Informationen enthalten, zu schützen|[Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertraulichen Informationen enthalten](quickstart-label-dnf-protectedemail.md)|
@@ -71,6 +71,6 @@ Schrittweise Anleitungen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wird Ihr Szenario nicht aufgeführt? Sehen Sie sich die [Roadmap für die Bereitstellung](deployment-roadmap.md) an, um eine vollständige Liste der Planungs- und Bereitstellungsschritte einzusehen.
+Wird Ihr Szenario nicht aufgeführt? Eine vollständige Liste der Planungs-und Bereitstellungs Schritte finden Sie in den [Bereitstellungs-Roadmaps](deployment-roadmap.md) .
 
 Wenn Sie mit Azure Information Protection nicht vertraut sind, lesen Sie den kurzen Einführungsartikel zum Dienst [Was ist Azure Information Protection?](what-is-information-protection.md), bevor Sie mit der Durchführung der Bereitstellung beginnen.
