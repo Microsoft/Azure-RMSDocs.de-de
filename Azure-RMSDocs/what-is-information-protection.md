@@ -1,6 +1,6 @@
 ---
 title: Was ist Azure Information Protection (AIP)?
-description: Azure Information Protection (AIP) ist ein Dienst, der Organisationen bei der Bezeichnung von Dokumenten und E-Mails sowie bei der Klassifizierung und dem Schutz von Daten überall unterstützt.
+description: Azure Information Protection (AIP) ist ein Dienst, der Organisationen bei der Bezeichnung von Dokumenten und E-Mails unterstützt. AIP klassifiziert und schützt Daten unabhängig davon, wo diese gespeichert sind.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,28 +12,35 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 14626d02ca0b5d492312e9d17f0c801c782f5a15
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a728faf211fb34f2ef5b296f28cff97c4c76e8e4
+ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048736"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86927487"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Azure Information Protection (AIP) ist eine cloudbasierte Lösung, die Organisationen das Klassifizieren und Schützen von Dokumenten und E-Mails durch Anwendung von Bezeichnungen ermöglicht. Bezeichnungen können automatisch durch Administratoren, die Regeln und Bedingungen definieren, manuell durch Benutzer oder durch eine Kombination von beiden Optionen angewendet werden, bei der Administratoren die Empfehlungen definieren, die Benutzern angezeigt werden.
+Azure Information Protection (AIP) ist eine cloudbasierte Lösung, die Organisationen das Klassifizieren und Schützen von Dokumenten und E-Mails durch Anwendung von Bezeichnungen ermöglicht. Bezeichnungen können folgendermaßen angewendet werden:
 
-Der Administrator konfiguriert beispielsweise eine Bezeichnung mit Regeln, die vertrauliche Daten erkennen, also z. B. Kreditkarteninformationen. In diesem Fall wird jedem Benutzer, der die Kreditkarteninformationen in einer Word-Datei speichert, möglicherweise oben im Dokument eine QuickInfo angezeigt, die diesem empfiehlt, die für dieses Szenario konfigurierte Bezeichnung anzuwenden.
+- **Automatisch** durch Administrator mithilfe von Regeln und Bedingungen
+- **Manuell** durch Benutzer
+- **Durch eine Kombination** dieser Optionen, bei der Administratoren die Empfehlungen definieren, die den Benutzern angezeigt werden
 
-Mit Bezeichnungen kann das Dokument klassifiziert und optional geschützt werden.
+Der Administrator konfiguriert beispielsweise eine Bezeichnung mit Regeln, die vertrauliche Daten erkennen, also z. B. Kreditkarteninformationen. In diesem Fall kann jedem Benutzer, der Kreditkarteninformationen in einer Word-Datei speichert, oben im Dokument eine QuickInfo mit der Empfehlung angezeigt werden, die für dieses Szenario relevante Bezeichnung anzuwenden.
 
-Durch das [Klassifizieren](#how-labels-apply-classification) und [Schützen](#how-data-is-protected) des Inhalts können Sie nachverfolgen und steuern, wie er verwendet wird. Zudem können Sie die Datenflüsse analysieren, um Einblicke in Ihr Unternehmen zu erhalten, riskante Verhalten zu erkennen und Korrekturmaßnahmen zu ergreifen, den Dokumentenzugriff zu verfolgen, Datenverluste oder Missbrauch zu verhindern und vieles mehr.
+Bezeichnungen können Ihre Dokumente [klassifizieren](#how-labels-apply-classification-with-aip) und optional auch [schützen](#how-aip-protects-your-data). Damit erhalten Sie folgende Möglichkeiten:
 
-## <a name="how-labels-apply-classification"></a>Wie Bezeichnungen Klassifizierungen anwenden
+- **Nachverfolgen und Steuern** der Verwendung Ihrer Inhalte
+- **Analysieren von Datenflüssen** zum Gewinnen von Erkenntnissen zum Geschäft **– Erkennen von riskanten Verhaltensweisen** und Ergreifen von Korrekturmaßnahmen
+- **Nachverfolgen des Dokumentzugriffs** und Verhindern von Datenlecks oder Datenmissbrauch
+- Und vieles mehr...
 
-Verwenden Sie Azure Information Protection-Bezeichnungen, um die Klassifizierung jeweils auf Dokumente und E-Mails anzuwenden. 
+## <a name="how-labels-apply-classification-with-aip"></a>So wenden Bezeichnungen mit AIP Klassifizierungen an
+
+Verwenden Sie Azure Information Protection, um Klassifizierungsbezeichnungen sowohl auf Dokumente als auch auf E-Mails anzuwenden.
 
 Der Inhalt der Bezeichnung umfasst Folgendes:
 
@@ -47,16 +54,23 @@ Auf der folgenden Abbildung hat die Bezeichnung z. B. eine E-Mail-Nachricht als
 
 In diesem Beispiel hat die Bezeichnung auch folgende Schritte durchgeführt:
 
-- **Eine Fußzeile *Vertraulichkeit: Allgemein* der E-Mail-Nachricht hinzugefügt** Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. 
+- **Eine Fußzeile *Vertraulichkeit: Allgemein* der E-Mail-Nachricht hinzugefügt** Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen.
 - **In E-Mail-Header eingebettete Metadaten.** Headerdaten ermöglichen es E-Mail-Diensten, die Bezeichnung zu überprüfen und theoretisch einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie außerhalb der Organisation versendet wird.
 
-## <a name="how-data-is-protected"></a>So werden die Daten geschützt
+## <a name="how-aip-protects-your-data"></a>So schützt AIP Ihre Daten
 
-Azure Information Protection verwendet den *Azure Rights Management-Dienst* (Azure RMS), um Ihre Daten zu schützen. Azure RMS ist mit anderen Microsoft-Clouddiensten und -Anwendungen integriert, z. B. Office 365 und Azure Active Directory, und kann auch mit Ihren eigenen Anwendungen oder Drittanbieteranwendungen sowie Information Protection-Lösungen verwendet werden. Azure RMS funktioniert sowohl mit lokalen Lösungen als auch mit Cloudlösungen.
+Azure Information Protection verwendet den [*Azure Rights Management-Dienst* (Azure RMS)](what-is-azure-rms.md), um Ihre Daten zu schützen. 
+
+Azure RMS ist mit anderen Microsoft-Clouddiensten und -Anwendungen integriert, z. B. Office 365 und Azure Active Directory, und kann auch mit Ihren eigenen Anwendungen oder Drittanbieteranwendungen sowie Information Protection-Lösungen verwendet werden. Azure RMS funktioniert sowohl mit lokalen Lösungen als auch mit Cloudlösungen.
 
 Azure RMS verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien. Ähnlich wie bei AIP-Bezeichnungen bleibt der durch Azure RMS angewendete Schutz in den Dokumenten und E-Mails unabhängig vom Speicherort der Dokumente oder der E-Mails. So wird sichergestellt, dass Sie die Kontrolle über Ihre Inhalte behalten, auch wenn diese mit anderen Benutzern geteilt werden.
 
-Schutzeinstellungen können Teil der Konfiguration Ihrer Bezeichnungen sein, sodass Benutzer Dokumente und E-Mails ganz einfach durch Hinzufügen einer Bezeichnung klassifizieren und schützen können. Diese Schutzeinstellungen können auch von Anwendungen und Diensten separat verwendet werden, die zwar den Schutz unterstützen, aber nicht die Anwendung von Bezeichnungen. Für Anwendungen und Dienste, die nur den Schutz unterstützen, werden die Schutzeinstellungen als [Rights Management-Vorlagen](#rights-management-templates) verwendet.
+Für Schutzeinstellungen kann Folgendes gelten:
+
+- Sie können **Teil der Konfiguration Ihrer Bezeichnungen sein**, sodass Benutzer Dokumente und E-Mails ganz einfach durch Anwenden einer Bezeichnung klassifizieren und schützen können. 
+- Sie können von Anwendungen und Diensten **separat verwendet werden**, die zwar den Schutz unterstützen, aber keine Bezeichnungen. 
+
+    Für Anwendungen und Dienste, die nur den Schutz unterstützen, werden die Schutzeinstellungen als [Rights Management-Vorlagen](#rights-management-templates) verwendet.
 
 Beispielsweise sollten Sie ein Berichtsdokument oder eine Tabelle mit Verkaufsprognosen so konfigurieren, dass nur Personen in Ihrer Organisation darauf zugreifen können. In diesem Fall würden Sie Schutzeinstellungen anwenden, um zu steuern, ob das Dokument bearbeitet werden kann, es auf den Schreibschutz einschränken, oder verhindern, dass es gedruckt wird.
 
@@ -64,13 +78,13 @@ E-Mails können ähnliche Schutzeinstellungen aufweisen, um zu verhindern, dass 
 
 ### <a name="rights-management-templates"></a>Rights Management-Vorlagen
 
-Sobald der Azure Rights Management-Dienst aktiviert ist, stehen Ihnen zwei Standardvorlagen zur Verfügung, die den Datenzugriff auf Benutzer in Ihrer Organisation beschränken. Verwenden Sie diese Vorlagen sofort, oder konfigurieren Sie eigene Schutzeinstellungen, um restriktivere Kontrollen in neuen Vorlagen anzuwenden. 
+Sobald der Azure Rights Management-Dienst aktiviert ist, stehen Ihnen zwei Standardvorlagen für die Rechteverwaltung zur Verfügung, mit denen Sie den Datenzugriff auf Benutzer innerhalb Ihrer Organisation beschränken können. Verwenden Sie diese Vorlagen sofort, oder konfigurieren Sie eigene Schutzeinstellungen, um restriktivere Kontrollen in neuen Vorlagen anzuwenden.
 
 Rights Management-Vorlagen können in beliebigen Anwendungen oder Diensten verwendet werden, die Azure Rights Management unterstützen.
 
 Die folgende Abbildung zeigt ein Beispiel aus dem Exchange Admin Center, in dem Sie z. B. Exchange Online-E-Mail-Flussregeln für die Verwendung der RMS-Vorlagen konfigurieren können:
 
-![Beispiel für die Auswahl von Vorlagen für Exchange Online](./media/templates-exchangeonline-callouts.png)
+:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="Beispiel für die Auswahl von Vorlagen für Exchange Online":::
 
 > [!NOTE]
 > Beim Erstellen einer AIP-Bezeichnung, die Schutzeinstellungen enthält, wird auch eine entsprechende Rights Management-Vorlage erstellt, die separat von der Bezeichnung verwendet werden kann. 
@@ -90,7 +104,7 @@ Obwohl Bezeichnungen automatisch auf Dokumente und E-Mails angewendet werden kö
 
 Außerdem ermöglicht der AIP-Client Benutzern das gleichzeitige Klassifizieren und Schützen zusätzlicher Dateitypen oder mehrerer Dateien über das Kontextmenü in Windows-Explorer. Beispiel:
 
-![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](./media/right-click-classify-protect-folder.png)
+:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="Klassifizieren und Schützen über das Explorer-Kontextmenü mithilfe von Azure Informationen Protection":::
 
 Die Menüoption **Klassifizieren und schützen** funktioniert ähnlich wie die Information Protection-Leiste in Office-Anwendungen, wodurch Benutzer eine Bezeichnung auswählen oder benutzerdefinierte Berechtigungen festlegen können.
 
@@ -111,7 +125,7 @@ Für dieses Szenario sind die [Funktionen der Office 365-Nachrichtenverschlüsse
 
 Einem Gmail-Benutzer wird möglicherweise die folgende Aufforderung in einer empfangenen E-Mail angezeigt:
 
-![Option für Gmail-Empfänger in OME und AIP](./media/ome-message.png)
+:::image type="content" source="media/ome-message.png" alt-text="Meldung für Gmail-Empfänger in OME und AIP":::
 
 Für den Benutzer, der die E-Mail sendet, sind dieselben Aktionen wie für das Senden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation erforderlich. Klicken Sie dazu beispielsweise auf die Schaltfläche **Nicht weiterleiten**, die der AIP-Client dem Outlook-Menüband hinzufügen kann. 
 
@@ -143,23 +157,28 @@ Hier finden Sie die neuesten Informationen dazu, wie Azure Information Protectio
 
 > [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
 
+Weitere Informationen finden Sie in folgenden Quellen:
+
+- [Neuerungen in Microsoft 365 Admin Center](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
+- [Neuerungen in SharePoint Admin Center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+
 ## <a name="additional-azure-information-protection-resources"></a>Zusätzliche Azure Information Protection-Ressourcen
 
-- Kostenlose Testversion: [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- **Kostenlose Testversion:** [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- Abonnementoptionen und Preise: [Azure Information Protection – Preise](https://azure.microsoft.com/pricing/details/information-protection)
+- **Abonnementoptionen und Preise:** [Azure Information Protection – Preise](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Herunterladen des Clients: [Azure Information Protection-Client](https://www.microsoft.com/download/details.aspx?id=53018)
+- **Herunterladen des Clients:** [Azure Information Protection-Client](https://www.microsoft.com/download/details.aspx?id=53018)
 
-- Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
+- **Herunterladen eines anpassbaren Leitfadens für Endbenutzer:** [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 
-- Häufig gestellte Fragen: [Häufig gestellte Fragen zu Azure Information Protection](faqs.md)
+- **Häufig gestellte Fragen:** [Häufig gestellte Fragen zu Azure Information Protection](faqs.md)
 
-- Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
+- **Yammer:** [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-- Neuheiten in der Dokumentation: [Technischer Blog zu Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
+- **Twitter-Feed zur Dokumentation:** [https://twitter.com/docsmsft](https://twitter.com/docsmsft)
 
-Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information Protection](information-support.md)
+**Zusätzliche Ressourcen:** [Informationen zu und Unterstützung von Azure Information Protection](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
@@ -182,4 +201,6 @@ Letzter Blogbeitrag: [Grundlegende Informationen zum Speicherort sensibler Daten
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Konfigurieren und testen Sie Azure Information Protection selbst mit den [Schnellstarts](quickstart-viewpolicy.md) und [Tutorials](infoprotect-quick-start-tutorial.md). Wenn Sie schon soweit sind, dass Sie diesen Dienst für Ihre Organisation bereitstellen möchten, wechseln Sie direkt zu den [Schrittanleitungen](how-to-guides.md).
+Konfigurieren und testen Sie Azure Information Protection selbst mit den [Schnellstarts](quickstart-viewpolicy.md) und [Tutorials](infoprotect-quick-start-tutorial.md). 
+
+Wenn Sie schon soweit sind, dass Sie diesen Dienst für Ihre Organisation bereitstellen möchten, wechseln Sie direkt zu den [Schrittanleitungen](how-to-guides.md).

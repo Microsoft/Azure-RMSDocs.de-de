@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
 ms.author: v-anikep
-ms.openlocfilehash: f50613340cc4c977239910d5047943d25239b1bc
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 96bd94398c2a5c0bbe2cd87c12ec8e6a0af7e18b
+ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403288"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87135673"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Azure Information Protection: Datei-API – Aktionsbegründung zum Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C++)
 
@@ -220,4 +220,4 @@ Erstellen und testen Sie die Clientanwendung.
     Press any key to continue . . .
    ```
 
-Falls für die Bezeichnung, die aus einer Datei gelöscht wird, gemäß der Bezeichnungsrichtlinie eine Begründung erforderlich ist, sollten Sie einen ähnlichen Ansatz für den `DeleteLabel()`-Vorgang befolgen. Die `DeleteLabel()`-Funktion löst eine `mip::JustificationRequiredError`-Ausnahme aus. Das `isDowngradeJustified`-Flag sollte in der Ausnahmebehandlung auf „true“ festgelegt werden, bevor die Bezeichnung gelöscht wird.
+Falls für die Bezeichnung, die aus einer Datei gelöscht wird, gemäß der Bezeichnungsrichtlinie eine Begründung erforderlich ist, sollten Sie einen ähnlichen Ansatz für den `DeleteLabel()`-Vorgang befolgen. Die -Funktion Die `DeleteLabel()`-Funktion löst eine `mip::JustificationRequiredError`-Ausnahme aus. Das `isDowngradeJustified`-Flag sollte in der Ausnahmebehandlung auf „true“ festgelegt werden, bevor die Bezeichnung gelöscht wird.
