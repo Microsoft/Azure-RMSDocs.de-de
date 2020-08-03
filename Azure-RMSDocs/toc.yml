@@ -10,14 +10,10 @@
       items:
         - name: Übersicht
           href: requirements.md
-        - name: Azure Active Directory-Anforderungen
+        - name: Zusätzliche Azure Active Directory-Anforderungen
           href: requirements-azure-ad.md
-        - name: Unterstützung von Clientgeräten für den Schutz
-          href: requirements-client-devices.md
         - name: Unterstützung von Anwendungen für den Schutz
           href: requirements-applications.md
-        - name: Unterstützung lokaler Server für den Schutz
-          href: requirements-servers.md
     - name: AIP ist wird auch bezeichnet als...
       href: aka.md
 - name: Schnellstarts
@@ -94,7 +90,13 @@
     - name: Planen und Vorbereitung für den Dienst
       items:
         - name: Roadmap für die Bereitstellung
-          href: deployment-roadmap.md
+          items:
+            - name: Übersicht
+              href: deployment-roadmap.md
+            - name: 'Roadmap für Klassifizierung, Bezeichnung und Schutz'
+              href: deployment-roadmap-classify-label-protect.md
+            - name: Roadmap nur für Schutz (klassischer Client)
+              href: deployment-roadmap-protect-only.md
         - name: Planen und Implementieren des Mandantenschlüssels
           items:
             - name: Unterstützte Schlüsseltypen
