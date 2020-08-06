@@ -4,7 +4,7 @@ description: Wenn Sie den Azure Rights Management-Dienst verwenden, werden Vorla
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a5afc20e616809a41d1e724ba657bb99667da858
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: d531269a9323de2f9157f1dafd8962a4f228733f
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927623"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802231"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -39,7 +39,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Lokales Exchange mit dem Rights Management-Connector<br /><br />Gilt für Transportregeln und Outlook Web App|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich. Outlook Web App speichert allerdings die UI für einen Tag zwischen.|
 |Office 2019 für Mac und Office 2016 für Mac|Wird automatisch aktualisiert, wenn Sie geschützte Inhalte öffnen. Informationen zum Erzwingen einer Aktualisierung finden Sie im folgenden Abschnitt [Office 2019 für Mac und Office 2016 für Mac: Erzwingen einer Aktualisierung für Vorlagen](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Die RMS-Freigabeanwendung für Mac-Computer|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
-|[Microsoft 365 von Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) mit [integrierter Bezeichnung](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Dieser integrierte Bezeichnungs Client lädt keine Vorlagen herunter, greift jedoch auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
+|Office 365 ProPlus mit [integrierter Bezeichnung](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Dieser integrierte Bezeichnungs Client lädt keine Vorlagen herunter, greift jedoch auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
 
 Wenn Client Anwendungen Vorlagen herunterladen müssen (anfänglich oder aktualisiert für Änderungen), sollten Sie bis zu 30 Minuten warten, bis der Download abgeschlossen ist und die neuen oder aktualisierten Vorlagen voll funktionstüchtig sind. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Vorlagenkonfiguration und der Netzwerkkonnektivität ab. 
 

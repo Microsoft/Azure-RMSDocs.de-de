@@ -4,7 +4,7 @@ description: Verwechselt durch ein Wort, einen Ausdruck oder ein Akronym, das si
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0dafc8df5e9c48517b13c9d0204c8d4b159783a3
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 352e41b1ca511e3ef0487eb680a331339ce457dd
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927351"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802197"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
@@ -38,7 +38,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |Begriff|Definition|
 |--------|--------------|
 |**AADRM**|Der Name des ersten PowerShell-Moduls für den Schutzdienst (Azure Rights Management), das von der inoffiziellen Abkürzung für Azure Rights Management abgeleitet wurde, als es zuvor (Windows) Azure Active Directory Rights Management hieß. </br></br>Dieses PowerShell-Modul wird jetzt durch das aipservice-Modul ersetzt.|
-|**aktivieren**|Aktivieren Sie den Azure Rights Management Protection-Dienst, damit eine Organisation Ihre Dokumente und e-Mails schützen kann. </br></br>Diese Aktion ermöglicht außerdem die unm-Features in Exchange Online und Microsoft SharePoint.|
+|**Aktivieren**|Aktivieren Sie den Azure Rights Management Protection-Dienst, damit eine Organisation Ihre Dokumente und e-Mails schützen kann. </br></br>Diese Aktion ermöglicht außerdem die unm-Features in Exchange Online und Microsoft SharePoint.|
 |**Active Directory-Rechteverwaltungsdienste**|Häufig als *AD RMS* abgekürzt.<br /><br />Eine Windows Server-Rolle, die Rights Management-Schutz mithilfe von Verschlüsselung und Richtlinien zum Schutz von Dokumenten, Dateien und E-Mails bereitstellt.|
 |**AD RMS**|Siehe *Active Directory Rights Management Services*.|
 |**Aipservice**|Der aktuelle Name des PowerShell-Moduls für den Schutzdienst, der durch das ältere aadrm-Modul ersetzt.|
@@ -136,7 +136,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |**Microsoft Information Protection**| Manchmal als *MIP*abgekürzt.<br /><br /> Ein Framework für Produkte und integrierte Funktionen, die denselben Bezeichnungs Speicher verwenden ("einheitliche Bezeichnungen") und den Schutz der sensiblen Daten Ihrer Organisation erleichtern.|
 |**MIP**| Siehe *Microsoft Information Protection*|
 |**MSDRM**|Manchmal als Verweis auf den RMS-Client 1.0 verwendet, der durch den neueren Client MSIPC ersetzt wurde. </br></br>Dieser ältere Client unterstützt Anwendungen, die mit dem RMS SDK 1.0 entwickelt wurden, und unterstützt Office 2010 und Office 2007, Exchange 2010 und Exchange 2013 und SharePoint 2010 und SharePoint 2007.|
-|**MSIPC**|Manchmal als Verweis auf den RMS-Client 2.0 verwendet, der an die Stelle des älteren RMS-Client, MSDRM, getreten ist. </br></br>Dieser spätere Client unterstützt Anwendungen, die mit dem RMS SDK 2,0 entwickelt wurden, und unterstützt Microsoft 365 Apps für Enterprise, Office 2019, Office 2016, Office 2013, SharePoint 2013 und den Azure Information Protection-Client.|
+|**MSIPC**|Manchmal als Verweis auf den RMS-Client 2.0 verwendet, der an die Stelle des älteren RMS-Client, MSDRM, getreten ist. </br></br>Dieser neuere Client unterstützt Anwendungen, die mit dem RMS SDK 2.0 entwickelt wurden, und außerdem Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 und den Azure Information Protection-Client.|
 | | |
 
 ### <a name="n"></a>N
@@ -180,7 +180,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |**RMS-Freigabeanwendung**|Siehe *Rights Management-Freigabeanwendung*.|
 |**RMS-Vorlage**|Siehe *Schutzvorlage*.|
 
-### <a name="s"></a>S
+### <a name="s"></a>E
 
 |Begriff|Definition|
 |--------|--------------|

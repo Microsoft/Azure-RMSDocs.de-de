@@ -4,7 +4,7 @@ description: Verstehen und identifizieren Sie die spezifischen Rechte, die beim 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 779d527df4b95b985ae72b41414f5c91d7775d01
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 4d6ee5aedd67faec1afa088291a742f29c421d84
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927317"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802117"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
@@ -41,9 +41,9 @@ In dieser Tabelle gilt Folgendes:
 - Die **Bezeichnung Admin Center** bezieht sich auf den Speicherort der Vertraulichkeits Bezeichnungen und kann entweder das Microsoft 365 Compliance Center, das Microsoft 365 Security Center oder das Security & Compliance Center von Office 365 sein.
 
 
-|Nutzungsrecht|Beschreibung|Implementierung|
+|Nutzungsrecht|BESCHREIBUNG|Implementierung|
 |-------------------------------|---------------------------|-----------------|
-|Allgemeiner Name: **Inhalt bearbeiten, Bearbeiten** <br /><br />Richtliniencodierung: **DOCEDIT**|Ermöglicht es dem Benutzer, den Inhalt innerhalb der Anwendung zu ändern, neu anzuordnen, zu formatieren oder zu sortieren. Gewährt nicht das Recht, die bearbeitete Kopie zu speichern.<br /><br />Wenn Sie in Word nicht über [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) mit einer Mindestversion von [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25)verfügen, ist dieses Recht nicht ausreichend, um die nach **Verfolgung von Änderungen**zu aktivieren oder zu deaktivieren oder um alle Änderungen an der Nachverfolgung von Änderungen als Reviewer zu verwenden. Ist dies nicht der Fall, ist das Recht **Vollzugriff** erforderlich, um alle Optionen der Änderungsnachverfolgung zu verwenden. |Benutzerdefinierte Office-Rechte: als Teil der Optionen **Änderung** und **Vollzugriff**. <br /><br />Name im klassischen Azure-Portal: **Inhalt bearbeiten**<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **Inhalt bearbeiten, bearbeiten (docedit)**<br /><br />Name in AD RMS-Vorlagen: **Bearbeiten** <br /><br />API-Konstante oder -Wert: nicht zutreffend.|
+|Allgemeiner Name: **Inhalt bearbeiten, Bearbeiten** <br /><br />Richtliniencodierung: **DOCEDIT**|Ermöglicht es dem Benutzer, den Inhalt innerhalb der Anwendung zu ändern, neu anzuordnen, zu formatieren oder zu sortieren. Gewährt nicht das Recht, die bearbeitete Kopie zu speichern.<br /><br />In Word ist dieses Recht nur bei Office 365 ProPlus mit einer Mindestversion von [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25) ausreichend, um **Änderungen nachverfolgen** zu aktivieren oder zu deaktivieren oder alle Features zum Nachverfolgen von Änderungen zu verwenden. Ist dies nicht der Fall, ist das Recht **Vollzugriff** erforderlich, um alle Optionen der Änderungsnachverfolgung zu verwenden. |Benutzerdefinierte Office-Rechte: als Teil der Optionen **Änderung** und **Vollzugriff**. <br /><br />Name im klassischen Azure-Portal: **Inhalt bearbeiten**<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **Inhalt bearbeiten, bearbeiten (docedit)**<br /><br />Name in AD RMS-Vorlagen: **Bearbeiten** <br /><br />API-Konstante oder -Wert: nicht zutreffend.|
 |Allgemeiner Name: **Speichern** <br /><br />Richtliniencodierung: **EDIT**|Ermöglicht es dem Benutzer, das Dokument am aktuellen Speicherort zu speichern.<br /><br />In Office-Anwendungen ermöglicht dieses Recht dem Benutzer, das Dokument zu ändern und unter einem neuen Namen zu speichern, wenn das ausgewählte Dateiformat nativ Unterstützung für den Rights Management-Schutz bietet. Die Dateiformatbeschränkung stellt dabei sicher, dass der ursprüngliche Schutz nicht aus der Datei entfernt werden kann.|Benutzerdefinierte Office-Rechte: als Teil der Optionen **Änderung** und **Vollzugriff**. <br /><br />Name im klassischen Azure-Portal: **Datei speichern**<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **speichern (Bearbeiten)**<br /><br />Name in AD RMS-Vorlagen: **Speichern** <br /><br />API-Konstante oder -Wert: `IPC_GENERIC_WRITE L"EDIT"`|
 |Allgemeiner Name: **Kommentar** <br /><br />Richtliniencodierung: **COMMENT**|Ermöglicht der Option, dem Inhalt Anmerkungen oder Kommentare hinzuzufügen.<br /><br />Dieses Recht ist im SDK verfügbar, als Ad-hoc-Richtlinie in AzureInformationProtection und dem RMS-Schutz-Modul für Windows PowerShell verfügbar und wurde in einigen Anwendungen von Softwareherstellern implementiert. Sie wird jedoch nicht häufig verwendet und wird von Office-Anwendungen nicht unterstützt.|Benutzerdefinierte Office-Rechte: nicht implementiert. <br /><br />Name im klassischen Azure-Portal: nicht implementiert.<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: nicht implementiert.<br /><br />Name in AD RMS-Vorlagen: nicht implementiert. <br /><br />API-Konstante oder -Wert: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Allgemeiner Name: **Speichern unter, Exportieren** <br /><br />Richtliniencodierung: **EXPORT**|Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (Speichern unter). <br /><br />Für den Azure Information Protection-Client kann die Datei ohne Schutz gespeichert und auch mit neuen Einstellungen und Berechtigungen erneut geschützt werden. Diese zulässigen Aktionen bedeuten, dass ein Benutzer, der über dieses Recht verfügt, eine Azure Information Protection-Bezeichnung aus einem geschützten Dokument oder einer geschützten E-Mail ändern oder entfernen kann. <br /><br />Durch dieses Recht hat der Benutzer auch die Möglichkeit, andere Exportoptionen in Anwendungen auszuführen, beispielsweise **An OneNote senden**.|Benutzerdefinierte Office-Rechte: als Teil der Option **Vollzugriff** <br /><br />Name im klassischen Azure-Portal: **Inhalt exportieren (Speichern unter)** <br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **Speichern unter, exportieren (Export)**<br /><br />Name in AD RMS-Vorlagen: **Exportieren (Speichern unter)** <br /><br />API-Konstante oder -Wert: `IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -64,7 +64,7 @@ Einige Anwendungen gruppieren Nutzungsrechte in Berechtigungsstufen, um die Ausw
 
 In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und eine vollständige Liste der Nutzungsrechte, die sie enthalten. Die Nutzungsrechte sind nach ihren [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
 
-|Berechtigungsstufe|Anwendungen|Enthaltene Nutzungsrechte|
+|Berechtigungsstufe|Applications|Enthaltene Nutzungsrechte|
 |---------------------|----------------|---------------------------------|
 |Viewer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails „Prüfer“ statt dieser Berechtigungsstufe, um sicherzustellen, dass eine E-Mail-Antwort als E-Mail-Nachricht und nicht als Anlage empfangen wird. „Prüfer“ ist auch erforderlich, wenn Sie eine E-Mail an eine andere Organisation senden, die den Outlook-Client oder die Outlook-Web-App verwendet. Es ist ebenfalls für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts ausgenommen sind, weil Sie [Onboardingsteuerelemente](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) implementiert haben.|
 |Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
@@ -124,7 +124,7 @@ Ein Benutzer möchte per E-Mail einige Informationen an bestimmte Personen in de
 
 Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, wird die E-Mail-Option **Encrypt Only** (Nur verschlüsseln) verfügbar.
 
-Diese Option ist für Mandanten verfügbar, die Exchange Online verwenden und in Outlook im Web ausgewählt werden können, als weitere Rechte Schutz Option für eine Nachrichtenfluss Regel, als Office 365 DLP-Aktion und von Outlook (Mindestversion [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) für Microsoft 365- [Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)und mindestens Version 1805, wenn Sie über [Office 365-apps verfügen, die Azure RMS unterstützen](requirements-applications.md#windows-computers-for-information-rights-management-irm). Weitere Informationen zur Option "nur verschlüsseln" finden Sie in der folgenden Blogbeitrag-Ankündigung des Office-Teams: Verschlüsseln der Verschlüsselung [nur bei der Office 365-Nachrichten Verschlüsselung](https://aka.ms/omefeb2018).
+Diese Option steht Mandanten zur Verfügung, die Exchange Online verwenden. Sie kann in Outlook im Web als weitere Option zum Schutz der Rechte für eine E-Mail-Flussregel, als Office 365 DLP-Aktion und in Outlook ausgewählt werden (Mindestversion [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) für Office 365 ProPlus und Mindestversion 1805, wenn Sie über [Office 365-Apps verfügen, die Azure RMS unterstützen](requirements-applications.md#windows-computers-for-information-rights-management-irm). Weitere Informationen zur Option "nur verschlüsseln" finden Sie in der folgenden Blogbeitrag-Ankündigung des Office-Teams: Verschlüsseln der Verschlüsselung [nur bei der Office 365-Nachrichten Verschlüsselung](https://aka.ms/omefeb2018).
 
 Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer **Speichern unter, Exportieren** und **Vollzugriff**. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Sie können eine E-Mail aber kopieren, ausdrucken und weiterleiten. 
 
