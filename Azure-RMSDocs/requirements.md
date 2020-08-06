@@ -67,7 +67,7 @@ Bedingter Zugriff wird in der Vorschauversion für Dokumente unterstützt, die m
 
 Zusätzliche Voraussetzungen sind für bestimmte Szenarien erforderlich, z. b. bei Verwendung von Office 2010, Zertifikat basierte oder mehrstufige Authentifizierung, oder wenn UPN-Werte nicht mit Benutzer-e-Mail-Adressen identisch sind. Weitere Informationen finden Sie unter [zusätzliche Azure AD Anforderungen für Azure Information Protection](requirements-azure-ad.md).
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Was ist ein Azure AD-Verzeichnis?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrieren Sie lokale Active Directory Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
