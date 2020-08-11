@@ -129,6 +129,8 @@
           href: concept-async-observers-policy-cpp.md
         - name: Observer-Klassen der Schutz-API (C++)
           href: concept-async-observers-protection-cpp.md
+    - name: Proxyunterstützung
+      href: concept-mip-proxies.md
     - name: SDK-Telemetrie
       href: concept-mip-telemetry.md
     - name: Anwendungsfälle
