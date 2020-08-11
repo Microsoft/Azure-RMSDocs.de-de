@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cef1f6f80865f813e613e717ea301176f8fcc317
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 38489d1d1ff7183e5e7a3963b401cdaecf2313dc
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049530"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073651"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Voraussetzungen für die Installation und Bereitstellung der Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -91,7 +91,7 @@ Verwenden Sie zum Speichern der Überprüfungs Konfigurationsdaten einen SQL-Ser
 
 - **Ein Konto mit der sysadmin-Rolle zum Installieren des Scanners.**
 
-    Dies ermöglicht es dem Installationsprozess, die Überprüfungs Konfigurationsdatenbank automatisch zu erstellen und dem Dienst Konto, das die Überprüfung ausführt, die erforderliche **db_owner** Rolle zu erteilen.
+    Die sysadmin-Rolle ermöglicht dem Installationsvorgang das automatische Erstellen der Überprüfungs Konfigurationsdatenbank und das Erteilen der erforderlichen **db_owner** Rolle für das Dienst Konto, von dem die Überprüfung ausgeführt wird.
 
     Wenn Ihnen die sysadmin-Rolle nicht gewährt werden kann oder wenn Ihre Organisations Richtlinien erfordern, dass Datenbanken manuell erstellt und konfiguriert werden, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).
 
@@ -143,7 +143,7 @@ Sie müssen Bezeichnungen konfiguriert haben, die automatisch Klassifizierung un
 
 Wenn Sie diese Bezeichnungen nicht konfiguriert haben, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
 - [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
@@ -169,12 +169,16 @@ Weitere Informationen finden Sie [unter vom Azure Information Protection Unified
 
 ## <a name="file-path-requirements"></a>Dateipfad-Anforderungen
 
-Um Dateien zu überprüfen, dürfen die Dateipfade maximal 260 Zeichen lang sein, es sei denn, der Scanner ist unter Windows 2016 installiert, und der Computer ist für die Unterstützung von langen Pfaden konfiguriert.
+Zum Scannen von Dateien müssen standardmäßig die Dateipfade maximal 260 Zeichen enthalten.
 
-Windows 10-und Windows Server 2016-Support Pfadlängen von mehr als 260 Zeichen mit der folgenden [Gruppenrichtlinien Einstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **lokale Computer Richtlinie**  >  **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **Aktivieren von Win32 Long-Pfaden**
+Zum Überprüfen von Dateien mit Dateipfaden mit mehr als 260 Zeichen installieren Sie die Überprüfung auf einem Computer mit einer der folgenden Windows-Versionen, und konfigurieren Sie den Computer nach Bedarf:
 
-Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
-
+|Windows-Version  |BESCHREIBUNG  |
+|---------|---------|
+|**Windows 2016 oder höher**     |   Konfigurieren des Computers zur Unterstützung von langen Pfaden      |
+|**Windows 10 oder Windows Server 2016**     | Definieren Sie die folgende [Gruppenrichtlinien Einstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **lokale Computer Richtlinie**  >  **Computerkonfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **aktivieren Win32 Long-Pfade**.    </br></br>Weitere Informationen zur Unterstützung von langen Dateipfaden in diesen Versionen finden Sie im Abschnitt [Maximale Pfadlängen Beschränkung](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Windows 10-Entwicklerdokumentation.    |
+|**Windows 10, Version 1607 oder höher**     |  Entscheiden Sie sich für die aktualisierten **MAX_PATH** Funktionen. Weitere Informationen finden Sie unter [Aktivieren von langen Pfaden in Windows 10, Version 1607 und](https://docs.microsoft.com/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later)höher.      |
+| | |
 ## <a name="usage-statistics-requirements"></a>Anforderungen an die Nutzungsstatistik
 
 Deaktivieren Sie Verwendungs Statistiken mithilfe einer der folgenden Methoden:
@@ -251,7 +255,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 
 #### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Erstellen Sie einen Benutzer, und erteilen Sie db_owner Rechte manuell.
 
-Um einen Benutzer zu erstellen und db_owner Berechtigungen für diese Datenbank zu erteilen, bitten Sie den sysadmin, folgende Aufgaben durchzuführen:
+Um einen Benutzer zu erstellen und db_owner Berechtigungen für diese Datenbank zu erteilen, bitten Sie den sysadmin, die folgenden Schritte auszuführen:
 
 1. Erstellen Sie eine Datenbank für Scanner:
 

@@ -1,10 +1,10 @@
 ---
 title: Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen-aip
 description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen für Clients und Dienste, die Microsoft Information Protection Framework unterstützen.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 05/31/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 02fa3ec554ef0f05079cdf0c940dff10f87b9eec
-ms.sourcegitcommit: edd0614ef6f687ff2745f56e4171cd72e03edc9c
+ms.openlocfilehash: a0ebdc684bea634707d09fb0b7d4dd8a4175c63b
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438171"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073668"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -57,32 +57,79 @@ Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Be
 
 ## <a name="before-you-begin"></a>Voraussetzungen
 
-Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig. Stellen Sie daher sicher, dass Sie die folgenden Änderungen und Überlegungen beachten:
+Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig. Stellen Sie vor der Migration sicher, dass Sie die folgenden Änderungen und Überlegungen beachten:
 
-- Stellen Sie sicher, dass Sie über [Clients verfügen, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling) und ggf. für die Verwaltung sowohl im Azure-Portal (für Clients, die einheitliche Bezeichnungen nicht unterstützen) als auch für die Admin Center (für Clients, die einheitliche Bezeichnungen unterstützen) vorbereitet werden.
+- [Client Unterstützung für vereinheitlichte Bezeichnung](#client-support-for-unified-labeling)
+- [Richtlinienkonfiguration](#policy-configuration)
+- [Schutzvorlagen](#protection-templates)
+- [Anzeigen Amen](#display-names)
+- [Lokalisierte Zeichen folgen in Bezeichnungen](#localized-strings-in-labels)
+- [Bearbeiten von migrierten Bezeichnungen in admin Centers](#editing-migrated-labels-in-the-admin-centers)
+- [In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-admin-centers)
+- [Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung](#comparing-the-behavior-of-protection-settings-for-a-label)
 
-- Richtlinien, einschließlich Richtlinieneinstellungen und der entsprechenden Zugriffberechtigungen (bereichsbezogene Richtlinien), sowie alle erweiterten Clienteinstellungen werden nicht migriert. Zum Konfigurieren dieser Einstellungen nach der Migration der Bezeichnung können Sie folgende Optionen angeben:
-    - Ihr Admin Center für Vertraulichkeits Bezeichnungen.
-    - [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), die Sie verwenden müssen, um [Erweiterte Client Einstellungen](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)zu konfigurieren.
+### <a name="client-support-for-unified-labeling"></a>Client Unterstützung für vereinheitlichte Bezeichnung
+
+Stellen Sie sicher, dass Sie über [Clients verfügen, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling) und ggf. für die Verwaltung sowohl im Azure-Portal (für Clients, die einheitliche Bezeichnungen nicht unterstützen) als auch für die Admin Center (für Clients, die einheitliche Bezeichnungen unterstützen) vorbereitet werden.
+
+### <a name="policy-configuration"></a>Richtlinienkonfiguration
+
+Richtlinien, einschließlich Richtlinieneinstellungen und der entsprechenden Zugriffberechtigungen (bereichsbezogene Richtlinien), sowie alle erweiterten Clienteinstellungen werden nicht migriert. Zum Konfigurieren dieser Einstellungen nach der Migration der Bezeichnung können Sie folgende Optionen angeben:
+
+- Ihr Admin Center für Vertraulichkeits Bezeichnungen.
+- [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), die Sie verwenden müssen, um [Erweiterte Client Einstellungen](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)zu konfigurieren.
     
+> [!IMPORTANT]
+> Nicht alle Einstellungen einer migrierten Bezeichnung werden von den Admin-Centers unterstützt. Verwenden Sie die Tabelle im Abschnitt [In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-admin-centers), um die entsprechenden Einstellungen sowie die empfohlene Vorgehensweise zu ermitteln.
+> 
 
-- Nicht alle Einstellungen einer migrierten Bezeichnung werden von den Admin-Centers unterstützt. Verwenden Sie die Tabelle im Abschnitt [In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-admin-centers), um die entsprechenden Einstellungen sowie die empfohlene Vorgehensweise zu ermitteln.
+### <a name="protection-templates"></a>Schutzvorlagen
 
-- Schutzvorlagen:
+- Vorlagen, die einen cloudbasierten Schlüssel verwenden und Teil einer Bezeichnungskonfiguration sind, werden ebenfalls mit der Bezeichnung migriert. Andere Schutzvorlagen werden nicht migriert. 
     
-    - Vorlagen, die einen cloudbasierten Schlüssel verwenden und Teil einer Bezeichnungskonfiguration sind, werden ebenfalls mit der Bezeichnung migriert. Andere Schutzvorlagen werden nicht migriert. 
-    
-    - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, können Sie diese Bezeichnungen bearbeiten und die Option **Berechtigungen festlegen** auswählen, um die gleichen Schutzeinstellungen wie in Ihrer Vorlage zu konfigurieren. Bezeichnungen mit vordefinierten Vorlagen verhindern die Bezeichnungsmigration nicht, diese Bezeichnungskonfiguration wird jedoch in den Admin-Centers nicht unterstützt.
+- Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, können Sie diese Bezeichnungen bearbeiten und die Option **Berechtigungen festlegen** auswählen, um die gleichen Schutzeinstellungen wie in Ihrer Vorlage zu konfigurieren. Bezeichnungen mit vordefinierten Vorlagen verhindern die Bezeichnungsmigration nicht, diese Bezeichnungskonfiguration wird jedoch in den Admin-Centers nicht unterstützt.
         
-        Tipp: um Sie bei der Neukonfiguration dieser Bezeichnungen zu unterstützen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie **Berechtigungen festlegen**auswählen.
+    > [!TIP]
+    > Um Ihnen bei der Neukonfiguration dieser Bezeichnungen zu helfen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie **Berechtigungen festlegen**auswählen.
     
-    - Nachdem eine Bezeichnung mit cloudbasierten Schutzeinstellungen migriert wurde, ist der sich ergebende Bereich der Schutz Vorlage der Bereich, der in der Azure-Portal definiert ist (oder mithilfe des PowerShell-Moduls aipservice), und der Bereich, der in den Admin Centers definiert ist. 
+- Nachdem eine Bezeichnung mit cloudbasierten Schutzeinstellungen migriert wurde, ist der sich ergebende Bereich der Schutz Vorlage der Bereich, der in der Azure-Portal definiert ist (oder mithilfe des PowerShell-Moduls aipservice), und der Bereich, der in den Admin Centers definiert ist. 
 
-- Das Azure-Portal zeigt nur den Anzeigenamen der jeweiligen Bezeichnung an, den Sie bearbeiten können. Benutzer sehen diesen Bezeichnungs Namen in ihren apps. Die Admin-Centers zeigen sowohl den Anzeigenamen als auch den Bezeichnungsnamen an. Der Name der Bezeichnung ist der anfängliche Name, den Sie beim Erstellen der Bezeichnung angeben. diese Eigenschaft wird vom Back-End-Dienst zu Identifikationszwecken verwendet. Wenn Sie Ihre Bezeichnungen migrieren, bleibt der Anzeige Name unverändert, und der Bezeichnungs Name wird im Azure-Portal in die Bezeichnungs-ID umbenannt.
+### <a name="display-names"></a>Anzeigen Amen
 
-- Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Definieren Sie neue lokalisierte Zeichen folgen für die migrierten Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und dem *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
+Das Azure-Portal zeigt nur den Anzeigenamen der jeweiligen Bezeichnung an, den Sie bearbeiten können. Benutzer sehen diesen Bezeichnungs Namen in ihren apps. 
 
-- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. Wenn Sie jedoch eine migrierte Bezeichnung in einem der Admin Center bearbeiten, müssen Sie zum Bereich Azure-Portal, **Azure Information Protection-vereinheitlichte Bezeichnung** zurückkehren und **veröffentlichen**auswählen. Diese zusätzliche Aktion ist erforderlich, damit die Azure Information Protection-Clients (klassisch) die Bezeichnungs Änderungen übernehmen können.
+Die Admin-Centers zeigen sowohl den Anzeigenamen als auch den Bezeichnungsnamen an. Der Name der Bezeichnung ist der anfängliche Name, den Sie beim Erstellen der Bezeichnung angeben. diese Eigenschaft wird vom Back-End-Dienst zu Identifikationszwecken verwendet. Wenn Sie Ihre Bezeichnungen migrieren, bleibt der Anzeige Name unverändert, und der Bezeichnungs Name wird im Azure-Portal in die Bezeichnungs-ID umbenannt.
+
+#### <a name="conflicting-display-names"></a>Widersprüchliche anzeigen Amen
+
+Stellen Sie vor dem Migrieren sicher, dass nach Abschluss der Migration keine Konflikt verursachenden anzeigen Amen vorhanden sind. Anzeigen Amen an derselben Stelle in der Beschriftungs Hierarchie müssen eindeutig sein. 
+
+Sehen Sie sich beispielsweise die folgende Liste von Bezeichnungen an:
+
+- **Öffentlich**
+- **Allgemein**
+- **Vertraulich**
+    - **Vertrauen\hr**
+    - **Vertrauen\finance**
+- **Geheimnis**
+    - **Secret\hr**
+    - **Secret\finance**
+    
+In dieser Liste sind **Public,** **General,** **Confidential** und **Secret** alle übergeordneten Bezeichnungen und dürfen keine doppelten Namen aufweisen. Darüber hinaus befinden sich " **confitial\hr** " und " **confitial\finance** " in der Hierarchie und können auch keine doppelten Namen aufweisen.
+
+Untergeordnete Bezeichnungen über verschiedene übergeordnete Elemente, wie z. b. **confitial\hr** und **secret\hr** , befinden sich jedoch nicht an derselben Stelle in der Hierarchie und können daher dieselben individuellen Namen aufweisen. 
+
+### <a name="localized-strings-in-labels"></a>Lokalisierte Zeichen folgen in Bezeichnungen
+
+Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Definieren Sie neue lokalisierte Zeichen folgen für die migrierten Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und dem *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
+
+### <a name="editing-migrated-labels-in-the-admin-centers"></a>Bearbeiten von migrierten Bezeichnungen in admin Centers
+
+Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. 
+
+Wenn Sie jedoch eine migrierte Bezeichnung in einem der Admin Center bearbeiten, müssen Sie zum Bereich Azure-Portal, **Azure Information Protection-vereinheitlichte Bezeichnung** zurückkehren und **veröffentlichen**auswählen. 
+
+Diese zusätzliche Aktion ist erforderlich, damit die Azure Information Protection-Clients (klassisch) die Bezeichnungs Änderungen übernehmen können.
 
 ### <a name="label-settings-that-are-not-supported-in-the-admin-centers"></a>In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen
 
@@ -99,9 +146,9 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
 |Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Benutzerdefinierter Schrift Grad und benutzerdefinierte Schriftfarbe durch RGB-Code für visuelle Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)  |Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen. <br /><br /> Der **benutzerdefinierte** Schriftart Typen (Arial, Courier und andere) wird vom Unified-Bezeichnungs Client nicht unterstützt.|
-|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Ja|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
-|Visuelle Kennzeichnungen pro App|Ja|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
+|Benutzerdefinierter Schriftart Name, Größe und benutzerdefinierte Schriftfarbe durch RGB-Code für visuelle Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)  |Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Um diese Optionen zu ändern, können Sie die Azure-Portal oder das Cmdlet [**New-Label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center verwenden. Um die Verwaltung zu vereinfachen, sollten Sie die Farbe in eine der aufgelisteten Optionen in den Admin Center ändern. <br /><br />**Hinweis**: das Security & Compliance Center Admin Center unterstützt eine vordefinierte Liste der Schriftart Definitionen. Benutzerdefinierte Schriftarten und Farben werden nur über das Cmdlet " [**New-Label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center" unterstützt.|
+|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile) |Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen als Text auf Clients angezeigt, anstatt die dynamischen Werte anzuzeigen. <!--Before you publish the label, edit the strings to remove the variables.-->|
+|Visuelle Kennzeichnungen pro App|Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, wird die Konfiguration der visuellen Markierung als Variablen Text anstelle der visuellen Kennzeichnungen angezeigt, die Sie für die Anzeige in den einzelnen apps konfiguriert haben.  <!--Publish this label only if it is suitable for all apps. We recommend editing the strings to remove the app variables if needed.-->|
 |"Nur für mich" Schutz |Ja|Die Admin Center erlauben Ihnen nicht, die von Ihnen geltenden Verschlüsselungseinstellungen zu speichern, ohne Benutzer anzugeben. Im Azure-Portal führt diese Konfiguration zu einer Bezeichnung, die den [Schutz "nur für mich](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)" betrifft. <br /><br /> Erstellen Sie alternativ eine Bezeichnung, die die Verschlüsselung anwendet und einen Benutzer mit beliebigen Berechtigungen angibt, und bearbeiten Sie dann die zugehörige Schutz Vorlage mithilfe von PowerShell. Verwenden Sie zunächst das Cmdlet [New-aipservicerighundefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition) (siehe Beispiel 3), und legen Sie dann [-aipservicetemplateproperty](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples) mit dem Parameter *rightiondefinitions* fest.|
 |Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
@@ -117,11 +164,14 @@ Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht auf
 
 |Schutzeinstellung für eine Bezeichnung |Azure Information Protection-Client (klassisch) |Azure Information Protection-Client für einheitliche Bezeichnungen| Office-Apps mit integrierter Bezeichnungsfunktion
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
-|Azure (Cloudschlüssel) mit benutzerdefinierten Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer:| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> - Benutzer werden nach benutzerdefinierten Berechtigungen gefragt, die dann als Schutz mit einem cloudbasierten Schlüssel angewendet werden| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> - Benutzer werden nach benutzerdefinierten Berechtigungen gefragt, die dann als Schutz mit einem cloudbasierten Schlüssel angewendet werden|Wird in Word, Excel, PowerPoint und Outlook angezeigt: <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – Benutzer werden nicht nach benutzerdefinierten Berechtigungen gefragt, und es wird kein Schutz angewendet <br /><br /> – Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1)|
 |HYOK (AD RMS) mit Vorlage:| Wird in Word, Excel, PowerPoint, Outlook und im Datei-Explorer angezeigt<br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– HYOK-Schutz wird auf Dokumente und E-Mails angewendet | Wird in Word, Excel, PowerPoint, Outlook und im Datei-Explorer angezeigt  <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen |Wird in Word, Excel, PowerPoint und Outlook angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1) |
 |HYOK (AD RMS) mit benutzerdefinierten Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer:| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt<br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – HYOK-Schutz wird auf Dokumente und E-Mails angewendet| Wird in Word, Excel und PowerPoint angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen|Wird in Word, Excel und PowerPoint angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen |
 |HYOK (AD RMS) mit benutzerdefinierten Berechtigungen für Outlook:|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br />– „Nicht weiterleiten“ mit HYOK-Schutz wird auf E-Mails angewendet|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1)|
 
+<!-- removed
+|Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key|Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
+
+ -->
 ###### <a name="footnote-1"></a>Fußnote 1
 
 In Outlook wird der Schutz mit einer Ausnahme beibehalten: Wenn eine e-Mail mit der Option nur verschlüsseln geschützt wurde, wird dieser Schutz entfernt.

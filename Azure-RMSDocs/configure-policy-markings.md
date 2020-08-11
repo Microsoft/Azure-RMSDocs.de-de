@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5ff7dc706d272228892b238da99a008ed626e522
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: a532416acd134c2cb08117af2951aa1fef23ba82
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927368"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073549"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -67,7 +67,7 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 
 Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine Bezeichnung zu konfigurieren.
 
-1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
 
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
@@ -100,7 +100,7 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 - `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
 > [!NOTE]
->Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet. Wenn Sie z. b. die Zeichenfolge `Document: ${Item.Name}  Classification: ${Item.Label}` für die Fußzeile der **allgemeinen** Bezeichnung angeben, wird der FooterText, der auf ein Dokument mit dem Namen project.docx angewendet wird, **Dokument: project.docx Classification: General**.
+>Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet.
 
 <!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
 > Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 

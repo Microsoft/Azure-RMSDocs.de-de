@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren zum Bereitstelle
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 010471368d219cc2ba45d24744a17c09ca83b85d
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 3afb97e9094d74eb98b67b375def7a24f6dcc104
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802316"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073685"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -34,9 +34,9 @@ ms.locfileid: "87802316"
 
 Die folgenden Voraussetzungen für den AIP Unified-Bezeichnungs Client sind zusätzlich zu den in [Azure Information Protection Anforderungen](../requirements.md)aufgeführten Elementen aufgeführt.
 
-|Anforderung  |Beschreibung  |
+|Anforderung  |BESCHREIBUNG  |
 |---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2. </br></br>Wenn dieses Framework fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden. </br></br>**Hinweis:** Obwohl es nicht empfohlen wird, können Sie diese Voraussetzung umgehen, wenn Sie den Setup-Assistenten mit einem [benutzerdefinierten Installationsparameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter)verwenden.        |
+|**Microsoft .NET Framework 4.6.2**     | Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2. </br></br>Wenn dieses Framework fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.       |
 |**Microsoft .NET Framework 4.5.2**     | Wenn der Azure Information Protection Viewer separat installiert wird, ist für die Viewer-Anwendung mindestens eine Version von Microsoft .NET Framework 4.5.2 erforderlich. </br></br>**Wichtig:** Wenn dieses Framework für den Viewer fehlt, wird es vom ausführbaren Installationsprogramm *nicht* heruntergeladen oder installiert.        |
 |**Windows PowerShell-Mindestversion 4,0**     |   Das PowerShell-Modul für den Client erfordert eine Mindestversion von Windows PowerShell 4,0, die unter Umständen unter älteren Betriebssystemen installiert werden muss. </br></br>Weitere Informationen finden Sie unter [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Installieren von Windows PowerShell 4.0). </br></br>**Wichtig:** Diese Voraussetzung wird vom Installationsprogramm *nicht* überprüft oder installiert. Zum Überprüfen, welche Version von Windows PowerShell auf dem Computer ausgeführt wird, geben Sie `$PSVersionTable` in einer PowerShell-Sitzung ein.      |
 |**Bildschirmauflösung von mehr als 800 × 600**    |     Bei einer Auflösung von 800 × 600 und niedriger kann das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** nicht vollständig angezeigt werden, wenn Sie im Datei-Explorer mit der rechten Maustaste auf eine Datei oder einen Ordner klicken.    |
@@ -54,14 +54,14 @@ Für Office-Versionen 2013 und höher wird empfohlen, die Gruppenrichtlinie so z
 
     Geben Sie die folgenden programmgesteuerten Bezeichner (ProgID) für AIP an, und legen Sie die Option auf **1 fest: das Add-in ist immer aktiviert**.
 
-    |Anwendung  |ProgID  |
+    |Application  |ProgID  |
     |---------|---------|
     |Word     |     `MSIP.WordAddin`    |
     |Excel     |  `MSIP.ExcelAddin`       |
     |PowerPoint     |   `MSIP.PowerPointAddin`      |
     | | | 
 
-## <a name="applications"></a>Applications
+## <a name="applications"></a>Anwendungen
 
 Der Azure Information Protection Unified Label-Client kann Dokumente und e-Mails mit den Office-Anwendungen Word, Excel, PowerPoint und Outlook aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
@@ -201,7 +201,10 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     Möglicherweise müssen Sie zusätzliche Installationsparameter angeben. Weitere Informationen finden Sie in den [Anweisungen zum Installationsprogramm für ausführbare](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer)Dateien.
 
     > [!NOTE]
-    > Standardmäßig ist die Option zur **Verbesserung Azure Information Protection durch das Senden von Nutzungsstatistiken an die Microsoft** -Installation aktiviert. Um diese Option zu deaktivieren, stellen Sie sicher, dass Sie **enabletelemetry = 0** anstelle von **allowtelemetry = 0**angeben.
+    > Standardmäßig ist die Option zur **Verbesserung Azure Information Protection durch das Senden von Nutzungsstatistiken an die Microsoft** -Installation aktiviert. Um diese Option zu deaktivieren, stellen Sie sicher, dass Sie eine der folgenden Aktionen ausführen:
+    >
+    >- Geben Sie während der Installation **allowtelemetry = 0** an.
+    >- Aktualisieren Sie den Registrierungsschlüssel nach der Installation wie folgt: **enabletelemetry = 0**.
     >
 
 ## <a name="next-steps"></a>Nächste Schritte

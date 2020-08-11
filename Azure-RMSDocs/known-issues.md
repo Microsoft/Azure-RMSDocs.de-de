@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
+ms.date: 08/10/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25b0b9eb6c59235bc880e5997c4698932230d387
-ms.sourcegitcommit: 3ad75dade373a0651d636533e85350cfece75120
+ms.openlocfilehash: 7c55faf0138e007ed1a8877ebb60cf01551c4dd3
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87378283"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073736"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme-Azure Information Protection
 
@@ -87,7 +87,7 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 |Funktion  |Bekannte Probleme  |
 |---------|---------|
 |**Mehrere Versionen von Office**    | Die Azure Information Protection Clients, einschließlich der klassischen und einheitlichen Bezeichnung, unterstützen nicht mehrere Office-Versionen auf demselben Computer oder das Wechseln von Benutzerkonten in Office.       |
-|**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist, wird die Azure Information Protection Leiste möglicherweise in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt. </br></br>Um sicherzustellen, dass die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus.**    |
+|**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist: </br></br>-Bei Ihren Office-Apps können Leistungsprobleme auftreten.</br>-Die Azure Information Protection Leiste kann in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt werden. </br></br>Um eine konsistente Leistung sicherzustellen und die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus, um das beste Aussehen** zu erzielen.    |
 |**Unterstützung von "unm" in Office 2016**| Die [drmencryptproperty](https://docs.microsoft.com/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) -Registrierungs Einstellung, die die metadatenverschlüsselung in Office 2016 steuert, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
 |**Inhalts Markierungen in Word**    | Azure Information Protection Inhalts [Markierungen](configure-policy-markings.md) werden möglicherweise in den Microsoft Word-Fußzeilen ausgeblendet, wenn der Fußzeile auch eine Tabelle enthält. Weitere Informationen finden Sie unter [Wenn visuelle Kennzeichnungen angewendet werden](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**An e-Mails angefügte Dateien** |Aufgrund einer Einschränkung in den jüngsten Windows-Updates, wenn [Microsoft Outlook durch Azure Rights Management geschützt ist](office-apps-services-support.md), können Dateien, die an e-Mails angefügt sind, nach dem Öffnen der Datei gesperrt werden. |

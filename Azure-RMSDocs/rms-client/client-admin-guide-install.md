@@ -4,7 +4,7 @@ description: Eine Anleitung und Informationen für Administratoren zum Bereitste
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/08/2020
+ms.date: 08/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e37f2f3c56bb30075802ae5126179e094d41553
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: e97b66acfc56812f087246128c1bb15c2f22ae40
+ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048985"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88073702"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -200,9 +200,14 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     |Office 2010|Windows 8.1 und Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB2843630 oder KB2919355 nicht installiert sind.|
     |Office 2010|Windows 8 und Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren|
 
-3. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection.msi /quiet`. Sie müssen jedoch möglicherweise zusätzliche Installationsparameter angeben, die in den Anweisungen für den [ausführbaren Installer](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) dokumentiert sind, mit einer Ausnahme:
+3. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection.msi /quiet`. Allerdings müssen möglicherweise weitere Installationsparameter angegeben werden, die in den [Anweisungen zum ausführbaren Installationsprogramm](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) dokumentiert sind.
 
-    - Anstatt **allowtelemetry = 0** zum Deaktivieren der Installationsoption zu verwenden, um die **Azure Information Protection zu verbessern, indem Sie Nutzungsstatistiken an Microsoft senden**, geben Sie **enabletelemetry = 0**an.
+    > [!NOTE]
+    > Standardmäßig ist die Option zur **Verbesserung Azure Information Protection durch das Senden von Nutzungsstatistiken an die Microsoft** -Installation aktiviert. Um diese Option zu deaktivieren, stellen Sie sicher, dass Sie eine der folgenden Aktionen ausführen:
+    >
+    >- Geben Sie während der Installation **allowtelemetry = 0** an.
+    >- Aktualisieren Sie den Registrierungsschlüssel nach der Installation wie folgt: **enabletelemetry = 0**.
+    >
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Installieren der Azure Information Protection-Überprüfung
 
