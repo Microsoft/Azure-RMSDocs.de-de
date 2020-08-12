@@ -318,11 +318,7 @@
                     - name: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
                       href: ./rms-client/upgrade-client-app.md
         - name: Azure Information Protection-Apps für iOS und Android
-          items:
-            - name: Übersicht
-              href: ./rms-client/mobile-app-faq.md
-            - name: Einstieg in die Verwendung mobiler AIP-Apps
-              href: ./rms-client/mobile-app-get-started.md
+          href: ./rms-client/mobile-app-faq.md
         - name: Unterstützte PDF-Reader
           href: ./rms-client/protected-pdf-readers.md
         - name: Anmerkungen zur Bereitstellung des RMS-Clients
