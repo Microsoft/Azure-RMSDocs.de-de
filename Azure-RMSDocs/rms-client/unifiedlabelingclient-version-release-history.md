@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad63ebcb4ab5be291d669ac6939279740be6efc1
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: a02fabd167fdbe7f0e2cef826c68920c164a20e4
+ms.sourcegitcommit: c0cd6591a44b213a68a6d1bb47acbb344bb94783
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868789"
+ms.lasthandoff: 08/16/2020
+ms.locfileid: "88256858"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -67,6 +67,8 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 Unified-Beschriftungs Scanner und Client Version 2.7.99.0
 
+**Veröffentlicht** 07/20/2020
+
 **Korrekturen und Verbesserungen:**
 
 Behobene Probleme bei Datei Bezeichnungs Aktionen für **neue Beschriftungs** Überwachungs Protokolle.
@@ -111,7 +113,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
 
