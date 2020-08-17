@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection-Client – Administratorhandbuch
 description: Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung des Azure Information Protection-Clients für Windows zuständig sind.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a913dfbd6e9e992ee90179a59f7351345d1476e1
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: c5a7a774e06f53793151d8de02380b23b0083c4f
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264394"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -28,10 +28,12 @@ ms.locfileid: "86048916"
 
 >[!NOTE] 
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
+> **Um den klassischen AIP-Client** bereitzustellen, öffnen Sie ein Support Ticket, um den Download Zugriff zu erhalten.
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen erhalten möchten als im [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md) vorhanden sind. 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -175,7 +177,7 @@ Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch n
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Beispiel:
 
 - Anweisungen für Onlinebenutzer: [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md)
 
@@ -187,7 +189,7 @@ Das Azure Information Protection-Team aktualisiert den Azure Information Protect
 
 Wenn Sie Windows Update verwenden, aktualisiert der Azure Information Protection-Client automatisch die Version für die allgemeine Verfügbarkeit des Clients, unabhängig davon, wie der Client installiert wurde. Neue Clientreleases werden wenige Wochen nach der Release im Katalog veröffentlicht.
 
-Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) herunterladen. Installieren Sie dann die neue Version, um ein Upgrade des Clients auszuführen. Vorschauversionen lassen sich nur mit dieser Methode aktualisieren.
+Alternativ können Sie den Client manuell mit einer neueren releaseinstallation aktualisieren. <!--by downloading the new release from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018). Then install the new version to upgrade the client. -->Vorschauversionen lassen sich nur mit dieser Methode aktualisieren.
 
 Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Beispielsweise haben Sie die aktuelle Vorschauversion zu Testzwecken installiert und müssen nun auf die aktuelle allgemein verfügbare Version zurückgreifen.
 
@@ -216,9 +218,9 @@ Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden 
 
 2. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
 
-3. Aktualisieren Sie den Azure Information Protection Client, indem Sie die aktuelle allgemein verfügbare Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)installieren.
+3. Aktualisieren Sie den Azure Information Protection Client, indem Sie die aktuelle Version der allgemeinen Verfügbarkeit (GA) installieren. <!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018).-->
 
-4. Führen Sie den Befehl „Update-AIPScanner“ in einer PowerShell-Sitzung mit dem Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile Europe`
+4. Führen Sie in einer PowerShell-Sitzung den Befehl **Update-aipscanner** mit dem gleichen Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile Europe`
 
 5. Nur wenn die Überprüfung auf einem nicht verbundenen Computer ausgeführt wird: führen Sie nun [Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) aus, und geben Sie die Datei an, die die exportierten Einstellungen enthält.
 
@@ -251,7 +253,7 @@ Wenn Sie wissen, dass Sie die Überprüfungs Konfigurations Datenbank für die G
 
 3. Installieren Sie den Scanner mithilfe des Befehls [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), und geben Sie dabei die neue SQL Server-Instanz und den Profilnamen an.
 
-4. Optional: Wenn Sie nicht möchten, dass der Scanner alle Dateien erneut scannt, exportieren Sie die Tabelle scannerfiles, und importieren Sie Sie in die neue Datenbank.
+4. **Optional:** Wenn Sie nicht möchten, dass der Scanner alle Dateien erneut scannt, exportieren Sie die Tabelle scannerfiles, und importieren Sie Sie in die neue Datenbank.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 

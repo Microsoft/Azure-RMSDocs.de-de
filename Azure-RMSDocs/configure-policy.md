@@ -1,9 +1,9 @@
 ---
 title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den Azure Information Protection-Client (klassisch) müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
-author: mlottner
-ms.author: mlottner
-ms.date: 1/06/2020
+author: batamig
+ms.author: bagol
+ms.date: 08/17/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f1c423aef10c23d84b6f8fcd2eac19872fdaa35b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264326"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -32,7 +32,7 @@ ms.locfileid: "86047948"
 > 
 > Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter Informationen zu [Sensitivitäts Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) aus der Dokumentation zur Microsoft 365 Konformität.
 
-Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/download/details.aspx?id=53018)installiert ist.
+Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der Azure Information Protection-Client installiert ist.
 
 Die Richtlinie enthält Bezeichnungen und Einstellungen:
 
@@ -127,7 +127,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - Ausführen der [PowerShell-Cmdlets](./rms-client/client-admin-guide-powershell.md) zur Bezeichnung und zum Schutz (Get-AIPFileStatus, Set-AIPFileClassification und Set-AIPFileLabel).
 
-- Alle 24 Stunden.
+- Alle 24 Stunden
 
 - Für die [Azure Information Protection-Überprüfung](deploy-aip-scanner.md): Wenn der Dienst gestartet wird (wenn die Richtlinie älter als eine Stunde ist) und jede Stunde während des Vorgangs.
 

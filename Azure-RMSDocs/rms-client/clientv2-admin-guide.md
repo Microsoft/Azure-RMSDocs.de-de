@@ -1,24 +1,24 @@
 ---
 title: Azure Information Protection Unified Bezeichnung Client Admin Guide
 description: Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung des Azure Information Protection Unified Bezeichnung-Clients für Windows verantwortlich sind.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 06/16/2020
+ms.date: 08/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcd773904dc9570715313a856d512c0bce54811c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 62d1b496df1eb773fdb59b8b4e1dc8c39dd29ca4
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264309"
 ---
-# <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
+# <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 >
@@ -28,7 +28,7 @@ ms.locfileid: "86048764"
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified Bezeichnung-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie weitere technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzerhandbuch](clientv2-user-guide.md)zu finden. 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -158,7 +158,7 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
 
 - Online Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung-Benutzerhandbuch](clientv2-user-guide.md)
 
@@ -225,7 +225,7 @@ Wenn Sie den Scanner mithilfe der Vorschauversion des Unified-Bezeichnungs Clien
 
 2. Aktualisieren Sie auf den Azure Information Protection Unified-Bezeichnungs Client, indem Sie den Unified-Bezeichnungs Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren.
 
-3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`
+3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`.
     
     In diesem Schritt wird eine neue Datenbank mit dem Namen erstellt **AIPScannerUL_ \<profile_name> **
 
@@ -271,7 +271,7 @@ Verwenden Sie eine der folgenden Optionen zur Deinstallation des Clients:
 
 - Führen Sie die ausführbare Datei (z. b. **AzInfoProtection_UL.exe**) erneut aus, und klicken Sie auf der Seite **Setup ändern** auf **deinstallieren**. 
 
-- Führen Sie die ausführbare Datei mit **/uninstall** aus. Beispiel: `AzInfoProtection.exe /uninstall`
+- Führen Sie die ausführbare Datei mit **/uninstall** aus. Beispiel: `AzInfoProtection_UL.exe /uninstall`
 
 ## <a name="next-steps"></a>Nächste Schritte
 Informationen zum Installieren des-Clients finden Sie unter [install the Azure Information Protection Unified Bezeichnung Client for users](clientv2-admin-guide-install.md).
