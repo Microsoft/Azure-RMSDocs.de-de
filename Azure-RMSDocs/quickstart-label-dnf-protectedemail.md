@@ -4,18 +4,18 @@ description: Konfigurieren Sie eine Bezeichnung, die eine E-Mail für einen Benu
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/20/2020
+ms.date: 08/04/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2744289d227127b007cfc022cfab8723dfbdf669
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 9f7e93b8053779b4e3f55d2a1c8d20967ae5b441
+ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927861"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87802299"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
@@ -48,7 +48,7 @@ Voraussetzungen für diesen Schnellstart:
 |**AIP zum Azure-Portal hinzugefügt**    |  Sie haben den Azure Information Protection-Bereich zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist. </br></br>Weitere Informationen finden Sie unter [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md).       |
 |**Eine vorhandene Azure Information Protection-Bezeichnung, die konfiguriert werden soll**     | Verwenden Sie eine der Standardbezeichnungen oder eine von Ihnen erstellte Bezeichnung. Weitere Informationen finden Sie unter [Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer](quickstart-label-specificusers.md). |
 |**Klassischer Client installiert**    |   Damit Sie die neue Bezeichnung testen können, muss der klassische Client auf Ihrem Computer installiert sein. </br></br>Der klassische Azure Information Protection-Client gilt ab März 2021 als veraltet. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.  |
-|**Ein Windows-Computer, der bei Office-Apps angemeldet ist** |Um die neue Bezeichnung testen zu können, benötigen Sie einen Computer, auf dem Windows ausgeführt wird (mindestens Windows 7 mit Service Pack 1). </br></br>Melden Sie sich auf diesem Computer bei einer der folgenden Office-App-Versionen an: </br>– Office-Apps mit Mindestversion 1805, Build 9330.2078 von [Microsoft 365 Apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename), wenn Ihnen eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde. </br>- [Microsoft 365 Apps for Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). </br>– Office Professional Plus 2019. </br>– Office Professional Plus 2016.</br>– Office Professional Plus 2013 mit Service Pack 1. </br>– Office Professional Plus 2010 mit Service Pack 2.|
+|**Ein Windows-Computer, der bei Office-Apps angemeldet ist** |Um die neue Bezeichnung testen zu können, benötigen Sie einen Computer, auf dem Windows ausgeführt wird (mindestens Windows 7 mit Service Pack 1). </br></br>Melden Sie sich auf diesem Computer bei einer der folgenden Office-App-Versionen an: </br>– Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn Ihnen eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde </br>– Office 365 ProPlus </br>– Office Professional Plus 2019. </br>– Office Professional Plus 2016.</br>– Office Professional Plus 2013 mit Service Pack 1. </br>– Office Professional Plus 2010 mit Service Pack 2.|
 | | |
 
 Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
