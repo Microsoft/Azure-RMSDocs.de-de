@@ -1,6 +1,6 @@
 ---
 title: 'Vorgehensweise: Registrieren Ihrer App bei Azure AD – AIP'
-description: Beschreibt die Grundlagen der Benutzerauthentifizierung für Ihre RMS-fähige Anwendung.
+description: Erfahren Sie mehr über die APP-Registrierung und die RMS-Aktivierung im Azure-Portal und die Benutzerauthentifizierung mit der Azure Active Directory Authentication Library (Adal).
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 09823af031db2968c951c6c3610bc14e6a31bd17
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135639"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564398"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS
 
@@ -70,9 +70,9 @@ Diese stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Porta
 > [!NOTE]
 > Der **Bereich** wird aktuell nicht verwendet, kann aber verwendet werden und ist daher für die zukünftige Verwendung reserviert.
 
-    Android: `msauth://packagename/Base64UrlencodedSignature`
+Android: `msauth://packagename/Base64UrlencodedSignature`
 
-    iOS: `<app-scheme>://<bundle-id>`
+iOS: `<app-scheme>://<bundle-id>`
 
 > [!NOTE]
 > Bei den Azure RMS- und Azure AD-Workflows tritt wahrscheinlich ein Fehler auf, und diese Workflows werden von Microsoft nicht unterstützt, wenn Ihre App diesen Richtlinien nicht entspricht. Darüber hinaus kann es einen Verstoß gegen die Rights Management License Agreement (RMLA) darstellen, wenn in einer Produktions-App eine ungültige Client-ID verwendet wird.

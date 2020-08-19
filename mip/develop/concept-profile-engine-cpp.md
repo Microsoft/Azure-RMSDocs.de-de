@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 193b65a392060e38731a1a8eda4c7565e82ca0df
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 51934a4a285368a00aaf23780c7fd6c2f315ed7d
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764125"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563952"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK: Konzepte der Profile- und Engine-Objekte
 
@@ -31,15 +31,15 @@ Das Profil selbst bietet die folgenden Funktionen:
 
 - Definiert, ob der Zustand im Arbeitsspeicher geladen oder auf dem Datenträger persistent gespeichert werden soll, und ob er ggf. auf dem Datenträger gespeichert werden soll.
 - Definiert den `mip::ConsentDelegate` , der für Zustimmungs Vorgänge verwendet werden soll.
-- Definiert die `mip::FileProfile::Observer` -Implementierung, die für asynchrone Rückrufe für Profil Vorgänge verwendet wird.
+- Definiert die- `mip::FileProfile::Observer` Implementierung, die für asynchrone Rückrufe für Profil Vorgänge verwendet wird.
 
 ### <a name="profile-settings"></a>Profileinstellungen
 
-- `MipContext`: Das `MipContext` -Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
+- `MipContext`: Das- `MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
 - `CacheStorageType`: Definiert, wie der Zustand gespeichert wird: im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger und verschlüsselt.
-- `consentDelegate`: Ein frei gegebener Zeiger der [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)-Klasse.
-- `observer`: Ein frei gegebener Zeiger auf die `Observer` Profil Implementierung ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)in [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
-- `applicationInfo`: Ein [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) -Objekt. Informationen über die Anwendung, die das SDK nutzt, das Ihren Azure Active Directory Anwendungs Registrierungs-ID und-Namen entspricht.
+- `consentDelegate`: Ein frei gegebener Zeiger der-Klasse [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md) .
+- `observer`: Ein frei gegebener Zeiger auf die Profil `Observer` Implementierung (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md) , [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md) und [`FileProfile`](reference/class_mip_fileprofile_observer.md) ).
+- `applicationInfo`: Ein- [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) Objekt. Informationen über die Anwendung, die das SDK nutzt, das Ihren Azure Active Directory Anwendungs Registrierungs-ID und-Namen entspricht.
 
 ## <a name="engines"></a>Motoren
 
@@ -56,7 +56,7 @@ Es gibt drei Engineklassen im SDK: eine für jede API. Die folgende Liste enthä
   - `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für die geladene Engine ab.
   - `CreateFileHandler()`: Erstellt einen `mip::FileHandler` für eine bestimmte Datei oder einen Datenstrom.
 
-Zum Erstellen einer Engine muss ein bestimmtes Engine-Einstellungs Objekt übergeben werden, das die Einstellungen für den Typ der zu erstellenden Engine enthält. Das Einstellungs Objekt ermöglicht es dem Entwickler, Details über die Engine-ID, `mip::AuthDelegate` die Implementierung, das Gebiets Schema und die benutzerdefinierten Einstellungen sowie andere API-spezifische Details anzugeben.
+Zum Erstellen einer Engine muss ein bestimmtes Engine-Einstellungs Objekt übergeben werden, das die Einstellungen für den Typ der zu erstellenden Engine enthält. Das Einstellungs Objekt ermöglicht es dem Entwickler, Details über die Engine-ID, die Implementierung, das Gebiets Schema `mip::AuthDelegate` und die benutzerdefinierten Einstellungen sowie andere API-spezifische Details anzugeben.
 
 ### <a name="engine-states"></a>Enginezustände
 
@@ -65,26 +65,26 @@ Eine Engine kann einen von zwei Zuständen aufweisen:
 - `CREATED`: „Erstellt“ gibt an, dass das SDK über ausreichende lokale Zustandsinformationen nach dem Aufrufen der erforderlichen Back-End-Dienste verfügt.
 - `LOADED`: Das SDK hat die erforderlichen Datenstrukturen erstellt, damit die Engine betriebsbereit ist.
 
-Eine Engine muss sowohl erstellt als auch geladen werden, um Vorgänge ausführen zu können. Die `Profile`-Klasse stellt einige Engineverwaltungsmethoden bereit: `AddEngineAsync`, `RemoveEngineAsync` und `UnloadEngineAsync`.
+Eine Engine muss sowohl erstellt als auch geladen werden, um Vorgänge ausführen zu können. Die `Profile`-Klasse stellt einige Engineverwaltungsmethoden bereit: `AddEngineAsync`, `DeleteEngineAsync` und `UnloadEngineAsync`.
 
 In der folgenden Tabelle werden die möglichen Engine-Zustände und die möglichen Methoden zum Ändern des Status beschrieben:
 
-|         | Keine              | CREATED           | LOADED         |
-|---------|-------------------|-------------------|----------------|
-| Keine    |                   |                   | AddEngineAsync |
-| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
-| LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
+| Engine-Status | Keine              | CREATED           | LOADED         |
+|--------------|-------------------|-------------------|----------------|
+| Keine         |                   |                   | AddEngineAsync |
+| CREATED      | DeleteEngineAsync |                   | AddEngineAsync |
+| LOADED       | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### <a name="engine-id"></a>Engine-ID
 
-Jede Engine besitzt einen eindeutigen Bezeichner (`id`), der in allen Engineverwaltungsvorgängen verwendet wird. Die Anwendung kann eine `id`bereitstellen, oder das SDK kann eines generieren, wenn es nicht von der Anwendung bereitgestellt wird. Alle anderen Engineeigenschaften (z.B. die E-Mail-Adresse in den Identitätsinformationen) sind nicht transparente Nutzlasten für das SDK. Das SDK führt KEINE Logik aus, um die Eindeutigkeit der anderen Eigenschaften zu bewahren oder andere Einschränkungen zu erzwingen.
+Jede Engine besitzt einen eindeutigen Bezeichner (`id`), der in allen Engineverwaltungsvorgängen verwendet wird. Die Anwendung kann eine bereitstellen `id` , oder das SDK kann eines generieren, wenn es nicht von der Anwendung bereitgestellt wird. Alle anderen Engineeigenschaften (z.B. die E-Mail-Adresse in den Identitätsinformationen) sind nicht transparente Nutzlasten für das SDK. Das SDK führt KEINE Logik aus, um die Eindeutigkeit der anderen Eigenschaften zu bewahren oder andere Einschränkungen zu erzwingen.
 
 > [!IMPORTANT]
 > Verwenden Sie als bewährte Vorgehensweise eine Engine-ID, die für den Benutzer eindeutig ist, und verwenden Sie diese, wenn der Benutzer einen Vorgang mit dem SDK ausführt. Wenn Sie eine vorhandene Engine-ID nicht bereitstellen, führt dies zu zusätzlichen Dienst Roundtrips zum Abrufen der Richtlinie und zum Abrufen von Lizenzen, die möglicherweise bereits für die vorhandene Engine zwischengespeichert wurden.
 
 ### <a name="engine-management-methods"></a>Engineverwaltungsmethoden
 
-Wie bereits erwähnt, gibt es drei Modul Verwaltungsmethoden im SDK: `AddEngineAsync`, `DeleteEngineAsync`und. `UnloadEngineAsync`
+Wie bereits erwähnt, gibt es drei Modul Verwaltungsmethoden im SDK: `AddEngineAsync` , `DeleteEngineAsync` und `UnloadEngineAsync` .
 
 #### <a name="addengineasync"></a>AddEngineAsync
 

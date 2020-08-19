@@ -1,6 +1,6 @@
 ---
 title: Versionshinweise
-description: SDK-Updates durch Revision, und andere Informationen für Entwickler.
+description: Weitere Informationen finden Sie in den Anmerkungen zu dieser Version des Microsoft Rights Management Service SDK v 2.1 Oktober 2019 und früheren Updates.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: bd2e9284eb43e319b6060c86ef2848c7a2c13b3a
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: b0bd50f739a98d261924e4dba96accc40e87e2bb
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971930"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563755"
 ---
-# <a name="release-notes"></a>Anmerkungen zu diesem Release
+# <a name="release-notes"></a>Versionshinweise
 
 Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases des RMS SDK 2.1.
 
@@ -82,14 +82,14 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 
 ## <a name="may-2015-update"></a>Mai 2015-Update
 
--   **Dienst-apps und cloudbasierter RMS** - [IPC\_Credential\_Symmetric\_Key](https://msdn.microsoft.com/library/dn133062.aspx) benötigt drei Teile von Informationen. symmetrischer Schlüssel, **appprincipalid**und **tenantbposid**. Dieser Artikel wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Dienst-apps und cloudbasierter RMS**  -  [IPC \_ Der \_ \_ symmetrische](https://msdn.microsoft.com/library/dn133062.aspx) Anmelde Informations Schlüssel benötigt drei Informationen: symmetrische Schlüssel, **appprincipalid**und **tenantbposid**. Dieser Artikel wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>April 2015-Update
 
 -   Die **Dokumentenverfolgung** ist jetzt über eine Reihe neuer APIs möglich. Weitere Informationen finden Sie unter nach [Verfolgen von Inhalten](tracking-content.md).
 -   **Verschlüsselungstyp**: Zur Auswahl des Verschlüsselungspakets wird jetzt die Steuerung auf API-Ebene unterstützt. Weitere Informationen finden Sie unter [Arbeiten mit der Verschlüsselung](working-with-encryption.md).
 
-    **Beachten Sie**  , dass in unserer API nicht mehr das Flag für die in **IPC\_\_Li als veraltet markierte\_Verschlüsselungs\_Algorithmen** verfügbar gemacht wird. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen. Bereits erstellte Anwendungen sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen. Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Weitere Informationen finden Sie unter [Arbeiten mit der Verschlüsselung](working-with-encryption.md).
+    **Hinweis**    Das Flag " **IPC \_ Li \_ deprecated \_ Encryption \_ Algorithmen** " wird in unserer API nicht mehr verfügbar gemacht. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen. Bereits erstellte Anwendungen sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen. Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Weitere Informationen finden Sie unter [Arbeiten mit der Verschlüsselung](working-with-encryption.md).
 
 -   **Servermodusanwendungen**, die **IPC\_API\_MODE\_SERVER** als [API-Moduswert](https://msdn.microsoft.com/library/hh535236.aspx) verwenden, benötigen kein Anwendungsmanifest mehr. Sie können Ihre Anwendung mit einem RMS-Produktionsserver testen. Beim Wechseln zur Produktionsumgebung müssen Sie keine Produktionslizenz beziehen. Weitere Informationen zu servermodusanwendungen finden Sie unter [Anwendungs Typen](application-types.md).
 -   **Protokollierung** wurde jetzt über die Datei- und Ereignisablaufverfolgung für Windows-Methoden implementiert.
@@ -119,7 +119,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
     In dieser Version hinzugefügte Funktionen:
 
-    **Hinweis** : weitere unterstützende Datentypen und Strukturen, die hier nicht aufgeführt sind, wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Artikel, die für dieses Release aktualisiert wurden, sind als **vorläufig markiert und können geändert werden**.
+    **Hinweis**   -Weitere unterstützende Datentypen und-Strukturen, die hier nicht aufgeführt sind, wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Artikel, die für dieses Release aktualisiert wurden, sind als **vorläufig markiert und können geändert werden**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -132,7 +132,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 ## <a name="april-2014-update"></a>April 2014-Update
 
 -   Die **Datei-API-Speicherverwendung**, insbesondere für große PFILE-Dateien, wurde erheblich verbessert.
--   Die **Inhalts-ID** ist nun über die Eigenschaft **IPC\_Li\_Content\_ID**beschreibbar. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
+-   Die **Inhalts-ID** ist nun über die Eigenschaft **IPC \_ Li \_ Content \_ ID**beschreibbar. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
 -   **Manifestanforderungen für die Produktion** – Wenn die RMS-fähige Anwendung bzw. der Diensts im Servermodus ausgeführt wird, ist kein Manifest mehr erforderlich. Weitere Informationen finden Sie unter [Anwendungs Typen](application-types.md).
 -   **Dokumentationsupdates**
 
@@ -148,7 +148,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 -   Auf **Windows 7 SP1- und Windows Server 2008 R2 SP1-Computern** ohne das Update [KB2533623](https://support.microsoft.com/kb/2533623) tritt möglicherweise der folgende Fehler beim Schutz von Office-Dateien auf: "Der Parameter ist falsch. Fehlercode: 0 x 80070057". Wenn dies angezeigt wird, installieren Sie das Update, und versuchen Sie es erneut. Wenn das Problem weiterhin auftritt, geben Sie uns Feedback zur Betaversion des RMS SDK unter <rmcstbeta@microsoft.com>.
 
-    **Beachten 2015 Sie**  , dass der Installationsprozess für dieses KB-Release eine Prüfung hinzugefügt wurde.
+    **Hinweis**    Ab Version April 2015 wurde dem Installationsvorgang für dieses KB eine Prüfung hinzugefügt.
 
 
 
@@ -176,7 +176,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 -   **Problem**: Bei der Entwicklung für mehrere Architekturen müssen Sie diese Anweisungen verwenden.
 
-    **Lösung**: Wenn\*Sie "ipcsecproc ISV. dll" für eine andere Architektur verwenden möchten (z. b. Wenn Sie das 64-Bit SDK auf einem 64-Bit-Computer installiert haben, aber jetzt auf einem 32-Bit-Computer bereitstellen möchten,\*der ipcsecproc ISV erfordert). dll) müssen Sie das 32-Bit-SDK auf einem anderen Computer installieren\*und die ipcsecproc ISV. dll-Dateien in den\\Ordner "% Program Files% Microsoft Information Protection und Control" Kopieren (der Standard Speicherort oder an der Stelle, an der Sie das SDK installiert haben).
+    **Lösung**: Wenn Sie die ipcsecproc- \*isv.dll für eine andere Architektur verwenden möchten (z. b. Wenn Sie das 64-Bit SDK auf einem 64-Bit-Computer installiert haben, aber jetzt auf einem 32-Bit-Computer bereitstellen möchten, für den ipcsecproc \*isv.dll erforderlich ist), Sie müssen das 32-Bit-SDK auf einem anderen Computer installieren und die ipcsecproc- \*isv.dll Dateien aus dem Ordner "% Program Files% \\ Microsoft Information Protection und Control" (dem Standard Speicherort oder wo Sie sich für die Installation des SDK ausgewählt haben) dorthin kopieren.
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -184,8 +184,8 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 **A**: Verwenden Sie 0 für das Standardgebietsschema. In diesem Fall sucht der AD RMS-Client 2.1 in der folgenden Reihenfolge nach Namen und Beschreibungen und ruft die erste verfügbare Sprache auf:
 
-    1 - User preferred LCID.
-    2 - System locale LCID.
-    3 - The first available language specified in the Rights Management Server (RMS) template.
+1. Vom Benutzer bevorzugte LCID.
+2. LCID des System Gebiets Schemas.
+3. Die erste verfügbare Sprache, die in der Vorlage für den Rights Management Server (RMS) angegeben ist.
 
 Wenn kein Name und keine Beschreibung abgerufen werden kann, wird ein Fehler zurückgegeben. Es kann nur ein Name und eine Beschreibung für eine bestimmte LCID vorhanden sein.

@@ -6,24 +6,24 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 4/16/2020
-ms.openlocfilehash: c10c13212bf19ea27442626aa4bd900aa57a340d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 12aa46260b9c1ed2bac5f1e02c1e358292e86835
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764144"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564380"
 ---
-# <a name="functions"></a>Functions
+# <a name="functions-c"></a>Funktionen (C)
 
 ## <a name="mip_cc_auth_callback"></a>mip_cc_auth_callback
 
 Rückruf Funktionsdefinition zum Abrufen des OAuth2-Tokens
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
-| identity | Die e-Mail-Adresse, für die das Token abgerufen wird. |
+| Identität | Die e-Mail-Adresse, für die das Token abgerufen wird. |
 | challenge | OAuth2 Challenge |
 | context | Nicht transparenter Anwendungskontext, der an die MIP-API übermittelt wurde, die zu diesem Authentifizierungs Rückruf geführt hat. |
 | zu "-Puffer" | Ausgeben Puffer, in den das Token kopiert wird. Wenn der Wert NULL ist, wird "actualbykensize" aufgefüllt, aber |
@@ -47,9 +47,9 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 Definition der Rückruffunktion für Zustimmung vom Benutzer für den Zugriff auf einen externen Dienst Endpunkt
 
-**Parameters**
+**Parameter**
 
-Parameter | BESCHREIBUNG
+Parameter | Beschreibung
 |---|---|
 | url | Die URL, für die das SDK Benutzer Zustimmung erfordert |
 
@@ -65,7 +65,7 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 
 Erstellen eines Wörterbuchs mit Zeichen folgen Schlüsseln/-Werten
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -90,7 +90,7 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 Schlüssel-Wert-Paare zum Verfassen eines Wörterbuchs erhalten
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -115,7 +115,7 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 Freigeben von Ressourcen, die einem Wörterbuch zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -129,7 +129,7 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 
 Rückruf Funktionsdefinition zum Ausgeben einer HTTP-Anforderung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -147,7 +147,7 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 Rückruf Funktionsdefinition für das Abbrechen einer HTTP-Anforderung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -163,7 +163,7 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 
 Erstellt einen HTTP-Delegaten, der zum Überschreiben des HTTP-Standard Stapels verwendet werden kann.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -186,7 +186,7 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 
 Benachrichtigt einen HTTP-Delegaten, dass eine HTTP-Antwort bereit ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -209,7 +209,7 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 Freigabe Ressourcen, die einem http-delegathandle zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -223,7 +223,7 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 
 Rückruf Funktionsdefinition für die Initialisierung der Protokollierung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -239,7 +239,7 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 
 Rückruf Funktionsdefinition zum Schreiben einer Log-Anweisung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -263,7 +263,7 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 Erstellt einen Logger-Delegaten, der zum Überschreiben der Standard Protokollierung von MIP verwendet werden kann
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -288,7 +288,7 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 Freigabe Ressourcen, die einem Protokollierungs delegathandle zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -302,7 +302,7 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 
 Erstellen eines MIP-Kontexts zum Verwalten des Zustands, der für alle Profil Instanzen verwendet wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -333,7 +333,7 @@ mip_cc_result MIP_CC_CreateMipContext(
 
 Erstellen eines MIP-Kontexts zum Verwalten des Zustands, der für alle Profil Instanzen verwendet wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -368,7 +368,7 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 Freigeben von Ressourcen, die einem MIP-Kontext zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -382,7 +382,7 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 
 Ruft den Typ des Schutzes ab, unabhängig davon, ob er durch eine RMS-Vorlage definiert ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -403,7 +403,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 Ruft die Größe des zum Speichern des Besitzers erforderlichen Puffers ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -424,7 +424,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 
 Ruft den Schutz Besitzer ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -451,7 +451,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 Ruft die Größe des zum Speichern des Namens erforderlichen Puffers ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -472,7 +472,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 
 Ruft den Schutz Namen ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -499,7 +499,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 Ruft die Größe des Puffers zum Speichern der Beschreibung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -520,7 +520,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 
 Ruft die Schutz Beschreibung ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -547,7 +547,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 Ruft Vorlagen-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -568,7 +568,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 
 Bezeichnungs-ID abrufen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -589,7 +589,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 Ruft Inhalts-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -610,7 +610,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 
 Ruft ab, ob der Inhalt eine Ablaufzeit aufweist oder nicht.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -631,7 +631,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 Ruft die Ablaufzeit des Schutzes ab (in Sekunden seit der Epoche).
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -652,7 +652,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 
 Ruft ab, ob der Offline Zugriff zulässig ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -673,7 +673,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 Ruft die Größe des für die Speicher Verweise erforderlichen Puffers ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -694,7 +694,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 
 Ruft Schutz Verweise ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -721,7 +721,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Double Key URL
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -742,7 +742,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrlSize(
 
 Ruft die doppelte Schlüssel-URL ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -769,7 +769,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDoubleKeyUrl(
 
 Freigeben von Ressourcen, die einer Schutz Beschreibung zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -783,7 +783,7 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 
 Zeichen folgen Liste erstellen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -808,7 +808,7 @@ mip_cc_result MIP_CC_CreateStringList(
 
 Zeichen folgen, die eine Zeichen folgen Liste bilden, erhalten
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -833,7 +833,7 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 Freigeben von Ressourcen, die einer Zeichen folgen Liste zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -847,7 +847,7 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 
 Rückruf Funktionsdefinition für das Senden einer asynchronen Aufgabe
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -863,7 +863,7 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 
 Rückruffunktion zum Abbrechen von Hintergrundaufgaben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -881,7 +881,7 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 
 Erstellt einen Aufgaben Verteiler Delegaten, der zum Überschreiben der standardmäßigen asynchronen Task Verarbeitung von MIP verwendet werden kann.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -906,7 +906,7 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 Benachrichtigt einen taskdispatcher-Delegaten, dass eine Aufgabe jetzt für die Ausführung im aktuellen Thread geplant ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -923,7 +923,7 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 Freigeben von Ressourcen, die einem Aufgaben Verteiler-delegathandle zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -937,7 +937,7 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 
 Erstellen eines Einstellungs Objekts, mit dem ein Schutzprofil erstellt wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -956,7 +956,7 @@ mip_cc_result MIP_CC_CreateTelemetryConfiguration(
 
 Festlegen eines telemetriehostnamens, der interne telemetrieeinstellungen außer Kraft setzt
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -979,7 +979,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 Überschreiben einer freigegebenen telemetriebibliothek festlegen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -989,7 +989,7 @@ Parameter | BESCHREIBUNG
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Diese Eigenschaft wird festgelegt, wenn ein Client über eine vorhandene Telemetrie-dll verfügt, die die C-API des Aria/1Ds SDK implementiert, die anstelle von mip_ClientTelemetry. dll verwendet werden soll. 
+**Hinweis**: Diese Eigenschaft wird festgelegt, wenn ein Client über eine vorhandene Telemetrie-dll verfügt, die die C-API des Aria/1Ds SDK implementiert, die anstelle von verwendet werden soll mip_ClientTelemetry.dll 
 
 ```c
 mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
@@ -1002,7 +1002,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 
 Standard-Telemetrie-HTTP-Stapel mit eigenem Client überschreiben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1025,7 +1025,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 Standardmäßiger asynchroner Aufgaben Verteiler mit eigenem Client überschreiben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1046,7 +1046,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetTaskDispatcherDelegate(
 
 Legt fest, ob für die telemetriekomponente ein Ping-Netzwerkstatus in einem Hintergrund Thread zulässig ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1069,7 +1069,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 
 Legt fest, ob die telemetriekomponente Caches auf den Datenträger schreiben darf.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1092,7 +1092,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 Legt fest, ob die telemetriekomponente Protokolle auf den Datenträger schreiben darf.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1115,7 +1115,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 
 Legt fest, ob eine Anwendung bzw. ein Benutzer die optionale Telemetrie deaktiviert hat.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1138,7 +1138,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 Legt benutzerdefinierte telemetrieeinstellungen fest
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1159,7 +1159,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 Legt eine telemetrieeigenschaft auf Mask fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1182,7 +1182,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_AddMaskedProperty(
 
 Freigeben von Ressourcen, die mit einer Schutzprofil Einstellung verknüpft sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1196,7 +1196,7 @@ void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemet
 
 Freigeben von Ressourcen, die einer Schutz-Engine zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1210,7 +1210,7 @@ void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 
 Erstellt einen Schutz Handler zum Veröffentlichen von neuem Inhalt.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1235,7 +1235,7 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
 
 Erstellt einen Schutz Handler für die Verwendung von vorhandenem Inhalt.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1260,7 +1260,7 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
 
 Ruft die Größe des für Engine-ID erforderlichen Puffers ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1281,7 +1281,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
 
 Ruft Engine-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1308,7 +1308,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
 
 Ruft die Anzahl von RMS-Vorlagen ab, die einer Schutz-Engine zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1333,7 +1333,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
 
 Sammlung von Vorlagen für Benutzer verfügbar machen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1362,7 +1362,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
 
 Liste der Rechte, die einem Benutzer für eine Bezeichnungs-ID erteilt werden
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1395,7 +1395,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
 
 Ruft die Größe der Client Daten ab, die einer Schutz-Engine zugeordnet sind.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1416,7 +1416,7 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
 
 Client Daten erhalten, die einer Schutz-Engine zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1443,11 +1443,11 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
 
 Erstellen Sie ein Einstellungs Objekt, das zum Erstellen einer neuen Schutz-Engine verwendet wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
-| identity | Identität, die Schutz-Engine zugeordnet wird |
+| Identität | Identität, die Schutz-Engine zugeordnet wird |
 | clientData | Anpassbare Client Daten, die neben der Engine gespeichert werden |
 | locale | Das Gebiets Schema, in dem Text Ergebnisse ausgegeben werden. |
 | EngineSettings | Ausgeben Neu erstellte Einstellungs Instanz |
@@ -1468,7 +1468,7 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
 
 Legt die Client Daten fest, die mit dieser Engine verdeckt gespeichert werden und Sitzungs übergreifend beibehalten werden
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1489,7 +1489,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1510,7 +1510,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1531,12 +1531,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
 
 Legt die Cloud fest, die Endpunkt-URLs für alle Dienst Anforderungen beeinflusst.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
 | settings | Engine-Einstellungen |
-| Cloud | Cloudbezeichner (Standardwert = unbekannt) |
+| cloud | Cloudbezeichner (Standardwert = unbekannt) |
 | errorInfo | Ausgeben Optionale Fehlerinformationen, wenn das Vorgangs Ergebnis fehlerhaft ist |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1554,12 +1554,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloud(
 
 Legt die Basis-URL für alle Service Requests fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
 | settings | Engine-Einstellungen |
-| cloudendpointbaseurl | Basis-URL (z.https://api.aadrm.comb. "") |
+| cloudendpointbaseurl | Basis-URL (z. b. " https://api.aadrm.com ") |
 | errorInfo | Ausgeben Optionale Fehlerinformationen, wenn das Vorgangs Ergebnis fehlerhaft ist |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1577,7 +1577,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
 
 Freigeben von Ressourcen, die den Einstellungen der Schutz-Engine zugeordnet
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1591,7 +1591,7 @@ void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings en
 
 Erstellen Sie ein Einstellungs Objekt, das zum Erstellen eines Schutz Handlers zum Veröffentlichen neuer Inhalte verwendet wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1612,7 +1612,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
 
 Legt fest, ob der als veraltet markierte Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität bevorzugt wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1633,7 +1633,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorith
 
 Legt fest, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1654,7 +1654,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionA
 
 Legt fest, ob pl im JSON-Format vorliegt (Standardwert ist XML).
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1675,7 +1675,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJs
 
 Legt Delegierten Benutzer fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1698,7 +1698,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
 
 Legt den Benutzer vor der Lizenz fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1721,7 +1721,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetPreLicenseUserEmail(
 
 Erstellen eines Einstellungs Objekts, das zum Erstellen eines Schutz Handlers zum Verarbeiten vorhandener Inhalte verwendet wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1744,7 +1744,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
 
 Erstellen eines Einstellungs Objekts, das zum Erstellen eines Schutz Handlers zum Verarbeiten vorhandener Inhalte verwendet wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1771,7 +1771,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettingsWithPreLicense(
 
 Legt fest, ob die Erstellung von Schutz Handlern Online-http-Vorgänge zulässt
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1794,7 +1794,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
 
 Legt Delegierten Benutzer fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1817,7 +1817,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
 
 Ruft die Größe der Veröffentlichungs Lizenz ab (in Bytes).
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1838,7 +1838,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
 
 Ruft die Veröffentlichungs Lizenz ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1865,7 +1865,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
 
 Ruft die Größe der vorab Lizenz ab (in Bytes).
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1888,7 +1888,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicenseSize(
 
 Hiermit wird eine vorab Lizenz abgerufen.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1917,7 +1917,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPreLicense(
 
 Ruft den Schutz Deskriptor ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1938,7 +1938,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
 
 Ruft eine Liste der dem Benutzer gewährten Rechte ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1961,7 +1961,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetRights(
 
 Berechnet die Größe geschützter Inhalte, Factoring in Auffüll Zeichen usw.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -1986,7 +1986,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
 
 Ruft die Blockgröße (in Bytes) für den Verschlüsselungs Modus ab, der von einem Schutz Handler verwendet wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2007,7 +2007,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzers benötigt wird, dem Zugriff auf geschützte Inhalte gewährt wurde
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2028,7 +2028,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
 
 Ruft den Benutzer ab, dem Zugriff auf geschützte Inhalte gewährt wurde.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2055,7 +2055,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Besitzers geschützter Inhalte benötigt wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2076,7 +2076,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
 
 Ruft den Besitzer geschützter Inhalte ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2103,7 +2103,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
 
 Ruft den Inhalt des geschützten Inhalts ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2124,7 +2124,7 @@ mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
 
 Ruft ab, ob der Schutz Handler den veralteten Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität verwendet.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2145,7 +2145,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
 
 Entschlüsseln eines Puffers
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2177,7 +2177,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
 
 Freigeben von Ressourcen, die den Einstellungen eines Schutz Handlers zugeordnet
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2191,7 +2191,7 @@ void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler
 
 Freigeben von Ressourcen, die den Einstellungen eines Schutz Handlers zugeordnet
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2205,7 +2205,7 @@ void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handle
 
 Freigeben von Ressourcen, die einem Schutz Handler zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2219,7 +2219,7 @@ void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 
 Profil laden
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2240,7 +2240,7 @@ mip_cc_result MIP_CC_LoadProtectionProfile(
 
 Freigeben von Ressourcen, die einem Schutzprofil zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2254,7 +2254,7 @@ void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 
 Erstellen eines Einstellungs Objekts, mit dem ein Schutzprofil erstellt wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2281,7 +2281,7 @@ mip_cc_result MIP_CC_CreateProtectionProfileSettings(
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2302,7 +2302,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
 
 Hiermit wird konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2323,7 +2323,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
 
 Standard-HTTP-Stapel mit eigenem Client überschreiben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2344,7 +2344,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
 
 Standardmäßiger asynchroner Aufgaben Verteiler mit eigenem Client überschreiben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2365,7 +2365,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2386,7 +2386,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
 
 Freigeben von Ressourcen, die mit einer Schutzprofil Einstellung verknüpft sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2400,7 +2400,7 @@ void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings 
 
 Ruft Vorlagen-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2421,7 +2421,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetId(
 
 Ruft die Größe des zum Speichern des Namens erforderlichen Puffers ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2442,7 +2442,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetNameSize(
 
 Ruft den Vorlagen Namen ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2469,7 +2469,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetName(
 
 Ruft die Größe des Puffers zum Speichern der Beschreibung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2490,7 +2490,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescriptionSize(
 
 Ruft Vorlagen Beschreibung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2517,7 +2517,7 @@ mip_cc_result MIP_CC_TemplateDescriptor_GetDescription(
 
 Freigeben von Ressourcen, die einem Vorlagen Deskriptor zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2531,7 +2531,7 @@ void MIP_CC_ReleaseTemplateDescriptor(mip_cc_template_descriptor templateDescrip
 
 Ruft den Typ der Aktion ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2552,7 +2552,7 @@ mip_cc_result MIP_CC_Action_GetType(
 
 Ruft die ID einer Aktion ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2573,7 +2573,7 @@ mip_cc_result MIP_CC_Action_GetId(
 
 Aktionen zum Erstellen eines Aktions Ergebnisses
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2598,7 +2598,7 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 Freigeben von Ressourcen, die einem Aktions Ergebnis zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2612,7 +2612,7 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzeroberflächen-Element namens für die Aktion "Content Footer" erforderlich ist
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2633,7 +2633,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 
 Ruft den Benutzeroberflächen Elementnamen der Aktion "Content Footer hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2660,7 +2660,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Aktions Texts "Content Footer hinzufügen" erforderlich ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2681,7 +2681,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 
 Ruft den Text der Aktion "Content Footer hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2708,7 +2708,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Schriftart namens der Aktion "Content Footer" hinzugefügt wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2729,7 +2729,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 
 Ruft den Schriftart Namen der Aktion "Content Footer hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2756,7 +2756,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 Ruft den Schrift Grad der ganzen Zahl ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2777,7 +2777,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Schriftfarbe der Aktion "Content Footer" hinzugefügt wird.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2798,7 +2798,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 
 Ruft die Schriftfarbe für die Aktion "Inhalts Fußzeile hinzufügen" (z. b. "#000000") ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2825,7 +2825,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 Ruft die Ausrichtung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2846,7 +2846,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 
 Ruft die Rand Größe ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2867,7 +2867,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzeroberflächen Element namens für die Aktion "Content Header hinzufügen"
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2888,7 +2888,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 
 Ruft den Benutzeroberflächen Elementnamen für die Aktion "Content Header hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2915,7 +2915,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 Ruft die Größe des Puffers ab, der zum Speichern eines Aktions Texts für "Inhalts Header hinzufügen" erforderlich ist
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2936,7 +2936,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 
 Ruft den Text der Aktion "Content Header hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2963,7 +2963,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Schriftart namens der Aktion "Inhalts Header hinzufügen" erforderlich ist
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -2984,7 +2984,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 
 Ruft den Schriftart Namen der Aktion "Content-Header hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3011,7 +3011,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 Ruft den Schrift Grad der ganzen Zahl ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3032,7 +3032,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Schriftfarbe der Aktion "Inhalts Header hinzufügen" erforderlich ist
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3053,7 +3053,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 
 Ruft die Schriftfarbe für die Aktion "Content-Header hinzufügen" (z. b. "#000000") ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3080,7 +3080,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 Ruft die Ausrichtung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3101,7 +3101,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 
 Ruft die Rand Größe ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3122,7 +3122,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzeroberflächen Element namens der Aktion "Wasserzeichen hinzufügen" erforderlich
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3143,7 +3143,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 
 Ruft den Benutzeroberflächen Elementnamen der Aktion "Wasserzeichen hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3170,7 +3170,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 Ruft das Wasserzeichen Layout ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3191,7 +3191,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Texts der Aktion "Wasserzeichen hinzufügen" erforderlich ist
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3212,7 +3212,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 
 Ruft den Text der Aktion "Wasserzeichen hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3239,7 +3239,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Schriftart namens "Wasserzeichen hinzufügen" erforderlich ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3260,7 +3260,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 
 Ruft den Schriftart Namen der Aktion "Wasserzeichen hinzufügen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3287,7 +3287,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 Ruft den Schrift Grad der ganzen Zahl ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3308,7 +3308,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Schriftart Farbe für "Wasserzeichen hinzufügen" erforderlich ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3329,7 +3329,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 
 Ruft die Schriftfarbe der Aktion "Wasserzeichen hinzufügen" (z. b. "#000000") ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3356,7 +3356,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 Freigeben von Ressourcen, die einer Inhalts Bezeichnung zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3370,7 +3370,7 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 
 Ruft die Zeit ab, zu der Bezeichnung angewendet wurde
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3391,7 +3391,7 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 Ruft die Bezeichnung für die Bezeichnung ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3412,7 +3412,7 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 
 Ruft erweiterte Eigenschaften ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3435,7 +3435,7 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 Ruft ab, ob ein Schutz durch eine Bezeichnung angewendet wurde.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3456,11 +3456,11 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 
 Ruft generische Bezeichnungs Eigenschaften aus einer Instanz der Inhalts Bezeichnung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
-| contentLabel | Bezeichnung |
+| contentLabel | Beschriftung |
 | label | Ausgeben Generische Bezeichnung, Arbeitsspeicher im Besitz des Aufrufers |
 | errorInfo | Ausgeben Optionale Fehlerinformationen, wenn das Vorgangs Ergebnis fehlerhaft ist |
 
@@ -3479,7 +3479,7 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Namens einer benutzerdefinierten Aktion erforderlich ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3500,7 +3500,7 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 
 Ruft den Namen der benutzerdefinierten Aktion ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3527,7 +3527,7 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 Ruft die Eigenschaften der benutzerdefinierten Aktion ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3550,7 +3550,7 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
 
 Rückruf Funktionsdefinition zum Abrufen von Dokument Metatdaten, gefiltert nach Name/Präfix
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3576,7 +3576,7 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
 
 Freigeben von Ressourcen, die einer Bezeichnung zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3590,7 +3590,7 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 
 Bezeichnungs-ID abrufen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3611,7 +3611,7 @@ mip_cc_result MIP_CC_Label_GetId(
 
 Ruft die Größe des zum Speichern des Namens erforderlichen Puffers ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3632,7 +3632,7 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 
 Ruft den Bezeichnung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3659,7 +3659,7 @@ mip_cc_result MIP_CC_Label_GetName(
 
 Ruft die Größe des Puffers zum Speichern der Beschreibung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3680,7 +3680,7 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 
 Beschreibung der Bezeichnung wird abgerufen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3707,7 +3707,7 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 Ruft die Größe des Puffers zum Speichern der Farbe ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3728,7 +3728,7 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 
 Ruft die Bezeichnung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3755,7 +3755,7 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 Ruft die Vertraulichkeits Stufe der Bezeichnung ab. Ein höherer Wert bedeutet mehr sensitiv.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3776,7 +3776,7 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 Ruft die Größe des Puffers zum Speichern der QuickInfo ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3797,7 +3797,7 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 
 QuickInfo für Bezeichnung abrufen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3824,7 +3824,7 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 Ruft die Größe des Puffers zum Speichern der QuickInfo für die automatische Klassifizierung ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3845,7 +3845,7 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 
 Ruft die Bezeichnung für die automatische Klassifizierung der Bezeichnung ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3872,7 +3872,7 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 Ruft ab, ob eine Bezeichnung aktiv ist.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3895,7 +3895,7 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 Ruft die übergeordnete Bezeichnung ab, sofern vorhanden.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3916,7 +3916,7 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 Ruft die Anzahl der untergeordneten Bezeichnungen ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3937,7 +3937,7 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 
 Ruft die untergeordneten Bezeichnungen ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3964,7 +3964,7 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 Ruft Richtlinien definierte benutzerdefinierte Einstellungen einer Bezeichnung ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3987,7 +3987,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 Ruft die zu entfern aus den Metadaten der metadatenaktion ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -3997,7 +3997,7 @@ Parameter | BESCHREIBUNG
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die Variable "metadataNames" muss vom Aufrufer freigegeben werden, @note indem aufgerufen wird, MIP_CC_ReleaseStringList Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
+**Hinweis**: die Variable "metadataNames" muss vom Aufrufer freigegeben werden, indem aufgerufen wird, MIP_CC_ReleaseStringList @note Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
@@ -4010,7 +4010,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 Ruft die hinzu zufügenden Metadaten der metadatenaktion ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4020,7 +4020,7 @@ Parameter | BESCHREIBUNG
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die Variablen "Metadata" muss vom Aufrufer freigegeben werden, @note indem aufgerufen wird, MIP_CC_ReleaseDictionary Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
+**Hinweis**: die Variablen "Metadata" muss vom Aufrufer freigegeben werden, indem aufgerufen wird, MIP_CC_ReleaseDictionary @note Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
@@ -4033,7 +4033,7 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 Erstellen eines Wörterbuchs mit Zeichen folgen Schlüsseln/-Werten
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4058,7 +4058,7 @@ mip_cc_result MIP_CC_CreateMetadataDictionary(
 
 Metadateneinträge zum Verfassen eines Wörterbuchs
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4083,7 +4083,7 @@ mip_cc_result MIP_CC_MetadataDictionary_GetEntries(
 
 Freigeben von Ressourcen, die einem Wörterbuch zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4097,7 +4097,7 @@ void MIP_CC_ReleaseMetadataDictionary(mip_cc_metadata_dictionary dictionary);
 
 Freigeben von Ressourcen, die einer Richtlinie-Engine zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4111,7 +4111,7 @@ void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 
 Ruft die Größe des für Engine-ID erforderlichen Puffers ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4132,7 +4132,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
 
 Ruft Engine-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4159,7 +4159,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4180,7 +4180,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4207,7 +4207,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
 
 Ruft ab, ob die Richtlinie festlegt, dass ein Dokument mit einer Bezeichnung versehen werden muss.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4228,7 +4228,7 @@ mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4249,7 +4249,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4276,7 +4276,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4297,7 +4297,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4324,7 +4324,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
 
 Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4345,7 +4345,7 @@ mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
 
 Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4366,7 +4366,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
 
 Ruft die Anzahl der der Richtlinien-Engine zugeordneten Vertraulichkeits Bezeichnungen ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4387,7 +4387,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
 
 Ruft die der Richtlinien-Engine zugeordneten Vertraulichkeits Bezeichnungen ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4414,7 +4414,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
 
 Ruft die Vertraulichkeits Bezeichnung nach ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4437,7 +4437,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
 
 Ruft die Anzahl der Empfindlichkeits Typen ab, die der Richtlinien-Engine zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4458,7 +4458,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
 
 Ruft die der Richtlinien-Engine zugeordneten Empfindlichkeits Typen ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4485,7 +4485,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
 
 Erstellen eines Richtlinien Handlers zum Ausführen von Richtlinien bezogenen Funktionen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4508,7 +4508,7 @@ mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
 
 Protokolliert ein anwendungsspezifisches Ereignis in der Überwachungs Pipeline.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4532,7 +4532,7 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
 
 Ruft die Größe der Mandanten-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4553,7 +4553,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetTenantIdSize(
 
 Ruft Mandanten-ID ab
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4580,7 +4580,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetTenantId(
 
 Ruft die Größe der Richtlinien Daten-XML ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4601,7 +4601,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
 
 Ruft Richtlinien Daten-XML ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4628,7 +4628,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
 
 Ruft die Größe der Vertraulichkeits Typen Daten-XML ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4649,7 +4649,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
 
 Ruft Daten der Vertraulichkeits Typen ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4676,7 +4676,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4697,7 +4697,7 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4724,11 +4724,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
 
 Erstellen eines Einstellungs Objekts, das zum Erstellen einer neuen Richtlinien-Engine verwendet wird
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
-| identity | Identität, die policyengine zugeordnet wird |
+| Identität | Identität, die policyengine zugeordnet wird |
 | clientData | Anpassbare Client Daten, die neben der Engine gespeichert werden |
 | locale | Das Gebiets Schema, in dem Text Ergebnisse ausgegeben werden. |
 | loadsensitivitytypes | Gibt an, ob Daten der Vertraulichkeits Typen (für die Klassifizierung) ebenfalls geladen werden sollen. |
@@ -4753,7 +4753,7 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
 
 Legt die Client Daten fest, die mit dieser Engine verdeckt gespeichert werden und Sitzungs übergreifend beibehalten werden
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4774,7 +4774,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4795,7 +4795,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4816,12 +4816,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
 
 Legt die Cloud fest, die Endpunkt-URLs für alle Dienst Anforderungen beeinflusst.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
 | settings | Engine-Einstellungen |
-| Cloud | Cloudbezeichner (Standardwert = unbekannt) |
+| cloud | Cloudbezeichner (Standardwert = unbekannt) |
 | errorInfo | Ausgeben Optionale Fehlerinformationen, wenn das Vorgangs Ergebnis fehlerhaft ist |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -4839,12 +4839,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloud(
 
 Legt die Basis-URL für alle Service Requests fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
 | settings | Engine-Einstellungen |
-| cloudendpointbaseurl | Basis-URL (z.https://dataservice.protection.outlook.comb. "") |
+| cloudendpointbaseurl | Basis-URL (z. b. " https://dataservice.protection.outlook.com ") |
 | errorInfo | Ausgeben Optionale Fehlerinformationen, wenn das Vorgangs Ergebnis fehlerhaft ist |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -4862,7 +4862,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
 
 Legt Delegierten Benutzer fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4885,7 +4885,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
 
 Legt die Bezeichnung fest.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4906,7 +4906,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetLabelFilter(
 
 Freigeben von Ressourcen, die einem Richtlinien Modul-Einstellungen zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4920,7 +4920,7 @@ void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 
 Freigeben von Ressourcen, die einem Richtlinien Handler zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4934,7 +4934,7 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 
 Ruft die aktuelle Bezeichnung eines Dokuments ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4959,7 +4959,7 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 
 Führt Richtlinien Regeln basierend auf dem angegebenen Status aus und bestimmt die entsprechenden Aktionen.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -4988,7 +4988,7 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 Wird von der Anwendung nach dem Anwenden berechneter Aktionen und dem Commit der Daten auf den Datenträger aufgerufen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5015,12 +5015,12 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
 
 Auslöst einen Authentifizierungs Rückruf.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
 | profile | Profil |
-| Cloud | Azure-Cloud |
+| cloud | Azure Cloud |
 | authcallback | Authentifizierungs Rückruf, der aufgerufen wird |
 | errorInfo | Ausgeben Optionale Fehlerinformationen, wenn das Vorgangs Ergebnis fehlerhaft ist |
 
@@ -5040,7 +5040,7 @@ mip_cc_result MIP_CC_PolicyProfile_AcquireAuthToken(
 
 Profil laden
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5061,7 +5061,7 @@ mip_cc_result MIP_CC_LoadPolicyProfile(
 
 Freigeben von Ressourcen, die einem Richtlinien Profil zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5075,7 +5075,7 @@ void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 
 Erstellen eines Einstellungs Objekts, das verwendet wird, um ein Richtlinien Profil zu erstellen
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5100,7 +5100,7 @@ mip_cc_result MIP_CC_CreatePolicyProfileSettings(
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5121,7 +5121,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
 
 Standard-HTTP-Stapel mit eigenem Client überschreiben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5142,7 +5142,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
 
 Standardmäßiger asynchroner Aufgaben Verteiler mit eigenem Client überschreiben
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5163,7 +5163,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5184,7 +5184,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
 
 Freigeben von Ressourcen, die mit Richtlinien Profileinstellungen verknüpft sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5198,7 +5198,7 @@ void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profileS
 
 Ruft die Größe des Puffers ab, der zum Speichern der URL für die Verschlüsselung mit doppelter Schlüssel
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5219,7 +5219,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrlSize(
 
 Ruft die URL für die doppelte Schlüssel Verschlüsselung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5246,7 +5246,7 @@ mip_cc_result MIP_CC_ProtectAdhocDkAction_GetDoubleKeyEncryptionUrl(
 
 Ruft die Vorlagen-ID "Schutz nach Vorlage" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5267,7 +5267,7 @@ mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
 
 Ruft die Vorlagen-ID "Protect by Template with Double Key" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5288,7 +5288,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetTemplateId(
 
 Ruft die Größe des Puffers ab, der zum Speichern der URL für die Verschlüsselung mit doppelter Schlüssel
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5309,7 +5309,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrlSize(
 
 Ruft die URL für die doppelte Schlüssel Verschlüsselung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5336,7 +5336,7 @@ mip_cc_result MIP_CC_ProtectByTemplateDkAction_GetDoubleKeyEncryptionUrl(
 
 Ruft die Größe des Puffers ab, der zum Speichern der URL für die Verschlüsselung mit doppelter Schlüssel
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5357,7 +5357,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrlSize(
 
 Ruft die URL für die doppelte Schlüssel Verschlüsselung
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5384,7 +5384,7 @@ mip_cc_result MIP_CC_ProtectDoNotForwardDkAction_GetDoubleKeyEncryptionUrl(
 
 Ruft die zu entfern Endes UI-Elementnamen der Aktion "Inhalts Fußzeile entfernen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5407,7 +5407,7 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 Ruft die zu entfern Endes UI-Elementnamen der Aktion "Inhalts Header entfernen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5430,7 +5430,7 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 Ruft die zu entfern Endes UI-Elementnamen der Aktion "Wasserzeichen entfernen" ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5453,7 +5453,7 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 Freigeben von Ressourcen, die einem Vertraulichkeits Typ zugeordnet sind
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5467,7 +5467,7 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 
 Ruft die Größe des Puffers ab, der zum Speichern der Regelpaket-ID eines Vertraulichkeits Typs
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5488,7 +5488,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 
 Ruft die Regelpaket-ID eines Vertraulichkeits Typs ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5515,7 +5515,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Regel Pakets für sensible Typen erforderlich ist
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|
@@ -5536,7 +5536,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 
 Ruft das Regelpaket eines Vertraulichkeits Typs ab.
 
-**Parameters**
+**Parameter**
 
 Parameter | BESCHREIBUNG
 |---|---|

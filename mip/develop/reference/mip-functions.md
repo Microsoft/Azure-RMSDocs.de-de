@@ -1,21 +1,19 @@
 ---
 title: Klassen
-description: Funktionen
+description: Functions
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489247"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563704"
 ---
-# <a name="functions"></a>Funktionen
-
-
+# <a name="functions-c"></a>Funktionen (C++) 
 
 ## <a name="namespace-mip"></a>Namespace MIP
 
@@ -26,20 +24,20 @@ public static Std:: String getaktionsourcestring (Aktions Quelle Aktions Quelle)
 public static Std:: String getdatastatestring (MIP::D atastate-Status)       |  Den Namen des Inhalts Zustands erhalten.
 public const std::string& GetCustomSettingPolicyDataName()       |  Name der Einstellung, mit der explizit Richtliniendaten angegeben wird.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Name der Einstellung, mit der explizit der Dateipfad angegeben wird, in den SCC-Richtliniendaten exportiert werden sollen.
-Public Konstanten Std:: String & getcustomsettingsensitivitytypesdataname ()       |  Der Name der Einstellung, um die Vertraulichkeits Daten explizit anzugeben.
+Public Konstanten Std:: String& getcustomsettingsensitivitytypesdataname ()       |  Der Name der Einstellung, um die Vertraulichkeits Daten explizit anzugeben.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name der Einstellung, mit der explizit der Pfad für Richtliniendatendateien angegeben wird.
-Public Konstanten Std:: String & getcustomsettingsensitivitytypesdatafile ()       |  Der Name der Einstellung, um den Datendatei Pfad für sensible Typen explizit anzugeben.
-Public Konstanten Std:: String & getcustomsettinglabelcustompropertiessyncenabled ()       |  Der Name der Einstellung, die das Aktivieren der Bezeichnung durch benutzerdefinierte Eigenschaften und benutzerdefinierte Eigenschaften durch Bezeichnungs Features ermöglicht.
-Public Konstanten Std:: String & getcustomsettingpolicyttldays ()       |  Der Name der Einstellung, die das Überschreiben der Richtlinie für die Gültigkeitsdauer der Gültigkeitsdauer in Tagen aktiviert. Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
-Public Konstanten Std:: String & getcustomsettingsensitivitypolicyttldays ()       |  Der Name der Einstellung, die das außer Kraft setzen der Gültigkeitsdauer Gültigkeitsdauer der Gültigkeitsdauer der Gültigkeitsdauer (TTL) Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
-Public Konstanten Std:: Map\<flightingfeature, bool\>& getdefaultfeaturesettings ()       |  Ruft ab, ob eine Funktion standardmäßig aktiviert ist.
-Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: IStream\>& stdistream)       |  Erstellt einen Stream aus einer Std:: IStream-Klasse.
-Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: ostream\>& stdostream)       |  Erstellt einen Stream aus einer Std:: ostream-Klasse.
-Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: iostream\>& stdiostream)       |  Erstellt einen Stream aus einer Std:: iostream-Klasse.
-Public MIP_API Std:: shared_ptr\<MIP:: Stream\> featestreamfrombuffer (uint8_t * Puffer, Konstante int64_t Größe)       |  Erstellt einen Stream aus einem Puffer.
-öffentliches MIP_API Std:: Vector\<uint8_t\> Read FromStream (Konstante Std:: shared_ptr\<MIP:: Stream\>& Stream)       |  Liest alle Bytes des Streams.
-öffentlicher Aktionstyp-Operator & (Aktionstyp a, Aktionstyp b)       |  Und (&)-Operator für Aktionstyp-Enum.
-Public-Aktionstyp Operator ^ (Aktionstyp a, Aktionstyp b)       |  XOR (^)-Operator für Aktionstyp-Enum.
+Public Konstanten Std:: String& getcustomsettingsensitivitytypesdatafile ()       |  Der Name der Einstellung, um den Datendatei Pfad für sensible Typen explizit anzugeben.
+Public Konstanten Std:: String& getcustomsettinglabelcustompropertiessyncenabled ()       |  Der Name der Einstellung, die das Aktivieren der Bezeichnung durch benutzerdefinierte Eigenschaften und benutzerdefinierte Eigenschaften durch Bezeichnungs Features ermöglicht.
+Public Konstanten Std:: String& getcustomsettingpolicyttldays ()       |  Der Name der Einstellung, die das Überschreiben der Richtlinie für die Gültigkeitsdauer der Gültigkeitsdauer in Tagen aktiviert. Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
+Public Konstanten Std:: String& getcustomsettingsensitivitypolicyttldays ()       |  Der Name der Einstellung, die das außer Kraft setzen der Gültigkeitsdauer Gültigkeitsdauer der Gültigkeitsdauer der Gültigkeitsdauer (TTL) Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
+Public Konstanten Std:: map- \<FlightingFeature, bool\>& getdefaultfeaturesettings ()       |  Ruft ab, ob eine Funktion standardmäßig aktiviert ist.
+Public MIP_API Std:: shared_ptr \<mip::Stream\> kreatestreamfromstdstream (konstant Std:: shared_ptr \<std::istream\>& stdistream)       |  Erstellt einen Stream aus einem std::istream.
+Public MIP_API Std:: shared_ptr " \<mip::Stream\> kreatestreamfromstdstream" (konstant Std:: shared_ptr \<std::ostream\>& stdostream)       |  Erstellt einen Stream aus einem std::ostream.
+Public MIP_API Std:: shared_ptr \<mip::Stream\> kreatestreamfromstdstream (konstant Std:: shared_ptr \<std::iostream\>& stdiostream)       |  Erstellt einen Stream aus einem std::iostream.
+Public MIP_API Std:: shared_ptr \<mip::Stream\> kreatestreamfrombuffer (uint8_t * Puffer, Konstante int64_t Größe)       |  Erstellt einen Stream aus einem Puffer.
+öffentliches MIP_API Std:: Vector Read \<uint8_t\> FromStream (Konstanten Std:: shared_ptr \<mip::Stream\>& Stream)       |  Liest alle Bytes des Streams.
+öffentlicher Aktionstyp-Operator& (Aktionstyp a, Aktionstyp b)       |  Und (&)-Operator für Aktionstyp-Enum.
+Public-Aktionstyp Operator ^ (Aktionstyp a, Aktionstyp b)       |  XOR-Operator (^) für eine Enumeration vom Typ Action
 
 ### <a name="getassignmentmethodstring-function"></a>Getbelegmentmethodstring-Funktion
 Konvertiert die zuder zuder zuder zuder Methode in eine Zeichen folgen Beschreibung
@@ -124,7 +122,7 @@ Ruft ab, ob eine Funktion standardmäßig aktiviert ist.
 **Returns**: Standardstatus der flighting-Funktionen
   
 ### <a name="createstreamfromstdstream-function"></a>Funktion "deestreamfromstdstream"
-Erstellt einen Stream aus einer Std:: IStream-Klasse.
+Erstellt einen Stream aus einem std::istream.
 
 Parameter:  
 * **stdIStream**: Schützt std::istream
@@ -135,7 +133,7 @@ Parameter:
 **Gibt Folgendes zurück**: Stream Wrapping eines Std:: IStream
   
 ### <a name="createstreamfromstdstream-function"></a>Funktion "deestreamfromstdstream"
-Erstellt einen Stream aus einer Std:: ostream-Klasse.
+Erstellt einen Stream aus einem std::ostream.
 
 Parameter:  
 * **stdOStream**: Schützt std::ostream
@@ -146,7 +144,7 @@ Parameter:
 **Gibt Folgendes zurück**: Stream Wrapping eines Std:: ostream
   
 ### <a name="createstreamfromstdstream-function"></a>Funktion "deestreamfromstdstream"
-Erstellt einen Stream aus einer Std:: iostream-Klasse.
+Erstellt einen Stream aus einem std::iostream.
 
 Parameter:  
 * **stdIOStream**: Schützt std::iostream
@@ -179,13 +177,13 @@ Parameter:
 **Gibt Folgendes zurück**: ein Vektor von Bytes.
   
 ### <a name="operator-function"></a>Operator | Funktion
-Or (|)-Operator für Aktionstyp-Enum.
+OR-Operator (|) für eine Enumeration vom Typ Action
   
-### <a name="operator-function"></a>Operator &-Funktion
+### <a name="operator-function"></a>Operator&-Funktion
 Und (&)-Operator für Aktionstyp-Enum.
   
 ### <a name="operator-function"></a>Operator ^-Funktion
-XOR (^)-Operator für Aktionstyp-Enum.
+XOR-Operator (^) für eine Enumeration vom Typ Action
 
 ## <a name="namespace-mipauditmetadatakeys"></a>Namespace MIP:: auditmetadatakeys
 
@@ -226,9 +224,9 @@ public std::string Comment()       |  Ruft den Zeichenfolgenbezeichner für die 
 public std::string Reply()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „reply“ (Antworten) ab.
 public std::string ReplyAll()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „reply all“ (Allen antworten) ab.
 public std::string Forward()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „forward“ (Weiterleiten) ab.
-Public Std:: Vector\<Std:: String\> emailrights ()       |  Ruft eine Liste der Berechtigungen ab, die für E-Mails gelten.
-Public Std:: Vector\<Std:: String\> editabledocumentrights ()       |  Ruft eine Liste der Berechtigungen ab, die für Dokumente gelten.
-Public Std:: Vector\<Std:: String\> commonrights ()       |  Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
+Public Std:: Vector \<std::string\> emailrights ()       |  Ruft eine Liste der Berechtigungen ab, die für E-Mails gelten.
+Public Std:: Vector \<std::string\> editabledocumentrights ()       |  Ruft eine Liste der Berechtigungen ab, die für Dokumente gelten.
+Public Std:: Vector \<std::string\> commonrights ()       |  Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
   
 ### <a name="owner-function"></a>Owner-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „owner“ (Besitzer) ab.

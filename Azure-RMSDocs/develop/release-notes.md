@@ -1,6 +1,6 @@
 ---
 title: Anmerkungen zu dieser Version von Rights Management Services SDK v4. x
-description: Beschreibt wichtige Änderungen und Funktionen in dieser und früheren Versionen.
+description: Weitere Informationen finden Sie unter Neuerungen und Versions Hinweise für das Microsoft Rights Management Service SDK v4. x Juli 2017 und frühere Versionen.
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 5d4aa9206865493c5fd2c4b2abdb96c3f72e5399
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 010ed1f194fd29a9d5e371c296adae5e1e216bea
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971947"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563789"
 ---
 # <a name="whats-new-and-release-notes"></a>Neues und Anmerkungen zu dieser Version
 
@@ -138,7 +138,7 @@ Die Version 4.1 des RMS SDK bietet die folgenden neuen Features für Google Andr
 
     Beispiel: MSUserPolicy.name wurde in [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx) geändert.
 
-## <a name="release-notes"></a>Anmerkungen zu diesem Release
+## <a name="release-notes"></a>Versionshinweise
 
 Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen der Microsoft Rights Management SDK 4.x-APIs, die Sie als Entwickler berücksichtigen sollten.
 
@@ -164,9 +164,9 @@ Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen d
 
     **Lösung**: Stellen Sie sicher, dass die Anwendung nicht mehrere Instanzaufrufe auf der Android-API zulässt.
 
--   Bei Verwendung der Methode [protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (Byte\[ \] Array, int Offset, int length) mit einer anderen Länge als der *Array. length* -Wert kann der Inhalt später nicht mit dem SDK verwendet werden.
+-   Bei Verwendung der Methode [protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (Byte \[ \] Array, int Offset, int length) mit einer anderen Länge als der *Array. length* -Wert kann der Inhalt später nicht mit dem SDK verwendet werden.
 
-    **Lösung**: Dies ist ein bekanntes Problem. Um dieses Problem zu beheben, übergeben Sie entweder immer ein * \[ Bytearray* mit dem gleichen Längen Wert wie der length-Parameter, oder verwenden Sie die Methode [protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (Byte\[ \] Array).
+    **Lösung**: Dies ist ein bekanntes Problem. Um dieses Problem zu beheben, übergeben Sie entweder immer ein * \[ \] Bytearray* mit dem gleichen Längen Wert wie der length-Parameter, oder verwenden Sie die Methode [protectedfileoutputstream](https://msdn.microsoft.com/library/dn790855.aspx). Write (Byte \[ \] Array).
 
 **iOS und OS X**
 
@@ -176,7 +176,7 @@ Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen d
 
     2. Portugiesisch (Portugal)
 
-**nur iOS**
+**Nur iOS**
 
 -   Das RMS SDK 4.x zeigt keine Netzwerkaktivität an.
 
@@ -197,7 +197,7 @@ Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen d
 
 
 
-**Hinweis**  MDI-Anwendungen werden von unserer IOS-API nicht unterstützt.
+**Hinweis**    MDI-Anwendungen werden von unserer IOS-API nicht unterstützt.
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
