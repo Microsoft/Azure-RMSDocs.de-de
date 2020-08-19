@@ -1,6 +1,6 @@
 ---
 title: 'Gewusst wie: Festlegen des API-Sicherheitsmodus | Azure RMS'
-description: Wählen Sie aus, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird.
+description: Erfahren Sie, wie Sie den API-Sicherheitsmodus mithilfe der ipcsetglobalproperty-Funktion festlegen, um auszuwählen, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,22 +14,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a71fcddecbe688f38360c42cf83946f82269013
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 942192690e06422246fa0ed7a4fb2d1d3ccf6cd6
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790795"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563599"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Exemplarische Vorgehensweise: Festlegen des API-Sicherheitsmodus
 
 Sie können wählen, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird, indem Sie die [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)-Funktion verwenden.
 
-Rufen Sie zum Initialisieren der Anwendung für die Ausführung im *Servermodus* die [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)-Funktion auf, und legen Sie den Sicherheitsmodus auf [IPC\_API\_MODE\_SERVER](https://msdn.microsoft.com/library/hh535236.aspx) fest. Standardmäßig wird die Anwendung im *Clientmodus* (**IPC\_API\_MODE\_CLIENT**) ausgeführt.
+Rufen Sie zum Initialisieren der Anwendung für die Ausführung im *Servermodus* die [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)-Funktion auf, und legen Sie den Sicherheitsmodus auf [IPC\_API\_MODE\_SERVER](https://msdn.microsoft.com/library/hh535236.aspx) fest. Standardmäßig wird Ihre Anwendung im *Client Modus*, **IPC \_ API \_ Mode \_ Client**, ausgeführt.
 
 Weitere Informationen zum *Servermodus* finden Sie unter [Anwendungstypen](application-types.md).
 
-**Wichtig:**    Der Sicherheitsmodus sollte festgelegt werden, bevor andere Funktionen des Rights Management Services SDK 2.1 aufgerufen werden. Nachdem der Sicherheitsmodus festgelegt wurde, kann er für den aktuellen Prozess nicht mehr geändert werden.
+**Wichtig**    Der Sicherheitsmodus sollte festgelegt werden, bevor eine andere Rights Management Services SDK 2,1-Funktion aufgerufen wird. Nachdem der Sicherheitsmodus festgelegt wurde, kann er für den aktuellen Prozess nicht mehr geändert werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

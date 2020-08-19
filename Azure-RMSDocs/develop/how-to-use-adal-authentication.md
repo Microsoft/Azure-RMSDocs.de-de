@@ -1,6 +1,6 @@
 ---
 title: ADAL-Authentifizierung für Ihre RMS-fähige Anwendung | Azure RMS
-description: Skizziert den Prozess für die Authentifizierung mit ADAL
+description: Weitere Informationen finden Sie unter Authentifizieren Ihrer APP mit Azure RMS mithilfe Azure Active Directory Authentifizierungs Bibliothek (Adal).
 keywords: Authentifizierung, RMS, ADAL
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 4577131a2bd6fc248a69594645543c455c62d5bf
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 0487b9ed7c2f0c8cdc0cbea9aa70ebd3e29b268b
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971981"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564023"
 ---
 # <a name="how-to-use-adal-authentication"></a>Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung
 
@@ -56,59 +56,63 @@ Dieses Thema enthält zwei Ansätze zur Authentifizierung mit entsprechenden Cod
 
 Fügen Sie einen Aufruf von [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) direkt nach dem Aufrufen von [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) hinzu, um den RMS-Client zu konfigurieren. Verwenden Sie den folgenden Codeausschnitt als Beispiel.
 
-      C++
-      IpcInitialize();
+```cpp
+IpcInitialize();
 
-      IPC_AAD_APPLICATION_ID applicationId = { 0 };
-      applicationId.cbSize = sizeof(IPC_AAD_APPLICATION_ID);
-      applicationId.wszClientId = L"GUID-provided-by-AAD-for-your-app-(no-brackets)";
-      applicationId.wszRedirectUri = L"RedirectionUriWeProvidedAADForOurApp://authorize";
-      HRESULT hr = IpcSetGlobalProperty(IPC_EI_APPLICATION_ID, &applicationId);
-      if (FAILED(hr)) {
-        //Handle the error
-      }
+IPC_AAD_APPLICATION_ID applicationId = { 0 };
+applicationId.cbSize = sizeof(IPC_AAD_APPLICATION_ID);
+applicationId.wszClientId = L"GUID-provided-by-AAD-for-your-app-(no-brackets)";
+applicationId.wszRedirectUri = L"RedirectionUriWeProvidedAADForOurApp://authorize";
+HRESULT hr = IpcSetGlobalProperty(IPC_EI_APPLICATION_ID, &applicationId);
+if (FAILED(hr)) {
+  //Handle the error
+}
+```
 
 ## <a name="external-authentication"></a>Externe Authentifizierung
 
 Verwenden Sie diesen Code als Beispiel für die Verwaltung Ihrer eigenen Authentifizierungstoken.
-C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Parameters, __out wstring wstrToken) throw();
 
-      HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out IPC_KEY_HANDLE &hKey)
-      {
-          IPC_OAUTH2_CALLBACK pfGetADALToken =
-          [](LPVOID pvContext, PIPC_NAME_VALUE_LIST pParameters, IPC_AUTH_TOKEN_HANDLE* phAuthToken) -> HRESULT
-          {
-              wstring wstrToken;
-              HRESULT hr = GetADALToken(pvContext, *pParameters, wstrToken);
-              return SUCCEEDED(hr) ? IpcCreateOAuth2Token(wstrToken.c_str(), OUT phAuthToken) : hr;
-          };
+```cpp
+extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Parameters, __out wstring wstrToken) throw();
 
-          IPC_OAUTH2_CALLBACK_INFO callbackCredentialContext =
-          {
-              sizeof(IPC_OAUTH2_CALLBACK_INFO),
-              pfGetADALToken,
-              pContextForAdal
-          };
+HRESULT GetLicenseKey(PCIPC_BUFFER pvLicense, __in LPVOID pContextForAdal, __out IPC_KEY_HANDLE &hKey)
+{
+    IPC_OAUTH2_CALLBACK pfGetADALToken =
+    [](LPVOID pvContext, PIPC_NAME_VALUE_LIST pParameters, IPC_AUTH_TOKEN_HANDLE* phAuthToken) -> HRESULT
+    {
+        wstring wstrToken;
+        HRESULT hr = GetADALToken(pvContext, *pParameters, wstrToken);
+        return SUCCEEDED(hr) ? IpcCreateOAuth2Token(wstrToken.c_str(), OUT phAuthToken) : hr;
+    };
 
-          IPC_CREDENTIAL credentialContext =
-          {
-              IPC_CREDENTIAL_TYPE_OAUTH2,
-              NULL
-          };
-          credentialContext.pcOAuth2 = &callbackCredentialContext;
+    IPC_OAUTH2_CALLBACK_INFO callbackCredentialContext =
+    {
+        sizeof(IPC_OAUTH2_CALLBACK_INFO),
+        pfGetADALToken,
+        pContextForAdal
+    };
 
-          IPC_PROMPT_CTX promptContext =
-          {
-              sizeof(IPC_PROMPT_CTX),
-              NULL,
-              IPC_PROMPT_FLAG_SILENT | IPC_PROMPT_FLAG_HAS_USER_CONSENT,
-              NULL,
-              &credentialContext
-          };
+    IPC_CREDENTIAL credentialContext =
+    {
+        IPC_CREDENTIAL_TYPE_OAUTH2,
+        NULL
+    };
+    credentialContext.pcOAuth2 = &callbackCredentialContext;
 
-          hKey = 0L;
-          return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
-      }
+    IPC_PROMPT_CTX promptContext =
+    {
+        sizeof(IPC_PROMPT_CTX),
+        NULL,
+        IPC_PROMPT_FLAG_SILENT | IPC_PROMPT_FLAG_HAS_USER_CONSENT,
+        NULL,
+        &credentialContext
+    };
+
+    hKey = 0L;
+    return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
+}
+```
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

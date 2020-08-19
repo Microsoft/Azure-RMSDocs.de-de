@@ -1,6 +1,6 @@
 ---
 title: Bereitstellen Ihrer Anwendung – AIP
-description: In diesem Thema finden Sie Informationen zur Bereitstellung Ihrer Anwendung sowie eine entsprechende Anleitung.
+description: Erfahren Sie mehr über den Bereitstellungs Prozess für Ihre Azure Information Protection aktivierte Anwendung (AIP)/Rights Management Services (RMS).
 keywords: bereitstellen, RMS, AIP
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: e9a9ce42476cc372b6486b524d99e55edf9d4a11
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971760"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564363"
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
 
@@ -29,7 +29,7 @@ Dieses Thema führt Sie durch den Bereitstellungsprozess für Ihre AIP/RMS-fähi
 Bevor Sie eine mit AIP/RMS entwickelte Anwendung freigeben können, müssen Sie eine formelle Vereinbarung mit Microsoft beantragen und ausfüllen.
 
 ### <a name="begin-the-process"></a>Beginn des Prozesses
-Erhalten Sie Ihre ipia, indem Sie eine <strong>IPIA@microsoft.com</strong> e-Mail an mit den folgenden Informationen senden:
+Erhalten Sie Ihre ipia, indem Sie eine e-Mail an <strong>IPIA@microsoft.com</strong> mit den folgenden Informationen senden:
 
 **Betreff:** IPIA-Antrag für *Name des Unternehmens*
 

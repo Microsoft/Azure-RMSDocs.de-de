@@ -1,6 +1,6 @@
 ---
 title: PowerShell für Schutzvorlagen (Azure Information Protection)
-description: Verwenden Sie PowerShell, um Schutz Vorlagen für Azure Information Protection zu erstellen und zu verwalten.
+description: Verwenden Sie PowerShell-Cmdlets, um Schutz Vorlagen für Azure Information Protection hinzuzufügen, zu exportieren, zu importieren, zu entfernen und zu konfigurieren.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 38d5a71e6820c4ad95395c06dffea5d5e57ee7d6
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 668c3294009a8cb003bd813432da6f671fc75391
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136782"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88563935"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>PowerShell-Referenz für Schutzvorlagen
 

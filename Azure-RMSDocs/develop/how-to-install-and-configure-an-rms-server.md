@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68794117"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564101"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
 
 In diesem Thema werden die Schritte zum Herstellen einer Verbindung mit einem RMS-Server oder Azure RMS zum Testen der rechtlich geschützten Anwendung behandelt.
  
-## <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a>Instructions
 
 ### <a name="step-1-setup-your-rms-server"></a>Schritt 1: Einrichten des RMS-Servers
 
@@ -56,7 +56,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
        Wenn Sie AD RMS 1.0 SP2 verwenden, können Sie den Server online registrieren. Die Registrierung findet während des Bereitstellungsvorgangs im Hintergrund statt; Sie müssen jedoch über eine Internetverbindung verfügen.
 
-       **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
+       **HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **DRMS** \\ **1,0** \\ **uddiprovider** = 0e3d9bb8-B765-4a68-A329-51548685fed3
 
 3. **Testen mit einem RMS-Server**
 
@@ -72,35 +72,42 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
 4. **EnterpriseCertification**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterpriseCertification
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterpriseCertification
+  ```
 
-   **Value**: (Default): [**http|https**]://RMSClusterName/ **_wmcs/Certification**
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 5. **EnterprisePublishing**
 
-        HKEY_LOCAL_MACHINE
-          SOFTWARE
-            Microsoft
-              MSIPC
-                ServiceLocation
-                  EnterprisePublishing
-                  
-   **Value**: (Default): [**http|https**]://RMSClusterName/ **_wmcs/Licensing**
+  ```console
+  HKEY_LOCAL_MACHINE
+    SOFTWARE
+      Microsoft
+        MSIPC
+          ServiceLocation
+            EnterprisePublishing
+  ```
+
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 > [!NOTE]
 > Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.
-> 
+>
+ 
 > [!IMPORTANT]
-> Wenn Sie eine 32-Bit-Anwendung unter einer 64-Bit-Version von Windows ausführen, müssen Sie diese Schlüssel im folgenden Schlüsselpfad festlegen:<p>
->   ```    
->   HKEY_LOCAL_MACHINE
->     SOFTWARE
->       Wow6432Node
->         Microsoft
->           MSIPC
->             ```
+> Wenn Sie eine 32-Bit-Anwendung unter einer 64-Bit-Version von Windows ausführen, müssen Sie diese Schlüssel im folgenden Schlüsselpfad festlegen:  
+>
+
+```console
+HKEY_LOCAL_MACHINE  
+  SOFTWARE  
+    Wow6432Node  
+      Microsoft  
+        MSIPC  
+```

@@ -14,22 +14,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6f36ef984a6d6d10ce06ae690c98153524a7d301
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791485"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564318"
 ---
-# <a name="overview"></a>Overview
+# <a name="overview-of-rights-management-services-sdk-21"></a>Übersicht über Rights Management Services SDK 2,1
 
 Das Rights Management Services SDK 2.1 ist eine Datenschutztechnologie, die zum Schutz digitaler Informationen vor nicht autorisierter Verwendung beiträgt. Über Ihre rechtlich geschützte Anwendung können Inhaltsbesitzer definieren, wer ihren Inhalt öffnen, ändern, drucken, weiterleiten oder andere Aktionen damit ausführen kann.
 
 AD RMS umfasst sowohl [Server](ad-rms-server.md)- als auch [Client](ad-rms-client.md)komponenten. Der Server, der unter Azure oder Windows Server ausgeführt wird, umfasst mehrere Webdienste.
 
-Die [Clientkomponente](ad-rms-client.md) kann auf einem Client- oder Serverbetriebssystem ausgeführt werden und enthält Funktionen, mit denen eine Anwendung Inhalte verschlüsseln und entschlüsseln, Vorlagen und Sperrlisten abrufen, Lizenzen und Zertifikate von einem Server erwerben und andere Rights Management-Aufgaben ausführen kann.
+Die [Client](ad-rms-client.md) Komponente kann entweder auf einem Client-oder Server Betriebssystem ausgeführt werden und enthält Funktionen, mit denen eine Anwendung Inhalte verschlüsseln und entschlüsseln, Vorlagen und Sperr Listen abrufen, Lizenzen und Zertifikate von einem Server erwerben und andere Rechte Verwaltungsaufgaben ausführen kann.
 
-Weitere Informationen finden Sie unter [Anwendungstypen](application-types.md).
+Weitere Informationen finden Sie unter [Anwendungs Typen](application-types.md).
 
 Im Folgenden sind nur einige Szenarios aufgeführt, in denen mit dem Rights Management Services SDK 2.1 erstellte Anwendungen eingesetzt werden können.
 
@@ -43,9 +43,9 @@ Weitere Informationen zu AD RMS-Server, AD RMS-Client und deren Funktionalität 
 
 In den übrigen Themen in diesem Abschnitt werden die RMS-Architektur und ihre Implementierung behandelt.
 
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | Description |
+| Thema | BESCHREIBUNG |
 |-------|-------------|
 |[Client](ad-rms-client.md) |In diesem Thema werden der Zweck und die Funktion des Rights Management Service Client 2.1 beschrieben. |
 |[Server](ad-rms-server.md) | In diesem Thema werden der Zweck und die Funktionen des RMS-Servers für Azure und Windows Server beschrieben.|

@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection SDK 2.1-Entwicklerhandbuch | Microsoft-Dokumentation
-description: Themen mit Vorgehensweisen zur Entwicklung mit dem AIP SDK 2.1
+description: Hier finden Sie Anleitungen für verschiedene wichtige Entwicklungsszenarien und allgemeine Informationen zur Entwicklung mit dem Rights Management Services SDK 2,1.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 620464886d40c3f152a32f07952a924eee72920f
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: cfa9f00d7a69966c3a6819294e72c8dfccac02fc
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971811"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564259"
 ---
-# <a name="developer-guidance"></a>Anleitung für Entwickler
+# <a name="rights-management-services-sdk-21-developer-guidance"></a>Rights Management Services SDK 2,1-Entwickler Leit Faden
 
 Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklungsszenarien sowie allgemeine Informationen zur Entwicklung mit diesem SDK. Die Szenarien in diesem Abschnitt gelten speziell für diese Version des Rights Management Services SDK 2.1 und können sich in nachfolgenden Versionen ändern.
 - [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md): Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory-Authentifizierungsbibliothek (ADAL).

@@ -1,6 +1,6 @@
 ---
 title: Testen der Anwendung | Azure RMS
-description: Anweisungen zum Einrichten der Anwendung zum Testen.
+description: Erfahren Sie, wie Sie sich mit Azure RMS oder einem RMS-Server, der unter Windows Server ausgeführt wird, auf Anwendungstests vorbereiten.
 keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 987b9bb711f96d6622fb1972f13d50fa8cbbfa3d
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 638a8ec54a850a051795c00b2b1aef4ef47866ff
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972028"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564068"
 ---
-# <a name="testing-your-application"></a>Testen der Anwendung
+# <a name="testing-your-application"></a>Testen Ihrer Anwendung
 
 Hier erfahren Sie, wie Sie das Testen einer Anwendung vorbereiten.
 
@@ -39,7 +39,7 @@ Sie können mit Azure RMS oder mit einem RMS-Server Tests durchführen, der unte
 
     Hilfe zur Installation des RMS SDK 2.1 finden Sie unter [Install the SDK (Installieren des SDK)](install-the-rms-sdk.md).
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Diese Anleitung geht nicht auf Details ein. Informationen zum Konfigurieren des RMS-Clients 2.1 finden Sie unter [Anmerkungen zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
@@ -47,5 +47,5 @@ Diese Anleitung geht nicht auf Details ein. Informationen zum Konfigurieren des 
 
 * [Exemplarische Vorgehensweise: Installieren und Konfigurieren eines RMS-Servers](how-to-install-and-configure-an-rms-server.md)
 * [Vorgehensweise: Verwenden der Adal-Authentifizierung](how-to-use-adal-authentication.md)
-* [Installieren des SDK](install-the-rms-sdk.md)
+* [Installieren des SDKs](install-the-rms-sdk.md)
 * [Hinweise zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)

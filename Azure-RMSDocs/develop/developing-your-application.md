@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 5319ff8ca9424d1c1273df1bdf347abf65881209
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 841669b3db3e86e2ea6f1860a9d8e9d915c4d28d
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971862"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564242"
 ---
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
 
@@ -50,8 +50,8 @@ Nachdem der Dienst aktiviert wurde, benötigen Sie PowerShell-Komponenten für d
 
 >Notieren Sie den BPOSId-Wert (Mandanten-ID). Sie wird später benötigt.
 
-*Example output*Ausgabe der![
-Beispielausgabe](../media/develop/output-of-Get-AadrmConfiguration.png)
+*Beispielausgabe* 
+ ![ Cmdlet-Ausgabe](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Trennen Sie die Verbindung mit dem Dienst: `Disconnect-AipServiceService`
 
@@ -66,13 +66,13 @@ Führen Sie die folgenden Schritte aus, um einen Dienstprinzipal zu erstellen:
 - Geben Sie einen Namen für Ihre Dienstprinzipal an.
   > Notieren Sie den symmetrischen Schlüssel und die Anwendungsprinzipal-ID für die spätere Verwendung.
 
-*Example output*Ausgabe der![
-Beispielausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
+*Beispielausgabe* 
+ ![ Cmdlet-Ausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Fügen Sie Ihre Anwendungsprinzipal-ID, den symmetrischen Schlüssel und die Mandanten-ID zur Datei „App.config“ der Anwendung hinzu.
 
-*Beispiel*
-![Ausgabe für die Cmdlet-Datei "App. config"](../media/develop/example-App.config-file.png)
+*Beispiel App.config Datei* 
+ ![ Cmdlet-Ausgabe](../media/develop/example-App.config-file.png)
 
 - *ClientID* und *RedirectUri* wurden Ihnen beim Registrieren Ihrer Anwendung in Azure zur Verfügung gestellt. Weitere Informationen zum Registrieren Ihrer Anwendung in Azure und zum Abrufen von *ClientID* und *RedirectUri* finden Sie unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md).
 
@@ -95,127 +95,140 @@ Im folgenden Diagramm sind der Architektur- und Prozessverlauf für die zu erste
 
 Im Beispiel zum Azure IP-Test beginnt die Lösung mit der Datei „Iprotect.cs“. Dies ist ein C#-Konsolenanwendungsprojekt, und wie bei jeder anderen AIP-fähigen Anwendung beginnen Sie mit beim Laden der Datei *„msipc.dll“*, wie in der `main()`-Methode veranschaulicht.
 
-    //Loads MSIPC.dll
-    SafeNativeMethods.IpcInitialize();
-    SafeNativeMethods.IpcSetAPIMode(APIMode.Server);
+```csharp
+//Loads MSIPC.dll
+SafeNativeMethods.IpcInitialize();
+SafeNativeMethods.IpcSetAPIMode(APIMode.Server);
+```
 
 Laden der für die Verbindung mit Azur erforderlichen Parameter
 
-    //Loads credentials for the service principal from App.Config
-    SymmetricKeyCredential symmetricKeyCred = new SymmetricKeyCredential();
-    symmetricKeyCred.AppPrincipalId = ConfigurationManager.AppSettings["AppPrincipalId"];
-    symmetricKeyCred.Base64Key = ConfigurationManager.AppSettings["Base64Key"];
-    symmetricKeyCred.BposTenantId = ConfigurationManager.AppSettings["BposTenantId"];
+```csharp
+//Loads credentials for the service principal from App.Config
+SymmetricKeyCredential symmetricKeyCred = new SymmetricKeyCredential();
+symmetricKeyCred.AppPrincipalId = ConfigurationManager.AppSettings["AppPrincipalId"];
+symmetricKeyCred.Base64Key = ConfigurationManager.AppSettings["Base64Key"];
+symmetricKeyCred.BposTenantId = ConfigurationManager.AppSettings["BposTenantId"];
+```
 
 Wenn Sie den Dateipfad in der Konsolenanwendung angeben, prüft die Anwendung, ob das Dokument bereits verschlüsselt ist. Die Methode stammt aus der Klasse **SafeFileApiNativeMethods**.
 
-    var checkEncryptionStatus = SafeFileApiNativeMethods.IpcfIsFileEncrypted(filePath);
+```csharp
+var checkEncryptionStatus = SafeFileApiNativeMethods.IpcfIsFileEncrypted(filePath);
+```
 
 Wenn das Dokument nicht verschlüsselt ist, wird mit der Verschlüsselung des Dokuments mit der bei der Aufforderung bereitgestellten Auswahl fortgefahren.
 
-    if (!checkEncryptionStatus.ToString().ToLower().Contains(alreadyEncrypted))
-    {
-      if (method == EncryptionMethod1)
-      {
-        //Encrypt a file via AIP template
-        ProtectWithTemplate(symmetricKeyCred, filePath);
+```csharp
+if (!checkEncryptionStatus.ToString().ToLower().Contains(alreadyEncrypted))
+{
+  if (method == EncryptionMethod1)
+  {
+    //Encrypt a file via AIP template
+    ProtectWithTemplate(symmetricKeyCred, filePath);
 
-      }
-      else if (method == EncryptionMethod2)
-      {
-        //Encrypt a file using ad-hoc policy
-        ProtectWithAdHocPolicy(symmetricKeyCred, filePath);
-      }
+  }
+  else if (method == EncryptionMethod2)
+  {
+    //Encrypt a file using ad-hoc policy
+    ProtectWithAdHocPolicy(symmetricKeyCred, filePath);
+  }
+}
+```
 
 Die Option zum Schützen mit Vorlage fährt mit dem Abrufen der Vorlagenliste vom Server fort und bietet dem Benutzer die Auswahlmöglichkeit.
 >Wenn Sie keine Vorlagen geändert haben, erhalten Sie Standardvorlagen von AIP.
 
-     public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
-     {
-       // Gets the available templates for this tenant
-       Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
-           false, true, null, null, symmetricKeyCredential);
+```csharp
+public static void ProtectWithTemplate(SymmetricKeyCredential symmetricKeyCredential, string filePath)
+{
+  // Gets the available templates for this tenant
+  Collection<TemplateInfo> templates = SafeNativeMethods.IpcGetTemplateList(null, false, true,
+      false, true, null, null, symmetricKeyCredential);
 
-       //Requests tenant template to use for encryption
-       Console.WriteLine("Please select the template you would like to use to encrypt the file.");
+  //Requests tenant template to use for encryption
+  Console.WriteLine("Please select the template you would like to use to encrypt the file.");
 
-       //Outputs templates available for selection
-       int counter = 0;
-       for (int i = 0; i < templates.Count; i++)
-       {
-         counter++;
-         Console.WriteLine(counter + ". " + templates.ElementAt(i).Name + "\n" +
-             templates.ElementAt(i).Description);
-       }
+  //Outputs templates available for selection
+  int counter = 0;
+  for (int i = 0; i < templates.Count; i++)
+  {
+    counter++;
+    Console.WriteLine(counter + ". " + templates.ElementAt(i).Name + "\n" +
+        templates.ElementAt(i).Description);
+  }
 
-       //Parses template selection
-       string input = Console.ReadLine();
-       int templateSelection;
-       bool parseResult = Int32.TryParse(input, out templateSelection);
+  //Parses template selection
+  string input = Console.ReadLine();
+  int templateSelection;
+  bool parseResult = Int32.TryParse(input, out templateSelection);
 
-       //Returns error if no template selection is entered
-       if (parseResult)
-       {
-         //Ensures template value entered is valid
-         if (0 < templateSelection && templateSelection <= counter)
-         {
-           templateSelection -= templateSelection;
+  //Returns error if no template selection is entered
+  if (parseResult)
+  {
+    //Ensures template value entered is valid
+    if (0 < templateSelection && templateSelection <= counter)
+    {
+      templateSelection -= templateSelection;
 
-           // Encrypts the file using the selected template
-           TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
+      // Encrypts the file using the selected template
+      TemplateInfo selectedTemplateInfo = templates.ElementAt(templateSelection);
 
-           string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
-               selectedTemplateInfo.TemplateId,
-               SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST, true, false, true, null,
-               symmetricKeyCredential);
-          }
-        }
-      }
+      string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(filePath,
+          selectedTemplateInfo.TemplateId,
+          SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST, true, false, true, null,
+          symmetricKeyCredential);
+    }
+  }
+}
+```
 
 Wenn Sie die Ad-hoc-Richtlinie auswählen, muss der Benutzer der Anwendung E-Mails der Personen bereitstellen, die Berechtigungen erhalten sollen. In diesem Abschnitt wird die Lizenz mit der Methode **IpcCreateLicenseFromScratch()** erstellt und die neue Richtlinie auf die Vorlage angewendet.
 
-    if (issuerDisplayName.Trim() != "")
-    {
-      // Gets the available issuers of rights policy templates.
-      // The available issuers is a list of RMS servers that this user has already contacted.
-      try
-      {
-        Collection<TemplateIssuer> templateIssuers = SafeNativeMethods.IpcGetTemplateIssuerList(
-                                                        null,
-                                                        true,
-                                                        false,
-                                                        false, true, null, symmetricKeyCredential);
+```csharp
+if (issuerDisplayName.Trim() != "")
+{
+  // Gets the available issuers of rights policy templates.
+  // The available issuers is a list of RMS servers that this user has already contacted.
+  try
+  {
+    Collection<TemplateIssuer> templateIssuers = SafeNativeMethods.IpcGetTemplateIssuerList(
+                                                    null,
+                                                    true,
+                                                    false,
+                                                    false, true, null, symmetricKeyCredential);
 
-        // Creates the policy and associates the chosen user rights with it
-        SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
-                                                            templateIssuers.ElementAt(0));
-        SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
-        SafeNativeMethods.IpcSetLicenseUserRightsList(handle, userRights);
-        SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture,
-                                                                policyName,
-                                                                policyDescription,
-                                                                issuerDisplayName,
-                                                                false));
+    // Creates the policy and associates the chosen user rights with it
+    SafeInformationProtectionLicenseHandle handle = SafeNativeMethods.IpcCreateLicenseFromScratch(
+                                                        templateIssuers.ElementAt(0));
+    SafeNativeMethods.IpcSetLicenseOwner(handle, owner);
+    SafeNativeMethods.IpcSetLicenseUserRightsList(handle, userRights);
+    SafeNativeMethods.IpcSetLicenseDescriptor(handle, new TemplateInfo(null, CultureInfo.CurrentCulture,
+                                                            policyName,
+                                                            policyDescription,
+                                                            issuerDisplayName,
+                                                            false));
 
-        //Encrypts the file using the ad hoc policy
-        string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
-                                       filePath,
-                                       handle,
-                                       SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST,
-                                       true,
-                                       false,
-                                       true,
-                                       null,
-                                       symmetricKeyCredential);
-       }
+    //Encrypts the file using the ad hoc policy
+    string encryptedFilePath = SafeFileApiNativeMethods.IpcfEncryptFile(
+                                    filePath,
+                                    handle,
+                                    SafeFileApiNativeMethods.EncryptFlags.IPCF_EF_FLAG_KEY_NO_PERSIST,
+                                    true,
+                                    false,
+                                    true,
+                                    null,
+                                    symmetricKeyCredential);
     }
+}
+```
 
 ## <a name="user-interaction-example"></a>Beispiel für die Benutzerinteraktion
 
 Nachdem alles erstellt und ausgeführt wurde, sollte die Ausgabe der Anwendung wie folgt aussehen:
 
-1.Sie werden zur Auswahl eines Verschlüsselungsverfahrens aufgefordert.
-![App-Ausgabe – Schritt 1](../media/develop/app-output-1.png)
+1. Sie werden aufgefordert, eine Verschlüsselungsmethode auszuwählen.
+   ![App-Ausgabe – Schritt 1](../media/develop/app-output-1.png)
 
 2. Sie werden aufgefordert, den Pfad zu der zu schützenden Datei bereitzustellen.
    ![App-Ausgabe – Schritt 2](../media/develop/app-output-2.png)
