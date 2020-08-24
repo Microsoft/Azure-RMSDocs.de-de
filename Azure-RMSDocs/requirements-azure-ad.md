@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: b23afa0975f5d8f353b3ed8a5d4cf5332712f3b7
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: cc58a32da1bca1ce14704e0eb23ebbd0007073f7
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298188"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788967"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Zusätzliche Azure AD Anforderungen für Azure Information Protection
 
@@ -58,13 +58,13 @@ Nachdem Sie diese Voraussetzungen bestätigt haben, führen Sie je nach Mandante
 
 - **Von Microsoft verwaltete Mandanten mit Azure AD oder Office 365**. Konfigurieren Sie Azure MFA, um MFA für Benutzer zu erzwingen. 
 
-    Weitere Informationen finden Sie unter 
+    Weitere Informationen finden Sie unter: 
     - [Erste Schritte mit Azure Multi-Factor Authentication in der Cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
     - [Was ist Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication)
 
 - **Verbund Mandanten, in denen Verbund Server lokal ausgeführt werden**. Konfigurieren Sie Ihre Verbundserver für Azure Active Directory oder Office 365. Wenn Sie z. b. AD FS verwenden, finden Sie weitere Informationen unter [Konfigurieren zusätzlicher Authentifizierungsmethoden für AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-    Weitere Informationen zu diesem Szenario finden Sie im Office-Blog [unter Works with Office 365 – Identity Program](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) . 
+    Weitere Informationen zu diesem Szenario finden Sie im Office-Blog  [unter Works with Office 365 – Identity Program](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) . 
 
 ## <a name="rights-management-connector--aip-scanner-requirements"></a>Rights Management Connector/AIP-Scanner-Anforderungen
 
@@ -82,7 +82,7 @@ Konfigurationen, bei denen die UPN-Werte von Benutzern nicht mit Ihren e-Mail-Ad
 
 Wenn Sie den UPN-Wert nicht ändern können, konfigurieren Sie alternative IDs für die relevanten Benutzer, und weisen Sie Sie an, wie Sie sich mit dieser alternativen ID bei Office anmelden. 
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Konfigurieren einer alternativen Anmelde-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)
 - [Office-Anwendungen fordern regelmäßig Anmelde Informationen für SharePoint, onedrive und lync Online an](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).

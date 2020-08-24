@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a0ebdc684bea634707d09fb0b7d4dd8a4175c63b
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 4b97f7930e4d3a22746635a3d43436c59126e6fd
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073668"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788678"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -254,15 +254,13 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Folgende Dienste unterstützen derzeit einheitliche Bezeichnungen:
 
-- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI (in der Vorschau)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Office Online und Outlook im Web
+- Office Online (in der Vorschau) und Outlook im Web
 
-    Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
-
-- Microsoft SharePoint, onedrive for Work-oder School-, onedrive for Home-, Teams-und Office 365-Gruppen
+- Microsoft SharePoint, onedrive for Work-oder School-, onedrive for Home-, Teams-und Office 365-Gruppen (in der Vorschau)
     
-    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
+    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites (öffentliche Vorschau)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) und [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 - Microsoft Defender Advanced Threat Protection
 

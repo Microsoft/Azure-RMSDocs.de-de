@@ -4,7 +4,7 @@ description: Identifizieren Sie die Voraussetzungen für die Bereitstellung von 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cb55fb0acedc56c2b866d7ce681320c2dc9c2fcd
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: c984af422a867f8821c21a6e52df37e5d36437c7
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802120"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788933"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection Anforderungen
 
@@ -70,7 +70,7 @@ Zusätzliche Voraussetzungen sind für bestimmte Szenarien erforderlich, z. b. b
 Weitere Informationen finden Sie unter:
 
 - [Was ist ein Azure AD-Verzeichnis?](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Integrieren Sie lokale Active Directory Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
+- [Integrieren lokaler Active Directory-Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ## <a name="client-devices"></a>Clientgeräte
 
@@ -128,23 +128,23 @@ Für jeden Azure Information Protection Client gelten zusätzliche Voraussetzung
 
 - [Azure Information Protection Client Voraussetzungen](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
-## <a name="applications"></a>Applications
+## <a name="applications"></a>Anwendungen
 
 Die Azure Information Protection Clients können Dokumente und e-Mails mithilfe von Microsoft **Word**, **Excel**, **PowerPoint**und **Outlook** aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
-- **Office-Apps, Mindestversion 1805**, Build 9330,2078 aus Office 365 Business oder Microsoft 365 Business. 
+- **Office-Apps, Mindestversion 1805**, Build 9330,2078 aus [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename). 
 
     Diese Edition wird nur unterstützt, wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist, auch bekannt als Azure Information Protection für Office 365.
 
-- **Office 365 ProPlus**
+- **[Microsoft 365-Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)**
 
-- **Office Professional Plus 2019**
+- **[Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019**
 
-- **Office Professional Plus 2016**
+- **[Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016**
 
-- **Office Professional Plus 2013 mit Service Pack 1**
+- **[Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 mit Service Pack 1**
 
-- **Office Professional Plus 2010 mit Service Pack 2**
+- **[Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 mit Service Pack 2**
 
 Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt, und Bezeichnungen, die Schutz anwenden, werden für Benutzer nicht angezeigt. 
 
@@ -183,7 +183,7 @@ Azure Information Protection hat die folgenden zusätzlichen Anforderungen:
     
     Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
 
-- **TLS-Version 1,2 oder höher** (einheitlicher Bezeichnungs Client). Der Unified-Bezeichnungs Client erfordert eine TLS-Version von 1,2 oder höher, um die Verwendung kryptografisch sicherer Protokolle sicherzustellen und den Sicherheitsrichtlinien von Microsoft auszurichten.
+- **TLS-Version 1,2 oder** höher (nur Unified-Bezeichnung-Client). Der Unified-Bezeichnungs Client benötigt eine TLS-Version von 1,2 oder höher, um die Verwendung kryptografisch sicherer Protokolle sicherzustellen und den Sicherheitsrichtlinien von Microsoft auszurichten.
 
 ### <a name="coexistence-of-ad-rms-with-azure-rms"></a>Gleichzeitige Verwendung von AD RMS mit Azure RMS
 
@@ -246,7 +246,7 @@ Weitere Informationen finden Sie unter Bereitstellen [des Azure Rights Managemen
 
 Die folgenden Betriebssysteme unterstützen den Azure Rights Management-Dienst, der Datenschutz für AIP bereitstellt:
 
-|OS  |Unterstützte Versionen  |
+|Betriebssystem  |Unterstützte Versionen  |
 |---------|---------|
 |**Windows-Computer**     |-Windows 7 (x86, x64) </br>- Windows 8 (x86, x64) </br>- Windows 8.1 (x86, x64) </br>- Windows 10 (x86, x64)       | 
 |**macOS**     |   Mindestversion von macOS 10.8 (Mountain Lion)      |

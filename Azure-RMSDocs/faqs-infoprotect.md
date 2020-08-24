@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e54afaf29c01072a99bf943eec5326b5c839472f
-ms.sourcegitcommit: b9ed44cc71e2fa4927e046a3819f758c3e098e82
+ms.openlocfilehash: b41195e6eb50dffe5aada630b423a73c0024d244
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711968"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788627"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -106,4 +106,4 @@ Auf dieselbe Weise können Sie Ihre Bezeichnungen mit Outlook im Web und diesen 
 
 Beachten Sie, dass dies nicht erforderlich ist, wenn Sie Outlook im Web mit Exchange Online verwenden, da diese Kombination eine integrierte Bezeichnung unterstützt, wenn Sie Vertraulichkeits Bezeichnungen aus dem Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft Compliance Center veröffentlichen.
 
-Wenn Sie die integrierte Bezeichnung nicht mit Outlook im Web verwenden können, finden Sie weitere Informationen in den Konfigurationsschritten für diese Problem Umgehung: [Integration in die Legacy-Exchange-Nachrichtenklassifizierung](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification) .
+Wenn Sie die integrierte Bezeichnung nicht mit Outlook im Web verwenden können, finden Sie weitere Informationen in den Konfigurationsschritten für diese Problem Umgehung: [integrieren der Exchange-Nachrichtenklassifizierung mit Azure Information Protection für eine Lösung zur Bezeichnung für mobile Geräte](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).

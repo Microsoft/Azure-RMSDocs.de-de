@@ -4,18 +4,18 @@ description: Ein Einführungstutorial, in dem beschrieben wird, wie Sie die Azur
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5521ef3756406457ea0944e87b3fbf3567baae2f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: be5e90f0451f92fff028ff4c583f0753f45567af
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264445"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -25,6 +25,12 @@ ms.locfileid: "87802265"
 
 >[!NOTE] 
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
+> **Zum Bereitstellen des klassischen AIP-Clients** öffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.
+
+> [!TIP]
+> Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Dokumentation zur Microsoft 365-Compliance](/microsoft-365/compliance/sensitivity-labels).
+> 
 
 In diesem Tutorial wird Folgendes vermittelt:
 > [!div class="checklist"]
@@ -50,9 +56,7 @@ Voraussetzungen für dieses Tutorial:
     
     Diese Schritte werden hier beschrieben: [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
-3. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert (mindestens Windows 7 mit Service Pack 1). 
-    
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Dokumentation zur Microsoft 365-Compliance](/microsoft-365/compliance/sensitivity-labels).
+3. Der auf Ihrem Windows-Computer installierte Azure Information Protection-Client (klassisch); mindestens Windows 7 mit Service Pack 1. 
 
 4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
@@ -68,9 +72,10 @@ Voraussetzungen für dieses Tutorial:
     
     - Office Professional Plus 2010 mit Service Pack 2.
 
-Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
-
-Los geht’s!
+> [!TIP]
+> Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
+> 
+Los geht’s! Fahren Sie mit [Bearbeiten der Azure Information Protection-Richtlinie – AIP](#edit-the-azure-information-protection-policy) fort.
 
 ## <a name="edit-the-azure-information-protection-policy"></a>Bearbeiten der Azure Information Protection-Richtlinie
 

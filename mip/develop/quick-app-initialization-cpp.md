@@ -1,19 +1,19 @@
 ---
-title: 'Schnellstart: Initialisierung von Clients (C++) für das Microsoft Information Protection (MIP) SDK'
-description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clientanwendungen eines Microsoft Information Protection (MIP) SDK.
+title: 'Schnellstart: Initialisierung für MIP SDK C++-Clients mit der Datei-API'
+description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clientanwendungen eines Microsoft Information Protection (MIP) SDK mit der Datei-API.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556077"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564128"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++) 
 
 In diesem Schnellstart lernen Sie, wie Sie das Muster für die Clientinitialisierung implementieren können, das zur Laufzeit vom MSIP SDK für C++ verwendet wird. 
 

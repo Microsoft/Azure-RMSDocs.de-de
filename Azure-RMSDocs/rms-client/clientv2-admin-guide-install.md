@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3afb97e9094d74eb98b67b375def7a24f6dcc104
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 394c91c7503a9bb8995eacf8c9cec45ab85fe57d
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073685"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788950"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -34,7 +34,7 @@ ms.locfileid: "88073685"
 
 Die folgenden Voraussetzungen für den AIP Unified-Bezeichnungs Client sind zusätzlich zu den in [Azure Information Protection Anforderungen](../requirements.md)aufgeführten Elementen aufgeführt.
 
-|Anforderung  |BESCHREIBUNG  |
+|Anforderung  |Beschreibung  |
 |---------|---------|
 |**Microsoft .NET Framework 4.6.2**     | Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2. </br></br>Wenn dieses Framework fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.       |
 |**Microsoft .NET Framework 4.5.2**     | Wenn der Azure Information Protection Viewer separat installiert wird, ist für die Viewer-Anwendung mindestens eine Version von Microsoft .NET Framework 4.5.2 erforderlich. </br></br>**Wichtig:** Wenn dieses Framework für den Viewer fehlt, wird es vom ausführbaren Installationsprogramm *nicht* heruntergeladen oder installiert.        |
@@ -65,12 +65,12 @@ Für Office-Versionen 2013 und höher wird empfohlen, die Gruppenrichtlinie so z
 
 Der Azure Information Protection Unified Label-Client kann Dokumente und e-Mails mit den Office-Anwendungen Word, Excel, PowerPoint und Outlook aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
-- Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
-- Office 365 ProPlus
-- Office Professional Plus 2019
-- Office Professional Plus 2016
-- Office Professional Plus 2013 mit Service Pack 1
-- Office Professional Plus 2010 mit Service Pack 2
+- Office-Apps Minimum Version 1805, Build 9330,2078 aus [Microsoft 365 apps for Business](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) , wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist (auch bekannt als Azure Information Protection für Office 365).
+- [Microsoft 365-Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename)
+- [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2019
+- [Microsoft 365 Apps für Unternehmen](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2016
+- [Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2013 mit Service Pack 1
+- [Microsoft 365 Apps für Enterprise](https://www.microsoft.com/microsoft-365/partners/smb-sku-rename) 2010 mit Service Pack 2
 
 Andere Editionen (z. b. **Standard**) von Office können Dokumente und e-Mails nicht mithilfe eines Rights Management Dienstanbieter schützen. Für diese Editionen wird Azure Information Protection nur für die **Bezeichnung** unterstützt. Folglich werden Bezeichnungen, die Schutz anwenden, den Benutzern auf der Schaltfläche "Azure Information Protection Sensitivität" oder der Leiste nicht angezeigt.
 
@@ -100,7 +100,7 @@ Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Si
     
     Wenn eine Vorschauversion verfügbar ist, behalten Sie diese Version nur für Testzwecke. Sie ist nicht für Endbenutzer in einer Produktionsumgebung vorgesehen. 
 
-2. Für eine Standardinstallation führen Sie einfach die ausführbare Datei aus, z. b. **AzInfoProtection_UL.exe**. Wenn Sie jedoch die Installationsoptionen anzeigen möchten, führen Sie zuerst die ausführbare Datei mit **/Help**aus:`AzInfoProtection_UL.exe /help`
+2. Für eine Standardinstallation führen Sie einfach die ausführbare Datei aus, z. b. **AzInfoProtection_UL.exe**. Wenn Sie jedoch die Installationsoptionen anzeigen möchten, führen Sie zuerst die ausführbare Datei mit **/Help**aus: `AzInfoProtection_UL.exe /help`
 
     Beispiel zum automatischen Installieren des Clients: `AzInfoProtection_UL.exe /quiet`
     
@@ -187,12 +187,12 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     
     |Office-Version|Betriebssystem|Software|Aktion|
     |--------------------|--------------|----------------|---------------------|
-    |Alle Versionen akzeptieren Office 365, Version 1902 und höher|Nur Windows 10 Version 1809 mit Betriebssystembuilds, die älter als 17763.348 sind|[4482887 KB](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installieren|
-    |Office 2016|Alle unterstützten Versionen|64-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Installieren|
-    |Office 2013|Alle unterstützten Versionen|64-Bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-Bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Installieren|
-    |Office 2010|Alle unterstützten Versionen|[Microsoft Online Services-Anmelde-Assistent](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Installieren|
+    |Alle Versionen akzeptieren Office 365, Version 1902 und höher|Nur Windows 10 Version 1809 mit Betriebssystembuilds, die älter als 17763.348 sind|[4482887 KB](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installation|
+    |Office 2016|Alle unterstützten Versionen|64-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Installation|
+    |Office 2013|Alle unterstützten Versionen|64-Bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-Bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Installation|
+    |Office 2010|Alle unterstützten Versionen|[Microsoft Online Services-Anmelde-Assistent](https://www.microsoft.com/download/details.aspx?id=28177)<br /><br /> Version: 2.1|Installation|
     |Office 2010|Windows 8.1 und Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB2843630 oder KB2919355 nicht installiert sind.|
-    |Office 2010|Windows 8 und Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren|
+    |Office 2010|Windows 8 und Windows Server 2012|[KB2843630](https://www.microsoft.com/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installation|
     
    
 

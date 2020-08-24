@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 53f9b0b11c89e66fccc10243d48bc2835884ea35
-ms.sourcegitcommit: c5772e8c4bdcd1840f2d855264f023ff12f6fc07
+ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437834"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788644"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -57,7 +57,7 @@ Da der Unified-Bezeichnungs Client und der klassische Client eine separate Insta
 Anhand der folgenden Abschnitte können Sie bestimmen, welcher Client für Ihre Organisation am besten geeignet ist:
 
 - [Integrierter Office-Beschriftungs Client](#built-in-office-labeling-client)
-- [Azure Information Protection-Client für einheitliche Bezeichnungen](#azure-information-protection-unified-labeling-client)
+- [Azure Information Protection Unified-Bezeichnungs Client](#azure-information-protection-unified-labeling-client)
 - [Azure Information Protection des klassischen Clients](#azure-information-protection-classic-client)
 - [Verwenden mehrerer Clients in derselben Umgebung](#using-multiple-clients-in-the-same-environment)
 
@@ -126,7 +126,7 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 
 In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, macOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
 
-|Funktion|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
+|Funktion|Klassischer Client|Client für einheitliche Bezeichnungen|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
 |Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
@@ -138,7 +138,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
 |Anpassungen wie z.B. folgende:<br />– Standardbezeichnung für E-Mails<br />: Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
-|Überprüfung für lokale Datenspeicher:| **Ja** | **Zwar<br />** | Nein |
+|Überprüfung für lokale Datenspeicher:| **Ja** | **Zwar <br />** | Nein |
 |Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | Nein |
 |Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
 |Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
@@ -147,17 +147,17 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
-|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein  |
+|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |
 |PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
 |Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja**| Nein |
-|HYOK-Unterstützung:| **Ja** | Nein | Nein  |
-|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein  |
-|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein  |
+|HYOK-Unterstützung:| **Ja** | Nein | Nein |
+|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein |
+|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein |
 |Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>6</sup> | Nein |
-|Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein  |
-|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein  |
-|Unterstützung für Kontowechsel:| Nein  | Nein | **Ja** |
+|Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein |
+|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein |
+|Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
 |Unterstützung für AD RMS:| **Ja** | Nr. <sup>7</sup> | Nein |
 |Externe Inhalts Markierung in App entfernen:| **Ja**| **Ja**| Nein|
@@ -184,7 +184,7 @@ Fußnoten:
 
 Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azure Information Protection Unified-Bezeichnungs Client dieselbe Funktion unterstützen, verwenden Sie die folgende Tabelle, um einige funktionale Unterschiede zwischen den beiden Clients zu identifizieren.
 
-|Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Funktionalität |Klassischer Client|Client für einheitliche Bezeichnungen|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Einrichtung:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
@@ -200,6 +200,9 @@ Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azu
 |Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
 |Bestell Unterstützung für untergeordnete Bezeichnungen auf Anlagen: | Aktiviert mit einer [erweiterten Client Einstellung](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Standardmäßig aktiviert, keine Konfiguration erforderlich|
 |Ändern Sie das standardmäßige Schutzverhalten für Dateitypen: | Sie können [Registrierungs Änderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) verwenden, um die Standardwerte für systemeigenen und generischen Schutz zu überschreiben. | Sie können [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) verwenden, um zu ändern, welche Dateitypen geschützt werden.|
+|Automatisches neuskaliert | Vollständige Neueinstellungen werden automatisch ausgeführt, wenn der Scanner eine Änderung der Richtlinie oder der Beschriftungs Einstellungen erkennt. | Ab Version [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview)können Administratoren eine vollständige erneute Überprüfung überspringen, nachdem Sie die Einstellungen für die Richtlinie oder den Inhaltsüberprüfungs Auftrag geändert haben. |
+|Netzwerkermittlung |Die Netzwerk Ermittlungs Funktionen sind für den klassischen Scanner nicht verfügbar. | Administratoren können zusätzliche riskante Depots ermitteln, indem Sie eine bestimmte IP-Adresse oder einen bestimmten Bereich Scannen.|
+| | | |
 
 Einen ausführlichen Vergleich der Verhaltensunterschiede für bestimmte Schutzeinstellungen finden Sie unter [Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -217,7 +220,7 @@ Obwohl sich der Azure Information Protection Unified Bezeichnung-Client noch in 
 
 - PDF-Dokument als [ppdf-Datei (älteres Format)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) schützen
 
-- Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen
+- Anzeigen der Schaltfläche " **nicht weiterleiten** " in Outlook
 
 - Demorichtlinien
 
@@ -240,6 +243,6 @@ Verwenden Sie die folgende Dokumentation, um die Azure Information Protection Cl
 
 - [Azure Information Protection-Client](AIP-client.md)
 
-- [Azure Information Protection-Client für einheitliche Bezeichnungen](unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection Unified-Bezeichnungs Client](unifiedlabelingclient-version-release-history.md)
 
 Weitere Informationen zur Verwendung des integrierten Bezeichnungs Clients für Office 365-apps finden Sie unter [Vertraulichkeits Bezeichnungen in Office-Apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).

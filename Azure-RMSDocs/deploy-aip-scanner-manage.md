@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6dcad16cdcb2c2d00277ce94b9cf4ab5db94227
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049535"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788746"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection Scanners
 
@@ -87,7 +87,7 @@ Das Azure-Portal zeigt nur Informationen zur letzten Überprüfung an. Wenn Sie 
 
 Der Speicherort oder Name des Berichts Ordners kann nicht geändert werden. Wenn Sie Berichte an einem anderen Speicherort speichern möchten, sollten Sie die Verwendung einer Verzeichnis Verknüpfung für den Ordner in Erwägung gezogen.
 
-Verwenden Sie z. b. den Befehl " [mklink](/windows-server/administration/windows-commands/mklink) ":`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+Verwenden Sie z. b. den Befehl " [mklink](/windows-server/administration/windows-commands/mklink) ": `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
 Wenn Sie diese Schritte nach der Erstkonfiguration und-Installation durchgeführt haben, fahren Sie mit [Konfigurieren des Scanners fort, um Klassifizierung und Schutz anzuwenden](deploy-aip-scanner-configure-install.md#configure-the-scanner-to-apply-classification-and-protection).
 
@@ -109,32 +109,34 @@ Verwenden Sie eine der folgenden Methoden, um einen aktuell laufenden Scanvorgan
 
 Beim [ersten Scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner)Vorgang prüft der Scanner alle Dateien in den konfigurierten Daten speichern. Bei nachfolgenden Scans werden nur neue oder geänderte Dateien überprüft.
 
-Die erneute Überprüfung aller Dateien ist in der Regel hilfreich, wenn Sie möchten, dass die Berichte alle Dateien einschließen und der Scanner im Ermittlungs Modus ausgeführt wird.
+Die erneute Überprüfung aller Dateien ist in der Regel hilfreich, wenn Sie möchten, dass die Berichte alle Dateien einschließen, wenn Sie Änderungen vorgenommen haben, die Sie auf alle Dateien anwenden möchten, und wenn die Überprüfung im Ermittlungs Modus ausgeführt wird.
 
-Führen Sie eine neue Überprüfung aller Dateien mit einer der folgenden Methoden aus:
+**So führen Sie einen vollständigen erneuten Scan manuell aus:**
 
-- [Manuelles Ausführen eines vollständigen erneuten Scans](#manually-run-a-full-rescan)
-- [Durch Aktualisieren der Richtlinie eine vollständige erneute Überprüfung auslöst](#trigger-a-full-rescan-by-refreshing-the-policy)
+1. Navigieren Sie in der Azure-Portal zum Bereich **Azure Information Protection-Inhalts Scanaufträge** .
 
-### <a name="manually-run-a-full-rescan"></a>Manuelles Ausführen eines vollständigen erneuten Scans
+1. Wählen Sie den Auftrag für die Inhalts Überprüfung aus der Liste aus, und wählen Sie dann die Option **alle Dateien neu** Einlesen aus:
 
-Erzwingen Sie, dass die Überprüfung alle Dateien nach Bedarf erneut aus dem Bereich **Azure Information Protection-Inhalts Scanaufträge** in der Azure-Portal prüft.
-
-Wählen Sie den Auftrag für die Inhalts Überprüfung aus der Liste aus, und wählen Sie dann die Option **alle Dateien neu** Einlesen aus:
-
-![Initiieren eines erneuten Scanvorgangs für den Azure Information Protection-Scanner](./media/scanner-rescan-files.png)
+    ![Initiieren eines erneuten Scanvorgangs für den Azure Information Protection-Scanner](./media/scanner-rescan-files.png)
 
 Wenn eine vollständige Überprüfung durchgeführt wird, wird der Überprüfungstyp automatisch in inkrementell geändert, sodass bei nachfolgenden Scans nur neue oder geänderte Dateien erneut gescannt werden.
 
-### <a name="trigger-a-full-rescan-by-refreshing-the-policy"></a>Durch Aktualisieren der Richtlinie eine vollständige erneute Überprüfung auslöst
+> [!TIP]
+> Wenn Sie Änderungen an Ihrem AIP- [Inhalts Überprüfungs Auftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)vorgenommen haben, werden Sie vom Azure-Portal aufgefordert, eine vollständige erneute Überprüfung zu überspringen. Um sicherzustellen, dass die erneute Überprüfung ausgeführt wird, stellen Sie sicher, dass in der angezeigten Eingabeaufforderung **Nein** ausgewählt ist.
+> 
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>Einen vollständigen erneuten Scan durch Ändern der Einstellungen (Versionen 2.7.99.0 und früher) auslöst
 
-Alle Dateien werden auch dann überprüft, wenn der Scanner über neue oder geänderte Einstellungen für die automatische und empfohlene Bezeichnung verfügt. Die Überprüfung aktualisiert die Richtlinie automatisch alle vier Stunden.
+In den Überprüfungs Versionen 2.7.99.0 und früher werden alle Dateien gescannt, wenn der Scanner neue oder geänderte Einstellungen für die automatische und empfohlene Bezeichnung erkennt. Die Überprüfung aktualisiert die Richtlinie automatisch alle vier Stunden.
 
-Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, löschen Sie den Inhalt des Verzeichnisses **%LocalAppData%\microsoft\msip\mip \\ < *ProcessName*> \mip** , und starten Sie den Azure Information Protection-Dienst neu.
+Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, löschen Sie den Inhalt des Verzeichnisses **%LocalAppData%\microsoft\msip\mip \<processname> \mip** , und starten Sie den Azure Information Protection-Dienst neu.
 
-> [!NOTE]
-> Wenn Sie auch die Schutzeinstellungen für ihre Bezeichnungen geändert haben, warten Sie beim Speichern der aktualisierten Schutzeinstellungen vor dem Neustart des Azure Information Protection Dienstanbieter weitere 15 Minuten ab.
+Wenn Sie auch die Schutzeinstellungen für ihre Bezeichnungen geändert haben, warten Sie beim Speichern der aktualisierten Schutzeinstellungen vor dem Neustart des Azure Information Protection Dienstanbieter weitere 15 Minuten ab.
+
+> [!IMPORTANT]
+> Wenn Sie ein Upgrade auf Version [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) oder höher durchgeführt haben, überspringt AIP den vollständigen erneuten Scanvorgang für aktualisierte Einstellungen, um eine konsistente Leistung sicherzustellen. Wenn Sie ein Upgrade durchgeführt haben, stellen Sie sicher, dass Sie bei Bedarf [manuell einen vollständigen erneuten Scan ausführen](#rescanning-files) . 
 >
+> Wenn Sie beispielsweise die Einstellungen für die **Richtlinien** Erzwingung von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
+> 
 
 ## <a name="troubleshooting-a-stopped-scan"></a>Problembehandlung bei einem beendeten Scan
 

@@ -1,17 +1,17 @@
 ---
-title: 'Schnellstart: Initialisierung von Clients (C++) für das Microsoft Information Protection (MIP) SDK'
-description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clientanwendungen eines Microsoft Information Protection (MIP) SDK.
+title: 'Schnellstart: Initialisierung für MIP SDK C++-Clients mit der Schutz-API'
+description: Schnellstart zum Schreiben der Initialisierungslogik für Microsoft Information Protection SDK-Clientanwendungen (MIP) mit der Schutz-API.
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: e0f77c27c38b8b2f1baf4385efce1ee7336c8f9d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 063db1a923e66f108583b17ee998549511265bee
+ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766387"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564142"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Schnellstart: Initialisierung der Clientanwendung für Schutz-APIs (C++)
 

@@ -1,21 +1,21 @@
 ---
 title: 'Tutorial: Verwenden von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben – AIP'
 description: Ein Einführungstutorial zum Konfigurieren und Anzeigen von erweiterten Clienteinstellungen für den Azure Information Protection-Client zum Ausgeben von Warnungen – zur Legitimierungsaufforderung oder zum Blockieren von Popupmeldungen –, die über Outlook gesendet werden.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 08/17/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e386cfb416d508f46e60b4c75a7ac7710d510088
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 6bb35700a025105b584b93b5a38219b567dbe99c
+ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88264428"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -25,8 +25,10 @@ ms.locfileid: "86048492"
 
 >[!NOTE] 
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
+> **Zum Bereitstellen des klassischen AIP-Clients** öffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.
 
-In diesem Tutorial wird Folgendes vermittelt:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 > * Konfigurieren von Einstellungen, über die Warn-, Legitimierungs- oder Blockierungsmeldungen in Outlook implementiert werden
 > * Testen Ihrer Einstellungen
@@ -47,24 +49,28 @@ Voraussetzungen für dieses Tutorial:
     
     Wenn Sie kein Abonnement besitzen, das diesen Plan enthält, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Der Bereich „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
+1. Der Bereich „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
     
     Obwohl in diesem Tutorial die Standardbezeichnung **Allgemein** verwendet wird, können Sie diese, falls gewünscht, durch eine andere Bezeichnung ersetzen. Wenn Sie beim Hinzufügen des Azure Information Protection-Bereichs Hilfe benötigen oder noch keine Bezeichnungen in der globalen Richtlinie veröffentlicht haben, lesen Sie den Artikel [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
-3. Einen Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie sich bei Outlook anmelden können. Sie werden Outlook während dieses Tutorials mehrere Male schließen und öffnen müssen.
+1. Einen Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie sich bei Outlook anmelden können. Sie werden Outlook während dieses Tutorials mehrere Male schließen und öffnen müssen.
 
-4. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert.
-    
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
-    
-    Wenn Sie den Client für einheitliche Bezeichnungen anstelle des klassischen Clients verwenden, sehen Sie sich die folgenden Anweisungen an, die erläutern, wie Sie die erweiterten PowerShell-Einstellungen für die entsprechenden Konfigurationen in diesem Tutorial verwenden:
-    
-    - Anweisungen im Administratorleitfaden: [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) (Konfiguration von Azure Information Protection-Popupmeldungen in Outlook)
+1. Der auf Ihrem Windows-Computer installierte Azure Information Protection-Client (klassisch); mindestens Windows 7 mit Service Pack 1. 
 
-Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
+> [!TIP]
+> Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
+> 
+Los geht’s! Fahren Sie mit [Identifizieren einer Bezeichnungs-ID zum Testen](#identify-a-label-id-for-testing) fort.
 
-Los geht’s!
+**Client für einheitliche Bezeichnungen**
+
+Wenn Sie den Client für einheitliche Bezeichnungen anstelle des klassischen Clients verwenden, sehen Sie sich die folgenden Anweisungen an, die erläutern, wie Sie die erweiterten PowerShell-Einstellungen für die entsprechenden Konfigurationen in diesem Tutorial verwenden:
+    
+- Anweisungen im Administratorleitfaden: [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) (Konfiguration von Azure Information Protection-Popupmeldungen in Outlook)
+
+
 
 ## <a name="identify-a-label-id-for-testing"></a>Identifizieren einer Bezeichnungs-ID zum Testen
 
@@ -114,14 +120,14 @@ Geben Sie für diesen Tutorialschritt die folgenden erweiterten Clienteinstellun
 
 Verwenden Sie die neu erstellte bereichsbezogene Richtlinie, und fügen Sie eine neue erweiterte Clienteinstellung namens **OutlookWarnUntrustedCollaborationLabel** mit der ID Ihrer Bezeichnung **Allgemein** hinzu: 
 
-1. Klicken Sie dann im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie dann im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Geben Sie im Bereich **Erweiterte Einstellungen** den Namen für die erweiterten Einstellungen ein (**OutlookWarnUntrustedCollaborationLabel**), und fügen Sie Ihre eigene Bezeichnungs-ID für den Wert ein. Verwenden Sie Ihre Beispiel-Bezeichnungs-ID:
     
     
     ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookWarnUntrustedCollaborationLabel“-Clienteinstellung ](./media/configure-warnmessage.png)
 
-3. Wählen Sie **Speichern und schließen** aus.
+3. Klicken Sie auf **Speichern und schließen**.
 
 Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
@@ -149,13 +155,13 @@ Auf Ihrem Clientcomputer sind nun die Konfigurationsergebnisse dieser erweiterte
 
 Sie bearbeiten die vorhandene Clienteinstellung, um Ihre Bezeichnungsweise-ID **Allgemein** zu behalten, Sie ändern jedoch den Namen in **OutlookJustifyUntrustedCollaborationLabel**: 
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Ersetzen Sie im Bereich **Erweiterte Einstellungen** den vorherigen Namen der erweiterten Einstellung, den Sie erstellt haben (**OutlookWarnUntrustedCollaborationLabel**), durch den Namen **OutlookJustifyUntrustedCollaborationLabel**:
     
     ![Azure Information Protection-Tutorial – Erstellen der erweiterten Clienteinstellung „OutlookJustifyUntrustedCollaborationLabel“ ](./media/configure-justifymessage.png)
 
-3. Wählen Sie **Speichern und schließen** aus.
+3. Klicken Sie auf **Speichern und schließen**.
 
 Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
@@ -181,13 +187,13 @@ Auf Ihrem Clientcomputer sehen Sie nun die Ergebnisse dieser neuen erweiterten C
 
 Sie bearbeiten die vorhandene Clienteinstellung ein weiteres Mal, um Ihre Bezeichnungsweise-ID **Allgemein** zu behalten, Sie ändern jedoch den Namen in **OutlookBlockUntrustedCollaborationLabel**: 
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Ersetzen Sie im Bereich **Erweiterte Einstellungen** den vorherigen Namen der erweiterten Einstellung, den Sie erstellt haben (**OutlookJustifyUntrustedCollaborationLabel**), durch den Namen **OutlookBlockUntrustedCollaborationLabel**:
     
     ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookBlockUntrustedCollaborationLabel“-Clienteinstellung ](./media/configure-blockmessage.png)
 
-3. Wählen Sie **Speichern und schließen** aus.
+3. Klicken Sie auf **Speichern und schließen**.
 
 Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
@@ -286,13 +292,13 @@ Sie haben Ihre Warn-, Legitimierungs- und Blockierungsmeldungen mit Ihrer eigene
 
 Um die Funktionsweise in der Praxis zu erleben, erstellen Sie eine zusätzliche erweiterte Clienteinstellung namens **OutlookBlockTrustedDomains** und geben Ihren eigenen Domänennamen aus Ihrer E-Mail-Adresse an. Damit wird verhindert, dass die Blockierungsmeldung für Empfänger angezeigt wird, deren E-Mail-Adresse den gleichen Domänennamen enthält. Für andere Empfänger wird die Meldung weiterhin angezeigt. Auf ähnliche Weise können Sie zusätzliche erweiterte Clienteinstellungen für **OutlookWarnTrustedDomains** und **OutlookJustifyTrustedDomains** erstellen.
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Geben Sie im Bereich **Erweiterte Einstellungen** den Namen der erweiterten Einstellung (**OutlookBlockTrustedDomains**) ein, und fügen Sie Ihren Domänennamen aus Ihrer E-Mail-Adresse für den Wert ein. Beispiel:
     
     ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookBlockTrustedDomains“-Clienteinstellung](./media/configure-exemptblockdomain.png)
 
-4. Wählen Sie **Speichern und schließen** aus. Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
+4. Klicken Sie auf **Speichern und schließen**. Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
 5. Wiederholen Sie jetzt den oben beschriebenen [Test zum Blockieren von Benutzern für das Senden einer E-Mail mit der Bezeichnung „Allgemein“](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label): Die Blockierungsmeldung wird nicht mehr angezeigt, wenn Sie Ihre eigene E-Mail-Adresse verwenden. Die E-Mail wird ohne Unterbrechung gesendet.
     
@@ -308,13 +314,13 @@ Geben Sie für diesen Tutorialschritt eine neue erweiterte Clienteinstellung mit
 
 Diese neue erweiterte Clienteinstellung namens **OutlookUnlabeledCollaborationAction** benötigt keine Bezeichnungs-ID, sie gibt jedoch die Aktion an, die für Inhalte ohne Bezeichnung auszuführen ist: 
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Geben Sie im Bereich **Erweiterte Einstellungen** den Namen der erweiterten Einstellung ein (**OutlookUnlabeledCollaborationAction**), und geben Sie für den Wert **Warn** (Warnen) an:
     
     ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookUnlabeledCollaborationAction“-Clienteinstellung mit Warnungswert ](./media/configure-nolablewarn.png)
 
-3. Wählen Sie **Speichern und schließen** aus.
+3. Klicken Sie auf **Speichern und schließen**.
 
 Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
@@ -338,13 +344,13 @@ Auf Ihrem Clientcomputer sind nun die Konfigurationsergebnisse dieser neuen erwe
 
 Sie bearbeiten die vorhandene erweiterte Clienteinstellung, um den Namen von **OutlookUnlabeledCollaborationAction** zu behalten, Sie ändern jedoch den Wert in **Justify** (Legitimieren): 
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Suchen Sie im Bereich **Erweiterte Einstellungen** die Einstellung **OutlookUnlabeledCollaborationAction**, und ersetzen Sie den vorherigen Wert für **Warnung** durch den neuen Wert **Justify** (Legitimieren):
     
     ![Azure Information Protection-Tutorial – Ändern der erweiterten „OutlookUnlabeledCollaborationAction“-Clienteinstellung in Legitimationswert](./media/configure-justifymessage2.png)
 
-3. Wählen Sie **Speichern und schließen** aus.
+3. Klicken Sie auf **Speichern und schließen**.
 
 Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
@@ -368,13 +374,13 @@ Auf Ihrem Clientcomputer sehen Sie nun die Ergebnisse aufgrund der Änderung des
 
 Wie zuvor bearbeiten Sie nun die vorhandene erweiterte Clienteinstellung, um den Namen von **OutlookUnlabeledCollaborationAction** zu behalten, Sie ändern jedoch den Wert in **Block** (Blockieren): 
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Wählen Sie dann **Erweiterte Einstellungen** aus.
 
 2. Suchen Sie im Bereich **Erweiterte Einstellungen** die Einstellung **OutlookUnlabeledCollaborationAction**, und ersetzen Sie den vorherigen Wert für **Justify** (Legitimieren) durch den neuen Wert **Blockieren**:
     
     ![Azure Information Protection-Tutorial – Ändern der erweiterten „OutlookUnlabeledCollaborationAction“-Clienteinstellung in Blockierwert](./media/configure-blockmessage2.png)
 
-3. Wählen Sie **Speichern und schließen** aus.
+3. Klicken Sie auf **Speichern und schließen**.
 
 Schließen Sie nicht den Bereich **Richtlinien** oder das Azure-Portal.
 
@@ -424,7 +430,7 @@ User Response: Confirmed
 
 Führen Sie die folgenden Schritte durch, wenn Sie die Änderungen, die Sie in diesem Tutorial vorgenommen haben, nicht beibehalten möchten:
 
-1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Klicken Sie dann auf **Richtlinie löschen**.
+1. Klicken Sie im Bereich **Azure Information Protection – Richtlinien** im Azure-Portal auf das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben). Klicken Sie dann auf **Richtlinie löschen**.
 
 2. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**.
 

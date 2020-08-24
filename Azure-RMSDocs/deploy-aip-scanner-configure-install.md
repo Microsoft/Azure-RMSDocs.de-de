@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren und Konfigurieren des Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 08/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e786b30075f7a72781dd6cac13af4e14b70fc2db
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 7960c945ee51c5d2d81f26aa75f350aeb87c0f60
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049559"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788806"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -40,7 +40,7 @@ Wenn Sie fertig sind, fahren Sie mit den folgenden Schritten fort:
  
 Führen Sie die folgenden zusätzlichen Konfigurationsverfahren aus, die für Ihr System erforderlich sind:
 
-|Vorgehensweise  |BESCHREIBUNG  |
+|Verfahren  |BESCHREIBUNG  |
 |---------|---------|
 |[Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect) |Möglicherweise möchten Sie verschiedene Dateitypen Scannen, klassifizieren oder schützen als die Standardwerte. Weitere Informationen finden Sie unter [AIP-Scanvorgang](deploy-aip-scanner.md#aip-scanning-process). |
 |[Aktualisieren Ihres Scanners](#upgrading-your-scanner) | Aktualisieren Sie Ihren Scanner, um die neuesten Features und Verbesserungen zu nutzen.|
@@ -53,43 +53,132 @@ Weitere Informationen finden Sie auch [in der Liste der Cmdlets für den Scanner
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Konfigurieren des Scanners im Azure-Portal
 
-Bevor Sie die Überprüfung installieren oder von einer älteren Version der Überprüfung mit allgemeiner Verfügbarkeit aktualisieren, erstellen Sie einen Cluster-und Inhalts Scanauftrag für die Überprüfung in der Azure-Portal. 
-
-Konfigurieren Sie anschließend den Auftrag für Cluster-und Inhalts Scans mit den Überprüfungs Einstellungen und den zu überprüfenden Daten Depots.
+Bevor Sie die Überprüfung installieren oder von einer älteren Version der allgemeinen Verfügbarkeit aktualisieren, konfigurieren oder überprüfen Sie die Überprüfungs Einstellungen im Bereich Azure Information Protection der Azure-Portal.
 
 So konfigurieren Sie Ihren Scanner: 
 
 1. [Melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), und navigieren Sie zum Bereich **Azure Information Protection** . 
     
-    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
+    Beginnen Sie beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumentation mit der Eingabe von **Information**, und wählen Sie **Azure Information Protection** aus.
+
+1. [Erstellen Sie einen scannercluster](#create-a-scanner-cluster). Dieser Cluster definiert ihren Scanner und wird zur Identifizierung der Überprüfungs Instanz verwendet, z. b. während der Installation, Upgrades und anderen Prozessen.
+
+1. Optionale [Scannen Sie Ihr Netzwerk auf riskante Depots](#create-a-network-scan-job-public-preview). Erstellen Sie einen Netzwerk Scanauftrag, um eine bestimmte IP-Adresse oder einen bestimmten Bereich zu scannen, und geben Sie eine Liste der riskanten Depots an, die vertrauliche Inhalte enthalten können, die Sie sichern möchten.  
+
+    Führen Sie Ihren Netzwerk Scanauftrag aus, und analysieren Sie dann [alle gefundenen riskanten Depots](#analyze-risky-repositories-found-public-preview).
+
+1. [Erstellen Sie einen Auftrag](#create-a-content-scan-job) für die Inhalts Überprüfung, um die zu überprüfenden Depots zu definieren.
+
+### <a name="create-a-scanner-cluster"></a>Erstellen eines Scanner-Clusters  
+
+1. Wählen Sie im Menü **Scanner** auf der linken Seite **Cluster** ![Cluster Symbol](media/i-clusters.png "Cluster (Symbol)")aus.
+
+1. Wählen Sie im Bereich **Azure Information Protection-Cluster** die Option Add- ![Symbol](media/i-add.png "Symbol hinzufügen")hinzu **fügen** aus.
     
-1. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Cluster**aus.
-
-1. Wählen Sie im Bereich **Azure Information Protection-Cluster** die Option **Hinzufügen**aus:
+1. Geben Sie im Bereich **neuen Cluster hinzufügen** einen aussagekräftigen Namen für die Überprüfung ein, und geben Sie optional eine Beschreibung ein. 
     
-    :::image type="content" source="media/scanner-add-profile.png" alt-text="Inhalts Überprüfungs Auftrag für den Azure Information Protection Scanner hinzufügen":::
+    Der Cluster Name wird verwendet, um die Konfigurationen und Depots des Scanners zu identifizieren. Sie können z. b. **Europa** eingeben, um die geografischen Standorte der zu überprüfenden Daten Depots zu ermitteln. 
 
-1. Im Bereich **neuen Cluster hinzufügen** :
+    Sie verwenden diesen Namen später, um zu ermitteln, wo Sie Ihren Scanner installieren oder aktualisieren möchten.
 
-    1. Geben Sie einen aussagekräftigen Namen für die Überprüfung an. Dieser Name wird verwendet, um die Konfigurationseinstellungen des Scanners und die zu überprüfenden Daten Depots zu identifizieren. 
+1. Aktivieren **Sie das** ![Symbol](media/qs-tutor/save-icon.png "Symbol "Speichern"") speichern, um die Änderungen zu speichern.
 
-        Sie können beispielsweise **Europa** angeben, um den geografischen Standort der Datenrepositorys anzugeben, für die Ihr Scanner zuständig ist. Wenn Sie den Scanner später installieren oder aktualisieren, müssen Sie denselben Cluster Namen angeben.
-   
-    2. Optional können Sie eine Beschreibung für administrative Zwecke angeben, damit Sie den Cluster Namen des Scanners leichter identifizieren können.
+### <a name="create-a-network-scan-job-public-preview"></a>Erstellen eines Netzwerk Scan Auftrags (öffentliche Vorschau)
 
-    3. Wählen Sie **Speichern** aus.
-1. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Inhalts Scanaufträge**aus.
-1. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Hinzufügen**aus.
+Ab Version 2.8.83 können Sie Ihr Netzwerk auf riskante Depots überprüfen. Fügen Sie einem Inhalts Überprüfungs Auftrag mindestens ein Repository hinzu, um Sie auf sensiblen Inhalt zu überprüfen.
+
+> [!NOTE]
+> Die **Netzwerk** Ermittlungs Schnittstelle befindet sich derzeit in einer schrittweisen Bereitstellung und ist ab dem 15. September 2020 in allen Regionen verfügbar. 
+
+- [Voraussetzungen der Netzwerk Ermittlung](#network-discovery-prerequisites)
+- [Erstellen eines Netzwerk Scan Auftrags](#creating-a-network-scan-job)
+
+#### <a name="network-discovery-prerequisites"></a>Voraussetzungen der Netzwerk Ermittlung
+
+|Voraussetzung  |BESCHREIBUNG  |
+|---------|---------|
+|**Installieren des Netzwerk Ermittlungs Dienstanbieter**     |   Wenn Sie vor kurzem ein Upgrade Ihres Scanners durchgeführt haben, müssen Sie möglicherweise weiterhin den Netzwerk Ermittlungsdienst installieren. </br></br>Führen Sie das Cmdlet [**install-mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) aus, um Netzwerk Scanaufträge zu aktivieren.      |
+|**Azure Information Protection Analytics**     | Stellen Sie sicher, dass Azure Information Protection Analytics aktiviert ist. </br></br>Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau).** </br></br>Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](reports-aip.md).|
+| | |
+
+#### <a name="creating-a-network-scan-job"></a>Erstellen eines Netzwerk Scan Auftrags
+
+1. Melden Sie sich beim Azure-Portal an, und wechseln Sie zu **Azure Information Protection.** Wählen Sie im Menü **Scanner** auf der linken Seite die Option Netzwerk Scan **Aufträge (Vorschau)** ![Netzwerk Scanaufträge Symbol](media/i-network-scan-jobs.png "Symbol "Netzwerk Scanaufträge"")aus.
+    
+1. Wählen Sie im Bereich **Azure Information Protection-Netzwerk Scanaufträge** die Option Add- ![Symbol](media/i-add.png "Symbol hinzufügen")hinzu **fügen** aus.
+    
+1. Legen Sie auf der Seite **neuen Netzwerk Scanauftrag hinzufügen** die folgenden Einstellungen fest:
+        
+    |Einstellung  |Beschreibung  |
+    |---------|---------|
+    |**Name des Netzwerk Scan Auftrags**     |Geben Sie einen aussagekräftigen Namen für diesen Auftrag ein.  Dieses Feld ist erforderlich.       |
+    |**Beschreibung**     |   Geben Sie eine aussagekräftige Beschreibung ein.      |
+    |**Wählen Sie den Cluster aus.**     |Wählen Sie in der Dropdown Liste den Cluster aus, den Sie zum Scannen der konfigurierten Netzwerkspeicher Orte verwenden möchten.  </br></br>**Tipp:** Stellen Sie bei der Auswahl eines Clusters sicher, dass die Knoten im Cluster, den Sie zuweisen, über SMB auf die konfigurierten IP-Adressbereiche zugreifen können.      |
+    |**Konfigurieren von IP-Bereichen zum Ermitteln**     |   Klicken Sie, um eine IP-Adresse oder einen Bereich zu definieren. </br></br>Geben Sie im Bereich **IP-Bereiche auswählen** einen optionalen Namen und dann eine Start-IP-Adresse und eine End-IP-Adresse für Ihren Bereich ein. </br></br>**Tipp:** Um nur eine bestimmte IP-Adresse zu scannen, geben Sie die gleiche IP-Adresse in den Feldern **Start-IP** und **End-IP** ein.      |
+    |**Zeitplan festlegen**     | Legen Sie fest, wie oft dieser Netzwerk Scanauftrag ausgeführt werden soll.  </br></br>Wenn Sie **wöchentlich**auswählen, wird die Einstellung **Netzwerk Scanauftrag ausführen auf** angezeigt. Wählen Sie die Wochentage aus, an denen der Netzwerk Scanauftrag ausgeführt werden soll.       |
+    |**Startzeit festlegen (UTC)**     |Definieren Sie das Datum und die Uhrzeit, zu der die Ausführung dieses Netzwerk Scan Auftrags gestartet werden soll. Wenn Sie ausgewählt haben, dass der Auftrag täglich, wöchentlich oder monatlich ausgeführt wird, wird der Auftrag mit der von Ihnen ausgewählten Wiederholung zum festgelegten Zeitpunkt ausgeführt. </br></br>**Hinweis**: seien Sie vorsichtig, wenn Sie das Datum auf einen beliebigen Tag am Monatsende festlegen. Wenn Sie **31 auswählen,** wird der Netzwerk Scanauftrag nicht in einem Monat ausgeführt, der höchstens 30 Tage beträgt.    |
+    | | |
+
+1. Aktivieren **Sie das** ![Symbol](media/qs-tutor/save-icon.png "Symbol "Speichern"") speichern, um die Änderungen zu speichern.
+
+> [!TIP]
+> Wenn Sie dieselbe Netzwerk Überprüfung mit einem anderen Scanner ausführen möchten, ändern Sie den im Netzwerk Scanauftrag definierten Cluster.
+> 
+> Wechseln Sie zurück zum Bereich **Netzwerk Scanaufträge** , und wählen Sie **zu Cluster zuweisen** aus, um einen anderen Cluster zu wählen, oder heben Sie die **Zuweisung der Cluster** auf, um später weitere Änderungen vorzunehmen. 
+>     
+
+### <a name="analyze-risky-repositories-found-public-preview"></a>Analysieren von riskanten Depots gefunden (öffentliche Vorschau)
+
+Durch einen Netzwerk Scanauftrag, einen Inhalts Überprüfungs Auftrag oder durch den in Protokolldateien erkannten Benutzer Zugriff gefundene Depots werden aggregiert und im [Symbol](media/i-repositories.png "Repository (Symbol)") Bereich **Scanner > Repository** -Repository aufgeführt.
+
+Wenn Sie [einen Netzwerk Scanauftrag definiert](#create-a-network-scan-job-public-preview) haben und ihn so festgelegt haben, dass er zu einem bestimmten Zeitpunkt ausgeführt wird, warten Sie, bis die Ausführung abgeschlossen ist, um die Ergebnisse zu überprüfen. Sie können hier auch nach dem Ausführen eines [Inhalts Scan Auftrags](#create-a-content-scan-job) zurückkehren, um aktualisierte Daten anzuzeigen.
+
+1. Wählen Sie im Menü **Scanner** auf der linken Seite die Option **Repository** - ![Repository-Symbol](media/i-repositories.png "Repository (Symbol)")aus.
+    
+    Die gefundenen Depots werden wie folgt angezeigt:
+    - Das Diagramm " **Repository nach Status** " zeigt an, wie viele Depots bereits für einen inhaltscanauftrag konfiguriert sind und wie viele nicht.
+    - In den **ersten 10 nicht verwalteten Repository nach Zugriffs** Diagramm sind die obersten 10 Repository aufgelistet, die derzeit keinem Inhalts Überprüfungs Auftrag zugewiesen sind, sowie Details zu ihren Zugriffsebenen. Zugriffsebenen können angeben, wie riskant ihre Depots sind.
+    - In der Tabelle unterhalb der Diagramme werden alle gefundenen Repository und deren Details aufgelistet.
+
+1. Führen Sie einen der folgenden Schritte aus:
+    
+    |Option  |Beschreibung  |
+    |---------|---------|
+    |![Symbol "Spalten"](media/i-columns.png "Symbol "Spalten"")    | Wählen Sie **Spalten** aus, um die angezeigten Tabellen Spalten zu ändern.        |
+    |![Symbol "Aktualisieren"](media/i-refresh.png "Symbol "Aktualisieren"")   | Wenn Ihr Scanner vor kurzem Netzwerk Scanergebnisse ausgeführt hat, wählen Sie **Aktualisieren** aus, um die Seite zu aktualisieren.      |
+    |![Symbol hinzufügen](media/i-add.png "Symbol hinzufügen")   | Wählen Sie ein oder mehrere in der Tabelle aufgeführte Depots aus, und wählen Sie dann **ausgewählte Elemente zuweisen** aus, um Sie einem Inhalts Überprüfungs Auftrag zuzuweisen.          |
+    |**Filter**     |   In der Filter Zeile werden alle derzeit angewendeten Filterkriterien angezeigt. Wählen Sie eines der angezeigten Kriterien aus, um die Einstellungen zu ändern, oder wählen Sie **Filter hinzufügen** aus, um neue Filterkriterien hinzuzufügen. </br></br>Wählen Sie **Filter** aus, um die Änderungen zu übernehmen und die Tabelle mit dem aktualisierten Filter zu aktualisieren.       |
+    |![Log Analytics Symbol](media/i-log-analytics.png "Log Analytics Symbol") |Klicken Sie in der oberen rechten Ecke des Diagramms für nicht verwaltete Depots auf das **Log Analytics** -Symbol, um zu Log Analytics Daten für diese Depots zu springen. |
+    | | |
+
+#### <a name="repositories-with-public-access"></a>Depots mit öffentlichem Zugriff
+
+In den Depots, in denen der **öffentliche Zugriff** über **Lese** **-oder Lese-/Schreibfunktionen** verfügt, können vertrauliche Inhalte vorhanden sein, die geschützt werden müssen. Wenn der **öffentliche Zugriff** auf false gilt, ist das Repository überhaupt nicht zugänglich.
+
+Der öffentliche Zugriff auf ein Repository wird nur gemeldet, wenn Sie ein schwaches Konto im **standarddomainsuseraccount** -Parameter der Cmdlets [**install-mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) oder [**Set-mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscovery) festgelegt haben.
+
+- Die in diesen Parametern definierten Konten werden verwendet, um den Zugriff eines schwachen Benutzers auf das Repository zu simulieren. Wenn der schwache Benutzer, der dort definiert ist, auf das Repository zugreifen kann, bedeutet dies, dass auf das Repository öffentlich zugegriffen werden kann. 
+
+- Stellen Sie sicher, dass der in diesen Parametern angegebene Benutzer nur Mitglied der Gruppe " **Domänen Benutzer** " ist, um sicherzustellen, dass der öffentliche Zugriff ordnungsgemäß gemeldet wird.
+       
+### <a name="create-a-content-scan-job"></a>Erstellen eines Inhalts Scan Auftrags
+
+Ausführliche Informationen zu ihren Inhalten, um bestimmte Depots auf sensiblen Inhalt zu überprüfen. 
+
+Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags zum Analysieren der Depots in Ihrem Netzwerk möglich. Sie können jedoch auch ihre Depots selbst definieren.
  
-1. Konfigurieren Sie für diese Erstkonfiguration die folgenden Einstellungen, und wählen Sie dann **Speichern** aus, aber schließen Sie den Bereich nicht:
+1. Wählen Sie im Menü **Scanner** auf der linken Seite die Option **Inhalts Scanaufträge**aus. 
+   
+1. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option Add- ![Symbol](media/i-add.png "Symbol "Speichern"")hinzu **fügen** aus.
+ 
+1. Konfigurieren Sie für diese Erstkonfiguration die folgenden Einstellungen, und wählen Sie dann **Speichern** aus, aber schließen Sie den Bereich nicht.
     
-    |`Section`  |Einstellungen  |
+    |Einstellung  |Beschreibung  |
     |---------|---------|
     |**Einstellungen für den Content Scan-Auftrag**     |    - **Zeitplan**: behalten Sie den Standardwert **manuell** bei. </br>- **Zu ermittelnde Informationstypen**: **nur in Richtlinie** ändern </br>- **Repository konfigurieren**: Konfigurieren Sie zu diesem Zeitpunkt nicht, da der Inhalts Überprüfungs Auftrag zuerst gespeichert werden muss.         |
     |**Richtlinienerzwingung**     | - **Erzwingen**: SELECT **Off** </br>- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . </br>- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten </br>- **Dateien**neu bezeichnen: Standardwert " **aus** " beibehalten        |
     |**Konfigurieren von Datei Einstellungen**     | - **"Datum geändert", "zuletzt geändert" und "geändert von**" beibehalten: behalten Sie die Standardeinstellung **bei** . </br>- **Zu überprüfende Dateitypen**: Standard Dateitypen für **Ausschluss** beibehalten </br>- **Standard Besitzer**: behalten Sie die Standardeinstellung **Scanner-Konto** bei.        |
     | | |
-
 
 1. Nachdem der Auftrag für die Inhalts Überprüfung erstellt und gespeichert wurde, können Sie zur Option " **Depots konfigurieren** " zurückkehren, um die Datenspeicher anzugeben, die gescannt werden sollen. 
 
@@ -102,43 +191,43 @@ So konfigurieren Sie Ihren Scanner:
     
     :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Konfigurieren von Datenrepositorys für den Azure Information Protection-Scanner":::
 
-1. Klicken Sie im Bereich **Repositorys** auf die Option **Hinzufügen**:
+    1. Klicken Sie im Bereich **Repositorys** auf die Option **Hinzufügen**:
     
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Hinzufügen eines Datenrepositorys für den Azure Information Protection-Scanner":::
+        :::image type="content" source="media/scanner-repository-add.png" alt-text="Hinzufügen eines Datenrepositorys für den Azure Information Protection-Scanner":::
 
-1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
+    1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
 
-    Zum Beispiel: 
+        Zum Beispiel: 
 
-    - Verwenden Sie für eine Netzwerkfreigabe `\\Server\Folder` . 
-    - Verwenden Sie für eine SharePoint-Bibliothek `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
+        - Verwenden Sie für eine Netzwerkfreigabe `\\Server\Folder` . 
+        - Verwenden Sie für eine SharePoint-Bibliothek `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
 
-    > [!NOTE]
-    > Platzhalter und WebDav-Speicherorte werden nicht unterstützt.
-    >     
+        > [!NOTE]
+        > Platzhalter und WebDav-Speicherorte werden nicht unterstützt.
+        >     
 
-    Verwenden Sie die folgende Syntax, wenn Sie SharePoint-Pfade hinzufügen:
+        Für die restlichen Einstellungen in diesem Bereich sollten Sie diese nicht für diese anfängliche Konfiguration ändern, sondern als Standardwert für den **inhaltscanauftrag**beibehalten. Die Standardeinstellung bedeutet, dass das Datenrepository die Einstellungen vom Inhalts Überprüfungs Auftrag erbt.
+
+        Verwenden Sie die folgende Syntax, wenn Sie SharePoint-Pfade hinzufügen:
     
-    |Pfad  |Syntax  |
-    |---------|---------|
-    |**Stammpfad**     | `http://<SharePoint server name>` </br></br>Scannt alle Websites, einschließlich sämtlicher Site Sammlungen, die für den scannerbenutzer zulässig sind. </br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Stamm Inhalten        |
-    |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
-    |**Bestimmte SharePoint-Bibliothek**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
-    |**Bestimmter SharePoint-Ordner**     | `http://<SharePoint server name>/.../<folder name>`        |
-    | | |
+        |`Path`  |Syntax  |
+        |---------|---------|
+        |**Stammpfad**     | `http://<SharePoint server name>` </br></br>Scannt alle Websites, einschließlich sämtlicher Site Sammlungen, die für den scannerbenutzer zulässig sind. </br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Stamm Inhalten        |
+        |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
+        |**Bestimmte SharePoint-Bibliothek**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+        |**Bestimmter SharePoint-Ordner**     | `http://<SharePoint server name>/.../<folder name>`        |
+        | | |
 
-    Für die restlichen Einstellungen in diesem Bereich sollten Sie diese nicht für diese anfängliche Konfiguration ändern, sondern als Standardwert für den **inhaltscanauftrag**beibehalten. Die Standardeinstellung bedeutet, dass das Datenrepository die Einstellungen vom Inhalts Überprüfungs Auftrag erbt.
-
-    <!--
+        <!--
         > [!IMPORTANT]
         > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
         >
         > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-    -->
+        -->
 
-1. Wenn Sie ein weiteres Datenrepository hinzufügen möchten, wiederholen Sie die Schritte 8 und 9. 
+1. Wiederholen Sie die vorherigen Schritte, um beliebig viele Depots hinzuzufügen.
 
-1. Schließen Sie den Bereich " **Depots** " und den Bereich " **Inhalts Überprüfungs Auftrag** ". 
+    Wenn Sie fertig sind, schließen Sie sowohl die Bereiche " **Repository** " als auch " **Inhalts Scan** ". 
 
 Im Bereich **Azure Information Protection Inhalts** Überprüfung wird der Name Ihres Inhalts Scans angezeigt, und die Spalte " **Zeitplan** " zeigt " **manuell** " an, und die Spalte " **erzwingen** " ist leer.
 
@@ -180,13 +269,15 @@ Nachdem Sie den Scanner installiert haben, müssen Sie [ein Azure AD Token für 
 
 ## <a name="get-an-azure-ad-token-for-the-scanner"></a>Abrufen eines Azure AD-Tokens für die Überprüfung
 
-Ein Azure AD Token ermöglicht es dem Scanner, sich beim Azure Information Protection-Dienst zu authentifizieren.
+Ein Azure AD Token ermöglicht es dem Scanner, sich beim Azure Information Protection-Dienst zu authentifizieren, sodass der Scanner nicht interaktiv ausgeführt werden kann.
+
+Weitere Informationen finden Sie unter Vorgehens [Weise beim nicht interaktiven bezeichnen von Dateien für Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 So erhalten Sie ein Azure AD Token:
 
-1. Kehren Sie zum Azure-Portal zurück, um eine Azure AD-Anwendung zu erstellen und ein Zugriffs Token für die Authentifizierung anzugeben. Mit diesem Token kann der Scanner nicht interaktiv ausgeführt werden. Weitere Informationen finden Sie unter Vorgehens [Weise beim nicht interaktiven bezeichnen von Dateien für Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
-
-2. Wenn Ihrem Überprüfungs Dienst Konto auf dem Windows Server-Computer die Berechtigung zum **lokalen anmelden** für die Installation erteilt wurde, melden Sie sich mit diesem Konto an, und starten Sie eine PowerShell-Sitzung. 
+1. Kehren Sie zum Azure-Portal zurück, um eine Azure AD-Anwendung zu erstellen und ein Zugriffs Token für die Authentifizierung anzugeben.
+1. 
+1. Wenn Ihrem Überprüfungs Dienst Konto auf dem Windows Server-Computer die Berechtigung zum **lokalen anmelden** für die Installation erteilt wurde, melden Sie sich mit diesem Konto an, und starten Sie eine PowerShell-Sitzung. 
 
     Führen Sie [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) aus, und geben Sie die Werte an, die Sie aus dem vorherigen Schritt kopiert haben:
     
@@ -205,13 +296,13 @@ So erhalten Sie ein Azure AD Token:
 > [!TIP]
 > Wenn Ihrem Überprüfungs Dienst Konto die Berechtigung " **Lokal anmelden** " für die Installation nicht gewährt werden kann, verwenden Sie den *onbehalfof* -Parameter mit " [Set-aipauthentication](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipauthentication)", wie unter Gewusst [wie: nicht interaktives bezeichnen von Dateien für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)beschrieben.
 
-Der Scanner verfügt jetzt über ein Token zum Authentifizieren bei Azure AD, das ein Jahr, zwei Jahre oder nie ist, gemäß ihrer Konfiguration der **Web-App/API** geheimer Client Schlüssel in Azure AD. 
+Der Scanner verfügt jetzt über ein Token zum Authentifizieren bei Azure AD. Dieses Token ist für ein Jahr, zwei Jahre oder nie gültig, gemäß ihrer Konfiguration der **Web-App/API** geheimer Client Schlüssel in Azure AD. 
 
 Wenn das Token abläuft, müssen Sie dieses Verfahren wiederholen.
 
 Nun können Sie den ersten Scanvorgang im Ermittlungsmodus ausführen. Weitere Informationen finden Sie unter [Ausführen eines Ermittlungs Zyklen und Anzeigen von Berichten für die](deploy-aip-scanner-manage.md#run-a-discovery-cycle-and-view-reports-for-the-scanner)Überprüfung.
 
-Wenn Sie bereits eine Ermittlungs Überprüfung ausgeführt haben, fahren Sie mit [Konfigurieren des Scanners zum Anwenden der Klassifizierung und des Schutzes](#configure-the-scanner-to-apply-classification-and-protection)fort.
+Nachdem Sie die erste Ermittlungs Überprüfung ausgeführt haben, fahren Sie mit [Konfigurieren des Scanners fort, um Klassifizierung und Schutz anzuwenden](#configure-the-scanner-to-apply-classification-and-protection).
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Konfigurieren der Überprüfung zum Anwenden von Klassifizierung und Schutz
 
@@ -231,7 +322,7 @@ Um diese Einstellungen zu ändern, bearbeiten Sie den Auftrag für die Inhalts �
 
 3. Notieren Sie sich die aktuelle Uhrzeit, und starten Sie die Überprüfung erneut über den Bereich **Azure Information Protection-Inhalts Scanaufträge** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiieren des Scanvorgangs für den Azure Information Protection-Scanner":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiieren der Überprüfung für den Azure Information Protection-Scanner":::
     
     Alternativ können Sie den folgenden Befehl in der PowerShell-Sitzung ausführen:
     
@@ -340,7 +431,7 @@ Zum Identifizieren von Bedingungen und Informationstypen für die Bezeichnung ve
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |BESCHREIBUNG  |
+|Option  |Beschreibung  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. </br></br>Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. </br></br>Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. </br></br>Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
@@ -361,8 +452,8 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Lade-/Antwort-Zeiten**     |Die aktuellen Lade-und Antwortzeiten der Datenspeicher, die die zu überprüfenden Dateien enthalten, wirken sich auch auf die Leistung des Scanners aus.         |
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. </br></br>Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung der Überprüfung kann beeinträchtigt werden, wenn Sie Änderungen an der Auto Layout-Richtlinie vorgenommen haben. </br></br>Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. </br></br>Wenn Sie die Bedingungen oder die Authentifizierungs Einstellungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Zum Beispiel: </br>-Vermeiden [gieriger quantifiziererer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von.`(expression)`    |
-|**Protokolliergrad**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Zum Beispiel: </br>-Vermeiden [gieriger quantifiziererer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
+|**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. </br></br>-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. </br></br>-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
 
@@ -376,27 +467,43 @@ In diesem Abschnitt werden die für den Azure Information Protection Scanner unt
 
 Zu den unterstützten Cmdlets für den Scanner gehören:
 
+- [Export-aiplogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
+
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
-- [Export-aiplogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
+- [Get-mipnetworkdiscoveryconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)
+
+- [Get-mipnetworkdiscoveryjobs](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)
+
+- [Get-mipnetworkdiscoverystatus](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
 - [Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [Import-mipnetworkdiscoveryconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
+
+- [Install-mipnetworkdiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
-- [Start-aipscandiagnostics](/powershell/module/azureinformationprotection/Start-AIPScanDiagnostics)
+- [Set-mipnetworkdiscoveryconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
+
+- [Start-aipscandiagnostics](/powershell/module/azureinformationprotection/Start-AIPScannerDiagnostics)
+
+- [Start-mipnetworkdiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - ["Beendet-aipscan"](/powershell/module/azureinformationprotection/Stop-AIPScan)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
+
+- [Deinstallation von mipnetworkdiscovery](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

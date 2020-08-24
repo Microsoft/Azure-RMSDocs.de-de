@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0a02d5bb811bd18698a0ca4ec0a797ff4e31ffa4
-ms.sourcegitcommit: a495476a439a57cf6a4b3446575e344504b3fefb
+ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87554939"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788718"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Connectors
 
@@ -35,6 +35,7 @@ Stellen Sie sicher, dass Sie die richtige Azure Sovereign Cloud-Instanz kennen, 
 - **AzureUSGovernment2**: Azure Government 2
 - **AzureUSGovernment3**: Azure Government 3
 
+
 ## <a name="installing-the-rms-connector"></a>Installieren des RMS-Connectors
 
 1.  Identifizieren Sie die Computer (mindestens zwei), um den RMS-Connector auszuführen. Diese Computer müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
@@ -46,7 +47,7 @@ Stellen Sie sicher, dass Sie die richtige Azure Sovereign Cloud-Instanz kennen, 
 
     Laden Sie zum Installieren des RMS-Connectors die Datei „RMSConnectorSetup.exe“ herunter.
 
-    Berücksichtigen Sie zudem Folgendes:
+    Außerdem:
 
     -   Wenn Sie das Serverkonfigurationstool für den RMS-Connector verwenden möchten, um die Konfiguration der Registrierungseinstellungen auf Ihren lokalen Servern zu automatisieren, müssen Sie auch die Komponente „GenConnectorConfig.ps1“ herunterladen.
 
@@ -69,6 +70,7 @@ Bevor Sie den RMS-Verbindungs Dienst konfigurieren können, müssen Sie zuerst d
 :::image type="content" source="media/authenticate_tenant_rms_connector.png" alt-text="Wählen Sie die richtige Azure-Umgebung aus, um Ihren neuen Aad RM-Connector zu authentifizieren":::
 
 Nachdem Sie Ihre cloudumgebung ausgewählt haben, geben Sie Ihren **Benutzernamen** und Ihr **Kennwort ein** Stellen Sie sicher, dass Sie die Anmelde Informationen für ein Konto eingeben, das über ausreichende Berechtigungen zum Konfigurieren des RMS-Verbindungs Verbindungs Beispielsweise können Sie eingeben <strong>admin@contoso.com</strong> und dann das Kennwort für dieses Konto angeben.
+
 
 Wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, müssen Sie darüber hinaus sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Möglichkeit zum Schützen von Inhalten auf die Gruppe „IT-Abteilung“ beschränkt haben, muss das Konto, das Sie hier angeben, ein Mitglied dieser Gruppe sein. Andernfalls wird die folgende Fehlermeldung angezeigt: Fehler **beim Versuch, den Speicherort des Verwaltungs Dienstanbieter und der Organisation zu ermitteln. Stellen Sie sicher, dass Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
 
@@ -107,7 +109,7 @@ Sie können ein Konto verwenden, das über eine der folgenden Berechtigungen ver
     >     ```
     >     Geben Sie beispielsweise Folgendes ein: **Add-aipservicerolebasedadministrator-EmailAddress melisa@contoso.com -Role "Connector Administrator"** .
     >
-    >     Mit diesen Befehlen wird zwar die Rolle „Connectoradministrator“ zugewiesen, Sie könnten hier aber auch die Rolle „Globaler Administrator“ verwenden.
+    >     Obwohl diese Befehle die Rolle "Connector-Administrator" zuweisen, können Sie hier auch die Rolle "globaladministrator" verwenden.
 
 Während der Installation des RMS-Connectors werden alle erforderlichen Softwareanwendungen überprüft und installiert, Internetinformationsdienste (Internet Information Services, IIS) wird installiert, sofern nicht bereits vorhanden, und die Connectorsoftware wird installiert und konfiguriert. Darüber hinaus wird Azure RMS für die Konfiguration vorbereitet, indem Folgendes erstellt wird:
 

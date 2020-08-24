@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection vereinheitlichte Bezeichnung für den Client Versionsverlauf & Unterstützungs Richtlinie
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
-author: batamig
-ms.author: bagol
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 07/15/2020
+ms.date: 08/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a02fabd167fdbe7f0e2cef826c68920c164a20e4
-ms.sourcegitcommit: c0cd6591a44b213a68a6d1bb47acbb344bb94783
+ms.openlocfilehash: 6a264c971be86e324f3541f20ab6c91735619f77
+ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2020
-ms.locfileid: "88256858"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88788695"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -29,7 +29,9 @@ ms.locfileid: "88256858"
 
 Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen.
 
-Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection Unified**-Bezeichnungs Client und der Klassifizierung von **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog enthalten. Azure Information Protection Versionen haben den Produktnamen **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection Unified**-Bezeichnungs Client und eine Klassifizierung von **Updates**. 
+
+Das Einschließen von Azure Information Protection in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Software Bereitstellungs Mechanismen, die Microsoft Update verwenden, aktualisieren können.
 
 Weitere Informationen finden Sie unter [aktualisieren und Verwalten des Azure Information Protection Unified Bezeichnung-Clients](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -63,6 +65,96 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
+## <a name="version-2883-public-preview"></a>Version 2.8.83 (öffentliche Vorschau)
+
+Unified Bezeichnung Scanner-Version 2.8.83
+
+**Veröffentlicht** 08/24/2020
+
+**Neue Features für den Unified-Beschriftungs Scanner:**
+- [Optionale vollständige neuänderungen für erkannte Änderungen](#optional-full-rescans-for-changes-detected)
+- [Unterstützung der Netzwerk Ermittlung](#network-discovery-support)
+
+### <a name="optional-full-rescans-for-changes-detected"></a>Optionale vollständige neuänderungen für erkannte Änderungen
+
+Administratoren können jetzt eine vollständige erneute Überprüfung überspringen, nachdem Sie Änderungen an Richtlinien oder Inhalts Scan Aufträgen vorgenommen haben. Wenn Sie einen vollständigen erneuten Scan überspringen, werden die Änderungen nur auf Dateien angewendet, die seit der letzten Überprüfung geändert oder erstellt wurden.
+
+Beispielsweise können Sie Änderungen vorgenommen haben, die sich nur auf den Endbenutzer auswirken, z. b. in visuellen Markierungen, und nicht die Zeit beanspruchen, die erforderlich ist, um eine vollständige erneute Überprüfung sofort auszuführen. 
+
+Überspringen Sie die vollständige, sofortige Neuüberprüfung, und kehren Sie später zurück, um [eine vollständige erneute Überprüfung durchzuführen](../deploy-aip-scanner-manage.md#rescanning-files) und Ihre Änderungen in ihren Depots anzuwenden.
+
+> [!IMPORTANT]
+> Administratoren, die Änderungen an Ihren Richtlinien und Inhalts Scan Aufträgen vornehmen, müssen nun die Auswirkungen dieser Änderungen auf den Inhalt verstehen und ermitteln, ob eine vollständige erneute Überprüfung erforderlich ist.
+> 
+> Wenn Sie beispielsweise die Einstellungen für die **Richtlinien** Erzwingung von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
+>
+
+### <a name="network-discovery-support"></a>Unterstützung der Netzwerk Ermittlung
+
+Der Unified-Beschriftungs Scanner enthält jetzt einen neuen **Netzwerk** Ermittlungsdienst, mit dem Sie die angegebenen IP-Adressen oder Bereiche für Netzwerkdatei Freigaben überprüfen können, die möglicherweise sensible Inhalte aufweisen. 
+
+Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit einer Liste von Freigabe Standorten, die möglicherweise gefährdet sind, basierend auf den ermittelten Berechtigungen und Zugriffsrechten. Überprüfen Sie die aktualisierten **Repository** -Berichte, um sicherzustellen, dass Ihre Inhalts Überprüfungs Aufträge alle zu scannenden Depots enthalten.
+
+- [Voraussetzungen der Netzwerk Ermittlung](#network-discovery-prerequisites)
+- [Verwenden des Netzwerk Ermittlungs Dienstanbieter](#using-the-network-discovery-service)
+
+### <a name="network-discovery-prerequisites"></a>Voraussetzungen der Netzwerk Ermittlung
+
+|Anforderung  |Beschreibung  |
+|---------|---------|
+|**Aktualisierte Scanner und Cluster konfiguriert**     |  Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. </br></br>Weitere Informationen finden Sie unter: </br>- [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner) </br>- [Erstellen eines Scanner-Clusters](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)       |
+|**Azure Information Protection Analytics**     | Stellen Sie sicher, dass Azure Information Protection Analytics aktiviert ist. </br></br>Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau).** </br></br>Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](../reports-aip.md).        |
+
+### <a name="using-the-network-discovery-service"></a>Verwenden des Netzwerk Ermittlungs Dienstanbieter
+
+1. Aktivieren Sie die Netzwerk Ermittlung durch Ausführen des PowerShell-Cmdlets [**install-mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) . 
+
+    > [!IMPORTANT]
+    > Wenn Sie dieses Cmdlet ausführen, stellen Sie sicher, dass Sie einen schwachen Benutzer als Wert für den **standarddomainsuseraccount** -Parameter verwenden, um sicherzustellen, dass alle öffentlichen Zugriffe auf die Repository gemeldet werden. 
+    >
+    > Dieser Benutzer muss nur Mitglied der Gruppe " **Domänen Benutzer** " sein und wird verwendet, um den öffentlichen Zugriff auf die Depots zu simulieren.
+
+1. Wechseln Sie in der Azure-Portal zu Azure Information Protection > **Network Scan-Aufträge** , und [Erstellen Sie Aufträge, um bestimmte Bereiche Ihres Netzwerks zu](../deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview)überprüfen. 
+
+
+1. Verwenden Sie die generierten Berichte im Bereich "neue [**Depots**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) ", um nach zusätzlichen Netzwerkdatei Freigaben zu suchen, die möglicherweise gefährdet sind. Fügen Sie Ihren [Inhalts Überprüfungs Aufträgen](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) riskante Dateifreigaben hinzu, um die hinzugefügten Depots auf vertrauliche Inhalte zu scannen.
+
+#### <a name="network-discovery-cmdlets"></a>Cmdlets für die Netzwerk Ermittlung
+
+Folgende PowerShell-Cmdlets sind für die **Netzwerk** Ermittlung hinzugefügt:
+
+|Cmdlet  |Beschreibung  |
+|---------|---------|
+|[**Get-mipnetworkdiscoveryconfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Ruft die aktuelle Einstellung ab, ob der **Netzwerk** Ermittlungsdienst Netzwerk Scan Daten aus der Standard-, Online-oder Offline Datei abruft, die aus der Azure-Portal exportiert wurde.      |
+|[**Get-mipnetworkdiscoveryjobs**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Ruft eine Liste der derzeit konfigurierten Netzwerk Scanaufträge ab.     |
+|[**Get-mipnetworkdiscoverystatus**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)     |     Ruft den aktuellen Status des **Netzwerk** Ermittlungs Dienstanbieter ab.    |
+| [**Import-mipnetworkdiscoveryconfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)     |    Importiert die Konfiguration für einen Netzwerk Scanauftrag aus einer Datei.     |
+| [**Install-mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)| Installiert den **Netzwerk** Ermittlungsdienst. |
+|[**Set-mipnetworkdiscoveryconfiguration**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)     |   Legt die Konfiguration fest, ob der **Netzwerk** Ermittlungsdienst Netzwerk Scan Daten aus der Standard-, Online-oder Offline Datei abruft, die aus der Azure-Portal exportiert wurden.      |
+|[**Start-mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)     |  Führt sofort einen bestimmten Netzwerk Scanauftrag aus.       |
+|[**Deinstallation von mipnetworkdiscovery**](https://docs.microsoft.com/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Deinstalliert den **Netzwerk** Ermittlungsdienst.       |
+
+### <a name="fixes-and-improvements"></a>Korrekturen und Verbesserungen
+
+Die folgenden Korrekturen wurden in Version 2.8.83 des Azure Information Protection Unified-Beschriftungs Scanners übermittelt:
+
+|Funktion  |Behobene Probleme  |
+|---------|---------|
+|**Dateipfad-Anforderungen**     |  Verbesserungen beim Scannen von Dateien mit langen Pfaden. Weitere Informationen finden Sie unter [Dateipfad-Anforderungen](../deploy-aip-scanner-prereqs.md#file-path-requirements).       |
+|**[SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) -Unterstützung für mehrere Content-Datenbanken**     |Der AIP-Scanner scannt nun vollständige SharePoint-Umgebungen, wenn mehrere Content-Datenbanken vorhanden sind.    |
+|**Unterstützte [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) -Dateipfade**     |Der AIP-Scanner unterstützt jetzt SharePoint-Dateien mit einem Punkt im Pfad, aber keine Erweiterung. </br></br>Beispielsweise wird eine Datei mit dem Pfad `https://sharepoint.contoso.com/shared documents/meeting-notes` ohne Erweiterung nun erfolgreich gescannt.      |
+|**Unterstützung für benutzerdefinierte sensible Informationen**     |   Der AIP-Scanner unterstützt jetzt [benutzerdefinierte vertrauliche Informationstypen](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) , die im Microsoft Security and Compliance Center erstellt wurden und keiner Richtlinie angehören.      |
+
+## <a name="version-271010"></a>Version 2.7.101.0
+
+Unified-Beschriftungs Scanner und Client Version 2.7.101.0
+
+**Veröffentlicht** 08/23/2020
+
+**Zusetzen**
+
+Das Problem für PPT-, Excel-und Word-Benutzer wurde behoben, das dazu geführt hat, dass Dateien eingefroren, abgestürzt sind oder dass die Speicherung wiederholt werden musste, die mit obligatorischen Bezeichnungen verknüpft war, die mit Schutz, Wasserzeichen und/oder Inhaltsmarkierung
+
 ## <a name="version-27990"></a>Version 2.7.99.0
 
 Unified-Beschriftungs Scanner und Client Version 2.7.99.0
@@ -70,6 +162,8 @@ Unified-Beschriftungs Scanner und Client Version 2.7.99.0
 **Veröffentlicht** 07/20/2020
 
 **Korrekturen und Verbesserungen:**
+
+**Veröffentlicht** 07/19/2020
 
 Behobene Probleme bei Datei Bezeichnungs Aktionen für **neue Beschriftungs** Überwachungs Protokolle.
 
@@ -83,7 +177,8 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 **Neue Features für den Unified-Beschriftungs Scanner:**
 
-- [Verwenden Sie Scanner, um Bezeichnungen auf der Grundlage der empfohlenen Bedingungen anzuwenden](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). AIP-Kunden können jetzt festlegen, dass nur die automatische Kennzeichnung von Diensten implementiert wird. Diese Funktion ermöglicht es AIP-Endbenutzern, immer Empfehlungen anstelle des vorherigen Szenarios zu befolgen, das nur die automatische Bezeichnung auf der Benutzerseite aktiviert hat.
+
+- [Verwenden Sie Scanner, um Bezeichnungen auf der Grundlage der empfohlenen Bedingungen anzuwenden](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). AIP-Kunden können nun festlegen, dass nur Dienst seitige Authentifizierung implementiert werden soll. Diese Funktion ermöglicht es AIP-Endbenutzern, immer Empfehlungen anstelle des vorherigen Szenarios zu befolgen, das nur die automatische Bezeichnung auf der Benutzerseite aktiviert hat.
 
 - [Informationen dazu, welche Dateien zuvor von Scanner erkannt wurden, wurden aus dem gescannten Repository gelöscht](https://docs.microsoft.com/azure/information-protection/reports-aip) Diese gelöschten Dateien wurden zuvor nicht in AIP Analytics gemeldet und sind jetzt im Bericht zur scannerermittlung verfügbar.
 
@@ -113,7 +208,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
 
@@ -124,9 +219,9 @@ Weitere Informationen finden Sie unter
 
 **Erzwingen von TLS 1.2**
 
-Ab dieser Version des Azure Information Protection Clients werden nur TLS-Versionen 1,2 oder höher unterstützt.
+Ab dieser Version des Azure Information Protection Clients werden nur die TLS-Versionen 1,2 oder höher unterstützt.
     
-Kunden mit einem TLS-Setup, das TLS 1,2 nicht unterstützt, müssen zu Setup wechseln, das TLS 1,2 unterstützt, um Azure Information Protection Richtlinien, Token, Überwachung und Schutz zu verwenden und Azure Information Protection-basierte Kommunikation zu empfangen. 
+Kunden, die über ein TLS-Setup verfügen, das TLS 1,2 nicht unterstützt, müssen zu einem Setup wechseln, das TLS 1,2 unterstützt, um Azure Information Protection Richtlinien, Token, Überwachung und Schutz zu verwenden und Azure Information Protection-basierte Kommunikation zu empfangen. 
     
 Weitere Informationen zu den Anforderungen finden Sie unter [Firewalls und Netzwerkinfrastruktur Anforderungen](../requirements.md#firewalls-and-network-infrastructure).
 
@@ -150,7 +245,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Firewalls und Netzw
 
 - [Dynamische Benutzervariablen](../configure-policy-markings.md#using-variables-in-the-text-string) werden nun wie erwartet in den visuellen Kennzeichnungen eines Dokuments angezeigt.
 
-- Das Problem, dass nur die erste Seite des Inhalts einer PDF-Datei zum Anwenden von Regeln für die automatische Klassifizierung verwendet wurde, ist jetzt behoben, und die automatische Klassifizierung basierend auf dem gesamten Inhalt in der PDF-Datei verläuft nun erwartungsgemäß. Weitere Informationen zur Klassifizierung und Bezeichnung finden Sie in den häufig gestellten Fragen zur [Klassifizierung und Bezeichnung](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
+- Das Problem, dass nur die erste Seite des Inhalts einer PDF-Datei zum Anwenden von Regeln für die automatische Klassifizierung verwendet wurde, ist jetzt aufgelöst, und die automatische Klassifizierung basierend auf dem gesamten Inhalt in der PDF-Datei wird jetzt erwartungsgemäß fortgesetzt. Weitere Informationen zur Klassifizierung und Bezeichnung finden Sie in den häufig gestellten Fragen zur [Klassifizierung und Bezeichnung](https://docs.microsoft.com/azure/information-protection/faqs-infoprotect). 
 
 - Wenn mehrere Exchange-Konten konfiguriert sind und der Azure Information Protection Outlook-Client aktiviert ist, werden die e-Mails wie erwartet vom sekundären Konto gesendet. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified-Bezeichnung-Client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -196,7 +291,7 @@ Unterstützt durch 12/29/2020
 - Vorherige Beschädigungen geschützter txt-und PDF-Dateien werden aufgelöst.
 - In Log Analytics wurde eine inkonsistente Bezeichnung zwischen **automatischen** und **manuellen** Bezeichnungen korrigiert. 
 - Unerwartete Vererbungs Probleme, die zwischen neuen e-Mails und der zuletzt geöffneten e-Mail eines Benutzers erkannt wurden, sind nun behoben.  
-- Der Schutz von. msg-Dateien als. msg. pfiles funktioniert jetzt erwartungsgemäß. 
+- Der Schutz von **. msg** -Dateien als **. msg. pfiles** funktioniert jetzt erwartungsgemäß. 
 - Die von den benutzerdefinierten Office-Einstellungen hinzugefügten Berechtigungen für Mitbesitzer werden nun wie erwartet angewendet. 
 - Wenn Sie die Berechtigungs Herabstufung eingeben, kann Text nicht mehr eingegeben werden, wenn bereits andere Optionen ausgewählt sind. 
 
@@ -250,7 +345,7 @@ Unterstützt durch 09/09/2020
 
 - [Unterstützung für nicht verbundene Computer](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) durch Exportieren von Dateien von einem Client und manuelles Kopieren der Computer auf den getrennten Computer. Beachten Sie, dass diese Konfiguration für die Bezeichnung mit dem Datei-Explorer, PowerShell und dem Scanner unterstützt wird. Diese Konfiguration wird für die Bezeichnung mit Office-Apps nicht unterstützt.
 
-- Neues Cmdlet " [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)", um alle Protokolldateien aus "%LocalAppData%\microsoft\msip\logs" zu erfassen und Sie in einer einzelnen komprimierten Datei mit dem ZIP-Format zu speichern. Diese Datei kann dann an Microsoft-Support gesendet werden, wenn Sie zum Untersuchen eines gemeldeten Problems aufgefordert werden, Protokolldateien zu senden.
+- Neues Cmdlet " [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)", um alle Protokolldateien aus "%LocalAppData%\microsoft\msip\logs" zu erfassen und Sie in einer einzelnen komprimierten Datei mit dem ZIP-Format zu speichern. Sie können diese ZIP-Datei an Microsoft-Support senden, wenn Sie aufgefordert werden, Protokolldateien zu senden, um ein gemeldetes Problem zu untersuchen.
 
 **Fehlerbehebungen:**
 
