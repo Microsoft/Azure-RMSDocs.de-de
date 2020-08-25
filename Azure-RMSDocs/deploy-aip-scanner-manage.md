@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad11aefa787ded3632b2c3d017fc83cee77364c2
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788746"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810285"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection Scanners
 
@@ -124,9 +124,9 @@ Wenn eine vollständige Überprüfung durchgeführt wird, wird der Überprüfung
 > [!TIP]
 > Wenn Sie Änderungen an Ihrem AIP- [Inhalts Überprüfungs Auftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)vorgenommen haben, werden Sie vom Azure-Portal aufgefordert, eine vollständige erneute Überprüfung zu überspringen. Um sicherzustellen, dass die erneute Überprüfung ausgeführt wird, stellen Sie sicher, dass in der angezeigten Eingabeaufforderung **Nein** ausgewählt ist.
 > 
-### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-27990-and-earlier"></a>Einen vollständigen erneuten Scan durch Ändern der Einstellungen (Versionen 2.7.99.0 und früher) auslöst
+### <a name="trigger-a-full-rescan-by-modifying-your-settings-versions-271010-and-lower"></a>Einen vollständigen erneuten Scan durch Ändern der Einstellungen (Versionen 2.7.101.0 und niedriger) auslöst
 
-In den Überprüfungs Versionen 2.7.99.0 und früher werden alle Dateien gescannt, wenn der Scanner neue oder geänderte Einstellungen für die automatische und empfohlene Bezeichnung erkennt. Die Überprüfung aktualisiert die Richtlinie automatisch alle vier Stunden.
+In den Überprüfungs Versionen [2.7.101.0](rms-client/unifiedlabelingclient-version-release-history.md#version-271010) und niedriger werden alle Dateien gescannt, wenn der Scanner neue oder geänderte Einstellungen für die automatische und empfohlene Bezeichnung erkennt. Die Überprüfung aktualisiert die Richtlinie automatisch alle vier Stunden.
 
 Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, löschen Sie den Inhalt des Verzeichnisses **%LocalAppData%\microsoft\msip\mip \<processname> \mip** , und starten Sie den Azure Information Protection-Dienst neu.
 

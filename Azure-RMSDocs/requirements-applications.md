@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37cb3b1f3c3eb60459cabe813f0cb00fb69b7d5b
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: 2bf09c4f5ff7587db251b3edeae556621a9aaede
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802163"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810319"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -36,56 +36,56 @@ Diese Anwendungen und Lösungen werden als "RMS-angezündet" bezeichnet und verf
 
 ## <a name="windows-rms-enlightened-applications"></a>Windows RMS-aktivierte Anwendungen
 
-|Typ  |Unterstützte Anwendungen   |
+|type  |Unterstützte Anwendungen   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Office 365-apps](#office-365-app-support) <br />- Office 2010 <br />-Office 2013<br />- Office 2016 <br />-Office 2019 <br />- [Office für das Web (Anzeigen geschützter Dokumente)](#viewing-protected-documents-in-office-for-the-web)<br />- [Webbrowser](#web-browser-support)        |
-|[**Email**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook von Office 365 ProPlus<br />- [Webbrowser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
+|[**E-Mail**](#viewing-protected-content-in-email-clients)      |   -Outlook 2010<br />-Outlook 2013<br />-Outlook 2016 <br />-Outlook 2019 <br />-Outlook von Office 365 ProPlus<br />- [Webbrowser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)    |  -Visio von Office 365-apps, Office 2019 und Office 2016: **vsdm,** **vsdx,** **VSSM**, **VSTM**, **vssx**, **vstx** <br />-Azure Information Protection Client für Windows: Text, Bilder, **Pfile** <br />-Sealpath RMS-Plug-in für AutoCAD: **. DWG**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>mit macOS RMS aktivierte Anwendungen
 
-|Typ  |Unterstützte Anwendungen   |
+|type  |Unterstützte Anwendungen   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -Office 365-apps<br />-Office 2019 für Mac<br />-Office 2016 für Mac<br />- [Office für das Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Webbrowser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 für Mac<br />-Outlook 2016 für Mac<br />- [Webbrowser](#web-browser-support)     |
+|[**E-Mail**](#viewing-protected-content-in-email-clients)   |   -Outlook 2019 für Mac<br />-Outlook 2016 für Mac<br />- [Webbrowser](#web-browser-support)     |
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)    | RMS-Freigabe-App (Anzeige von geschützten Texten, Abbildungen und generisch geschützten Dateien)   |
 | | |
 
 ## <a name="android-rms-enlightened-applications"></a>Android RMS-aktivierte Anwendungen
 
-|Typ  |Unterstützte Anwendungen   |
+|type  |Unterstützte Anwendungen   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |-GigaTrust App für Android<br />- [Office für das Web](#viewing-protected-documents-in-office-for-the-web)<br />-Office Mobile (es sei denn, Sie verwenden Vertraulichkeits Bezeichnungen, sind auf das Anzeigen und bearbeiten geschützter Dokumente beschränkt) <br />- [Webbrowser](#web-browser-support)      |
-|[**Email**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection app (Anzeigen geschützter e-Mails)<br />-BlackBerry-Arbeit <br />- [GigaTrust App für Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix worxmail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook für Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung-e-Mail (S3 und höher)](#email-clients-using-exchange-activesync-irm)<br />-Titus-Klassifizierung für mobile Geräte <br /><br />- [Webbrowser](#web-browser-support)       |
+|[**E-Mail**](#viewing-protected-content-in-email-clients)     | - [9Folders](#email-clients-using-exchange-activesync-irm)<br />-Azure Information Protection app (Anzeigen geschützter e-Mails)<br />-BlackBerry-Arbeit <br />- [GigaTrust App für Android](#email-clients-using-exchange-activesync-irm) <br />-Citrix worxmail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook für Android](#email-clients-using-exchange-activesync-irm)<br />- [Samsung-e-Mail (S3 und höher)](#email-clients-using-exchange-activesync-irm)<br />-Titus-Klassifizierung für mobile Geräte <br /><br />- [Webbrowser](#web-browser-support)       |
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)    |  Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)  |
 | | |
 
 
 ## <a name="ios-rms-enlightened-applications"></a>mit IOS RMS aktivierte Anwendungen
 
-|Typ  |Unterstützte Anwendungen   |
+|type  |Unterstützte Anwendungen   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    |  -GigaTrust<br />-Office Mobile <br />- [Office für das Web](#viewing-protected-documents-in-office-for-the-web)<br />-Titus docs<br />- [Webbrowser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection app (Anzeigen geschützter e-Mails)<br />-BlackBerry-Arbeit<br />-Citrix worxmail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook für iPad und iPhone](#email-clients-using-exchange-activesync-irm)<br />-Titus Mail <br />- [Webbrowser](#web-browser-support)     |
+|[**E-Mail**](#viewing-protected-content-in-email-clients)     |   -Azure Information Protection app (Anzeigen geschützter e-Mails)<br />-BlackBerry-Arbeit<br />-Citrix worxmail <br />- [NitroDesk](#email-clients-using-exchange-activesync-irm)<br />- [Outlook für iPad und iPhone](#email-clients-using-exchange-activesync-irm)<br />-Titus Mail <br />- [Webbrowser](#web-browser-support)     |
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)     | -Azure Information Protection app (Anzeigen von Schutz von Text und Bildern)<br />-Titus docs: **Pfile**  |
 | | |
 
 ## <a name="windows-10-mobile-rms-enlightened-applications"></a>Windows 10 Mobile RMS-aktivierte Anwendungen
 
-|Typ  |Unterstützte Anwendungen   |
+|type  |Unterstützte Anwendungen   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | -Mobile Office-Apps (Anzeigen geschützter Dokumente mithilfe Azure RMS) <br />- [Webbrowser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)    |  -Citrix worxmail <br />-Outlook Mail (Anzeigen geschützter e-Mails) <br />- [Webbrowser](#web-browser-support)     |
+|[**E-Mail**](#viewing-protected-content-in-email-clients)    |  -Citrix worxmail <br />-Outlook Mail (Anzeigen geschützter e-Mails) <br />- [Webbrowser](#web-browser-support)     |
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)    | Nicht unterstützt   |
 | | |
 
 ## <a name="blackberry-10-rms-enlightened-applications"></a>BlackBerry 10 RMS-aktivierte Anwendungen
 
-|Typ  |Unterstützte Anwendungen   |
+|type  |Unterstützte Anwendungen   |
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Webbrowser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)   | - [BlackBerry-e-Mail](#email-clients-using-exchange-activesync-irm) <br />- [Webbrowser](#web-browser-support)      |
+|[**E-Mail**](#viewing-protected-content-in-email-clients)   | - [ BlackBerry-e-Mail](#email-clients-using-exchange-activesync-irm) <br />- [Webbrowser](#web-browser-support)      |
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)    | Nicht unterstützt   |
 | | |
 

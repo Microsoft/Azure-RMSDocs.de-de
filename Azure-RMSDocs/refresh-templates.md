@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d531269a9323de2f9157f1dafd8962a4f228733f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: cbdbf45f337b2647bb260c4a9d01c1c777d078a2
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802231"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810336"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -40,6 +40,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Office 2019 für Mac und Office 2016 für Mac|Wird automatisch aktualisiert, wenn Sie geschützte Inhalte öffnen. Informationen zum Erzwingen einer Aktualisierung finden Sie im folgenden Abschnitt [Office 2019 für Mac und Office 2016 für Mac: Erzwingen einer Aktualisierung für Vorlagen](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Die RMS-Freigabeanwendung für Mac-Computer|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
 |Office 365 ProPlus mit [integrierter Bezeichnung](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Dieser integrierte Bezeichnungs Client lädt keine Vorlagen herunter, greift jedoch auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
+| | |
 
 Wenn Client Anwendungen Vorlagen herunterladen müssen (anfänglich oder aktualisiert für Änderungen), sollten Sie bis zu 30 Minuten warten, bis der Download abgeschlossen ist und die neuen oder aktualisierten Vorlagen voll funktionstüchtig sind. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Vorlagenkonfiguration und der Netzwerkkonnektivität ab. 
 

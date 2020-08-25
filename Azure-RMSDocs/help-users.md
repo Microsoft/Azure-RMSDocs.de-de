@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7dd617a61071542196828a4701ab0c1db8336ee
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
+ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810258"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -82,7 +82,7 @@ Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung von Informationsschutz mit diesen Anwendungen zu finden, suchen Sie nach **IRM** und dem Anwendungsnamen und der Version.
 
-#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Schützen eines Dokuments in Word von Office 365 ProPlus
+#### <a name="to-protect-a-document-in-word-from-office-365-proplus"></a>Schützen eines Dokuments in Word von Office 365 ProPlus
 
 1.  Erstellen Sie in Microsoft Word ein Dokument.
 
@@ -101,7 +101,7 @@ Beispielsweise gestattet ein Nutzungsrecht „Nur anzeigen“ dem Benutzer nicht
 
 Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsbanner angezeigt. In dem Banner können die Berechtigungen angezeigt werden, die auf das Dokument angewendet werden, oder es kann ein Link zu deren Anzeige vorhanden sein.
 
-#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Schützen einer E-Mail-Nachricht mit Outlook von Office 365 ProPlus mit Verbindung zu Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook-from-office-365-proplus-connecting-to-exchange-online"></a>Schützen einer E-Mail-Nachricht mit Outlook von Office 365 ProPlus mit Verbindung zu Exchange Online
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
