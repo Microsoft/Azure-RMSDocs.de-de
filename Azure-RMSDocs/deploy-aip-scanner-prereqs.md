@@ -4,7 +4,7 @@ description: Listet die Voraussetzungen für die Installation und Bereitstellung
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f190a97e18533640b2edc60513bb29a7ad7d7728
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788661"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952894"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Voraussetzungen für die Installation und Bereitstellung der Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -51,7 +51,7 @@ Sie müssen über einen Windows Server-Computer verfügen, auf dem die Überprü
 |Spezifikation  |Details  |
 |---------|---------|
 |**Prozessor**     |4-Kern Prozessoren         |
-|**RAM**     |8 GB         |
+|**RAM**     |8 GB         |
 |**Speicherplatz**     |10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien. </br></br>Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. </br></br>Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen.
 |**Betriebssystem**     |-Windows Server 2019 </br>- Windows Server 2016 </br>Windows Server 2012 R2 </br></br>**Hinweis:** Zu Test-oder Evaluierungs Zwecken in einer nicht-Produktionsumgebung können Sie auch ein beliebiges Windows-Betriebssystem verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices)wird.
 |**Netzwerkverbindungen**     | Bei dem Überprüfungs Computer kann es sich um einen physischen oder virtuellen Computer mit einer schnellen und zuverlässigen Netzwerkverbindung mit den zu überprüfenden Daten speichern handeln. </br></br> Wenn die Internetverbindung aufgrund ihrer Organisations Richtlinien nicht möglich ist, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations). </br></br>Stellen Sie andernfalls sicher, dass dieser Computer über eine Internetverbindung verfügt, die die folgenden URLs über HTTPS (Port 443) zulässt:</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.Azure.com <br /> -informationprotection.Hosting.Portal.Azure.net <br /> - \*. Aria.Microsoft.com <br />-  \*. Protection.Outlook.com |
@@ -143,7 +143,7 @@ Sie müssen Bezeichnungen konfiguriert haben, die automatisch Klassifizierung un
 
 Wenn Sie diese Bezeichnungen nicht konfiguriert haben, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
 - [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
@@ -203,6 +203,8 @@ In einer Produktionsumgebung können diese Standardanforderungen in den Richtlin
 - [Einschränkung: dem Dienst Konto für die Überprüfung kann nicht die Berechtigung zum **lokalen anmelden** erteilt werden.](#restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right)
 
 - [Einschränkung: Die Sysadmin-Rolle kann nicht gewährt werden oder Datenbanken müssen manuell erstellt und konfiguriert werden.](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
+
+- [Einschränkung: ihre Bezeichnungen haben keine automatischen Beschriftungs Bedingungen.](#restriction-your-labels-do-not-have-auto-labeling-conditions)
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Einschränkung: der Überprüfungs Server kann keine Internetverbindung haben.
 
@@ -295,6 +297,17 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 - Verwenden Sie **für das Scanner-Dienst Konto** ein lokales Windows-Konto oder ein Active Directory Konto.
 
 - Geben Sie **für das Azure Active Directory-Konto** Ihr lokales Konto für den *onbehalfof* -Parameter mit "Set-aipauthentication" an. Weitere Informationen finden Sie unter Vorgehens [Weise beim nicht interaktiven bezeichnen von Dateien für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+
+#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Einschränkung: ihre Bezeichnungen haben keine automatischen Beschriftungs Bedingungen.
+
+Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sollten Sie beim Konfigurieren Ihres Scanners eine der folgenden Optionen verwenden:
+
+|Option  |Beschreibung  |
+|---------|---------|
+|**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle**fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
+|**Empfohlene Bezeichnung verwenden**     |  Legen Sie im [Inhalts Überprüfungs Auftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option **Empfohlene Bezeichnung als automatisch behandeln** auf ein **fest.**</br></br> Mit dieser Einstellung wird der Scanner so konfiguriert, dass alle empfohlenen Bezeichnungen automatisch auf ihren Inhalt angewendet werden.      |
+|**Definieren einer Standard Bezeichnung**     |   Definieren Sie eine Standard Bezeichnung in der [Richtlinie](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), im [Inhalts Scanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)oder im [Repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In diesem Fall wendet der Scanner die Standard Bezeichnung auf alle gefundenen Dateien an.       |
+| | |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 050876f868e549bd0408a62ef869f6b16c1698c8
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049549"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953098"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Ausführen des Azure Information Protection klassischen Scanner
 
@@ -94,7 +94,7 @@ Das Azure-Portal zeigt nur Informationen zur letzten Überprüfung an. Wenn Sie 
 
 Der Speicherort oder Name des Berichts Ordners kann nicht geändert werden. Wenn Sie Berichte an einem anderen Speicherort speichern möchten, sollten Sie die Verwendung einer Verzeichnis Verknüpfung für den Ordner in Erwägung gezogen.
 
-Verwenden Sie z. b. den Befehl " [mklink](/windows-server/administration/windows-commands/mklink) ":`mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
+Verwenden Sie z. b. den Befehl " [mklink](/windows-server/administration/windows-commands/mklink) ": `mklink /j D:\Scanner_reports C:\Users\aipscannersvc\AppData\Local\Microsoft\MSIP\Scanner\Reports`
 
 Wenn Sie diese Schritte nach der Erstkonfiguration und-Installation durchgeführt haben, fahren Sie mit [Konfigurieren des Scanners fort, um Klassifizierung und Schutz anzuwenden](deploy-aip-scanner-configure-install.md#configure-the-scanner-to-apply-classification-and-protection).
 
@@ -139,7 +139,7 @@ Alle Dateien werden auch in den folgenden Szenarien überprüft, wenn der Scanne
 
 Die Überprüfung aktualisiert die Richtlinie automatisch stündlich, ebenso wie bei jedem Start des Diensts, und die Richtlinie ist länger als eine Stunde alt.
 
-Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, löschen Sie die Richtlinien Datei **Policy.msip** manuell aus dem Verzeichnis **%LocalAppData%\microsoft\msip** , und starten Sie den Azure Information Protection-Dienst neu.
+Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, löschen Sie die Richtlinien Datei **Policy.msip**  manuell aus dem Verzeichnis **%LocalAppData%\microsoft\msip** , und starten Sie den Azure Information Protection-Dienst neu.
 
 > [!NOTE]
 > Wenn Sie auch die Schutzeinstellungen für ihre Bezeichnungen geändert haben, warten Sie beim Speichern der aktualisierten Schutzeinstellungen vor dem Neustart des Azure Information Protection Dienstanbieter weitere 15 Minuten ab.
@@ -182,7 +182,7 @@ Das Diagnosetool überprüft die folgenden Details und exportiert dann eine Prot
 - Ob die konfigurierten Regeln gültig sind
 
 > [!TIP]
-> Wenn Sie den Befehl unter einem Benutzer ausführen, der nicht der Überprüfungs Benutzer ist, stellen Sie sicher, dass Sie den Parameter " **-Ondo** " hinzufügen. <!--For more information, see <x>.-->
+> Wenn Sie den Befehl unter einem Benutzer ausführen, der nicht der Überprüfungs Benutzer ist, stellen Sie sicher, dass Sie den Parameter " **-Ondo** " hinzufügen. 
 >
 
 > [!NOTE]

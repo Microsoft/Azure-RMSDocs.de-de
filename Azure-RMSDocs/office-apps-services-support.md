@@ -12,12 +12,12 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4d935e797e4f08c2d8f82d4e797f9d60cc97a5d4
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 165833b5d3b768be322dcd15548ef9cdbb70927c
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869112"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953217"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -34,10 +34,6 @@ Wenn Sie bereit sind, Office-Apps zu konfigurieren, sehen Sie [Office-Apps: Konf
 
 Informationen zu relevanten bekannten Problemen finden Sie unter [bekannte Probleme von AIP in Office-Anwendungen](known-issues.md#aip-known-issues-in-office-applications).
 
-<!-->
-> [!NOTE]
-> Aufgrund einer Einschränkung in den jüngsten Windows-Updates werden Dateien, die an e-Mails angefügt sind, möglicherweise nach dem Öffnen der Datei gesperrt.
--->
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online und Exchange Server
 Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Optionen für Azure Information Protection konfigurieren. Mit dieser Konfiguration kann Exchange die folgenden Lösungen zum Schutz bereitstellen:
 

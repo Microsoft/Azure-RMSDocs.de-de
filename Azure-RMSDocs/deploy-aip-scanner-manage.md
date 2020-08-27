@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d4b3520d89346d0b6fb86a42fcf774fcb4a86499
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810285"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953064"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection Scanners
 
@@ -175,7 +175,7 @@ Das Diagnosetool überprüft die folgenden Details und exportiert dann eine Prot
 - Ob die konfigurierten Regeln gültig sind
 
 > [!TIP]
-> Wenn Sie den Befehl unter einem Benutzer ausführen, der nicht der Überprüfungs Benutzer ist, stellen Sie sicher, dass Sie den Parameter " **-Ondo** " hinzufügen. <!--For more information, see <x>.-->
+> Wenn Sie den Befehl unter einem Benutzer ausführen, der nicht der Überprüfungs Benutzer ist, stellen Sie sicher, dass Sie den Parameter " **-Ondo** " hinzufügen. 
 >
 
 > [!NOTE]

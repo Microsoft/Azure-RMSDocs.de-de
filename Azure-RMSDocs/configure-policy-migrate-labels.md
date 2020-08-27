@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b97f7930e4d3a22746635a3d43436c59126e6fd
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: c1b80fd786666faa20fe9f67fb72d67ed65a7392
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788678"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953115"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -141,16 +141,16 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 
 |Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für die Admin-Centers|
 |-------------------|---------------------------------------------|-------------------------|
-|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
+|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht zutreffend|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
 |Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungs Farben im Azure-Portal konfigurieren oder [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)verwenden.|
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
 |Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Benutzerdefinierter Schriftart Name, Größe und benutzerdefinierte Schriftfarbe durch RGB-Code für visuelle Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)  |Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Um diese Optionen zu ändern, können Sie die Azure-Portal oder das Cmdlet [**New-Label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center verwenden. Um die Verwaltung zu vereinfachen, sollten Sie die Farbe in eine der aufgelisteten Optionen in den Admin Center ändern. <br /><br />**Hinweis**: das Security & Compliance Center Admin Center unterstützt eine vordefinierte Liste der Schriftart Definitionen. Benutzerdefinierte Schriftarten und Farben werden nur über das Cmdlet " [**New-Label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center" unterstützt.|
-|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile) |Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen als Text auf Clients angezeigt, anstatt die dynamischen Werte anzuzeigen. <!--Before you publish the label, edit the strings to remove the variables.-->|
-|Visuelle Kennzeichnungen pro App|Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, wird die Konfiguration der visuellen Markierung als Variablen Text anstelle der visuellen Kennzeichnungen angezeigt, die Sie für die Anzeige in den einzelnen apps konfiguriert haben.  <!--Publish this label only if it is suitable for all apps. We recommend editing the strings to remove the app variables if needed.-->|
+|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile) |Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen als Text auf Clients angezeigt, anstatt die dynamischen Werte anzuzeigen. |
+|Visuelle Kennzeichnungen pro App|Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, wird die Konfiguration der visuellen Markierung als Variablen Text anstelle der visuellen Kennzeichnungen angezeigt, die Sie für die Anzeige in den einzelnen apps konfiguriert haben.  |
 |"Nur für mich" Schutz |Ja|Die Admin Center erlauben Ihnen nicht, die von Ihnen geltenden Verschlüsselungseinstellungen zu speichern, ohne Benutzer anzugeben. Im Azure-Portal führt diese Konfiguration zu einer Bezeichnung, die den [Schutz "nur für mich](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)" betrifft. <br /><br /> Erstellen Sie alternativ eine Bezeichnung, die die Verschlüsselung anwendet und einen Benutzer mit beliebigen Berechtigungen angibt, und bearbeiten Sie dann die zugehörige Schutz Vorlage mithilfe von PowerShell. Verwenden Sie zunächst das Cmdlet [New-aipservicerighundefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition) (siehe Beispiel 3), und legen Sie dann [-aipservicetemplateproperty](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples) mit dem Parameter *rightiondefinitions* fest.|
-|Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
+|Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht zutreffend|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
 
@@ -168,10 +168,6 @@ Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht auf
 |HYOK (AD RMS) mit benutzerdefinierten Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer:| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt<br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – HYOK-Schutz wird auf Dokumente und E-Mails angewendet| Wird in Word, Excel und PowerPoint angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen|Wird in Word, Excel und PowerPoint angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen |
 |HYOK (AD RMS) mit benutzerdefinierten Berechtigungen für Outlook:|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br />– „Nicht weiterleiten“ mit HYOK-Schutz wird auf E-Mails angewendet|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1)|
 
-<!-- removed
-|Azure (cloud key) with user-defined permissions for Word, Excel, PowerPoint, and File Explorer:| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key| Visible in Word, Excel, PowerPoint, and File Explorer <br /><br /> When the label is applied:<br /><br /> - Users are prompted for custom permissions that are then applied as protection using a cloud-based key|Visible in Word, Excel, PowerPoint, and Outlook: <br /><br /> When the label is applied:<br /><br /> - Users are not prompted for custom permissions and no protection is applied <br /><br /> - If protection was previously applied independently from a label, that protection is preserved [[1]](#footnote-1)|
-
- -->
 ###### <a name="footnote-1"></a>Fußnote 1
 
 In Outlook wird der Schutz mit einer Ausnahme beibehalten: Wenn eine e-Mail mit der Option nur verschlüsseln geschützt wurde, wird dieser Schutz entfernt.
@@ -254,13 +250,15 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Folgende Dienste unterstützen derzeit einheitliche Bezeichnungen:
 
-- [Power BI (in der Vorschau)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 
-- Office Online (in der Vorschau) und Outlook im Web
+- Office Online und Outlook im Web
 
-- Microsoft SharePoint, onedrive for Work-oder School-, onedrive for Home-, Teams-und Office 365-Gruppen (in der Vorschau)
+    Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+
+- Microsoft SharePoint, onedrive for Work-oder School-, onedrive for Home-, Teams-und Office 365-Gruppen
     
-    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites (öffentliche Vorschau)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) und [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
 
 - Microsoft Defender Advanced Threat Protection
 

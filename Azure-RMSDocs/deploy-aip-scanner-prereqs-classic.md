@@ -4,7 +4,7 @@ description: Listet die Voraussetzungen für die Installation und Bereitstellung
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/24/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 702bff14d27a1dc8b051e994999db877c3991473
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 446369f3a46e99d138455afbb0cc90d9a8635fb2
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049544"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952928"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Voraussetzungen für die Installation und Bereitstellung des Azure Information Protection klassischen Scanners
 
@@ -134,7 +134,7 @@ Sie müssen Bezeichnungen konfiguriert haben, die automatisch Klassifizierung un
 
 Wenn Sie diese Bezeichnungen nicht konfiguriert haben, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
 - [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
 - [How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](configure-policy-protection.md)
@@ -197,6 +197,8 @@ In einer Produktionsumgebung können diese Standardanforderungen in den Richtlin
 
 - [Einschränkung: Die Sysadmin-Rolle kann nicht gewährt werden oder Datenbanken müssen manuell erstellt und konfiguriert werden.](#restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually)
 
+- [Einschränkung: ihre Bezeichnungen haben keine automatischen Beschriftungs Bedingungen.](#restriction-your-labels-do-not-have-auto-labeling-conditions)
+
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Einschränkung: der Überprüfungs Server kann keine Internetverbindung haben.
 
 Führen Sie die folgenden Schritte aus, um einen getrennten Computer zu unterstützen:
@@ -237,7 +239,7 @@ Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Sch
 
     Wenn Sie keinen eigenen Cluster Namen (Profilnamen) für die Überprüfung angeben, wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ \<computer_name> **benannt. </br>Setzen Sie [die Erstellung eines Benutzers fort, und erteilen Sie db_owner Rechte für die Datenbank](#create-a-user-and-grant-db_owner-rights-manually). 
 
-Außerdem zu beachten:
+Darüber hinaus gilt:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
@@ -295,6 +297,16 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 - Verwenden Sie **für das Scanner-Dienst Konto** ein lokales Windows-Konto oder ein Active Directory Konto.
 
 - Geben Sie **für das Azure Active Directory Konto** [den tokenparameter für "Set-aipauthentication" an, und verwenden](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)Sie ihn.
+
+#### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Einschränkung: ihre Bezeichnungen haben keine automatischen Beschriftungs Bedingungen.
+
+Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sollten Sie beim Konfigurieren Ihres Scanners eine der folgenden Optionen verwenden:
+
+|Option  |Beschreibung  |
+|---------|---------|
+|**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle**fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
+|**Definieren einer Standard Bezeichnung**     |   Definieren Sie eine Standard Bezeichnung in der [Richtlinie](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), im [Inhalts Scanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)oder im [Repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In diesem Fall wendet der Scanner die Standard Bezeichnung auf alle gefundenen Dateien an.       |
+| | |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

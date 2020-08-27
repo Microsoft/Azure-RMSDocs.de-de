@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a532416acd134c2cb08117af2951aa1fef23ba82
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 3730c8d781c9b53de1848ef2ebee1185cae38560
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073549"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953132"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -102,9 +102,6 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 > [!NOTE]
 >Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet.
 
-<!-- REMOVED w JUNE 2020 RELEASE> [!NOTE]
-> Use of either the `${User.Name}` and/or `${User.PrincipalName}` variable are currently not supported by the Azure Information Protection unified labeling client. 
--->
 >[!TIP]
 > Sie können auch einen [Feldcode verwenden, um den](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) Bezeichnungs Namen in ein Dokument oder eine Vorlage einzufügen.
 

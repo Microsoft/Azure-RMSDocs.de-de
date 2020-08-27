@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e6b5be8751e01c47b066963ef5ce3588b43cb86
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 3e25ff7d202b7cef964f6b83259b4ff2588c2616
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868959"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953166"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Byok-Details (Bring your own Key) für Azure Information Protection
 
@@ -77,7 +77,7 @@ Das Speichern Ihres Mandanten Schlüssels im Azure Key Vault bietet die folgende
 |**Getrennte Sicherheits Domänen**|Azure Key Vault verwendet separate Sicherheits Domänen für seine Rechenzentren in Regionen wie Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien. </br></br>Außerdem verwendet Azure Key Vault verschiedene Azure-Instanzen wie Microsoft Azure Deutschland und Azure Government. |
 |**Einheitliche Darstellung**| Mit Azure Key Vault können Sicherheits Administratoren außerdem Zertifikate und geheime Schlüssel (z. b. Kenn Wörter) für andere Dienste, die Verschlüsselung verwenden, speichern, darauf zugreifen und diese verwalten. <br></br>Die Verwendung von Azure Key Vault für Ihre Mandanten Schlüssel bietet Administratoren, die all diese Elemente verwalten, eine nahtlose Benutzer Leistung.|
 
-Die neuesten Updates und Informationen darüber, wie andere Dienste [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts)verwenden, finden Sie im [Azure Key Vault Teamblog](https://blogs.technet.microsoft.com/kv/).
+Die neuesten Updates und Informationen darüber, wie andere Dienste  [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/general/basic-concepts)verwenden, finden Sie im [Azure Key Vault Teamblog](https://blogs.technet.microsoft.com/kv/).
 
 ## <a name="usage-logging-for-byok"></a>Verwendungs Protokollierung für Byok
 
@@ -147,10 +147,6 @@ Die Byok-Voraussetzungen variieren abhängig von der Systemkonfiguration. Stelle
 |**Azure Key Vault Voraussetzungen für Byok** | Wenn Sie einen HSM-geschützten Schlüssel verwenden, der lokal erstellt wurde, stellen Sie sicher, dass Sie auch die [Voraussetzungen für Byok](https://docs.microsoft.com/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) erfüllen, die in der Azure Key Vault-Dokumentation aufgeführt sind.         |
 |**Thales-Firmwareversion 11,62**    |Sie müssen über eine Thales-Firmwareversion von 11,62 verfügen, wenn Sie von AD RMS zu Azure Information Protection migrieren, indem Sie den Software Schlüssel zum Hardwareschlüssel verwenden und Thales Firmware für Ihr HSM verwenden.
 |**Umgehung der Firewall für vertrauenswürdige Microsoft-Dienste** |Wenn der Schlüssel Tresor, der ihren Mandanten Schlüssel enthält, Virtual Network Dienst Endpunkte für Azure Key Vault verwendet, müssen Sie vertrauenswürdigen Microsoft-Diensten gestatten, diese Firewall zu umgehen. </br>Weitere Informationen finden Sie im Blog [Virtual Network Service Endpoints for Azure Key Vault (Virtual Network-Dienstendpunkte für Azure Key Vault)](https://docs.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints).       |
-
-<!--
->[!NOTE]
-> For more information about nCipher nShield hardware security module (HSM) and how they are used with Azure Key Vault, see the [nCipher website](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).-->
 
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>Überprüfen, ob Sie über ein Byok-kompatibles Azure-Abonnement verfügen
 

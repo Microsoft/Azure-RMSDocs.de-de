@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c10aed757d625cf78fadc2b3d5889025c460ab75
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a890f7d9096b628489ceeaa156a9ce124d1535b3
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049567"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953030"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Konfigurieren und Installieren des Azure Information Protection klassischen Scanner
 
@@ -42,7 +42,7 @@ Wenn Sie fertig sind, fahren Sie mit den folgenden Schritten fort:
 
 Führen Sie die folgenden zusätzlichen Konfigurationsverfahren aus, die für Ihr System erforderlich sind:
 
-|Vorgehensweise  |BESCHREIBUNG  |
+|Verfahren  |BESCHREIBUNG  |
 |---------|---------|
 |[Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect) |Möglicherweise möchten Sie verschiedene Dateitypen Scannen, klassifizieren oder schützen als die Standardwerte. Weitere Informationen finden Sie unter [AIP-Scanvorgang](deploy-aip-scanner.md#aip-scanning-process). |
 |[Aktualisieren Ihres Scanners](#upgrading-your-scanner) | Aktualisieren Sie Ihren Scanner, um die neuesten Features und Verbesserungen zu nutzen.|
@@ -109,7 +109,7 @@ So konfigurieren Sie Ihren Scanner:
 
 1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
 
-    Zum Beispiel: 
+    Beispiel: 
 
     - Verwenden Sie für eine Netzwerkfreigabe `\\Server\Folder` . 
     - Verwenden Sie für eine SharePoint-Bibliothek `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
@@ -130,12 +130,6 @@ So konfigurieren Sie Ihren Scanner:
 
     Für die restlichen Einstellungen in diesem Bereich sollten Sie diese nicht für diese anfängliche Konfiguration ändern, sondern als Standardwert für den **inhaltscanauftrag**beibehalten. Die Standardeinstellung bedeutet, dass das Datenrepository die Einstellungen vom Inhalts Überprüfungs Auftrag erbt.
 
-    <!--
-    > [!IMPORTANT]
-    > While the local file system can be scanned, this configuration is not recommended for production deployments and can **only** be used in single node clusters.
-    >
-    > Scanning of local folders by multi-node clusters is not supported. If you need to scan a folder on the local file system, we recommend creating a share, and scanning it using a network URL.
-    -->
 
 1. Wenn Sie ein weiteres Datenrepository hinzufügen möchten, wiederholen Sie die Schritte 8 und 9.
 
@@ -199,7 +193,7 @@ So erhalten Sie ein Azure AD Token:
 
     Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
 
-    Zum Beispiel:
+    Beispiel:
 
     ```powershell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
@@ -264,8 +258,8 @@ So richten Sie die unterstützten Dateitypen mit dem Client aus, wobei alle Date
 1. Angeben:
 
     - Der Platzhalter `*` als Registrierungsschlüssel.
-    - `Encryption`als Wert (REG_SZ)
-    - `Default`als Wertdaten
+    - `Encryption` als Wert (REG_SZ)
+    - `Default` als Wertdaten
 
 1. Überprüfen Sie, ob die Schlüssel **msipc** und **File Protection** vorhanden sind. Erstellen Sie Sie manuell, wenn dies nicht der Fall ist, und erstellen Sie dann einen Unterschlüssel für jede Dateinamenerweiterung.
 
@@ -300,7 +294,7 @@ Wenn Sie z. b. einen neuen Dateityp in mehreren SharePoint-Daten Depots haben, k
 
 So führen Sie Massen Änderungen in mehreren Depots durch:
 
-1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Zum Beispiel:
+1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Beispiel:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportieren der Datenrepositoryeinstellungen für den Scanner":::
 
@@ -344,7 +338,7 @@ Weitere Informationen [finden Sie unter Schnellstart: finden Sie heraus, welche 
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |BESCHREIBUNG  |
+|Option  |Beschreibung  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. </br></br>Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. </br></br>Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. </br></br>Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
@@ -354,9 +348,6 @@ Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanne
 |**Überprüfungs Timeouts verringern** | Verringern Sie die Überprüfungs Timeouts mit [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). Reduzierte Überprüfungs Timeouts bieten bessere Scan Raten und einen geringeren Speicherverbrauch. </br></br>**Hinweis:** Das Verringern der Überprüfungs Timeouts bedeutet, dass einige Dateien möglicherweise ausgelassen werden.
 | | |
 
-<!-- removed with local folders
-|**Do not scan local folders on the computer running the scanner service**     | If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. </br></br>Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.        |
--->
 
 ### <a name="additional-factors-that-affect-performance"></a>Weitere Faktoren, die die Leistung beeinträchtigen
 
@@ -367,8 +358,8 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Lade-/Antwort-Zeiten**     |Die aktuellen Lade-und Antwortzeiten der Datenspeicher, die die zu überprüfenden Dateien enthalten, wirken sich auch auf die Leistung des Scanners aus.         |
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. </br></br>Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung Ihres Scanners kann beeinträchtigt werden, wenn Sie Änderungen an den Bedingungen in der Azure Information Protection Richtlinie vorgenommen haben. </br></br>Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. </br></br>Wenn Sie die Bedingungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Zum Beispiel: </br>-Vermeiden [gieriger quantifiziererer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von.`(expression)`    |
-|**Protokolliergrad**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Beispiel: </br>-Vermeiden [gieriger quantifiziererer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
+|**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. </br></br>-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. </br></br>-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
 

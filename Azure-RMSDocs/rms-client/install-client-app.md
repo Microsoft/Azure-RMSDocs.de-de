@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 980b1b76d5c0ef9135de148a53e13b685888faa6
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 26e9f85a4e5d171232dc8d30f4502557808ac538
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264292"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953183"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Benutzerhandbuch: Herunterladen und Installieren des Azure Information Protection-Clients
 
@@ -29,7 +29,7 @@ ms.locfileid: "88264292"
 
 Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Berücksichtigen Sie zudem Folgendes:
+Außerdem:
 
 - Der Azure Information Protection-Client erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 
@@ -40,13 +40,6 @@ Der Azure Information Protection klassische Client wird im März 2021 eingestell
 
 Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.
 
-<!--
-1. Go to the [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) page on the Microsoft website.
-
-    This page has links for all the popular devices you might use, so that you can easily download a viewer app if it's needed to open protected files. If you're not a local administrator for your PC, you can still install the viewer app for Windows. But these instructions are to install the full client, which lets you label and protect files. 
-
-2. Locate the **Azure Information Protection client** section and click the Windows icon. Click **Download** and save the **AzInfoProtection.exe** file.     
--->
 1. Führen Sie die **AzInfoProtection.exe** Datei aus, um die Installation zu starten. Wenn Sie zum Fortfahren aufgefordert werden, klicken Sie auf **Ja**.    
 
 1. Auf der Seite **Installieren des Azure Information Protection-Clients**:     

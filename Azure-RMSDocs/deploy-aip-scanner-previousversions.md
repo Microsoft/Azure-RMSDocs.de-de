@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bc737b4826d16b98bb8361425fbeabe243bb1a66
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 43ff7296f3b35cf63347fef678d3c0d173a5e39c
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047982"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953013"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Bereitstellen vorheriger Versionen des Azure Information Protection Scanners
 
@@ -117,7 +117,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 ```
 
-Außerdem zu beachten:
+Darüber hinaus gilt:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
@@ -151,7 +151,7 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
     Install-AIPScanner -SqlServerInstance <name>
     ```
 
-    Zum Beispiel:
+    Beispiel:
 
     - Für eine Standardinstanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
 
@@ -201,7 +201,7 @@ Unterstützte Versionen für SharePoint: SharePoint Server 2019, SharePoint Serv
     Add-AIPScannerRepository -Path <path>
     ```
 
-    Beispiel: `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Zum Beispiel, `Add-AIPScannerRepository -Path \\NAS\Documents`
 
     Verwenden Sie für dieses Cmdlet den PowerShell-Befehl "Help", um weitere Beispiele zu erhalten `Get-Help Add-AIPScannerRepository -examples` .
 
@@ -269,7 +269,7 @@ In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für d
     Set-AIPScannerConfiguration -Enforce On -Schedule Always
     ```
 
-    Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z.B. ob Dateiattribute geändert werden und was in Berichten protokolliert wird. Wenn Ihre Azure Information Protection-Richtlinie darüber hinaus die Einstellung enthält, die eine Begründungsnachricht erfordert, damit die Klassifizierungsstufe gesenkt oder der Schutz entfernt wird, geben Sie die Nachricht mit diesem Cmdlet an. Verwenden Sie den folgenden PowerShell-Hilfe Befehl, um weitere Informationen zu den einzelnen Konfigurationseinstellungen zu finden:`Get-Help Set-AIPScannerConfiguration -detailed`
+    Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z.B. ob Dateiattribute geändert werden und was in Berichten protokolliert wird. Wenn Ihre Azure Information Protection-Richtlinie darüber hinaus die Einstellung enthält, die eine Begründungsnachricht erfordert, damit die Klassifizierungsstufe gesenkt oder der Schutz entfernt wird, geben Sie die Nachricht mit diesem Cmdlet an. Verwenden Sie den folgenden PowerShell-Hilfe Befehl, um weitere Informationen zu den einzelnen Konfigurationseinstellungen zu finden: `Get-Help Set-AIPScannerConfiguration -detailed`
 
 2. Notieren Sie sich die aktuelle Uhrzeit, und starten Sie die Überprüfung erneut, indem Sie den folgenden Befehl ausführen:
     
@@ -413,13 +413,6 @@ So maximieren Sie die Überprüfungsleistung:
 
     Das Untersuchen der Dateiinhalte auf eine Übereinstimmung mit den von Ihnen konfigurierten Bedingungen sowie Ver- und Entschlüsseln der Dateien sind prozessorlastige Aktionen. Überprüfen Sie typische Überprüfungszyklen für Ihre angegebenen Datenquellen, um zu bestimmen, ob ein Mangel an Prozessorressourcen sich negativ auf die Überprüfungsleistung auswirkt.
 
-<!--   removed w local folders 
-- **Do not scan local folders on the computer running the scanner service**
-    
-    If you have folders to scan on a Windows server, install the scanner on a different computer and configure those folders as network shares to scan. Separating the two functions of hosting files and scanning files means that the computing resources for these services are not competing with one another.
-
-If necessary, install multiple instances of the scanner. Each scanner instance requires its own configuration database in a different SQL Server instance.
--->
 
 Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
@@ -435,7 +428,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
 
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
 
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
 
@@ -453,7 +446,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
     - Das Überprüfen großer Dateien beansprucht naturgemäß mehr Zeit als das Überprüfen kleiner Dateien.
 
-- Außerdem zu beachten:
+- Darüber hinaus gilt:
 
     - Vergewissern Sie sich, dass das Dienst Konto, unter dem die Überprüfung ausgeführt wird, nur über die im Abschnitt Überprüfungs [Voraussetzungen](#prerequisites-for-the-azure-information-protection-scanner) beschriebenen Rechte verfügt, und konfigurieren Sie dann die Einstellung erweiterter [Client](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) , um die Ebene mit niedriger Integrität für den Scanner zu deaktivieren
 

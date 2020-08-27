@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c55faf0138e007ed1a8877ebb60cf01551c4dd3
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: af4a6989dca815d204fee72aafa6d839d2673fc4
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073736"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952860"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme-Azure Information Protection
 
@@ -24,29 +24,6 @@ Verwenden Sie die Listen und Tabellen unten, um Details zu bekannten Problemen u
 
 > [!NOTE]
 > Dieser Artikel bezieht sich auf bekannte Probleme sowohl bei den klassischen als auch bei der vereinheitlichten Bezeichnung von Clients. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, Siehe [FAQs](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
-
-<!--removed from this page
-## HYOK known issues
-
-HYOK has the following known issues:
-
-- [Supported Microsoft Office versions](#supported-microsoft-office-versions)
-- [Email recommendations for Office 365 and other online services](#email-recommendations-for-office-365-and-other-online-services)
-
-### Supported Microsoft Office versions
-
-HYOK for the Azure Information Protection classic client does not support versions of Office earlier than Office 2013.
-
-### Email recommendations for Office 365 and other online services
-
-We recommend that you do not use HYOK protection for emails in Office 365 and other online services.
-
-Office 365 and other online services are not be able to decrypt HYOK-protected documents and emails. This limitation includes HYOK-protected documents and emails that have been protected with the Rights Management connector, and prevents these services from inspecting the content and taking action on them.
-
-This loss of functionality for HYOK-protected email includes malware scanners, data loss prevention (DLP) solutions, mail routing rules, journaling, eDiscovery, archiving solutions, and Exchange ActiveSync.
-
-Additionally, users may not understand why some devices cannot open their HYOK-protected emails, resulting in more calls to your help desk.
--->
 
 ## <a name="client-support-for-container-files-such-as-zip-files"></a>Client Unterstützung für Container Dateien, z. b. zip-Dateien
 
@@ -72,16 +49,6 @@ Die aktuelle Version des PowerShell-Moduls **azureinformationprotection** , das 
 
 Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client](rms-client/client-admin-guide-powershell.md).
 
-<!-- removed from this page
-## Protection-only mode known issues
-
-The following known issues apply for [Protection-only mode for the Azure Information Protection client](rms-client/client-protection-only-mode.md):
-
-- In Office apps, the Azure Information Protection bar is not shown. When you click **Protect** > **Show Bar**, this menu option is unavailable.
-
-- When you use the **Classify and protect - Azure Information Protection** dialog box with the File Explorer, labels for classification are not shown. Instead, you have an option select a Rights Management (RMS) template.
--->
-
 ## <a name="aip-known-issues-in-office-applications"></a>In Office-Anwendungen bekannte AIP-Probleme
 
 |Funktion  |Bekannte Probleme  |
@@ -93,12 +60,6 @@ The following known issues apply for [Protection-only mode for the Azure Informa
 |**An e-Mails angefügte Dateien** |Aufgrund einer Einschränkung in den jüngsten Windows-Updates, wenn [Microsoft Outlook durch Azure Rights Management geschützt ist](office-apps-services-support.md), können Dateien, die an e-Mails angefügt sind, nach dem Öffnen der Datei gesperrt werden. |
 |**Nachrichten Zusammenführung**    |  Das Feature für die Office-e- [Mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) -Zusammenführung wird von keiner Azure Information Protection Funktion unterstützt       |
 | | |
-
-<!-- removing b/c this is relevant for classic only. for UL, labels are configured in m365. so this is basically irrelevant for us.
-## Known issues in labeling
-
-Depending on your policy rule size limit, configuring more than 200 users or user groups for each label may cause unexpected errors. 
--->
 
 ## <a name="known-issues-in-policies"></a>Bekannte Probleme in Richtlinien
 

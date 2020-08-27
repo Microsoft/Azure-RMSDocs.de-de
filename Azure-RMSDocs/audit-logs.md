@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbffb68eb997b5d539ddd31a1f85fb25bb797976
-ms.sourcegitcommit: 89e3434c5c6486b1adb6f91739a1e6b24687e367
+ms.openlocfilehash: 6edae5a207208d640b0d851b1d664475e3b72d46
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86471738"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88953081"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection Überwachungs Protokoll Referenz (öffentliche Vorschau)
 
@@ -28,7 +28,7 @@ Microsoft Azure Information Protection generiert Überwachungs Protokolle bei de
 * [zugreifen](#access-audit-logs)
 * [Zugriff verweigert](#access-denied-audit-logs)
 * [Schutz ändern](#change-protection-audit-logs)
-* [Suchen](#discover-audit-logs)
+* [Entdecken](#discover-audit-logs)
 * [Bezeichnung für Herabstufung](#downgrade-label-audit-logs)
 * [Datei entfernt](#file-removed-audit-logs)
 * [Neue Bezeichnung](#new-label-audit-logs)
@@ -43,11 +43,11 @@ Microsoft Azure Information Protection generiert Überwachungs Protokolle bei de
 
 |Gemeldet von  |Plattform  |Application  |Aktion/Beschreibung  |
 |---------|---------|---------|---------|
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows        | Office        |Wird zum ersten Mal in jeder Sitzung generiert, dass eine bezeichnete oder geschützte Datei gespeichert wird.<br>Das Protokoll enthält alle Übereinstimmungen von Informationstypen.  <!-- plan to be removed -->    |
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     |Windows         |Office         |Wird jedes Mal generiert, wenn eine Bezeichnung oder eine geschützte Datei erstellt wird.<!-- plan to be removed -->       |
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows, SharePoint, onedrive        | Office        | Wird jedes Mal generiert, wenn eine bezeichnete oder geschützte Datei geöffnet wird. </br></br>**Hinweis:** Bei geschützten Dateien werden Zugriffs Überwachungs Protokolle nur generiert, wenn die Datei geöffnet wird und der Inhalt erfolgreich entschlüsselt und für den Benutzer verfügbar gemacht wird. </br>Bei geschützten e-Mails in Outlook werden Zugriffs Überwachungs Protokolle auch dann generiert, wenn der Benutzer versucht, eine verschlüsselte e-Mail zu öffnen, selbst wenn die Entschlüsselung aufgrund fehlender Berechtigungen blockiert wird. <!--limitations-->         |
+|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows        | Office        |Wird zum ersten Mal in jeder Sitzung generiert, dass eine bezeichnete oder geschützte Datei gespeichert wird.<br>Das Protokoll enthält alle Übereinstimmungen von Informationstypen.     |
+|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     |Windows         |Office         |Wird jedes Mal generiert, wenn eine Bezeichnung oder eine geschützte Datei erstellt wird.       |
+|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows, SharePoint, onedrive        | Office        | Wird jedes Mal generiert, wenn eine bezeichnete oder geschützte Datei geöffnet wird. </br></br>**Hinweis:** Bei geschützten Dateien werden Zugriffs Überwachungs Protokolle nur generiert, wenn die Datei geöffnet wird und der Inhalt erfolgreich entschlüsselt und für den Benutzer verfügbar gemacht wird. </br>Bei geschützten e-Mails in Outlook werden Zugriffs Überwachungs Protokolle auch dann generiert, wenn der Benutzer versucht, eine verschlüsselte e-Mail zu öffnen, selbst wenn die Entschlüsselung aufgrund fehlender Berechtigungen blockiert wird.          |
 |Microsoft Information Protection (MIP) SDK     | Any        | Drittanbieteranwendungen        | Wird jedes Mal generiert, wenn von einer Drittanbieter Anwendung, die Sie unterstützt, auf eine bezeichnete oder geschützte Datei zugegriffen wird.       |
-|RMS-Dienst     | Windows        | Office         |Wird jedes Mal generiert, wenn auf ein beschrifteten oder geschütztes Dokument zugegriffen wird.<!-- plan to be removed -->       |
+|RMS-Dienst     | Windows        | Office         |Wird jedes Mal generiert, wenn auf ein beschrifteten oder geschütztes Dokument zugegriffen wird.       |
 
 
 ## <a name="access-denied-audit-logs"></a>Zugriffs Verweigerungs Überwachungs Protokolle

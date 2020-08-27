@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c72d1764ace998b21c17be97639239da2a6a6c19
-ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
+ms.openlocfilehash: e893f7515ed18d749d43eeadc2f0893ea9a9dee9
+ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334180"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88952996"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -27,8 +27,6 @@ ms.locfileid: "87334180"
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Haben Sie eine Frage zu Azure Information Protection oder zum Azure Rights Management-Dienst (Azure RMS)? Vielleicht finden Sie hier eine Antwort.
-
-<!-- These FAQ pages are updated regularly, with new additions listed in the monthly documentation update announcements on the [Azure Information Protection technical blog](https://aka.ms/AIPblog).-->
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-microsoft-information-protection"></a>Was ist der Unterschied zwischen Azure Information Protection und Microsoft Information Protection?
 
@@ -75,7 +73,7 @@ Wenn sich Ihr Mandant nicht auf der Unified-Beschriftungs Plattform befindet, wi
 
 Sie können auch prüfen, indem Sie zu **Azure Information Protection**  >  Unified-**Manage**  >  **Bezeichnung**verwalten wechseln und den **einheitlichen** Bezeichnungs Status anzeigen:
 
-|Status |BESCHREIBUNG  |
+|Status |Beschreibung  |
 |---------|---------|
 |**Aktiviert**     |  Ihr Mandant befindet sich auf der Unified-Beschriftungs Plattform. </br>Sie können Bezeichnungen im Microsoft 365 Compliance Center [erstellen, konfigurieren und veröffentlichen](/microsoft-365/compliance/create-sensitivity-labels) .       |
 |**Nicht aktiviert**    |  Ihr Mandant befindet sich nicht auf der Unified-Beschriftungs Plattform. </br>Migrations Anweisungen und Anleitungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen](configure-policy-migrate-labels.md).       |
