@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren und Konfigurieren des Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/24/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcc798a8b9b4a2e0472aad77123571ab03070324
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 956b9f65c9dd5a4a5fdf66d3f70770ff5e7162d2
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953149"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316908"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -26,7 +26,7 @@ ms.locfileid: "88953149"
 >[!NOTE] 
 > Wenn Sie mit dem klassischen AIP-Scanner arbeiten, finden Sie weitere Informationen unter [Installieren und Konfigurieren des Azure Information Protection klassischen Scanner](deploy-aip-scanner-configure-install-classic.md).
 
-Vergewissern Sie sich vor dem Konfigurieren und Installieren des Azure Information Protection Scanners, dass Ihr System die [erforderlichen Voraussetzungen](deploy-aip-scanner-prereqs.md)erfüllt.
+Vergewissern Sie sich vor dem Konfigurieren und Installieren des Azure Information Protection Scanners, dass Ihr System die [erforderlichen Voraussetzungen](deploy-aip-scanner-prereqs.md)erfüllt. 
 
 Wenn Sie fertig sind, fahren Sie mit den folgenden Schritten fort:
 
@@ -57,7 +57,14 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der all
 
 So konfigurieren Sie Ihren Scanner: 
 
-1. [Melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), und navigieren Sie zum Bereich **Azure Information Protection** . 
+1. Melden Sie sich mit einer der folgenden Rollen beim [Azure-Portal](https://portal.azure.com) an:
+
+    - **Complianceadministrator**
+    - **Compliancedatenadministrator**
+    - **Sicherheitsadministrator**
+    - **Globaler Administrator**
+
+    Navigieren Sie dann zum Bereich **Azure Information Protection** .
     
     Beginnen Sie beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumentation mit der Eingabe von **Information**, und wählen Sie **Azure Information Protection** aus.
 
@@ -85,7 +92,7 @@ So konfigurieren Sie Ihren Scanner:
 
 ### <a name="create-a-network-scan-job-public-preview"></a>Erstellen eines Netzwerk Scan Auftrags (öffentliche Vorschau)
 
-Ab Version 2.8.83 können Sie Ihr Netzwerk auf riskante Depots überprüfen. Fügen Sie einem Inhalts Überprüfungs Auftrag mindestens ein Repository hinzu, um Sie auf sensiblen Inhalt zu überprüfen.
+Ab Version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview)können Sie Ihr Netzwerk auf riskante Depots überprüfen. Fügen Sie einem Inhalts Überprüfungs Auftrag mindestens ein Repository hinzu, um Sie auf sensiblen Inhalt zu überprüfen.
 
 > [!NOTE]
 > Die **Netzwerk** Ermittlungs Schnittstelle befindet sich derzeit in einer schrittweisen Bereitstellung und ist ab dem 15. September 2020 in allen Regionen verfügbar. 
@@ -210,7 +217,7 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
 
         Verwenden Sie die folgende Syntax, wenn Sie SharePoint-Pfade hinzufügen:
     
-        |Pfad  |Syntax  |
+        |`Path`  |Syntax  |
         |---------|---------|
         |**Stammpfad**     | `http://<SharePoint server name>` </br></br>Scannt alle Websites, einschließlich sämtlicher Site Sammlungen, die für den scannerbenutzer zulässig sind. </br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Stamm Inhalten        |
         |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |

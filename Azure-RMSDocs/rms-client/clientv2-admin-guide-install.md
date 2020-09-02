@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ec73048a8dcb306a1b8bc94670a80f9cbd8d2861
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 5874103f099898bef603dd56c85371a65d24a74c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176632"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316653"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -34,7 +34,7 @@ ms.locfileid: "89176632"
 
 Die folgenden Voraussetzungen für den AIP Unified-Bezeichnungs Client sind zusätzlich zu den in [Azure Information Protection Anforderungen](../requirements.md)aufgeführten Elementen aufgeführt.
 
-|Anforderung  |BESCHREIBUNG  |
+|Anforderung  |Beschreibung  |
 |---------|---------|
 |**Microsoft .NET Framework 4.6.2**     | Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2. </br></br>Wenn dieses Framework fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.       |
 |**Microsoft .NET Framework 4.5.2**     | Wenn der Azure Information Protection Viewer separat installiert wird, ist für die Viewer-Anwendung mindestens eine Version von Microsoft .NET Framework 4.5.2 erforderlich. </br></br>**Wichtig:** Wenn dieses Framework für den Viewer fehlt, wird es vom ausführbaren Installationsprogramm *nicht* heruntergeladen oder installiert.        |
@@ -55,7 +55,7 @@ Für Office-Versionen 2013 und höher wird empfohlen, die Gruppenrichtlinie so z
 
     Geben Sie die folgenden programmgesteuerten Bezeichner (ProgID) für AIP an, und legen Sie die Option auf **1 fest: das Add-in ist immer aktiviert**.
 
-    |Anwendung  |ProgID  |
+    |Application  |ProgID  |
     |---------|---------|
     |Word     |     `MSIP.WordAddin`    |
     |Excel     |  `MSIP.ExcelAddin`       |
@@ -111,8 +111,6 @@ Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Si
     
     - **ServiceLocation**: Verwenden Sie diesen Parameter, wenn Sie den Client auf Computern installieren, die Office 2010 ausführen, und Ihre Benutzer keine lokalen Administratoren auf ihren Computern sind, oder wenn Sie keine Eingabeaufforderung für die Benutzer anzeigen lassen möchten. [Weitere Informationen](#more-information-about-the-servicelocation-installation-parameter) 
     
-    - **DowngradeDotNetRequirement**: Verwenden Sie diesen Parameter, um die Notwendigkeit von Microsoft Framework .NET, Version 4.6.2, zu umgehen. [Weitere Informationen](#more-information-about-the-downgradedotnetrequirement-installation-parameter)
-    
     - **AllowTelemetry=0**: Verwenden Sie diesen Parameter, um die Installationsoption **Senden Sie Nutzungsstatistiken an Microsoft, und & helfen Sie so mit, Azure Information Protection zu verbessern.** zu deaktivieren. 
 
 3. So schließen Sie die Installation ab: 
@@ -161,18 +159,6 @@ Verwenden Sie das folgende Verfahren, um den Wert zu identifizieren, den Sie fü
 
 Beispiel zum automatischen Installieren des Clients für Office 2010 und Azure RMS: `AzInfoProtection_UL.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 
-
-#### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Weitere Informationen zum DowngradeDotNetRequirement-Installationsparameter
-
-Zur Unterstützung automatischer Upgrades mithilfe von Windows Update und zur zuverlässigen Integration in Office-Anwendungen verwendet der Azure Information Protection Unified-Bezeichnungs Client Microsoft .NET Framework-Version 4.6.2. Eine interaktive Installation prüft standardmäßig mithilfe ausführbarer Überprüfungen, ob diese Version vorhanden ist, und versucht, sie zu installieren, falls sie nicht vorhanden ist. Die Installation erfordert einen Neustart des Computers.
-
-Wenn die Installation dieser höheren Version von Microsoft .NET Framework nicht praktikabel ist, können Sie den Client mit dem auf „True“ festgelegten Parameter **DowngradeDotNetRequirement** installieren. Dadurch wird dieses Erfordernis umgangen, wenn Microsoft .NET Framework, Version 4.5.1, installiert ist.
-
-Beispiel: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
-
-Es wird empfohlen, diesen Parameter mit Vorsicht zu verwenden, und mit dem wissen, dass es gemeldete Probleme mit Office-Anwendungen gibt, die hängen, wenn der Azure Information Protection Unified Bezeichnung-Client mit dieser älteren Version von Microsoft .NET Framework verwendet wird. Wenn Sie Probleme mit nicht mehr reagierenden Anwendungen bemerken, aktualisieren Sie auf die empfohlene Version, bevor Sie andere Problembehandlungslösungen versuchen. 
-
-Beachten Sie auch Folgendes: Wenn Sie Windows Update verwenden, um den Azure Information Protection Unified-Bezeichnungs Client zu aktualisieren, benötigen Sie einen anderen Mechanismus für die Software Bereitstellung, um den Client auf spätere Versionen zu aktualisieren.
 
 ### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>So installieren Sie den Azure Information Protection Unified Bezeichnung-Client mit dem MSI-Installationsprogramm
 

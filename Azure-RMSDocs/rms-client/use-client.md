@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fa0c436035d13c5f1066e121b94e226dccd46d09
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: 8b72c0b8efe31ad570bed684dbe63283c5f79b47
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788644"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316636"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -200,7 +200,7 @@ Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azu
 |Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
 |Bestell Unterstützung für untergeordnete Bezeichnungen auf Anlagen: | Aktiviert mit einer [erweiterten Client Einstellung](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Standardmäßig aktiviert, keine Konfiguration erforderlich|
 |Ändern Sie das standardmäßige Schutzverhalten für Dateitypen: | Sie können [Registrierungs Änderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) verwenden, um die Standardwerte für systemeigenen und generischen Schutz zu überschreiben. | Sie können [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) verwenden, um zu ändern, welche Dateitypen geschützt werden.|
-|Automatisches neuskaliert | Vollständige Neueinstellungen werden automatisch ausgeführt, wenn der Scanner eine Änderung der Richtlinie oder der Beschriftungs Einstellungen erkennt. | Ab Version [2.8.83](unifiedlabelingclient-version-release-history.md#version-2883-public-preview)können Administratoren eine vollständige erneute Überprüfung überspringen, nachdem Sie die Einstellungen für die Richtlinie oder den Inhaltsüberprüfungs Auftrag geändert haben. |
+|Automatisches neuskaliert | Vollständige Neueinstellungen werden automatisch ausgeführt, wenn der Scanner eine Änderung der Richtlinie oder der Beschriftungs Einstellungen erkennt. | Ab Version [2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview)können Administratoren eine vollständige erneute Überprüfung überspringen, nachdem Sie die Einstellungen für die Richtlinie oder den Inhaltsüberprüfungs Auftrag geändert haben. |
 |Netzwerkermittlung |Die Netzwerk Ermittlungs Funktionen sind für den klassischen Scanner nicht verfügbar. | Administratoren können zusätzliche riskante Depots ermitteln, indem Sie eine bestimmte IP-Adresse oder einen bestimmten Bereich Scannen.|
 | | | |
 

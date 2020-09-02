@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 6d14ee2cc1a8b2bddad79f2e5c0cfb7251522840
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 56aac3e677ab835b0345394be014c1a803bd0b2e
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952962"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316721"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Welche PDF-Reader werden für geschützte PDF-Funktionen unterstützt?
 
@@ -98,7 +98,7 @@ Zum Öffnen eines geschützten PDF-Dokuments auf dem Desktop Computer wird empfo
 
 1. Installieren Sie das [MIP-Plug-in für Acrobat und Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) für Ihr Betriebssystem.  
 
-    Herunterladen: [ ![herunterladen](../media/download.png "Herunterladen des MIP-Plug-Ins für Acrobat-und Acrobat Reader")](https://go.microsoft.com/fwlink/?linkid=2050049)
+    Download: [ ![MIP-Plug-in für Acrobat-und Acrobat Reader herunterladen](../media/download.png "Herunterladen des MIP-Plug-Ins für Acrobat-und Acrobat Reader")](https://go.microsoft.com/fwlink/?linkid=2050049)
 
     Folgende Versionen werden unterstützt:
 
@@ -122,17 +122,17 @@ Zum Öffnen eines geschützten PDF-Dokuments auf dem Desktop Computer wird empfo
 
 Alternativ dazu können Sie einen der folgenden PDF-Reader für Windows verwenden, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen:
 
-- Azure Information Protection Viewer- [ ![Download](../media/download.png "AIP-Viewer herunterladen")](https://go.microsoft.com/fwlink/?linkid=838993) 
+- Azure Information Protection Viewer [ ![den AIP-Viewer herunterladen](../media/download.png "AIP-Viewer herunterladen")](https://go.microsoft.com/fwlink/?linkid=838993) 
 
-- [ ![Herunterladen](../media/download.png "Herunterladen von Foxit Reader Viewer") von Foxit-Lesern](https://www.foxitsoftware.com/pdf-reader/)
+- Foxit Reader [ ![herunterladen des Foxit Reader Viewer](../media/download.png "Herunterladen von Foxit Reader Viewer")](https://www.foxitsoftware.com/pdf-reader/)
 
 ## <a name="installing-a-protected-pdf-reader-for-mobile-iosandroid"></a>Installieren eines geschützten PDF-Readers für mobile Geräte (IOS/Android)
 
 Zum Öffnen einer geschützten PDF-Datei auf Ihrem IOS-oder Android-Gerät müssen Sie die APP für Ihr Betriebssystem herunterladen und installieren:
 
-- [ ![Herunterladen](../media/download.png "Azure Information Protection-App für IOS") von Azure Information Protection-App für IOS  ](https://go.microsoft.com/fwlink/?LinkId=325338)
+- Azure Information Protection-App für IOS [ ![herunterladen der Azure Information Protection-App für IOS](../media/download.png "Azure Information Protection-App für IOS")  ](https://go.microsoft.com/fwlink/?LinkId=325338)
 
-- Azure Information Protection-App für Android- [ ![Download](../media/download.png "Azure Information Protection-App für Android")](https://go.microsoft.com/fwlink/?LinkId=325340)
+- Azure Information Protection App für Android [ ![herunterladen der Azure Information Protection-App für Android](../media/download.png "Azure Information Protection-App für Android")](https://go.microsoft.com/fwlink/?LinkId=325340)
 
 Weitere Informationen finden Sie unter [Was ist die Azure Information Protection-App für IOS oder Android?](mobile-app-faq.md).
 

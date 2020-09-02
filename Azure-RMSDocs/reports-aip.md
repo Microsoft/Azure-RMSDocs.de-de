@@ -13,18 +13,18 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecc0a78a942dc4e0c6b1dc89b3d2d2ec57c87f6e
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 1bd48cd64616785a3b8f7c62a3e944cc5eb80097
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264377"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316823"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Berücksichtigen Sie zudem Folgendes:
+Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Außerdem:
 
 - Unternehmensweite Überwachung bezeichneter und geschützter Dokumente und E-Mails
 
@@ -108,6 +108,12 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Den Namen des Benutzergeräts
 
+- Die IP-Adresse des Geräts des Benutzers. 
+
+- Der relevante Prozess Name, z. b. **Outlook** oder **MSIP. app**.
+
+- Der Name der Anwendung, die die Bezeichnung ausgeführt hat, z. b. **Outlook** oder der **Datei-Explorer** .
+
 - Für Dokumente: Den Dateipfad und -namen von Dokumenten, die Bezeichnungen aufweisen
 
 - Für e-Mails: der e-Mail-Betreff und der e-Mail-Absender für e-Mails mit der Bezeichnung. 
@@ -179,7 +185,7 @@ Details:
     
     - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
     
-        - **Sicherheits Leser**
+        - **Sicherheitsleseberechtigter**
         - **Globaler Leser**
 
 2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
@@ -236,7 +242,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 
 4. Wenn Sie über Azure Information Protection Clients (klassisch) verfügen, aktivieren Sie das Kontrollkästchen **tiefere Analysen in Ihre sensiblen Daten aktivieren** , wenn Sie die eigentlichen Daten speichern möchten, die als sensible Informationen identifiziert werden. Weitere Informationen zu dieser Einstellung finden Sie im Abschnitt [Inhalts Übereinstimmungen für eine tiefere Analyse](#content-matches-for-deeper-analysis) auf dieser Seite.
 
-5. Klicken Sie auf **OK**.
+5. Wählen Sie **OK** aus.
 
 Sie sind jetzt bereit, die Berichte anzuzeigen.
 

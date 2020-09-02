@@ -4,7 +4,7 @@ description: Identifizieren Sie die Voraussetzungen für die Bereitstellung von 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a87c83afd6e1747a2fc3db6a12ef8734ff445c77
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: e3d50f6857c2f7c3fd5f104d79997b00feeb2664
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952826"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316891"
 ---
 # <a name="azure-information-protection-requirements"></a>Azure Information Protection Anforderungen
 
@@ -67,7 +67,7 @@ Bedingter Zugriff wird in der Vorschauversion für Dokumente unterstützt, die m
 
 Zusätzliche Voraussetzungen sind für bestimmte Szenarien erforderlich, z. b. bei Verwendung von Office 2010, Zertifikat basierte oder mehrstufige Authentifizierung, oder wenn UPN-Werte nicht mit Benutzer-e-Mail-Adressen identisch sind. Weitere Informationen finden Sie unter [zusätzliche Azure AD Anforderungen für Azure Information Protection](requirements-azure-ad.md).
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Was ist ein Azure AD-Verzeichnis?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrieren lokaler Active Directory-Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
@@ -216,8 +216,9 @@ Stellen Sie sicher, dass Sie den Zugriff auf alle Ports für die folgenden Diens
 Der Azure Information Protection-Dienst ist auch von zwei bestimmten IP-Adressen abhängig:
  - **13.107.6.181** 
  - **13.107.9.181**
+ - **Port 443**, für HTTPS-Datenverkehr
 
-Stellen Sie sicher, dass Sie Regeln erstellen, die den ausgehenden Zugriff auf diese spezifischen IP-Adressen zulassen.
+Stellen Sie sicher, dass Sie Regeln erstellen, um ausgehenden Zugriff auf diese spezifischen IP-Adressen und über diesen Port zuzulassen.
 
 ## <a name="supported-on-premises-servers-for-azure-rights-management-data-protection"></a>Unterstützte lokale Server für den Schutz von Daten in Azure Rights Management
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac7a2e655a9718ce73eb60384a4022be449b6dd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 274ef1ef2a7196aa9c25b8f488d83da77eba7c6c
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952894"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316806"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Voraussetzungen für die Installation und Bereitstellung der Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -143,7 +143,7 @@ Sie müssen Bezeichnungen konfiguriert haben, die automatisch Klassifizierung un
 
 Wenn Sie diese Bezeichnungen nicht konfiguriert haben, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
 - [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
@@ -208,15 +208,35 @@ In einer Produktionsumgebung können diese Standardanforderungen in den Richtlin
 
 ### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Einschränkung: der Überprüfungs Server kann keine Internetverbindung haben.
 
+Obwohl der Unified Label-Client keinen Schutz ohne Internetverbindung anwenden kann, kann der Scanner weiterhin Bezeichnungen auf der Grundlage importierter Richtlinien anwenden.
+
 Führen Sie die folgenden Schritte aus, um einen getrennten Computer zu unterstützen:
 
-1. Konfigurieren Sie Bezeichnungen in der Richtlinie, und importieren Sie dann die Richtlinie mithilfe des Cmdlets [Import-aipscannerconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) . Obwohl der Unified Label-Client keinen Schutz ohne Internetverbindung anwenden kann, kann der Scanner weiterhin Bezeichnungen auf der Grundlage importierter Richtlinien anwenden.
+1.  Konfigurieren Sie Bezeichnungen in der Richtlinie, und verwenden Sie dann das [Verfahren zur Unterstützung von getrennten Computern](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) , um die Offline Klassifizierung und-Bezeichnung zu aktivieren
 
-1. Konfigurieren Sie die Überprüfung im Azure-Portal, indem Sie einen scannercluster erstellen. Unterstützung zu diesem Schritt finden Sie im Abschnitt [Konfigurieren des Scanners im Azure-Portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+1. Aktivieren Sie die Offline Verwaltung für Inhalts Scanaufträge:
 
-1. Exportieren Sie den Inhalts Auftrag aus dem Bereich **Azure Information Protection-Inhalts Scanaufträge** mithilfe der **Export** Option.
+    1. Legen Sie den Scanner mithilfe des Cmdlets [Set-aipscannerconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipscannerconfiguration) im **Offline** Modus fest.
 
-1. Führen Sie in einer PowerShell [-Sitzung Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) aus, und geben Sie die Datei an, die die exportierten Einstellungen enthält.
+    1. Konfigurieren Sie die Überprüfung in der Azure-Portal, indem Sie einen Scanner-Cluster erstellen. Weitere Informationen finden Sie unter [configure the Scanner in the Azure-Portal](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+    1. Exportieren Sie den Inhalts Auftrag aus dem Bereich **Azure Information Protection-Inhalts Scanaufträge** mithilfe der **Export** Option.
+    
+    1. Importieren Sie die Richtlinie mithilfe des [Import-aipscannerconfiguration-](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-aipscannerconfiguration) Cmdlets. 
+    
+    Die Ergebnisse für Offline-Inhalts Scanaufträge befinden sich unter: **%LocalAppData%\microsoft\msip\scanner\reports** .
+    
+1. Offline Verwaltung von Netzwerk Scan Aufträgen aktivieren:
+
+    1. Legen Sie mithilfe des Cmdlets [Set-mipnetworkdiscoveryconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) den Netzwerk Ermittlungsdienst für die Funktion im Offline Modus fest.
+
+    1. Konfigurieren Sie den Netzwerk Scanauftrag in der Azure-Portal. Weitere Informationen finden Sie unter [Erstellen eines Netzwerk Scan Auftrags](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    
+    1. Exportieren Sie den Netzwerküberprüfungs-Auftrag mithilfe der **Export** Option aus dem Bereich **Azure Information Protection-Netzwerk Scanaufträge (Vorschau)** . 
+    
+    1.  Importieren Sie den Netzwerk Scanauftrag mithilfe der Datei, die mit dem Cluster Namen übereinstimmt, mithilfe des [Import-mipnetworkdiscoveryconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) -Cmdlets.  
+    
+    Die Ergebnisse für Offline-Netzwerk Scanaufträge befinden sich unter: **%LocalAppData%\microsoft\msip\scanner\reports** .
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Einschränkung: Die Sysadmin-Rolle kann nicht gewährt werden oder Datenbanken müssen manuell erstellt und konfiguriert werden.
 

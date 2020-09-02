@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ad523eb3537c11ec2ca839b08da72d3275cfbef5
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953064"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316874"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection Scanners
 
@@ -133,7 +133,7 @@ Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, lösc
 Wenn Sie auch die Schutzeinstellungen für ihre Bezeichnungen geändert haben, warten Sie beim Speichern der aktualisierten Schutzeinstellungen vor dem Neustart des Azure Information Protection Dienstanbieter weitere 15 Minuten ab.
 
 > [!IMPORTANT]
-> Wenn Sie ein Upgrade auf Version [2.8.83](rms-client/unifiedlabelingclient-version-release-history.md#version-2883-public-preview) oder höher durchgeführt haben, überspringt AIP den vollständigen erneuten Scanvorgang für aktualisierte Einstellungen, um eine konsistente Leistung sicherzustellen. Wenn Sie ein Upgrade durchgeführt haben, stellen Sie sicher, dass Sie bei Bedarf [manuell einen vollständigen erneuten Scan ausführen](#rescanning-files) . 
+> Wenn Sie ein Upgrade auf Version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) oder höher durchgeführt haben, überspringt AIP den vollständigen erneuten Scanvorgang für aktualisierte Einstellungen, um eine konsistente Leistung sicherzustellen. Wenn Sie ein Upgrade durchgeführt haben, stellen Sie sicher, dass Sie bei Bedarf [manuell einen vollständigen erneuten Scan ausführen](#rescanning-files) . 
 >
 > Wenn Sie beispielsweise die Einstellungen für die **Richtlinien** Erzwingung von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
 > 

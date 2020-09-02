@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die von Azure Information Protection-AIP ge
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 08/30/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6edae5a207208d640b0d851b1d664475e3b72d46
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 14d8101da8b00071256e9ed3e4ae06002f96acbb
+ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953081"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89316789"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection Überwachungs Protokoll Referenz (öffentliche Vorschau)
 
@@ -43,9 +43,9 @@ Microsoft Azure Information Protection generiert Überwachungs Protokolle bei de
 
 |Gemeldet von  |Plattform  |Application  |Aktion/Beschreibung  |
 |---------|---------|---------|---------|
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows        | Office        |Wird zum ersten Mal in jeder Sitzung generiert, dass eine bezeichnete oder geschützte Datei gespeichert wird.<br>Das Protokoll enthält alle Übereinstimmungen von Informationstypen.     |
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     |Windows         |Office         |Wird jedes Mal generiert, wenn eine Bezeichnung oder eine geschützte Datei erstellt wird.       |
-|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows, SharePoint, onedrive        | Office        | Wird jedes Mal generiert, wenn eine bezeichnete oder geschützte Datei geöffnet wird. </br></br>**Hinweis:** Bei geschützten Dateien werden Zugriffs Überwachungs Protokolle nur generiert, wenn die Datei geöffnet wird und der Inhalt erfolgreich entschlüsselt und für den Benutzer verfügbar gemacht wird. </br>Bei geschützten e-Mails in Outlook werden Zugriffs Überwachungs Protokolle auch dann generiert, wenn der Benutzer versucht, eine verschlüsselte e-Mail zu öffnen, selbst wenn die Entschlüsselung aufgrund fehlender Berechtigungen blockiert wird.          |
+|Azure Information Protection: nur klassischer Client | Windows        | Office        |Wird zum ersten Mal in jeder Sitzung generiert, dass eine bezeichnete oder geschützte Datei gespeichert wird.<br>Das Protokoll enthält alle Übereinstimmungen von Informationstypen.      |
+|Azure Information Protection: nur klassischer Client     |Windows         |Office         |Wird jedes Mal generiert, wenn eine Bezeichnung oder eine geschützte Datei erstellt wird.       |
+|Azure Information Protection:</br>-Klassischer Client</br>-Unified-Bezeichnungs Client     | Windows, SharePoint, onedrive        | Office        | Wird jedes Mal generiert, wenn eine bezeichnete oder geschützte Datei geöffnet wird. </br></br>**Hinweis:** Bei geschützten Dateien werden Zugriffs Überwachungs Protokolle nur generiert, wenn die Datei geöffnet wird und der Inhalt erfolgreich entschlüsselt und für den Benutzer verfügbar gemacht wird. </br>Bei geschützten e-Mails in Outlook werden Zugriffs Überwachungs Protokolle auch dann generiert, wenn der Benutzer versucht, eine verschlüsselte e-Mail zu öffnen, selbst wenn die Entschlüsselung aufgrund fehlender Berechtigungen blockiert wird.         |
 |Microsoft Information Protection (MIP) SDK     | Any        | Drittanbieteranwendungen        | Wird jedes Mal generiert, wenn von einer Drittanbieter Anwendung, die Sie unterstützt, auf eine bezeichnete oder geschützte Datei zugegriffen wird.       |
 |RMS-Dienst     | Windows        | Office         |Wird jedes Mal generiert, wenn auf ein beschrifteten oder geschütztes Dokument zugegriffen wird.       |
 
@@ -73,7 +73,7 @@ Für die folgenden Aktivitäten werden **Zugriffs Verweigerungs** Überwachungs 
 
 |Gemeldet von  |Plattform  |Application  |Aktion/Beschreibung   |
 |---------|---------|---------|---------|
-|Azure Information Protection:</br>-Klassischer Scanner </br>-Unified-Beschriftungs Scanner     | Windows        | Office        |Wird jedes Mal generiert, wenn eine Datei durch den AIP-Scanner gescannt wird.<br>Das Protokoll enthält die folgenden Details:<br>-Übereinstimmende Informationstypen<br>-Bezeichnungen |
+|Azure Information Protection: nur klassischer Scanner | Windows        | Office        |Wird jedes Mal generiert, wenn eine Datei durch den AIP-Scanner gescannt wird.<br>Das Protokoll enthält die folgenden Details:<br>-Übereinstimmende Informationstypen<br>-Bezeichnungen |
 |Microsoft Information Protection (MIP) SDK | Any | Drittanbieteranwendungen | Wird jedes Mal generiert, wenn eine Datei von einer Drittanbieter Anwendung gescannt wird, von der Sie unterstützt wird. </br>Das Protokoll enthält die folgenden Details:</br>-Übereinstimmende Informationstypen</br>-Bezeichnungen|
 
 ## <a name="downgrade-label-audit-logs"></a>Überwachungs Protokolle für das Downgrade der Bezeichnung
