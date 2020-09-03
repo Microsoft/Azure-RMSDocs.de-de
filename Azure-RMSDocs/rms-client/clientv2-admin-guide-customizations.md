@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee77dc60e1300f494508479925963178413c48d9
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: ebaf12c3784f0a34a36f3a61aa687e1c61fe3126
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316847"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422448"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -150,14 +150,17 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |Enablelabelbymailheader|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |Enablelabelbysharepointproperties|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |Hidebarbydefault|[Information Protection-Leiste in Office-Apps anzeigen](#display-the-information-protection-bar-in-office-apps)|
+|Recht cationtextforusertext | [Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |Outlookblocktreuhänddomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|Outlookcollaborationrule| [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
 |Outlookjustifytreuhänddomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
 |Outlookoverridkollaborationextensions|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|Outlookskipsmimeonleseringpaneproperty | [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)|
 |Outlookunlabeledcollaborationaktionoverridemailbodybehavior|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |Outlookwarntreuddomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -168,6 +171,8 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
 |Scannerssattributestoskip | [Dateien während Scans in Abhängigkeit von Dateiattributen überspringen oder ignorieren](#skip-or-ignore-files-during-scans-depending-on-file-attributes)
+|Sharepointwebrequesttimeout| [Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)|
+|Sharepointfilewebrequesttimeout |[Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)|
 |Usecopyandkonservientschsowner | [Beibehalten von NTFS-Besitzern während der Bezeichnung](#preserve-ntfs-owners-during-labeling-public-preview)
 
 PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Richtlinien Einstellungen für eine Bezeichnungs Richtlinie mit dem Namen "Global":
@@ -1419,7 +1424,7 @@ Definieren Sie die JSON-snytax Ihrer Regel wie folgt:
 "nodes" : []
 ```
 
-Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und den letzten Vorgang, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter:
+Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und den letzten Vorgang, der die Aktion der Regel darstellt. Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Syntax der Regel Bedingung](#rule-condition-syntax)
 - [Syntax der Regel Aktion](#rule-action-syntax)
@@ -1783,6 +1788,18 @@ Ab [Version 2.8.85](unifiedlabelingclient-version-release-history.md#version-288
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails
+
+Leistungsprobleme können in Outlook auftreten, wenn die S/MIME-e-Mails im Lesebereich geöffnet sind. Um diese Probleme zu vermeiden, aktivieren Sie die erweiterte **outlookskipsmimeonleseringpaneproperty** -Eigenschaft. 
+
+Wenn Sie diese Eigenschaft aktivieren, wird verhindert, dass die AIP-Leiste und die e-Mail-Klassifizierungen im Lesebereich angezeigt werden.
+
+Wenn Ihre Richtlinie beispielsweise **Global**benannt ist, aktiviert der folgende PowerShell-Beispiel Befehl die **outlookskipsmimeonleseingpaneproperty** -Eigenschaft:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneProperty="true"}
+```
 
 ## <a name="next-steps"></a>Nächste Schritte
 

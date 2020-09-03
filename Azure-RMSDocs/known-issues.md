@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 85a7325bf2bd80294436b233fb81fddbe707ea6e
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 926c24ae3bd7960df21aba508bdf2edc83f29e9f
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176615"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422380"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme-Azure Information Protection
 
@@ -65,7 +65,7 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 
 ## <a name="aip-known-issues-in-office-applications"></a>In Office-Anwendungen bekannte AIP-Probleme
 
-|Funktion  |Bekannte Probleme  |
+|Komponente  |Bekannte Probleme  |
 |---------|---------|
 |**Mehrere Versionen von Office**    | Die Azure Information Protection Clients, einschließlich der klassischen und einheitlichen Bezeichnung, unterstützen nicht mehrere Office-Versionen auf demselben Computer oder das Wechseln von Benutzerkonten in Office.       |
 |**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist: </br></br>-Bei Ihren Office-Apps können Leistungsprobleme auftreten.</br>-Die Azure Information Protection Leiste kann in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt werden. </br></br>Um eine konsistente Leistung sicherzustellen und die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus, um das beste Aussehen** zu erzielen.    |
@@ -73,6 +73,7 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 |**Inhalts Markierungen in Word**    | Azure Information Protection Inhalts [Markierungen](configure-policy-markings.md) werden möglicherweise in den Microsoft Word-Fußzeilen ausgeblendet, wenn der Fußzeile auch eine Tabelle enthält. Weitere Informationen finden Sie unter [Wenn visuelle Kennzeichnungen angewendet werden](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**An e-Mails angefügte Dateien** |Aufgrund einer Einschränkung in den jüngsten Windows-Updates, wenn [Microsoft Outlook durch Azure Rights Management geschützt ist](office-apps-services-support.md), können Dateien, die an e-Mails angefügt sind, nach dem Öffnen der Datei gesperrt werden. |
 |**Nachrichten Zusammenführung**    |  Das Feature für die Office-e- [Mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) -Zusammenführung wird von keiner Azure Information Protection Funktion unterstützt       |
+| **S/MIME-e-Mails** | Das Öffnen von S/MIME-e-Mails im Lesebereich von Outlook kann zu Leistungsproblemen führen. </br></br>Um Leistungsprobleme bei S/MIME-e-Mails zu vermeiden, aktivieren Sie die erweiterte [**outlookskipsmimeonleseringpaneproperty**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) -Eigenschaft. </br></br>**Hinweis:** Durch Aktivieren dieser Eigenschaft wird verhindert, dass die AIP-Leiste oder die e-Mail-Klassifizierung im Lesebereich von Outlook angezeigt wird. |
 | | |
 
 ## <a name="known-issues-in-policies"></a>Bekannte Probleme in Richtlinien
@@ -89,7 +90,7 @@ Das Veröffentlichen von Richtlinien kann bis zu 24 Stunden dauern.
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
     
-    Weitere Informationen finden Sie unter
+    Weitere Informationen finden Sie in folgenden Quellen:
 
     - [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
     - [**Einheitlicher**Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)

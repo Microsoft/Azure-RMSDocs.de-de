@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8abcbf66f13498e3ff1fb45b979c6a53cf4f016
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: 6e53817a7ba157ab8f7883c6b8d715f918680103
+ms.sourcegitcommit: 11ff3752e45de3d688efc985fe0f327aabee35de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316694"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89422414"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -116,7 +116,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 **So verwenden Sie den Netzwerk Ermittlungsdienst**
 
-1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie unter:
+1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie in folgenden Quellen:
     - [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Erstellen eines Scanner-Clusters](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
     
@@ -182,7 +182,7 @@ Weitere Informationen finden Sie unter [zugreifen](../audit-logs.md#access-audit
 
 Azure Information Protection unterstützt jetzt eine DKE-vorlagenbasierte (Double Key Encryption) vorlagenbasierte Bezeichnung in der Überprüfung sowie die Verwendung des Datei-Explorers und von PowerShell.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-implement-tenant-key.md)
 - [Doppelte Schlüssel Verschlüsselung](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in den Microsoft 365-Dokumentation
@@ -215,11 +215,10 @@ Die folgenden Korrekturen wurden in Version 2.8.85 des Azure Information Protect
 - Verbesserungen bei Popups und Fehler Texten
 - QuickInfo-Updates, um die höchste [Klassifizierung für e-Mail-Anhänge](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling)anzuzeigen, wobei sowohl die Klassifizierung der e-Mail als auch die Anlage berücksichtigt werden. 
 - Fehlerbehebungen für den **Bericht einen Problem** Text beim Ändern von Vertraulichkeits Beschriftungs Richtlinien mithilfe des Cmdlets " [**Set-labelpolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) "
-- Korrekturen in Fehlern, die angezeigt werden, wenn das Cmdlet " [**Set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) " mit einer ungültigen Bezeichnungs-ID verwendet wird. 
-- Leistungsfehler Behebungen für das [Entschlüsseln von SMIME](clientv2-view-use-files.md) -e-Mails im Lesebereich von Outlook.
+- Korrekturen in Fehlern, die angezeigt werden, wenn das Cmdlet " [**Set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) " mit einer ungültigen Bezeichnungs-ID verwendet wird.
+- Leistungsfehler Behebungen für das [Entschlüsseln von SMIME](clientv2-view-use-files.md) -e-Mails im Lesebereich von Outlook. Um dieses Problem zu implementieren, aktivieren Sie die erweiterte [**outlookskipsmimeonleseringpaneproperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) -Eigenschaft.
 - Fehlerbehebungen für das [Entschlüsseln von PST-Dateien](clientv2-admin-guide-file-types.md) , die Kenn Wort verschlüsselte Dateien enthalten. Das Entschlüsseln von PST-Dateien schlägt nicht mehr fehl, wenn die PST-Datei eine Kenn Wort geschützte Datei enthält.
 - Durch das Entfernen einer Schutz Bezeichnung, die nicht in der Bereichs bezogenen [Richtlinie](../configure-policy-scope.md) enthalten ist, wird der Schutz des Inhalts nicht mehr aufgehoben.
-
 
 ## <a name="version-271010"></a>Version 2.7.101.0
 Unified-Beschriftungs Scanner und Client Version 2.7.101.0
@@ -280,7 +279,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in folgenden Quellen:
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
 
