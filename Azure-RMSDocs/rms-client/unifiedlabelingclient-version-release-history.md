@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/31/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1db7dd9a2d662689520480d7c5c8002a0b232450
-ms.sourcegitcommit: c133ada59dffcb9d8ee35688290d2b027bd63425
+ms.openlocfilehash: 69799cb3ce484e5cd594e5520069bfec3586766c
+ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423076"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89447224"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -216,7 +216,7 @@ Die folgenden Korrekturen wurden in Version 2.8.85 des Azure Information Protect
 - QuickInfo-Updates, um die höchste [Klassifizierung für e-Mail-Anhänge](../faqs-infoprotect.md#when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling)anzuzeigen, wobei sowohl die Klassifizierung der e-Mail als auch die Anlage berücksichtigt werden. 
 - Fehlerbehebungen für den **Bericht einen Problem** Text beim Ändern von Vertraulichkeits Beschriftungs Richtlinien mithilfe des Cmdlets " [**Set-labelpolicy**](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) "
 - Korrekturen in Fehlern, die angezeigt werden, wenn das Cmdlet " [**Set-aipfilelabel**](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfilelabel?view=azureipps) " mit einer ungültigen Bezeichnungs-ID verwendet wird.
-- Leistungsfehler Behebungen für das [Entschlüsseln von SMIME](clientv2-view-use-files.md) -e-Mails im Lesebereich von Outlook. Um dieses Problem zu implementieren, aktivieren Sie die erweiterte [**outlookskipsmimeonleseringpaneproperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) -Eigenschaft.
+- Leistungsfehler Behebungen für das Entschlüsseln von SMIME-e-Mails im Lesebereich von Outlook. Um dieses Problem zu implementieren, aktivieren Sie die erweiterte [**outlookskipsmimeonleseringpaneproperty**](clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) -Eigenschaft.
 - Fehlerbehebungen für das [Entschlüsseln von PST-Dateien](clientv2-admin-guide-file-types.md) , die Kenn Wort verschlüsselte Dateien enthalten. Das Entschlüsseln von PST-Dateien schlägt nicht mehr fehl, wenn die PST-Datei eine Kenn Wort geschützte Datei enthält.
 - Durch das Entfernen einer Schutz Bezeichnung, die nicht in der Bereichs bezogenen [Richtlinie](../configure-policy-scope.md) enthalten ist, wird der Schutz des Inhalts nicht mehr aufgehoben.
 
