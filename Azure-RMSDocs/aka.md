@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 067e96c31c7bca2a098cbdf0f7b215c05bc4fa61
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
-ms.translationtype: MT
+ms.openlocfilehash: 0eb7119831e09abaa9655f6860053431edea7c23
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224613"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428757"
 ---
 # <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection – auch bezeichnet als ...
 
@@ -68,7 +68,7 @@ Beachten Sie, dass Sie möglicherweise diese Technologie als **DRM** sehen oder 
 
 Als cloudbasierte Lösung, die Sie erwerben, ja. Azure Information Protection bietet neue Funktionen der Klassifizierung und Bezeichnung für die Dokumente und E-Mails einer Organisation, die wiederum Rights Management-Schutz anwenden können. 
 
-Azure Rights Management dient jedoch weiterhin als Schutztechnologie für Azure Information Protection sowie für Office 365-Dienste, die diesen cloudbasierten Rights Management-Schutz verwenden. So bleibt „Azure Rights Management“ (Azure RMS) im Kontext der Schutztechnologie, die von Azure Information Protection genutzt wird, der aktuelle Name.
+Azure Rights Management dient jedoch weiterhin als Schutztechnologie für Azure Information Protection sowie für Microsoft 365-Dienste, die diesen cloudbasierten Rights Management-Schutz verwenden. So bleibt „Azure Rights Management“ (Azure RMS) im Kontext der Schutztechnologie, die von Azure Information Protection genutzt wird, der aktuelle Name.
 
 Auf ähnliche Weise bleibt „Active Directory Rights Management Services“ (AD RMS), ein aktueller Name für die Windows Server-Serverrolle, die lokalen Rights Management-Schutz bietet. Diese Technologie kann mit Azure Information Protection verwendet werden und kann nützlich sein für einen kleinen Teil von Dokumenten und E-Mails, die von einem lokalen Schlüssel geschützt werden müssen. In diesem Szenario wird AD RMS oft als „Hold Your Own Key“- oder HYOK-Lösung bezeichnet.
 
