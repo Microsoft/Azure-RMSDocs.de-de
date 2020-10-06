@@ -1,40 +1,40 @@
 ---
-title: 'Vorgehensweise: Herabstufen/entfernen einer Bezeichnung, die eine Begründung erfordert (c#)'
+title: Herabstufen oder Entfernen einer Bezeichnung mit erforderlicher Begründung (C#)
 description: In diesem Artikel erfahren Sie, wie Sie eine Bezeichnung herabstufen oder entfernen, für die eine Begründung erforderlich ist.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 88c55d973dde25e1571750e51e36f5fa726770f5
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: 666b0c7fdbc483f638f76def37ec3082c9eb7377
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403220"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421196"
 ---
-# <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Information Protection SDK-Datei-API-Aktions Begründung für das Herabstufen einer Vertraulichkeits Bezeichnung in einer Datei (c#)
+# <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Azure Information Protection: Datei-API – Aktionsbegründung zum Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C#)
 
-In diesem Schnellstart wird die Behandlung eines Vorgangs für eine Herabstufung der Bezeichnung behandelt, wenn die Bezeichnungs Richtlinie eine Begründung Hier wird `IFileHandler` die-Schnittstelle zum Ändern der Bezeichnungen einer Datei verwendet. Weitere Informationen finden Sie in der [API-Referenz](/dotnet/api/?term=microsoft.informationprotection).
+In diesem Schnellstart wird das Herabstufen einer Bezeichnung behandelt, wenn die Bezeichnungsrichtlinie eine Begründung erfordert. Dabei wird die Schnittstelle `IFileHandler` zum Ändern der Bezeichnungen einer Datei verwendet. Weitere Informationen finden Sie in der [API-Referenz](/dotnet/api/?term=microsoft.informationprotection).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Vervollständigen des [Schnellstarts: Set/Get Sensitivität Labels (c#)](quick-file-set-get-label-csharp.md) , mit dem eine Starter-Visual Studio-Projekt Mappe erstellt wird, um die Vertraulichkeits Bezeichnungen einer Organisation aufzulisten und Vertraulichkeits Bezeichnungen festzulegen und aus einer Datei zu lesen. Die Schnellstartanleitung "Gewusst wie: Herabstufen/entfernen einer Bezeichnung, die eine Begründung erfordert c#" basiert auf der vorherigen Version.
+- Schließen Sie zuerst den [Schnellstart zum Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C#)](quick-file-set-get-label-csharp.md) ab. Darin wird eine einfache Visual Studio-Projektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt, mit der Vertraulichkeitsbezeichnungen in einer Datei festgelegt oder aus dieser gelesen werden können. Dieser Schnellstart zum Herabstufen oder Entfernen einer Bezeichnung mit erforderlicher Begründung in C# baut auf dem vorherigen auf.
 - Optional: Lesen Sie sich die Konzepte zu [Dateihandlern im MIP-SDK](concept-handler-file-cpp.md) durch.
 
 ## <a name="add-logic-to-set-a-lower-label-to-a-protected-file"></a>Hinzufügen von Logik zum Festlegen einer niedrigeren Bezeichnung für eine geschützte Datei
 
-Fügen Sie Logik hinzu, um mithilfe des dateihandlerobjekts eine Vertraulichkeits Bezeichnung für eine Datei festzulegen.
+Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit dem FileHandler-Objekt festzulegen.
 
-1. Öffnen Sie die Visual Studio-Projekt Mappe, die Sie im vorherigen Abschnitt "Schnellstart: Set/Get Sensitivitäts Labels (c#)" erstellt haben.
+1. Öffnen Sie die Visual Studio-Projektmappe, die Sie im vorherigen Artikel „Schnellstart: Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C#)“ erstellt haben.
 
 2. Öffnen Sie im Projektmappen-Explorer die CS-Datei des Projekts, die die Implementierung der `Main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
 3. Aktualisieren Sie den `<label-id>`-Wert aus dem vorherigen Schnellstart auf eine Vertraulichkeitsbezeichnung, die eine Begründung für die Herabstufung voraussetzt. Während dieses Schnellstarts legen Sie diese Bezeichnung zunächst fest und versuchen dann, sie in weiteren Schritten über Codeausschnitte herabzustufen.
 
-4. `Main()` `Console.ReadKey()` Fügen Sie den folgenden Code am Ende des Texts unter und über den Block "Herunterfahren der Anwendung" (wo Sie im vorherigen Schnellstart aufgehört haben) hinzu.
+4. Fügen Sie gegen Ende des `Main()`-Bereichs zwischen `Console.ReadKey()` und dem oben aufgeführten Block zum Herunterfahren der Anwendung (wo Sie im vorherigen Schnellstart aufgehört haben) den folgenden Code ein:
 
     ```csharp
     //Set paths and label ID
@@ -87,7 +87,7 @@ Fügen Sie Logik hinzu, um mithilfe des dateihandlerobjekts eine Vertraulichkeit
 
     ```
 
-5. Am Ende von Main () finden Sie den Block "Herunterfahren der Anwendung", der in der vorherigen Schnellstartanleitung erstellt wurde
+5. Suchen Sie am Ende der Main()-Methode den Block zum Herunterfahren der Anwendung, den Sie im vorherigen Schnellstart erstellt haben, und fügen Sie die folgenden Handlerzeilen zum Freigeben der Ressourcen hinzu:
 
     ````csharp
     downgradeHandler = null;
@@ -99,7 +99,7 @@ Fügen Sie Logik hinzu, um mithilfe des dateihandlerobjekts eine Vertraulichkeit
    | Platzhalter | Wert |
    |:----------- |:----- |
    | \<downgraded-labled-output\> | Der Ausgabedateipfad, in dem die geänderte Datei gespeichert werden soll |
-   | \<new-label-id\> | Eine Vorlagen-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wurde, z `bb7ed207-046a-4caf-9826-647cff56b990` . b.:. Stellen Sie sicher, dass die Vertraulichkeit niedriger als die der vorherigen Bezeichnung der geschützten Datei ist. |
+   | \<new-label-id\> | Eine Vorlagen-ID, kopiert aus der Konsolenausgabe im vorherigen Schnellstart. Beispiel: `bb7ed207-046a-4caf-9826-647cff56b990`. Stellen Sie sicher, dass die Vertraulichkeit niedriger als die der vorherigen Bezeichnung der geschützten Datei ist. |
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
@@ -129,4 +129,4 @@ Erstellen und testen Sie die Clientanwendung.
     Press a key to continue.
    ```
 
-Beachten Sie, dass ein ähnlicher Ansatz auch für `DeleteLabel()` den-Vorgang gilt, wenn die Bezeichnung, die aus einer Datei gelöscht wird, gemäß der Bezeichnung Richtlinie eine Begründung erfordert.`DeleteLabel()` die Funktion löst eine `JustificationRequiredException` Ausnahme `IsDowngradeJustified` aus, und das Flag sollte in der Ausnahmebehandlung auf true festgelegt werden, bevor eine Bezeichnung erfolgreich gelöscht wird.
+Falls für die Bezeichnung, die aus einer Datei gelöscht wird, gemäß der Bezeichnungsrichtlinie eine Begründung erforderlich ist, sollten Sie einen ähnlichen Ansatz für den `DeleteLabel()`-Vorgang befolgen. Die `DeleteLabel()`-Funktion löst eine `JustificationRequiredException`-Ausnahme aus, und das `IsDowngradeJustified`-Flag sollte in der Ausnahmebehandlung auf TRUE festgelegt werden, bevor eine Bezeichnung gelöscht wird.

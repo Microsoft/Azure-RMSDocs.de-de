@@ -4,15 +4,15 @@ description: Schnellstart zum Schreiben der Initialisierungslogik für C#-Client
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 07/30/2019
+ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: fa8b41850468ed545512f8facc488ff0517a8b41
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 406068f5770f489c66963fc34a462ec7e205765b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972083"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91108948"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C#)
 
@@ -50,7 +50,7 @@ Zunächst erstellen und konfigurieren wir die erste Lösung und das erste Projek
      - Wählen Sie das Paket „Microsoft.InformationProtection.File“ aus.
      - Klicken Sie auf „Installieren“ und anschließend auf „OK“, wenn das Bestätigungsdialogfeld **Vorschau der Änderungen** angezeigt wird.
 
-3. Wiederholen Sie die oben aufgeführten Schritte, um das Paket für die Datei-API des MSIP SDK hinzuzufügen, aber fügen Sie diesmal „Microsoft.IdentityModel.Clients.ActiveDirectory“ zur Anwendung hinzu.
+3. Wiederholen Sie die oben aufgeführten Schritte, um das Paket für die Datei-API des MSIP SDK hinzuzufügen, aber fügen Sie diesmal „Microsoft.Identity.Client“ zur Anwendung hinzu.
 
 ## <a name="implement-an-authentication-delegate"></a>Implementieren eines Authentifizierungsdelegats
 
@@ -64,34 +64,46 @@ Erstellen Sie nun eine Implementierung für einen Authentifizierungsdelegaten, i
 
      ```csharp
      using Microsoft.InformationProtection;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      ```
 
 4. Legen Sie `AuthDelegateImplementation` darauf fest, `Microsoft.InformationProtection.IAuthDelegate` zu erben und eine private Variable von `Microsoft.InformationProtection.ApplicationInfo` sowie einen Konstruktor zu implementieren, der den gleichen Dateityp akzeptiert.
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
-     {
+    {
         private ApplicationInfo _appInfo;
-        private string redirectUri = "mip-sdk-app://authorize";
+        // Microsoft Authentication Library IPublicClientApplication
+        private IPublicClientApplication _app;
         public AuthDelegateImplementation(ApplicationInfo appInfo)
         {
             _appInfo = appInfo;
         }
-     }
+
+    }
      ```
 
-Das Objekt `ApplicationInfo` enthält drei Eigenschaften. `_appInfo.ApplicationId` wird in der Klasse `AuthDelegateImplementation` verwendet, um der Authentifizierungsbibliothek die Client-ID bereitzustellen. `ApplicationName` und `ApplicationVersion` werden in Azure Information Protection Analytics-Berichten aufgeführt.
+    Das Objekt `ApplicationInfo` enthält drei Eigenschaften. `_appInfo.ApplicationId` wird in der Klasse `AuthDelegateImplementation` verwendet, um der Authentifizierungsbibliothek die Client-ID bereitzustellen. `ApplicationName` und `ApplicationVersion` werden in Azure Information Protection Analytics-Berichten aufgeführt.
 
-5. Fügen Sie die Methode `public string AcquireToken()` hinzu. Diese Methode akzeptiert `Microsoft.InformationProtection.Identity` und drei Zeichenfolgen: Autoritäts-URL, Ressourcen-URI und Ansprüche, sofern erforderlich. Diese Zeichenfolgenvariablen werden über die API an die Authentifizierungsbibliothek übergeben und sollten nicht geändert werden. Änderungen können zu Authentifizierungsfehlern führen.
+5. Fügen Sie die Methode `public string AcquireToken()` hinzu. Diese Methode akzeptiert `Microsoft.InformationProtection.Identity` und drei Zeichenfolgen: Autoritäts-URL, Ressourcen-URI und Ansprüche, sofern erforderlich. Diese Zeichenfolgenvariablen werden über die API an die Authentifizierungsbibliothek übergeben und sollten nicht geändert werden. Geben Sie die Mandanten-GUID aus dem Azure-Portal für Ihren Mandanten ein. Wenn Sie Zeichenfolgen neben der Mandanten-GUID bearbeiten, kann dies zu einem Fehler bei der Authentifizierung führen.
 
      ```csharp
-     public string AcquireToken(Identity identity, string authority, string resource, string claims)
-     {
-          AuthenticationContext authContext = new AuthenticationContext(authority);
-          var result = Task.Run(async() => await authContext.AcquireTokenAsync(resource, AppInfo.ApplicationId, new Uri(redirectUri), new PlatformParameters(PromptBehavior.Always))).Result;
-          return result.AccessToken;
-     }
+    public string AcquireToken(Identity identity, string authority, string resource, string claims)
+    {
+        var authorityUri = new Uri(authority);
+        authority = String.Format("https://{0}/{1}", authorityUri.Host, "<Tenant-GUID>");
+
+        _app = PublicClientApplicationBuilder.Create(_appInfo.ApplicationId).WithAuthority(authority).WithDefaultRedirectUri().Build();
+        var accounts = (_app.GetAccountsAsync()).GetAwaiter().GetResult();
+
+        // Append .default to the resource passed in to AcquireToken().
+        string[] scopes = new string[] { resource[resource.Length - 1].Equals('/') ? $"{resource}.default" : $"{resource}/.default" };
+        var result = _app.AcquireTokenInteractive(scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount)
+                   .ExecuteAsync().ConfigureAwait(false).GetAwaiter().GetResult();
+
+        return result.AccessToken;
+    }
+
      ```
 
 ## <a name="implement-a-consent-delegate"></a>Implementieren eines Zustimmungsdelegats
@@ -151,7 +163,6 @@ namespace mip_sdk_dotnet_quickstart
 ## <a name="construct-a-file-profile-and-engine"></a>Erstellen eines Dateiprofils und einer Datei-Engine
 
 Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjekte und Engine-Objekte erforderlich. Vervollständigen Sie den Programmierabschnitt dieses Schnellstarts, indem Sie Code hinzufügen, um die nativen DLLs zu laden und anschließend die Profilobjekte und Engine-Objekte zu instanziieren.
-
 
 
    ```csharp
@@ -220,6 +231,7 @@ namespace mip_sdk_dotnet_quickstart
    |:----------- |:----- |:--------|
    | \<application-id\> | Die ID der Azure AD-Anwendung wird der unter „MIP SDK: Setup und Konfiguration“ registrierten Anwendung zugewiesen (zwei Instanzen).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | Ein benutzerdefinierter Anzeigename für Ihre Anwendung. | AppInitialization |
+   | \<Tenant-GUID\> | Mandanten-ID für Ihren Azure AD-Mandanten | Mandanten-ID |
 
 
 4. Nun können Sie die Anwendung endgültig fertigstellen und etwaige Fehler beheben. Der Code sollte dann erfolgreich erstellt werden.

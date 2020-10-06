@@ -1,72 +1,72 @@
 ---
 title: Zusätzliche Voraussetzungen für Azure AD und Azure Information Protection
-description: Informieren Sie sich über zusätzliche Azure AD Voraussetzungen für Azure Information Protection in bestimmten Szenarien, z. b. Multi-Factor-oder Zertifikat basierte Authentifizierung oder Computer mit Office 2010 und mehr.
+description: Informieren Sie sich über zusätzliche Azure AD-Voraussetzungen für Azure Information Protection in bestimmten Szenarios, z. B. bei mehrstufiger oder zertifikatbasierter Authentifizierung oder bei Computern mit Office 2010.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/22/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: cc58a32da1bca1ce14704e0eb23ebbd0007073f7
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
-ms.translationtype: MT
+ms.openlocfilehash: 858a2ebb1bbc5040d564d9df05943c10a3f58a4a
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788967"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91428354"
 ---
-# <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Zusätzliche Azure AD Anforderungen für Azure Information Protection
+# <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Zusätzliche Azure AD-Anforderungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Ein [Azure AD Verzeichnis ist eine Voraussetzung](requirements.md#azure-active-directory) für die Verwendung von Azure Information Protection. Verwenden Sie ein Konto aus einem Azure AD Verzeichnis, um sich beim Azure-Portal anzumelden, in dem Sie Azure Information Protection Einstellungen konfigurieren können.
+Ein [Azure AD-Verzeichnis ist eine Anforderung](requirements.md#azure-active-directory) für die Verwendung von Azure Information Protection. Verwenden Sie ein Konto aus einem Azure AD-Verzeichnis, um sich beim Azure-Portal anzumelden, wo Sie Azure Information Protection-Einstellungen konfigurieren können.
 
 Wenn Sie ein Abonnement mit Azure Information Protection oder Azure Rights Management besitzen, wird Ihr Azure AD-Verzeichnis bei Bedarf automatisch für Sie erstellt.
 
-In den folgenden Abschnitten werden zusätzliche AIP-und Azure AD Anforderungen für bestimmte Szenarien aufgelistet. 
+In den folgenden Abschnitten werden zusätzliche Azure Information Protection- und Azure AD-Anforderungen für bestimmte Szenarios aufgelistet. 
 
 ## <a name="computers-running-office-2010"></a>Computer mit Office 2010
 
-Zusätzlich zu Azure AD Konto müssen für Computer, auf denen Microsoft Office 2010 ausgeführt wird, der [Azure Information Protection Unified](./rms-client/aip-clientv2.md) -Bezeichnungs Client oder [Azure Information Protection klassischer Client](./rms-client/aip-client.md) für Azure Information Protection und den zugehörigen Datenschutz Dienst (Azure Rights Management) authentifiziert werden.
+Zusätzlich zu einem Azure AD-Konto sind für Computer, auf denen Microsoft Office 2010 ausgeführt wird, der [Azure Information Protection-Client für einheitliche Bezeichnungen](./rms-client/aip-clientv2.md) oder der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) für die Authentifizierung bei Azure Information Protection und beim zugehörigen Datenschutzdienst (Azure Rights Management) erforderlich.
 
-Wenn Ihre Benutzerkonten einen Verbund haben (z. b. Wenn Sie AD FS verwenden), muss auf diesen Computern die integrierte Windows-Authentifizierung verwendet werden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
+Wenn Ihre Benutzerkonten verbunden sind (wenn Sie z. B. AD FS verwenden), müssen diese Computer die integrierte Windows-Authentifizierung verwenden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
 
-## <a name="support-for-certificate-based-authentication-cba"></a>Unterstützung für Zertifikat basierte Authentifizierung (Certificate-Based Authentication, CBA)
+## <a name="support-for-certificate-based-authentication-cba"></a>Unterstützung für die zertifikatbasierte Authentifizierung
 
 Die Azure Information Protection-Apps für iOS und Android unterstützen die zertifikatbasierte Authentifizierung. 
 
-Weitere Informationen finden Sie unter [Get Started with Certificate-Based Authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
+Weitere Informationen finden Sie unter [Erste Schritte mit der zertifikatbasierten Authentifizierung in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Multi-Factor Authentication (MFA) und Azure Information Protection
 
-Wenn Sie die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) mit Azure Information Protection verwenden möchten, müssen Sie mindestens eine der folgenden Geräte installiert haben:
+Damit Sie die mehrstufige Authentifizierung mit Azure Information Protection verwenden können, ist mindestens eine der folgenden Komponenten erforderlich:
 
 - **Microsoft Office,** Version 2013 oder höher
-- **Ein AIP-Client**. Es ist keine Mindestversion erforderlich. Die AIP-Clients für Windows sowie die Viewer-Apps für IOS und Android unterstützen MFA.
-- **Die Rights Management Freigabe-App für**Macintosh-Computer. Die RMS-Freigabe-apps haben seit der Version vom September 2015 MFA unterstützt.
+- **Ein Azure Information Protection-Client**. Es gibt keine Mindestversion. Die Azure Information Protection-Clients für Windows sowie die Viewer-Apps für IOS und Android unterstützen die mehrstufige Authentifizierung.
+- **Die Microsoft Rights Management-Freigabeanwendung für Mac-Computer**. Die Microsoft Rights Management-Freigabeanwendung unterstützt seit September 2015 die mehrstufige Authentifizierung.
 
 > [!NOTE]
-> Wenn Sie über Office 2013 verfügen, müssen Sie möglicherweise ein zusätzliches Update installieren, um Active Directory-Authentifizierungsbibliothek (Adal) zu unterstützen, z. b. das [Update vom 9. Juni 2015, für Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). 
+> Wenn Sie Office 2013 nutzen, müssen Sie möglicherweise ein weiteres Update zur Unterstützung der Active Directory-Authentifizierungsbibliothek (ADAL) installieren, z. B. [das Update für Office 2013 vom 9. Juni 2015 (KB3054853)](https://support.microsoft.com/kb/3054853). 
 >
-> Weitere Informationen finden Sie unter [Office 2013 modern Authentication Public Preview, angekündigt](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) im Office-Blog.       
+> Weitere Informationen finden Sie im Office-Blogbeitrag zur [Ankündigung der öffentlichen Vorschau der Authentifizierung für Microsoft 2013](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/).       
 
-Nachdem Sie diese Voraussetzungen bestätigt haben, führen Sie je nach Mandanten Konfiguration einen der folgenden Schritte aus:
+Führen Sie je nach Mandantenkonfiguration einen der folgenden Schritte aus, nachdem Sie diese Voraussetzungen überprüft haben:
 
-- **Von Microsoft verwaltete Mandanten mit Azure AD oder Office 365**. Konfigurieren Sie Azure MFA, um MFA für Benutzer zu erzwingen. 
+- **Für von Microsoft verwaltete Mandanten mit Azure AD oder Microsoft 365**: Konfigurieren Sie Azure MFA, um MFA für Benutzer zu erzwingen. 
 
-    Weitere Informationen finden Sie unter: 
+    Weitere Informationen finden Sie unter 
     - [Erste Schritte mit Azure Multi-Factor Authentication in der Cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
     - [Was ist Azure Multi-Factor Authentication?](/multi-factor-authentication/multi-factor-authentication)
 
-- **Verbund Mandanten, in denen Verbund Server lokal ausgeführt werden**. Konfigurieren Sie Ihre Verbundserver für Azure Active Directory oder Office 365. Wenn Sie z. b. AD FS verwenden, finden Sie weitere Informationen unter [Konfigurieren zusätzlicher Authentifizierungsmethoden für AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
+- **Für Verbundmandanten, bei denen die Verbundserver lokal ausgeführt werden**: Konfigurieren Sie Ihre Verbundserver für Azure Active Directory oder Microsoft 365. Wenn Sie beispielsweise AD FS verwenden, finden Sie Informationen unter [Konfigurieren zusätzlicher Authentifizierungsmethoden für AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). 
 
-    Weitere Informationen zu diesem Szenario finden Sie im Office-Blog  [unter Works with Office 365 – Identity Program](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) . 
+    Weitere Informationen zu diesem Szenario finden Sie unter [Das Programm „Works with Microsoft 365 – Identity“ wurde optimiert](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) auf dem Office-Blog. 
 
-## <a name="rights-management-connector--aip-scanner-requirements"></a>Rights Management Connector/AIP-Scanner-Anforderungen
+## <a name="rights-management-connector--aip-scanner-requirements"></a>Anforderungen für den Rights Management-Connector und den Azure Information Protection-Scanner
 
 Der Rights Management-Connector und der Azure Information Protection-Scanner unterstützen die MFA nicht. 
 
@@ -76,28 +76,28 @@ Wenn Sie den Connector oder den Scanner bereitstellen, dürfen die folgenden Kon
 - Das Dienstprinzipalkonto in Azure AD, das der Connector erstellt: **Aadrm_S-1-7-0**.
 - Das Dienstkonto, das den Scanner ausführt.
 
-## <a name="user-upn-values-dont-match-their-email-addresses"></a>Benutzer-UPN-Werte stimmen nicht mit Ihren e-Mail
+## <a name="user-upn-values-dont-match-their-email-addresses"></a>UPN-Werte von Benutzern stimmen nicht mit deren E-Mail-Adressen überein
 
-Konfigurationen, bei denen die UPN-Werte von Benutzern nicht mit Ihren e-Mail-Adressen identisch sind, sind keine empfohlene Konfiguration und unterstützen das einmalige Anmelden für Azure Information Protection nicht.
+Konfigurationen, bei denen die UPN-Werte von Benutzern nicht mit deren E-Mail-Adressen übereinstimmen, sind keine empfohlene Konfiguration und unterstützen das einmalige Anmelden für Azure Information Protection nicht.
 
-Wenn Sie den UPN-Wert nicht ändern können, konfigurieren Sie alternative IDs für die relevanten Benutzer, und weisen Sie Sie an, wie Sie sich mit dieser alternativen ID bei Office anmelden. 
+Wenn Sie den UPN-Wert nicht ändern können, konfigurieren Sie alternative Anmelde-IDs für Benutzer, und erklären Sie den Benutzern, wie sie sich mit dieser alternativen Anmelde-ID bei Office anmelden können. 
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
 - [Konfigurieren einer alternativen Anmelde-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)
-- [Office-Anwendungen fordern regelmäßig Anmelde Informationen für SharePoint, onedrive und lync Online an](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+- [Office-Anwendungen fordern in regelmäßigen Abständen zur Eingabe von Anmeldeinformationen für SharePoint, OneDrive und Lync Online auf](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 
 > [!TIP]
-> Wenn der Domänen Name im UPN-Wert eine Domäne ist, die für Ihren Mandanten überprüft wurde, fügen Sie den UPN-Wert des Benutzers als weitere e-Mail-Adresse zum Azure AD **proxyAddress** -Attribut hinzu. Dadurch kann der Benutzer für Azure Rights Management autorisiert werden, wenn der UPN-Wert zu dem Zeitpunkt angegeben wird, zu dem die Nutzungsrechte erteilt werden. 
+> Fügen Sie den UPN-Wert des Benutzers als weitere E-Mail-Adresse zum Attribut **proxyAddresses** in Azure AD hinzu, wenn der Domänenname im UPN-Wert eine Domäne ist, die für Ihren Mandanten überprüft wurde. Dadurch kann der Benutzer für Azure Rights Management autorisiert werden, wenn sein UPN-Wert zum Zeitpunkt der Gewährung der Nutzungsrechte festgelegt wird. 
 
 Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
 
-## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>Lokales authentifizieren mithilfe AD FS oder eines anderen Authentifizierungs Anbieters
+## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>Lokales Authentifizieren mithilfe von AD FS oder eines anderen Authentifizierungsanbieters
 
-Wenn Sie ein mobiles Gerät oder einen Mac-Computer verwenden, der lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungs Anbieter authentifiziert wird, müssen Sie AD FS für eine der folgenden Konfigurationen verwenden:
+Wenn Sie ein mobiles Gerät oder einen Mac-Computer verwenden, der lokal mithilfe von AD FS oder einem vergleichbaren Authentifizierungsanbieter authentifiziert wird, müssen Sie AD FS mit einer der folgenden Konfigurationen verwenden:
 
-- Eine minimale Server Version von **Windows Server 2012 R2**
-- Ein alternativer Authentifizierungs Anbieter, der das OAuth 2,0-Protokoll unterstützt.
+- Mindestens **Windows Server 2012 R2**
+- Mit einem alternativen Authentifizierungsanbieter, der das OAuth 2.0-Protokoll unterstützt
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).

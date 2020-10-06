@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 05d8c070e5dc8f8562f59ff0e3d46b6542d8d74f
-ms.sourcegitcommit: ee51eb341666fa91439e1c8496a880ae5c20195d
+ms.openlocfilehash: 12b53af8ba70c41d7597139b9158e2ac441fa75b
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255164"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91427831"
 ---
 # <a name="overview"></a>Übersicht
 
@@ -19,7 +19,7 @@ ms.locfileid: "87255164"
 
 Microsoft Information Protection (MSIP) stellt die Vereinheitlichung der Klassifizierungs-, Bezeichnungs- und Schutzdienste von Microsoft dar:
 
-- Die vereinheitlichte Verwaltung wird über Office 365, Azure Information Protection, Windows Information Protection und andere Microsoft-Dienste hinweg bereitgestellt. 
+- Die vereinheitlichte Verwaltung wird in Microsoft 365, Azure Information Protection, Windows Information Protection und anderen Microsoft-Diensten bereitgestellt. 
 - Drittanbieter können das MSIP SDK für die Integration in Anwendungen mithilfe eines konsistenten Standardschemas für die Bezeichnung von Daten und eines Schutzdiensts verwenden.
 
 * [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/)
@@ -46,5 +46,5 @@ Das MIP SDK wird auf den folgenden Plattformen unterstützt:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Jetzt sind Sie bereit für Ihre ersten Schritte mit dem SDK. Zunächst müssen Sie das [Setup des MSIP SDK und die Konfigurationsschritte durchführen](setup-configure-mip.md). Durch diese Schritte wird sichergestellt, dass Ihr Office 365-Abonnement und der Clientcomputer ordnungsgemäß eingerichtet wurden.
+Jetzt sind Sie bereit für Ihre ersten Schritte mit dem SDK. Zunächst müssen Sie das [Setup des MSIP SDK und die Konfigurationsschritte durchführen](setup-configure-mip.md). Durch diese Schritte wird sichergestellt, dass Ihr Microsoft 365-Abonnement und der Clientcomputer ordnungsgemäß eingerichtet werden.
 
