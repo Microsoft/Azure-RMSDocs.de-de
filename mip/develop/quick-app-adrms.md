@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: 51e81627c9f06fd7eb7259a5da2ec8b43449bac6
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: cf76a81525d06cf987f24d1966b85ade78f8f8ff
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972016"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588290"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Schnellstart: Schutz des Active Directory-Rechteverwaltungsservers (AD RMS)
 
@@ -27,14 +27,14 @@ Stellen Sie Folgendes sicher, sofern dies noch nicht geschehen ist:
 
 - Schließen Sie zuerst den [Schnellstart für die Initialisierung der Clientanwendung (C++)](quick-app-initialization-cpp.md) ab, in dem Sie eine Visual Studio-Projektmappe für den Einstieg erstellen.
 - Schließen Sie zuerst den [Schnellstart Auflisten der Vertraulichkeitsbezeichnungen (C++)](quick-file-list-labels-cpp.md) oder den [Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C#)](quick-file-list-labels-csharp.md) ab.
-- Stellen Sie AD RMS mit [Mobilgeräteerweiterung](https://docs.microsoft.com/azure/information-protection/active-directory-rights-manage-mobile-device) bereit.
-- Stellen Sie optional sicher, dass der [DNS SRV-Eintrag für AD RMS MDE](https://docs.microsoft.com/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) veröffentlicht wurde.
+- Stellen Sie AD RMS mit [Mobilgeräteerweiterung](/azure/information-protection/active-directory-rights-manage-mobile-device) bereit.
+- Stellen Sie optional sicher, dass der [DNS SRV-Eintrag für AD RMS MDE](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) veröffentlicht wurde.
 
 ## <a name="service-discovery"></a>Dienstermittlung
 
-Das SDK führt eine Dienstermittlung basierend auf dem über `FileEngineSettings` oder `ProtectionEngineSettings` bereitgestellten `mip::Identity`-Element aus. Dabei wird der UPN oder das E-Mail-Adresssuffix verwendet. Zuerst wird in der Domänenhierarchie nach dem *_rmsdisco*-Eintrag für MDE gesucht. Weitere Informationen zu diesem Prozess finden Sie unter [Festlegen der DNS SRV-Einträge für die AD RMS-Mobilgeräteerweiterung](https://docs.microsoft.com/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Wenn dieser DNS SRV-Eintrag nicht gefunden wird, wird als Dienststandort standardmäßig der Azure Information Protection-Dienst verwendet.
+Das SDK führt eine Dienstermittlung basierend auf dem über `FileEngineSettings` oder `ProtectionEngineSettings` bereitgestellten `mip::Identity`-Element aus. Dabei wird der UPN oder das E-Mail-Adresssuffix verwendet. Zuerst wird in der Domänenhierarchie nach dem *_rmsdisco*-Eintrag für MDE gesucht. Weitere Informationen zu diesem Prozess finden Sie unter [Festlegen der DNS SRV-Einträge für die AD RMS-Mobilgeräteerweiterung](/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Wenn dieser DNS SRV-Eintrag nicht gefunden wird, wird als Dienststandort standardmäßig der Azure Information Protection-Dienst verwendet.
 
-Wenn keine Identität verfügbar ist oder der DNS SRV-Eintrag für MDE nicht veröffentlicht wurde, kann der Dienstermittlungsprozess außer Kraft gesetzt werden, indem explizit der [Cloudendpunkt-URL](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function) festgelegt wird.
+Wenn keine Identität verfügbar ist oder der DNS SRV-Eintrag für MDE nicht veröffentlicht wurde, kann der Dienstermittlungsprozess außer Kraft gesetzt werden, indem explizit der [Cloudendpunkt-URL](./reference/class_mip_fileengine_settings.md#setpolicycloudendpointbaseurl-function) festgelegt wird.
 
 ## <a name="configuring-file-api-in-c-to-use-ad-rms"></a>Konfigurieren der Datei-API in C# zur Verwendung von AD RMS
 

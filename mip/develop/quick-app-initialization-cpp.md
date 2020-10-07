@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a08f124a2ec7570469913ec5985d52bfdbf2597f
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 3f74606e8f5caf4b4d0d480ba36830129249c9cf
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564128"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588307"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++) 
 
@@ -342,7 +342,7 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
 
    | Platzhalter | Wert | Beispiel |
    |:----------- |:----- |:--------|
-   | \<application-id\> | Die ID der Azure AD-Anwendung (GUID) wird der in Schritt 2 des Artikels [MIP SDK setup and configuration (MSIP SDK: Setup und Konfiguration)](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) registrierten Anwendung zugewiesen. Ersetzen Sie zwei Instanzen. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-id\> | Die ID der Azure AD-Anwendung (GUID) wird der in Schritt 2 des Artikels [MIP SDK setup and configuration (MSIP SDK: Setup und Konfiguration)](./setup-configure-mip.md#register-a-client-application-with-azure-active-directory) registrierten Anwendung zugewiesen. Ersetzen Sie zwei Instanzen. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Ein benutzerdefinierter Anzeigename für Ihre Anwendung. Dieser muss aus gültigen ASCII-Zeichen (außer ;) bestehen und im Idealfall mit dem Anwendungsnamen übereinstimmen, den Sie während der Azure AD-Registrierung verwendet haben. | `"AppInitialization"` |
    | \<application-version\> | Die benutzerdefinierten Versionsinformationen für Ihre Anwendung – diese muss aus gültigen ASCII-Zeichen (außer ;) bestehen. | `"1.1.0.0"` |
    | \<engine-account\> | Das Konto, das für die Identität der Engine verwendet wird. Wenn Sie sich während des Tokenabrufs bei einem Benutzerkonto authentifizieren, muss es diesem Wert entsprechen. | `"user1@tenant.onmicrosoft.com"` |

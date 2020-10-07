@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: c3de3c7de8a604221732dd0398e019721b51116b
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: c8af932e5210bdf2445926c6584d4680a6fb0158
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972134"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588273"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>Schnellstart: Auflisten von Schutzvorlagen (C++)
 
@@ -23,7 +23,7 @@ Dieser Schnellstart zeigt, wie Sie die MIP-Schutz-API verwenden, um die für ein
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 - Schließen Sie zunächst den [Schnellstart: Initialisierung der Clientanwendung für Schutz-APIs (C++)](quick-protection-app-initialization-cpp.md) ab, in dem Sie eine Visual Studio-Startprojektmappe erstellen. Der vorliegende Schnellstart zum Auflisten von Schutzvorlagen basiert darauf, dass zuvor eine Startprojektmappe erstellt wurde.
-- Optional: Sehen Sie sich die Konzepte in [RMS-Vorlagen](https://docs.microsoft.com/azure/information-protection/configure-policy-templates) an.
+- Optional: Sehen Sie sich die Konzepte in [RMS-Vorlagen](/azure/information-protection/configure-policy-templates) an.
 
 ## <a name="add-logic-to-list-the-protection-templates"></a>Hinzufügen von Logik zum Auflisten der Schutzvorlagen
 

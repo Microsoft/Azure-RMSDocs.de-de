@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: overview
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 12b53af8ba70c41d7597139b9158e2ac441fa75b
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 32f2895d8b52a5fd63d5c764eebb78736b1917a9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91427831"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588324"
 ---
 # <a name="overview"></a>Übersicht
 
@@ -22,7 +22,7 @@ Microsoft Information Protection (MSIP) stellt die Vereinheitlichung der Klassif
 - Die vereinheitlichte Verwaltung wird in Microsoft 365, Azure Information Protection, Windows Information Protection und anderen Microsoft-Diensten bereitgestellt. 
 - Drittanbieter können das MSIP SDK für die Integration in Anwendungen mithilfe eines konsistenten Standardschemas für die Bezeichnung von Daten und eines Schutzdiensts verwenden.
 
-* [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/)
+* [Was ist Office 365 Security and Compliance Center?](/office365/securitycompliance/)
 * [Was ist Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 * [Wie funktioniert der Schutz in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -47,4 +47,3 @@ Das MIP SDK wird auf den folgenden Plattformen unterstützt:
 ## <a name="next-steps"></a>Nächste Schritte
 
 Jetzt sind Sie bereit für Ihre ersten Schritte mit dem SDK. Zunächst müssen Sie das [Setup des MSIP SDK und die Konfigurationsschritte durchführen](setup-configure-mip.md). Durch diese Schritte wird sichergestellt, dass Ihr Microsoft 365-Abonnement und der Clientcomputer ordnungsgemäß eingerichtet werden.
-

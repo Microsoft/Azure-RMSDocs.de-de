@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d8f48a058f03b43e4f4835106c5f882942623740
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 04e114e6b719288a26663bd5534af4b1f1b73ac8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927980"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587880"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
@@ -96,11 +96,11 @@ Bevor Sie den Scanner installieren, erstellen Sie im Azure-Portal ein Profil daf
 
     Klicken Sie im Bereich **Neues Profil hinzufügen** auf die Option **Repositorys konfigurieren**, um das den Bereich **Repositorys** zu öffnen:
 
-    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Konfigurieren von Datenrepositorys für den Azure Information Protection-Scanner":::
+    :::image type="content" source="./media/scanner-repositories-bar.png" alt-text="Hinzufügen eines Profils für den Azure Information Protection-Scanner":::
 
 1. Klicken Sie im Bereich **Repositorys** auf die Option **Hinzufügen**:
 
-    :::image type="content" source="media/scanner-repository-add.png" alt-text="Hinzufügen eines Datenrepositorys für den Azure Information Protection-Scanner":::
+    :::image type="content" source="media/scanner-repository-add.png" alt-text="Hinzufügen eines Profils für den Azure Information Protection-Scanner":::
 
 1. Geben Sie im Bereich **Repository** den Ordner an, den Sie zuvor erstellt haben. Beispiel: `\\server\TestScanner`
 
@@ -132,7 +132,7 @@ Jetzt können Sie den Scanner mit dem Scannerprofil installieren, das Sie erstel
 
 1. Wählen Sie Ihren Profilnamen und dann die Option **Jetzt überprüfen** aus:
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiieren des Überprüfungsvorgangs für den Azure Information Protection-Scanner":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Hinzufügen eines Profils für den Azure Information Protection-Scanner":::
 
     Wenn diese Option nicht verfügbar ist, nachdem Sie Ihr Profil ausgewählt haben, ist die Überprüfung nicht mit Azure Information Protection verbunden. Überprüfen Sie die Konfiguration und die Internetkonnektivität.
 
@@ -171,7 +171,7 @@ In Excel gilt Folgendes:
 
     Stellen Sie im Bereich **Azure Information Protection – Profile** sicher, dass Ihr Profil ausgewählt ist, und klicken Sie dann auf die Option **Jetzt scannen**:
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiieren der Überprüfung für den Azure Information Protection-Scanner":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Hinzufügen eines Profils für den Azure Information Protection-Scanner":::
 
 1. Wenn die Überprüfung abgeschlossen ist, sehen Sie sich die neuen Ergebnisse an.
 
@@ -213,5 +213,5 @@ Wenn Sie die Dateien klassifizieren und schützen möchten, die vertrauliche Inf
 
 **Für den Client für einheitliche Bezeichnungen**:
 
-- [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](/microsoft-365/compliance/apply-sensitivity-label-automatically)
+- [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels)
