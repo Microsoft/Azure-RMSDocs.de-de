@@ -7,22 +7,22 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: e1c223744a8651a4318abbf0f532d76a771bde16
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 5edca37acb2f817173142c6638775c2e95bd7439
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971675"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588239"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK: Setup und Konfiguration
 
-Der Schnellstart und die Tutorialartikel drehen sich um das Erstellen von Anwendungen, die die MIP SDK-Bibliotheken und -APIs verwenden. Dieser Artikel zeigt Ihnen, wie Sie Ihr Office 365-Abonnement und Ihre Clientarbeitsstation einrichten und konfigurieren, um sich auf die Verwendung des SDK vorzubereiten.
+Der Schnellstart und die Tutorialartikel drehen sich um das Erstellen von Anwendungen, die die MIP SDK-Bibliotheken und -APIs verwenden. Dieser Artikel zeigt Ihnen, wie Sie Ihr Microsoft 365-Abonnement und Ihre Clientarbeitsstation einrichten und konfigurieren, um sich auf die Verwendung des SDK vorzubereiten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Lesen Sie unbedingt die folgenden Themen, bevor Sie beginnen:
 
-- [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [Was ist Office 365 Security and Compliance Center?](/office365/securitycompliance/security-and-compliance)
 - [Was ist Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Wie funktioniert der Schutz in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
@@ -125,11 +125,11 @@ Führen Sie nun die folgenden Schritte aus, um sicherzustellen, dass Ihr Clientc
    - Klicken Sie auf das Windows-Symbol in der linken unteren Ecke.
    - Geben Sie „Path“ ein, und drücken Sie die EINGABETASTE, wenn das Element **Systemumgebungsvariablen bearbeiten** angezeigt wird.
    - Klicken Sie im Dialogfeld **Systemeigenschaften** auf **Umgebungsvariablen**.
-   - Klicken Sie im Dialogfeld **Umgebungsvariablen** auf die Zeile **Pfad** der Variablen unter **Benutzervariablen für \<Benutzer\>** , und klicken Sie dann auf **Bearbeiten**.
+   - Klicken Sie im Dialogfeld **Umgebungsvariablen** auf die Zeile der **Path**-Variablen unter **Benutzervariablen für \<user\>** , und klicken Sie dann auf **Bearbeiten**.
    - Klicken Sie im Dialogfeld **Umgebungsvariable bearbeiten** auf **Neu**. Es wird eine neue bearbeitbare Zeile erstellt. Fügen Sie unter Verwendung des vollständigen Pfads zu jedem der Unterverzeichnisse `file\bins\debug\amd64`, `protection\bins\debug\amd64` und `upe\bins\debug\amd64` eine neue Zeile für jedes Unterverzeichnis hinzu. Die SDK-Verzeichnisse werden in einem `<API>\bins\<target>\<platform>`-Format gespeichert. Dabei gilt Folgendes:
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
-     - \<platform\> = `amd64` (x64) oder `x86`.
+     - \<platform\> = `amd64` (x64), `x86` etc.
 
    - Wenn Sie die Aktualisierung der Variablen **Path** abgeschlossen haben, klicken Sie auf **OK**. Klicken Sie dann auf **OK**, wenn Sie zum die Dialogfeld **Umgebungsvariablen** zurückkehren.
 
@@ -143,7 +143,7 @@ Führen Sie nun die folgenden Schritte aus, um sicherzustellen, dass Ihr Clientc
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registrieren einer Clientanwendung in Azure Active Directory
 
-Bei der Bereitstellung des Office 365-Abonnements wird ein zugeordneter Azure AD-Mandant (Azure Active Directory) erstellt. Der Azure AD-Mandant stellt Identitäts- und Zugriffsverwaltung für Office 365-*Benutzerkonten* und -*Anwendungskonten* bereit. Anwendungen, die Zugriff auf gesicherte APIs (z.B. MIP-APIs) erfordern, benötigen ein Anwendungskonto.
+Bei der Bereitstellung des Microsoft 365-Abonnements wird ein zugeordneter Azure AD-Mandant (Azure Active Directory) erstellt. Der Azure AD-Mandant stellt Identitäts- und Zugriffsverwaltung für Microsoft 365-*Benutzerkonten* und -*Anwendungskonten* bereit. Anwendungen, die Zugriff auf gesicherte APIs (z.B. MIP-APIs) erfordern, benötigen ein Anwendungskonto.
 
 Konten werden für die Authentifizierung und Autorisierung zur Laufzeit durch einen *Sicherheitsprinzipal* dargestellt, der aus den Identitätsinformationen des Kontos abgeleitet wird. Sicherheitsprinzipale, die ein Anwendungskonto darstellen, werden als ein [*Dienstprinzipal*](/azure/active-directory/develop/developer-glossary#service-principal-object) bezeichnet.
 
