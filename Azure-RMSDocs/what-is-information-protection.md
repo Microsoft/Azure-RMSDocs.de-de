@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a728faf211fb34f2ef5b296f28cff97c4c76e8e4
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 25b520e08d8379580226d589fec511d502065156
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927487"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91588404"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -61,7 +61,7 @@ In diesem Beispiel hat die Bezeichnung auch folgende Schritte durchgeführt:
 
 Azure Information Protection verwendet den [*Azure Rights Management-Dienst* (Azure RMS)](what-is-azure-rms.md), um Ihre Daten zu schützen. 
 
-Azure RMS ist mit anderen Microsoft-Clouddiensten und -Anwendungen integriert, z. B. Office 365 und Azure Active Directory, und kann auch mit Ihren eigenen Anwendungen oder Drittanbieteranwendungen sowie Information Protection-Lösungen verwendet werden. Azure RMS funktioniert sowohl mit lokalen Lösungen als auch mit Cloudlösungen.
+Azure RMS ist in andere Microsoft-Clouddienste und -Anwendungen integriert, z. B. Microsoft 365 und Azure Active Directory, und kann auch mit Ihren eigenen Anwendungen oder Drittanbieteranwendungen sowie Lösungen zum Schutz von Daten verwendet werden. Azure RMS funktioniert sowohl mit lokalen Lösungen als auch mit Cloudlösungen.
 
 Azure RMS verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien. Ähnlich wie bei AIP-Bezeichnungen bleibt der durch Azure RMS angewendete Schutz in den Dokumenten und E-Mails unabhängig vom Speicherort der Dokumente oder der E-Mails. So wird sichergestellt, dass Sie die Kontrolle über Ihre Inhalte behalten, auch wenn diese mit anderen Benutzern geteilt werden.
 
@@ -84,7 +84,7 @@ Rights Management-Vorlagen können in beliebigen Anwendungen oder Diensten verwe
 
 Die folgende Abbildung zeigt ein Beispiel aus dem Exchange Admin Center, in dem Sie z. B. Exchange Online-E-Mail-Flussregeln für die Verwendung der RMS-Vorlagen konfigurieren können:
 
-:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="Beispiel für die Auswahl von Vorlagen für Exchange Online":::
+:::image type="content" source="media/templates-exchangeonline-callouts.png" alt-text="E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung":::
 
 > [!NOTE]
 > Beim Erstellen einer AIP-Bezeichnung, die Schutzeinstellungen enthält, wird auch eine entsprechende Rights Management-Vorlage erstellt, die separat von der Bezeichnung verwendet werden kann. 
@@ -104,12 +104,12 @@ Obwohl Bezeichnungen automatisch auf Dokumente und E-Mails angewendet werden kö
 
 Außerdem ermöglicht der AIP-Client Benutzern das gleichzeitige Klassifizieren und Schützen zusätzlicher Dateitypen oder mehrerer Dateien über das Kontextmenü in Windows-Explorer. Beispiel:
 
-:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="Klassifizieren und Schützen über das Explorer-Kontextmenü mithilfe von Azure Informationen Protection":::
+:::image type="content" source="media/right-click-classify-protect-folder.png" alt-text="E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung":::
 
 Die Menüoption **Klassifizieren und schützen** funktioniert ähnlich wie die Information Protection-Leiste in Office-Anwendungen, wodurch Benutzer eine Bezeichnung auswählen oder benutzerdefinierte Berechtigungen festlegen können.
 
 > [!TIP]
-> Hauptbenutzer (oder Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. [Relevante PowerShell-Befehle](https://docs.microsoft.com/powershell/module/azureinformationprotection) sind im Client enthalten und können auch separat installiert werden.
+> Hauptbenutzer (oder Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. [Relevante PowerShell-Befehle](/powershell/module/azureinformationprotection) sind im Client enthalten und können auch separat installiert werden.
 
 Benutzer und Administratoren können die Website zur Dokumentenverfolgung verwenden, um geschützte Dokumente zu überwachen, zu überwachen, wer auf sie zugreift und wann auf diese zugegriffen wird. Wenn sie einen Missbrauch vermuten, können sie auch den Zugriff auf diese Dokumente entziehen. Beispiel:
 
@@ -119,13 +119,13 @@ Benutzer und Administratoren können die Website zur Dokumentenverfolgung verwen
 
 Die Verwendung von AIP mit Exchange Online bietet den zusätzlichen Vorteil, dass geschützte E-Mails an jeden Benutzer gesendet werden, wobei sichergestellt wird, dass diese die E-Mail auf jedem Gerät lesen können.
 
-Das ist beispielsweise nützlich, wenn Sie vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden, oder wenn Benutzer kein Konto von Office 365 oder Azure AD besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
+Das ist beispielsweise nützlich, wenn Sie vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden, oder wenn Benutzer kein Microsoft 365- oder Azure AD-Konto besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
 
 Für dieses Szenario sind die [Funktionen der Office 365-Nachrichtenverschlüsselung](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) erforderlich. Wenn die Empfänger die geschützte E-Mail nicht in ihrem nativen E-Mail-Client öffnen können, können sie die vertraulichen Informationen mithilfe einer Einmalkennung in einem Browser lesen.
 
 Einem Gmail-Benutzer wird möglicherweise die folgende Aufforderung in einer empfangenen E-Mail angezeigt:
 
-:::image type="content" source="media/ome-message.png" alt-text="Meldung für Gmail-Empfänger in OME und AIP":::
+:::image type="content" source="media/ome-message.png" alt-text="E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung":::
 
 Für den Benutzer, der die E-Mail sendet, sind dieselben Aktionen wie für das Senden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation erforderlich. Klicken Sie dazu beispielsweise auf die Schaltfläche **Nicht weiterleiten**, die der AIP-Client dem Outlook-Menüband hinzufügen kann. 
 
@@ -149,7 +149,7 @@ Verwenden Sie eine der folgenden Methoden, um vorhandene Inhalte zu klassifizier
 
     Verwenden Sie die Überprüfung alternativ, um Standardbezeichnung auf alle Dokumente in einem Datenrepository anzuwenden, ohne den Inhalt der Datei zu überprüfen. Zudem haben Sie die Möglichkeit, die Überprüfung auch nur im Berichterstellungsmodus zu verwenden, um vertrauliche Daten zu finden, von denen Sie vielleicht nicht wissen, dass sie vorhanden sind.
 
-- **Clouddatenspeicher:** Verwenden Sie [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration), um Ihre Bezeichnungen für Dokumente in Box, SharePoint und OneDrive anzuwenden. Ein zugehöriges Tutorial finden Sie unter [Automatisches Anwenden von Azure Information Protection-Klassifizierungsbezeichnungen](https://docs.microsoft.com/cloud-app-security/use-case-information-protection). 
+- **Clouddatenspeicher:** Verwenden Sie [Microsoft Cloud App Security](/cloud-app-security/azip-integration), um Ihre Bezeichnungen für Dokumente in Box, SharePoint und OneDrive anzuwenden. Ein zugehöriges Tutorial finden Sie unter [Automatisches Anwenden von Azure Information Protection-Klassifizierungsbezeichnungen](/cloud-app-security/use-case-information-protection). 
 
 ## <a name="latest-labeling-updates-for-microsoft-365"></a>Neueste Updates zu den Bezeichnungen für Microsoft 365
 
@@ -159,8 +159,8 @@ Hier finden Sie die neuesten Informationen dazu, wie Azure Information Protectio
 
 Weitere Informationen finden Sie in folgenden Quellen:
 
-- [Neuerungen in Microsoft 365 Admin Center](https://docs.microsoft.com/microsoft-365/admin/whats-new-in-preview)
-- [Neuerungen in SharePoint Admin Center](https://docs.microsoft.com/sharepoint/what-s-new-in-admin-center)
+- [Neuerungen in Microsoft 365 Admin Center](/microsoft-365/admin/whats-new-in-preview)
+- [Neuerungen in SharePoint Admin Center](/sharepoint/what-s-new-in-admin-center)
 
 ## <a name="additional-azure-information-protection-resources"></a>Zusätzliche Azure Information Protection-Ressourcen
 
