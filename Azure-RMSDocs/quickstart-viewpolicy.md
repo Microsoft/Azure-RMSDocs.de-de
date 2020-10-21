@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ebe7260cdbd9a252323b13ffd91897e5cd423810
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: 29c79c49de5d28c82281614846f5938ecbf40f89
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927909"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91587897"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -64,7 +64,7 @@ Der Schutzdienst ist jetzt für neue Kunden automatisch aktiviert. Überprüfen 
 
 1. Überprüfen Sie, ob der Schutz für Ihren Mandanten aktiviert ist. Beispiel:
 
-    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="AIP-Aktivierung bestätigen":::
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Hinzufügen von Azure Information Protection zum Azure-Portal":::
 
     Wenn der Schutz zu irgendeinem Zeitpunkt nicht aktiviert ist und Sie ihn aktivieren müssen, wählen Sie **Aktivieren** ![AIP aktivieren](media/qs-tutor/activate.png "AIP aktivieren") aus. Wenn die Aktivierung abgeschlossen ist, zeigt die Informationsleiste **Activation finished successfully** (Aktivierung erfolgreich) an.
 
@@ -76,7 +76,7 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
 
     Möglicherweise haben Sie schon einige Standardbezeichnungen erstellt. Die folgende Abbildung zeigt die Bezeichnungen, die bei Azure Information Protection standardmäßig erstellt werden:
 
-    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Azure Information Protection – Standardbezeichnungen":::
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Hinzufügen von Azure Information Protection zum Azure-Portal":::
 
     **Wenn keine Standardbezeichnungen oder sonstigen Bezeichnungen angezeigt werden, gehen Sie folgendermaßen vor**:
 
@@ -85,7 +85,7 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
     Wenn die Schaltfläche **Standardbezeichnungen generieren** oberhalb des Rasters nicht angezeigt wird, wählen Sie unter **Verwalten** die Option **Einheitliche Bezeichnungen** aus. Wenn der Status für einheitliche Bezeichnungen als **Nicht aktiviert** angezeigt wird, wählen Sie **Aktivieren** aus, und kehren Sie dann zum Bereich **Klassifizierung** > **Bezeichnungen** zurück.
 
     > [!NOTE]
-    > Beim Client für einheitliche Bezeichnungen werden Bezeichnungen in Microsoft M365 verwaltet. Weitere Informationen finden Sie unter [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels).
+    > Beim Client für einheitliche Bezeichnungen werden Bezeichnungen in Microsoft M365 verwaltet. Weitere Informationen finden Sie unter [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels).
     >
 
 1. Veröffentlichen Sie Ihre Bezeichnungen im Azure-Portal, um diese für den klassischen Azure Information Protection-Client zur Verfügung zu stellen:
@@ -129,7 +129,7 @@ Wenn Sie das erste Mal über das Azure-Portal eine Verbindung mit dem Azure Info
 
 - **Client für einheitliche Bezeichnungen**: Beim Client für einheitliche Bezeichnungen werden nur Bezeichnungen in den Client heruntergeladen. Richtlinieneinstellungen werden aus dem Office 365 Compliance & Security Center, Microsoft 365 Compliance Center oder Microsoft 365 Security Center heruntergeladen. Verwenden Sie diese Admin Centers statt des Azure-Portals, um Ihre Bezeichnungen und Bezeichnungsrichtlinien zu bearbeiten.
 
-    Weitere Informationen finden Sie in der Dokumentation zu Microsoft 365 im Artikel [Informationen zu Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+    Weitere Informationen finden Sie in der Dokumentation zu Microsoft 365 im Artikel [Informationen zu Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 **Anleitung für den klassischen Client**:
 
@@ -139,7 +139,7 @@ So zeigen Sie die Standardrichtlinieneinstellungen für Azure Information Protec
 
 1. Die Richtlinieneinstellungen werden nach den Bezeichnungen angezeigt, im Abschnitt **Einstellungen konfigurieren, die für Information Protection-Endbenutzer angezeigt und angewendet werden**. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
 
-    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Globale Richtlinieneinstellungen für Azure Information Protection":::
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Hinzufügen von Azure Information Protection zum Azure-Portal":::
 
 1. Sie können jetzt alle geöffneten Bereiche im Portal schließen.
 
