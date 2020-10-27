@@ -1,46 +1,46 @@
 ---
-title: Vorgehensweise beim erneuten Veröffentlichen eines Szenarios C++
-description: In diesem Artikel erfahren Sie, wie Sie das Szenario für die Wiederverwendung des Schutz Handlers für das erneute Veröffentlichen von Szenarien verstehen.
+title: 'Vorgehensweise: Erneutes Veröffentlichen in C++'
+description: In diesem Artikel erfahren Sie, wie Sie den Schutzhandler zum erneuten Veröffentlichen wiederverwenden.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 929959135d4889ec65fcc5122837d6e8a09235e9
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: 49fac8fb748cec60abbe3af779670c928c1608a1
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403356"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421149"
 ---
-# <a name="file-api-re-publishing-quickstart-c"></a>Schnellstart für die Datei-API-Neuveröffentlichung (C++)
+# <a name="file-api-re-publishing-quickstart-c"></a>Schnellstart für die erneute Veröffentlichung mit der Datei-API ( C++ )
 
 ## <a name="overview"></a>Übersicht
 
-Eine Übersicht zu diesem Szenario und zu seiner Verwendung finden Sie unter [Veröffentlichen im MIP SDK](concept-republishing.md).
+Eine Übersicht zu diesem Szenario und dessen Verwendung finden Sie unter [Erneutes Veröffentlichen mit dem MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Schließen Sie zuerst den [Schnellstart zum Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C++)](quick-file-set-get-label-cpp.md) ab. Darin wird eine Visual Studio-Startprojektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt, mit der Vertraulichkeitsbezeichnungen in einer Datei festgelegt oder aus dieser gelesen werden können. Das Thema "Vorgehensweise: Herabstufen/entfernen einer Bezeichnung, die eine Begründung erfordert C++" basiert auf der vorherigen Schnellstartanleitung.
-- Optional: Überprüfen von [Datei Handlern](concept-handler-file-cpp.md) in den MIP SDK-Konzepten.
-- Optional: Überprüfen Sie die [Schutz Handler](concept-handler-protection-cpp.md) in den MIP SDK-Konzepten.
+- Schließen Sie zuerst den [Schnellstart zum Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C++)](quick-file-set-get-label-cpp.md) ab. Darin wird eine Visual Studio-Startprojektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt, mit der Vertraulichkeitsbezeichnungen in einer Datei festgelegt oder aus dieser gelesen werden können. Dieser Schnellstart zum Herabstufen oder Entfernen einer Bezeichnung mit erforderlicher Begründung in C++ baut auf dem vorherigen auf.
+- Optional: Lesen Sie sich die Konzepte zu [Dateihandlern im MIP SDK](concept-handler-file-cpp.md) durch.
+- Optional: Lesen Sie sich die Konzepte zu [Schutzhandlern im MIP SDK](concept-handler-protection-cpp.md) durch.
 
-## <a name="add-logic-to-filehandler-observer-class"></a>Logik zur fileHandler-Observer-Klasse hinzufügen
+## <a name="add-logic-to-filehandler-observer-class"></a>Hinzufügen von Logik zur FileHandler Observer-Klasse
 
-Damit eine geschützte Datei mithilfe der von bereitgestellten Methode entschlüsselt werden kann `GetDecryptedTemporaryFileAsync()` `mip::FileHandler` , müssen Rückrufe für die Async-Methode für Erfolg und Fehler wie unten beschrieben definiert werden.
+Sie müssen Rückrufe für die async-Methode für Erfolg und Fehler wie unten beschrieben definieren, um in der Lage zu sein, eine geschützte Datei mit der `GetDecryptedTemporaryFileAsync()`-Methode zu entschlüsseln, die durch `mip::FileHandler` verfügbar gemacht wird.
 
 1. Öffnen Sie die Visual Studio-Projektmappe, die Sie im vorherigen Artikel „Schnellstart: Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C++)“.
 
-2. Öffnen Sie mit Projektmappen-Explorer die `filehandler_observer.h` Datei für in Ihrem Projekt. Vor dem Ende der fileHandler-Definition, bevor der `};` Methoden Deklaration die folgenden Zeilen hinzugefügt werden.
+2. Öffnen Sie über den Projektmappen-Explorer die `filehandler_observer.h`-Datei in Ihrem Projekt. Fügen Sie vor dem Ende der FileHandler-Definition, vor `};`, die folgenden Zeilen hinzu, um die Methode zu deklarieren.
 
     ```cpp
         void OnGetDecryptedTemporaryFileSuccess(const std::string& decryptedFilePath, const std::shared_ptr<void>& context) override;
         void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context) override;
     ```
 
-3. Öffnen Sie die `filehandler_observer.cpp` Datei in Ihrem Projekt mit Projektmappen-Explorer. Fügen Sie nach dem Ende der Datei die folgenden Zeilen für Methoden Definitionen hinzu.
+3. Öffnen Sie über den Projektmappen-Explorer die `filehandler_observer.cpp`-Datei in Ihrem Projekt. Fügen Sie am Ende der Datei die folgenden Zeilen hinzu, um die Methode zu definieren.
 
     ```cpp
 
@@ -59,7 +59,7 @@ Damit eine geschützte Datei mithilfe der von bereitgestellten Methode entschlü
 
 1. Öffnen Sie im Projektmappen-Explorer die CPP-Datei des Projekts, die die Implementierung der `main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
-2. Am Ende des Haupt Texts () unter "System" ("Pause"); und höher gibt 0 zurück. (wenn Sie im vorherigen Schnellstart aufgehört haben), fügen Sie den folgenden Code ein:
+2. Fügen Sie gegen Ende des main()-Abschnitts zwischen system("pause"); und return0; (wo Sie im vorherigen Schnellstart aufgehört haben) den folgenden Code ein:
 
 ```cpp
 //Originally protected file's path.
@@ -121,7 +121,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 }
 ```
 
-3. Am Ende von Main () finden Sie den Block für das Herunterfahren der Anwendung, der im vorherigen Schnellstart erstellt wurde
+3. Suchen Sie am Ende der Main()-Methode den Block zum Herunterfahren der Anwendung, den Sie im vorherigen Schnellstart erstellt haben, und fügen Sie die folgenden Handlerzeilen zum Freigeben der Ressourcen hinzu:
 
     ````csharp
         protectedFileHandler = nullptr;
@@ -133,16 +133,16 @@ if (protectionHandler->AccessCheck("Edit")) {
 
    | Platzhalter | Wert |
    |:----------- |:----- |
-   | \<protected-file-path\> | Geschützte Datei aus vorheriger Schnellstartanleitung. |
-   | \<reprotected-file-path\> | Der Ausgabe Dateipfad für die geänderte Datei, die erneut veröffentlicht werden soll. |
+   | \<protected-file-path\> | Dies ist die geschützte Datei aus der vorherigen Schnellstartanleitung. |
+   | \<reprotected-file-path\> | Dies ist der Ausgabedateipfad für die erneute Veröffentlichung der angepassten Datei. |
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
 Erstellen und testen Sie die Clientanwendung.
 
-1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
+1. Drücken Sie STRG+UMSCHALT+B ( **Projektmappe erstellen** ), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 ( **Debuggen starten** ) zum Ausführen der Anwendung.
 
-2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Führen Sie das PowerShell-Skript aus, um jedes Mal das Token zu erhalten, und verwenden Sie dabei die Werte für $Authority und $resourceUrl.
+2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Führen Sie das PowerShell-Skript wie zuvor im Schnellstart „Festlegen und Abrufen von Vertraulichkeitsbezeichnungen“ aus, um jedes Mal das Token anhand der angegebenen Werte für $authority und $resourceUrl abzurufen.
 
   ```console
     Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

@@ -1,39 +1,39 @@
 ---
-title: 'Gewusst wie: Neuveröffentlichen des Szenarios C #'
-description: In diesem Artikel erfahren Sie, wie Sie das Szenario für die Wiederverwendung des Schutz Handlers für das erneute Veröffentlichen von Szenarien verstehen.
+title: 'Vorgehensweise: Erneutes Veröffentlichen in C#'
+description: In diesem Artikel erfahren Sie, wie Sie den Schutzhandler zum erneuten Veröffentlichen wiederverwenden.
 author: Pathak-Aniket
 ms.service: information-protection
-ms.topic: conceptual
+ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 2b6e0b866144c4883ece29936c1a23cc946c5976
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
-ms.translationtype: MT
+ms.openlocfilehash: c72d284363c1ca988692d18b7007a88c88d808b5
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403339"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421189"
 ---
-# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Schnellstart: Microsoft Information Protection SDK-Datei-API-Wiederveröffentlichung (c#)
+# <a name="microsoft-information-protection-sdk---file-api-republishing-quickstart-c"></a>Microsoft Information Protection SDK: Schnellstart für die Wiederveröffentlichung der Datei-API (C#)
 
 ## <a name="overview"></a>Übersicht
 
-Eine Übersicht zu diesem Szenario und zu seiner Verwendung finden Sie unter [Veröffentlichen im MIP SDK](concept-republishing.md).
+Eine Übersicht zu diesem Szenario und dessen Verwendung finden Sie unter [Erneutes Veröffentlichen mit dem MIP SDK](concept-republishing.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Vervollständigen der [Schnellstartanleitung: Set/Get sensisensilabels (c#)](quick-file-set-get-label-csharp.md) First, das eine Starter-Visual Studio-Projekt Mappe erstellt, um die Vertraulichkeits Bezeichnungen einer Organisation aufzulisten und Vertraulichkeits Bezeichnungen in einer Datei festzulegen und zu lesen. Diese Schnellstartanleitung zum erneuten Veröffentlichen einer geschützten Datei-c# basiert auf der vorherigen Schnellstartanleitung.
-- Optional: Überprüfen von [Datei Handlern](concept-handler-file-cpp.md) in den MIP SDK-Konzepten.
-- Optional: Überprüfen Sie die [Schutz Handler](concept-handler-protection-cpp.md) in den MIP SDK-Konzepten.
+- Schließen Sie zuerst den [Schnellstart zum Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C#)](quick-file-set-get-label-csharp.md) ab. Darin wird eine Visual Studio-Startprojektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt, mit der Vertraulichkeitsbezeichnungen in einer Datei festgelegt oder aus dieser gelesen werden können. Diese Schnellstartanleitung zum erneuten Veröffentlichen einer geschützten Datei in C# baut auf der vorherigen Anleitung auf.
+- Optional: Lesen Sie sich die Konzepte zu [Dateihandlern im MIP SDK](concept-handler-file-cpp.md) durch.
+- Optional: Sehen Sie sich die Konzepte unter [ProtectionHandler im MIP SDK](concept-handler-protection-cpp.md) an.
 
 ## <a name="add-logic-to-edit-and-republish-a-protected-file"></a>Hinzufügen von Logik zum Bearbeiten und erneuten Veröffentlichen einer geschützten Datei
 
-1. Öffnen Sie die Visual Studio-Projekt Mappe, die Sie im vorherigen Artikel "Schnellstart: Set/Get sensisensilabels (c#)" erstellt haben.
+1. Öffnen Sie die Visual Studio-Projektmappe, die Sie im vorherigen Artikel „Schnellstart: Festlegen und Abrufen von Vertraulichkeitsbezeichnungen (C#)“ erstellt haben.
 
 2. Öffnen Sie im Projektmappen-Explorer die CS-Datei des Projekts, die die Implementierung der `Main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
-3. `Main()` `Console.ReadKey()` Fügen Sie den folgenden Code am Ende des Texts unter und über den Block "Herunterfahren der Anwendung" (wo Sie im vorherigen Schnellstart aufgehört haben) hinzu.
+3. Fügen Sie gegen Ende des `Main()`-Bereichs zwischen `Console.ReadKey()` und dem oben aufgeführten Block zum Herunterfahren der Anwendung (wo Sie im vorherigen Schnellstart aufgehört haben) den folgenden Code ein:
 
 ```csharp
 string protectedFilePath = "<protected-file-path>" // Originally protected file's path from previous quickstart.
@@ -88,7 +88,7 @@ if (protectionHandler.AccessCheck("Edit"))
 }
 ```
 
-4. Am Ende von Main () finden Sie den Block für das Herunterfahren der Anwendung, der im vorherigen Schnellstart erstellt wurde
+4. Suchen Sie am Ende der Main()-Methode den Block zum Herunterfahren der Anwendung, den Sie im vorherigen Schnellstart erstellt haben, und fügen Sie die folgenden Handlerzeilen zum Freigeben der Ressourcen hinzu:
 
     ````csharp
         protectedFileHandler = null;
@@ -99,14 +99,14 @@ if (protectionHandler.AccessCheck("Edit"))
 
    | Platzhalter | Wert |
    |:----------- |:----- |
-   | \<protected-file-path\> | Geschützte Datei aus vorheriger Schnellstartanleitung. |
-   | \<reprotected-file-path\> | Der Ausgabe Dateipfad für die geänderte Datei, die erneut veröffentlicht werden soll. |
+   | \<protected-file-path\> | Dies ist die geschützte Datei aus der vorherigen Schnellstartanleitung. |
+   | \<reprotected-file-path\> | Dies ist der Ausgabedateipfad für die erneute Veröffentlichung der angepassten Datei. |
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
 Erstellen und testen Sie die Clientanwendung.
 
-1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
+1. Drücken Sie STRG+UMSCHALT+B ( **Projektmappe erstellen** ), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 ( **Debuggen starten** ) zum Ausführen der Anwendung.
 
 2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, *kann* die Anwendung Sie jedes Mal zur Authentifizierung über ADAL auffordern, wenn das SDK Ihre `AcquireToken()`-Methode aufruft. Wenn bereits zwischengespeicherte Anmeldeinformationen vorhanden sind, werden Sie nicht zur Anmeldung aufgefordert. Die Liste der Bezeichnungen mit den Informationen zur angewendeten Bezeichnung und der geänderten Datei wird sofort angezeigt.
 

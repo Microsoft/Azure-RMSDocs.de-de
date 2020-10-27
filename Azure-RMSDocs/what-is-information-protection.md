@@ -4,7 +4,7 @@ description: Azure Information Protection (AIP) ist ein Dienst, der Organisation
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 25b520e08d8379580226d589fec511d502065156
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: e5c32a239b038e714ebbff5779f4490df00ccad3
+ms.sourcegitcommit: 637885276cfb6dc5d0b70b8c0b69d8ad428c2056
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588404"
+ms.lasthandoff: 10/18/2020
+ms.locfileid: "92163740"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -44,9 +44,9 @@ Verwenden Sie Azure Information Protection, um Klassifizierungsbezeichnungen sow
 
 Der Inhalt der Bezeichnung umfasst Folgendes:
 
-- Die **Klassifizierung**, die unabhängig davon erkannt werden kann, wo die Daten gespeichert oder von wem sie freigegeben werden
-- **Optische Kennzeichnungen**, zum Beispiel Kopfzeilen, Fußzeilen oder Wasserzeichen
-- **Metadaten**, die Dateien und E-Mail-Headern als Klartext hinzugefügt werden Dieser Klartextmetadaten stellen sicher, dass andere Dienste die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können.
+- Die **Klassifizierung** , die unabhängig davon erkannt werden kann, wo die Daten gespeichert oder von wem sie freigegeben werden
+- **Optische Kennzeichnungen** , zum Beispiel Kopfzeilen, Fußzeilen oder Wasserzeichen
+- **Metadaten** , die Dateien und E-Mail-Headern als Klartext hinzugefügt werden Dieser Klartextmetadaten stellen sicher, dass andere Dienste die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können.
 
 Auf der folgenden Abbildung hat die Bezeichnung z. B. eine E-Mail-Nachricht als *Allgemein* klassifiziert, wobei der [Client für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) verwendet wurde:
 
@@ -67,8 +67,8 @@ Azure RMS verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien
 
 Für Schutzeinstellungen kann Folgendes gelten:
 
-- Sie können **Teil der Konfiguration Ihrer Bezeichnungen sein**, sodass Benutzer Dokumente und E-Mails ganz einfach durch Anwenden einer Bezeichnung klassifizieren und schützen können. 
-- Sie können von Anwendungen und Diensten **separat verwendet werden**, die zwar den Schutz unterstützen, aber keine Bezeichnungen. 
+- Sie können **Teil der Konfiguration Ihrer Bezeichnungen sein** , sodass Benutzer Dokumente und E-Mails ganz einfach durch Anwenden einer Bezeichnung klassifizieren und schützen können. 
+- Sie können von Anwendungen und Diensten **separat verwendet werden** , die zwar den Schutz unterstützen, aber keine Bezeichnungen. 
 
     Für Anwendungen und Dienste, die nur den Schutz unterstützen, werden die Schutzeinstellungen als [Rights Management-Vorlagen](#rights-management-templates) verwendet.
 
@@ -119,7 +119,7 @@ Benutzer und Administratoren können die Website zur Dokumentenverfolgung verwen
 
 Die Verwendung von AIP mit Exchange Online bietet den zusätzlichen Vorteil, dass geschützte E-Mails an jeden Benutzer gesendet werden, wobei sichergestellt wird, dass diese die E-Mail auf jedem Gerät lesen können.
 
-Das ist beispielsweise nützlich, wenn Sie vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden, oder wenn Benutzer kein Microsoft 365- oder Azure AD-Konto besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
+Das ist beispielsweise nützlich, wenn Sie vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail** -, **Hotmail** - oder **Microsoft** -Konto verwenden, oder wenn Benutzer kein Microsoft 365- oder Azure AD-Konto besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
 
 Für dieses Szenario sind die [Funktionen der Office 365-Nachrichtenverschlüsselung](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) erforderlich. Wenn die Empfänger die geschützte E-Mail nicht in ihrem nativen E-Mail-Client öffnen können, können sie die vertraulichen Informationen mithilfe einer Einmalkennung in einem Browser lesen.
 
@@ -127,7 +127,7 @@ Einem Gmail-Benutzer wird möglicherweise die folgende Aufforderung in einer emp
 
 :::image type="content" source="media/ome-message.png" alt-text="E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung":::
 
-Für den Benutzer, der die E-Mail sendet, sind dieselben Aktionen wie für das Senden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation erforderlich. Klicken Sie dazu beispielsweise auf die Schaltfläche **Nicht weiterleiten**, die der AIP-Client dem Outlook-Menüband hinzufügen kann. 
+Für den Benutzer, der die E-Mail sendet, sind dieselben Aktionen wie für das Senden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation erforderlich. Klicken Sie dazu beispielsweise auf die Schaltfläche **Nicht weiterleiten** , die der AIP-Client dem Outlook-Menüband hinzufügen kann. 
 
 Alternativ kann die Funktion „Nicht weiterleiten“ in eine Bezeichnung integrieren werden, die Benutzer dann auswählen können, um sowohl die Klassifizierung als auch den Schutz auf diese E-Mail anzuwenden. Ein Beispiel ist der [Client für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
 
@@ -182,22 +182,19 @@ Weitere Informationen finden Sie in folgenden Quellen:
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Die Microsoft Ignite 2019 in Orlando war ein großer Erfolg! Dort konnten Sie viele nützliche Informationen zu Azure Information Protection und den neuesten Updates und Verbesserungen erhalten. Wenn Sie nicht teilnehmen konnten, können Sie sich später eine Aufzeichnung der Sitzungen ansehen.
+Die Microsoft Ignite 2020 war ein digitales Event und ein voller Erfolg! Sie können die Sitzungsaufzeichnungen auf [https://myignite.microsoft.com/sessions](https://myignite.microsoft.com/sessions) ansehen.
 
-Im Folgenden finden Sie die fünf Sitzungen, die wir Ihnen empfehlen:
+Beispiel:
 
-- [BRK2119: „Secure your sensitive data!“ (Sichern Sie Ihre vertraulichen Daten!) Grundlegendes zu den neuesten Funktionen von Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/81172?source=sessions)
- 
-- [THR3067: „Know your data“ (Details zu Ihren Daten): Die besten fünf Tipps und Tricks zum besseren Verständnis Ihrer vertraulichen Daten](https://myignite.techcommunity.microsoft.com/sessions/81183)
+- [Übergreifender Informationsschutz und Governance in der Cloud, lokal, über Endpunkte und Remotearbeitsumgebungen](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
 
-- [BRK3103: „Protecting sensitive files and data can be hard.“ (Der Schutz vertraulicher Dateien und Daten kann schwierig sein.) Auswahl der richtigen Datenschutzoptionen mit dem richtigen Verhältnis zwischen Sicherheit und Mitarbeiterproduktivität](https://myignite.techcommunity.microsoft.com/sessions/81177?source=sessions)
+- [Datenkenntnis, Schützen Ihrer Daten und Verhindern von Datenschutz mit Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
 
-- [BRK2120: „Got Azure Information Protection?“ (Haben Sie Azure Information Protection schon?) Sicherer Umgang mit einheitlichen Bezeichnungen, Richtlinienkonfiguration, Clients und Analysen](https://myignite.techcommunity.microsoft.com/sessions/81178?source=sessions)
+- [Fragen Sie den Experten: Fragen zur Microsoft-Compliance: Information Protection und Governance, Insiderrisiken, Complianceverwaltung und viel mehr](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
 
-- [BRK2121: Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK. (Nutzen Sie mit dem Microsoft Information Protection SDK leistungsstarke Vertraulichkeitsbezeichnungen und Schutzfunktionen für Ihre eigenen Apps und ISV-Lösungen.)](https://myignite.techcommunity.microsoft.com/sessions/81179?source=sessions)
-
-Letzter Blogbeitrag: [Grundlegende Informationen zum Speicherort sensibler Daten und dem intelligenten Schutz mit Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
-
+> [!TIP]
+> Wenn Sie Informationen über die Microsoft Ignite 2019 in Orlando suchen, sehen Sie sich die Zusammenfassung in unserem Blog an: [Microsoft Information Protection – Ignite 2019-Zusammenfassung](https://techcommunity.microsoft.com/t5/microsoft-security-and/microsoft-information-protection-ignite-2019-recap/ba-p/998174)
+> 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
