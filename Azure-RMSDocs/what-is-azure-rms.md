@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Azure Rights Management Protection-aip
+title: Übersicht über den Schutz durch Azure Rights Management – AIP
 description: Informationen über Azure Rights Management (Azure RMS) und die Schutztechnologie von Azure Information Protection.
 author: batamig
 ms.author: bagol
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 1a239e489dee616ba13050a9fa6614d85bee1429
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
-ms.translationtype: MT
+ms.openlocfilehash: e5a9f0039dc21942ac975aa9bf7a80cc957b40e8
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87297866"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92177849"
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
 
@@ -29,42 +29,42 @@ ms.locfileid: "87297866"
 
 Azure Rights Management (Azure RMS) ist die Schutztechnologie von [Azure Information Protection](what-is-information-protection.md).
 
-Azure RMS ist ein cloudbasierter Schutzdienst, bei dem Verschlüsselungs-, Identitäts-und Autorisierungs Richtlinien verwendet werden, um Dateien und e-Mails auf mehreren Geräten, einschließlich Smartphones, Tablets und PCs, zu schützen. Schutzeinstellungen verbleiben in Ihren Daten, auch wenn Sie die Grenzen Ihrer Organisation verlassen, sodass Ihre Inhalte sowohl innerhalb als auch außerhalb Ihrer Organisation geschützt bleiben.
+Azure RMS ist ein cloudbasierter Schutzdienst, der Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien zum Schützen von Dateien und E-Mails auf Smartphones, Tablets und PCs verwendet. Die Schutzeinstellungen verbleiben bei Ihren Daten, auch wenn diese die Grenzen Ihrer Organisation verlassen. So bleiben Ihre Inhalte sowohl innerhalb als auch außerhalb Ihrer Organisation geschützt.
 
-Die folgende Abbildung zeigt, wie Azure RMS Schutz für Office 365 sowie lokale Server und Dienste bereitstellt. Der Schutz wird auch von gängigen Endbenutzer Geräten unterstützt, auf denen Windows, macOS, IOS und Android ausgeführt wird.
+Die folgende Abbildung zeigt, wie Azure RMS Schutz für Microsoft 365 sowie lokale Server und Dienste bereitstellt. Außerdem wird die Schutzlösung von gängigen Endbenutzergeräten unterstützt, auf denen Windows, macOS, iOS oder Android ausgeführt wird.
 
 ![Azure RMS – Funktionsweise](./media/AzRMS_elements.png)
 
-Verwenden Sie Azure RMS mit Office 365-Abonnements oder-Abonnements für Azure Information Protection. Weitere Informationen zu den einzelnen Abonnementtypen und den unterstützten Funktionen finden Sie auf der [Azure Information Protection Preis](https://azure.microsoft.com/pricing/details/information-protection/) Website.
+Verwenden Sie Azure RMS mit Microsoft 365-Abonnements oder Abonnements für Azure Information Protection. Weitere Informationen zu den einzelnen Abonnementtypen und den unterstützten Features finden Sie auf der Website mit den [Preisen zu Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/).
 
-### <a name="sample-azure-rms-use-case"></a>Anwendungsfall für Beispiel Azure RMS
+### <a name="sample-azure-rms-use-case"></a>Anwendungsfall zu Azure RMS
 
-Mitarbeiter können ein Dokument per e-Mail an ein Partnerunternehmen senden oder ein Dokument auf dem cloudlaufwerk speichern.
+Mitarbeiter können z. B. ein Dokument per E-Mail an ein Partnerunternehmen senden oder ein Dokument auf einem Cloudlaufwerk speichern.
 
 Die Verwendung des permanenten Schutzes von Azure RMS hilft, Unternehmensdaten zu schützen, und kann auch für Konformität, gesetzliche Ermittlungsanforderungen oder bewährte Methoden für die Informationsverwaltung erforderlich sein.
 
-Mit Azure RMS wird sichergestellt, dass autorisierte Personen und Dienste (z. b. suchen und Indizierung) weiterhin die geschützten Daten lesen und überprüfen können.
+Azure RMS stellt sicher, dass autorisierte Benutzer und Dienste (wie die Suche und die Indizierung) weiterhin die geschützten Daten lesen und untersuchen können.
 
-Die Gewährleistung des kontinuierlichen Zugriffs für autorisierte Personen und Dienste, auch bekannt als "Argumentation over Data", ist ein wichtiges Element bei der Kontrolle über die Daten Ihrer Organisation. Diese Funktion kann mit anderen Lösungen zum Schutz von Daten, die Peer-zu-Peer-Verschlüsselung verwenden, nicht problemlos erreicht werden. 
+Die Gewährleistung eines kontinuierlichen Zugriffs für autorisierte Personen und Dienste, auch bekannt als „Schlussfolgern über Daten“ (reasoning over data), ist für die Kontrolle über die Daten Ihrer Organisation von entscheidender Bedeutung. Diese Funktion lässt sich mit anderen Schutzlösungen, die die Peer-zu-Peer-Verschlüsselung verwenden, nicht leicht erreichen. 
 
 ## <a name="business-problems-solved-by-azure-rights-management"></a>Von Azure Rights Management gelöste Geschäftsprobleme
 
-Verwenden Sie die folgenden Listen und Tabellen, um Geschäftsanforderungen oder-Probleme zu identifizieren, die Ihre Organisation möglicherweise beim Schützen von Dokumenten und e-Mails hat, und wie die Azure Rights Management-Technologie Ihren Anforderungen gerecht werden kann.
+Anhand der folgenden Listen und Tabellen können Sie Geschäftsanforderungen oder -probleme bestimmen, die Ihre Organisation möglicherweise beim Schützen von Dokumenten und E-Mails hat. Zudem können Sie ermitteln, wie Sie die Azure Rights Management-Technologie für Ihre Zwecke nutzen können.
 
-- [Schutz Features](#protection-features)
+- [Schutzfunktionen](#protection-features)
 - [Funktionen zur Zusammenarbeit](#collaboration-features)
-- [Platt Form Unterstützungs Features](#platform-support-features)
-- [Infrastruktur Features](#infrastructure-features)
+- [Funktionen für die Plattformunterstützung](#platform-support-features)
+- [Infrastrukturfunktionen](#infrastructure-features)
 
 > [!TIP]
-> Wenn Sie mit der lokalen Version von Rights Management, Active Directory Rights Management Services (AD RMS), vertraut sind, sind Sie möglicherweise an der Vergleichstabelle unter [Vergleich von Azure Rights Management und AD RMS](compare-on-premise.md)interessiert.
+> Wenn Sie mit der lokalen Version von Rights Management, Active Directory Rights Management Services (AD RMS), vertraut sind, ist die Vergleichstabelle in [Vergleich zwischen Azure Rights Management und AD RMS](compare-on-premise.md) möglicherweise für Sie interessant.
 
-### <a name="protection-features"></a>Schutz Features
+### <a name="protection-features"></a>Schutzfunktionen
 
 |Funktion  |BESCHREIBUNG  |
 |---------|---------|
-|**Schützen mehrerer Dateitypen**     | In frühen Implementierungen von Rights Management konnten nur Office-Dateien mithilfe des systemeigenen Rights Management Schutzes geschützt werden. </br></br>Der generische Schutz, der erstmals von der Rights Management Freigabe Anwendung bereitgestellt wurde und jetzt vom Azure Information Protection-Client angeboten wird, bedeutet, dass weitere [Dateitypen](./rms-client/client-admin-guide-file-types.md) unterstützt werden.        |
-|**Schützen Sie Dateien überall**. | Wenn eine Datei [geschützt](./rms-client/client-classify-protect.md)ist, bleibt der Schutz für die Datei bestehen, auch wenn Sie gespeichert oder in einen Speicher kopiert wird, der nicht von der IT gesteuert wird, z. b. in einem cloudspeicherdienst.|
+|**Schützen mehrerer Dateitypen**     | In frühen Implementierungen von Rights Management konnten nur Office-Dateien mithilfe eines nativen Rights Management-Schutzes geschützt werden. </br></br>Generischer Schutz, der zuerst von der Rights Management-Freigabeanwendung und jetzt vom Azure Information Protection-Client bereitgestellt wird, bedeutet, dass mehr [Dateitypen](./rms-client/client-admin-guide-file-types.md) unterstützt werden.        |
+|**Schützen von Dateien überall** . | Wenn eine Datei [geschützt](./rms-client/client-classify-protect.md) ist, bleibt die Datei geschützt, auch wenn sie gespeichert oder in einen Speicher kopiert wird, der nicht unter der Kontrolle der IT ist, z. B. in einen Cloudspeicherdienst.|
 |     |         |
 
 
@@ -72,90 +72,90 @@ Verwenden Sie die folgenden Listen und Tabellen, um Geschäftsanforderungen oder
 
 |Funktion  |BESCHREIBUNG  |
 |---------|---------|
-|**Sicheres Freigeben von Informationen**     |  [Geschützte Dateien](./rms-client/client-classify-protect.md) können sicher für andere Benutzer freigegeben werden, z. b. eine Anlage an eine e-Mail oder eine Verknüpfung zu einer SharePoint-Website. </br></br> Wenn die vertraulichen Informationen in einer e-Mail-Nachricht angezeigt werden, schützen Sie die e-Mail, oder verwenden Sie die Option " **nicht weiterleiten** " in Outlook.       |
-|**Unterstützung von Business-to-Business-Zusammenarbeit**     |  Da es sich bei Azure Rights Management um einen clouddienst handelt, ist es nicht erforderlich, Vertrauens Stellungen mit anderen Organisationen explizit zu konfigurieren, bevor Sie geschützte Inhalte für Sie freigeben können. </br></br>Die Zusammenarbeit mit anderen Organisationen, die bereits über Office 365 oder ein Azure AD Verzeichnis verfügen, wird automatisch unterstützt. </br></br>Für Organisationen ohne Office 365 oder ein Azure AD Verzeichnis können sich Benutzer für das kostenlose [RMS for Individuals](rms-for-individuals.md) Abonnement registrieren oder eine Microsoft-Konto für [Unterstützte Anwendungen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)verwenden.       |
+|**Sicheres Freigeben von Informationen**     |  [Geschützte Dateien](./rms-client/client-classify-protect.md) können sicher mit anderen geteilt werden, z. B. als Anlage einer E-Mail oder als Link zu einer SharePoint-Website. </br></br> Wenn sich die vertraulichen Informationen in einer E-Mail befinden, schützen Sie die E-Mail oder verwenden Sie die Option **Nicht weiterleiten** von Outlook.       |
+|**Unterstützung von Business-to-Business-Zusammenarbeit**     |  Weil Azure Rights Management ein Clouddienst ist, ist es nicht erforderlich, explizit Vertrauensstellungen zu anderen Organisationen zu konfigurieren, bevor Sie geschützte Inhalte mit diesen gemeinsam nutzen können. </br></br>Die Zusammenarbeit zwischen Organisationen, die bereits ein Microsoft 365- oder Azure AD-Verzeichnis haben, wird automatisch unterstützt. </br></br>Für Organisationen ohne Microsoft 365- oder Azure AD-Verzeichnis können sich Benutzer für das kostenlose [RMS for Individuals](rms-for-individuals.md)-Abonnement anmelden oder ein Microsoft-Konto für [unterstützte Anwendungen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) verwenden.       |
 | | |
 
 > [!TIP]
-> Wenn Sie geschützte Dateien anfügen, anstatt eine vollständige e-Mail-Nachricht zu schützen, können Sie den e-Mail-Text nicht verschlüsseln. 
+> Wenn Sie geschützte Dateien anfügen, anstatt die gesamte E-Mail-Nachricht zu schützen, können Sie den E-Mail-Text unverschlüsselt lassen. 
 >
-> Beispielsweise können Sie Anweisungen für die erstmalige Verwendung einschließen, wenn die e-Mail außerhalb Ihrer Organisation gesendet wird. Wenn Sie eine geschützte Datei anfügen, können die grundlegenden Anweisungen von allen Benutzern gelesen werden, aber nur autorisierte Benutzer können das Dokument öffnen, auch wenn die e-Mail oder das Dokument an andere Personen weitergeleitet wird.
+> Sie können z. B. Anweisungen für die erstmalige Verwendung hinzufügen, wenn Sie die E-Mail extern versenden. Wenn Sie eine geschützte Datei anfügen, kann jeder die grundlegenden Anweisungen lesen, aber nur autorisierte Benutzer können das Dokument öffnen, auch wenn die E-Mail oder das Dokument an andere Personen weitergeleitet wird.
 
-### <a name="platform-support-features"></a>Platt Form Unterstützungs Features
+### <a name="platform-support-features"></a>Funktionen für die Plattformunterstützung
 
-Azure RMS unterstützt eine breite Palette von Plattformen und Anwendungen, einschließlich:
+Azure RMS unterstützt viele unterschiedliche Plattformen und Anwendungen wie die Folgenden:
 
 |Funktion  |BESCHREIBUNG  |
 |---------|---------|
-|**Häufig verwendete Geräte** </br>nicht nur Windows-Computer     | [Client Geräte](requirements.md#client-devices) umfassen Folgendes: </br></br>- Windows-Computer und -Telefone </br>- Mac-Computer </br>- iOS-Tablets und -Telefone </br>- Android-Tablets und -Telefone        |
-|**Lokale Dienste**     | Wenn Sie den [RMS-Connector](deploy-rms-connector.md)bereitstellen, können Sie nicht nur [nahtlos mit Office 365](office-apps-services-support.md)arbeiten, sondern auch Azure Rights Management mit den folgenden lokalen Diensten verwenden: </br></br>- Exchange Server </br>- SharePoint Server </br>– Windows Server mit Dateiklassifizierungsinfrastruktur        |
-|**Anwendungs Erweiterbarkeit**     |Azure Rights Management verfügt über eine enge Integration in Microsoft Office Anwendungen und Dienste und erweitert die Unterstützung für andere Anwendungen mithilfe des [Azure Information Protection-Clients](./rms-client/aip-client.md ). </br></br>Mit den [Azure Information Protection sdert](./develop/developers-guide.md) verfügen Ihre internen Entwickler und Softwarehersteller über APIs zum Schreiben von benutzerdefinierten Anwendungen, die Azure Information Protection unterstützen. </br></br>Weitere Informationen finden Sie unter [Sonstige Anwendungen, die die Rights Management-APIs unterstützen](api-support.md).         |
+|**Häufig verwendete Geräte** </br>nicht nur Windows-Computer     | Zu den [Clientgeräten](requirements.md#client-devices) gehören: </br></br>- Windows-Computer und -Telefone </br>- Mac-Computer </br>- iOS-Tablets und -Telefone </br>- Android-Tablets und -Telefone        |
+|**Lokale Dienste**     | Azure RMS arbeitet [nahtlos mit Office 365](office-apps-services-support.md) zusammen. Außerdem lässt sich Azure Rights Management mit den folgenden lokalen Diensten verwenden, wenn Sie den [RMS-Connector](deploy-rms-connector.md) bereitstellen: </br></br>- Exchange Server </br>- SharePoint Server </br>– Windows Server mit Dateiklassifizierungsinfrastruktur        |
+|**Anwendungserweiterbarkeit**     |Azure Rights Management ist eng auf Microsoft Office-Anwendungen und -Dienste abgestimmt und ermöglicht durch Verwenden des [Azure Information Protection-Clients](./rms-client/aip-client.md ) erweiterte Unterstützung für andere Anwendungen. </br></br>Mit den [Azure Information Protection SDKs](./develop/developers-guide.md) erhalten Ihre internen Entwickler sowie Softwarehersteller APIs, mit denen sie angepasste Anwendungen schreiben können, die Azure Information Protection unterstützen. </br></br>Weitere Informationen finden Sie unter [Sonstige Anwendungen, die die Rights Management-APIs unterstützen](api-support.md).         |
 | | |
 
-### <a name="infrastructure-features"></a>Infrastruktur Features
+### <a name="infrastructure-features"></a>Infrastrukturfunktionen
 
-Azure RMS bietet die folgenden Features zur Unterstützung von IT-Abteilungen und Infrastruktur Organisationen:
+Azure RMS bietet die folgenden Features zur Unterstützung von IT-Abteilungen und Infrastrukturorganisationen:
 
-- **Erstellen Sie einfache und flexible Richtlinien**. [Angepasste Vorlagen](configure-policy-templates.md) für den Schutz bieten Administratoren eine schnelle und einfache Lösung für die Anwendung von Richtlinien, und Benutzer können die richtige Schutz Ebene für die einzelnen Dokumente anwenden und den Zugriff auf Personen in Ihrer Organisation einschränken. Beispiel:
+- **Erstellen einfacher und flexibler Richtlinien** . [Angepasste Vorlagen für den Schutz](configure-policy-templates.md) bieten schnelle und einfache Lösungen, mit denen Administratoren Richtlinien anwenden und Benutzer das richtige Maß an Schutz für jedes Dokument anwenden sowie den Zugriff auf Personen in der eigenen Organisation beschränken können. Beispiel:
 
-    - Wenn ein unternehmensweites Strategiepapier für alle Mitarbeiter freigegeben werden soll, wenden Sie eine schreibgeschützte Richtlinie auf alle internen Mitarbeiter an. 
-    - Bei einem sensitiven Dokument, z. b. einem Finanzbericht, beschränken Sie den Zugriff nur auf Führungskräfte.
+    - Soll ein unternehmensweites Strategiepapier für alle Mitarbeiter freigegeben werden, wenden Sie eine Schreibschutzrichtlinie für alle internen Mitarbeiter an. 
+    - Für ein Dokument mit sensibleren Daten, etwa einen Finanzbericht, beschränken Sie den Zugriff auf Führungskräfte.
 
-- **Einfache Aktivierung**. Bei neuen Abonnements erfolgt die Aktivierung automatisch. Für vorhandene Abonnements erfordert [das Aktivieren des Rights Management Dienstanbieter](activate-service.md) nur ein paar Mausklicks in Ihrem Verwaltungs Portal oder zwei PowerShell-Befehle.
+- **Einfache Aktivierung** . Bei neuen Abonnements erfolgt die Aktivierung automatisch. Bei vorhandenen Abonnement erfordert die [Aktivierung des Rights Management-Diensts](activate-service.md) nur ein paar Mausklicks in Ihrem Verwaltungsportal oder zwei PowerShell-Befehle.
 
-- **Überwachungs-und Überwachungsdienste**. [Überwachen und überwachen](log-analyze-usage.md) Sie die Nutzung ihrer geschützten Dateien, auch wenn diese Dateien die Grenzen Ihrer Organisation verlassen haben. 
+- **Überprüfungs- und Überwachungsdienste** . [Überprüfen und Überwachen Sie die Nutzung](log-analyze-usage.md) Ihrer geschützten Dateien selbst dann noch, wenn diese Dateien die Grenzen Ihrer Organisation verlassen haben. 
 
-    Wenn z. b. ein Mitarbeiter von "Azure von Azure" an einem gemeinsamen Projekt mit drei Personen von Fabrikam, *Inc. arbeitet*, sendet er möglicherweise seine Fabrikam-Partner an ein Dokument, das geschützt und auf schreibgeschützt beschränkt ist. 
+    Wenn beispielsweise ein Mitarbeiter von Contoso, Ltd. an einem gemeinsamen Projekt mit drei Personen von Fabrikam, Inc. arbeitet, könnte er seinen Fabrikam-Partnern ein Dokument zusenden, das geschützt ist und beschränkten ( *schreibgeschützten* ) Zugriff hat. 
 
     Azure RMS-Überprüfung kann die folgenden Informationen bereitstellen:
 
-    - Gibt an, ob die Fabrikam-Partner das Dokument geöffnet haben, und wann. 
-    - Ob andere Personen, die nicht angegeben wurden, versucht haben, das Dokument zu öffnen, und nicht. Dies kann vorkommen, wenn die e-Mail weitergeleitet oder an einem freigegebenen Speicherort gespeichert wurde.
+    - Ob und wann die Fabrikam-Partner das Dokument geöffnet haben. 
+    - Ob andere Personen, die nicht angegeben wurden, versucht haben, das Dokument zu öffnen, und es nicht geschafft haben. Dies kann passieren, wenn die E-Mail an einen gemeinsamen Speicherort weitergeleitet oder dort gespeichert wurde.
 
     Darüber hinaus können Benutzer und Administratoren über die [Website zur Dokumentenverfolgung](./rms-client/client-track-revoke.md) den Zugriff auf geschützte Dokumente nachverfolgen und bei Bedarf widerrufen.
 
-- **Möglichkeit der Skalierung in Ihrer Organisation**. Da Azure-Rights Management als clouddienst mit der Azure-Elastizität zum zentralen hoch-und Herunterskalieren ausgeführt wird, müssen Sie keine zusätzlichen lokalen Server bereitstellen oder bereitstellen.
+- **Fähigkeit, über die gesamte Organisation zu skalieren** . Weil Azure Rights Management als Clouddienst mit der Flexibilität von Azure für zentrales Hoch- und Herunterskalieren ausgeführt wird, müssen Sie keine zusätzlichen lokalen Server bereitstellen.
 
-- **Behalten Sie die Kontrolle über die Daten**. Organisationen können von IT-Steuerungsfunktionen profitieren, wie z. b.:
+- **Behalten der Kontrolle über die Daten** . Organisationen können IT-Steuerungsfunktionen nutzen, wie z. B.:
 
     |Funktion  |BESCHREIBUNG  |
     |---------|---------|
-    |Mandanten Schlüsselverwaltung    |   Verwalten Sie Ihren eigenen Mandanten Schlüssel mithilfe der Lösung "[Bring your own Key](plan-implement-tenant-key.md)" (Byok), indem Sie Ihren Mandanten Schlüssel in Hardware Sicherheits Modulen (HSMs) speichern.      |
-    |Überwachung und Verwendungs Protokollierung    |   Verwenden Sie die Funktionen für die Überwachung und [Verwendungs Protokollierung](log-analyze-usage.md) , um geschäftliche Einblicke zu analysieren, auf Missbrauch zu überwachen und forensische Analysen für Informationsverluste auszuführen.      |
-    |Zugriffs Delegierung     |  Delegieren des Zugriffs mit der Administrator [Funktion](configure-super-users.md), um sicherzustellen, dass er immer auf geschützte Inhalte zugreifen kann, auch wenn ein Dokument von einem Mitarbeiter geschützt wurde, der die Organisation verlässt. </br> Bei Peer-zu-Peer-Verschlüsselungslösungen besteht dagegen das Risiko, dass Zugriff auf Unternehmensdaten verloren geht.       |
-    |Active Directory-Synchronisierung     |   Synchronisieren Sie [nur die Verzeichnis Attribute](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms) , die Azure RMS zur Unterstützung einer allgemeinen Identität für Ihre lokalen Active Directory Konten benötigt, indem Sie [eine Hybrid-Identitäts Lösung](/azure/active-directory/hybrid/)wie Azure AD Connect verwenden.      |
-    |Einmaliges Anmelden     | Aktivieren Sie das einmalige Anmelden, ohne Kenn Wörter in der Cloud zu replizieren, indem Sie AD FS verwenden.        |
-    |Migration von AD RMS |Wenn Sie Active Directory Rights Management Services (AD RMS) bereitgestellt haben, [Migrieren Sie zum Azure-Rights Management Dienst](migrate-from-ad-rms-to-azure-rms.md) , ohne den Zugriff auf Daten zu verlieren, die zuvor durch AD RMS geschützt waren. |
+    |Mandantenschlüsselverwaltung    |   Verwalten Sie Ihren eigenen Mandantenschlüssel mithilfe der BYOK-Lösung ([Bring Your Own Key](plan-implement-tenant-key.md)), und speichern Sie Ihren Mandantenschlüssel in Hardwaresicherheitsmodulen (HSM).      |
+    |Überwachung und Verwendungsprotokollierung    |   Verwenden Sie die Features für Überwachung und [Verwendungsprotokollierung](log-analyze-usage.md), um Geschäftsabläufe zu analysieren, Missbrauch zu erkennen und forensische Analysen für Informationslecks durchführen zu können.      |
+    |Zugriffsdelegierung     |  Delegieren Sie den Zugriff mithilfe des [Administratorfeatures](configure-super-users.md), damit die IT-Abteilung stets auf geschützte Inhalte zugreifen kann, selbst wenn ein Dokument von einem Mitarbeiter geschützt wurde, der die Organisation bereits verlassen hat. </br> Bei Peer-zu-Peer-Verschlüsselungslösungen besteht dagegen das Risiko, dass Zugriff auf Unternehmensdaten verloren geht.       |
+    |Active Directory-Synchronisierung     |   Synchronisieren Sie [nur der Verzeichnisattribute, die Azure RMS benötigt](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#azure-rms), um eine allgemeine Identität für Ihre lokalen Active Directory-Konten zu unterstützen, indem eine [hybride Identitätslösung](/azure/active-directory/hybrid/) wie Azure AD Connect verwendet wird.      |
+    |Einmaliges Anmelden     | Aktivieren Sie einmaliges Anmelden, ohne Kennwörter in die Cloud zu replizieren, mithilfe von AD FS.        |
+    |Migration von AD RMS |Wenn Sie Active Directory Rights Management Services (AD RMS) bereitgestellt haben, können Sie darüber hinaus [zum Azure Rights Management-Dienst migrieren](migrate-from-ad-rms-to-azure-rms.md), ohne den Zugriff auf Daten zu verlieren, die zuvor durch AD RMS geschützt waren. |
     | | |
 
 
 > [!NOTE]
-> Organisationen haben immer die Möglichkeit, den Azure Rights Management-Dienst zu verwenden, ohne den Zugriff auf Inhalte zu verlieren, die zuvor durch Azure Rights Management geschützt waren. 
+> Organisationen haben immer die Möglichkeit, den Azure Rights Management-Dienst nicht mehr zu verwenden, ohne den Zugriff auf Inhalte zu verlieren, die zuvor von Azure Rights Management geschützt wurden. 
 > 
-> Weitere Informationen finden Sie unter Außerbetriebsetzen [und Deaktivieren von Azure-Rights Management](decommission-deactivate.md). 
+> Weitere Informationen finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md). 
 > 
 
 
 
 ## <a name="security-compliance-and-regulatory-requirements"></a>Sicherheits-, Konformitäts- und gesetzliche Anforderungen
-Azure Rights Management unterstützt die folgenden Sicherheits-, Konformitäts-und gesetzlichen Anforderungen:
+Azure Rights Management unterstützt die folgenden Sicherheits-, Compliance- und gesetzlichen Anforderungen:
 
-- **Verwendung von Industriestandard-Kryptografie und unterstützt die Verwendung von fps 140-2.** Weitere Informationen finden Sie unter [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+- **Verwendung von Kryptografie gemäß Industriestandard und Unterstützung von FIPS 140-2.** Weitere Informationen finden Sie unter [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
-- **Unterstützung für das HSM (Hardware Security Module) der nCipher-Hardware** , um ihren Mandanten Schlüssel in Microsoft Azure Rechenzentren zu speichern. 
+- **Unterstützung für nCipher nShield-Hardwaresicherheitsmodule (HSM)** , damit Sie Ihren Mandantenschlüssel in Microsoft Azure-Rechenzentren speichern können. 
 
     Azure Rights Management verwendet getrennte Security Worlds für seine Rechenzentren in Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien, sodass Ihre Schlüssel nur in Ihrer Region verwendet werden können.
 
 - **Zertifizierung für die folgenden Standards:**
 
-    -   ISO/IEC 27001:2013 (./includes [ISO/IEC 27018](https://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
+    -   ISO/IEC 27001:2013 (./enthält [ISO/IEC 27018](https://azure.microsoft.com/blog/2015/02/16/azure-first-cloud-computing-platform-to-conform-to-isoiec-27018-only-international-set-of-privacy-controls-in-the-cloud/))
     -   SOC 2 SSAE 16/ISAE 3402 Attestations
     -   HIPAA BAA
     -   EU-Modellklauseln
     -   FedRAMP als Teil von Azure Active Directory in Office 365-Zertifizierung, ausgestellt von FedRAMP Agency Authority to Operate durch HHS
     -   PCI-DSS Level 1
 
-Weitere Informationen zu diesen externen Zertifizierungen finden Sie in der [Azure Trust Center](https://azure.microsoft.com/support/trust-center/compliance/).
+Weitere Informationen zu diesen externen Zertifizierungen finden Sie im [Azure Trust Center](https://azure.microsoft.com/support/trust-center/compliance/).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
