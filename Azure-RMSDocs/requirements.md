@@ -4,7 +4,7 @@ description: Ermitteln Sie die Voraussetzungen für die Bereitstellung von Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/29/2020
+ms.date: 10/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d24383a3ae5312d9c690fdac61b0cbdf52072163
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: edf42dc9d41aebe8f4cb21bbca624bd671b5eba4
+ms.sourcegitcommit: 22ac808221a66141406589a9d8d619bfee056cf0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178159"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92429194"
 ---
 # <a name="azure-information-protection-requirements"></a>Anforderungen an Azure Information Protection
 
@@ -114,13 +114,13 @@ Wenn Sie mit virtuellen Computern arbeiten, erkundigen Sie sich beim Softwareanb
 
 Ein Beispiel: In Citrix-Lösungen müssen Sie möglicherweise für Office, den Azure Information Protection-Client für einheitliche Bezeichnungen oder den Azure Information Protection-Client die [Citrix-API-Hooks deaktivieren](https://support.citrix.com/article/CTX107825). 
 
-Diese Anwendungen nutzen die folgenden Dateien: **winword.exe**, **excel.exe**, **outlook.exe**, **powerpnt.exe**, **msip.app.exe**, **msip.viewer.exe**
+Diese Anwendungen nutzen die folgenden Dateien: **winword.exe** , **excel.exe** , **outlook.exe** , **powerpnt.exe** , **msip.app.exe** , **msip.viewer.exe**
 
 ### <a name="server-support"></a>Serverunterstützung
 
 Unter jeder der aufgelisteten Serverversionen werden Azure Information Protection-Clients für Remotedesktopdienste unterstützt. 
 
-Wenn Sie bei Verwendung der Azure Information Protection-Clients mit Remotedesktopdiensten Benutzerprofile löschen, löschen Sie nicht den Ordner **%Appdata%\Microsoft\Protect**.
+Wenn Sie bei Verwendung der Azure Information Protection-Clients mit Remotedesktopdiensten Benutzerprofile löschen, löschen Sie nicht den Ordner **%Appdata%\Microsoft\Protect** .
 
 Server Core und Nano Server werden nicht unterstützt.
 
@@ -134,9 +134,9 @@ Für jeden Azure Information Protection-Client gelten zusätzliche Voraussetzung
 
 ## <a name="applications"></a>Anwendungen
 
-Die Azure Information Protection-Clients können Dokumente und E-Mails bezeichnen und schützen. Dafür werden die Microsoft-Anwendungen **Word**, **Excel**, **PowerPoint** und **Outlook** aus einer der folgenden Office-Editionen verwendet:
+Die Azure Information Protection-Clients können Dokumente und E-Mails bezeichnen und schützen. Dafür werden die Microsoft-Anwendungen **Word** , **Excel** , **PowerPoint** und **Outlook** aus einer der folgenden Office-Editionen verwendet:
 
-- **Office-Apps mit Mindestversion 1805**, Build 9330.2078 von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium. 
+- **Office-Apps mit Mindestversion 1805** , Build 9330.2078 von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium. 
 
     Diese Edition wird nur unterstützt, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Microsoft 365 auch als „Azure Information Protection“ bezeichnet) zugewiesen wurde.
 
@@ -168,12 +168,18 @@ Wenn Sie eine Firewall oder ähnliche Interventionsnetzwerkgeräte verwenden, di
 
 Für Azure Information Protection gelten die folgenden zusätzlichen Voraussetzungen:
 
-- **Client für einheitliche Bezeichnungen**: Zum Herunterladen von Bezeichnungen und Bezeichnungsrichtlinien lassen Sie die folgende URL über HTTPS zu: * **.protection.outlook.com**.
+- **Client für einheitliche Bezeichnungen** : Zum Herunterladen von Bezeichnungen und Bezeichnungsrichtlinien lassen Sie die folgende URL über HTTPS zu: * *_.protection.outlook.com_* .
 
-- **Webproxys**: Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
+- **Webproxys** : Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
 
+    Um bei Verwendung eines Proxys zum Abrufen eines Tokens **Proxy.pac** -Dateien zu unterstützen, fügen Sie den folgenden neuen Registrierungsschlüssel hinzu:
+
+    - **Pfad** : `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
+    - **Schlüssel** : `UseDefaultCredentialsInProxy`
+    - **Typ** : `DWORD`
+    - **Wert** : `1`
     
-- **TLS-Verbindungen zwischen Client und Dienst**. Beenden Sie keine TLS-Client-zu-Dienst-Verbindungen (z. B. zur Durchführung von Überprüfungen auf Paketebene) mit der URL **aadrm.com**. Ansonsten wird die Anheftung von Zertifikaten beendet, die von RMS-Clients für von Microsoft verwaltete Zertifizierungsstellen verwendet wird, um die Kommunikation mit dem Azure Rights Management-Dienst zu schützen.
+- **TLS-Verbindungen zwischen Client und Dienst** . Beenden Sie keine TLS-Client-zu-Dienst-Verbindungen (z. B. zur Durchführung von Überprüfungen auf Paketebene) mit der URL **aadrm.com** . Ansonsten wird die Anheftung von Zertifikaten beendet, die von RMS-Clients für von Microsoft verwaltete Zertifizierungsstellen verwendet wird, um die Kommunikation mit dem Azure Rights Management-Dienst zu schützen.
      
     Wenn Sie ermitteln möchten, ob Ihre Clientverbindung beendet wird, bevor sie den Azure Rights Management-Dienst erreicht, verwenden Sie die folgenden PowerShell-Befehle:
 
