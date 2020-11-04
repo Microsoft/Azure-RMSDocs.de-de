@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
-ms.openlocfilehash: 406068f5770f489c66963fc34a462ec7e205765b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: b0aeeabeabf6dc4c3bba39ea2f58374b98bac491
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91108948"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044378"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C#)
 
@@ -112,7 +112,7 @@ Erstellen Sie nun eine Implementierung für einen Zustimmungsdelegaten, indem Si
 
 1. Fügen Sie mit der gleichen Visual Studio-Funktion „Klasse hinzufügen“, die wir vorher verwendet haben, eine weitere Klasse zu Ihrem Projekt hinzu. Geben Sie dieses Mal „ConsentDelegateImplementation“ in das Feld **Klassenname** ein.
 
-2. Aktualisieren Sie jetzt **ConsentDelegateImpl.cs**, damit Ihre neue Zustimmungsdelegatklasse implementiert wird: Fügen Sie die using-Anweisung für `Microsoft.InformationProtection` hinzu, und legen Sie die Klasse darauf fest, `IConsentDelegate` zu erben.
+2. Aktualisieren Sie jetzt **ConsentDelegateImpl.cs** , damit Ihre neue Zustimmungsdelegatklasse implementiert wird: Fügen Sie die using-Anweisung für `Microsoft.InformationProtection` hinzu, und legen Sie die Klasse darauf fest, `IConsentDelegate` zu erben.
 
      ```csharp
      class ConsentDelegateImplementation : IConsentDelegate
@@ -211,7 +211,7 @@ namespace mip_sdk_dotnet_quickstart
                var fileProfile = Task.Run(async () => await MIP.LoadFileProfileAsync(profileSettings)).Result;
 
                // Create a FileEngineSettings object, then use that to add an engine to the profile.
-               var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate "", "en-US");
+               var engineSettings = new FileEngineSettings("user1@tenant.com", authDelegate, "", "en-US");
                engineSettings.Identity = new Identity("user1@tenant.com");
                var fileEngine = Task.Run(async () => await fileProfile.AddEngineAsync(engineSettings)).Result;
 
