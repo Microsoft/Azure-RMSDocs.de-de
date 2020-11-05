@@ -4,7 +4,7 @@ description: Identifizieren Sie die Anwendungen und Lösungen mit nativer Unters
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3115cbbce67f3997ad12f1fdb8a4ddd1f5ed2ca6
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
+ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178190"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93245098"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -47,8 +47,8 @@ Diese Anwendungen und Lösungen werden „RMS-aktiviert“ genannt. Sie bieten �
 
 |type  |Unterstützte Anwendungen   |
 |---------|---------|
-|**Word, Excel, PowerPoint**    |  – Microsoft 365 Apps<br />– Office 2019 für Mac<br />– Office 2016 für Mac<br />- [Office für das Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Webbrowser](#web-browser-support)    |
-|[**Email**](#viewing-protected-content-in-email-clients)   |   – Outlook 2019 für Mac<br />– Outlook 2016 für Mac<br />- [Webbrowser](#web-browser-support)     |
+|**Word, Excel, PowerPoint**    |  – Microsoft 365-Apps, Version 16.40 oder höher <br />– Office 2019 für Mac, Version 16.40 oder höher<br />– Office 2016 für Mac, Version 16.16.27 oder höher<br />- [Office für das Web](#viewing-protected-documents-in-office-for-the-web)<br />- [Webbrowser](#web-browser-support)    |
+|[**Email**](#viewing-protected-content-in-email-clients)   |   – Outlook 2019 für Mac, Version 16.40 oder höher<br />– Outlook 2016 für Mac, Version 16.16.27 oder höher<br />- [Webbrowser](#web-browser-support)     |
 |[**Weitere Dateitypen**](#supported-text-and-image-file-types)    | RMS-Freigabe-App (Anzeige von geschützten Texten, Abbildungen und generisch geschützten Dateien)   |
 | | |
 
@@ -112,7 +112,7 @@ Wenn jedoch nur die Anlage, nicht aber die E-Mail-Nachricht selbst geschützt is
 
 ### <a name="supported-text-and-image-file-types"></a>Unterstützte Text-und Bilddateitypen
 
-Andere Dateitypen als Office-Dateien und E-Mail-Nachrichten umfassen Text- und Bilddateitypen mit Erweiterungen wie **.txt,** **.xml,** **.jpg,** und **.jpeg** . 
+Andere Dateitypen als Office-Dateien und E-Mail-Nachrichten umfassen Text- und Bilddateitypen mit Erweiterungen wie **.txt,** **.xml,** **.jpg,** und **.jpeg**. 
 
 Die Dateierweiterung dieser Dateien ändert sich, nachdem sie durch Rights Management nativ geschützt wurden und dann schreibgeschützt sind. 
 
