@@ -12,12 +12,12 @@ metadata:
   ms.author: mlottner
   manager: rkarlin
   ms.date: 04/02/2019
-  ms.openlocfilehash: 63026df891e74f05bf8bcf570f852840aa991cce
-  ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+  ms.openlocfilehash: a2f73c9aa0207af5b7ba77b3b53c271eb8722cb2
+  ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/07/2020
-  ms.locfileid: "86048424"
+  ms.lasthandoff: 11/09/2020
+  ms.locfileid: "94379162"
 landingContent:
 - title: Informationen zu Azure Information Protection
   linkLists:
@@ -35,22 +35,22 @@ landingContent:
       url: requirements.md
   - linkListType: quickstart
     links:
-    - text: Erste Schritte im Azure-Portal
-      url: quickstart-viewpolicy.md
-    - text: Suchen nach vertraulichen Informationen
-      url: quickstart-findsensitiveinfo.md
-  - linkListType: deploy
+    - text: Bereitstellen des Clients für einheitliche Bezeichnungen
+      url: quickstart-deploy-client.md
+  - linkListType: tutorial
     links:
-    - text: Roadmap für die Bereitstellung
-      url: deployment-roadmap.md
-    - text: Häufige Szenarien
-      url: how-to-guides.md
+    - text: Installieren der Überprüfung
+      url: tutorial-install-scanner.md
+    - text: Überprüfen von Netzwerken und Inhalten
+      url: tutorial-scan-networks-and-content.md
+    - text: Verhindern von übermäßiger Freigabe
+      url: tutorial-preventing-oversharing.md
 - title: Immer auf dem Laufenden bleiben
   linkLists:
   - linkListType: whats-new
     links:
     - text: Die Top 5 der empfohlenen Ignite-Sessions
-      url: what-is-information-protection.md#microsoft-ignite
+      url: what-is-information-protection.md#additional-resources
     - text: Neueste Version des Clients für einheitliche Bezeichnungen
       url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: Klassifizieren und Schützen von Daten in lokalen Datenspeichern
@@ -63,10 +63,10 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 'Klassischer Client: Erweiterte Einstellungen'
-      url: ./rms-client/client-admin-guide-customizations.md
     - text: 'Client für einheitliche Bezeichnungen: Erweiterte Einstellungen'
       url: ./rms-client/clientv2-admin-guide-customizations.md
+    - text: 'Klassischer Client: Erweiterte Einstellungen'
+      url: ./rms-client/client-admin-guide-customizations.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -91,8 +91,8 @@ landingContent:
       url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
   - linkListType: how-to-guide
     links:
-    - text: Migrieren von Azure Information Protection-Bezeichnungen
-      url: configure-policy-migrate-labels.md
+    - text: Migrieren zum Client für einheitliche Bezeichnungen
+      url: tutorial-migrating-to-ul.md
 - title: Überwachen der Nutzung von Bezeichnungen und Ermitteln vertraulicher Informationen
   linkLists:
   - linkListType: how-to-guide

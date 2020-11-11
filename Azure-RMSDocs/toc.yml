@@ -4,8 +4,6 @@
   items:
     - name: Was ist Azure Information Protection?
       href: what-is-information-protection.md
-    - name: Rights Management für Azure Information Protection
-      href: what-is-azure-rms.md
     - name: AIP-Anforderungen
       items:
         - name: Übersicht
@@ -19,24 +17,24 @@
 - name: Schnellstarts
   expanded: true
   items:
-    - name: Erste Schritte im Azure-Portal
-      href: quickstart-viewpolicy.md
-    - name: Ermitteln vertraulicher Informationen
-      href: quickstart-findsensitiveinfo.md
-    - name: Konfigurieren einer Bezeichnung zum Schützen von E-Mails – klassischer Client
-      href: quickstart-label-dnf-protectedemail.md
-    - name: Erstellen einer neuen Bezeichnung für bestimmte Benutzer – klassischer Client
-      href: quickstart-label-specificusers.md
+    - name: Bereitstellen des Clients
+      href: quickstart-deploy-client.md
 - name: Tutorials
   items:
-    - name: Bearbeiten der Richtlinie und Erstellen einer neuen Bezeichnung – klassischer Client
-      href: infoprotect-quick-start-tutorial.md
-    - name: 'Konfigurieren von Richtlinieneinstellungen, die nahtlos funktionieren – klassischer Client'
-      href: infoprotect-settings-tutorial.md
-    - name: Konfigurieren von Clienteinstellungen zur Vermeidung übermäßiger Freigaben – klassischer Client
-      href: infoprotect-oversharing-tutorial.md
+    - name: Installieren der Überprüfung
+      href: tutorial-install-scanner.md
+    - name: Erkennen Ihrer sensiblen Inhalte
+      href: tutorial-scan-networks-and-content.md
+    - name: Verhindern übermäßiger Freigaben
+      href: tutorial-preventing-oversharing.md
+    - name: Migrieren vom klassischen Client zum Client für einheitliche Bezeichnungen
+      href: tutorial-migrating-to-ul.md
 - name: Konzepte
   items:
+    - name: Klassifizierung und Schutz für AIP
+      href: aip-classification-and-protection.md
+    - name: Rights Management für Azure Information Protection
+      href: what-is-azure-rms.md
     - name: Rights Management-Schutz
       items:
         - name: Funktionsweise des Rights Management-Schutzes
