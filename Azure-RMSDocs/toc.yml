@@ -81,6 +81,10 @@
               href: migrate-from-ad-rms-phase5.md
     - name: Azure Information Protection-Richtlinien
       href: overview-policy.md
+    - name: Sicherheit
+      items:
+        - name: Sicherheitsbaseline
+          href: security-baseline.md
 - name: Anleitungen
   items:
     - name: Schrittanleitungen für häufige Szenarios
