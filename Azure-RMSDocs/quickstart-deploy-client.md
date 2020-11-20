@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2d0723dcbc28ef5d9820c23f41c6d36e860303c5
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: 210e556a2ecaab2dec7eb46b4b3b9b3c2c968ea4
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94423430"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503399"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen
 
@@ -25,7 +25,7 @@ ms.locfileid: "94423430"
 
 Der Azure Information Protection-Client (AIP) für einheitliche Bezeichnungen gehört zur [Microsoft Information Protection](https://aka.ms/MIPdocs)-Lösung und erweitert die von Microsoft 365 bereitgestellten integrierten Funktionen für die Vertraulichkeitsbezeichnung. 
 
-Der Client bietet Endbenutzerunterstützung für die Bezeichnung und den Schutz im Datei-Explorer und in PowerShell. Außerdem können Administratoren Netzwerke und Inhaltsfreigaben auf vertrauliche Inhalte überprüfen. 
+Der Client bietet Endbenutzerunterstützung für Bezeichnung und Schutz in Office-Anwendungen sowie im Datei-Explorer und in PowerShell. Der mit dem Client für einheitliche Bezeichnungen bereitgestellte Scanner ermöglicht Administratoren die Überprüfung von Netzwerken und Freigaben auf vertrauliche Inhalte. 
 
 Für Organisationen ohne Informationsschutzplattform bietet der Client einen Viewer für Inhalte, die von anderen Organisationen mithilfe von Microsoft Information Protection geschützt werden.
 

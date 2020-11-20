@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 8d86d6f114bd1a0886883b9cda277ffd6ae9904b
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377212"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503416"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Tutorial: Verhindern übermäßiger Freigaben in Outlook mit Azure Information Protection (AIP)
 
@@ -40,7 +40,7 @@ Stellen Sie sicher, dass die folgenden Systemanforderungen erfüllt sind, bevor 
 |Voraussetzungen  |Beschreibung  |
 |---------|---------|
 |**Computeranforderungen**     | Stellen Sie sicher, dass Sie: <br /><br />- Über einen Windows-Computer mit einem installierten Azure Information Protection-Client für einheitliche Bezeichnungen verfügen. Weitere Informationen finden Sie unter [Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen](quickstart-deploy-client.md). <br /><br />- PowerShell installiert haben und dies als Administrator ausführen können. <br /><br />- Sich bei Outlook anmelden können. Sie werden Outlook während dieses Tutorials mehrere Male schließen und öffnen müssen.     |
-|**Azure Information Protection-Abonnement**     |   Sie benötigen ein [Azure-Abonnement](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7), das **Azure Information Protection-Plan 2** umfasst.      |
+|**Azure Information Protection-Abonnement**     |   Sie benötigen ein Azure-Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. <br /><br />Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
 |**Vertraulichkeitsbezeichnungen und eine Testrichtlinie**     |  Eine **allgemeine** Vertraulichkeitsbezeichnung, die in Ihrer Richtlinie konfiguriert ist. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Es wird empfohlen, eine Testrichtlinie für dieses Tutorial zu verwenden, damit Sie nicht Ihre Liverichtlinie beeinträchtigen. <br />Stellen Sie sicher, dass Sie den Namen Ihrer Richtlinie und die GUID für Ihre Bezeichnung **Allgemein** zur Hand haben.   |
 | | |
 

@@ -9,15 +9,15 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq1
+ms.custom: contperfq2
 search.appverid:
 - MET150
-ms.openlocfilehash: 5167d790c557661181b03f90055dfc75b0b1cf72
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 4a945f07532786c268886a44de23430be9a78700
+ms.sourcegitcommit: 822b23024cfd01ea41ac6ae9370489193782f078
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94379261"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634698"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -35,7 +35,7 @@ Microsoft Information Protection ist der allgemeine Stack zum Schutz von Informa
 
 ## <a name="aip-unified-labeling-client"></a>AIP-Client für einheitliche Bezeichnungen
 
-Der AIP-Client für einheitliche Bezeichnungen erweitert die Bezeichnungs-, Klassifizierungs- und Schutzfunktionen auf zusätzliche Dateitypen sowie auf den Datei-Explorer und PowerShell. 
+Der Azure Information Protection-Client für einheitliche Bezeichnungen erweitert die Bezeichnungs-, Klassifizierungs- und Schutzfunktionen auf zusätzliche Dateitypen sowie auf den Datei-Explorer und PowerShell. 
 
 Klicken Sie z. B. im Datei-Explorer mit der rechten Maustaste auf mindestens eine Datei, und wählen Sie **Klassifizieren und schützen** aus, um die AIP-Funktionen für die ausgewählten Dateien zu bearbeiten.
 
@@ -47,7 +47,7 @@ Laden Sie den Client von der [Microsoft Azure Information Protection-Downloadsei
     
 ## <a name="aip-on-premises-scanner"></a>Lokaler AIP-Scanner
 
-Der lokale Azure Information Protection-Scanner ermöglicht es Administratoren, ihre Netzwerke und Dateifreigaben nach vertraulichen Inhalten zu durchsuchen, die bezeichnet, klassifiziert und/oder geschützt werden müssen.
+Der lokale Azure Information Protection-Scanner ermöglicht es Administratoren, ihre Netzwerke und lokalen Dateirepositorys auf vertrauliche Inhalte zu überprüfen, die bezeichnet, klassifiziert und/oder geschützt werden müssen.
 
 Der lokale Scanner wird mit PowerShell-Cmdlets als Bestandteil des Clients für einheitliche Bezeichnungen installiert und kann mit PowerShell und über den Azure Information Protection-Bereich im Azure-Portal verwaltet werden.
 

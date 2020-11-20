@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: d7c70cd8b9f44bb4babd00deb4229dc5cab0d214
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377213"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503688"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen
 
@@ -33,10 +33,10 @@ Zum Installieren des Scanners für einheitliche Bezeichnungen und zum Durchführ
 
 |Anforderung  |Beschreibung  |
 |---------|---------|
-|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Azure-Abonnement, das [Azure Information Protection-Plan 1 oder -Plan 2](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. <br /><br />Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
+|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Azure-Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. <br /><br />Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
 |**Administratorzugriff auf das Azure-Portal** |Stellen Sie sicher, dass Sie sich mit einem der folgenden Administratorkonten beim [Azure-Portal](https://portal.azure.com/) anmelden können: <br /><br />- **Complianceadministrator**<br />- **Compliancedatenadministrator**<br />- **Sicherheitsadministrator**<br />- **Globaler Administrator** |
 |**Client installiert**    |   Installieren Sie den AIP-Client für einheitliche Bezeichnungen auf Ihrem Computer, um auf die Scannerinstallation zuzugreifen. <br /><br />Laden Sie die Datei **AzInfoProtection_UL.exe** aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) herunter, und führen Sie sie aus. <br /><br />Wenn die Installation beendet ist, werden Sie möglicherweise aufgefordert, den Computer oder die Office-Software neu zu starten. Starten Sie bei Bedarf neu, um fortzufahren. <br /><br />Weitere Informationen finden Sie unter [Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen](quickstart-deploy-client.md).|
-|**SQL Server**     | Damit der Scanner ausgeführt werden kann, muss SQL Server auf dem Scannercomputer installiert sein. <br /><br /> Wechseln Sie zur Installation zum [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express), und wählen Sie unter der Option, die Sie installieren möchten, **Jetzt herunterladen** aus. Wählen Sie im Installationsprogramm den Installationstyp **Standard** aus. <br /><br />**Hinweis**: Für Produktionsumgebungen wird die Installation von SQL Server Enterprise und für Testumgebungen nur Express empfohlen.       |
+|**SQL Server**     | Damit der Scanner ausgeführt werden kann, muss SQL Server auf dem Scannercomputer installiert sein. <br /><br /> Wechseln Sie zur Installation zur [Downloadseite für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads), und wählen Sie unter der Option, die Sie installieren möchten, **Jetzt herunterladen** aus. Wählen Sie im Installationsprogramm den Installationstyp **Standard** aus. <br /><br />**Hinweis**: Für Produktionsumgebungen wird die Installation von SQL Server Enterprise und für Testumgebungen nur Express empfohlen.       |
 |**Azure Active Directory-Konto**     |  Wenn Sie mit einer standardmäßigen, mit der Cloud verbundenen Umgebung arbeiten, muss Ihr Domänendienstkonto, dass Sie für den Scanner verwenden möchten, mit [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) synchronisiert werden. Dies ist nicht erforderlich, wenn Sie offline arbeiten. <br /><br />Wenn Sie sich bezüglich des Kontos nicht sicher sind, wenden Sie sich an einen Ihrer Systemadministratoren, um den Synchronisierungsstatus zu überprüfen.   |
 |**Vertraulichkeitsbezeichnungen und eine veröffentlichte Richtlinie** |Sie müssen Vertraulichkeitsbezeichnungen erstellt und eine Richtlinie mit mindestens einer Bezeichnung für das Scannerdienstkonto im Admin Center für die Bezeichnungen veröffentlicht haben. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
 | | |

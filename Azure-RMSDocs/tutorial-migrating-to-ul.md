@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e4c1ae01b35a19fc3cc84f207f4f17b510926931
-ms.sourcegitcommit: 2cf5002f34eee9929cdc22d6b6e64d5734dec816
+ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94377257"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503637"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zum Client für einheitliche Bezeichnungen
 
@@ -103,7 +103,7 @@ Fahren Sie mit dem Abschnitt [Kopieren von Richtlinien zur Plattform für einhei
 
 ### <a name="synchronizing-labeling-edits"></a>Synchronisieren von bearbeiteten Bezeichnungen
 
-Sobald Sie Ihre Bezeichnungen in Ihr Admin Center migriert haben, werden alle Änderungen, die Sie noch an den migrierten Bezeichnungen im Azure-Portal vornehmen, automatisch mit derselben Bezeichnung im Admin Center synchronisiert, um eine einheitliche Bezeichnung zu gewährleisten.
+Sobald Sie Ihre Bezeichnungen in Ihr Admin Center für Bezeichnungen migriert haben (z. B. Microsoft 365 Security Center, Microsoft 365 Compliance Center oder Microsoft 365 Security & Compliance Center), werden alle Änderungen, die Sie noch an den migrierten Bezeichnungen im Azure-Portal vornehmen, automatisch mit derselben Bezeichnung im Admin Center synchronisiert, um eine einheitliche Bezeichnung zu gewährleisten.
 
 Änderungen, die Sie an migrierten Bezeichnungen im Admin Center vornehmen, werden jedoch *nicht* mit dem Azure-Portal synchronisiert. Wenn Sie Änderungen im Admin Center vornehmen und diese im Azure-Portal aktualisiert werden müssen, kehren Sie zum Portal zurück, um das Update zu veröffentlichen.
 

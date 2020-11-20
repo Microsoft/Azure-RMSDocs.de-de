@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 82f8e2a9566379318f0a41ed625048a0036b0a62
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: b55178f6cd0bef2fa14eb7fcf9ecaefa3ea75f7a
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94423447"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503671"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Tutorial: Erkennen vertraulicher Inhalte mit dem Azure Information Protection-Scanner (AIP)
 
@@ -23,7 +23,7 @@ ms.locfileid: "94423447"
 >
 > *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Der Azure Information Protection-Client bietet einen lokalen Scanner mit dem Administratoren ihre Netzwerke und Dateifreigaben nach vertraulichen Inhalten durchsuchen können. 
+Der Azure Information Protection-Client bietet einen lokalen Scanner, mit dem Administratoren Netzwerke und lokale Dateirepositorys auf vertrauliche Inhalte überprüfen können. 
 
 In diesem Tutorial lernen Sie Folgendes:
 
@@ -44,11 +44,11 @@ In diesem Tutorial lernen Sie Folgendes:
 
 |Anforderung  |Beschreibung  |
 |---------|---------|
-|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Azure-Abonnement, das [Azure Information Protection-Plan 1 oder -Plan 2](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. <br /><br />Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
+|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Azure-Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. <br /><br />Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
 |**Administratorzugriff auf das Azure-Portal** |Stellen Sie sicher, dass Sie sich mit einem unterstützten Administratorkonto beim [Azure-Portal](https://portal.azure.com/) anmelden können, und aktivieren Sie den Schutz. Zu den unterstützten Administratorkonten gehören: <br /><br />- **Complianceadministrator**<br />- **Compliancedatenadministrator**<br />- **Sicherheitsadministrator**<br />- **Globaler Administrator**   |
 |**AIP-Client, Scanner und Netzwerkerkennungsdienst**   |   Um dieses Tutorial vollständig abzuschließen, müssen Sie den Azure Information Protection-Client für einheitliche Bezeichnungen mit dem Scanner sowie den Netzwerkerkennungsdienst (Public Preview) installiert haben. <br /><br />Weitere Informationen finden Sie in folgenden Quellen: <br /><br />- [Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen](quickstart-deploy-client.md) <br />- [Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen](tutorial-install-scanner.md) |
 |**Ein Auftrag zur Inhaltsüberprüfung** | Stellen Sie sicher, dass Sie über einen grundlegenden Auftrag zur Inhaltsüberprüfung verfügen, den Sie für Tests verwenden können. Möglicherweise haben Sie einen bei der [Installation des Scanners](tutorial-install-scanner.md) erstellt.<br /><br />Wenn Sie jetzt einen erstellen müssen, folgen Sie den Anweisungen in [Konfigurieren von Azure Information Protection im Azure-Portal](tutorial-install-scanner.md#configure-azure-information-protection-in-the-azure-portal). Sobald Sie über einen grundlegenden Auftrag zur Inhaltsüberprüfung verfügen, kehren Sie hierher zurück, um dieses Tutorial abzuschließen. |
-|**SQL Server**     | Damit der Scanner ausgeführt werden kann, muss SQL Server auf dem Scannercomputer installiert sein. <br /><br /> Wechseln Sie zur Installation zum [Microsoft Download Center](https://www.microsoft.com/sql-server/sql-server-editions-express), und wählen Sie unter der Option, die Sie installieren möchten, **Jetzt herunterladen** aus. Wählen Sie im Installationsprogramm den Installationstyp **Standard** aus. <br /><br />**Hinweis**: Für Produktionsumgebungen wird die Installation von SQL Server Enterprise und für Testzwecke nur Express empfohlen.    |
+|**SQL Server**     | Damit der Scanner ausgeführt werden kann, muss SQL Server auf dem Scannercomputer installiert sein. <br /><br /> Wechseln Sie zur Installation zur [Downloadseite für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads), und wählen Sie unter der Option, die Sie installieren möchten, **Jetzt herunterladen** aus. Wählen Sie im Installationsprogramm den Installationstyp **Standard** aus. <br /><br />**Hinweis**: Für Produktionsumgebungen wird die Installation von SQL Server Enterprise und für Testzwecke nur Express empfohlen.    |
 |**Azure Active Directory-Konto**     |  Wenn Sie mit einer standardmäßigen, mit der Cloud verbundenen Umgebung arbeiten, muss Ihr Domänenkonto mit [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) synchronisiert werden. Dies ist nicht erforderlich, wenn Sie offline arbeiten. <br /><br />Wenn Sie sich bezüglich des Kontos nicht sicher sind, wenden Sie sich an einen Ihrer Systemadministratoren, um den Synchronisierungsstatus zu überprüfen. Weitere Informationen finden Sie unter [Bereitstellen der Überprüfung mit alternativen Konfigurationen](deploy-aip-scanner-prereqs.md#deploying-the-scanner-with-alternative-configurations).  |
 |**Vertraulichkeitsbezeichnungen und eine veröffentlichte Richtlinie** |Sie müssen Vertraulichkeitsbezeichnungen erstellt und eine Richtlinie mit mindestens einer Bezeichnung für das Scannerdienstkonto im Admin Center für die Bezeichnungen veröffentlicht haben. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
 | | | 

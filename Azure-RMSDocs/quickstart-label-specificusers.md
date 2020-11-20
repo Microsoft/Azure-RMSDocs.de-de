@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f947edadde9b4dfecb91adf9bcb8fefe168bf38b
-ms.sourcegitcommit: 16d2c7477b96c5e8f6e4328a61fe1dc3d12c878d
+ms.openlocfilehash: d452f2c6c1d58af8f352664e087514f798bc1b5b
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86927834"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503569"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer
 
@@ -38,7 +38,7 @@ Voraussetzungen für diesen Schnellstart:
 
 |Anforderung  |Beschreibung  |
 |---------|---------|
-|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Abonnement, das [**Azure Information Protection-Plan 1 oder -Plan 2**](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. </br></br>Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
+|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. </br></br>Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
 |**AIP zum Azure-Portal hinzugefügt**    |  Sie haben den Azure Information Protection-Bereich zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist. </br></br>Weitere Informationen finden Sie unter [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md).       |
 |**Eine für E-Mails aktivierte Gruppe in Azure AD**     | Sie benötigen eine für E-Mails aktivierte Gruppe in Azure AD mit den Benutzern, die die neue Bezeichnung sehen und anwenden können. </br></br>Wenn keine geeignete Gruppe vorhanden ist, erstellen Sie eine mit dem Namen **Vertriebsteam** und fügen mindestens einen Benutzer hinzu. |
 |**Klassischer Client installiert**    |   Damit Sie die neue Bezeichnung testen können, muss der klassische Client auf Ihrem Computer installiert sein. </br></br>Der klassische Azure Information Protection-Client gilt ab März 2021 als veraltet. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.  |

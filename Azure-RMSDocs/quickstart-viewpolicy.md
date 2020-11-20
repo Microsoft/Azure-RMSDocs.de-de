@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 29c79c49de5d28c82281614846f5938ecbf40f89
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: b0128abb8d75418596459ac142a49dbbfa06b646
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91587897"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503620"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -33,7 +33,7 @@ Für die Durchführung dieses Schnellstarts benötigen Sie Folgendes:
 
 - Zugriff auf Ihr Konto im [**Azure-Portal**](https://portal.azure.com/).
 
-- Ein Abonnement, das [**Azure Information Protection-Plan 1 oder -Plan 2**](https://azure.microsoft.com/pricing/details/information-protection/) beinhaltet.
+- Ein Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst.
 
     Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
@@ -41,7 +41,7 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
 
 ## <a name="add-azure-information-protection-to-the-azure-portal"></a>Hinzufügen von Azure Information Protection zum Azure-Portal
 
-Selbst wenn Sie über ein Abonnement mit Azure Information Protection-Plan 1 oder -Plan 2 verfügen, ist AIP nicht automatisch im Azure-Portal verfügbar.
+Auch wenn Sie über ein Abonnement verfügen, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst, ist das Feature nicht automatisch im Azure-Portal verfügbar.
 
 Führen Sie die folgenden Schritte aus, um AIP zum Azure-Portal hinzuzufügen:
 
@@ -64,7 +64,7 @@ Der Schutzdienst ist jetzt für neue Kunden automatisch aktiviert. Überprüfen 
 
 1. Überprüfen Sie, ob der Schutz für Ihren Mandanten aktiviert ist. Beispiel:
 
-    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="Hinzufügen von Azure Information Protection zum Azure-Portal":::
+    :::image type="content" source="media/qs-tutor/confirm-activation.PNG" alt-text="AIP-Aktivierung bestätigen":::
 
     Wenn der Schutz zu irgendeinem Zeitpunkt nicht aktiviert ist und Sie ihn aktivieren müssen, wählen Sie **Aktivieren** ![AIP aktivieren](media/qs-tutor/activate.png "AIP aktivieren") aus. Wenn die Aktivierung abgeschlossen ist, zeigt die Informationsleiste **Activation finished successfully** (Aktivierung erfolgreich) an.
 
@@ -76,7 +76,7 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
 
     Möglicherweise haben Sie schon einige Standardbezeichnungen erstellt. Die folgende Abbildung zeigt die Bezeichnungen, die bei Azure Information Protection standardmäßig erstellt werden:
 
-    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Hinzufügen von Azure Information Protection zum Azure-Portal":::
+    :::image type="content" source="media/info-protect-defaultlabels.png" alt-text="Azure Information Protection – Standardbezeichnungen":::
 
     **Wenn keine Standardbezeichnungen oder sonstigen Bezeichnungen angezeigt werden, gehen Sie folgendermaßen vor**:
 
@@ -139,7 +139,7 @@ So zeigen Sie die Standardrichtlinieneinstellungen für Azure Information Protec
 
 1. Die Richtlinieneinstellungen werden nach den Bezeichnungen angezeigt, im Abschnitt **Einstellungen konfigurieren, die für Information Protection-Endbenutzer angezeigt und angewendet werden**. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
 
-    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Hinzufügen von Azure Information Protection zum Azure-Portal":::
+    :::image type="content" source="media/defaultsettings-aip.png" alt-text="Globale Richtlinieneinstellungen für Azure Information Protection":::
 
 1. Sie können jetzt alle geöffneten Bereiche im Portal schließen.
 

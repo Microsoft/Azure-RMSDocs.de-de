@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 4d81f1406f1894acf6c820693e80d00dca1662f4
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: dbadf410696d6d712be12d9df6d91aaec9e32c48
+ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428451"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94503586"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
@@ -44,7 +44,7 @@ Voraussetzungen für diesen Schnellstart:
 
 |Anforderung  |Beschreibung  |
 |---------|---------|
-|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Abonnement, das [**Azure Information Protection-Plan 1 oder -Plan 2**](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. </br></br>Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
+|**Ein unterstützendes Abonnement**     |  Sie benötigen ein Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. </br></br>Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
 |**AIP zum Azure-Portal hinzugefügt**    |  Sie haben den Azure Information Protection-Bereich zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist. </br></br>Weitere Informationen finden Sie unter [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md).       |
 |**Eine vorhandene Azure Information Protection-Bezeichnung, die konfiguriert werden soll**     | Verwenden Sie eine der Standardbezeichnungen oder eine von Ihnen erstellte Bezeichnung. Weitere Informationen finden Sie unter [Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer](quickstart-label-specificusers.md). |
 |**Klassischer Client installiert**    |   Damit Sie die neue Bezeichnung testen können, muss der klassische Client auf Ihrem Computer installiert sein. </br></br>Der klassische Azure Information Protection-Client gilt ab März 2021 als veraltet. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.  |
