@@ -4,7 +4,7 @@ description: Ermitteln Sie die Voraussetzungen für die Bereitstellung von Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5e52571568a54cf015269fde76603e334f0bc7b6
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 3d90fdf263c15f80e23229bba427cb8d2b68f74e
+ms.sourcegitcommit: 867a8b3d5e90ab21384b1b2322a0c5a7b63b25bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503552"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95417301"
 ---
 # <a name="azure-information-protection-requirements"></a>Anforderungen an Azure Information Protection
 
@@ -219,13 +219,14 @@ In anderen, nicht migrationsbezogenen Szenarien, in denen beide Dienste in ein u
 
 ### <a name="service-tags"></a>Diensttags
 
-Stellen Sie sicher, dass Sie für die folgenden Diensttags den Zugriff auf alle Ports zulassen:
+Wenn Sie einen Azure-Endpunkt und eine NSG verwenden, stellen Sie sicher, dass Sie für die folgenden Diensttags den Zugriff auf alle Ports zulassen:
 
 - **AzureInformationProtection**
 - **AzureActiveDirectory**
 - **AzureFrontDoor.Frontend**
 
-Der Azure Information Protection-Dienst benötigt zwei bestimmte IP-Adressen:
+Außerdem benötigt der Azure Information Protection-Dienst in diesem Fall zwei bestimmte IP-Adressen:
+
  - **13.107.6.181** 
  - **13.107.9.181**
  - **Port 443** für HTTPS-Datenverkehr
