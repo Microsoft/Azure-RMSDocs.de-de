@@ -1,10 +1,10 @@
 ---
 title: Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mit Azure Information Protection
 description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mit Azure Information Protection geschützt werden
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 61567869b889ba72c61e736804c313fd4e0bfbb0
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483387"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568561"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -37,7 +37,7 @@ Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Be
 
 - **Für Benutzer ohne Azure Active Directory-Konto:** Geben Sie eine E-Mail-Adresse an, die mit einem Microsoft-Konto verwendet werden wird. Dieses Konto kann bereits vorhanden sein. Alternativ können es Benutzer dann erstellen, wenn sie das geschützte Dokument öffnen. 
     
-    Um Dokumente mit einem Microsoft-Konto zu öffnen, müssen Benutzer Office 365- Apps (Klick-und-Los) verwenden. In anderen Office-Editionen und -Versionen wird das Öffnen von mit Office geschützten Dokumenten mit einem Microsoft-Konto noch nicht unterstützt.
+    Zum Öffnen von Dokumenten mit einem Microsoft-Konto müssen Benutzer Microsoft 365-Apps verwenden (Klicken Sie auf "ausführen"). In anderen Office-Editionen und -Versionen wird das Öffnen von mit Office geschützten Dokumenten mit einem Microsoft-Konto noch nicht unterstützt.
 
 - **Für alle authentifizierten Benutzer**: Diese Option ist geeignet, wenn Sie nicht steuern müssen, wer auf das geschützte Dokument zugreift, solange der Benutzer authentifiziert werden kann. Die Authentifizierung kann durch Azure AD, durch die Verwendung eines Microsoft-Kontos oder sogar durch einen Verbundanbieter sozialer Netzwerke oder eine Einmalkennung erfolgen, wenn der Inhalt durch die neuen Funktionen der Office 365-Nachrichtenverschlüsselung geschützt ist. 
 
@@ -47,13 +47,13 @@ Als Administrator können Sie eine Azure Information Protection-Bezeichnung konf
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Beispielkonfiguration für eine Schutzbezeichnung, mit der die interne und externe Zusammenarbeit unterstützt wird
 
 
-In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichnung geführt, mit der Schutz angewendet wird, damit Benutzer in Ihrer Organisation gemeinsam mit Benutzern oder Gruppen aus einer anderen Organisation, in der Office 365 oder Azure AD genutzt wird, und mit Benutzern, die kein Azure AD-Konto haben und stattdessen ihre Gmail-Adresse verwenden, an Dokumenten arbeiten können.
+In diesem Beispiel wird die Konfiguration einer vorhandenen Bezeichnung zum Anwenden von Schutz erläutert, sodass Benutzer aus Ihrer Organisation an Dokumenten mit allen Benutzern aus einer anderen Organisation arbeiten können, die über Microsoft 365 oder Azure AD, eine Gruppe aus einer anderen Organisation mit Microsoft 365 oder Azure AD und einen Benutzer, der nicht über ein Konto in Azure AD verfügt und stattdessen seine Gmail-e-Mail-Adresse verwendet.
 
 Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie in [Beispiel 5: Bezeichnung, die Inhalte verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
-2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
+2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und wählen Sie dann **Berechtigungen hinzufügen** aus.
 
 3. Gehen Sie im Bereich **Berechtigungen hinzufügen** wie folgt vor: 
     
@@ -139,18 +139,15 @@ Zusätzlich wird die Dokumentanzeige durch folgende Szenarien unterstützt:
 |Plattformen zum Anzeigen und Bearbeiten von Dokumenten: <br />Word, Excel, PowerPoint|Authentifizierungsmethode:<br />Azure AD|Authentifizierungsmethode:<br />Microsoft-Konto|
 |---------------|----------|-----------|-----------|
 |Windows|Ja [[1]](#footnote-1)|Ja [[2]](#footnote-2)|
-|iOS|Ja [[1]](#footnote-1)|Nein|
-|Android|Ja [[1]](#footnote-1)|Nein|
-|MacOS|Ja [[1]](#footnote-1)|Nein|
+|iOS|Ja [[1]](#footnote-1)|Ja (Version 1385219 und höher) |
+|Android|Ja [[1]](#footnote-1)|Ja (Version 13029 und höher)|
+|macOS|Ja [[1]](#footnote-1)|Nein|
 
 ###### <a name="footnote-1"></a>Fußnote 1
 Unterstützt die Benutzerkonten, Gruppen mit aktivierter E-Mail-Funktion, alle Mitglieder. Benutzerkonten und Gruppen mit aktivierter E-Mail-Funktion schließen Gastkonten mit ein. Mitglieder beinhalten keine Gastkonten.
 
 ###### <a name="footnote-2"></a>Fußnote 2
-Wird derzeit nur von Office 365-Apps (Klick-und-Los) unterstützt.
-
-
-
+Wird derzeit nur von Microsoft 365-Apps unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

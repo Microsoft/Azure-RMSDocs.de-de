@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 09/03/2020
+ms.date: 11/10/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fd96b54c25e92824bc216f452a6458706a4f906e
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: edfd5a5f309228c7f75a895e40826b65af74e1d7
+ms.sourcegitcommit: 04b9d7ee1ce8b6662ceda5a13b7b0d5630c91d28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447309"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "95568540"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -26,20 +26,22 @@ ms.locfileid: "89447309"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie möglicherweise für bestimmte Szenarien oder eine Teilmenge von Benutzern benötigen, wenn Sie den Azure Information Protection Unified Bezeichnung-Client verwalten.
+Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die für bestimmte Szenarien oder Benutzer erforderlich sind, wenn Sie den einheitlichen AIP-Beschriftungs Client verwalten.
 
-Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweiterte Einstellungen angeben. Die erweiterten Einstellungen verwenden [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
+> [!NOTE]
+> Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweiterte Einstellungen angeben. Die erweiterten Einstellungen verwenden [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
+> 
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
 
-- Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
-- Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
+- Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine **Erweiterte Einstellung für die erweiterte Einstellung * Bezeichnung** _.
+- Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine _*_Erweiterte Einstellung_*_ für die Bezeichnung.
 
-Geben Sie in beiden Fällen nach dem [Herstellen einer Verbindung mit Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps)den Parameter *advancedsettings* mit der Identität (Name oder GUID) der Richtlinie oder Bezeichnung an, und geben Sie Schlüssel-Wert-Paare in einer [Hash Tabelle](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables)an. Verwenden Sie die folgende Syntax:
+Geben Sie in beiden Fällen nach dem [Herstellen einer Verbindung mit Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell)den Parameter _AdvancedSettings * mit der Identität (Name oder GUID) der Richtlinie oder Bezeichnung an, und geben Sie Schlüssel-Wert-Paare in einer [Hash Tabelle](/powershell/module/microsoft.powershell.core/about/about_hash_tables)an. Verwenden Sie die folgende Syntax:
 
 Für eine Bezeichnungs Richtlinieneinstellung ist ein einzelner Zeichen folgen Wert:
 
@@ -126,16 +128,18 @@ Mit einem der Admin Center, in dem Sie Ihre Vertraulichkeits Bezeichnungen verwa
 
 - **Bereitstellen eines Links zu einer benutzerdefinierten Hilfeseite für Benutzer**
 
-Wenn für einen Benutzer mehr als eine Bezeichnungs Richtlinie konfiguriert ist, von denen jede möglicherweise unterschiedliche Richtlinien Einstellungen hat, wird die letzte Richtlinien Einstellung gemäß der Reihenfolge der Richtlinien im Admin Center angewendet. Weitere Informationen finden Sie unter [Bezeichnung der Richtlinien Priorität (Reihenfolge wichtig)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters) .
+Wenn für einen Benutzer mehr als eine Bezeichnungs Richtlinie konfiguriert ist, von denen jede möglicherweise unterschiedliche Richtlinien Einstellungen hat, wird die letzte Richtlinien Einstellung gemäß der Reihenfolge der Richtlinien im Admin Center angewendet. Weitere Informationen finden Sie unter [Bezeichnung der Richtlinien Priorität (Reihenfolge wichtig)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters) .
 
-Erweiterte Einstellungen für Bezeichnung befolgen die gleiche Logik für Vorrang: Wenn sich eine Bezeichnung in mehreren Bezeichnungs Richtlinien befindet und diese Bezeichnung Erweiterte Einstellungen aufweist, wird die letzte erweiterte Einstellung gemäß der Reihenfolge der Richtlinien im Admin Center angewendet.
+Erweiterte Einstellungen für Bezeichnungs Richtlinien werden mithilfe der gleichen Logik angewendet, und zwar mithilfe der letzten Richtlinien Einstellung. 
 
-Die erweiterten Einstellungen für die Bezeichnungs Richtlinie werden in umgekehrter Reihenfolge angewendet: mit einer Ausnahme werden die erweiterten Einstellungen der ersten Richtlinie entsprechend der Reihenfolge der Richtlinien im Admin Center angewendet. Bei der Ausnahme handelt es sich um die erweiterte Einstellung *outlookdefaultlabel*, mit der eine andere Standard Bezeichnung für Outlook festgelegt wird. Bei dieser Einstellung für die erweiterte Bezeichnung "Bezeichnung" wird die letzte Einstellung gemäß der Reihenfolge der Richtlinien im Admin Center angewendet.
-
+> [!NOTE]
+> Für die Richtlinien Einstellung "Erweiterte Bezeichnung für [outlookdefaultlabel](#set-a-different-default-label-for-outlook) " ist zurzeit eine Ausnahme vorhanden, die es Ihnen ermöglicht, eine andere Standard Bezeichnung für Outlook festzulegen.
+> 
+> Wenn Sie Konflikte bei der Einstellung outlookdefaultlabel haben, wird die Konfiguration gemäß der Richtlinien Reihenfolge im Admin Center von der *ersten* Richtlinien Einstellung übernommen.
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Verfügbare erweiterte Einstellungen für Bezeichnungs Richtlinien
 
-Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) und [Set-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) und [Set-labelpolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
@@ -160,7 +164,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |OutlookJustifyUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
 |Outlookoverridkollaborationextensions|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|Outlookskipsmimeonleseringpaneproperty | [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)|
+|Outlookskipsmimeonleseringpaneaktivierte | [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)|
 |Outlookunlabeledcollaborationaktionoverridemailbodybehavior|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |Outlookwarntreuddomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -183,13 +187,13 @@ PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Richtlinien Einst
 
 #### <a name="available-advanced-settings-for-labels"></a>Verfügbare erweiterte Einstellungen für Bezeichnungen
 
-Verwenden Sie den *advancedsettings* -Parameter mit [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) und [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+Verwenden Sie den *advancedsettings* -Parameter mit [New-Label](/powershell/module/exchange/policy-and-compliance/new-label) und [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
-|color|[Farbe für die Bezeichnung angeben](#specify-a-color-for-the-label)|
+|color|[Festlegen einer Farbe für die Bezeichnung](#specify-a-color-for-the-label)|
 |custompropertiesbylabel|[Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird](#apply-a-custom-property-when-a-label-is-applied)|
-|Defaultsublabelid|[Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](#specify-a-default-sublabel-for-a-parent-label) 
+|Defaultsublabelid|[Festlegen einer standardmäßigen untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](#specify-a-default-sublabel-for-a-parent-label) 
 |labelbycustomproperties|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |Smimeverschlüsseln|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |Smimesign|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
@@ -258,7 +262,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Wenn Sie diese Einstellung konfigurieren, wird das  [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) -Cmdlet **Set-aipfilelabel** aktiviert, um das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien zu ermöglichen.
+Wenn Sie diese Einstellung konfigurieren, wird das  [PowerShell](./clientv2-admin-guide-powershell.md) -Cmdlet **Set-aipfilelabel** aktiviert, um das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien zu ermöglichen.
 
 - Schlüssel: **enablecontainersupport**
 
@@ -274,7 +278,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="Tru
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Wenn Sie diese Einstellung konfigurieren, wendet Outlook nicht die Standard Bezeichnung an, die als Richtlinien Einstellung für die Option **diese Bezeichnung standardmäßig auf Dokumente und e-Mails anwenden**konfiguriert ist. Stattdessen kann Outlook eine andere Standardbezeichnung oder gar keine Bezeichnung anwenden.
+Wenn Sie diese Einstellung konfigurieren, wendet Outlook nicht die Standard Bezeichnung an, die als Richtlinien Einstellung für die Option **diese Bezeichnung standardmäßig auf Dokumente und e-Mails anwenden** konfiguriert ist. Stattdessen kann Outlook eine andere Standardbezeichnung oder gar keine Bezeichnung anwenden.
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
@@ -307,22 +311,16 @@ Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu id
 | Zeichenfolgenwert| Client| Scanner|
 |-------------|-------|--------|
 |\*|Standardwert: Schutz auf alle Dateitypen anwenden|Anwenden von Schutz auf alle Dateitypen|
-|\<null value>| Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien| Standardwert: Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien|
 |ConvertTo-JSON (". jpg", ". png")|Zusätzlich zu den Office-Dateitypen und PDF-Dateien, wenden Sie den Schutz auf die angegebenen Dateinamen Erweiterungen an. | Zusätzlich zu den Office-Dateitypen und PDF-Dateien, wenden Sie den Schutz auf die angegebenen Dateinamen Erweiterungen an.
+| | | |
 
-Beispiel 1: PowerShell-Befehl für den Unified Client zum Schutz von nur Office-Dateitypen und PDF-Dateien, bei denen die Bezeichnung "Client" lautet:
-
-```PowerShell
-Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-Beispiel 2: PowerShell-Befehl für die Überprüfung, um alle Dateitypen zu schützen, deren Bezeichnung "Scanner" lautet:
+Beispiel 1: PowerShell-Befehl für die Überprüfung, um alle Dateitypen zu schützen, deren Bezeichnung "Scanner" lautet:
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-Beispiel 3: PowerShell-Befehl für die Überprüfung, um TXT-Dateien und CSV-Dateien zusätzlich zu Office-Dateien und PDF-Dateien zu schützen, wobei die Bezeichnung "Scanner" lautet:
+Beispiel 2: PowerShell-Befehl für die Überprüfung, um TXT-Dateien und CSV-Dateien zusätzlich zu Office-Dateien und PDF-Dateien zu schützen, wobei die Bezeichnung "Scanner" lautet:
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -352,7 +350,7 @@ Beispiel 1: PowerShell-Befehl verhält sich wie das Standardverhalten, bei dem d
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-Beispiel 2: PowerShell-Befehl zum Ändern aller Pfile-Erweiterungen vom generischen Schutz (DWG. Pfile) in den nativen Schutz (. pdwg), wenn die Dateien geschützt sind:
+Beispiel 2: PowerShell-Befehl zum Ändern aller Pfile-Erweiterungen vom generischen Schutz (DWG. Pfile) in den nativen Schutz (. pdwg), wenn die Dateien geschützt werden:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
@@ -367,22 +365,21 @@ Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json
 Mit dieser Einstellung werden die folgenden Erweiterungen (". txt", ". xml", ". bmp", ". JT", ". jpg", ". JPEG", ". jpe", ". jif", ". jff", ". JFI", ". png", ". TIF", ". TIFF", ". gif") werden immer P \<EXT> . Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
 **Additionalpprefixextensions** funktioniert nur, wenn der Schutz von pfiles mit der erweiterten Eigenschaft " [**pfilesupportedextension**](#pfilesupportedextension) " aktiviert ist. 
 
-Beispielsweise in einem Fall, in dem der folgende Befehl verwendet wird:
-
-```PowerShell
-Set-LabelPolicy -AdvancedSettings @{PFileSupportedExtensions=""}
-```
-
-Der Pfile-Schutz ist nicht möglich, und der Wert in **additionalpprefixextensions** wird ignoriert. 
-
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>„Not now“ („Nicht jetzt“) für Dokumente bei Verwendung der obligatorischen Bezeichnung entfernen
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Wenn Sie die Bezeichnung "Bezeichnung" für **alle Dokumente verwenden, und e-Mails müssen eine Bezeichnung aufweisen**, werden die Benutzer beim ersten Speichern eines Office-Dokuments und beim Senden einer e-Mail aufgefordert, eine Bezeichnung auszuwählen. Bei Office-Dokumenten können Benutzer **Not now** (nicht jetzt) wählen, um die Aufforderung zum Auswählen einer Bezeichnung vorübergehend zu schließen und zum Dokument zurückzukehren. Sie können das gespeicherte Dokument jedoch nicht schließen, ohne es zu bezeichnen. 
+Wenn Sie die Bezeichnung "Bezeichnung" für **alle Dokumente verwenden, und e-Mails müssen eine Bezeichnung aufweisen**, werden Benutzer aufgefordert, eine Bezeichnung auszuwählen, wenn Sie zum ersten Mal ein Office-Dokument speichern, und wenn eine e-Mail von Outlook gesendet wird.
 
-Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jetzt) entfernt, sodass die Benutzer eine Bezeichnung wählen müssen, wenn das Dokument zum ersten Mal gespeichert wird.
+Bei Office-Dokumenten können Benutzer **Not now** (nicht jetzt) wählen, um die Aufforderung zum Auswählen einer Bezeichnung vorübergehend zu schließen und zum Dokument zurückzukehren. Sie können das gespeicherte Dokument jedoch nicht schließen, ohne es zu bezeichnen. 
 
+Wenn Sie die Einstellung " **Verschiebungen über andatorybeforesave** " konfigurieren, wird die Option " **nicht jetzt** " entfernt, sodass Benutzer beim ersten Speichern des Dokuments eine Bezeichnung auswählen müssen.
+
+> [!TIP]
+> Mit der Einstellung " **Verschiebungen andatorybeforesave** " wird außerdem sichergestellt, dass freigegebene Dokumente so gekennzeichnet werden, dass Sie per e-Mail gesendet werden. 
+>
+>Wenn **alle Dokumente und e-Mails über eine** in Ihrer Richtlinie aktivierte Bezeichnung verfügen müssen, werden Benutzer standardmäßig nur zu Bezeichnungs Dateien herauf gestuft, die in Outlook an e-Mails angefügt sind.  
+> 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
 - Schlüssel: **PostponeMandatoryBeforeSave**
@@ -399,7 +396,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 
 Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Es gibt zwei Methoden, um Klassifizierungen aus anderen Bezeichnungs Lösungen zu entfernen. Die erste Methode entfernt alle Formen aus Word-Dokumenten, bei denen der Shape-Name mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove**definiert wurde. mit der zweiten Methode können Sie textbasierte Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten entfernen oder ersetzen, wie in der erweiterten Eigenschaft **removeexternalcontentmarkinginapp** 
+Es gibt zwei Methoden, um Klassifizierungen aus anderen Bezeichnungs Lösungen zu entfernen. Mit der ersten Methode wird jede Form aus Word-Dokumenten entfernt, bei der der Shape-Name mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove** definiert wurde. mit der zweiten Methode können Sie textbasierte Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten entfernen oder ersetzen, wie in der erweiterten **removeexternalcontentmarkinginapp** 
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>Verwenden der erweiterten Eigenschaft wordshapenametoremove
 
@@ -415,7 +412,7 @@ Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wor
 
 So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen:
 
-1. Zeigen Sie in Word den **Auswahl** Bereich an: Registerkarte " **Home** " > **Bearbeitungs** Gruppe > **Wählen Sie** die Option > **Auswahl**Bereich aus.
+1. Zeigen Sie in Word den **Auswahl** Bereich an: Registerkarte " **Home** " > **Bearbeitungs** Gruppe > **Wählen Sie** die Option > **Auswahl** Bereich aus.
 
 2. Wählen Sie die Form auf der Seite aus, die Sie zum Entfernen markieren möchten. Der Name der von Ihnen markierten Form ist nun im Bereich **Auswahl** hervorgehoben.
 
@@ -443,7 +440,7 @@ Wenn der Unified Label-Client diese Konfiguration in der Richtlinie abruft, werd
 
 Diese Konfiguration wird für Outlook nicht unterstützt. Beachten Sie außerdem, dass die Verwendung mit Word, Excel und PowerPoint sich negativ auf die Leistung dieser Apps für Benutzer auswirken kann. Mithilfe der Konfiguration können Sie Einstellungen für jede einzelne Anwendung definieren, z.B. die Suche nach Text in Kopf- oder Fußzeilen von Word-Dokumenten, jedoch nicht von Excel-Tabellen oder PowerPoint-Präsentationen.
 
-Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich, die Office-Anwendungs Typen (**W**Ord, E**X**cel, **P**owerpoint) nur auf die zu durchsuchenden Anwendungen einzuschränken.
+Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich, die Office-Anwendungs Typen (**W** Ord, E **X** cel, **P** owerpoint) nur auf die zu durchsuchenden Anwendungen einzuschränken.
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 - Key: **RemoveExternalContentMarkingInApp**
 
@@ -508,9 +505,9 @@ Um diese mehrzeilige Fußzeile zu entfernen, erstellen Sie die folgenden zwei Ei
 
 - Key: **ExternalContentMarkingToRemove**
 
-- Schlüsselwert 1: ** \* vertraulich***
+- Schlüsselwert 1: **\* vertraulich***
 
-- Schlüsselwert 2: ** \* Bezeichnung angewendet*** 
+- Schlüsselwert 2: **\* Bezeichnung angewendet*** 
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
 
@@ -522,9 +519,11 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 In PowerPoint werden Fußzeilen als Formen implementiert. Wenn Sie vermeiden möchten, dass Formen entfernt werden, die den angegeben Text enthalten, jedoch keine Kopf- oder Fußzeilen sind, verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **PowerPointShapeNameToRemove**. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
 
-Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
+- Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
 
-So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:
+- Wenn dieser Wert angegeben wird, werden nur die Formen, die den Form Namen Kriterien entsprechen, sowie Text, der mit der mit **externalcontentmarkingtoremove** bereitgestellten Zeichenfolge übereinstimmt, entfernt.
+
+**So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:**
 
 1. Zeigen Sie in PowerPoint den Bereich **Auswahl** an: **Format** > **Anordnen** > **Auswahlbereich**.
 
@@ -532,7 +531,7 @@ So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:
 
 Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel **PowerPointShapeNameToRemove** anzugeben. 
 
-Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
+**Beispiel:** Der Name der Form ist **FC**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
 
 - Key: **PowerPointShapeNameToRemove**
 
@@ -562,7 +561,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkin
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Standardmäßig wird Benutzern eine Option mit dem Namen **schützen mit benutzerdefinierten Berechtigungen** angezeigt, wenn Sie mit der rechten Maustaste in den Datei-Explorer klicken und **klassifizieren und schützen**auswählen. Mit dieser Option können Sie Ihre eigenen Schutzeinstellungen festlegen, mit denen alle Schutzeinstellungen außer Kraft gesetzt werden können, die Sie möglicherweise in einer Bezeichnungs Konfiguration enthalten haben. Benutzer können außerdem eine Option zum Entfernen des Schutzes sehen. Wenn Sie diese Einstellung konfigurieren, werden den Benutzern diese Optionen nicht angezeigt.
+Standardmäßig wird Benutzern eine Option mit dem Namen **schützen mit benutzerdefinierten Berechtigungen** angezeigt, wenn Sie mit der rechten Maustaste in den Datei-Explorer klicken und **klassifizieren und schützen** auswählen. Mit dieser Option können Sie Ihre eigenen Schutzeinstellungen festlegen, mit denen alle Schutzeinstellungen außer Kraft gesetzt werden können, die Sie möglicherweise in einer Bezeichnungs Konfiguration enthalten haben. Benutzer können außerdem eine Option zum Entfernen des Schutzes sehen. Wenn Sie diese Einstellung konfigurieren, werden den Benutzern diese Optionen nicht angezeigt.
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
@@ -675,8 +674,10 @@ Wenn diese Bedingungen erfüllt sind, wird dem Benutzer eine Popup Meldung mit e
 
 Wenn sich die Popup Meldungen für eine bestimmte Bezeichnung befinden, können Sie Ausnahmen für Empfänger nach Domänen Name konfigurieren.
 
+Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden Sie im Video [Azure Information Protection Outlook-Popup Konfiguration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+
 > [!TIP]
-> Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden Sie im Video [Azure Information Protection Outlook-Popup Konfiguration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+> Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie),** konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
 
@@ -888,6 +889,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## <a name="limit-cpu-consumption"></a>Begrenzen der CPU-Auslastung
 
+Scanner schränkt den Ressourcenverbrauch ein, um sicherzustellen, dass die CPU-CPU insgesamt nie über 85 Prozent liegt. 
+
 Ab der Überprüfungs Version 2.7. x. x empfiehlt es sich, die CPU-Auslastung mithilfe der folgenden erweiterten **scannermaxcpu** -und **scannermincpu** -Einstellungs Methode einzuschränken. 
 
 > [!IMPORTANT]
@@ -899,9 +902,9 @@ Zum Begrenzen der CPU-Auslastung auf dem Überprüfungs Computer können Sie zwe
 
 **Scannermaxcpu** ist standardmäßig auf 100 festgelegt, was bedeutet, dass es keine Beschränkung der maximalen CPU-Auslastung gibt. In diesem Fall versucht der Überprüfungsprozess, die gesamte verfügbare CPU-Zeit zu nutzen, um die Scan Raten zu maximieren.
 
-Wenn Sie **scannermaxcpu** auf einen niedrigeren Wert als 100 festlegen, wird die CPU-Auslastung in den letzten 30 Minuten vom Scanner überwacht. wenn die maximale CPU den von Ihnen festgelegten Grenzwert überschritten hat, wird die Anzahl der Threads, die neuen Dateien zugeordnet sind, verringert. Der Grenzwert für die Anzahl der Threads wird fortgesetzt, solange der CPU-Verbrauch höher als der für **scannermaxcpu**festgelegte Grenzwert ist.
+Wenn Sie **scannermaxcpu** auf einen niedrigeren Wert als 100 festlegen, wird die CPU-Auslastung in den letzten 30 Minuten vom Scanner überwacht. wenn die maximale CPU den von Ihnen festgelegten Grenzwert überschritten hat, wird die Anzahl der Threads, die neuen Dateien zugeordnet sind, verringert. Der Grenzwert für die Anzahl der Threads wird fortgesetzt, solange der CPU-Verbrauch höher als der für **scannermaxcpu** festgelegte Grenzwert ist.
 
-**Scannermincpu**ist nur aktiviert, wenn **scannermaxcpu** nicht gleich 100 ist. **Scannermincpu** kann nicht auf eine Zahl höher festgelegt werden, die höher als die **scannermaxcpu** -Nummer ist. Es wird empfohlen, **scannermincpu** mindestens 15 Punkte als den Wert von  **scannermaxcpu**festzulegen.   
+**Scannermincpu** ist nur aktiviert, wenn **scannermaxcpu** nicht gleich 100 ist. **Scannermincpu** kann nicht auf eine Zahl höher festgelegt werden, die höher als die **scannermaxcpu** -Nummer ist. Es wird empfohlen, **scannermincpu** mindestens 15 Punkte als den Wert von  **scannermaxcpu** festzulegen.   
 
 Der Standardwert dieser Einstellung ist 50, d. h., wenn die CPU-Auslastung in den letzten 30 Minuten niedriger als dieser Wert ist, beginnt die Überprüfung, neue Threads hinzuzufügen, um weitere Dateien parallel zu scannen, bis die CPU-Auslastung die für **scannermaxcpu**-15 festgelegte Stufe erreicht. 
 
@@ -1004,7 +1007,7 @@ Erweiterte Clienteinstellung:
 
 - Key: **labelbycustomproperties**
 
-- Wert: die **Bezeichnung sichere Inseln enthält interne Klassifizierungen,. \* Intern. \* **
+- Wert: die **Bezeichnung sichere Inseln enthält interne Klassifizierungen,. \* Intern. \***
 
 Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Allgemein" lautet:
 
@@ -1024,7 +1027,9 @@ Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=Con
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>Erweitern Sie Ihre Regeln für die Bezeichnung der Migration auf e-Mails.
 
-Sie können die erweiterten Einstellungen von labelbycustomproperties mit Outlook-e-Mails zusätzlich zu Office-Dokumenten verwenden, indem Sie eine zusätzliche Einstellung für die erweiterte Bezeichnungs Richtlinie angeben. Diese Einstellung hat jedoch eine bekannte negative Auswirkung auf die Leistung von Outlook. Konfigurieren Sie diese zusätzliche Einstellung daher nur, wenn Sie eine starke geschäftliche Anforderung dafür haben, und denken Sie daran, Sie auf einen NULL-Zeichen folgen Wert festzulegen, wenn Sie die Migration von der anderen Bezeichnungs Lösung abgeschlossen haben.
+Sie können die Konfiguration, die Sie mit der Einstellung " [*labelbycustomproperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) Advanced" für Outlook-e-Mails definiert haben, zusätzlich zu Office-Dokumenten verwenden, indem Sie eine zusätzliche Einstellung für die erweiterte Bezeichnung festlegen. 
+
+Diese Einstellung hat jedoch eine bekannte negative Auswirkung auf die Leistung von Outlook. Konfigurieren Sie diese zusätzliche Einstellung daher nur, wenn Sie eine starke geschäftliche Anforderung dafür haben, und denken Sie daran, Sie auf einen NULL-Zeichen folgen Wert festzulegen, wenn Sie die Migration von der anderen Bezeichnungs Lösung abgeschlossen haben.
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
@@ -1040,7 +1045,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="Tr
 
 ### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Erweitern der Regeln für die Bezeichnung der Migration auf SharePoint-Eigenschaften
 
-Sie können die erweiterten labelbycustomproperties-Einstellungen mit SharePoint-Eigenschaften verwenden, die Sie möglicherweise als Spalten für Benutzer verfügbar machen.
+Sie können die Konfiguration verwenden, die Sie mit der Einstellung " [*labelbycustomproperties*](#migrate-labels-from-secure-islands-and-other-labeling-solutions) Advanced" für SharePoint-Eigenschaften definiert haben, die Sie möglicherweise als Spalten für Benutzer verfügbar machen, indem Sie eine zusätzliche Einstellung für die erweiterte Zeichnungs Richtlinie angeben.
 
 Diese Einstellung wird unterstützt, wenn Sie Word, Excel und PowerPoint verwenden.
 
@@ -1062,7 +1067,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1123,7 +1128,7 @@ Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertT
 
 Diese Konfiguration verwendet [Erweiterte Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Verwenden Sie diese Einstellungen nur, wenn Sie über eine funktionierende [S/MIME-Bereitstellung](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) verfügen und möchten, dass eine Bezeichnung diese Schutzmethode automatisch für e-Mails anwendet, anstatt Rights Management Schutz vor Azure Information Protection. Der resultierende Schutz ist derselbe wie bei der manuellen Auswahl von S/MIME-Optionen in Outlook.
+Verwenden Sie diese Einstellungen nur, wenn Sie über eine funktionierende [S/MIME-Bereitstellung](/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) verfügen und möchten, dass eine Bezeichnung diese Schutzmethode automatisch für e-Mails anwendet, anstatt Rights Management Schutz vor Azure Information Protection. Der resultierende Schutz ist derselbe wie bei der manuellen Auswahl von S/MIME-Optionen in Outlook.
 
 Um eine erweiterte Einstellung für eine digitale S/MIME-Signatur zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnung ein:
 
@@ -1139,7 +1144,7 @@ Um eine erweiterte Einstellung für die S/MIME-Verschlüsselung zu konfigurieren
 
 Wenn die von Ihnen angegebene Bezeichnung für die Verschlüsselung konfiguriert ist, ersetzt der S/MIME-Schutz für den Azure Information Protection Unified Label-Client den Rights Management Schutz nur in Outlook. Die allgemein verfügbare Version des Unified Label-Clients verwendet weiterhin die für die Bezeichnung im Admin Center angegebenen Verschlüsselungseinstellungen. Bei Office-Apps mit integrierter Bezeichnung wenden diese nicht den S/MIME-Schutz an, sondern wenden den Schutz von "nicht weiterleiten" an.
 
-Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie die Bezeichnung so, dass die Verschlüsselung **nur auf e-Mail-Nachrichten in Outlook**angewendet wird.
+Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie die Bezeichnung so, dass die Verschlüsselung **nur auf e-Mail-Nachrichten in Outlook** angewendet wird.
 
 PowerShell-Beispiel Befehle, bei denen ihre Bezeichnung "nur Empfänger" heißt:
 
@@ -1149,7 +1154,7 @@ Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
 ```
 
-## <a name="specify-a-default-sublabel-for-a-parent-label"></a>Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung
+## <a name="specify-a-default-sublabel-for-a-parent-label"></a>Festlegen einer standardmäßigen untergeordneten Bezeichnung für eine übergeordnete Bezeichnung
 
 Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
@@ -1167,7 +1172,7 @@ Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung
 
-Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
+Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen. 
 
 Wenn Sie diese Einstellung konfigurieren, wird das Standardverhalten geändert, wie der Azure Information Protection Unified Label-Client automatische und empfohlene Bezeichnungen auf Dokumente anwendet:
 
@@ -1183,15 +1188,17 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 - Schlüssel: **RunPolicyInBackground**
 - Wert: **true**
 
-
-
 PowerShell-Beispiel Befehl: 
 
 ```PowerShell
 Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 ```
 
-## <a name="specify-a-color-for-the-label"></a>Farbe für die Bezeichnung angeben
+> [!NOTE]
+> Dieses Feature befindet sich derzeit in der VORSCHAU. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+> 
+
+## <a name="specify-a-color-for-the-label"></a>Festlegen einer Farbe für die Bezeichnung
 
 Diese Konfiguration verwendet [Erweiterte Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
@@ -1213,7 +1220,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## <a name="sign-in-as-a-different-user"></a>Anmelden als ein anderer Benutzer
 
-In einer Produktionsumgebung müssen sich Benutzer in der Regel nicht als anderer Benutzer anmelden, wenn Sie den Azure Information Protection Unified-Bezeichnungs Client verwenden. Allerdings müssen Sie sich als Administrator während einer Testphase möglicherweise als anderer Benutzer anmelden. 
+Das Anmelden mit mehreren Benutzern wird von AIP in der Produktionsumgebung nicht unterstützt. In diesem Verfahren wird beschrieben, wie Sie sich nur für Testzwecke als ein anderer Benutzer anmelden.
 
 Mit dem Dialogfeld **Microsoft Azure Information Protection** können Sie überprüfen, welches Konto Sie gerade angemeldet sind: Öffnen Sie eine Office-Anwendung, und wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche aus, und klicken Sie dann auf **Hilfe und Feedback**. Ihr Kontoname wird im Abschnitt **Clientstatus** angezeigt.
 
@@ -1225,7 +1232,7 @@ So melden Sie sich als ein anderer Benutzer an:
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und wählen Sie im Abschnitt aktualisierter **Client Status** die Option **Anmelden** aus.
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Wenn der Azure Information Protection Unified Bezeichnung-Client nach dem Ausführen dieser Schritte weiterhin mit dem alten Konto angemeldet ist, löschen Sie alle Cookies aus Internet Explorer, und wiederholen Sie dann die Schritte 1 und 2.
 
@@ -1255,7 +1262,7 @@ Anleitung:
 
 4. Exportieren Sie die Protokolldateien auf diesem Computer.
     
-    Führen Sie beispielsweise das Cmdlet [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) aus, oder verwenden Sie im Dialogfeld [Hilfe und Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) des Clients die Option **Protokolle exportieren** . 
+    Führen Sie beispielsweise das Cmdlet [Export-aiplogs](/powershell/module/azureinformationprotection/export-aiplogs) aus, oder verwenden Sie im Dialogfeld [Hilfe und Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) des Clients die Option **Protokolle exportieren** . 
     
     Die Protokolldateien werden als einzelne komprimierte Datei exportiert.
 
@@ -1275,7 +1282,7 @@ Standardmäßig schreibt der Azure Information Protection Unified Bezeichnung-Cl
  
 Um den Protokolliergrad für diese Dateien zu ändern, suchen Sie in der Registrierung nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf den erforderlichen Protokolliergrad fest:
 
-**HKEY_CURRENT_USER \software\microsoft\msip\loglevel**
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
 
@@ -1299,7 +1306,7 @@ Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-
 
 Standardmäßig scannt der Azure Information Protection Unified-Beschriftungs Scanner alle relevanten Dateien. Möglicherweise möchten Sie jedoch bestimmte Dateien definieren, die übersprungen werden sollen, z. b. für archivierte Dateien oder Dateien, die verschoben wurden. 
 
-Aktivieren Sie die Überprüfung, um bestimmte Dateien basierend auf Ihren Dateiattributen mithilfe der erweiterten **scannerfsattributestoskip** -Einstellung zu überspringen. Listen Sie im Einstellungs Wert die Dateiattribute auf, mit denen die Datei übersprungen werden kann, wenn Sie alle auf **true**festgelegt sind. Diese Liste von Dateiattributen verwendet die-und die-Logik.
+Aktivieren Sie die Überprüfung, um bestimmte Dateien basierend auf Ihren Dateiattributen mithilfe der erweiterten **scannerfsattributestoskip** -Einstellung zu überspringen. Listen Sie im Einstellungs Wert die Dateiattribute auf, mit denen die Datei übersprungen werden kann, wenn Sie alle auf **true** festgelegt sind. Diese Liste von Dateiattributen verwendet die-und die-Logik.
 
 Die folgenden PowerShell-Beispiel Befehle veranschaulichen, wie diese erweiterte Einstellung mit der Bezeichnung "Global" verwendet wird.
 
@@ -1311,7 +1318,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Lese-oder archivierte Dateien überspringen**
 
-Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1328,7 +1335,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 > * FILE_ATTRIBUTE_RECALL_ON_OPEN
 > * FILE_ATTRIBUTE_TEMPORARY
 
-Eine Liste aller Dateiattribute, die in der erweiterten Einstellung **scannerf sattributestoskip** definiert werden können, finden Sie unter [Win32-Datei Attribut Konstanten](https://docs.microsoft.com/windows/win32/fileio/file-attribute-constants) .
+Eine Liste aller Dateiattribute, die in der erweiterten Einstellung **scannerf sattributestoskip** definiert werden können, finden Sie unter [Win32-Datei Attribut Konstanten](/windows/win32/fileio/file-attribute-constants) .
 
 ## <a name="preserve-ntfs-owners-during-labeling-public-preview"></a>Beibehalten von NTFS-Besitzern während der Bezeichnung (öffentliche Vorschau)
 
@@ -1347,21 +1354,25 @@ PowerShell-Beispiel Befehl, wenn Ihre Bezeichnungs Richtlinie den Namen "Global"
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ UseCopyAndPreserveNTFSOwner ="true"}
 ```
 
+> [!NOTE]
+> Dieses Feature befindet sich derzeit in der VORSCHAU. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+> 
+
 ## <a name="customize-justification-prompt-texts-for-modified-labels"></a>Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen
 
-Passen Sie die entsprechenden Eingabe Aufforderungen an, die sowohl in Office als auch im AIP-Client angezeigt werden, wenn Endbenutzer Klassifizierungs Bezeichnungen in Dokumenten und e-Mails ändern.
+Passen Sie die entsprechenden Eingabe Aufforderungen an, die sowohl in Office als auch im AIP-Client angezeigt werden, wenn Endbenutzer Klassifizierungs Bezeichnungen für Dokumente und e-Mails ändern.
 
 Beispielsweise können Sie als Administrator Ihre Benutzer daran erinnern, keine Kunden identifizierenden Informationen in diesem Feld hinzuzufügen:
 
 :::image type="content" source="../media/justification-office.png" alt-text="Eingabeaufforderung für angepasste Begründung":::
 
-Um den standardmäßigen **anderen** Text zu ändern, der angezeigt wird, verwenden Sie die erweiterte Eigenschaft "Recht **cationtextforusertext** " mit dem [Set-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Cmdlet. Legen Sie den Wert auf den Text fest, den Sie stattdessen verwenden möchten.
+Um den standardmäßigen **anderen** Text zu ändern, der angezeigt wird, verwenden Sie die erweiterte Eigenschaft "Recht **cationtextforusertext** " mit dem [Set-labelpolicy](/powershell/module/exchange/set-labelpolicy) -Cmdlet. Legen Sie den Wert auf den Text fest, den Sie stattdessen verwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 ``` PowerShell
 
-[Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
+[Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
 
 ## <a name="customize-outlook-popup-messages"></a>Anpassen von Outlook-Popup Meldungen
@@ -1372,9 +1383,15 @@ AIP-Administratoren können die Popup Meldungen anpassen, die Endbenutzern in Ou
 - Warnmeldungen, die Benutzer auffordern, den Inhalt zu überprüfen, den Sie senden
 - Ausrichtungmeldungen, die Benutzer anfordert, den Inhalt zu rechtfertigen, den Sie senden
 
+> [!IMPORTANT]
+> Mit dieser Prozedur werden alle Einstellungen außer Kraft gesetzt, die Sie bereits mithilfe der erweiterten Eigenschaft **outlookunlabeledkollaborationaction** definiert haben.
+>
+> Es wird empfohlen, in der Produktionsumgebung Probleme zu vermeiden, indem Sie *entweder* die erweiterte Eigenschaft **OutlookUnlabeledCollaborationAction** verwenden, um Ihre Regeln zu definieren, *oder* komplexe Regeln mit einer JSON-Datei wie unten beschrieben definieren, aber nicht beides.
+>
+
 **So passen Sie Outlook-Popup Meldungen an:**
 
-1. Erstellen Sie **JSON** -Dateien mit einer Regel, die konfiguriert, wie Outlook Popup Nachrichten für Ihre Benutzer anzeigt. Weitere Informationen finden Sie unter [Regel Wert. JSON-Syntax](#rule-value-json-syntax) und [beispielpopup-customziierung. JSON-Code](#sample-popup-customziation-json-code).
+1. Erstellen Sie **JSON** -Dateien mit einer Regel, die konfiguriert, wie Outlook Popup Nachrichten für Ihre Benutzer anzeigt. Weitere Informationen finden Sie unter [Regel Wert. JSON-Syntax](#rule-value-json-syntax) und [Beispiel-Popup-Anpassungs Datei. JSON-Code](#sample-popup-customization-json-code).
 
 1. Definieren Sie mithilfe von PowerShell Erweiterte Einstellungen, mit denen die Popup Meldungen gesteuert werden, die Sie konfigurieren. Führen Sie einen separaten Satz von Befehlen für jede Regel aus, die Sie konfigurieren möchten.
 
@@ -1386,7 +1403,7 @@ AIP-Administratoren können die Popup Meldungen anpassen, die Endbenutzern in Ou
     $filedata = Get-Content "<Path to json file>”
     Set-LabelPolicy -Identity <Policy name> -AdvancedSettings @{<Key> ="$filedata"}
     ```
-    Hierbei gilt Folgendes: 
+    Hierbei gilt: 
 
     - `<Path to json file>` ist der Pfad zur JSON-Datei, die Sie erstellt haben. Beispiel: **c:\users\msanchez\desktop\ \dlp\OutlookCollaborationRule_1.json**.
     - `<Policy name>` der Name der Richtlinie, die Sie konfigurieren möchten. 
@@ -1394,14 +1411,16 @@ AIP-Administratoren können die Popup Meldungen anpassen, die Endbenutzern in Ou
     
         `OutlookCollaborationRule_<x>` 
 
-    Weitere Informationen finden Sie unter [Anordnen von Outlook-Regeln für customziierung](#ordering-your-outlook-customziation-rules) und [Regel Wert-JSON-Syntax](#rule-value-json-syntax).
+    Weitere Informationen finden Sie unter [Anordnen der Outlook-Anpassungsregeln und der](#ordering-your-outlook-customization-rules) [Regel Wert-JSON-Syntax](#rule-value-json-syntax).
 
    
 > [!TIP]
 > Benennen Sie Ihre Datei für zusätzliche Organisationen mit der gleichen Zeichenfolge wie der Schlüssel, der in Ihrem PowerShell-Befehl verwendet wird. Benennen Sie z. b. die Datei **OutlookCollaborationRule_1.js,** und verwenden Sie **OutlookCollaborationRule_1** als Schlüssel.
+>
+> Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie),** konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
 > 
 
-### <a name="ordering-your-outlook-customziation-rules"></a>Bestellen der Outlook-customziationsregeln
+### <a name="ordering-your-outlook-customization-rules"></a>Bestellen der Outlook-Anpassungsregeln
 
 AIP verwendet die Seriennummer in dem eingegebenen Schlüssel, um die Reihenfolge zu bestimmen, in der die Regeln verarbeitet werden. Wenn Sie die für jede Regel verwendeten Schlüssel definieren, definieren Sie die restriktiveren Regeln mit niedrigeren Zahlen, gefolgt von weniger restriktiven Regeln mit höheren Zahlen.
 
@@ -1409,7 +1428,7 @@ Sobald eine bestimmte Regel Übereinstimmung gefunden wird, beendet AIP die Vera
     
 **Beispiel:**
 
-Nehmen wir an, Sie möchten alle **internen** e-Mails mit einer bestimmten **Warn** Meldung konfigurieren, aber Sie sollten Sie nicht in der Regel blockieren. Allerdings möchten Sie, dass Benutzer Anlagen, die als **geheim**klassifiziert sind, auch als **interne** e-Mails blockieren. 
+Nehmen wir an, Sie möchten alle **internen** e-Mails mit einer bestimmten **Warn** Meldung konfigurieren, aber Sie sollten Sie nicht in der Regel blockieren. Allerdings möchten Sie, dass Benutzer Anlagen, die als **geheim** klassifiziert sind, auch als **interne** e-Mails blockieren. 
 
 Ordnen Sie in diesem Szenario ihren **Sperr Geheimnis** -Regel Schlüssel (die spezifischere Regel) vor ihrer allgemeineren **Warnung für den internen** Regel Schlüssel an:
 - Für die **Block** Meldung: **OutlookCollaborationRule_1**
@@ -1417,14 +1436,14 @@ Ordnen Sie in diesem Szenario ihren **Sperr Geheimnis** -Regel Schlüssel (die s
 
 ### <a name="rule-value-json-syntax"></a>Regelwert. JSON-Syntax
 
-Definieren Sie die JSON-snytax Ihrer Regel wie folgt:
+Definieren Sie die JSON-Syntax Ihrer Regel wie folgt:
 
 ``` JSON
 "type" : "And",
 "nodes" : []
 ```
 
-Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und den letzten Vorgang, der die Aktion der Regel darstellt. Weitere Informationen finden Sie in folgenden Quellen:
+Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter
 
 - [Syntax der Regel Bedingung](#rule-condition-syntax)
 - [Syntax der Regel Aktion](#rule-action-syntax)
@@ -1440,10 +1459,10 @@ Zu den unterstützten Knoten Typen gehören:
 | **Und**   | Führt *und* für alle untergeordneten Knoten aus.     |
 | **Oder**    |Führt *oder* für alle untergeordneten Knoten aus.       |
 | **Hätten**   | Führt *nicht* für das eigene untergeordnete Element aus.      |
-| **Davon**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
-| **SentTo,** gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: </br>-Wenn das übergeordnete Element **außer ist, überprüft,** ob sich **alle** Empfänger in einer der Domänen befinden.</br>-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
-| **EmailLabel,** gefolgt von Bezeichnung | Einer der folgenden:  </br>-Die Bezeichnungs-ID </br>-NULL, wenn keine Bezeichnung             |
-| **Attachmentlabel,** gefolgt von **Label** und **supportedextensions**    | Einer der folgenden:  </br></br>**Fall** </br>-Wenn das übergeordnete Element **außer ist, überprüft,** ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.</br>-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. </br>-Wenn nicht bezeichnet, und **Bezeichnung = NULL** </br></br> **false:** Für alle anderen Fälle 
+| **Except**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
+| **SentTo,** gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br />-Wenn das übergeordnete Element **außer ist, überprüft,** ob sich **alle** Empfänger in einer der Domänen befinden.<br />-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
+| **EmailLabel,** gefolgt von Bezeichnung | Eine der folgenden Möglichkeiten:  <br />-Die Bezeichnungs-ID <br />-NULL, wenn keine Bezeichnung             |
+| **Attachmentlabel,** gefolgt von **Label** und **supportedextensions**    | Eine der folgenden Möglichkeiten:  <br /><br />**Fall** <br />-Wenn das übergeordnete Element **außer ist, überprüft,** ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br />-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br />-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br /><br /> **false:** Für alle anderen Fälle 
 | | |
 
 #### <a name="rule-action-syntax"></a>Syntax der Regel Aktion
@@ -1452,9 +1471,9 @@ Regel Aktionen können eines der folgenden sein:
 
 |Aktion  |Syntax  |Beispielnachricht  |
 |---------|---------|---------|
-|**Blockieren**     |    `Block (List<language, [title, body]>)`     |    ***E-Mail blockiert***</br></br>  *Sie sind im Begriff, Inhalte, die als **geheim** klassifiziert sind, an einen oder mehrere nicht vertrauenswürdige Empfänger zu senden:*</br>*`rsinclair@contoso.com`*</br></br>*Diese Aktion wird von ihrer Organisations Richtlinie nicht zugelassen. Entfernen Sie diese Empfänger, oder ersetzen Sie den Inhalt.*|
-|**Warnen**     | `Warn (List<language,[title,body]>)`        |  ***Bestätigung erforderlich***</br></br>*Sie sind im Begriff, Inhalte, die als **Allgemein** klassifiziert sind, an einen oder mehrere nicht vertrauenswürdige Empfänger zu senden:*</br>*`rsinclair@contoso.com`*</br></br>*Ihre Organisations Richtlinie erfordert eine Bestätigung, dass Sie diesen Inhalt senden müssen.*       |
-|**Fertigte**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` </br></br>Einschließlich bis zu drei Optionen.        |  ***Begründung erforderlich*** </br></br>*Ihre Organisations Richtlinie erfordert eine Begründung, um Inhalte zu senden, die als **Allgemein** an nicht vertrauenswürdige Empfänger klassifiziert sind.*</br></br>*-Ich bestätige, dass die Empfänger für die Freigabe dieses Inhalts genehmigt sind.*</br>*-Mein Manager hat die Freigabe dieses Inhalts genehmigt*</br>*-Andere, wie erläutert* |
+|**Blockieren**     |    `Block (List<language, [title, body]>)`     |    **_E-Mail blockiert_* _<br /><br />  _You sind im Begriff, Inhalte zu senden, die als **geheimer** Schlüssel an einen oder mehrere nicht vertrauenswürdige Empfänger klassifiziert sind: *<br />* `rsinclair@contoso.com` *<br /><br />* Ihre Organisations Richtlinie lässt diese Aktion nicht zu. Entfernen Sie diese Empfänger, oder ersetzen Sie den Inhalt. *|
+|**Warnen**     | `Warn (List<language,[title,body]>)`        |  **_Bestätigung erforderlich_* _<br /><br />_You sind im Begriff, Inhalte zu senden, die als **Allgemein** an einen oder mehrere nicht vertrauenswürdige Empfänger klassifiziert sind: *<br />* `rsinclair@contoso.com` *<br /><br />* Ihre Organisations Richtlinie erfordert eine Bestätigung, dass Sie diesen Inhalt senden können. *       |
+|**Fertigte**     | `Justify (numOfOptions, hasFreeTextOption, List<language, [Title, body, options1,options2….]> )` <br /><br />Einschließlich bis zu drei Optionen.        |  **_Begründung erforderlich_* _ <br /><br />_Your Organisations Richtlinie erfordert eine Begründung, um Inhalte zu senden, die als **Allgemein** an nicht vertrauenswürdige Empfänger klassifiziert sind. *<br /><br />* -Ich bestätige, dass die Empfänger für die Freigabe dieses Inhalts genehmigt sind. *<br />* Meine Vorgesetzten genehmigte Freigabe dieses Inhalts *<br />* , wie erläutert * |
 | | | |
 
 ##### <a name="action-parameters"></a>Aktionsparameter
@@ -1463,7 +1482,7 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |Beschreibung  |
+|Parameter  |BESCHREIBUNG  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
 | `${MatchedLabelName}`      | Die **Bezeichnung** "Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
@@ -1478,7 +1497,7 @@ Alle Texte unterstützen die folgenden dynamischen Parameter:
 > Nur übergeordnete Sprachnamen werden unterstützt, z `en` . b..
 > 
 
-### <a name="sample-popup-customziation-json-code"></a>Beispielpopup-Beispiel für customziierung. JSON-Code
+### <a name="sample-popup-customization-json-code"></a>Beispiel für eine Popup Anpassung. JSON-Code
 
 Die folgenden Sätze von **JSON** -Code veranschaulichen, wie Sie eine Reihe von Regeln definieren können, die Steuern, wie Outlook Popup Meldungen für Ihre Benutzer anzeigt.
 
@@ -1486,7 +1505,7 @@ Die folgenden Sätze von **JSON** -Code veranschaulichen, wie Sie eine Reihe von
 - [**Beispiel 2**: Blockieren von nicht klassifizierten Office-Anlagen](#example-2-block-unclassified-office-attachments)
 - [**Beispiel 3**: verlangen Sie, dass der Benutzer das Senden einer vertraulichen e-Mail oder Anlage akzeptiert.](#example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment)
 - [**Beispiel 4**: warnen bei e-Mail ohne Bezeichnung und einer Anlage mit einer bestimmten Bezeichnung](#example-4-warn-on-mail-with-no-label-and-an-attachment-with-a-specific-label)
-- [**Beispiel 5**: Aufforderung zur Eingabe eines rechtfertigen Befehls mit zwei vordefinierten Optionen und einer zusätzlichen Free-Text-Option](#example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option)
+- [**Beispiel 5**: Aufforderung zur Eingabe einer Begründung, mit zwei vordefinierten Optionen und einer zusätzlichen Free-Text-Option](#example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option)
 
 #### <a name="example-1-block-internal-emails-or-attachments"></a>Beispiel 1: blockieren interner e-Mails oder Anhänge
 
@@ -1540,7 +1559,7 @@ In diesem Beispiel ist **89a453df-5df4-4976-8191-259d0cf9560a** die ID der **int
 
 #### <a name="example-2-block-unclassified-office-attachments"></a>Beispiel 2: Blockieren von nicht klassifizierten Office-Anlagen
 
-Mit dem folgenden **JSON** -Code wird verhindert, dass nicht klassifizierte Office-Anlagen oder e-Mails an externe-eints gesendet werden.
+Mit dem folgenden **JSON** -Code wird verhindert, dass nicht klassifizierte Office-Anlagen oder e-Mails an externe Empfänger gesendet werden.
 
 Im folgenden Beispiel ist die Anlagen Liste, die eine Bezeichnung erfordert,: **. doc,. DOCM,. docx,. dot,. dotm,. DOTX,. POTM,. POTX,. PPS,. ppsm,. ppsx,. ppt,. pptm,. pptx,. VDW,. vsd,. vsdm,. vsdx,. VSS,. VSSM,. VST,. VSTM,. vssx,. vstx,. xls,. xlsb,. xlt,. xlsm,. xlsx,. xltm,. xltx**
 
@@ -1624,9 +1643,9 @@ Im folgenden Beispiel ist die Anlagen Liste, die eine Bezeichnung erfordert,: **
 
 #### <a name="example-3-require-the-user-to-accept-sending-a-confidential-email-or-attachment"></a>Beispiel 3: verlangen Sie, dass der Benutzer das Senden einer vertraulichen e-Mail oder Anlage akzeptiert.
 
-Im folgenden Beispiel wird in Outlook eine Meldung angezeigt, in der der Benutzer gewarnt wird, dass Sie eine **vertrauliche** e-Mail oder eine Anlage an externe Empfänger sendet. Außerdem muss der Benutzer die **Annahme**auswählen. 
+Im folgenden Beispiel wird in Outlook eine Meldung angezeigt, in der der Benutzer gewarnt wird, dass Sie eine **vertrauliche** e-Mail oder eine Anlage an externe Empfänger sendet. Außerdem muss der Benutzer die **Annahme** auswählen. 
 
-Diese Art von Warnmeldung wird technisch gesehen als eine Begründung betrachtet, da der Benutzer **Ich akzeptiere**auswählen muss.
+Diese Art von Warnmeldung wird technisch gesehen als eine Begründung betrachtet, da der Benutzer **Ich akzeptiere** auswählen muss.
 
 ``` powershell
 {   
@@ -1717,7 +1736,7 @@ Standardmäßig erhalten e-Mails mit der Bezeichnung Anhänge nicht automatisch 
 }
 ```
 
-#### <a name="example-5-prompt-for-a-justificaiton-with-two-predefined-options-and-an-extra-free-text-option"></a>Beispiel 5: Aufforderung zur Eingabe eines rechtfertigen Befehls mit zwei vordefinierten Optionen und einer zusätzlichen Free-Text-Option
+#### <a name="example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option"></a>Beispiel 5: Aufforderung zur Eingabe einer Begründung, mit zwei vordefinierten Optionen und einer zusätzlichen Free-Text-Option
 
 Der folgende **JSON** -Code bewirkt, dass Outlook den Benutzer zur Eingabe einer Begründung für seine Aktion auffordert. Der Text für die Begründung enthält zwei vordefinierte Optionen sowie eine dritte, freie Text Option.
 
@@ -1771,11 +1790,11 @@ Der folgende **JSON** -Code bewirkt, dass Outlook den Benutzer zur Eingabe einer
 
 Standardmäßig beträgt das Timeout für SharePoint-Interaktionen zwei Minuten, nach denen der versuchte AIP-Vorgang fehlschlägt.
 
-Ab [Version 2.8.85](unifiedlabelingclient-version-release-history.md#version-2885-public-preview)können AIP-Administratoren dieses Timeout mithilfe der folgenden erweiterten Eigenschaften steuern, indem Sie eine **hh: mm: SS** -Syntax verwenden, um die Timeouts zu definieren:
+Ab [Version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-28850)können AIP-Administratoren dieses Timeout mithilfe der folgenden erweiterten Eigenschaften steuern, indem Sie eine **hh: mm: SS** -Syntax verwenden, um die Timeouts zu definieren:
 
 - **Sharepointwebrequesttimeout**. Bestimmt das Timeout für alle AIP-Webanforderungen für SharePoint. Standardwert = 2 Minuten.
 
-    Wenn Ihre Richtlinie beispielsweise **Global**benannt ist, aktualisiert der folgende PowerShell-Beispiel Befehl den Timeout Wert für die Webanforderung auf 5 Minuten.
+    Wenn Ihre Richtlinie beispielsweise **Global** benannt ist, aktualisiert der folgende PowerShell-Beispiel Befehl den Timeout Wert für die Webanforderung auf 5 Minuten.
 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointWebRequestTimeout="00:05:00"}
@@ -1783,7 +1802,7 @@ Ab [Version 2.8.85](unifiedlabelingclient-version-release-history.md#version-288
 
 - **Sharepointfilewebrequesttimeout**. Bestimmt das Timeout speziell für SharePoint-Dateien über AIP-Webanforderungen. Standardwert = 15 Minuten
 
-    Wenn Ihre Richtlinie beispielsweise **Global**benannt ist, aktualisiert der folgende PowerShell-Beispiel Befehl den Timeout Wert für die Datei-Webanforderung auf 10 Minuten.
+    Wenn Ihre Richtlinie beispielsweise **Global** benannt ist, aktualisiert der folgende PowerShell-Beispiel Befehl den Timeout Wert für die Datei-Webanforderung auf 10 Minuten.
 
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
@@ -1791,14 +1810,14 @@ Ab [Version 2.8.85](unifiedlabelingclient-version-release-history.md#version-288
 
 ## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails
 
-Leistungsprobleme können in Outlook auftreten, wenn die S/MIME-e-Mails im Lesebereich geöffnet sind. Um diese Probleme zu vermeiden, aktivieren Sie die erweiterte **outlookskipsmimeonleseringpaneproperty** -Eigenschaft. 
+Leistungsprobleme können in Outlook auftreten, wenn die S/MIME-e-Mails im Lesebereich geöffnet sind. Um diese Probleme zu vermeiden, aktivieren Sie die erweiterte **outlookskipsmimeonleseringpaneenable** -Eigenschaft. 
 
 Wenn Sie diese Eigenschaft aktivieren, wird verhindert, dass die AIP-Leiste und die e-Mail-Klassifizierungen im Lesebereich angezeigt werden.
 
-Wenn Ihre Richtlinie beispielsweise **Global**benannt ist, aktiviert der folgende PowerShell-Beispiel Befehl die **outlookskipsmimeonleseingpaneproperty** -Eigenschaft:
+Wenn Ihre Richtlinie beispielsweise **Global** benannt ist, aktiviert der folgende PowerShell-Beispiel Befehl die **outlookskipsmimeonleseingpaneaktivierte** Eigenschaft:
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneProperty="true"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPaneEnabled="true"}
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

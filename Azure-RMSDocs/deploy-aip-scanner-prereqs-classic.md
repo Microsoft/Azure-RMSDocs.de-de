@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 446369f3a46e99d138455afbb0cc90d9a8635fb2
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 4c466fbbad6314a6b0ea0dddb85d07d359a42467
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952928"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568567"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Voraussetzungen für die Installation und Bereitstellung des Azure Information Protection klassischen Scanners
 
@@ -28,7 +28,7 @@ ms.locfileid: "88952928"
 > 
 > Wenn Sie mit dem Unified-Bezeichnungs Scanner arbeiten, finden Sie weitere Informationen unter [Voraussetzungen für die Installation und Bereitstellung des Azure Information Protection Unified-Bezeichnung](deploy-aip-scanner-prereqs.md)
 
-Vergewissern Sie sich vor der Installation des Azure Information Protection Scanners, dass Ihr System die folgenden Anforderungen erfüllt:
+Stellen Sie vor der Installation des Azure Information Protection lokalen Scanners sicher, dass Ihr System die grundlegenden [Azure Information Protection Anforderungen](requirements.md)erfüllt und die folgenden Anforderungen für die Überprüfung erfüllt sind:
 
 - [Windows Server-Anforderungen](#windows-server-requirements)
 - [Dienstkontenanforderungen](#service-account-requirements)
@@ -83,7 +83,9 @@ Verwenden Sie zum Speichern der Überprüfungs Konfigurationsdaten einen SQL-Ser
 
 - **Eine lokale Instanz oder eine Remote Instanz.**
 
-    Es wird empfohlen, den SQL Server-und Scanner-Dienst auf verschiedenen Computern zu verwenden, es sei denn, Sie arbeiten mit einer kleinen Bereitstellung. 
+    Es wird empfohlen, SQL Server und den Scanner-Dienst auf unterschiedlichen Computern zu verwenden, es sei denn, Sie arbeiten mit einer kleinen Bereitstellung. Außerdem wird empfohlen, dass Sie über eine dedizierte SQL-Instanz verfügen, die nur für die Überprüfungs Datenbank dient und die nicht mit anderen Anwendungen gemeinsam genutzt wird.
+
+    Wenn Sie an einem freigegebenen Server arbeiten, stellen Sie sicher, dass die [Empfohlene Anzahl von Kernen](#windows-server-requirements) für die Ausführung der Überprüfungs Datenbank frei ist.
 
     SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:
 
@@ -99,7 +101,7 @@ Verwenden Sie zum Speichern der Überprüfungs Konfigurationsdaten einen SQL-Ser
 
 - **Capacity** (Kapazität): Informationen zur Kapazitäts Orientierung finden Sie unter [Speicheranforderungen und Kapazitätsplanung für SQL Server](#storage-requirements-and-capacity-planning-for-sql-server).
 
-- **[Sortierung ohne Beachtung](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver15)**
+- **[Sortierung ohne Beachtung](/sql/relational-databases/collations/collation-and-unicode-support)**
 
 > [!NOTE]
 > Mehrere Konfigurations Datenbanken auf demselben SQL Server werden unterstützt, wenn Sie einen benutzerdefinierten Cluster Namen (Profilnamen) für die Überprüfung angeben.
@@ -148,9 +150,9 @@ Weitere Informationen finden Sie unter
 
 Stellen Sie sicher, dass Ihr SharePoint-Server die folgenden Anforderungen erfüllt, um SharePoint-Dokument Bibliotheken und-Ordner zu überprüfen:
 
-- **Unterstützte Versionen.** Folgende Versionen werden unterstützt: SharePoint 2019, SharePoint 2016, SharePoint 2013 und SharePoint 2010. Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.
+- **Unterstützte Versionen.** Folgende Versionen werden unterstützt: SharePoint 2019, SharePoint 2016 und SharePoint 2013. Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.
 
-- **Versionsverwaltung.** Wenn Sie die [Versions](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein.  
+- **Versionsverwaltung.** Wenn Sie die [Versions](/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein.  
 
 - **Große SharePoint-Farmen.** Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. Weitere Informationen finden Sie unter [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
@@ -168,15 +170,15 @@ Weitere Informationen finden Sie [unter vom Azure Information Protection-Client 
 
 Um Dateien zu überprüfen, dürfen die Dateipfade maximal 260 Zeichen lang sein, es sei denn, der Scanner ist unter Windows 2016 installiert, und der Computer ist für die Unterstützung von langen Pfaden konfiguriert.
 
-Windows 10-und Windows Server 2016-Support Pfadlängen von mehr als 260 Zeichen mit der folgenden [Gruppenrichtlinien Einstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **lokale Computer Richtlinie**  >  **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **Aktivieren von Win32 Long-Pfaden**
+Windows 10-und Windows Server 2016-Support Pfadlängen von mehr als 260 Zeichen mit der folgenden [Gruppenrichtlinien Einstellung](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **lokale Computer Richtlinie**  >  **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **Aktivieren von Win32 Long-Pfaden**
 
-Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
+Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 ## <a name="usage-statistics-requirements"></a>Anforderungen an die Nutzungsstatistik
 
 Deaktivieren Sie Verwendungs Statistiken mithilfe einer der folgenden Methoden:
 
-- Festlegen des [allowtelemetry](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-install#to-install-the-azure-information-protection-client-by-using-the-executable-installer) -Parameters auf 0
+- Festlegen des [allowtelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) -Parameters auf 0
 
 - Stellen Sie sicher, dass die Option zur **Verbesserung der Azure Information Protection durch das Senden von Nutzungsstatistiken an Microsoft** während der Überprüfung der Installation nicht ausgewählt ist.
 
@@ -237,15 +239,15 @@ Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Sch
       
     In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie unterschiedliche Konten verwenden, benötigen beide die db_owner Rolle für die scannerkonfigurationsdatenbank. Erstellen Sie diesen Benutzer und die Rechte bei Bedarf. 
 
-    Wenn Sie keinen eigenen Cluster Namen (Profilnamen) für die Überprüfung angeben, wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ \<computer_name> **benannt. </br>Setzen Sie [die Erstellung eines Benutzers fort, und erteilen Sie db_owner Rechte für die Datenbank](#create-a-user-and-grant-db_owner-rights-manually). 
+    Wenn Sie keinen eigenen Cluster Namen (Profilnamen) für die Überprüfung angeben, wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ \<computer_name>** benannt. </br>Setzen Sie [die Erstellung eines Benutzers fort, und erteilen Sie db_owner Rechte für die Datenbank](#create-a-user-and-grant-db_owner-rights-manually). 
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
     
-    - HKEY_LOCAL_MACHINE \software\wow6432node \microsoft\msipc\server
-    - HKEY_LOCAL_MACHINE \software\microsoft\msipc\server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
 
 Wenn nach dem Konfigurieren dieser Berechtigungen ein Fehler angezeigt wird, wenn Sie den Scanner installieren, kann der Fehler ignoriert werden, und Sie können den Überprüfungs Dienst manuell starten.
 
@@ -302,10 +304,10 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 
 Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sollten Sie beim Konfigurieren Ihres Scanners eine der folgenden Optionen verwenden:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
-|**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle**fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
-|**Definieren einer Standard Bezeichnung**     |   Definieren Sie eine Standard Bezeichnung in der [Richtlinie](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), im [Inhalts Scanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)oder im [Repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In diesem Fall wendet der Scanner die Standard Bezeichnung auf alle gefundenen Dateien an.       |
+|**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle** fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
+|**Definieren einer Standard Bezeichnung**     |   Definieren Sie eine Standard Bezeichnung in der [Richtlinie](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), im [Inhalts Scanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)oder im [Repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In diesem Fall wendet der Scanner die Standard Bezeichnung auf alle gefundenen Dateien an.       |
 | | |
 
 ## <a name="next-steps"></a>Nächste Schritte

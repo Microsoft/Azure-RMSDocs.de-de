@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d6814e3a7b34ab25d8b38f2813440a717ad4bd1a
-ms.sourcegitcommit: a606376373961dd4ce103f3cb465594831093820
+ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
+ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281952"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "95568555"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Was ist der klassische Azure Information Protection-Scanner?
 
@@ -34,10 +34,10 @@ Der AIP-Scanner wird als Dienst unter Windows Server ausgeführt und ermöglicht
 
 - **UNC-Pfade** für Netzwerkfreigaben, die das SMB-Protokoll (Server Message Block) verwenden.
 
-- **SharePoint-Dokument Bibliotheken und-Ordner** für SharePoint Server 2019 über SharePoint Server 2013. SharePoint 2010 wird auch für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
+- **SharePoint-Dokument Bibliotheken und-Ordner** für SharePoint Server 2019 über SharePoint Server 2013. 
 
 > [!NOTE]
-> Verwenden Sie zum Überprüfen und Bezeichnen von Dateien auf Cloudrepositorys [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) anstelle des Scanners.
+> Verwenden Sie zum Überprüfen und Bezeichnen von Dateien auf Cloudrepositorys [Cloud App Security](/cloud-app-security/) anstelle des Scanners.
 >
 ## <a name="azure-information-protection-classic-scanner-overview"></a>Übersicht über Azure Information Protection klassischen Scanner
 
@@ -47,7 +47,7 @@ Die folgende Abbildung zeigt die AIP-Überprüfungs Architektur, in der die Übe
 
 :::image type="content" source="media/classic-scanner-arch.png" alt-text="Azure Information Protection klassische scannerarchitektur":::
 
-Zum Überprüfen der Dateien werden auf dem Computer installierte IFilters verwendet. Um zu ermitteln, ob die Dateien beschriftet werden müssen, verwendet die Überprüfung die vertraulichen Informationstypen und die Mustererkennung von Office 365 (Data Loss Prevention, DLP) oder Office 365 Regex-Muster.
+Zum Überprüfen der Dateien werden auf dem Computer installierte IFilters verwendet. Um zu ermitteln, ob die Dateien beschriftet werden müssen, verwendet die Überprüfung die in den Microsoft 365 integrierten Datenverlust (Data Loss Prevention, DLP) vertraulichen Informationstypen und die Mustererkennung bzw. Microsoft 365 Regex-Muster.
 
 Der Scanner verwendet den Azure Information Protection Client und kann dieselben Dateitypen wie der Client klassifizieren und schützen. Weitere Informationen finden Sie [unter vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md).
 
