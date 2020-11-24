@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/05/2020
+ms.date: 11/15/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 748ca0103885226ae646b4d4fb7761ff84ae0796
-ms.sourcegitcommit: d4ac18506e3f0e7b39466eb811d3129100512a78
+ms.openlocfilehash: 0a1ac4e5470df68076585d9f328b28c76377a26d
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95568534"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95735013"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -37,11 +37,11 @@ Mit dem Azure Information Protection-Viewer können keine Anlagen in einem gesch
 
 Weitere Informationen finden Sie unter [Administrator Handbuch: vom Azure Information Protection-Client unterstützte Dateitypen](rms-client/client-admin-guide-file-types.md).
 
-## <a name="known-issues-for-installing-the-aip-client"></a>Bekannte Probleme bei der Installation des AIP-Clients
+## <a name="known-issues-for-aip-and-exploit-protection"></a>Bekannte Probleme bei AIP und Exploit Protection
 
-Der Azure Information Protection-Client wird nicht auf Computern unterstützt, auf denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist.
+Der Azure Information Protection-Client wird auf Computern mit .NET 2 oder 3 nicht unterstützt, bei denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist.
 
-Achten Sie darauf, den Exploit-Schutz vor der Installation von AIP zu deaktivieren 
+Wenn Sie zusätzlich zu einer .NET 4. x-Version, die für Ihr System erforderlich ist, über eine .NET-Version 2 oder 3 verfügen, sollten Sie den Exploit-Schutz vor der Installation von AIP deaktivieren. 
 
 Führen Sie Folgendes aus, um den Exploit-Schutz über PowerShell zu deaktivieren:
 
@@ -49,7 +49,7 @@ Führen Sie Folgendes aus, um den Exploit-Schutz über PowerShell zu deaktiviere
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
 
-Weitere Informationen finden Sie unter [Azure Information Protection Anforderungen](requirements.md).
+Weitere Informationen finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified Bezeichnung-Client](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>PowerShell-Unterstützung für den Azure Information Protection-Client
 
@@ -91,7 +91,7 @@ Das Veröffentlichen von Richtlinien kann bis zu 24 Stunden dauern.
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
     
-    Weitere Informationen finden Sie unter
+    Weitere Informationen finden Sie unter:
 
     - [**Einheitlicher** Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)
     - [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)

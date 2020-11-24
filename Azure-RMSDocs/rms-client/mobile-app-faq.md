@@ -1,10 +1,10 @@
 ---
-title: Apps für IOS & Android Azure Information Protection
-description: Grundlegende Informationen zu den Azure Information Protection-Apps (AIP) für IOS-und Android-Geräte
+title: Mobile Apps für IOS & Android Azure Information Protection
+description: Erfahren Sie mehr über die Grundlagen zu den mobilen Apps für Azure Information Protection (AIP) für IOS-und Android-Geräte
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/07/2020
+ms.date: 11/24/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
-ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
+ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "95568399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734963"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Was ist die Azure Information Protection-App für IOS oder Android?
 
 *Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Mit dem Azure Information Protection-Mobile App für IOS und Android können Sie geschützte e-Mail-Nachrichten, PDF-Dateien, Bilder und Textdateien anzeigen und sind hilfreich, wenn ihre regulären Apps für diese Dateitypen keinen Schutz unterstützen. 
+Die Azure Information Protection-Mobile App für IOS und Android ist eine Viewer-APP, mit der Sie geschützte e-Mail-Nachrichten, PDF-Dateien, Bilder und Textdateien anzeigen können. Sie sind hilfreich, wenn ihre regulären Apps für diese Dateitypen keinen Schutz unterstützen. 
 
 Wenn beispielsweise geschützte e-Mails in ihren regulären e-Mail-Mobile App als Anlagen angezeigt werden, können Sie die AIP-Mobile App verwenden, um diese e-Mail anzuzeigen.
 

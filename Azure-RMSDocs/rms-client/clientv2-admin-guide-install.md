@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren zum Bereitstelle
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/26/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26cb50eb6532eccee86eb28313c1cd1ac1751949
-ms.sourcegitcommit: ed3745bff0f0d4883200a310a0b63f7794149330
+ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
+ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "95568417"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95735047"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -36,14 +36,14 @@ Die folgenden Voraussetzungen für den AIP Unified-Bezeichnungs Client sind zus�
 
 |Anforderung  |BESCHREIBUNG  |
 |---------|---------|
-|**Microsoft .NET Framework 4.6.2**     | Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2. </br></br>Wenn dieses Framework fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.       |
-|**Microsoft .NET Framework 4.5.2**     | Wenn der Azure Information Protection Viewer separat installiert wird, ist für die Viewer-Anwendung mindestens eine Version von Microsoft .NET Framework 4.5.2 erforderlich. </br></br>**Wichtig:** Wenn dieses Framework für den Viewer fehlt, wird es vom ausführbaren Installationsprogramm *nicht* heruntergeladen oder installiert.        |
-|**Windows PowerShell-Mindestversion 4,0**     |   Das PowerShell-Modul für den Client erfordert eine Mindestversion von Windows PowerShell 4,0, die unter Umständen unter älteren Betriebssystemen installiert werden muss. </br></br>Weitere Informationen finden Sie unter [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Installieren von Windows PowerShell 4.0). </br></br>**Wichtig:** Diese Voraussetzung wird vom Installationsprogramm *nicht* überprüft oder installiert. Zum Überprüfen, welche Version von Windows PowerShell auf dem Computer ausgeführt wird, geben Sie `$PSVersionTable` in einer PowerShell-Sitzung ein.      |
+|**Microsoft .NET Framework 4.6.2**     | Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2. <br><br>Wenn dieses Framework fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.       |
+|**Microsoft .NET Framework 4.5.2**     | Wenn der Azure Information Protection Viewer separat installiert wird, ist für die Viewer-Anwendung mindestens eine Version von Microsoft .NET Framework 4.5.2 erforderlich. <br><br>**Wichtig:** Wenn dieses Framework für den Viewer fehlt, wird es vom ausführbaren Installationsprogramm *nicht* heruntergeladen oder installiert.        |
+|**Windows PowerShell-Mindestversion 4,0**     |   Das PowerShell-Modul für den Client erfordert eine Mindestversion von Windows PowerShell 4,0, die unter Umständen unter älteren Betriebssystemen installiert werden muss. <br><br>Weitere Informationen finden Sie unter [How to Install Windows PowerShell 4.0](https://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Installieren von Windows PowerShell 4.0). <br><br>**Wichtig:** Diese Voraussetzung wird vom Installationsprogramm *nicht* überprüft oder installiert. Zum Überprüfen, welche Version von Windows PowerShell auf dem Computer ausgeführt wird, geben Sie `$PSVersionTable` in einer PowerShell-Sitzung ein.      |
 |**Bildschirmauflösung von mehr als 800 × 600**    |     Bei einer Auflösung von 800 × 600 und niedriger kann das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** nicht vollständig angezeigt werden, wenn Sie im Datei-Explorer mit der rechten Maustaste auf eine Datei oder einen Ordner klicken.    |
-|**Microsoft Online Services-Anmeldeassistent 7.250.4303.0**     |   Für Computer, auf denen Office 2010 ausgeführt wird, ist die Microsoft Online Services-Anmelde-Assistent-Version 7.250.4303.0 erforderlich, die in der Client Installation enthalten ist. </br></br>Wenn Sie über eine spätere Version des Anmelde-Assistenten verfügen, deinstallieren Sie diese, bevor Sie den Azure Information Protection Unified Bezeichnung-Client installieren. </br></br>Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmelde Assistenten mithilfe der **System Steuerungs** Option  >  **Programm und Features**  >  **deinstallieren oder ändern Sie ein Programm**.      |
-|**4482887 KB**     | Installieren Sie [1. März 2019 – KB4482887 (Betriebssystembuild 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) nur für die Windows 10-Version 1809 mit Betriebssystembuilds, die älter sind als 17763.348, damit die Information Protection-Leiste in Office-Anwendungen korrekt angezeigt wird. </br></br>Dieses Update ist nicht nötig, wenn Sie Office 365 in der Version 1902 oder höher haben.        |
+|**Microsoft Online Services-Anmeldeassistent 7.250.4303.0**     |   Für Computer, auf denen Office 2010 ausgeführt wird, ist die Microsoft Online Services-Anmelde-Assistent-Version 7.250.4303.0 erforderlich, die in der Client Installation enthalten ist. <br><br>Wenn Sie über eine spätere Version des Anmelde-Assistenten verfügen, deinstallieren Sie diese, bevor Sie den Azure Information Protection Unified Bezeichnung-Client installieren. <br><br>Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmelde Assistenten mithilfe der **System Steuerungs** Option  >  **Programm und Features**  >  **deinstallieren oder ändern Sie ein Programm**.      |
+|**4482887 KB**     | Installieren Sie [1. März 2019 – KB4482887 (Betriebssystembuild 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) nur für die Windows 10-Version 1809 mit Betriebssystembuilds, die älter sind als 17763.348, damit die Information Protection-Leiste in Office-Anwendungen korrekt angezeigt wird. <br><br>Dieses Update ist nicht nötig, wenn Sie Office 365 in der Version 1902 oder höher haben.        |
 |**Administrator Berechtigungen**| Zum Installieren des Azure Information Protection Unified Bezeichnung-Clients sind lokale Administrator Berechtigungen erforderlich.| 
-|**Exploit-Schutz deaktivieren**   |Der AIP-Client wird auf Computern, auf denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, nicht unterstützt. Achten Sie darauf, den [Exploit-Schutz](../known-issues.md#known-issues-for-installing-the-aip-client) vor der Installation des AIP-Clients zu deaktivieren.  |
+|**Exploit-Schutz deaktivieren (nur .NET 2 oder 3)**   |Der AIP-Client wird auf Computern mit .NET 2 oder 3, für die der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, nicht unterstützt. Wenn auf Ihrem Computer neben einer oben aufgeführten .NET 4. x-Version .NET 2 oder 3 vorhanden ist, sollten Sie den [Exploit-Schutz deaktivieren](../known-issues.md#known-issues-for-aip-and-exploit-protection) , bevor Sie den AIP-Client installieren.  |
 |||
         
 ### <a name="configure-your-group-policy-to-prevent-disabling-aip"></a>Konfigurieren Sie die Gruppenrichtlinie, um das Deaktivieren von AIP zu verhindern.
