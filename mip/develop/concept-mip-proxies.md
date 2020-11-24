@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2020
 ms.author: tommos
-ms.openlocfilehash: 967301e8356b8d0380c9c8b66bc2073de4dd8481
-ms.sourcegitcommit: 3ebc57dde712f44286497b9876af1042066f5d01
+ms.openlocfilehash: fdbcf9d618612021a971af34380b65dc062c2802
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093181"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567916"
 ---
 # <a name="microsoft-information-protection-sdk---proxy-support"></a>Microsoft Information Protection SDK-Proxy Unterstützung
 
@@ -42,7 +42,7 @@ MIP SDK-Anwendungen, die unter Windows ausgeführt werden, verwenden WinHTTP fü
 * Manuelle Konfiguration statischer Proxys:
   * WinHTTP-Konfiguration mithilfe des netsh-Befehls
 
-Weitere Informationen zum Konfigurieren von WinHTTP finden Sie in der [WinHTTP-Dokumentation](https://docs.microsoft.com/windows/win32/winhttp/winhttp-start-page).
+Weitere Informationen zum Konfigurieren von WinHTTP finden Sie in der [WinHTTP-Dokumentation](/windows/win32/winhttp/winhttp-start-page).
 
 ## <a name="proxies-on-other-platforms"></a>Proxys auf anderen Plattformen
 
@@ -50,7 +50,7 @@ MIP SDK unterstützt keine vollständig transparenten Proxys eines beliebigen Ty
 
 ## <a name="custom-http-delegate"></a>Custom http-Delegat
 
-Das Microsoft Information Protection SDK unterstützt die Implementierung eines benutzerdefinierten HTTP-Delegaten, der den Standard-HTTP-Stapel des SDK überschreiben kann. Wenn keine Features vorhanden sind oder eine bestimmte HTTP-Implementierung erforderlich ist, kann dieser Delegat implementiert werden, indem eine neue Klasse hinzugefügt wird, die erbt [`mip::HttpDelegate`](https://docs.microsoft.com/information-protection/develop/reference/class_mip_httpdelegate) .
+Das Microsoft Information Protection SDK unterstützt die Implementierung eines benutzerdefinierten HTTP-Delegaten, der den Standard-HTTP-Stapel des SDK überschreiben kann. Wenn keine Features vorhanden sind oder eine bestimmte HTTP-Implementierung erforderlich ist, kann dieser Delegat implementiert werden, indem eine neue Klasse hinzugefügt wird, die erbt [`mip::HttpDelegate`](./reference/class_mip_httpdelegate.md) .
 
 Diese von `mip::HttpDelegate` abgeleitete Klasse wird über Folgendes festgelegt `mip::FileProfile::Settings` :
 
@@ -67,11 +67,11 @@ profileSettings.SetHttpDelegate(httpDelegate);
 
 ## <a name="other-workarounds"></a>Weitere Problem Umgehungen
 
-Wenn ein benutzerdefinierter HTTP-Delegat keine Option ist, muss der Proxy umgangen werden, und die direkte Netzwerk Konnektivität für die MIP-Bezeichnung und die Schutz Endpunkte sowie die Azure Active Directory werden zugelassen. Wenn die Überwachungs [Protokollierung](https://docs.microsoft.com/azure/information-protection/reports-aip) gewünscht ist, ist auch der Endpunkt für die Überwachungs Protokollierung erforderlich.
+Wenn ein benutzerdefinierter HTTP-Delegat keine Option ist, muss der Proxy umgangen werden, und die direkte Netzwerk Konnektivität für die MIP-Bezeichnung und die Schutz Endpunkte sowie die Azure Active Directory werden zugelassen. Wenn die Überwachungs [Protokollierung](/azure/information-protection/reports-aip) gewünscht ist, ist auch der Endpunkt für die Überwachungs Protokollierung erforderlich.
 
 | Endpunkt           | Hostname                                                                                                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Schutzdienst | https://api.aadrm.com                                                                                                                                                   |
-| Policy             | https:// \* . Protection.Outlook.com                                                                                                                                       |
+| Richtlinie             | https:// \* . Protection.Outlook.com                                                                                                                                       |
 | Überwachungsprotokollierung      | https:// \* . Events.Data.Microsoft.com, https:// \* . Aria.Microsoft.com (nur IOS)                                                                                          |
-| Authentifizierung     | [Lesen Sie Azure AD Dokumentation.](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+| Authentication     | [Lesen Sie Azure AD Dokumentation.](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |

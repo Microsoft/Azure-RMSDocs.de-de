@@ -12,12 +12,12 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0b3a2b19efe157dc62c76349f859cdb7baf24bb1
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 5957894b004fba25fb50ad921174116648378f66
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047642"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568081"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Azure Information Protection-Client für Windows
 
@@ -35,7 +35,7 @@ Der Azure Information Protection Client (klassisch) ist der ursprüngliche herun
 
 Verwenden Sie die folgenden Ressourcen für den klassischen Client:
 
-- [Azure Information Protection-Client: Versions Veröffentlichungs Verlauf](client-version-release-history.md)
+- [Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen](client-version-release-history.md)
 
 - [Azure Information Protection-Client – Administratorhandbuch](client-admin-guide.md)
 
@@ -44,7 +44,7 @@ Verwenden Sie die folgenden Ressourcen für den klassischen Client:
 > [!TIP]
 > Es gibt auch eine Azure Information Protection-App für iOS und Android. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](mobile-app-faq.md ).
 > 
-> Für Macintosh-Computer: Verwenden Sie die RMS-Freigabe-APP, und lesen Sie die [FAQ für die Rights Management Freigabe Anwendung für Mobile und Mac-Plattformen](https://technet.microsoft.com/dn451248).
+> Für Macintosh-Computer: Verwenden Sie die RMS-Freigabe-APP, und lesen Sie die [FAQ für die Rights Management Freigabe Anwendung für Mobile und Mac-Plattformen](/previous-versions/msdn10/dn451248(v=msdn.10)).
 
 ## <a name="install-instructions"></a>Installationsanleitung
 

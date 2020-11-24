@@ -12,12 +12,12 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d02f0e3e848e4a4743f7e61344f12108cca8c714
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: d7cd108b74d42a9d7bb7aab0480328b642697288
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136907"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567763"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
@@ -47,7 +47,7 @@ Wenn das Konto erstellt wurde, finden Sie auf der letzten Seite Links zum Herunt
 
     Microsoft verwendet Ihre E-Mail-Adresse, um zu überprüfen, ob Ihre Organisation bereits über ein [Abonnement für Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder ein [Office 365-Abonnement mit Datenschutz per Azure Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) verfügt. Wenn eines dieser beiden Abonnements gefunden wird, ist es nicht nötig, dass Sie über RMS for Individuals verfügen. Sie werden sofort angemeldet, und die Self-Service-Registrierung für RMS for Individuals wird abgebrochen. Wird eines dieser Abonnements nicht gefunden, fahren Sie mit dem nächsten Schritt fort.
 
-4. Warten Sie darauf, dass eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse gesendet wird. Diese E-Mail wird vom Office 365-Team (support@email.microsoftonline.com) gesendet und hat den Betreff **Finish signing up for Microsoft Azure Information Protection** (Registrierung für Microsoft Azure Information Protection beenden).
+4. Warten Sie darauf, dass eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse gesendet wird. Er wird vom Microsoft 365 Team ( support@email.microsoftonline.com ) und hat den Betreff Fertigstellen der Registrierung **für Microsoft Azure Information Protection**.
 
 5. Wenn Sie die E-Mail erhalten, klicken Sie auf **Yes, that‘s me** (Ja, das bin ich), um Ihre E-Mail-Adresse zu bestätigen und den Registrierungsprozess abzuschließen.
 
@@ -62,5 +62,5 @@ Wenn Sie nach Erstellung des Kontos aufgefordert werden, sich anzumelden, um ges
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-RMS for Individuals ist ein Beispiel für die Verwendung des Self-Service-Registrierungs Features, das von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise dieses Features finden Sie unter [Was ist die Self-Service-Registrierung für Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in der Azure Active Directory-Dokumentation.
+RMS for Individuals ist ein Beispiel für die Verwendung des Self-Service-Registrierungs Features, das von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise dieses Features finden Sie unter [Was ist Self-Service Registrierung für Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in der Azure Active Directory-Dokumentation.
 

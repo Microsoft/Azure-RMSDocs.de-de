@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: f94f885f77d15ec5c38894a4801b08908e65a166
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 60420046a1b8c102143a6d6b0dcd2d7b01f55821
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555805"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567772"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK: Konzepte für Dateihandler
 
@@ -40,7 +40,7 @@ In diesem Artikel werden die folgenden Methoden behandelt:
 
 Folgende Voraussetzungen gelten für das Erstellen eines `FileHandler`-Elements für eine bestimmte Datei:
 
-- Ein `FileProfile`-Element.
+- Eine `FileProfile`
 - Ein `FileEngine`-Element, dass `FileProfile` hinzugefügt wurde.
 - Eine Klasse, die `mip::FileHandler::Observer` erbt.
 
@@ -61,7 +61,7 @@ fileEngine->CreateFileHandlerAsync(filePath, std::make_shared<FileHandlerObserve
 auto handler = createFileHandlerFuture.get();
 ```
 
-Wenn das `FileHandler`-Objekt erfolgreich erstellt wurde, können Dateivorgänge („Get“/„Set“/„Delete“/„Commit“) ausgeführt werden.
+Nachdem das `FileHandler`-Objekt erfolgreich erstellt wurde, können Vorgänge (get/set/delete/commit) ausgeführt werden.
 
 ## <a name="read-a-label"></a>Lesen einer Bezeichnung
 
@@ -69,7 +69,7 @@ Wenn das `FileHandler`-Objekt erfolgreich erstellt wurde, können Dateivorgänge
 
 Es gibt einige Voraussetzungen, um Metadaten erfolgreich aus einer Datei zu lesen und in etwas zu übersetzen, das in Anwendungen verwendet werden kann.
 
-- Die Bezeichnung, die gelesen wird, muss noch im O365-Dienst vorhanden sein. Wenn sie vollständig gelöscht wurde, kann das SDK keine Informationen zu dieser Bezeichnung abrufen und gibt einen Fehler zurück.
+- Die Bezeichnung, die gelesen wird, muss im Microsoft 365-Dienst noch vorhanden sein. Wenn sie vollständig gelöscht wurde, kann das SDK keine Informationen zu dieser Bezeichnung abrufen und gibt einen Fehler zurück.
 - Die Dateimetadaten müssen intakt sein. Zu diesen Metadaten gehören die folgenden Angaben:
   - Attribute1
   - Attribute2
@@ -93,11 +93,11 @@ Bezeichnungsdaten können aus dem `label`-Objekt gelesen und an jede andere Komp
 
 ## <a name="set-a-label"></a>Festlegen einer Bezeichnung
 
-Das Festlegen einer Bezeichnung ist ein zweiteiliger Vorgang. Zuerst, wenn Sie einen Handler erstellt haben, der auf die betreffende Datei verweist, kann die Bezeichnung durch Aufrufen von `FileHandler->SetLabel()` mit einigen Parametern festgelegt werden: `mip::Label`, `mip::LabelingOptions`und `mip::ProtectionOptions`. Zuerst müssen wir die Bezeichnungs-ID in eine Bezeichnung auflösen und dann die Beschriftungs Optionen definieren. 
+Das Festlegen einer Bezeichnung ist ein zweiteiliger Vorgang. Zuerst, wenn Sie einen Handler erstellt haben, der auf die betreffende Datei verweist, kann die Bezeichnung durch Aufrufen von `FileHandler->SetLabel()` mit einigen Parametern festgelegt werden: `mip::Label` , `mip::LabelingOptions` und `mip::ProtectionOptions` . Zuerst müssen wir die Bezeichnungs-ID in eine Bezeichnung auflösen und dann die Beschriftungs Optionen definieren. 
 
 ### <a name="resolve-label-id-to-miplabel"></a>Bezeichnungs-ID in MIP:: Label auflösen
 
-Der erste Parameter der **setlabel** -Funktion ist eine `mip::Label`. Häufig arbeitet die Anwendung mit Bezeichnungs Bezeichnern anstelle von Bezeichnungen. Der Bezeichnungs Bezeichner kann in den `mip::Label` aufgelöst werden, indem **getlabelbyid** für die Datei oder das Richtlinien Modul aufgerufen wird:
+Der erste Parameter der **setlabel** -Funktion ist ein-Wert `mip::Label` . Häufig arbeitet die Anwendung mit Bezeichnungs Bezeichnern anstelle von Bezeichnungen. Der Bezeichnungs Bezeichner kann `mip::Label` durch Aufrufen von **getlabelbyid** für die Datei oder das Richtlinien Modul aufgelöst werden:
 
 ```cpp
 mip::Label label = mEngine->GetLabelById(labelId);
@@ -105,14 +105,14 @@ mip::Label label = mEngine->GetLabelById(labelId);
 
 ### <a name="labeling-options"></a>Bezeichnungsoptionen
 
-Der zweite Parameter, der zum Festlegen der Bezeichnung erforderlich ist, ist `mip::LabelingOptions`. 
+Der zweite Parameter, der zum Festlegen der Bezeichnung erforderlich ist, ist `mip::LabelingOptions` . 
 
 `LabelingOptions` gibt zusätzliche Informationen zur Bezeichnung an, z.B. die `AssignmentMethod` und eine Begründung für eine Aktion.
 
 - `mip::AssignmentMethod` ist einfach ein Enumerator, der drei Werte aufweisen kann: `STANDARD`, `PRIVILEGED` oder `AUTO`. Weitere Informationen finden Sie in der Referenz zu `mip::AssignmentMethod`.
 - Eine Begründung ist nur erforderlich, wenn die Dienstrichtlinie dies erfordert *und* wenn die *vorhandene* Vertraulichkeit einer Datei herabgesetzt wird.
 
-Dieser Ausschnitt veranschaulicht das Erstellen des `mip::LabelingOptions` Objekts und das Festlegen der Grundausrichtung und der Nachricht.
+Dieser Ausschnitt veranschaulicht das Erstellen des `mip::LabelingOptions` Objekts und das Festlegen der herstellungsmeldung und der Nachricht.
 
 ```cpp
 auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
@@ -121,9 +121,9 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 ### <a name="protection-settings"></a>Schutzeinstellungen
 
-Einige Anwendungen müssen möglicherweise Vorgänge im Namen einer Delegierten Benutzeridentität ausführen. Die `mip::ProtectionSettings`-Klasse ermöglicht der Anwendung die Definition der Delegierten Identität *pro Handler*. Zuvor wurde die Delegierung von den Engine-Klassen ausgeführt. Dies hat erhebliche Nachteile beim Anwendungs Aufwand und bei der Dienst Roundtrips. Indem die Delegierten Benutzereinstellungen auf `mip::ProtectionSettings` verschoben und dieser Teil der Handlerklasse gemacht werden, entfällt dieser mehr Aufwand. Dies führt zu einer besseren Leistung für Anwendungen, die viele Vorgänge im Namen verschiedener Gruppen von Benutzer Identitäten durchführen. 
+Einige Anwendungen müssen möglicherweise Vorgänge im Namen einer Delegierten Benutzeridentität ausführen. Die- `mip::ProtectionSettings` Klasse ermöglicht der Anwendung die Definition der Delegierten Identität *pro Handler*. Zuvor wurde die Delegierung von den Engine-Klassen ausgeführt. Dies hat erhebliche Nachteile beim Anwendungs Aufwand und bei der Dienst Roundtrips. Indem die Delegierten Benutzereinstellungen in verschoben werden `mip::ProtectionSettings` und dieser Teil der Handlerklasse ist, entfällt dieser mehr Aufwand. Dies führt zu einer besseren Leistung für Anwendungen, die viele Vorgänge im Auftrag verschiedener Benutzer Identitäten durchführen. 
 
-Wenn eine Delegierung nicht erforderlich ist, übergeben Sie einfach `mip::ProtectionSettings()` an die Funktion " **setlabel** ". Wenn eine Delegierung erforderlich ist, kann dies erreicht werden, indem ein `mip::ProtectionSettings` Objekt erstellt und die Delegierte e-Mail-Adresse festgelegt wird:
+Wenn eine Delegierung nicht erforderlich ist, übergeben `mip::ProtectionSettings()` Sie einfach an die Funktion " **setlabel** ". Wenn eine Delegierung erforderlich ist, kann dies erreicht werden, indem ein `mip::ProtectionSettings` -Objekt erstellt und die Delegierte Mailadresse festgelegt wird:
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 

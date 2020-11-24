@@ -1,8 +1,8 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection – Phase 4
 description: Phase 4 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 8 bis 9 der Migration von AD RMS zu Azure Information Protection ab.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/02/2020
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01cf998fc6d4c872339d5bfa241eed4f1c9f4b6b
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: e2faf09b40daac41eb1d42ee2dcbfc7ebbc7d549
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298154"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567877"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
@@ -38,13 +38,13 @@ Gehen Sie unabhängig von der Topologie des von Ihnen ausgewählten Azure Inform
     
     Wenn dieser DNS-Eintrag vorhanden ist, können Benutzer, die Outlook im Web und mobile E-Mail-Clients verwenden, AD RMS-geschützte E-Mails in diesen Apps anzeigen. Zudem kann Exchange den von AD RMS importierten Schlüssel zum Entschlüsseln, Indizieren, Erfassen und Schützen von Inhalten verwenden, die durch AD RMS geschützt wurden.  
 
-2. Führen Sie den Exchange Online-Befehl [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) aus. Wenn Sie beim Ausführen dieses Befehls Hilfe benötigen, sehen Sie sich die ausführlichen Anweisungen unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration) an.
+2. Führen Sie den Exchange Online-Befehl [Get-IRMConfiguration](/powershell/module/exchange/get-irmconfiguration) aus. Wenn Sie beim Ausführen dieses Befehls Hilfe benötigen, sehen Sie sich die ausführlichen Anweisungen unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration) an.
     
     Überprüfen Sie mithilfe der Ausgabe, ob **AzureRMSLicensingEnabled** auf **TRUE** festlegt ist:
     
     - Wenn AzureRMSLicensingEnabled auf **TRUE** festgelegt ist, ist für diesen Schritt keine weitere Konfiguration vonnöten. 
     
-    - Wenn AzureRMSLicensingEnabled auf **FALSE** festgelegt ist, führen Sie `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` aus, führen Sie anschließend die Überprüfungsschritte vom Artikel [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen Funktionen der Office 365-Nachrichtenverschlüsselung, die auf Azure Information Protection aufgebaut sind)](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) durch, um sicherzustellen, dass Exchange Online nun zur Verwendung des Azure Rights Management-Diensts bereit ist. 
+    - Wenn azurermslicensingenabled auf **false** festgelegt ist, führen `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` Sie aus, und verwenden Sie dann die Überprüfungs Schritte aus [Einrichten neuer Microsoft 365 Nachrichten Verschlüsselungsfunktionen, die auf Azure Information Protection basieren](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) , um sicherzustellen, dass Exchange Online jetzt für die Verwendung des Azure Rights Management-Dienstanbieter bereit ist. 
 
 ## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Schritt 9 Konfigurieren der IRM-Integration für Exchange Server und SharePoint Server
 
@@ -64,7 +64,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
 > [!IMPORTANT]
 > Wenn Sie für einen Ihrer Exchange-Server noch nicht "IRiM" konfiguriert haben, führen Sie nur die Schritte 2 und 6 aus.
 > 
-> Führen Sie diese Schritte aus, wenn alle Lizenzierungs-URLs für alle Ihre AD RMS Cluster nicht im *licensingloation* -Parameter angezeigt werden, wenn Sie [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)ausführen.
+> Führen Sie diese Schritte aus, wenn alle Lizenzierungs-URLs für alle Ihre AD RMS Cluster nicht im *licensingloation* -Parameter angezeigt werden, wenn Sie [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration)ausführen.
 
 1. Suchen Sie auf jedem Exchange-Server den folgenden Ordner, und löschen Sie alle Einträge in diesem Ordner: **\programdata\microsoft\drm\server\s-1-5-18**
 
@@ -79,7 +79,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
     Set-IRMConfiguration -LicensingLocation $list
     ```
 
-    Wenn Sie " [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)" ausführen, sehen Sie nun alle Ihre URL für die AD RMS-Cluster Lizenzierung und die URL Ihres Azure Rights Management-Dienstanbieter für den Parameter " *licensingloation* ".
+    Wenn Sie " [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration)" ausführen, sehen Sie nun alle Ihre URL für die AD RMS-Cluster Lizenzierung und die URL Ihres Azure Rights Management-Dienstanbieter für den Parameter " *licensingloation* ".
 
 3.  Deaktivieren Sie nun die IRM-Funktionen für Nachrichten, die an interne Empfänger gesendet werden:
 
@@ -111,7 +111,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
 
 4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management****Verwenden Sie IRM nicht auf diesem Server**, und klicken Sie dann auf **OK**.
 
-5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners \programdata\microsoft\msipc\server \\ < *SID des Kontos, auf dem SharePoint Server>ausgeführt *wird.
+5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners \programdata\microsoft\msipc\server \\ < *SID des Kontos, auf dem SharePoint Server>ausgeführt* wird.
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Konfigurieren von Exchange und SharePoint zur Verwendung des Connectors
 

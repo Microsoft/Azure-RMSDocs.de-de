@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb50a25ee406ac6899e15480f0c665f82a7434fd
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: c3292782a3a824db1166e255be3935978c8b8ce9
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953098"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567898"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Ausführen des Azure Information Protection klassischen Scanner
 
@@ -60,7 +60,7 @@ Führen Sie diese Schritte nach Bedarf erneut aus, wenn sich Ihre Inhalte änder
 
     Führen Sie einen der folgenden Schritte aus, um den Überprüfungs Fortschritt zu überwachen
 
-    - **Aktualisieren Sie die Scanaufträge.**  Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Aktualisieren**aus.
+    - **Aktualisieren Sie die Scanaufträge.**  Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Aktualisieren** aus.
 
         Warten Sie, bis die Werte für die Spalte **Letzte Scanergebnisse** und die Spalte Letzte Überprüfung **(Endzeit)** angezeigt werden.
 
@@ -70,13 +70,13 @@ Führen Sie diese Schritte nach Bedarf erneut aus, wenn sich Ihre Inhalte änder
 
         Dieses Protokoll meldet auch, wann die Überprüfung abgeschlossen ist, einschließlich einer Zusammenfassung der Ergebnisse. Suchen Sie einfach nach der Ereignis-ID **911**. Weitere Informationen finden Sie unter [Ereignisprotokoll-IDs und Beschreibungen für den Scanner](#event-log-ids-and-descriptions-for-the-scanner).
 
-1. Überprüfen Sie nach Abschluss der Überprüfung die im Verzeichnis ** % *LocalAppData*% \ microsoft\msip\scanner\reports** gespeicherten Berichte.
+1. Überprüfen Sie nach Abschluss der Überprüfung die im Verzeichnis **% *LocalAppData*% \ microsoft\msip\scanner\reports** gespeicherten Berichte.
 
     - Die TXT-Zusammenfassungsdateien enthalten die zum Überprüfen benötigte Zeit, die Anzahl der überprüften Dateien sowie die Anzahl der Dateien mit übereinstimmenden Informationstypen.
 
     - Die CSV-Dateien enthalten mehr Details zu den einzelnen Dateien. In diesem Ordner werden für jeden Scanzyklus bis zu 60 Berichte gespeichert, die bis auf den letzten alle komprimiert werden, um die Speicherplatzbelegung zu minimieren.
 
-[Anfängliche Konfigurationen](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) weisen Sie an, die zu **ermittelnden Informationstypen** nur für die **Richtlinie**festzulegen. Diese Konfiguration bedeutet, dass nur Dateien, die die Bedingungen erfüllen, die Sie für die automatische Klassifizierung konfiguriert haben, in den ausführlichen Berichten enthalten sind.
+[Anfängliche Konfigurationen](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) weisen Sie an, die zu **ermittelnden Informationstypen** nur für die **Richtlinie** festzulegen. Diese Konfiguration bedeutet, dass nur Dateien, die die Bedingungen erfüllen, die Sie für die automatische Klassifizierung konfiguriert haben, in den ausführlichen Berichten enthalten sind.
 
 Wenn keine Bezeichnungen angewendet werden, überprüfen Sie, ob die Bezeichnungs Konfiguration eine automatische anstelle der empfohlenen Klassifizierung enthält, oder aktivieren Sie die Option **Empfohlene Bezeichnung als automatisch** aktivieren (verfügbar in Scanner Version 2.7. x. x und höher).
 
@@ -102,7 +102,7 @@ Wenn Sie diese Schritte nach der Erstkonfiguration und-Installation durchgeführ
 
 Verwenden Sie eine der folgenden Methoden, um einen aktuell laufenden Scanvorgang zu beenden:
 
-- **Azure-Portal.** Wählen Sie **Scan**Vorgang:
+- **Azure-Portal.** Wählen Sie **Scan** Vorgang:
 
     ![Beendet eine Überprüfung für den Azure Information Protection Scanner.](./media/scanner-stop-scan.png)
 
@@ -151,14 +151,14 @@ Wenn der Scanner unerwartet in der Mitte angehalten wird und das Scannen einer g
 
 - **Anzahl der dynamischen Ports**. Möglicherweise müssen Sie die Anzahl der dynamischen Ports für das Betriebssystem erhöhen, das die Dateien gehostet. Ein Grund dafür, warum der Scanner die Anzahl an zulässigen Netzwerkverbindungen überschreitet und daher angehalten wird, ist die Serverhärtung für SharePoint.
 
-    Um zu überprüfen, ob dies die Ursache für die Beendigung des Scanners ist, sollten Sie überprüfen, ob die folgende Fehlermeldung für den Scanner in der Datei ** % *LocalAppData*% \ microsoft\msip\logs\msipscanner.iplog** protokolliert wird.
+    Um zu überprüfen, ob dies die Ursache für die Beendigung des Scanners ist, sollten Sie überprüfen, ob die folgende Fehlermeldung für den Scanner in der Datei **% *LocalAppData*% \ microsoft\msip\logs\msipscanner.iplog** protokolliert wird.
 
     **Es kann keine Verbindung mit dem Remote Server hergestellt werden,---> System .net. Sockets. SocketException: Es ist normalerweise nur eine Verwendung der einzelnen Socketadressen (Protokoll/Netzwerkadresse/Port) zulässig. IP: Port**
 
     > [!NOTE]
     > Diese Datei wird gezippt, wenn mehrere Protokolle vorhanden sind.
 
-    Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **Schwellenwert für Listenansicht.** Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert für die Listenansicht erhöhen. Standardmäßig ist der Schwellenwert für die Listenansicht auf 5.000 festgelegt.
 
@@ -191,7 +191,7 @@ Das Diagnosetool überprüft die folgenden Details und exportiert dann eine Prot
 
 ## <a name="event-log-ids-and-descriptions-for-the-scanner"></a>Ereignisprotokoll-IDs und Beschreibungen für die Überprüfung
 
-Die folgenden AIP-Überprüfungsprotokoll Ereignisse werden im Ereignisprotokoll für Windows **-Anwendungen und-Dienste** mit dem Namen **Azure Information Protection**gespeichert.
+Die folgenden AIP-Überprüfungsprotokoll Ereignisse werden im Ereignisprotokoll für Windows **-Anwendungen und-Dienste** mit dem Namen **Azure Information Protection** gespeichert.
 
 |Ereignis-ID  |Aktivität  |BESCHREIBUNG  |
 |---------|---------|---------|

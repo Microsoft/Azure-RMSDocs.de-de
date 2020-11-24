@@ -1,8 +1,8 @@
 ---
 title: Installieren Sie das PowerShell-Modul "aipservice" für Azure Information Protection
 description: Anweisungen zum Installieren von PowerShell für den Schutzdienst von Azure Information Protection. Der Name dieses Moduls ist aipservice.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 23c18236413aaa2056d3eaaa30a64430de1e608b
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 57d8ac29ea58eab7820d642876e246b5ff985c4e
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136833"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568339"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installieren des PowerShell-Moduls für AIPService
 
@@ -48,7 +48,7 @@ Wenn Sie das aadrm-Modul von der PowerShell-Katalog installiert haben, starten S
 Uninstall-Module -Name AADRM
 ```
 
-Wenn Sie das aadrm-Modul mit dem Azure Rights Management-Verwaltungs Tool installiert haben, verwenden Sie **Programme und Funktionen** , um **Windows Azure AD Rights Management Administration**zu deinstallieren.
+Wenn Sie das aadrm-Modul mit dem Azure Rights Management-Verwaltungs Tool installiert haben, verwenden Sie **Programme und Funktionen** , um **Windows Azure AD Rights Management Administration** zu deinstallieren.
 
 ## <a name="how-to-install-the-aipservice-module"></a>Installieren des aipservice-Moduls
 
@@ -56,7 +56,7 @@ Das aipservice-Modul befindet sich auf dem [PowerShell-Katalog](https://www.powe
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>So installieren Sie das aipservice-Modul über das PowerShell-Katalog
 
-Wenn Sie noch nicht mit dem PowerShell-Katalog vertraut sind, finden Sie unter [Erste Schritte mit dem PowerShell-Katalog](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6) weitere Informationen. Folgen Sie den Anweisungen, die zur Erfüllung der Kataloganforderungen erforderlich sind. Hierzu zählt die Installation des PowerShellGet-Moduls und des NuGet-Anbieters.
+Wenn Sie noch nicht mit dem PowerShell-Katalog vertraut sind, finden Sie unter [Erste Schritte mit dem PowerShell-Katalog](/powershell/scripting/gallery/getting-started) weitere Informationen. Folgen Sie den Anweisungen, die zur Erfüllung der Kataloganforderungen erforderlich sind. Hierzu zählt die Installation des PowerShellGet-Moduls und des NuGet-Anbieters.
 
 Weitere Informationen zum aipservice-Modul auf dem PowerShell-Katalog finden Sie auf der [Seite aipservice](https://www.powershellgallery.com/packages/AIPService).
 
@@ -83,7 +83,7 @@ Update-Module -Name AIPService
 ```
 
 > [!NOTE]
-> Wenn dieser Befehl fehlschlägt, führen Sie zuerst **Import-Module aipservice**aus.
+> Wenn dieser Befehl fehlschlägt, führen Sie zuerst **Import-Module aipservice** aus.
 > 
 
 Geben Sie Folgendes ein, um die verfügbaren Cmdlets anzuzeigen:
@@ -100,7 +100,7 @@ Get-Help Connect-AipService -online
 
 Weitere Informationen finden Sie unter:
 
-- Vollständige Liste der verfügbaren Cmdlets: [aipservice-Modul](/powershell/module/aipservice/?view=azureipps#aipservice)
+- Vollständige Liste der verfügbaren Cmdlets: [aipservice-Modul](/powershell/module/aipservice/)
 
 - Liste der Haupt Konfigurationsszenarien, die PowerShell unterstützen: [Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md)
 

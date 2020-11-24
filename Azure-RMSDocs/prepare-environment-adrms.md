@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9196f02e63f7eb433237613fe44c43cf74ab3262
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: f4bbef451f161f40d29a7a890161592db76373a5
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869027"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567781"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management bei AD RMS
 
@@ -39,7 +39,7 @@ Die Kombination aus Azure Rights Management-Dienst aktiviert und Azure Rights Ma
     
     Weitere Informationen zu diesen Registrierungskonfigurationen finden Sie unter [Aktivieren der clientseitigen Diensterkennung mithilfe der Windows-Registrierung](./rms-client/client-deployment-notes.md#enabling-client-side-service-discovery-by-using-the-windows-registry) und [Umleiten des Datenverkehrs des Lizenzierungsservers](./rms-client/client-deployment-notes.md#redirecting-licensing-server-traffic).   
 
-Wenn AD RMS für Ihre Organisation bereitgestellt ist, überlegen Sie, ob Sie zu Azure Information Protection migrieren können. Azure Information Protection bietet viele Vorteile gegenüber AD RMS. Hierzu gehören z.B. eine bessere Unterstützung für mobile Geräte und die Integration in Office 365-Dienste sowie Exchange Server und SharePoint Server. Weitere Informationen finden Sie unter [Vergleich von Azure Information Protection und AD RMS](compare-on-premise.md).
+Wenn AD RMS für Ihre Organisation bereitgestellt ist, überlegen Sie, ob Sie zu Azure Information Protection migrieren können. Azure Information Protection bietet viele Vorteile gegenüber AD RMS. Beispielsweise bessere Unterstützung für mobile Geräte und Integration mit Microsoft 365-Diensten sowie mit Exchange Server und SharePoint Server. Weitere Informationen finden Sie unter [Vergleich von Azure Information Protection und AD RMS](compare-on-premise.md).
 
 Wenn Sie zu Azure Information Protection migrieren, verlieren Sie nicht den Zugriff auf zuvor geschützte Inhalte, und Sie müssen Ihre Inhalte nicht schützen oder erneut schützen. Dokumente und e-Mails, die durch AD RMS geschützt wurden, können auch nach der Aufhebung der Bereitstellung von AD RMS geöffnet werden.
 
@@ -64,9 +64,9 @@ Verwenden Sie eine der folgenden Vorgehensweisen, um Azure Rights Management zu 
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>So deaktivieren Sie Rights Management über das Microsoft 365 Admin Center
 
-1. Wechseln Sie zur [Rights Management-Seite](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) für Office 365-Administratoren.
+1. Wechseln Sie zur [Seite Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) für Microsoft 365-Administratoren.
     
-    Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.
+    Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie ein Konto, das ein globaler Administrator für Microsoft 365 ist.
 
 2. Klicken Sie auf der Seite **Rechteverwaltung** auf **Deaktivieren**.
 
@@ -76,7 +76,7 @@ Es sollten jetzt **Rights Management ist nicht aktiviert** und die Option zum Ak
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>So deaktivieren Sie Rights Management über das Azure-Portal
 
-1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
@@ -84,7 +84,7 @@ Es sollten jetzt **Rights Management ist nicht aktiviert** und die Option zum Ak
 
 2. Wählen Sie in den Menüoptionen die Option **Schutzaktivierung** aus. 
 
-3.  Wählen Sie im Bereich **Azure Information Protection-Schutz Aktivierung** die Option **Deaktivieren**aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
+3.  Wählen Sie im Bereich **Azure Information Protection-Schutz Aktivierung** die Option **Deaktivieren** aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
 
 Die Informationsleiste zeigt daraufhin **Deactivation finished successfully** (Deaktivierung erfolgreich ausgeführt) an, und **Deaktivieren** wird nun durch **Aktivieren** ersetzt. 
 

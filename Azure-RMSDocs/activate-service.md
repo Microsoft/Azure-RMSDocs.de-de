@@ -1,11 +1,11 @@
 ---
 title: Aktivieren des Schutz Dienstanbieter von Azure Information Protection
 description: Der Schutzdienst (Azure-Rights Management) muss aktiviert werden, damit Ihre Organisation Dokumente und e-Mails mithilfe von Anwendungen und Diensten schützen kann, die diese Lösung für den Informationsschutz unterstützen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b4dd50ba7afd8a6d3d1c85e66b6cfab12fa88ed
-ms.sourcegitcommit: 8499602fba94fbfa28d7682da2027eeed6583c61
+ms.openlocfilehash: c6f52dac44fc85bec09607bd6832b07484a161ac
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83746415"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567463"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Aktivieren des Schutz Dienstanbieter von Azure Information Protection
 
@@ -40,7 +40,7 @@ Wenn Sie über einen Serviceplan verfügen, der Azure Rights Management einschli
 
 - **Wenn Ihr Abonnement, das Azure Rights Management oder Azure Information Protection umfasst, bis Ende Februar 2018 oder höher abgerufen wurde:** Der Dienst wird automatisch für Sie aktiviert. Sie müssen den Dienst nur dann aktivieren, wenn Sie oder ein anderer globaler Administrator Ihrer Organisation Azure Rights Management deaktiviert hat.
 
-- **Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und vor oder während Februar 2018 erworben wurde**, beginnt Microsoft damit den, Azure Information Protection-Dienst für diese Abonnements zu aktivieren, wenn Ihr Mandant Exchange Online verwendet. Bei diesen Abonnements beginnt das Rollout der automatischen Aktivierung am 1. August 2018. Der Dienst wird für Sie aktiviert, sofern Sie bei Ausführung von [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps) nicht feststellen, dass **AutomaticServiceUpdateEnabled** auf **false** festgelegt ist. 
+- **Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und vor oder während Februar 2018 erworben wurde**, beginnt Microsoft damit den, Azure Information Protection-Dienst für diese Abonnements zu aktivieren, wenn Ihr Mandant Exchange Online verwendet. Bei diesen Abonnements beginnt das Rollout der automatischen Aktivierung am 1. August 2018. Der Dienst wird für Sie aktiviert, sofern Sie bei Ausführung von [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration) nicht feststellen, dass **AutomaticServiceUpdateEnabled** auf **false** festgelegt ist. 
 
 Wenn keines der nachfolgenden Szenarien auf Sie zutrifft, müssen Sie den Schutzdienst manuell aktivieren. 
 
@@ -53,7 +53,7 @@ Wenn der Dienst aktiviert ist, können alle Benutzer in Ihrer Organisation den I
 
 Wenn Sie diese Lösung zum Schutz von Daten verwenden möchten, muss Ihre Organisation über einen Serviceplan verfügen, der den Azure Rights Management-Dienst von Azure Information Protection beinhaltet. Ohne diesen kann der Schutzdienst nicht aktiviert werden. Sie müssen eine der folgenden Komponenten besitzen:
 
-- Einen [Azure Information Protection-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
+- Ein [Azure Information Protection Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
 
 - Einen [Office 365-Plan, der Rights Management enthält](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
@@ -102,7 +102,7 @@ Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
 
 Weitere Informationen zu diesem Cmdlet und zusätzlichen Beispielen finden Sie in der Hilfe zu [Set-aipserviceonboardingcontrolpolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) .
 
-Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der Organisation immer geschützte Inhalte nutzen, die durch Ihre Teilmenge von Benutzern geschützt wurde, können aber Informationsschutz aus Clientanwendungen nicht selbst anwenden. Beispielsweise sehen Sie in Ihren Office-Apps nicht die standardmäßigen Schutz Vorlagen, die automatisch veröffentlicht werden, wenn der Schutzdienst aktiviert wird, oder benutzerdefinierte Vorlagen, die Sie möglicherweise konfigurieren. Server seitige Anwendungen wie Exchange können eigene Steuerelemente pro Benutzer implementieren, um das gleiche Ergebnis zu erzielen. Sie können beispielsweise verhindern, dass Benutzer E-Mails in Outlook im Web schützen, indem Sie [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) verwenden, um den Parameter *IRMEnabled* auf *$false* zu setzen.
+Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der Organisation immer geschützte Inhalte nutzen, die durch Ihre Teilmenge von Benutzern geschützt wurde, können aber Informationsschutz aus Clientanwendungen nicht selbst anwenden. Beispielsweise sehen Sie in Ihren Office-Apps nicht die standardmäßigen Schutz Vorlagen, die automatisch veröffentlicht werden, wenn der Schutzdienst aktiviert wird, oder benutzerdefinierte Vorlagen, die Sie möglicherweise konfigurieren. Server seitige Anwendungen wie Exchange können eigene Steuerelemente pro Benutzer implementieren, um das gleiche Ergebnis zu erzielen. Sie können beispielsweise verhindern, dass Benutzer E-Mails in Outlook im Web schützen, indem Sie [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy) verwenden, um den Parameter *IRMEnabled* auf *$false* zu setzen.
 
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 41ae437f06a3d90f391ead9dc843e86c1b54fcd8
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 0382a1a97d65938c5d90d10d4e572697558223cc
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068681"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568357"
 ---
 # <a name="windows-store-setup"></a>Windows Store-Setup
 
@@ -34,18 +34,18 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 
-Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
+Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
 
--   [Windows 8.1](https://windows.microsoft.com/windows-8/meet)-Betriebssystem
+-   Das Betriebssystem [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
 -   [Windows SDK für Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) oder höher oder Visual Studio Express 2012, das im Windows SDK für Windows 8.0/8.1 enthalten ist
--   Das MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
--   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx). Auch andere Authentifizierungsbibliotheken können verwendet werden.
+-   Das MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter " [Get Started](get-started.md)".
+-   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](/previous-versions/azure/jj573266(v=azure.100)). Auch andere Authentifizierungsbibliotheken können verwendet werden.
 
-Im Thema zu den [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
+Im Thema zu den [Neuigkeiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
 
 ## <a name="optional"></a>Optional
 
@@ -54,26 +54,26 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 ## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
 
--   Öffnen Sie Visual Studio.
+-   Öffnen Sie Visual Studio.
 -   Klicken Sie auf **Datei**, auf **Neu** und anschließend auf **Projekt**.
--   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#** , und wählen Sie **Leere App (Windows)** aus. Klicken Sie anschließend auf **OK**.
+-   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C \#** , und wählen Sie **leere app (Windows)** aus, und klicken Sie dann auf **OK**.
 
     ![Erstellen eines neuen Projekts](../media/winrtsetup-newproj.png)
 
 -   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** zu öffnen.
 
-    ![Hinzufügen eines Verweises](../media/winrtsetup-addref.png)
+    ![Hinzuzufügender Verweis](../media/winrtsetup-addref.png)
 
 -   Klicken Sie im Dialogfeld **Verweis hinzufügen** auf **Durchsuchen**, und wählen Sie die Datei *Microsoft.RightsManagment.dll* aus, die sich in dem Ordner befindet, in den Sie das SDK-Paket extrahiert haben.
--   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
+-   **Verwaltete apps** : zum Aufbauen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1** - &gt; **Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für **Windows Visual C++ Runtime Package for Windows** .
 
     ![Hinzufügen von Erweiterungen](../media/winrtsetup-refmngr.png)
 
--   **Hinzufügen von Funktionen**: Ihre Anwendung benötigt die Funktion „Internet (Client & Server)“, um das SDK verwenden zu können. Um diese Funktion zu Ihrer App hinzuzufügen, öffnen Sie die Datei *Package.appxmanifest* im Projekt, und navigieren Sie zur Registerkarte **Funktionen**.
+-   **Hinzufügen von Funktionen**: Ihre Anwendung benötigt die Funktion „Internet (Client & Server)“, um das SDK verwenden zu können. Um diese Funktion Ihrer App hinzuzufügen, öffnen Sie die Datei *Package.appxmanifest* im Projekt, und navigieren Sie zur Registerkarte **Funktionen**.
 
 Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
-### <a name="see-also"></a>Weitere Informationen:
+### <a name="see-also"></a>Weitere Informationen
 
 [Erste Schritte](get-started.md)
 
@@ -85,4 +85,4 @@ Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
 [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
-[Windows-API-Referenz](https://msdn.microsoft.com/library/dn891914.aspx)
+[Windows-API-Referenz](/previous-versions/windows/desktop/msipcthin2/winrt)

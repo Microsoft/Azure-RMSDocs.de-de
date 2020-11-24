@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: add790bf067ccb4c4b58b1f5654c869d83976464
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 7066b6a13afd6c7a71b0b0740e3ffd71d56e3a43
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564398"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568072"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS
 
@@ -37,9 +37,9 @@ Bevor Sie Ihre Anwendung bereitstellen können, müssen Sie eine IPIA mit dem Mi
 ## <a name="implement-user-authentication-for-your-app"></a>Implementieren der Benutzerauthentifizierung für Ihre App
 Jede RMS-API verfügt über einen Rückruf, der implementiert werden muss, um eine Authentifizierung des Benutzers zu ermöglichen. Das RMS SDK 4.2 verwendet Ihre Implementierung des Rückrufs, wenn Sie kein Zugriffstoken angeben, wenn das Zugriffstoken aktualisiert werden muss oder wenn das Zugriffstoken abgelaufen ist.
 
-- Android: die Schnittstellen [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) und [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
-- iOS/OS X: das Protokoll [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
--  Windows Phone/Windows RT: die Schnittstelle [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
+- Android: die Schnittstellen [AuthenticationRequestCallback](/previous-versions/windows/desktop/msipcthin2/authenticationrequestcallback-interface-java) und [AuthenticationCompletionCallback](/previous-versions/windows/desktop/msipcthin2/authenticationcompletioncallback-interface-java).
+- iOS/OS X: das Protokoll [MSAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/msauthenticationcallback-protocol-objc).
+-  Windows Phone/Windows RT: die Schnittstelle [IAuthenticationCallback](/previous-versions/windows/desktop/msipcthin2/iauthenticationcallback).
 - Linux: die Schnittstelle [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
 ### <a name="what-library-to-use-for-authentication"></a>Welche Bibliothek zur Authentifizierung verwendet werden soll

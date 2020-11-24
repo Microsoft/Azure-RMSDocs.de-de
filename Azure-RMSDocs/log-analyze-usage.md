@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c18c3e6524e6c42ee4b639b42778a8a8217b12d0
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: fc3dd9487548849d16f625092c2ff3dd121e4e54
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136802"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567646"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection
 
@@ -87,7 +87,7 @@ Zum Herunterladen Ihrer Verwendungs Protokolle verwenden Sie das aipservice-Powe
     
     * Um Protokolle für einen Datumsbereich (z.B. 1.2.2016 bis 14.2.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
-Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z.B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Get-aipserviceuserlog-Befehl ruft dann die Protokolle für diese UTC-Zeitspanne ab.
+Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z.B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Get-AipServiceUserLog-Befehl ruft dann die Protokolle für diese UTC-Zeitspanne ab.
 
 Die kleinste Zeitspanne, die Sie für ein Herunterladen angeben können, ist ein ganzer Tag.
 
@@ -126,7 +126,7 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |   Feldname   | W3C-Datentyp |                                                                                                                                                                          BESCHREIBUNG                                                                                                                                                                          |                                                            Beispielwert                                                            |
 |----------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 |      Datum      |     Datum      |                                                                                                                     Das UTC-Datum, an dem die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                                     |                                                             2013-06-25                                                              |
-|      time      |     Time      |                                                                                                            Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                            |                                                              21:59:28                                                               |
+|      time      |     Zeit      |                                                                                                            Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.                                                                                                            |                                                              21:59:28                                                               |
 |     row-id     |     Text      |                                                                           Eindeutige GUID für diesen Protokolldatensatz. Wenn ein Wert nicht vorhanden ist, verwenden Sie zum Identifizieren des Eintrags die Korrelations-ID.<br /><br />Dieser Wert ist hilfreich, wenn Sie Protokolle aggregieren oder in ein anderes Format kopieren.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
 |  request-type  |     Name      |                                                                                                                                                            Der Name der angeforderten RMS-API.                                                                                                                                                            |                                                           AcquireLicense                                                            |
 |    user-id     |    String     |                                                               Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.                                                                |                                                          ‘joe@contoso.com’                                                          |
@@ -148,7 +148,7 @@ Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die A
 
 -   Der Wert **'microsoftrmsonline@&lt;IhreMandantenID&gt;.rms.&lt;Region&gt;.aadrm.com'**.
 
-    Dies gibt an, dass ein Office 365-Dienst, wie z. b. Exchange Online oder Microsoft SharePoint, die Anforderung sendet. In der Zeichenfolge ist * &lt; yourtenantid &gt; * die GUID für Ihren Mandanten und die * &lt; Region &gt; * ist die Region, in der Ihr Mandant registriert ist. **na** steht beispielsweise für Nordamerika, **eu** für Europa und **ap** für Asien.
+    Dies gibt an, dass ein Office 365-Dienst, wie z. b. Exchange Online oder Microsoft SharePoint, die Anforderung sendet. In der Zeichenfolge ist *&lt; yourtenantid &gt;* die GUID für Ihren Mandanten und die *&lt; Region &gt;* ist die Region, in der Ihr Mandant registriert ist. **na** steht beispielsweise für Nordamerika, **eu** für Europa und **ap** für Asien.
 
 -   Wenn Sie den RMS-Verbindungsdienst verwenden.
 

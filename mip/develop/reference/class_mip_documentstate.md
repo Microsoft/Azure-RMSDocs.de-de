@@ -1,34 +1,34 @@
 ---
 title: Klasse DocumentState
 description: 'Dokumentiert die DocumentState:: nicht definierte-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 674e43b89a43fe90fa1fb38fb7c6d1d51a7326e0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: ad1c99a76c3078c86ec80a4ec6e1cc7d244cbbeb
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763318"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567007"
 ---
 # <a name="class-documentstate"></a>Klasse DocumentState 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string GetContentIdentifier() const  |  Ruft die Inhaltsbeschreibung ab, die das Dokument beschreibt. Beispiel für eine Datei: [Pfad\Dateiname] Beispiel für eine e-Mail: [Subject: Sender].
 public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
-Public Std:: Vector\<MetadataEntry\> getcontentmetadata (Konst Std:: Vector\<Std:: String\>& Names, Konstanten Std:: Vector\<Std:: String\>& nameprefixes) Konstanten  |  Ruft die Metadatenelemente aus dem Inhalt ab.
-Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  |  Ruft den Deskriptor für den Schutz ab
+Public Std:: Vector \<MetadataEntry\> getcontentmetadata (Konst Std:: Vector \<std::string\>& Names, Konstanten Std:: Vector \<std::string\>& nameprefixes) Konstanten  |  Ruft die Metadatenelemente aus dem Inhalt ab.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Ruft den Deskriptor für den Schutz ab
 public ContentFormat GetContentFormat() const  |  Ruft das Inhaltsformat ab.
-public virtual Ganzzahl ohne Vorzeichen int GetContentMetadataVersion () konstant  |  Ruft die höchste Metadatenversion ab, die von der Anwendung für den Mandanten unterstützt wird.
-public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (konstant Std::\<Vector Std:: shared_ptr\<classificationrequest\> \> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
-public virtual Std:: map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
-public virtual Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastmodifiedtime () Konstanten  |  Rückgabe eines Zeitpunkts auf den Zeitpunkt der letzten Änderung des Dokuments.
+public virtual MetadataVersion GetContentMetadataVersion () konstant  |  Ruft die höchste Metadatenversion ab, die von der Anwendung für den Mandanten unterstützt wird.
+public virtual Std:: shared_ptr \<ClassificationResults\> getclassificationresults (Konstanten Std:: Vector \<std::shared_ptr\<ClassificationRequest\> \> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual Std:: map \<std::string, std::string\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
+public virtual Std:: Chrono:: time_point \<std::chrono::system_clock\> getlastmodifiedtime () Konstanten  |  Rückgabe eines Zeitpunkts auf den Zeitpunkt der letzten Änderung des Dokuments.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getcontentidentifier-function"></a>Getcontentidentifier-Funktion
 Ruft die Inhaltsbeschreibung ab, die das Dokument beschreibt. Beispiel für eine Datei: [Pfad\Dateiname] Beispiel für eine e-Mail: [Subject: Sender].

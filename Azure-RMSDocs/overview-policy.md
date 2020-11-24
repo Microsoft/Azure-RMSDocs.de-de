@@ -12,12 +12,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 925b34d7bfb246b01642c898ffd4e9ae9d5f73c5
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a0b456d8e436de77ae54f2b6a9b543d82acd1b12
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136380"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567865"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Übersicht über die Azure Information Protection-Richtlinie
 
@@ -28,7 +28,7 @@ ms.locfileid: "86136380"
 > [!NOTE]
 > Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
 > 
-> Informationen zu Vertraulichkeits Bezeichnungen finden Sie in der Dokumentation zur Microsoft 365 Konformität. Beispielsweise [erfahren Sie mehr über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> Informationen zu Vertraulichkeits Bezeichnungen finden Sie in der Dokumentation zur Microsoft 365 Konformität. Weitere Informationen finden Sie unter [Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 Eine Azure Information Protection-Richtlinie enthält die folgenden Elemente, die Sie konfigurieren können:
     

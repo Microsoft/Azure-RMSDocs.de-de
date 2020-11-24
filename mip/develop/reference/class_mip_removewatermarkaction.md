@@ -1,28 +1,28 @@
 ---
 title: removewatermarkaction-Klasse
 description: 'Dokumentiert die removewatermarkaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 93c99a0bd66df636de618629ff25d7f37d0cddd8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: eee2617a7f3c1225d789a5d1f6124caa3d3deec0
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760509"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567430"
 ---
 # <a name="class-removewatermarkaction"></a>removewatermarkaction-Klasse 
 Eine Aktionsklasse, die angibt, dass das Wasserzeichen aus dem Dokument entfernt wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: Vector\<Std:: String\>& getuielementnames ()  |  Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
+Public Konstanten Std:: Vector \<std::string\>& getuielementnames ()  |  Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
 public ActionType GetType() const  |  Ruft den Typ der Aktion ab.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getuielementnames-function"></a>Getuielementnames-Funktion
 Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte

@@ -1,35 +1,35 @@
 ---
 title: 'Class Protection profile:: Observer'
 description: 'Dokumentiert die Schutzprofile:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 8448f75a06bfe99debcf4c1c40ab2228c46690e6
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d72a5a7d5818ee4482b2f25f8df45f6a2152f898
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763928"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567103"
 ---
 # <a name="class-protectionprofileobserver"></a>Class Protection profile:: Observer 
 Schnittstelle, die Benachrichtigungen im Zusammenhang mit ProtectionProfile empfängt.
 Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void onloadsuccess (Konstante Std::\<shared_ptr Schutzprofile\>& Profile, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
-public virtual void onloadfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
-public virtual void onlistenginessuccess (Konstante Std::\<Vector Std:: String\>& engineids, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
-public virtual void onlistenginesfailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Auflisten der Engines zu einem Fehler geführt hat.
-public virtual void onaddenginesuccess (Konstante Std::\<shared_ptr schutzengine\>& Engine, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
-öffentliches virtuelles void-onaddenginefailure (Konstante Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Hinzufügen einer neuen Engine zu einem Fehler geführt hat.
-öffentliches virtuelles void ondeleteenginesuccess (Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
-public virtual void ondeleteenginefailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Löschen einer Engine zu einem Fehler geführt hat.
+public virtual void OnLoadSuccess(const std::shared_ptr\<ProtectionProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
+public virtual void onlistenginessuccess (Konstante Std:: Vector \<std::string\>& engineids, Konst Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Auflisten der Engines zu einem Fehler geführt hat.
+public virtual void OnAddEngineSuccess(const std::shared_ptr\<ProtectionEngine\>& engine, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Hinzufügen einer neuen Engine zu einem Fehler geführt hat.
+public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Löschen einer Engine zu einem Fehler geführt hat.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="onloadsuccess-function"></a>Onloadsuccess-Funktion
 Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
@@ -38,10 +38,10 @@ Parameter:
 * **profile**: Ein Verweis auf das neu erstellte ProtectionProfile
 
 
-* **context**: derselbe Kontext, der an "Schutzprofile:: LoadAsync" übermittelt wurde.
+* **context**: Der gleiche Kontext, der an ProtectionProfile::LoadAsync übergeben wurde
 
 
-Eine Anwendung kann einen beliebigen Typ von Kontext (z. b. Std::p romise, Std:: function) an Schutzprofile:: LoadAsync übergeben, und derselbe Kontext wird unverändert an Protection profile:: Observer:: onloadsuccess oder schützprofile:: Observer:: onloadfailure weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder „std::function“) an ProtectionProfile::LoadAsync übergeben. Derselbe Kontext wird dann an ProtectionProfile::Observer::OnLoadSuccess oder ProtectionProfile::Observer::OnLoadFailure weitergeleitet.
   
 ### <a name="onloadfailure-function"></a>Onloadfailure-Funktion
 Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
@@ -62,7 +62,7 @@ Parameter:
 * **engineIds**: Liste der verfügbaren Engine-IDs 
 
 
-* **context**: derselbe Kontext, der an [ProtectionProfile::ListEnginesAsync](class_mip_protectionprofile.md) übergeben wurde
+* **context**: derselbe Kontext, der an ProtectionProfile::ListEnginesAsync übergeben wurde
 
 
   
@@ -84,7 +84,7 @@ Parameter:
 * **engine**: neu erstellte Engine 
 
 
-* **context**: derselbe Kontext, der an [ProtectionProfile::AddEngineAsync](class_mip_protectionprofile.md) übergeben wurde
+* **context**: derselbe Kontext, der an ProtectionProfile::AddEngineAsync übergeben wurde
 
 
   
@@ -103,7 +103,7 @@ Parameter:
 Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
 
 Parameter:  
-* **context**: derselbe Kontext, der an [ProtectionProfile::DeleteEngineAsync](class_mip_protectionprofile.md) übergeben wurde
+* **context**: derselbe Kontext, der an ProtectionProfile::DeleteEngineAsync übergeben wurde
 
 
   

@@ -1,23 +1,23 @@
 ---
 title: Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell
 description: Erfahren Sie, wie Sie das PowerShell-Modul für den Schutzdienst von Azure Information Protection verwenden können, um diesen Dienst für Ihren Mandanten zu verwalten.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: efb7f76b89e9918100c9fd092fe321c738fd44ba
-ms.sourcegitcommit: 479b3aaea7011750ff85a217298e5ae9185c1dd1
+ms.openlocfilehash: 49e2d716362ebc637015a1032ff373f1d33b9860
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82224647"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567445"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell
 
@@ -27,7 +27,7 @@ Müssen Sie PowerShell verwenden, um den Schutzdienst über Azure Information Pr
 
 Die Tabelle im nächsten Abschnitt enthält einige Szenarien mit erweiterter Konfiguration, die PowerShell verwenden. Wenn die Konfiguration auch ohne PowerShell durchgeführt werden kann, sind diese Informationen ebenfalls in der Tabelle enthalten.
 
-Eine umfassende Liste der verfügbaren Cmdlets für dieses Modul mit weiteren Informationen zu den einzelnen Cmdlets finden Sie unter [aipservice](/powershell/module/aipservice/?view=azureipps#aipservice).
+Eine umfassende Liste der verfügbaren Cmdlets für dieses Modul mit weiteren Informationen zu den einzelnen Cmdlets finden Sie unter [aipservice](/powershell/module/aipservice/#aipservice).
 
 > [!NOTE]
 > Informationen zum Installieren dieses PowerShell-Moduls finden Sie unter [Installieren des aipservice-PowerShell-Moduls](install-powershell.md).

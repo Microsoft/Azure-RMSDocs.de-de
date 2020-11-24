@@ -14,14 +14,14 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 63876f55d38b3f97f41ad3a0b350ede8234202d3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 30a5dd75aece0afbbed67c9e7fb92c4169f0a1a8
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788649"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567997"
 ---
-# <a name="client"></a>client
+# <a name="client"></a>Client
 
 In diesem Thema werden der Zweck und die Funktion des Rights Management Service Client 2.1 beschrieben.
 
@@ -31,10 +31,10 @@ Mit dem RMS Client 2.1 werden Funktionen verfügbar gemacht, mit denen Benutzer 
 
 Das Rights Management Services SDK 2.1 kann zusammen mit RMS Client 2.1 verwendet werden. Für rechtlich geschützte Anwendungen, die unter dem RMS SDK 2.1 erstellt wurden, muss der RMS Client 2.1 verwendet werden.
 
-Weitere Informationen finden Sie in der [TechNet-Dokumentation zum RMS Client 2.1](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx).
+Weitere Informationen finden Sie in der [TechNet-Dokumentation zum RMS Client 2.1](../rms-client/client-deployment-notes.md).
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Übersicht](ad-rms-overview.md)
 * [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)
-* [TechNet-Dokumentation zum RMS Client 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
+* [TechNet-Dokumentation zum RMS Client 2.1](../rms-client/client-deployment-notes.md)

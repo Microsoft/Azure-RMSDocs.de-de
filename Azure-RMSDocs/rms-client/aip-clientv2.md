@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a6f8f339dc467ef3ec184bd45e4b8babb447b38f
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: f1e753e15d9601083a29f58bee0e2a4a7f16334b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447020"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568078"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection Unified Bezeichnung-Client für Windows
 
@@ -26,9 +26,9 @@ ms.locfileid: "89447020"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->*Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>*Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Der Azure Information Protection Unified Label-Client für Windows ist ein herunterladbarer Client für Organisationen, die [Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) zum klassifizieren und schützen von Dokumenten und e-Mails verwenden. Dieser Client verfügt auch über einen Viewer für Organisationen, die über keine eigene Infrastruktur für den Informationsschutz verfügen, aber Inhalte nutzen möchten, die von anderen Organisationen geschützt wurden, die einen Rights Management-Dienst von Microsoft verwenden.
+Der Azure Information Protection Unified Label-Client für Windows ist ein herunterladbarer Client für Organisationen, die [Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) zum klassifizieren und schützen von Dokumenten und e-Mails verwenden. Dieser Client verfügt auch über einen Viewer für Organisationen, die über keine eigene Infrastruktur für den Informationsschutz verfügen, aber Inhalte nutzen möchten, die von anderen Organisationen geschützt wurden, die einen Rights Management-Dienst von Microsoft verwenden.
 
 > [!NOTE]
 > Dieser Client wird auch nur als einheitlicher Bezeichnungs Client bezeichnet und ersetzt den Azure Information Protection Client (klassisch). Wenn Sie nicht sicher sind, welcher Client verwendet werden soll, finden Sie unter [auswählen des zu verwendenden Kunden für Windows-Computer](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)Weitere Informationen.

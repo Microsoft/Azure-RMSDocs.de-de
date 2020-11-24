@@ -14,18 +14,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3caecdd8d5b5cc173ebe148eaefe3f2202613ab3
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: d187e7ae4237d0e92b480750f74596109f440cbe
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135656"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568216"
 ---
 # <a name="how-to-enable-email-notification"></a>Exemplarische Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen
 
 Mit E-Mail-Benachrichtigungen können Besitzer von geschützten Inhalten benachrichtigt werden, wenn auf ihre Inhalte zugegriffen wird.
 
-Um Ihre e-Mail-Benachrichtigung für eine bestimmte Lizenz einzurichten, verwenden Sie [ipcsetlicenseproperty](https://msdn.microsoft.com/library/hh535271.aspx) mit dem Eigenschaftentyp Parameter *dwpropid*als [IPC \_ Li \_ App \_ Specific \_ Data](https://msdn.microsoft.com/library/hh535287.aspx) und den Anwendungsdaten Feldern, die als [IPC \_ Name \_ Value \_ List](https://msdn.microsoft.com/library/hh535277.aspx)formatiert sind.
+Um Ihre e-Mail-Benachrichtigung für eine bestimmte Lizenz einzurichten, verwenden Sie [ipcsetlicenseproperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty) mit dem Eigenschaftentyp Parameter *dwpropid* als [IPC \_ Li \_ App \_ Specific \_ Data](/previous-versions/windows/desktop/msipc/license-property-types) und den Anwendungsdaten Feldern, die als [IPC \_ Name \_ Value \_ List](/previous-versions/windows/desktop/msipc/ipc-name-value-list)formatiert sind.
 
 **C++**:
 
@@ -48,7 +48,7 @@ result = IpcSetLicenseProperty(licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, e
 Die folgende Tabelle enthält die Anwendungsdatenfelder, also die Eigenschaftenname-Wert-Paare, für die RMS-E-Mail-Benachrichtigungen.
 
 
-|Eigenschaftenname | Datentyp | Beispielwert | Hinweise |
+|Eigenschaftenname | Datentyp | Beispielwert | Notizen |
 |--------------|-----------|---------------|-------|
 |MS.Content.Name|Zeichenfolge|"FinancialReport.docx"|Dies ist ein Bezeichner, der dem geschützten Inhalt zugeordnet ist.<br><br> Für geschützte Dateien sollte dieser Wert den Namen der Datei ohne Pfadinformationen enthalten.<br><br> Bei anderen Arten von Inhalten, z. B. eine E-Mail-Nachricht sollte er den Betreff der E-Mail enthalten oder kann er leer sein.|
 |MS.Notify.Enabled|Zeichenfolge|"true" &#124; "false"|Wenn dieser Wert auf „true“ festgelegt ist, wird eine E-Mail-Benachrichtigung an den Besitzer der Veröffentlichungslizenz gesendet, sobald jemand versucht, diese zum Abrufen einer Endbenutzerlizenz zu verwenden.|
@@ -58,8 +58,8 @@ Die folgende Tabelle enthält die Anwendungsdatenfelder, also die Eigenschaftenn
 |MS.Notify.TZSN|Zeichenfolge|"Pacific Standard Time"|**Quelle:** TimeZoneInfo.Local.StandardName – Standardzeitzonenname.<br><br>Dies sollte der lokalisierte Name des Standardzeitzonennamens der Zeitzone sein.|
 |MS.Notify.TZDN|Zeichenfolge|"Pazifische Sommerzeit"|**Quelle:** TimeZoneInfo.Local.DaylightName – Name der Sommerzeitzeitzone.<br><br>Dies sollte der lokalisierte Name der Sommerzeitzeitzone sein. Er kann mit dem Standardnamen identisch sein, wenn in der Zeitzone keine Sommerzeit unterstützt wird.|
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
-- [IPC \_ Li- \_ App- \_ spezifische \_ Daten](https://msdn.microsoft.com/library/hh535287.aspx)
-- [IPC \_ die Name- \_ Wert- \_ Liste](https://msdn.microsoft.com/library/hh535277.aspx).
+- [IpcSetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcsetlicenseproperty)
+- [IPC \_ Li- \_ App- \_ spezifische \_ Daten](/previous-versions/windows/desktop/msipc/license-property-types)
+- [IPC \_ die Name- \_ Wert- \_ Liste](/previous-versions/windows/desktop/msipc/ipc-name-value-list).

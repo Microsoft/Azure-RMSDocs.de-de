@@ -1,29 +1,29 @@
 ---
 title: Userrights-Klasse
 description: 'Dokumentiert die Userrights:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 1a3bf2c6c8f417d30fac24263f672f2603347960
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 37943d284eaa00524797605158e320c25e52e17b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764244"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567391"
 ---
 # <a name="class-userrights"></a>Userrights-Klasse 
 Eine Gruppe von Benutzern und die ihnen zugeordneten Rechte.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public User Rights (Konst Std:: Vector\<Std:: String\>& users, Konstanten Std:: Vector\<Std:: String\>& Rights)  |  UserRights-Konstruktor
-Public Konstanten Std:: Vector\<Std:: String\>& users () Konstanten  |  Ruft Benutzer ab, denen Berechtigungen zugeordnet sind
-Public Konstanten Std:: Vector\<Std:: String\>& Rights () Konstanten  |  Ruft die Berechtigungen ab, die einer Gruppe von Benutzern zugeordnet sind
+Public User Rights (Konstante Std:: Vector \<std::string\>& users, Konst Std:: Vector \<std::string\>& Rights)  |  UserRights-Konstruktor
+Public Konstanten Std:: Vector \<std::string\>& users () konstant  |  Ruft Benutzer ab, denen Berechtigungen zugeordnet sind
+Public Konstanten Std:: Vector \<std::string\>& Rights () konstant  |  Ruft die Berechtigungen ab, die einer Gruppe von Benutzern zugeordnet sind
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="userrights-function"></a>Userrights-Funktion
 UserRights-Konstruktor

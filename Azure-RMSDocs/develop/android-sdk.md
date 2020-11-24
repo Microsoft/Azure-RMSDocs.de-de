@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: ef1306dbcbd4727f4e6c0207e328e7df3da8ed74
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 24de585a77268611115342154a55cf6d78c443ad
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971896"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567970"
 ---
 # <a name="android-setup"></a>Android-Setup
 
@@ -49,11 +49,11 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     Dieses SDK kann zur Anwendungsentwicklung für Android 4.0.3 (API-Ebene 15) und höher eingesetzt werden.
 
--   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
+-   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](/previous-versions/azure/jj573266(v=azure.100)). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
 
     Weitere Informationen finden Sie unter [ADAL für Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android).
 
-    **Hinweis**  wenn die Anwendung die Adal-Bibliothek nicht als OAuth 2,0-Authentifizierungs Bibliothek verwendet, sollten Sie diese Anleitung für Android, [einige SecureRandom-Gedanken](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html), lesen.
+    **Hinweis**    Wenn Ihre Anwendung die Adal-Bibliothek nicht als OAuth 2,0-Authentifizierungs Bibliothek verwendet, sollten Sie diese Anleitung für Android, [einige SecureRandom-Gedanken](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html), lesen.
 
 
 
@@ -65,7 +65,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 ## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
-**Hinweis**  MS RMS SDK 4,2 Preview-Version: in dieser Vorschauversion wurden die Bildschirmfotos nicht aktualisiert, um die Änderung des Namens der Paare von com/Microsoft/Protection zu com/Microsoft/righungmanagment anzuzeigen. Der Text wurde allerdings aktualisiert.
+**Hinweis**    MS RMS SDK 4,2 Preview-Version: in dieser Vorschauversion wurden die Screenshots nicht aktualisiert, um die Änderung des Namens der Pfade von com/Microsoft/Protection zu com/Microsoft/righzmanagment anzuzeigen. Der Text wurde allerdings aktualisiert.
 
 
 -   Öffnen Sie die Eclipse-Entwicklungsumgebung.
@@ -86,7 +86,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
     ![Erstellen der Aktivität](../media/Android-setup-04.png)
 
--   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Sie können *mainactivity* als Standardnamen mit dem Layoutnamen *Activity\_Main*belassen.
+-   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Sie können *mainactivity* als Standardnamen mit dem Layoutnamen *Activity \_ Main* belassen.
 
     ![Angeben eines Namens für die Aktivität](../media/Android-setup-05a.jpg)
 
@@ -98,14 +98,14 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 **Verweisen auf das SDK**
 
-- Navigieren Sie zu dem Ordner, in dem Sie das *\_ADRMS\_Android SDK. zip*extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
+- Navigieren Sie zu dem Ordner, in dem Sie den *ADRMS \_ Android- \_sdk.zip* extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
 - Um auf das SDK zu verweisen, müssen Sie das SDK in den Arbeitsbereich importieren.
 
   Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **Datei** auf **Importieren**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
 
   ![Importieren in den Arbeitsbereich](../media/Android-setup-07.png)
 
-- Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in dem Sie das *ADRMS\_Android\_SDK. zip*extrahiert haben. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
+- Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in dem Sie den *ADRMS \_ Android- \_sdk.zip* extrahiert haben. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
 
   ![Navigieren zum Auswählen des Ordners](../media/Android-setup-08c.jpg)
 
@@ -121,7 +121,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 - Klicken Sie auf **OK**.
 
-  Da MS RMS SDK 4,2 eine Verbindung mit Aad RM herstellt, muss die Anwendung über das **Internet** verfügen und auf den **\_Netzwerk\_Status zugreifen**. Öffnen Sie dazu die Datei *AndroidManifest.xml* im Stammverzeichnis des Projekts.
+  Da MS RMS SDK 4,2 eine Verbindung mit Aad RM herstellt, muss die Anwendung über das **Internet** verfügen und auf den **\_ Netzwerk \_ Status zugreifen**. Öffnen Sie dazu die Datei *AndroidManifest.xml* im Stammverzeichnis des Projekts.
 
   Um die Berechtigungen hinzuzufügen, klicken Sie auf **Add** und wählen dann **Uses Permissions**.
 
@@ -138,7 +138,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
   <uses-permission/>
   ```
 
-**Beachten Sie**  , dass das SDK *Android. Support. v4* verwendet.
+**Hinweis**    Das SDK verwendet *Android. Support. v4*
 
 -   Sie können jetzt Ihre eigenen neuen Android-Apps erstellen.
 
@@ -150,4 +150,4 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-[Android-API-Referenz](https://msdn.microsoft.com/library/dn758245.aspx)
+[Android-API-Referenz](/previous-versions/windows/desktop/msipcthin2/android)

@@ -1,41 +1,41 @@
 ---
 title: syncfilesensitivitydata der Klasse
 description: 'Dokumentiert die syncfilesensitivitydata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 2a9b5c66b4e40ee8fb412323aa57db8713d9361e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 694153a348d8c342c679b8229937c3ad3cce6f9c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764297"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567044"
 ---
 # <a name="class-syncfilesensitivitydata"></a>syncfilesensitivitydata der Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std::\<Vector Std:: shared_ptr\<sensitivitytypesrulepackage\> \>& getsensitivitytypesrulepackages () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& getsensitivitytypesrulepackages () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ syncfilesensitivitydata ()  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getfleid () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& gettenantid () Konstanten  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getsensitivitytypesrulepackages-function"></a>Getsensitivitytypesrulepackages-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="syncfilesensitivitydata-function"></a>~ Syncfilesensitivitydata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getfileid-function"></a>Getfleid-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="gettenantid-function"></a>Gettenantid-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

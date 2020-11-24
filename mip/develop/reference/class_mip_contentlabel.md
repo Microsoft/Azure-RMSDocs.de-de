@@ -1,32 +1,32 @@
 ---
 title: Klasse "contentlabel"
 description: 'Dokumentiert die contentlabel:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e69a4a8146eb7e7251645ef83a8db0926d383166
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: a60244b9db9b3087dde71cbdbcf63ba170cb06c3
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763399"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567196"
 ---
 # <a name="class-contentlabel"></a>Klasse "contentlabel" 
 Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.
 Sie enthält auch die Eigenschaften für eine bestimmte angewendete Bezeichnungsinstanz.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getkreationtime () Konstanten  |  Ruft die Erstellungszeit der Bezeichnung ab
+Public Std:: Chrono:: time_point \<std::chrono::system_clock\> getkreationtime () Konstanten  |  Ruft die Erstellungszeit der Bezeichnung ab
 public AssignmentMethod GetAssignmentMethod() const  |  Ruft die Zuweisungsmethode der Bezeichnung ab
-Public Konstante Std:: Vector\<MetadataEntry\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
+Public Konstanten Std:: Vector \<MetadataEntry\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
 public bool IsProtectionAppliedFromLabel() const  |  Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
-Public Std:: shared_ptr\<Bezeichnung\> GetLabel () Konstanten  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
+public std::shared_ptr\<Label\> GetLabel() const  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getcreationtime-function"></a>Getkreationtime-Funktion
 Ruft die Erstellungszeit der Bezeichnung ab

@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6308234bb778969c8e5d3b8e55260f042e501906
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 56d465d8efbc0b5bc2c6b87e1b60e34cb4e091f8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298222"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567580"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Schrittanleitungen für häufige Szenarien, in denen Azure Information Protection verwendet wird
 
@@ -30,10 +30,10 @@ Die erfolgreichsten Bereitstellungen sind diejenigen, bei denen spezielle Anwend
 
 ## <a name="common-scenarios"></a>Häufige Szenarios
 
-|Szenario: Gewünschter Vorgang|Anweisungen|
+|Szenario: Gewünschter Vorgang|Instructions|
 |----------------|---------------|
 |Nach vertraulichen Informationen suchen, die meine Organisation lokal speichert|[Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien](quickstart-findsensitiveinfo.md)|
-|Es Benutzern einfacher machen, E-Mails, die vertrauliche Informationen enthalten, zu schützen|[Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertraulichen Informationen enthalten](quickstart-label-dnf-protectedemail.md)|
+|Es Benutzern einfacher machen, E-Mails, die vertrauliche Informationen enthalten, zu schützen|[Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten](quickstart-label-dnf-protectedemail.md)|
 |Es Benutzern einfacher machen, Daten beim Erstellen oder Bearbeiten zu klassifizieren und zu schützen, wenn diese vertrauliche Informationen enthalten| [Tutorial: Bearbeiten der Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)|
 |Es Benutzern einfacher machen, an einem geschützten Dokument zusammenzuarbeiten|[Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md)|
 |E-Mails von Benutzern, die außerhalb der Organisation gesendet werden, automatisch schützen| [Konfigurieren von Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen](configure-exo-rules.md)

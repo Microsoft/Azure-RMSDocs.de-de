@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: cd7705a9010d0b692d7f613550c9aa6052c123d9
-ms.sourcegitcommit: e6b594b8d15f81884b0999f5c0009386aef02cc3
+ms.openlocfilehash: 42c74f9ffa8097768e4ab97d1dea6e75bc0aaffc
+ms.sourcegitcommit: b5043f88f9287e63b510f44a5e6ceaead9093163
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88073765"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "95568399"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Was ist die Azure Information Protection-App für IOS oder Android?
 
@@ -27,7 +27,7 @@ Mit dem Azure Information Protection-Mobile App für IOS und Android können Sie
 
 Wenn beispielsweise geschützte e-Mails in ihren regulären e-Mail-Mobile App als Anlagen angezeigt werden, können Sie die AIP-Mobile App verwenden, um diese e-Mail anzuzeigen.
 
-Weitere Informationen finden Sie [unter Anwendungen, die Azure Rights Management Datenschutz unterstützen](../requirements-applications.md).
+Weitere Informationen finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../requirements-applications.md).
 
 > [!NOTE]
 > Bei den mobilen AIP-apps handelt es sich *nur um Viewer,* mit denen Sie keine neuen e-Mails erstellen oder geschützte Dateien erstellen oder bearbeiten können. Die mobilen AIP-Apps können auch keine Anlagen in geschützten PDF-oder e-Mail-Geräten öffnen.
@@ -57,9 +57,25 @@ Wenn Ihr mobiles Gerät von Microsoft InTune verwaltet wird, können Sie die mob
 
 Wenden Sie sich an Ihren Systemadministrator, um weitere Informationen zu erhalten.
 
-## <a name="view-protected-files-on-your-device"></a>Anzeigen geschützter Dateien auf Ihrem Gerät
+## <a name="ios-view-protected-files-on-your-device"></a>iOS: geschützte Dateien auf Ihrem Gerät anzeigen
 
-1. Nachdem Sie [das AIP-Mobile App installiert](#download-and-install-the-aip-app-for-your-device)haben, öffnen Sie eine geschützte e-Mail oder Datei. 
+Nachdem Sie [das AIP-Mobile App installiert](#download-and-install-the-aip-app-for-your-device)haben, öffnen Sie eine geschützte e-Mail oder Datei. 
+
+1. Wenn Sie zum Auswählen einer APP aufgefordert werden, um die Datei zu öffnen, tippen Sie auf die Schaltfläche freigeben, um stattdessen die Datei freizugeben.
+
+    Wählen Sie **Datei freigeben über..** . aus, und wählen Sie dann **in AIP-Viewer kopieren aus.**
+
+    Beispiel:
+
+    :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Freigabe für AIP-Viewer in ios" border="false":::
+
+1. Melden Sie sich an, oder wählen Sie ein Zertifikat wie angefordert aus.
+
+    Nachdem Sie authentifiziert wurden, wird Ihre e-Mail oder Datei im AIP-Viewer geöffnet.
+ 
+## <a name="android-view-protected-files-on-your-device"></a>Android: geschützte Dateien auf Ihrem Gerät anzeigen
+
+Nachdem Sie [das AIP-Mobile App installiert](#download-and-install-the-aip-app-for-your-device)haben, öffnen Sie eine geschützte e-Mail oder Datei. 
 
 1. Wenn Sie zum Auswählen einer APP aufgefordert werden, wählen Sie den AIP-Viewer aus:
 
@@ -68,7 +84,7 @@ Wenden Sie sich an Ihren Systemadministrator, um weitere Informationen zu erhalt
 1. Melden Sie sich an, oder wählen Sie ein Zertifikat wie angefordert aus.
 
     Nachdem Sie authentifiziert wurden, wird Ihre e-Mail oder Datei im AIP-Viewer geöffnet.
- 
+
 ## <a name="aip-mobile-app-requirements"></a>AIP-Mobile App Anforderungen
 
 Die mobilen AIP-Apps für IOS und Android unterstützen die folgenden Dateitypen und Umgebungen:
@@ -90,7 +106,7 @@ Wenn Sie ein Systemadministrator sind, der die mobilen AIP-Apps für Ihre Organi
 
     Senden Sie z. b. eine der folgenden durch Rechte geschützten Dateien:
 
-    |Dateityp  |Anweisungen  |
+    |Dateityp  |Instructions  |
     |---------|---------|
     |**E-Mail (. rpmsg)**     | Verwenden Sie ein anderes Gerät, z.b. Outlook, von einem Windows-Computer aus, um sich selbst eine durch Rechte geschützte e-Mail-Nachricht zu senden, auf die Sie über Ihr mobiles Gerät zugreifen können  |
     |**PDF**     | 1. schützen Sie auf einem Windows-Computer eine PDF-Datei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung](clientv2-classify-protect.md) -Client. </br>2. senden Sie die geschützte PDF-Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie an Ihre eigene e-Mail-Adresse        |

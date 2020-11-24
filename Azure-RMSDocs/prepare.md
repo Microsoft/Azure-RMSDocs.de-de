@@ -1,9 +1,9 @@
 ---
 title: Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 description: Überprüfen Sie, ob die Benutzer- und Gruppenkonten vorhanden sind, die Sie zum Klassifizieren, Bezeichnen und Schützen der Dokumente und E-Mails Ihrer Organisation benötigen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 880e3b8acd3d17bcb3aec424e3aef96c2aeadbaf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: cc54660ce021b2d00a80ad3292ed17c5c13c204a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048305"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568144"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -73,15 +73,15 @@ Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen sowie zum Konfigurieren
 
 - Für die Autorisierung von Benutzern werden in Azure AD zwei Attribute verwendet: **proxyAddresses** und **userPrincipalName**.
 
-- Das Attribut **Azure AD proxyAddresses** speichert alle E-Mail-Adressen für ein Konto und kann auf unterschiedliche Weise aufgefüllt werden. Ein Benutzer in Office 365, der über ein Exchange Online-Postfach verfügt, erhält beispielsweise automatisch eine E-Mail-Adresse, die in diesem Attribut gespeichert ist. Wenn Sie einem Office 365-Benutzer eine alternative E-Mail-Adresse zuweisen, wird diese ebenfalls in diesem Attribut gespeichert. Das Attribut kann auch durch Synchronisierung mit den E-Mail-Adressen lokaler Konten aufgefüllt werden. 
+- Das Attribut **Azure AD proxyAddresses** speichert alle E-Mail-Adressen für ein Konto und kann auf unterschiedliche Weise aufgefüllt werden. Beispielsweise verfügt ein Benutzer in Microsoft 365, der über ein Exchange Online-Postfach verfügt, automatisch über eine e-Mail-Adresse, die in diesem Attribut gespeichert ist. Wenn Sie eine Alternative e-Mail-Adresse für einen Microsoft 365 Benutzer zuweisen, wird dieser auch in diesem Attribut gespeichert. Das Attribut kann auch durch Synchronisierung mit den E-Mail-Adressen lokaler Konten aufgefüllt werden. 
 
     Azure Information Protection kann beliebige Werte im Attribut „Azure AD proxyAddresses“ verwenden, vorausgesetzt die Domäne wurde Ihrem Mandanten hinzugefügt („überprüfte Domäne“). Weitere Informationen zum Überprüfen von Domänen finden Sie in folgenden Artikeln:
 
     - Azure AD: [Schnellstart: Hinzufügen eines benutzerdefinierten Domänennamens zu Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Für Office 365: [Hinzufügen einer Domäne zu Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Für Office 365: [Hinzufügen einer Domäne zu Office 365](/office365/admin/setup/add-domain)
 
-- Das Attribut **Azure AD userPrincipalName** wird nur verwendet, wenn ein Konto in Ihrem Mandanten im Azure AD-Attribut „proxyAddresses“ keine Werte aufweist. Dies ist beispielsweise der Fall, wenn Sie einen Benutzer im Azure-Portal erstellen oder einen Benutzer für Office 365 erstellen, der kein Postfach besitzt.
+- Das Attribut **Azure AD userPrincipalName** wird nur verwendet, wenn ein Konto in Ihrem Mandanten im Azure AD-Attribut „proxyAddresses“ keine Werte aufweist. Beispielsweise erstellen Sie einen Benutzer im Azure-Portal oder erstellen einen Benutzer für Microsoft 365, der nicht über ein Postfach verfügt.
 
 ### <a name="assigning-usage-rights-and-access-controls-to-external-users"></a>Zuweisen von Nutzungsrechten und Zugriffssteuerungen für externe Benutzer
 
@@ -99,7 +99,7 @@ Zum Zuweisen von Bezeichnungen:
 
 - Um bereichsbezogene Richtlinien zu konfigurieren, die Gruppenmitgliedern zusätzliche Bezeichnungen zuweisen, können Sie alle Arten von Gruppen in Azure AD verwenden, die über eine E-Mail-Adresse einer überprüften Domäne für den Mandanten des Benutzers verfügen. Eine Gruppe mit einer E-Mail-Adresse wird häufig als E-Mail-aktivierte Gruppe bezeichnet.
 
-    Sie können z. B. eine E-Mail-aktivierte Sicherheitsgruppe, eine statische Verteilergruppe und eine Office 365-Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Gruppentyp keine E-Mail-Adresse besitzt. Ferner können Sie keine dynamische Verteilerliste von Exchange Online verwenden, da diese Gruppe nicht nach Azure AD repliziert wird.
+    Sie können z. b. eine e-Mail-aktivierte Sicherheitsgruppe, eine statische Verteiler Gruppe und eine Microsoft 365 Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Gruppentyp keine E-Mail-Adresse besitzt. Ferner können Sie keine dynamische Verteilerliste von Exchange Online verwenden, da diese Gruppe nicht nach Azure AD repliziert wird.
 
 Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen:
 
@@ -127,7 +127,7 @@ Anhand der Liste der Attribute für Azure Rights Management erkennen Sie, dass f
 
 Sie können mithilfe von Azure AD PowerShell überprüfen, ob Benutzer und Gruppen mit Azure Information Protection verwendet werden können. Mit PowerShell können Sie auch die Werte bestätigen, die für deren Autorisierung verwendet werden können. 
 
-Stellen Sie beispielsweise mithilfe des V1-PowerShell-Moduls für Azure Active Directory ([MSOnline](/powershell/module/msonline/?view=azureadps-1.0)) in einer PowerShell-Sitzung zunächst eine Verbindung mit dem Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an:
+Stellen Sie beispielsweise mithilfe des V1-PowerShell-Moduls für Azure Active Directory ([MSOnline](/powershell/module/msonline/)) in einer PowerShell-Sitzung zunächst eine Verbindung mit dem Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an:
 
 ```ps
 Connect-MsolService
@@ -155,7 +155,7 @@ Ihre erste Überprüfung besteht jetzt darin, sicherzustellen, dass die Benutzer
 
 Wenn die Spalte **ProxyAddresses** nicht aufgefüllt wurde, wird der Wert von **UserPrincipalName** verwendet, um den Benutzer für den Azure Rights Management-Dienst zu autorisieren.
 
-Zum Beispiel:
+Beispiel:
 
 
 |  Anzeigename   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -194,7 +194,7 @@ Get-MsolGroup | select DisplayName, ProxyAddresses
 
 Stellen Sie sicher, dass die Gruppen, die Sie mit Azure Information Protection verwenden möchten, angezeigt werden. Die Gruppenmitglieder der angezeigten Gruppen können mithilfe der E-Mail-Adressen in der Spalte **ProxyAddresses** für den Azure Rights Management-Dienst autorisiert werden.
 
-Überprüfen Sie anschließend, ob die Gruppen die gewünschten Benutzer (oder andere Gruppen) enthalten, die Sie für Azure Information Protection verwenden möchten. Sie können dazu PowerShell (z.B. [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember?view=azureadps-1.0)) oder das Verwaltungsportal verwenden.
+Überprüfen Sie anschließend, ob die Gruppen die gewünschten Benutzer (oder andere Gruppen) enthalten, die Sie für Azure Information Protection verwenden möchten. Sie können dazu PowerShell (z.B. [Get-MsolGroupMember](/powershell/module/msonline/Get-MsolGroupMember)) oder das Verwaltungsportal verwenden.
 
 In den beiden Konfigurationsszenarien des Azure Rights Management-Diensts, in denen Sicherheitsgruppen verwendet werden, können Sie mit dem folgenden PowerShell-Befehl die Objekt-ID und den Anzeigenamen suchen, die zum Identifizieren dieser Gruppen verwendet werden können. Sie können diese Gruppen auch im Azure-Portal suchen und die Werte für Objekt-ID und Anzeigenamen kopieren:
 

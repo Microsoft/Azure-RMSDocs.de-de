@@ -4,7 +4,7 @@ description: Installieren eines Readers für PDF-Dokumente, die für Klassifizie
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/17/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,18 +14,18 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 56aac3e677ab835b0345394be014c1a803bd0b2e
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: e8cd7846159e2299d33b8b6533813ac8502140d3
+ms.sourcegitcommit: 2a72516a1f380adddd6501984b1989e3fa051976
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316721"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "95568426"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Welche PDF-Reader werden für geschützte PDF-Funktionen unterstützt?
 
 Mit PDF-Lesern für klassifizierte und/oder geschützte PDF-Datei können Sie verschlüsselte PDF-Datei öffnen, die vertrauliche Informationen enthalten.
 
-Durch das Verschlüsseln von PDF-Dateien mit [Azure Information Protection (AIP)](../what-is-information-protection.md) wird sichergestellt, dass nicht autorisierte Personen den Inhalt der Datei nicht lesen können, und dass auch autorisierte Personen keine Bildschirme oder Screenshots freigeben können, die den Inhalt anzeigen.
+Durch das Verschlüsseln von PDF-Dateien mit [Azure Information Protection (AIP)](../what-is-information-protection.md) wird sichergestellt, dass nicht autorisierte Personen den Inhalt der Datei nicht lesen können.
 
 Geschützte PDF-Leser, die Azure Information Protection unterstützen, stellen sicher, dass Ihnen Berechtigungen zum Öffnen des Dokuments erteilt wurden, und entschlüsseln auch den Inhalt.
 
@@ -56,7 +56,7 @@ Dieser Standard wird standardmäßig von den Clients AIP Classic und Unified Bez
 
 Adobe Acrobat Reader lässt sich in Microsoft Information Protection-Lösungen integrieren, wie z. b. [Azure Information Protection](../what-is-information-protection.md) , um Benutzern eine vereinfachte und konsistente Darstellung für klassifizierte und/oder geschützte PDF-Informationen bereitzustellen.
 
-Der Adobe Acrobat Reader mit der Microsoft Information Protection-Integration wird für [Windows](protected-pdf-readers-windows.md) und [macOS](protected-pdf-readers-mac.md)unterstützt.
+Der Adobe Acrobat Reader mit der Microsoft Information Protection-Integration wird für [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) und [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac)unterstützt.
 
 Weitere Informationen finden Sie in den folgenden Blogbeiträgen: 
 
@@ -82,7 +82,7 @@ Folgende Versionen werden unterstützt:
 1. Überprüfen Sie, welche [Microsoft Edge-Version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) auf Ihrem System installiert ist. 
 1. Wenn die Microsoft Edge-Version 83.0.478.37 oder höher ist, können Sie geschützte Dateien direkt im Edge-Browser öffnen. 
 
-1. Um PDF-Dateien in SharePoint zu öffnen **Open**, klicken Sie auf Öffnen  >  **in Browser**öffnen. 
+1. Um PDF-Dateien in SharePoint zu öffnen **Open**, klicken Sie auf Öffnen  >  **in Browser** öffnen. 
 
     :::image type="content" source="../media/edge_open_browser.png" alt-text="Öffnen einer geschützten PDF-Datei mithilfe von Microsoft Edge über den Browser mithilfe der Option in Browser öffnen":::
  

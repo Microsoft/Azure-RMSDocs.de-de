@@ -1,26 +1,26 @@
 ---
 title: 'Class schutzengine:: Settings'
 description: 'Dokumentiert die schutzengine:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 7c6b96a1ec78712cb256ab63efe869213fc71f8e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 47947ed2b9b815204e3843ad64c18ffccf39b913
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764595"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567133"
 ---
 # <a name="class-protectionenginesettings"></a>Class schutzengine:: Settings 
 Einstellungen, die während der Erstellung und Lebensdauer von ProtectionEngine verwendet werden
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Identität& Identität, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale)  |  ProtectionEngine::Settings-Konstruktor für die Erstellung einer neuen Engine
-öffentliche Einstellungen (Konstante Std:: String& EngineID, Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale)  |  ProtectionEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
+öffentliche Einstellungen (Konstante Identität& Identität, Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale)  |  ProtectionEngine::Settings-Konstruktor für die Erstellung einer neuen Engine
+öffentliche Einstellungen (Konstante Std:: String& EngineID, Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale)  |  ProtectionEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
 public const std::string& GetEngineId() const  |  Ruft die Engine-ID ab.
 public void SetEngineId(const std::string& engineId)  |  Legt die Engine-ID fest.
 public const Identity& GetIdentity() const  |  Ruft die Benutzeridentität ab, die der Engine zugeordnet ist.
@@ -28,18 +28,20 @@ public void SetIdentity(const Identity& identity)  |  Legt die Benutzeridentitä
 public const std::string& GetClientData() const  |  Ruft vom Client festgelegte benutzerdefinierte Daten ab.
 public void SetClientData(const std::string& clientData)  |  Legt vom Client festgelegte benutzerdefinierte Daten fest.
 public const std::string& GetLocale() const  |  Ruft das Gebietsschema ab, in dem die Engine-Daten geschrieben werden.
-öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \>& Wert)  |  Legt Name-Wert-Paare fest, die für Tests und Versuche genutzt werden.
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft Name-Wert-Paare ab, die für Tests und Versuche genutzt werden.
+öffentliches void setcustomsettings (Konstante Std:: Vector \<std::pair\<std::string, std::string\> \>& Wert)  |  Legt Name-Wert-Paare fest, die für Tests und Versuche genutzt werden.
+Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Ruft Name-Wert-Paare ab, die für Tests und Versuche genutzt werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID der Engine fest, die für die Korrelation von Protokollierung/Telemetrie verwendet wird.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID der Engine ab.
 öffentliches void setcloud (Cloud Cloud)  |  Legt optional die zielcloud fest.
 öffentliche Cloud getcloud () konstant  |  Ruft die zielcloud ab, die von allen Service Requests verwendet wird.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Legt die Basis-URL für den cloudendpunkt für die benutzerdefinierte Cloud fest
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
-öffentliches void setauthdelegat (Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
-Public Std:: shared_ptr\<authdelegat\> getauthdelegat () Konstanten  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
+öffentliches void setauthdelegat (Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
+Public Konstanten Std:: String& getunderlyingapplicationid () Konstanten  |  Ruft die zugrunde liegende Anwendungs-ID ab.
+öffentliches void setunderlyingapplicationid (Konstanten Std:: String& underlyingapplicationid)  |  Legt die zugrunde liegende Anwendungs-ID fest.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings-Funktion
 ProtectionEngine::Settings-Konstruktor für die Erstellung einer neuen Engine
@@ -194,3 +196,16 @@ Holen Sie sich den Authentifizierungs Delegaten für die Engine.
 
   
 **Gibt Folgendes zurück**: der Engine auth-Delegat.
+  
+### <a name="getunderlyingapplicationid-function"></a>Getunderlyingapplicationid-Funktion
+Ruft die zugrunde liegende Anwendungs-ID ab.
+
+  
+**Returns**: zugrunde liegende Anwendungs-ID
+  
+### <a name="setunderlyingapplicationid-function"></a>Setunderlyingapplicationid-Funktion
+Legt die zugrunde liegende Anwendungs-ID fest.
+
+Parameter:  
+* **Underlyingapplicationid**: zugrunde liegende Anwendungs-ID.
+

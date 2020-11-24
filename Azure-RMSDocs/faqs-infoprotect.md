@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fc4c86c020427066d519fec4ae6363f131ce64c2
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: d22a79a3968e164e2bec8c3852c4ab0c181e5ef8
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810257"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567799"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -38,21 +38,21 @@ Derzeit gibt es zwei Azure Information Protection Clients für Windows:
 
 Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client. Weitere Informationen sowie eine Tabelle zum Vergleich der Features und Funktionen finden Sie unter [Auswählen des zu verwendenden Azure Information Protection-Clients](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
-Der Azure Information Protection-Client wird nur unter Windows unterstützt. Verwenden Sie zum klassifizieren und schützen von Dokumenten und e-Mails auf Ios, Android, macOS und im Web [Office-Apps, die die integrierte Bezeichnung unterstützen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+Der Azure Information Protection-Client wird nur unter Windows unterstützt. Verwenden Sie zum klassifizieren und schützen von Dokumenten und e-Mails auf Ios, Android, macOS und im Web [Office-Apps, die die integrierte Bezeichnung unterstützen](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Wo finde ich Informationen zur Verwendung von Vertraulichkeits Bezeichnungen für Office-Apps?
 
 Weitere Informationen finden Sie in den folgenden Dokumentations Ressourcen:
 
-- [Informationen zu Empfindlichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+- [Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) 
 
-- [Verwenden von Vertraulichkeitsbezeichnungen in Office-Apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Verwenden von Vertraulichkeitsbezeichnungen in Office-Apps](/microsoft-365/compliance/sensitivity-labels-office-apps)
 
-- [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
+- [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
 
 - [Anwenden von Vertraulichkeits Bezeichnungen auf Ihre Dokumente und e-Mails innerhalb von Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
 
-Weitere Informationen zu anderen Szenarien, die Vertraulichkeits Bezeichnungen unterstützen, finden Sie unter [häufige Szenarien für Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
+Weitere Informationen zu anderen Szenarien, die Vertraulichkeits Bezeichnungen unterstützen, finden Sie unter [häufige Szenarien für Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/get-started-with-sensitivity-labels#common-scenarios-for-sensitivity-labels).
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Kann eine Datei über mehr als eine Klassifizierung verfügen?
 

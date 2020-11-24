@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fad52e81d68625d3589b1324163932ad669a78f
-ms.sourcegitcommit: 0793013ad733ac2af5de498289849979501b8f6c
+ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88788718"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568351"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Connectors
 
@@ -47,13 +47,13 @@ Stellen Sie sicher, dass Sie die richtige Azure Sovereign Cloud-Instanz kennen, 
 
     Laden Sie zum Installieren des RMS-Connectors die Datei „RMSConnectorSetup.exe“ herunter.
 
-    Außerdem:
+    Zusätzlich:
 
     -   Wenn Sie das Serverkonfigurationstool für den RMS-Connector verwenden möchten, um die Konfiguration der Registrierungseinstellungen auf Ihren lokalen Servern zu automatisieren, müssen Sie auch die Komponente „GenConnectorConfig.ps1“ herunterladen.
 
 3.  Führen Sie auf dem Computer, auf dem Sie den RMS-Connector installieren möchten, **RMSConnectorSetup.exe** mit Administratorrechten aus.
 
-4.  Wählen Sie auf der Willkommensseite von Microsoft Rights Management Connector-Setup **die Option Microsoft Rights Management Connector auf dem Computer installieren**aus, und klicken Sie dann auf **weiter**.
+4.  Wählen Sie auf der Willkommensseite von Microsoft Rights Management Connector-Setup **die Option Microsoft Rights Management Connector auf dem Computer installieren** aus, und klicken Sie dann auf **weiter**.
 
 5.  Lesen und akzeptieren Sie die Lizenzbedingungen des RMS-Verbindungsdiensts, und klicken Sie auf **Weiter**.
 
@@ -76,7 +76,7 @@ Wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-
 
 Sie können ein Konto verwenden, das über eine der folgenden Berechtigungen verfügt:
 
--   **Globaler Administrator für Ihren**Mandanten: ein Konto, das ein globaler Administrator für Ihren Microsoft 365 Mandanten oder Azure AD Mandanten ist.
+-   **Globaler Administrator für Ihren** Mandanten: ein Konto, das ein globaler Administrator für Ihren Microsoft 365 Mandanten oder Azure AD Mandanten ist.
 
 -   **Globaler Azure Rights Management-Administrator**: Ein Konto in Azure Active Directory, dem die Rolle „Globaler Azure RMS-Administrator“ zugewiesen wurde.
 
@@ -187,7 +187,7 @@ Der Connector-URL-Servername kann ein beliebiger Name unter einem Namespace sein
 > [!IMPORTANT]
 > Wir empfehlen Ihnen, diesen Namen nach der Konfiguration von Exchange- oder SharePoint-Servern für die Verwendung des Connectors nicht mehr zu ändern, weil Sie ansonsten alle IRM-Konfigurationen auf diesen Servern löschen und diese dann neu konfigurieren müssen.
 
-Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert wurde, konfigurieren Sie den Lastenausgleich für diese Adresse, die den Datenverkehr an die Connector-Server leitet. Sie können zu diesem Zweck jedes IP-basierte Lastenausgleichsmodul verwenden, das den Netzwerklastenausgleich (Network Load Balancing, NLB) von Windows Server enthält. Weitere Informationen finden Sie unter [Lastenausgleich – Bereitstellungsleitfaden](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert wurde, konfigurieren Sie den Lastenausgleich für diese Adresse, die den Datenverkehr an die Connector-Server leitet. Sie können zu diesem Zweck jedes IP-basierte Lastenausgleichsmodul verwenden, das den Netzwerklastenausgleich (Network Load Balancing, NLB) von Windows Server enthält. Weitere Informationen finden Sie unter [Lastenausgleich – Bereitstellungsleitfaden](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)).
 
 Verwenden Sie die folgenden Einstellungen, um den NLB-Cluster zu konfigurieren:
 
@@ -215,8 +215,8 @@ Stellen Sie bei Verwendung der HTTPS-Option sicher, dass alle Server, auf denen 
 > Mithilfe der folgenden Informationen und Ressourcen können Sie ein Serverauthentifizierungszertifikat anfordern und installieren und dieses Zertifikat an die Standardwebsite in ISS binden:
 >
 > - Wenn Sie Active Directory-Zertifikatdienste (AD CS) und eine Unternehmenszertifizierungsstelle verwenden, um diese Serverauthentifizierungszertifikate bereitzustellen, können Sie die Webserver-Zertifikatvorlage duplizieren und dann verwenden. Diese Zertifikatvorlage verwendet **Informationen wurden in der Anforderung angegeben** als Zertifikatantragstellernamen, was bedeutet, dass Sie den FQDN des RMS-Verbindungsdienstnamens als Zertifikatnamen für den Zertifikatantragstellernamen oder für den alternativen Antragstellernamen angeben können, wenn Sie das Zertifikat anfordern.
-> -   Wenn Sie eine eigenständige Zertifizierungsstelle verwenden oder dieses Zertifikat von einem anderen Unternehmen kaufen, lesen Sie [Konfigurieren von Internetserverzertifikaten (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in der Dokumentationsbibliothek von [Webserver (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) auf der TechNet-Website.
-> - Informationen zum Konfigurieren von ISS für die Verwendung des Zertifikats finden Sie unter [Hinzufügen einer Bindung zu einer Website (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) in der Dokumentationsbibliothek von [Webserver (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) auf der TechNet-Website.
+> -   Wenn Sie eine eigenständige Zertifizierungsstelle verwenden oder dieses Zertifikat von einem anderen Unternehmen kaufen, lesen Sie [Konfigurieren von Internetserverzertifikaten (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731977(v=ws.10)) in der Dokumentationsbibliothek von [Webserver (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) auf der TechNet-Website.
+> - Informationen zum Konfigurieren von ISS für die Verwendung des Zertifikats finden Sie unter [Hinzufügen einer Bindung zu einer Website (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731692(v=ws.10)) in der Dokumentationsbibliothek von [Webserver (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753433(v=ws.10)) auf der TechNet-Website.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Konfigurieren des RMS-Connectors für einen Webproxyserver
 Wenn die Connector-Server in einem Netzwerk installiert sind, das keine direkte Internetverbindung besitzt und eine manuelle Konfiguration eines Webproxyservers für ausgehenden Internet Zugriff erfordert, müssen Sie die Registrierung auf diesen Servern für den RMS-Verbindungs Dienst konfigurieren.
@@ -255,4 +255,3 @@ Wenn Sie diese Dateien noch nicht heruntergeladen haben, können Sie diese aus d
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem der RMS-Connector nun installiert und konfiguriert ist, können Sie Ihre lokalen Server für dessen Verwendung konfigurieren. Navigieren Sie zu [Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst](configure-servers-rms-connector.md).
-

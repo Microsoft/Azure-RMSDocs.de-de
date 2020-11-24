@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6099773aa4c9b634cf225b570ac4e1ad8bebf38e
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: 7c5f2975b93e907d244db7c95975105f58ed1b94
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868993"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568129"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -40,11 +40,11 @@ Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** insta
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 > [!TIP]
-> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie**  >  für lokale Computer **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **Alle Einstellungen**  >  **Lange Win32-Pfade aktivieren** 
+> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie**  >  für lokale Computer **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **Alle Einstellungen**  >  **Lange Win32-Pfade aktivieren** 
 > 
 > Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
 >
-> Weitere Informationen finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
+> Weitere Informationen finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 Die [Azure Information Protection-Überprüfung](../deploy-aip-scanner.md) verwendet Cmdlets aus dem AzureInformationProtection-Modul, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
 
@@ -139,7 +139,7 @@ In den nächsten Abschnitten wird erklärt, wie Sie diese Werte manuell abrufen 
 
 ##### <a name="to-get-the-bpostenantid"></a>So rufen Sie „BposTenantId“ ab
 
-Führen Sie das Cmdlet Get-aipserviceconfiguration aus dem Azure RMS Windows PowerShell-Modul aus:
+Führen Sie das Cmdlet "Get-AipServiceConfiguration" über das Azure RMS Windows PowerShell-Modul aus:
 
 1. Wenn dieses Modul nicht bereits auf Ihrem Computer installiert ist, finden Sie weitere Informationen unter [Installieren des aipservice-PowerShell-Moduls](../install-powershell.md).
 
@@ -150,7 +150,7 @@ Führen Sie das Cmdlet Get-aipserviceconfiguration aus dem Azure RMS Windows Pow
     Connect-AipService
     ```
 
-    Geben Sie bei entsprechender Aufforderung die Anmeldeinformationen für den Azure Information Protection-Mandantenadministrator ein. In der Regel verwenden Sie ein Konto, das ein globaler Administrator für Azure Active Directory oder Office 365 ist.
+    Geben Sie bei entsprechender Aufforderung die Anmeldeinformationen für den Azure Information Protection-Mandantenadministrator ein. In der Regel verwenden Sie ein Konto, das ein globaler Administrator für Azure Active Directory oder Microsoft 365 ist.
     
 4. Führen Sie `Get-AipServiceConfiguration` aus, und erstellen Sie eine Kopie des BPOSId-Werts.
     
@@ -193,7 +193,7 @@ Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolService
     Connect-MsolService
     ```
 
-    Wenn Sie dazu aufgefordert werden, geben Sie die Administratoranmeldeinformationen des Azure AD-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
+    Wenn Sie dazu aufgefordert werden, geben Sie Ihre Azure AD Mandanten Administrator-Anmelde Informationen ein (in der Regel verwenden Sie ein Konto, das ein globaler Administrator für Azure Active Directory oder Microsoft 365 ist).
 
 4. Führen Sie das Cmdlet „New-MsolServicePrincipal“ aus, um einen neuen Dienstprinzipal zu erstellen:
 
@@ -257,7 +257,7 @@ Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Adm
 
 Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterladen von Vorlagen außerhalb der Azure-Region Nordamerika verwenden, müssen Sie die Registrierung bearbeiten: 
 
-1. Führen Sie das Get-aipserviceconfiguration-Cmdlet erneut aus, und notieren Sie sich die Werte für **certificationextranetdistributionpointurl** und **licensingextranetdistributionpointurl**.
+1. Führen Sie das Get-AipServiceConfiguration-Cmdlet erneut aus, und notieren Sie sich die Werte für **certificationextranetdistributionpointurl** und **licensingextranetdistributionpointurl**.
 
 2. Öffnen Sie auf jedem Computer, auf dem Sie die AzureInformationProtection-Cmdlets ausführen möchten, den Registrierungs-Editor.
 
@@ -543,7 +543,7 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory**  >  **Manage**  >  **App-Registrierungen**. 
 
-3. Wählen Sie **+ neue Registrierung**aus, um Ihre Web-App/API-Anwendung zu erstellen. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
+3. Wählen Sie **+ neue Registrierung** aus, um Ihre Web-App/API-Anwendung zu erstellen. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
 
    - **Name**: `AIPOnBehalfOf`
         
@@ -551,42 +551,42 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
     
     - **Unterstützte Konto Typen**: **nur Konten in diesem Organisations Verzeichnis**
     
-    - **Umleitungs-URI (optional)**: **Web** und`http://localhost`
+    - **Umleitungs-URI (optional)**: **Web** und `http://localhost`
 
-4. Kopieren Sie im Bereich **aiponbehalfof** den Wert für die **Anwendungs-ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `57c3c1c3-abf9-404e-8b2b-4652836c8c66` . Dieser Wert wird für den *webappid* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+4. Kopieren Sie im Bereich **aiponbehalfof** den Wert für die **Anwendungs-ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `57c3c1c3-abf9-404e-8b2b-4652836c8c66` . Dieser Wert wird für den *webappid* -Parameter verwendet, wenn Sie das Set-AIPAuthentication-Cmdlet ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
-5. Wählen Sie im Bereich **aiponbehalfof** im Menü **Verwalten** die Option **Authentifizierung**aus.
+5. Wählen Sie im Bereich **aiponbehalfof** im Menü **Verwalten** die Option **Authentifizierung** aus.
 
-6. Aktivieren Sie im Bereich **aiponbehalfof-Authentication** im Abschnitt **Erweiterte Einstellungen** das Kontrollkästchen **ID Tokens** , und wählen Sie dann **Speichern**aus.
+6. Aktivieren Sie im Bereich **aiponbehalfof-Authentication** im Abschnitt **Erweiterte Einstellungen** das Kontrollkästchen **ID Tokens** , und wählen Sie dann **Speichern** aus.
 
-7. Wählen Sie im Bereich **aiponbehalfof-Authentication** im Menü **Verwalten** die Option **Zertifikate & Geheimnissen**aus.
+7. Wählen Sie im Bereich **aiponbehalfof-Authentication** im Menü **Verwalten** die Option **Zertifikate & Geheimnissen** aus.
 
-8. Wählen Sie im Bereich **aiponbehalfof--Zertifikate &** geheimen Schlüssel im Abschnitt geheime **Client** Schlüssel die Option **+ neuer geheimer Client**Schlüssel aus. 
+8. Wählen Sie im Bereich **aiponbehalfof--Zertifikate &** geheimen Schlüssel im Abschnitt geheime **Client** Schlüssel die Option **+ neuer geheimer Client** Schlüssel aus. 
 
-9. Geben Sie unter **geheimen Client Schlüssel hinzufügen**Folgendes an, und wählen Sie dann **Hinzufügen**aus:
+9. Geben Sie unter **geheimen Client Schlüssel hinzufügen** Folgendes an, und wählen Sie dann **Hinzufügen** aus:
     
-    - **Beschreibung**:`Azure Information Protection client`
-    - **Läuft**ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
+    - **Beschreibung**: `Azure Information Protection client`
+    - **Läuft** ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
 
-9. Kopieren Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` . Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
+9. Kopieren Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn` . Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert** wird. 
     
     Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
 
-10. Wählen Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Menü **Verwalten** die **Option API**verfügbar machen aus.
+10. Wählen Sie im Bereich **aiponbehalfof--Zertifikate & geheimen** Schlüssel im Menü **Verwalten** die **Option API** verfügbar machen aus.
 
 11. Wählen Sie im Bereich **aiponbehalfof-macht eine API** den Wert für die **Option Anwendungs-ID-URI** **festlegen** aus, und ändern Sie im Wert Anwendungs- **ID-URI** den Wert **API** zu **http**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `http://d244e75e-870b-4491-b70d-65534953099e` . 
     
-    Wählen Sie **Speichern** aus.
+    Wählen Sie **Speichern**.
 
-12. Wählen Sie im Bereich **aiponbehalfof-API verfügbar** machen die Option **+ Bereich hinzufügen**aus.
+12. Wählen Sie im Bereich **aiponbehalfof-API verfügbar** machen die Option **+ Bereich hinzufügen** aus.
 
-13. Geben Sie im **Bereich Bereich hinzufügen** Folgendes an, und verwenden Sie die vorgeschlagenen Zeichen folgen als Beispiele, und wählen Sie dann **Bereich hinzufügen**aus:
+13. Geben Sie im **Bereich Bereich hinzufügen** Folgendes an, und verwenden Sie die vorgeschlagenen Zeichen folgen als Beispiele, und wählen Sie dann **Bereich hinzufügen** aus:
     - **Bereichsname**: `user-impersonation`
-    - **Wer kann zustimmen?**: **Administratoren und Benutzer**
+    - **Zum Einwilligen berechtigte Personen**: **Administratoren und Benutzer**
     - **Anzeigename der Administratoreinwilligung**: `Access Azure Information Protection scanner`
     - **Beschreibung der Administratoreinwilligung**: `Allow the application to access the scanner for the signed-in user`
-    - **Anzeige Name der Benutzer Zustimmung**:`Access Azure Information Protection scanner`
-    - **Beschreibung der Benutzer Zustimmung**:`Allow the application to access the scanner for the signed-in user`
+    - **Anzeigename der Benutzereinwilligung**: `Access Azure Information Protection scanner`
+    - **Beschreibung der Benutzereinwilligung**: `Allow the application to access the scanner for the signed-in user`
     - **Status**: **aktiviert** (Standard)
 
 
@@ -594,38 +594,38 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 15. Wählen Sie **API-Berechtigungen anfordern** aus.
 
-16. Wählen Sie im Bereich **aiponbehalfof**  |  **API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+16. Wählen Sie im Bereich **aiponbehalfof**  |  **API-Berechtigungen** die Option **+ Berechtigung hinzufügen** aus.
 
-17. Wählen Sie **Azure Right Management**aus, wählen Sie **Delegierte Berechtigungen** aus, und wählen Sie dann **geschützte Inhalte für Benutzer erstellen und zugreifen aus**.
+17. Wählen Sie **Azure Right Management** aus, wählen Sie **Delegierte Berechtigungen** aus, und wählen Sie dann **geschützte Inhalte für Benutzer erstellen und zugreifen aus**.
 
 18. Klicken Sie auf **Berechtigung hinzufügen**.
 
-19. Wählen Sie im **Bereich API-Berechtigungen** im Abschnitt **Zustimmung erteilen** die Option **Administrator Zustimmung erteilen für <your tenant name> ** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
+19. Wählen Sie im **Bereich API-Berechtigungen** im Abschnitt **Zustimmung erteilen** die Option **Administrator Zustimmung erteilen für <your tenant name>** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
 
 20. Wählen Sie im Bereich **App-Registrierungen** die Option **+ neue Anwendungs Registrierung** aus, um die native Anwendung jetzt zu erstellen.
 
 21. Geben Sie im Bereich **Anwendung registrieren** die folgenden Einstellungen an, und klicken Sie dann auf **registrieren**:
     - **Name**: `AIPClient`
     - **Unterstützte Konto Typen**: **nur Konten in diesem Organisations Verzeichnis**
-    - **Umleitungs-URI (optional)**: **öffentlicher Client (Mobile & Desktop)** und`http://localhost`
+    - **Umleitungs-URI (optional)**: **öffentlicher Client (Mobile & Desktop)** und `http://localhost`
 
 22. Kopieren Sie im Bereich **aipclient** den Wert der Anwendungs- **ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f` . 
     
-    Dieser Wert wird für den nativeappid-Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+    Dieser Wert wird für den nativeappid-Parameter verwendet, wenn Sie das Set-AIPAuthentication-Cmdlet ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
-23. Wählen Sie im Bereich **aipclient** im Menü **Verwalten** die Option **Authentifizierung**aus.
+23. Wählen Sie im Bereich **aipclient** im Menü **Verwalten** die Option **Authentifizierung** aus.
 
-24. Wählen Sie im Bereich **aipclient-Authentifizierung** im Menü **Verwalten** die Option **API-Berechtigungen**aus.
+24. Wählen Sie im Bereich **aipclient-Authentifizierung** im Menü **Verwalten** die Option **API-Berechtigungen** aus.
 
-25. Wählen Sie im Bereich **aipclient-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+25. Wählen Sie im Bereich **aipclient-Berechtigungen** die Option **+ Berechtigung hinzufügen** aus.
 
-26. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs**aus.
+26. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs** aus.
 
-27. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
+27. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof** aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer** Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
 
-28. Wählen Sie im **Bereich API-Berechtigungen** im Abschnitt **Zustimmung erteilen** die Option **Administrator Zustimmung erteilen für \<*your tenant name*> ** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
+28. Wählen Sie im **Bereich API-Berechtigungen** im Abschnitt **Zustimmung erteilen** die Option **Administrator Zustimmung erteilen für \<*your tenant name*>** aus, und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
 
-Sie haben nun die Konfiguration der beiden apps abgeschlossen, und Sie verfügen über die Werte, die Sie zum Ausführen von [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *webappid*, *webappkey* und *nativeappid*benötigen. Aus unseren Beispielen:
+Sie haben nun die Konfiguration der beiden apps abgeschlossen, und Sie verfügen über die Werte, die Sie zum Ausführen von [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *webappid*, *webappkey* und *nativeappid* benötigen. Aus unseren Beispielen:
 
 ```ps
 Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
@@ -701,9 +701,9 @@ Allgemeine Schritte:
 
 2. Öffnen Sie auf dem Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, die Aufgabenplanung, und erstellen Sie einen neuen Task. Konfigurieren Sie diesen Task so, dass er als Dienstkonto ausgeführt wird, mit dem Dateien bezeichnet und geschützt werden. Konfigurieren Sie anschließend die folgenden Werte für die **Aktionen**:
 
-   - **Aktion**:`Start a program`
-   - **Programm/Skript**:`Powershell.exe`
-   - **Argumente hinzufügen (optional)**:`-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **Aktion**: `Start a program`
+   - **Programm/Skript**: `Powershell.exe`
+   - **Argumente hinzufügen (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      Geben Sie als Argumentzeile Ihren eigenen Pfad und Dateinamen an, wenn diese vom Beispiel abweichen.
 

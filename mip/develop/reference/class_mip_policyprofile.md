@@ -1,36 +1,36 @@
 ---
 title: Class policyprofile
 description: 'Dokumentiert die policyprofile:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 9f70b8bfa1eee6e994b67c668b5144d6cb74ecad
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 0cd8c300aa2c6edb0e06c6cd8306c48d2cb8dafa
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760910"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567376"
 ---
 # <a name="class-policyprofile"></a>Class policyprofile 
 Die PolicyProfile-Klasse ist die Stammklasse zum Verwenden von Microsoft Information Protection-Vorgängen. Eine gewöhnliche Anwendung benötigt nur eine PolicyProfile-Klasse, kann bei Bedarf aber mehrere erstellen.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die auf dem Profil festgelegten Einstellungen ab.
-Public Std:: shared_ptr\<AsyncControl\> listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
-Public Std:: Vector\<Std:: String\> listengines ()  |  Die Liste der Module.
-Public Std:: shared_ptr\<AsyncControl\> unloadengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
+Public Std:: shared_ptr \<AsyncControl\> listenginesasync (Konst Std:: shared_ptr \<void\>& context)  |  Startet den Vorgang zum Auflisten von Engines
+Public Std:: Vector \<std::string\> listengines ()  |  Die Liste der Module.
+Public Std:: shared_ptr \<AsyncControl\> unloadengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr \<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 öffentliches void unloadengine (Konstante Std:: String& ID)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
-Public Std:: shared_ptr\<AsyncControl\> addengineasync (konstant policyengine:: Settings& Settings, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
-Public Std:: shared_ptr\<policyengine\> addengine (Konstanten policyengine:: Settings& Settings, Konstanten Std:: shared_ptr\<void\>& context)  |  Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
-Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+Public Std:: shared_ptr \<AsyncControl\> addengineasync (Konstanten policyengine:: Settings& Settings, Konstanten Std:: shared_ptr \<void\>& context)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
+Public Std:: shared_ptr \<PolicyEngine\> addengine (Konstante policyengine:: Settings& Settings, Konst Std:: shared_ptr \<void\>& context)  |  Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
+Public Std:: shared_ptr \<AsyncControl\> deleteengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr \<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die angegebene Engine werden gelöscht.
-öffentliches void acquireauthtoken (Cloud Cloud, Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat) konstant  |  Löst einen Authentifizierungs Rückruf aus.
+öffentliches void acquireauthtoken (Cloud Cloud, Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat) konstant  |  Löst einen Authentifizierungs Rückruf aus.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
 Ruft die auf dem Profil festgelegten Einstellungen ab.

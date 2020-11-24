@@ -4,19 +4,19 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 05/27/2020
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3730c8d781c9b53de1848ef2ebee1185cae38560
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953132"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568162"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -62,6 +62,10 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 - Wenn ein Dokument über den Datei-Explorer, über PowerShell oder über die Azure Information Protection-Überprüfung bezeichnet wird, werden optische Kennzeichnungen nicht sofort übernommen. Sie werden vom Azure Information Protection-Client angewendet, wenn das Dokument in einer Office-App geöffnet und erstmals gespeichert wird.
 
     Eine Ausnahme stellt die Verwendung von [Autosave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) mit Office-Apps für Dateien dar, die in Microsoft SharePoint, onedrive for Work oder School oder onedrive for Home gespeichert sind: Wenn die automatische Speicherung aktiviert ist, werden visuelle Kennzeichnungen nicht angewendet, es sei denn, Sie konfigurieren die [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) , um die Klassifizierung so zu aktivieren, dass Sie fortlaufend im Hintergrund ausgeführt wird.
+
+> [!NOTE]
+> Weitere Informationen zur Unterstützung von visuellen Kennzeichnungen in den AIP-Clients und zur integrierten Bezeichnung für Office-Funktionen finden Sie unter [Vergleich der Bezeichnung "Clients für Windows-Computer](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)".
+> 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>So konfigurieren Sie visuelle Kennzeichnungen für eine Bezeichnung
 

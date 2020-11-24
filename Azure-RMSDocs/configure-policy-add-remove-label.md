@@ -5,18 +5,18 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: bf0567efc0d8ae8c65667f7b65cafbdbd32f83aa
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: cbfb54a4e35a39b312b49bd534950c42cd79f7a7
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047727"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567562"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Hinzufügen oder Entfernen einer Bezeichnung zu oder aus einer Azure Information Protection-Richtlinie
 
@@ -39,7 +39,7 @@ Wenn Sie eine bereichsbezogene Richtlinie erstellen müssen, sodass die Bezeichn
 
 ## <a name="to-add-or-remove-a-label-to-or-from-a-policy"></a>So fügen Sie eine Bezeichnung zu einer Richtlinie hinzu oder entfernen sie daraus
 
-1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
@@ -47,7 +47,7 @@ Wenn Sie eine bereichsbezogene Richtlinie erstellen müssen, sodass die Bezeichn
 
     Wenn die hinzuzufügende oder zu entfernende Bezeichnung für eine Gruppe von Benutzern gilt, wählen Sie stattdessen Ihre bereichsbezogene Richtlinie aus.
 
-3. Wählen Sie im Bereich **Richtlinie** die Option **Bezeichnungen hinzufügen oder entfernen**aus.
+3. Wählen Sie im Bereich **Richtlinie** die Option **Bezeichnungen hinzufügen oder entfernen** aus.
 
 4. Im Bereich **Richtlinie: Bezeichnungen hinzufügen oder entfernen** werden alle Bezeichnungen mit aktivierten Kontrollkästchen angezeigt, wenn Sie sich bereits in einer Richtlinie befinden, und der entsprechende Richtlinien Name in der Spalte **Richtlinie** .
      
@@ -59,7 +59,7 @@ Wenn Sie eine bereichsbezogene Richtlinie erstellen müssen, sodass die Bezeichn
     
     - Deaktivieren Sie das Kontrollkästchen einer Bezeichnung, um diese zu entfernen.
   
-5. Klicken Sie auf **Save** (Speichern), um Ihre Änderungen zu speichern.
+5. Klicken Sie auf **Speichern**, um Ihre Änderungen zu speichern.
    
     Ihre vorgenommenen Änderungen sind automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 

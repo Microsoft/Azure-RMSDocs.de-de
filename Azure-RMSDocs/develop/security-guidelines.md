@@ -11,12 +11,12 @@ ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: fe9afaa7bc9951ce7264e4e27e308c39e3718551
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67521189"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568273"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Best Practices zu Sicherheitsthemen für Information Protection
 
@@ -51,7 +51,7 @@ Bei diesen Themen geht es hauptsächlich um Probleme mit Lecks. Die Integrität 
 
 Microsoft führt keine Tests bezüglich der Einhaltung des Mindeststandards durch und prüft auch nicht die Ergebnisse derartiger Tests. Es obliegt dem Partner sicherzustellen, dass die Mindeststandards erfüllt werden. Microsoft stellt zwei zusätzliche Empfehlungsstufen zur Verfügung, um häufige Bedrohungen zu minimieren. Hierbei handelt es sich im Allgemeinen um ergänzende Vorschläge. Bei den bevorzugten Empfehlungen wird beispielsweise davon ausgegangen, dass die Mindeststandards erfüllt wurden – sofern anwendbar und nicht anderweitig spezifiziert.
 
-|Standardstufe|Description|
+|Standardstufe|BESCHREIBUNG|
 |---|---|
 |Mindeststandard| Eine Anwendung, die geschützte Informationen verarbeitet, muss vor dem Signieren des von Microsoft zur Verfügung gestellten Produktionszertifikats den Mindeststandard erfüllen. Partner verwenden im Allgemeinen das Produktionshierarchiezertifikat zum Zeitpunkt des letzten Releases der Software. Mit den eigenen internen Tests eines Partners wird überprüft, ob die Anwendung diesen Mindeststandard erfüllt. Das Erfüllen des Mindeststandards stellt keine von Microsoft bestätigte Sicherheitsgarantie dar und darf auch nicht als solche ausgelegt werden. Microsoft führt keine Tests bezüglich der Einhaltung des Mindeststandards durch und prüft auch nicht die Ergebnisse derartiger Tests. Es obliegt dem Partner sicherzustellen, dass die Mindeststandards erfüllt werden.|
 |Empfohlener Standard| Die empfohlenen Richtlinien sind richtungsweisend für erhöhte Anwendungssicherheit und lassen darauf schließen, wie sich das SDK möglicherweise entwickelt, wenn mehr Sicherheitskriterien implementiert werden. Anbieter können ihre Anwendungen durch Einhalten dieser strikteren Richtlinien mit erhöhter Sicherheit auf dem Markt differenzieren.|
@@ -73,7 +73,7 @@ Das Information Protection-SDK unterstützt keine Änderungen am Code zur Laufze
 - Sie können das verzögerte Laden nicht verändern, indem Sie den Linkerschalter /DELAYLOAD zur Laufzeit oder später ändern.
 - Sie können das verzögerte Laden auch nicht verändern, indem Sie Ihre eigene Version der Hilfsfunktion Delayimp.lib bereitstellen.
 - Sie können keine Module entladen, die durch authentifizierte Module verzögert geladen wurden, während die Information Protection-SDK-Umgebung existiert.
-- Sie können den Linkerschalter **`/DELAY:UNLOAD`** nicht zum Aktivieren des Entladevorgangs der verzögerten Module verwenden.
+- Sie können den Linker-Schalter nicht verwenden **`/DELAY:UNLOAD`** , um das Entladen verzögerter Module zu aktivieren.
 
 ## <a name="incorrectly-interpreting-license-rights"></a>Fehlerhafte Interpretation von Lizenzrechten
 
@@ -104,5 +104,5 @@ Zurzeit keine.
 
 Best Practices für das Implementieren von Anwendungen mittels AIP-SDK umfassen die folgenden Artikel:
 
-- [Bedrohungsmodelle und Minimierungen](https://msdn.microsoft.com/library/aa362751.aspx)
-- [Angriffe auf die Sicherheit](https://msdn.microsoft.com/library/aa362736.aspx)
+- [Bedrohungsmodelle und Minimierungen](/previous-versions//aa362751(v=vs.85))
+- [Angriffe auf die Sicherheit](/previous-versions//aa362736(v=vs.85))

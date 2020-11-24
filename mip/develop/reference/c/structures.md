@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 4/16/2020
-ms.openlocfilehash: 0d24a2fedad93ecca3b4d5a48f5434746a7a7c4e
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.date: 9/22/2020
+ms.openlocfilehash: 2939a4c64ab3e1a47704811875c6a7e941bcfe3c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763840"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567343"
 ---
 # <a name="structures"></a>Strukturen
 
@@ -62,7 +62,7 @@ Nicht transparenter Handle für MIP-Objekt.
 | Feld | BESCHREIBUNG |
 |---|---|
 | typeId | Magische Zahl, die einen bestimmten behandetyp eindeutig identifiziert  |
-| data | Rohdatenhandle  |
+| Daten | Rohdatenhandle  |
 
 
 ```c
@@ -150,7 +150,7 @@ HTTP-Anforderung
 | Feld | BESCHREIBUNG |
 |---|---|
 | id | Eindeutige Anforderungs-ID: korreliert mit derselben Eigenschaft in mip_cc_http_response  |
-| type | HTTP-Anforderungstyp (z. b. Get vs. Post)  |
+| Typ | HTTP-Anforderungstyp (z. b. Get vs. Post)  |
 | url | HTTP-Anforderungs-URL  |
 | bodysize | Größe des HTTP-Anforderungs Texts in Bytes  |
 | body | Puffer Verbindungs Text für HTTP-Anforderung  |
@@ -283,7 +283,7 @@ Definiert eine einzelne Anforderung für asynchrone Aufgaben Dispatch.
 
 | Feld | BESCHREIBUNG |
 |---|---|
-| id | Task-ID  |
+| id | Aufgaben-ID  |
 | Delta MS | Verzögerung bis zur Ausführung der Aufgabe (in Millisekunden)  |
 | executeonindependentthread | Gibt an, ob dieser Task in einem vollständig unabhängigen Thread ausgeführt werden oder einen freigegebenen Thread wieder verwenden soll.  |
 
@@ -327,51 +327,38 @@ typedef struct {
 
 ## <a name="mip_cc_document_state"></a>mip_cc_document_state
 
-Rückruf Funktionsdefinition zum Abrufen von Dokument Metatdaten, gefiltert nach Name/Präfix
+Rückruf Funktionsdefinition zum Abrufen von Dokument Metatdaten, gefiltert nach Name/Präfix.
+
+| Feld | BESCHREIBUNG |
+|---|---|
+| datastate | Status der Dokument Daten, wenn die Anwendung mit ihr interagiert. |
+| contentMetadataCallback | Rückruf für die Dokument Metadaten. |
+| Schutz Deskriptor | Schutz Deskriptor, wenn das Dokument derzeit geschützt ist, andernfalls NULL.  |
+| contentformat | Dokument Format (Datei oder e-Mail).  |
+| auditmetadata | Optionale anwendungsspezifische Metadaten, die beim Senden von Überwachungsberichten verwendet werden. Erkannte Werte: "Absender": Absender-e-Mail-Adresse; "Empfänger": JSON-Array von e-Mail-Empfängern; ' LastModifiedBy ': e-Mail-Adresse des Benutzers, der das Dokument zuletzt geändert hat. ' LastModifiedDate ': Datum der letzten Änderung eines Dokuments  |
+| contentMetadataVersion | Version der Dokument Metadaten, der Standardwert ist 0.  |
+| contentMetadataVersionFormat | Beschreibt, wie die metadatenversionierung verarbeitet wird.  |
 
 ```c
 typedef struct {
-  /**
-   * Human-readable document description visible in tenant audit portal
-   *     Example for a file: [path\filename]
-   *     Example for an email: [Subject:Sender]
-   */
+
   const char* contentId;
 
-  /**
-   * State of document data as application interacts with it
-   */
+
   mip_cc_data_state dataState;
 
-  /**
-   * Document metadata callback
-   */
   mip_cc_metadata_callback contentMetadataCallback;
 
-  /**
-   * Protection descriptor if document is currently protected, else null
-   */
   mip_cc_protection_descriptor protectionDescriptor;
 
-  /**
-   * Format of document (file vs. email)
-   */
   mip_cc_content_format contentFormat;
 
-  /**
-   * Optional application-specific metadata that is used when sending audit reports
-   *     Recognized values:
-   *       'Sender': Sender email address
-   *       'Recipients': JSON array of email recipients
-   *       'LastModifiedBy': Email address of the user who last modified a document
-   *       'LastModifiedDate': Date a document was last modified
-   */
   mip_cc_dictionary auditMetadata;
-  
-  /**
-   * Document metadata version, default should be 0.
-   */
-  unsigned int contentMetadataVersion;
+
+  uint32_t contentMetadataVersion;
+
+  mip_cc_metadata_version_format contentMetadataVersionFormat;
+
 } mip_cc_document_state;
 
 ```
@@ -384,7 +371,7 @@ Metadateneintrag
 |---|---|
 | Schlüssel | Schlüssel Eintrag |
 | value | Wert Eintrag  |
-| version | Der Versions Eintrag muss mit 0 initialisiert werden, sofern nicht anders bekannt. |
+| Version | Der Versions Eintrag muss mit 0 initialisiert werden, sofern nicht anders bekannt. |
 
 
 ```c

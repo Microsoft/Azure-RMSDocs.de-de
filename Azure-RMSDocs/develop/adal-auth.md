@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 3e071a6ef2a51180a16748e4acb595866d17be78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: 568ed4dee01c59f8808442a4499b8a858f9ebcf5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971964"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568075"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Konfigurieren Ihrer App für die ADAL-Authentifizierung
 
@@ -29,11 +29,11 @@ Dieses Thema beschreibt die Schritte zum Konfigurieren Ihrer App für die ADAL-b
 
 Sie benötigen Folgendes:
 
-- Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie im Artikel zum [Registrieren für RMS for Individuals](../rms-for-individuals-user-sign-up.md).
-- Ein Abonnement für Microsoft Azure Rights Management (ein kostenloses [RMS für Einzelpersonen](https://technet.microsoft.com/library/dn592127.aspx)-Konto ist ausreichend).
+- Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie im Artikel zum [Registrieren für RMS for Individuals](../rms-for-individuals.md).
+- Ein Abonnement für Microsoft Azure Rights Management (ein kostenloses [RMS für Einzelpersonen](../rms-for-individuals.md)-Konto ist ausreichend).
 
 > [!NOTE]
-> Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Außerdem sollte Ihr IT-Administrator ein Geschäfts-, *Schul-oder unikonto*abonnieren, anstatt eine *Microsoft-Konto* (z.b. Hotmail).
+> Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Außerdem sollte Ihr IT-Administrator ein Geschäfts-, *Schul-oder unikonto* abonnieren, anstatt eine *Microsoft-Konto* (z.b. Hotmail).
 
 Nach der Registrierung für Microsoft Azure:
 

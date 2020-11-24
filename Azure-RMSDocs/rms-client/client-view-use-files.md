@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fe3309ac4ca51668b0c351f90baa79c97607e96a
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: 19ee7b67b7774420e799876e91d1889c5c788888
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298035"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568057"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Benutzerhandbuch: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer
 
@@ -49,7 +49,7 @@ Wenn Sie jedoch ein iOS- oder Android-Gerät besitzen, können Sie diese geschü
 
 Bevor Sie die geschützte Datei anzeigen können, muss der Rights Management-Dienst, mit dem die Datei geschützt wurde, bestätigen, dass Sie zum Anzeigen der Datei berechtigt sind. Dazu überprüft der Dienst Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, um sich anzumelden. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
 
-Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azure zur Verfügung stellt und auch keine gleichwertige lokale Version (AD RMS) verwendet, haben Sie zwei Optionen:
+Wenn Ihre Organisation kein cloudbasiertes Konto hat, das Sie verwenden können (für Microsoft 365 oder Azure) und keine entsprechende lokale Version (AD RMS) verwendet, haben Sie zwei Möglichkeiten:
 
 - Wenn Sie eine geschützte E-Mail erhalten haben, folgen Sie den Anweisungen zur Anmeldung bei Ihrem sozialen Netzwerk als Identitätsanbieter (z.B. Google bei einem Gmail-Konto), oder beantragen Sie eine einmalige Kennung.
 

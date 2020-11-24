@@ -12,14 +12,14 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ef040c0372b6efff2a7280b1e395eca72952ca6d
-ms.sourcegitcommit: 129370798e7d1b5baa110b2d7b2f24abd3cad5c8
+ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
+ms.sourcegitcommit: bf8867a2270bd9e9695f2a5fe53fa5653faf7f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316874"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "95567949"
 ---
-# <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection Scanners
+# <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection-Scanners
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
 
@@ -49,7 +49,7 @@ Führen Sie diese Schritte nach Bedarf erneut aus, wenn sich Ihre Inhalte änder
 
     Führen Sie alternativ in der PowerShell-Sitzung den folgenden Befehl aus:
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -57,19 +57,19 @@ Führen Sie diese Schritte nach Bedarf erneut aus, wenn sich Ihre Inhalte änder
 
     Führen Sie einen der folgenden Schritte aus, um den Überprüfungs Fortschritt zu überwachen
 
-    - **Aktualisieren Sie die Scanaufträge.**  Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Aktualisieren**aus.
+    - **Aktualisieren Sie die Scanaufträge.**  Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Aktualisieren** aus.
 
         Warten Sie, bis die Werte für die Spalte **Letzte Scanergebnisse** und die Spalte Letzte Überprüfung **(Endzeit)** angezeigt werden.
 
     - **Verwenden Sie einen PowerShell-Befehl.** Führen `Get-AIPScannerStatus` Sie aus, um die Statusänderung zu überwachen.
 
-1. Überprüfen Sie nach Abschluss der Überprüfung die im Verzeichnis ** % *LocalAppData*% \ microsoft\msip\scanner\reports** gespeicherten Berichte.
+1. Überprüfen Sie nach Abschluss der Überprüfung die im Verzeichnis **% *LocalAppData*% \ microsoft\msip\scanner\reports** gespeicherten Berichte.
 
     - Die TXT-Zusammenfassungsdateien enthalten die zum Überprüfen benötigte Zeit, die Anzahl der überprüften Dateien sowie die Anzahl der Dateien mit übereinstimmenden Informationstypen.
 
     - Die CSV-Dateien enthalten mehr Details zu den einzelnen Dateien. In diesem Ordner werden für jeden Scanzyklus bis zu 60 Berichte gespeichert, die bis auf den letzten alle komprimiert werden, um die Speicherplatzbelegung zu minimieren.
 
-[Anfängliche Konfigurationen](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) weisen Sie an, die zu **ermittelnden Informationstypen** nur für die **Richtlinie**festzulegen. Diese Konfiguration bedeutet, dass nur Dateien, die die Bedingungen erfüllen, die Sie für die automatische Klassifizierung konfiguriert haben, in den ausführlichen Berichten enthalten sind.
+[Anfängliche Konfigurationen](deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal) weisen Sie an, die zu **ermittelnden Informationstypen** nur für die **Richtlinie** festzulegen. Diese Konfiguration bedeutet, dass nur Dateien, die die Bedingungen erfüllen, die Sie für die automatische Klassifizierung konfiguriert haben, in den ausführlichen Berichten enthalten sind.
 
 Wenn keine Bezeichnungen angewendet werden, überprüfen Sie, ob die Bezeichnungs Konfiguration eine automatische anstelle der empfohlenen Klassifizierung enthält, oder aktivieren Sie die Option **Empfohlene Bezeichnung als automatisch** aktivieren (verfügbar in Scanner Version 2.7. x. x und höher).
 
@@ -95,13 +95,13 @@ Wenn Sie diese Schritte nach der Erstkonfiguration und-Installation durchgeführ
 
 Verwenden Sie eine der folgenden Methoden, um einen aktuell laufenden Scanvorgang zu beenden:
 
-- **Azure-Portal.** Wählen Sie **Scan**Vorgang:
+- **Azure-Portal.** Wählen Sie **Scan** Vorgang:
 
     ![Beendet eine Überprüfung für den Azure Information Protection Scanner.](./media/scanner-stop-scan.png)
 
 - **Führen Sie einen PowerShell-Befehl aus.** Führen Sie den folgenden Befehl aus:
 
-    ```ps
+    ```PowerShell
     Stop-AIPScan 
     ```
 
@@ -133,7 +133,7 @@ Wenn Sie die Richtlinie früher aktualisieren möchten, z. b. beim Testen, lösc
 Wenn Sie auch die Schutzeinstellungen für ihre Bezeichnungen geändert haben, warten Sie beim Speichern der aktualisierten Schutzeinstellungen vor dem Neustart des Azure Information Protection Dienstanbieter weitere 15 Minuten ab.
 
 > [!IMPORTANT]
-> Wenn Sie ein Upgrade auf Version [2.8.85](rms-client/unifiedlabelingclient-version-release-history.md#version-2885-public-preview) oder höher durchgeführt haben, überspringt AIP den vollständigen erneuten Scanvorgang für aktualisierte Einstellungen, um eine konsistente Leistung sicherzustellen. Wenn Sie ein Upgrade durchgeführt haben, stellen Sie sicher, dass Sie bei Bedarf [manuell einen vollständigen erneuten Scan ausführen](#rescanning-files) . 
+> Wenn Sie ein Upgrade auf Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) oder höher durchgeführt haben, überspringt AIP den vollständigen erneuten Scanvorgang für aktualisierte Einstellungen, um eine konsistente Leistung sicherzustellen. Wenn Sie ein Upgrade durchgeführt haben, stellen Sie sicher, dass Sie bei Bedarf [manuell einen vollständigen erneuten Scan ausführen](#rescanning-files) . 
 >
 > Wenn Sie beispielsweise die Einstellungen für die **Richtlinien** Erzwingung von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
 > 
@@ -144,14 +144,14 @@ Wenn der Scanner unerwartet in der Mitte angehalten wird und das Scannen einer g
 
 - **Anzahl der dynamischen Ports**. Möglicherweise müssen Sie die Anzahl der dynamischen Ports für das Betriebssystem erhöhen, das die Dateien gehostet. Ein Grund dafür, warum der Scanner die Anzahl an zulässigen Netzwerkverbindungen überschreitet und daher angehalten wird, ist die Serverhärtung für SharePoint.
 
-    Um zu überprüfen, ob dies die Ursache für die Beendigung des Scanners ist, sollten Sie überprüfen, ob die folgende Fehlermeldung für den Scanner in der Datei ** % *LocalAppData*% \ microsoft\msip\logs\msipscanner.iplog** protokolliert wird.
+    Um zu überprüfen, ob dies die Ursache für die Beendigung des Scanners ist, sollten Sie überprüfen, ob die folgende Fehlermeldung für den Scanner in der Datei **% *LocalAppData*% \ microsoft\msip\logs\msipscanner.iplog** protokolliert wird.
 
     **Es kann keine Verbindung mit dem Remote Server hergestellt werden,---> System .net. Sockets. SocketException: Es ist normalerweise nur eine Verwendung der einzelnen Socketadressen (Protokoll/Netzwerkadresse/Port) zulässig. IP: Port**
 
     > [!NOTE]
     > Diese Datei wird gezippt, wenn mehrere Protokolle vorhanden sind.
 
-    Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+    Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 - **Schwellenwert für Listenansicht.** Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert für die Listenansicht erhöhen. Standardmäßig ist der Schwellenwert für die Listenansicht auf 5.000 festgelegt.
 
@@ -161,7 +161,7 @@ Wenn der Scanner unerwartet in der Mitte angehalten wird und das Scannen einer g
 
 Wenn Sie Probleme mit dem Azure Information Scanner haben, überprüfen Sie mit dem folgenden PowerShell-Befehl, ob die Bereitstellung fehlerfrei ist:
 
-```ps
+```PowerShell
 Start-AIPScannerDiagnostics
 ```
 

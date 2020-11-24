@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d309f08866bc01cde2725581ccef796bdbe96e98
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 45b5b2b76abb7a2b2c5dcb826ed15774fb81c606
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563565"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568264"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Exemplarische Vorgehensweise: Arbeiten mit Verschlüsselungseinstellungen
 
@@ -41,7 +41,7 @@ Seit dem [Update vom März 2015](release-notes-rtm.md) haben wir die drei folgen
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (auch als veraltete Algorithmen bezeichnet)
 
-Die Verschlüsselungpaketflags (siehe [Bevorzugte Verschlüsselung](https://msdn.microsoft.com/library/dn974065.aspx)) können in Verbindung mit dem Lizenzeigenschaftsflag *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE* verwendet werden.
+Die Verschlüsselungpaketflags (siehe [Bevorzugte Verschlüsselung](/previous-versions/windows/desktop/msipc/preferred-encryption)) können in Verbindung mit dem Lizenzeigenschaftsflag *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE* verwendet werden.
 
 Es folgend einige einfache Codeausschnitte, die die Verwendung der neuen Lizenzeigenschaft veranschaulichen.
 

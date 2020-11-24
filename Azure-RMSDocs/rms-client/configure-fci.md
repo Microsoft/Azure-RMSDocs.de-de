@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d289db484d647bb909fcb7445138f156322f72be
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 127682099f082d81c93e5951b149033a96d9504b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046537"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568030"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -56,7 +56,7 @@ Voraussetzungen für diese Anweisungen:
     
   - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, wenn diese für einen Proxy Server erforderlich sind. Beispiel: `netsh winhttp import proxy source=ie`
     
-- Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
+- Sie haben ihre lokalen Active Directory Benutzerkonten mit Azure Active Directory oder Microsoft 365 synchronisiert, einschließlich ihrer e-Mail-Adressen. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
     
 - Dieses Szenario unterstützt keine Abteilungs Vorlagen, sodass Sie entweder eine Vorlage verwenden müssen, die nicht für einen Bereich konfiguriert ist, oder Sie verwenden das Cmdlet " [Set-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty) " und den Parameter " *enableinlegacyapps* ".
 
@@ -120,7 +120,7 @@ Beachten Sie, dass bei Änderungen an der Rights Management-Vorlage für die Dat
 
 3.  Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (sicherer), müssen Sie Windows PowerShell auf den Servern konfigurieren, auf denen es ausgeführt wird. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: **Set-ExecutionPolicy RemoteSigned**. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts, wenn diese auf diesem Server gespeichert sind (weniger sicher).
 
-    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie in der PowerShell-Dokumentationsbibliothek unter [about_Signing](https://technet.microsoft.com/library/hh847874.aspx).
+    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie in der PowerShell-Dokumentationsbibliothek unter [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 4.  Speichern Sie die Datei lokal auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen: Speichern Sie die Datei beispielsweise unter **C:\RMS-Protection**. Wenn Sie einen anderen Pfad oder Ordnernamen verwenden, wählen Sie einen Pfad und einen Ordner, der keine Leerzeichen enthält. Sichern Sie diese Datei mithilfe von NTFS-Berechtigungen, damit sie nur von autorisierten Benutzern geändert werden kann.
 
@@ -150,9 +150,9 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
         -   **Enabled**: Behalten Sie die Standardeinstellung bei (das Kontrollkästchen ist aktiviert).
 
-        -   **Beschreibung**: Geben Sie **alle Dateien im Ordner &lt; namens &gt; Ordner für Rights Management klassifizieren**ein.
+        -   **Beschreibung**: Geben Sie **alle Dateien im Ordner &lt; namens &gt; Ordner für Rights Management klassifizieren** ein.
 
-            Ersetzen Sie den * &lt; Ordnernamen &gt; * durch ihren gewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
+            Ersetzen Sie den *&lt; Ordnernamen &gt;* durch ihren gewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
 
         -   **Umfang**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
 
@@ -162,9 +162,9 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
     -   **Klassifizierungsmethode**: Wählen Sie **Ordnerklassifizierung**
 
-    -   Name der**Eigenschaft** : Wählen Sie **RMS**aus.
+    -   Name der **Eigenschaft** : Wählen Sie **RMS** aus.
 
-    -   **Wert**der Eigenschaft: Wählen Sie **Ja**aus.
+    -   **Wert** der Eigenschaft: Wählen Sie **Ja** aus.
 
 Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausführen können, sollten Sie diese Regel nach einem Zeitplan ausführen, damit neue Dateien mit der RMS-Eigenschaft klassifiziert werden.
 
@@ -194,7 +194,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
         -   **Beschreibung**: Geben Sie **Schützen von Dateien in &lt;Ordnername&gt; mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript** ein.
 
-            Ersetzen Sie den * &lt; Ordnernamen &gt; * durch ihren gewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
+            Ersetzen Sie den *&lt; Ordnernamen &gt;* durch ihren gewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
 
         -   **Umfang**: Wählen Sie Ihren Ordner aus. Beispiel: **C:\FileShare**.
 
@@ -282,7 +282,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     >     ```
     >     -   Wenn das Skript in dieser Windows PowerShell-Sitzung erfolgreich ausgeführt wurde, überprüfen Sie Ihre Einträge für **Executive** und **Argument** in der Dateiverwaltungsaufgaben-Aktion.  Wenn Sie **-OwnerEmail [Quelldateibesitzer-E-Mail]** angegeben haben, entfernen Sie diesen Parameter.
     > 
-    >         Wenn die Dateiverwaltungsaufgabe erfolgreich ohne **-OwnerEmail [Quelldateibesitzer-E-Mail]** funktioniert, überprüfen Sie, ob für die nicht geschützten Dateien anstelle von **SYSTEM** ein Domänenbenutzer als Dateibesitzer aufgeführt wird.  Verwenden Sie für diese Prüfung die Registerkarte **Sicherheit** für die Eigenschaften der Datei, und klicken Sie dann auf **Erweitert**. Der **Besitzer**-Wert wird sofort hinter dem **Name**n der Datei angezeigt. Überprüfen Sie außerdem, ob sich der Dateiserver in derselben Domäne bzw. einer vertrauenswürdigen Domäne befindet, um die E-Mail-Adresse des Benutzers in Active Directory Domain Services nachzuschlagen.
+    >         Wenn die Dateiverwaltungsaufgabe erfolgreich ohne **-OwnerEmail [Quelldateibesitzer-E-Mail]** funktioniert, überprüfen Sie, ob für die nicht geschützten Dateien anstelle von **SYSTEM** ein Domänenbenutzer als Dateibesitzer aufgeführt wird.  Verwenden Sie für diese Prüfung die Registerkarte **Sicherheit** für die Eigenschaften der Datei, und klicken Sie dann auf **Erweitert**. Der **Besitzer**-Wert wird sofort hinter dem **Name** n der Datei angezeigt. Überprüfen Sie außerdem, ob sich der Dateiserver in derselben Domäne bzw. einer vertrauenswürdigen Domäne befindet, um die E-Mail-Adresse des Benutzers in Active Directory Domain Services nachzuschlagen.
     > -   Wenn Sie die richtige Anzahl von Dateien im Bericht sehen, die Dateien aber nicht geschützt sind, versuchen Sie, die Dateien manuell mithilfe des [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) -Cmdlets zu schützen, um festzustellen, ob Fehler angezeigt werden.
 
 Wenn Sie sichergestellt haben, dass diese Aufgaben erfolgreich ausgeführt werden, können Sie den Dateiressourcen-Manager schließen. Neue Dateien werden automatisch klassifiziert und geschützt, wenn die geplanten Aufgaben ausgeführt werden. 
@@ -304,5 +304,4 @@ Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleic
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
-
+Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).

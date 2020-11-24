@@ -1,23 +1,23 @@
 ---
 title: Verwalten personenbezogener Daten für Azure Information Protection
 description: Informationen zu den personenbezogenen Daten, die von Azure Information Protection verwendet werden, und wie Sie diese anzeigen, exportieren und löschen.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 10/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b808fd6e3c1080d7c6d9f06384408bd196aadc45
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 89f46156ec8e22c0e44a99c9e3d8d5f79b260129
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136806"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567640"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -130,7 +130,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### <a name="document-tracking-logs"></a>Dokumentnachverfolgungsprotokolle
 
-Führen Sie das Cmdlet [Get-aipservicedocumentlog](/powershell/module/aipservice/get-aipservicedocumentlog) aus, um Informationen über einen bestimmten Benutzer von der Website für die Dokument Nachverfolgung abzurufen. Verwenden Sie das Cmdlet [Get-aipservicetrackinglog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) , um die mit den Dokument Protokollen verknüpften Überwachungsinformationen zu erhalten.
+Führen Sie das Cmdlet [Get-aipservicedocumentlog](/powershell/module/aipservice/get-aipservicedocumentlog) aus, um Informationen über einen bestimmten Benutzer von der Website für die Dokument Nachverfolgung abzurufen. Verwenden Sie das Cmdlet [Get-aipservicetrackinglog](/powershell/module/aipservice/get-aipservicetrackinglog) , um die mit den Dokument Protokollen verknüpften Überwachungsinformationen zu erhalten.
 
 Beispiel:
 ```
@@ -201,9 +201,9 @@ Wenn der Azure Information Protection-Client den Scanner ausführt, werden perso
 
 Sie können das Protokollieren von Informationen für den Azure Information Protection-Client und den Scanner mithilfe der folgenden Konfigurationen deaktivieren:
 
-- Für den Azure Information Protection Client: Erstellen Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) , mit der der **LogLevel** auf **Off**festgelegt wird.
+- Für den Azure Information Protection Client: Erstellen Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) , mit der der **LogLevel** auf **Off** festgelegt wird.
 
-- Für den Azure Information Protection Scanner: Verwenden Sie das Cmdlet [Set-aipscannerconfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) , um den *Report Level* -Parameter auf **Off**festzulegen.
+- Für den Azure Information Protection Scanner: Verwenden Sie das Cmdlet [Set-aipscannerconfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) , um den *Report Level* -Parameter auf **Off** festzulegen.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
@@ -224,7 +224,7 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
 
 - **Globaler Leser**
 
-Personenbezogene Daten, die Sie mit dem aipservice-Modul (oder dem älteren Modul, aadrm) anzeigen und angeben, können nur für Benutzer zugänglich gemacht werden, denen die Rollen **Azure Information Protection Administrator**, **Compliance-Administrator**, Kompatibilitäts **Daten Administrator**oder **globaler Administrator** von Azure Active Directory oder der Rolle globaler Administrator für den Schutzdienst zugewiesen wurden.
+Personenbezogene Daten, die Sie mit dem aipservice-Modul (oder dem älteren Modul, aadrm) anzeigen und angeben, können nur für Benutzer zugänglich gemacht werden, denen die Rollen **Azure Information Protection Administrator**, **Compliance-Administrator**, Kompatibilitäts **Daten Administrator** oder **globaler Administrator** von Azure Active Directory oder der Rolle globaler Administrator für den Schutzdienst zugewiesen wurden.
 
 ## <a name="updating-personal-data"></a>Aktualisieren von personenbezogenen Daten
 

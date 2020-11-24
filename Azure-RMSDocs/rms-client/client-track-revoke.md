@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 1/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 956eccb942893d6d8850185449118f4027895a81
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 47cde44d90f1281338e94ad8bbb78cf7e230d0a1
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047506"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567739"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
@@ -73,7 +73,7 @@ In den Office-Anwendungen, Word, Excel und PowerPoint:
 
 1. Öffnen Sie das geschützte Dokument, das Sie nachverfolgen oder widerrufen möchten.
 
-2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Schutz** auf **schützen**nach  >  **verfolgen und widerrufen**:
+2. Klicken Sie auf der Registerkarte **Startseite** in der Gruppe **Schutz** auf **schützen** nach  >  **verfolgen und widerrufen**:
 
     ![Option „Verwendung nachverfolgen“](../media/track-usage-callout.png)
     
@@ -118,7 +118,7 @@ Nachdem Sie das geschützte Dokument mithilfe der Office-Apps oder des Datei-Exp
 ## <a name="other-instructions"></a>Sonstige Anweisungen
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
-- [Wie möchten Sie vorgehen?](client-user-guide.md#what-do-you-want-to-do)
+- [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 Weitere Informationen finden Sie im [Administratorhandbuch](client-admin-guide.md) unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](client-admin-guide-document-tracking.md).

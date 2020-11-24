@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf40f0ec6cbd2363f58aa403ec1f74c54b57d66
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 8a84ab3927859e384a96887b5636f4723ab942d5
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048679"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567769"
 ---
 # <a name="migration-phase-1---preparation"></a>Migrationsphase 1: Vorbereitung
 
@@ -60,11 +60,11 @@ Beispiel: **5c6bb73b-1038-4eec-863d-49bded473437.RMS.na.aadrm.com**
     (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
     ```
 
-## <a name="step-2-prepare-for-client-migration"></a>Schritt 2: Vorbereitung für die Clientmigration
+## <a name="step-2-prepare-for-client-migration"></a>Schritt 2: Vorbereitung für die Clientmigration
 
 Für die meisten Migrationen ist es nicht sehr praktisch, alle Clients auf einmal zu migrieren, also werden Sie diese eher in Batches migrieren. Das bedeutet, dass einige Clients über einen Zeitraum Azure Information Protection und einige noch immer AD RMS verwenden. Um jeweils zuvor migrierte und migrierte Benutzer zu unterstützen, verwenden Sie Onboarding-Steuerelemente, und stellen Sie ein Skript vor der Migration bereit. Dieser Schritt ist während der Migration erforderlich, damit Benutzer, die noch nicht migriert haben, Inhalt verwenden, der durch migrierte Benutzer geschützt wurde, die jetzt Azure Rights Management verwenden.
 
-1. Erstellen Sie eine Gruppe, z.B. mit dem Namen **AIPMigrated**. Diese Gruppe kann in Active Directory erstellt und mit der Cloud synchronisiert werden. Alternativ kann sie auch in Office 365 oder Azure Active Directory erstellt werden. Weisen Sie zu diesem Zeitpunkt keinen Benutzer dieser Gruppe zu. Sie fügen Benutzer erst später hinzu, wenn sie migriert werden.
+1. Erstellen Sie eine Gruppe, z.B. mit dem Namen **AIPMigrated**. Diese Gruppe kann in Active Directory erstellt und mit der Cloud synchronisiert werden, oder Sie kann in Microsoft 365 oder Azure Active Directory erstellt werden. Weisen Sie zu diesem Zeitpunkt keinen Benutzer dieser Gruppe zu. Sie fügen Benutzer erst später hinzu, wenn sie migriert werden.
 
     Notieren Sie sich die Objekt-ID dieser Gruppe. Die können dazu Azure AD PowerShell verwenden: Verwenden Sie z.B. für die Version 1.0 des Moduls den Befehl [Get-MsolGroup](/powershell/msonline/v1/Get-MsolGroup). Oder Sie können die Objekt-ID der Gruppe aus dem Azure-Portal kopieren.
 
@@ -96,7 +96,7 @@ Für die meisten Migrationen ist es nicht sehr praktisch, alle Clients auf einma
 
     Sie können Gruppenrichtlinien oder einen anderen Mechanismus zum Bereitstellen von Software zur Bereitstellung dieser Skripts verwenden.
 
-## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Schritt 3: Vorbereiten Ihrer Exchange-Bereitstellung für die Migration vor
+## <a name="step-3-prepare-your-exchange-deployment-for-migration"></a>Schritt 3: Vorbereiten Ihrer Exchange-Bereitstellung für die Migration vor
 
 Wenn Sie Exchange lokal oder Exchange Online verwenden, verfügen Sie womöglich über den zuvor integrierten Exchange-Knoten mit Ihrer AD RMS-Bereitstellung. In diesem Schritt konfigurieren Sie sie so, damit Sie die vorhandene AD RMS-Konfiguration verwenden, um Inhalt zu unterstützen, der durch Azure RMS geschützt ist.
 
@@ -123,7 +123,7 @@ HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
 
 **Typ:** Reg_SZ
 
-**Wert:**`https://\<Your Tenant URL\>/_wmcs/licensing`
+**Wert**: `https://\<Your Tenant URL\>/_wmcs/licensing`
 
 **Daten:**`https://\<AD RMS Extranet Licensing URL\>/_wmcs/licensing`
 

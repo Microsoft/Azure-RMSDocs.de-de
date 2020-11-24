@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9b13f31a13d447dcd620f986cac17c74f0a7de17
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a354e9f787cf079e2c67a03fb58d330ab7785ce3
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048662"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567907"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -26,7 +26,7 @@ ms.locfileid: "86048662"
 
 Verwenden Sie die folgenden Informationen für Phase 2 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 4 bis 6 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Schritt 4. Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Schritt 4: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection
 
 Dieser Schritt ist ein zweistufiger Vorgang:
 
@@ -75,7 +75,7 @@ Die aktuelle AD RMS-Bereitstellung verwendet eine der folgenden Konfigurationen 
 - Kennwortschutz mithilfe eines externen Kryptografieanbieters.
 
 > [!NOTE]
-> Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](https://technet.microsoft.com/library/jj651024.aspx).
+> Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj651024(v=ws.11)).
 
 Folgende zwei Optionen sind für die Azure Information Protection-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) in Azure Key Vault verwaltet. Wenn Sie Ihren eigenen Azure Information Protection Mandanten Schlüssel verwalten, wird er manchmal als "Bring your own Key" (Byok) bezeichnet. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
@@ -150,11 +150,11 @@ Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivi
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Prozedur, wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben
 
-Wenn Ihre Vorlagen in AD RMS die Gruppe **jeder** verwendet haben, wird die nächstgelegene Gruppe in Azure Information Protection mit dem Namen **allpersonal-7184ab3f-CCD1-46f 3-8233-3E09E9CF0E66@ \<tenant_name> . onmicrosoft.com**benannt. Diese Gruppe könnte z. b. wie folgt aussehen: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong> Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
+Wenn Ihre Vorlagen in AD RMS die Gruppe **jeder** verwendet haben, wird die nächstgelegene Gruppe in Azure Information Protection mit dem Namen **allpersonal-7184ab3f-CCD1-46f 3-8233-3E09E9CF0E66@ \<tenant_name> . onmicrosoft.com** benannt. Diese Gruppe könnte z. b. wie folgt aussehen: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong> Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
 
 Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Zum Hinzufügen dieser Gruppe werden mit der Option **Add \<organization name> -all-** Member angezeigt.
 
-Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Using Windows PowerShell to Administer AD RMS (Verwalten von AD RMS mit Windows PowerShell)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Using Windows PowerShell to Administer AD RMS (Verwalten von AD RMS mit Windows PowerShell)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221079(v=ws.10)).
 
 Sie können externe Benutzer problemlos zu Vorlagen hinzufügen, wenn Sie diese Vorlagen im Azure-Portal in Bezeichnungen konvertieren. Wählen Sie dann im Bereich **Berechtigungen hinzufügen** die Option **Details eingeben** aus, um die e-Mail-Adressen für diese Benutzer manuell anzugeben.
 

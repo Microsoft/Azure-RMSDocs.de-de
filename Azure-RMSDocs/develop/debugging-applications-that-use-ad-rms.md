@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c0b53c0f749427f785bf12afa6b3f8cda461947e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7b8d3a47949483baca3768670bfcdbdf457f62ef
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792544"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567493"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung
 
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
 
 Der Name des Ereignisprotokolls lautet „Microsoft-RMS-MSIPC/Debug“. Dies bedeutet, dass das Protokoll in der Windows-Ereignisanzeige als „Application and Services Logs\\Microsoft\\RMS\\MSIPC\\Debug“ angezeigt wird.
 
-**Hinweis:**    Das Protokoll ist standardmäßig aktiviert und auf den Ausführlichkeitsgrad 3 festgelegt.
+**Hinweis**    Das Protokoll ist standardmäßig aktiviert und auf ausführlichkeits Grad 3 festgelegt.
 
  
 
@@ -64,4 +64,4 @@ Mit dem folgenden Befehl wird beispielsweise das MSIPC-Ereignisprotokoll aktivie
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**Hinweis:**    Wählen Sie in der Windows-Ereignisanzeige im Menü **Ansicht** die Option **Show Analytic and Debug Logs** (Analyse- und Debugprotokolle einblenden) aus, um das MSIPC-Debugprotokoll anzuzeigen.
+**Hinweis**    Wählen Sie in der Windows-Ereignisanzeige im Menü **Ansicht** die Option **analytische und Debugprotokolle anzeigen** aus, um das msipc-Debugprotokoll sichtbar zu machen.

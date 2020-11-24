@@ -1,37 +1,37 @@
 ---
 title: 'Class schutzengine:: Observer'
 description: 'Dokumentiert die schutzengine:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ca1f9c3251df30166b123ae31c8e3c5fceef67fc
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 7a576882376caa8cc5f9c5c1b3d3036ee7e57b21
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764604"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567148"
 ---
 # <a name="class-protectionengineobserver"></a>Class schutzengine:: Observer 
 Schnittstelle, die Benachrichtigungen im Zusammenhang mit ProtectionEngine empfängt
 Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void ongettemplatessuccess (Konstante Std\<:: Vector Std:: shared_ptr\<templateDescriptor\> \>& templatedescriptors, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
-public virtual void ongettemplatesfailure (Konstante Std:: exception_ptr& Error, Konstante Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
-public virtual void OnGetRightsForLabelIdSuccess (Konst Std:: shared_ptr\<Std:: Vector\<Std:: String\> \>& Rights, Konstante Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
-öffentliches virtuelles void-OnGetRightsForLabelIdFailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
-public virtual void onloadusercertsuccess (Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Benutzerzertifikat erfolgreich geladen wurde.
-public virtual void onloadusercertfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Benutzerzertifikat geladen wurde.
-public virtual void onregistercontentfortrackingandrevocationsuccess (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung erfolgreich war.
-öffentliches virtuelles void-onregistercontentfortrackingandrevocationfailure (Konstante Std:: exception_ptr& Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung fehlschlägt
-public virtual void onrevokecontentsuccess (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Sperrung von erfolgreich war.
-public virtual void onrevokecontentfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn der Widerruf von Inhalten fehlschlägt.
+public virtual void ongettemplatessuccess (Konstante Std:: Vector \<std::shared_ptr\<TemplateDescriptor\> \>& templatedescriptors, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
+public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
+public virtual void OnGetRightsForLabelIdSuccess (Konstante Std:: shared_ptr \<std::vector\<std::string\> \>& Rechte, Konstante Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
+public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
+public virtual void onloadusercertsuccess (Konstante Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn das Benutzerzertifikat erfolgreich geladen wurde.
+public virtual void onloadusercertfailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn das Benutzerzertifikat geladen wurde.
+öffentliches virtuelles void-onregistercontentfortrackingandrevocationsuccess (Konstanten Std:: shared_ptr \<void\>&-Kontext)  |  Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung erfolgreich war.
+public virtual void onregistercontentfortrackingandrevocationfailure (Konstante Std:: exception_ptr& Error, Konstante Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung fehlschlägt
+öffentliches virtuelles void-onrevokecontentsuccess (Konstante Std:: shared_ptr \<void\>&-Kontext)  |  Wird aufgerufen, wenn die Sperrung von erfolgreich war.
+public virtual void onrevokecontentfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn der Widerruf von Inhalten fehlschlägt.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="ongettemplatessuccess-function"></a>Ongettemplatessuccess-Funktion
 Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
@@ -40,10 +40,10 @@ Parameter:
 * **templatedescriptors**: ein Verweis auf die Liste der Vorlagen Deskriptoren 
 
 
-* **context**: Der gleiche Kontext, der an [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md) übergeben wurde.
+* **context**: Der gleiche Kontext, der an ProtectionEngine::GetTemplatesAsync übergeben wurde.
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: gettemplatesasync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: ongettemplatessuccess oder Schutz Module:: Observer:: ongettemplatesfailure weitergeleitet
+Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder „std::function“) an ProtectionEngine::GetTemplatesAsync übergeben. Derselbe Kontext wird dann an ProtectionEngine::Observer::OnGetTemplatesSuccess oder ProtectionEngine::Observer::OnGetTemplatesFailure weitergeleitet.
   
 ### <a name="ongettemplatesfailure-function"></a>Ongettemplatesfailure-Funktion
 Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
@@ -64,10 +64,10 @@ Parameter:
 * **rights**: eine Referenz zu der Liste mit abgerufenen Rechten 
 
 
-* **context**: derselbe Kontext, der an "Schutz Modul [:: GetRightsForLabelIdAsync](class_mip_protectionengine.md)" übermittelt wurde.
+* **context**: derselbe Kontext, der an ProtectionEngine::GetRightsForLabelIdAsync übergeben wurde
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: GetRightsForLabelIdAsync" übergeben, und derselbe Kontext wird unverändert an "schutzengine:: Observer:: OnGetRightsForLabelIdSuccess" oder "schutzengine:: Observer:: OnGetRightsForLabelIdFailure" weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder „std::function“) an ProtectionEngine::GetRightsForLabelIdAsync übergeben. Derselbe Kontext wird dann an ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess oder ProtectionEngine::Observer::OnGetRightsForLabelIdFailure weitergeleitet.
   
 ### <a name="ongetrightsforlabelidfailure-function"></a>OnGetRightsForLabelIdFailure-Funktion
 Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
@@ -85,10 +85,10 @@ Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder �
 Wird aufgerufen, wenn das Benutzerzertifikat erfolgreich geladen wurde.
 
 Parameter:  
-* **context**: derselbe Kontext, der an "schutzengine:: loadusercert" übermittelt wurde.
+* **Kontext**: der gleiche Kontext, der an die Schutz-Engine:: loadusercert übermittelt wurde.
 
 
-Eine Anwendung kann eine beliebige Art von Kontext (z. b. Std::p romise, Std:: function) an [schutzengine:: loadusercertasync übergeben, und derselbe Kontext wird unverändert an Schutz- [Engine:: Observer:: onloadusercertsuccess](class_mip_protectionengine_observer.md) oder [schutzengine:: Observer:: onloadusercertfailure](class_mip_protectionengine_observer.md) weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. Std::p romise, Std:: function) an schutzengine:: loadusercertasync übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onloadusercertsuccess oder Schutzmodule:: Observer:: onloadusercertfailure weitergeleitet.
   
 ### <a name="onloadusercertfailure-function"></a>Onloadusercertfailure-Funktion
 Wird aufgerufen, wenn das Benutzerzertifikat geladen wurde.
@@ -106,10 +106,10 @@ Eine Anwendung kann einen beliebigen Kontexttyp (z. b. Std::p romise, Std:: func
 Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung erfolgreich war.
 
 Parameter:  
-* **context**: derselbe Kontext, der an "Schutz Modul:: registercontentfortrackingandrevocationasync" übermittelt wurde.
+* **Kontext**: derselbe Kontext, der an "Schutz Modul:: registercontentfortrackingandrevocationasync" übermittelt wurde.
 
 
-Eine Anwendung kann beliebige Kontext Typen übergeben (z. b. Std::p romise, Std:: function) zu schutzengine:: registercontentfortrackingandrevocationasync, und derselbe Kontext wird unverändert an Schutz- [Engine:: Observer:: onregistercontentfortrackingandrevocationsuccess](class_mip_protectionengine_observer.md) oder [schutzengine:: Observer:: onregistercontentfortrackingandrevocationfailure](class_mip_protectionengine_observer.md) weitergeleitet.
+Eine Anwendung kann beliebige Kontext Typen übergeben (z. b. Std::p romise, Std:: function) zu schutzengine:: registercontentfortrackingandrevocationasync, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onregistercontentfortrackingandrevocationsuccess oder schutzengine:: Observer:: onregistercontentfortrackingandrevocationfailure weitergeleitet.
   
 ### <a name="onregistercontentfortrackingandrevocationfailure-function"></a>Onregistercontentfortrackingandrevocationfailure-Funktion
 Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung fehlschlägt
@@ -127,10 +127,10 @@ Eine Anwendung kann beliebige Kontext Typen übergeben (z. b. Std::p romise, Std
 Wird aufgerufen, wenn die Sperrung von erfolgreich war.
 
 Parameter:  
-* **context**: derselbe Kontext, der an "schutzengine:: revokecontentasync" übermittelt wurde.
+* **Kontext**: derselbe Kontext, der an "Schutz Modul:: revokecontentasync" übermittelt wurde.
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: revokecontentasync" übergeben, und derselbe Kontext wird unverändert an Schutz- [Engine:: Observer:: onrevokecontentsuccess](class_mip_protectionengine_observer.md) oder [schutzengine:: Observer:: onrevokecontentfailure](class_mip_protectionengine_observer.md) weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: revokecontentasync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onrevokecontentsuccess oder schutzengine:: Observer:: onrevokecontentfailure weitergeleitet.
   
 ### <a name="onrevokecontentfailure-function"></a>Onrevokecontentfailure-Funktion
 Wird aufgerufen, wenn der Widerruf von Inhalten fehlschlägt.

@@ -1,10 +1,10 @@
 ---
 title: Konfigurieren von Administratoren für Azure Rights Management – AIP
 description: Verstehen und implementieren Sie die Administrator Funktion des Azure-Rights Management Diensts von Azure Information Protection, damit autorisierte Personen und Dienste jederzeit die geschützten Daten Ihrer Organisation lesen und überprüfen können.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4397be5c6206c74bcf8753e5452cd19b02b31316
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: bf7b4d46c2dd63c87f48c244f38a515c7376fc1a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136746"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568237"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configuring super users for Azure Information Protection and discovery services or data recovery (Konfigurieren von Administratoren für Azure Information Protection und Ermittlungsdienste oder Wiederherstellung von Daten)
 
@@ -53,9 +53,19 @@ Es spielt keine Rolle, wann Sie das Administratorfeature aktivieren oder wann Si
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>Bewährte Sicherheitsmethoden für das Administratorfeature
 
-- Beschränken und überwachen Sie die Administratoren, die als globaler Administrator für Ihre Office 365-oder Azure Information Protection-Mandanten fungieren oder denen mithilfe des Cmdlets [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) die Rolle "Global Administrator" zugewiesen ist. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (und sich selbst) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
+- Beschränken und überwachen Sie die Administratoren, die als globaler Administrator für Ihre Microsoft 365 oder Azure Information Protection Mandanten zugewiesen sind oder denen mithilfe des Cmdlets [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) die Rolle "Global Administrator" zugewiesen ist. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (und sich selbst) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
 
-- Verwenden Sie das Cmdlet [Get-aipservicesuperuser](/powershell/module/aipservice/get-aipservicesuperuser) , um anzuzeigen, welche Benutzer und Dienst Konten einzeln als Administratoren zugewiesen werden. Um festzustellen, ob eine Administrator Gruppe konfiguriert ist, verwenden Sie das Cmdlet [Get-aipservicesuperusergroup](/powershell/module/aipservice/get-aipservicesuperusergroup) und ihre Standardbenutzer Verwaltungs Tools, um zu überprüfen, welche Benutzer Mitglied dieser Gruppe sind. Wie alle Verwaltungs Aktionen werden auch das Aktivieren oder Deaktivieren der Administrator Funktion sowie das Hinzufügen oder Entfernen von Administratoren protokolliert und können mithilfe des Befehls [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog) überwacht werden. Ein Beispiel finden Sie im nächsten Abschnitt. Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang ebenfalls protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
+- Verwenden Sie das Cmdlet [Get-aipservicesuperuser](/powershell/module/aipservice/get-aipservicesuperuser) , um anzuzeigen, welche Benutzer und Dienst Konten einzeln als Administratoren zugewiesen werden. 
+
+- Um festzustellen, ob eine Administrator Gruppe konfiguriert ist, verwenden Sie das Cmdlet [Get-aipservicesuperusergroup](/powershell/module/aipservice/get-aipservicesuperusergroup) und ihre Standardbenutzer Verwaltungs Tools, um zu überprüfen, welche Benutzer Mitglied dieser Gruppe sind. 
+
+- Wie alle Verwaltungs Aktionen werden auch das Aktivieren oder Deaktivieren der Administrator Funktion sowie das Hinzufügen oder Entfernen von Administratoren protokolliert und können mithilfe des Befehls [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog) überwacht werden. Informationen hierzu finden Sie beispielsweise [unter Beispiel Überwachung für die Administrator Funktion](#example-auditing-for-the-super-user-feature).
+
+- Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang ebenfalls protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
+
+    > [!NOTE]
+    > Obwohl die Protokolle Details zur Entschlüsselung enthalten, einschließlich des Benutzers, der die Datei entschlüsselt hat, bemerken Sie nicht, wenn der Benutzer ein Administrator ist. Verwenden Sie die Protokolle zusammen mit den oben aufgeführten Cmdlets, um zunächst eine Liste von Administratoren zu erfassen, die Sie in den Protokollen identifizieren können.
+    >
 
 - Wenn Sie die Administrator Funktion für die alltäglichen Dienste nicht benötigen, aktivieren Sie die Funktion nur, wenn Sie Sie benötigen, und deaktivieren Sie Sie mithilfe des Cmdlets " [Deaktivieren-aipservicesuperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) " erneut.
 
@@ -87,9 +97,9 @@ Weitere Informationen zu diesen Cmdlets finden Sie im Administratorhandbuch für
 
 Obwohl Sie das Cmdlet Unprotect-RMSFile zum Entschlüsseln geschützter Inhalte in PST-Dateien verwenden können, sollten Sie dieses Cmdlet strategisch als Teil des eDiscovery-Prozesses verwenden. Die Ausführung von Unprotect-RMSFile für große Dateien auf einem Computer ist ressourcenintensiv (Arbeitsspeicher und Speicherplatz auf dem Datenträger), und die maximal unterstützte Dateigröße für dieses Cmdlet beträgt 5 GB.
 
-Im Idealfall verwenden Sie [Office 365 eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/ediscovery), um geschützte E-Mails und geschützte Anlagen in E-Mails zu suchen und zu extrahieren. Die Administratorfähigkeit ist automatisch in Exchange Online integriert, sodass eDiscovery im Office 365 Security & Compliance Center oder das Microsoft 365 Compliance Center vor dem Export nach verschlüsselten Elementen suchen oder verschlüsselte E-Mails beim Export entschlüsseln kann.
+Im Idealfall verwenden Sie [eDiscovery in Microsoft 365](/microsoft-365/compliance/ediscovery) , um geschützte e-Mails und geschützte Anlagen in e-Mails zu suchen und zu extrahieren. Die Administratorfähigkeit ist automatisch in Exchange Online integriert, sodass eDiscovery im Office 365 Security & Compliance Center oder das Microsoft 365 Compliance Center vor dem Export nach verschlüsselten Elementen suchen oder verschlüsselte E-Mails beim Export entschlüsseln kann.
 
-Wenn Sie Office 365 eDiscovery nicht verwenden können, verfügen Sie möglicherweise über eine andere eDiscovery-Lösung, die in den Azure Rights Management-Dienst integriert werden kann, um ähnlich über Daten zu urteilen. Wenn Ihre eDiscovery-Lösung geschützte Inhalte nicht automatisch lesen und entschlüsseln kann, können Sie diese Lösung auch weiterhin in einem mehrstufigen Prozess verwenden, mit dem Sie Unprotect-RMSFile effizienter ausführen können:
+Wenn Sie Microsoft 365 eDiscovery nicht verwenden können, verfügen Sie möglicherweise über eine andere eDiscovery-Lösung, die in den Azure Rights Management-Dienst integriert ist, um die Daten zu überdenken. Wenn Ihre eDiscovery-Lösung geschützte Inhalte nicht automatisch lesen und entschlüsseln kann, können Sie diese Lösung auch weiterhin in einem mehrstufigen Prozess verwenden, mit dem Sie Unprotect-RMSFile effizienter ausführen können:
 
 1. Exportieren Sie die betreffende E-Mail aus Exchange Online oder Exchange Server oder von der Arbeitsstation, auf der der Benutzer seine E-Mail-Nachrichten gespeichert hat, in eine PST-Datei.
 
@@ -100,4 +110,3 @@ Wenn Sie Office 365 eDiscovery nicht verwenden können, verfügen Sie möglicher
 4. Führen Sie Unprotect-RMSFile für diese zweite PST-Datei zum Entschlüsseln der Inhalte dieser deutlich kleineren Datei aus. Importieren Sie aus der Ausgabe die nun entschlüsselte PST-Datei in Ihr Erkennungstool.
 
 Ausführlichere Informationen und Anleitungen zur Durchführung von eDiscovery für Postfächer und PST-Dateien finden Sie im folgenden Blogbeitrag zu [Azure Information Protection und eDiscovery-Prozesse](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
-

@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 3c17a737266ceec6bb7e71d805e1a305f0b1c491
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 001cace1cdc3a9fd3e5cc1dd1a06a77215bd438c
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564318"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567979"
 ---
 # <a name="overview-of-rights-management-services-sdk-21"></a>Übersicht über Rights Management Services SDK 2,1
 
@@ -39,7 +39,7 @@ Im Folgenden sind nur einige Szenarios aufgeführt, in denen mit dem Rights Mana
 -   Der Besitzer einer Onlinedokumentbibliothek möchten die Rechte zum Anzeigen, Drucken oder Bearbeiten der Dokumente auf Grundlage der Identität des Benutzers aktivieren.
 -   Ein Unternehmen möchte vertrauliche Informationen zu Mitarbeitern auf einer internen Website veröffentlichen, auf der die Anzeige- und Bearbeitungsrechte auf bestimmte Benutzer beschränkt sind.
 
-Weitere Informationen zu AD RMS-Server, AD RMS-Client und deren Funktionalität finden Sie im TechNet in der [Dokumentation zu AD RMS für IT-Spezialisten](https://TechNet.Microsoft.Com/library/cc771234.aspx).
+Weitere Informationen zu AD RMS-Server, AD RMS-Client und deren Funktionalität finden Sie im TechNet in der [Dokumentation zu AD RMS für IT-Spezialisten](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10)).
 
 In den übrigen Themen in diesem Abschnitt werden die RMS-Architektur und ihre Implementierung behandelt.
 
@@ -51,8 +51,8 @@ In den übrigen Themen in diesem Abschnitt werden die RMS-Architektur und ihre I
 |[Server](ad-rms-server.md) | In diesem Thema werden der Zweck und die Funktionen des RMS-Servers für Azure und Windows Server beschrieben.|
 
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [RMS-Konzepte](application-types.md)
 * [Erste Schritte](getting-started-with-ad-rms-2-0.md)
-* [Dokumentation zu AD RMS für IT-Spezialisten](https://technet.microsoft.com/library/cc771234.aspx)
+* [Dokumentation zu AD RMS für IT-Spezialisten](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10))

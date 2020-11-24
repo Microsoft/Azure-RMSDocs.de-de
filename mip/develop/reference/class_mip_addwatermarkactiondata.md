@@ -1,22 +1,22 @@
 ---
 title: Klasse addwatermarkaktiondata
 description: 'Dokumentiert die addwatermarkaktiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ea7bf76775e8b77f2272129f0c07d7b82bfdafb0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 08098341c1bb0a6d8f91534d669a5fc5ef901ee2
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763726"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567310"
 ---
 # <a name="class-addwatermarkactiondata"></a>Klasse addwatermarkaktiondata 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetText() const  | _Noch nicht dokumentiert._
 public const std::string& GetFontName() const  | _Noch nicht dokumentiert._
@@ -25,27 +25,27 @@ public int GetFontSize() const  | _Noch nicht dokumentiert._
 öffentliches watermarklayout getwatermarklayout () konstant  | _Noch nicht dokumentiert._
 public virtual ~ addwatermarkaktiondata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="gettext-function"></a>Gettext-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getfontname-function"></a>Getfontname-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getfontcolor-function"></a>Getfontcolor-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getfontsize-function"></a>GetFontSize-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getwatermarklayout-function"></a>Getwatermarklayout-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="addwatermarkactiondata-function"></a>~ Addwatermarkaktiondata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

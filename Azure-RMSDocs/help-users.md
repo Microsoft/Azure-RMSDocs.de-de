@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: a2b69b7744b17c4f5ccce32a1513015fb4e4cbcc
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810258"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567673"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -105,7 +105,7 @@ Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsb
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Auf der Registerkarte **Optionen** : **Berechtigung** > wählen Sie eine Option aus. Beispiel: **nicht weiterleiten**oder ** \<Company Name> -vertraulich**oder ** \<Company Name> -vertrauliche Ansicht**.
+2.  Auf der Registerkarte **Optionen** : **Berechtigung** > wählen Sie eine Option aus. Beispiel: **nicht weiterleiten** oder **\<Company Name> -vertraulich** oder **\<Company Name> -vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -117,7 +117,7 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1. Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, klicken Sie auf **Berechtigungen ändern** , und wählen Sie dann eine Option aus der Dropdown-Dropdown Beispiel: **verschlüsseln** oder ** \<Company Name> -vertraulich**.
+2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, klicken Sie auf **Berechtigungen ändern** , und wählen Sie dann eine Option aus der Dropdown-Dropdown Beispiel: **verschlüsseln** oder **\<Company Name> -vertraulich**.
 
 3. Senden Sie die Nachricht.
 

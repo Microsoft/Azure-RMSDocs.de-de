@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c88186c163d1f712c657d9270a7a738289fac6b4
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298239"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567796"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -35,7 +35,7 @@ Weitere Informationen finden Sie unter [wie funktioniert Azure RMS? Im](./how-do
 
 ## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Worin besteht der Unterschied zwischen Azure Rights Management Verschlüsselung und Verschlüsselung in anderen Microsoft Cloud Services?
 
-Microsoft stellt mehrere Verschlüsselungstechnologien bereit, die Sie zum Schutz Ihrer Daten in verschiedenen und sich häufig ergänzenden Szenarien verwenden können. Während Office 365 beispielsweise eine Verschlüsselung für die in Office 365 gespeicherten Daten bietet, verschlüsselt Azure Rights Management Service von Azure Information Protection Ihre Daten unabhängig, sodass sie unabhängig davon geschützt sind, wo sie sich befinden oder wie sie übertragen werden.
+Microsoft stellt mehrere Verschlüsselungstechnologien bereit, die Sie zum Schutz Ihrer Daten in verschiedenen und sich häufig ergänzenden Szenarien verwenden können. Wenn Microsoft 365 z. b. die Verschlüsselung ruhender Daten für in Microsoft 365 gespeicherte Daten bietet, verschlüsselt der Azure-Rights Management Dienst von Azure Information Protection Ihre Daten unabhängig davon, wo Sie sich befinden oder wie Sie übertragen werden.
 
 Diese Verschlüsselungstechnologien ergänzen einander, und ihre Verwendung erfordert, dass sie unabhängig voneinander aktiviert und konfiguriert werden. Wenn Sie so vorgehen, besteht ggf. die Option, einen eigenen Schlüssel für die Verschlüsselung zu verwenden, ein Szenario, das auch als „BYOK“ bezeichnet wird. Die Aktivierung von BYOK für eine dieser Technologien wirkt sich nicht auf die anderen Technologien aus. Sie können BYOK z.B. für Azure Information Protection und nicht für andere Verschlüsselungstechnologien verwenden und umgekehrt. Die Schlüssel, die von diesen verschiedenen Technologien verwendet werden, können gleich oder unterschiedlich sein, je nachdem, wie Sie die Verschlüsselungsoptionen für jeden Dienst konfigurieren.
 
@@ -53,7 +53,7 @@ Weitere Informationen zu HYOK und zu den Grenzen und Einschränkungen von HYOK s
 
 ## <a name="can-i-now-use-byok-with-exchange-online"></a>Kann ich BYOK jetzt mit Exchange Online verwenden?
 
-Ja, Sie können BYOK jetzt mit Exchange Online verwenden, wenn Sie die Anweisungen unter [Einrichten neuer Office 365-Nachrichtenverschlüsselungsfunktionen, die auf Azure Information Protection aufbauen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) befolgen. Diese Anweisungen ermöglichen die neuen Funktionen in Exchange Online, die BYOK für den Schutz von Azure-Informationen unterstützen, sowie die neue Office 365-Nachrichtenverschlüsselung.
+Ja, Sie können Byok jetzt mit Exchange Online verwenden, wenn Sie die Anweisungen unter [Einrichten neuer Microsoft 365 Nachrichten Verschlüsselungsfunktionen befolgen, die auf Azure Information Protection basieren](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Diese Anweisungen ermöglichen die neuen Funktionen in Exchange Online, die BYOK für den Schutz von Azure-Informationen unterstützen, sowie die neue Office 365-Nachrichtenverschlüsselung.
 
 Weitere Informationen zu dieser Änderung finden Sie in der Blogankündigung: [Office 365-Nachrichtenverschlüsselung mit den neuen Funktionen](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
@@ -86,10 +86,10 @@ Wenn das Dokument mit benutzerdefinierten Berechtigungen geschützt wurde, könn
 Tipp: Verwenden Sie das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), um zu überprüfen, ob ein Dokument durch eine Vorlage oder durch die Verwendung benutzerdefinierter Berechtigungen geschützt wurde. Es wird immer die Vorlagenbeschreibung **Eingeschränkter Zugriff** für benutzerdefinierte Berechtigungen mit einer eindeutigen Vorlagen-ID angezeigt, die nicht angezeigt wird, wenn Sie [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) ausführen.
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Ich verwende eine Hybridbereitstellung von Exchange mit einigen Benutzern unter Exchange Online und anderen unter Exchange Server. Wird dies von Azure RMS unterstützt?
-Ja, und das Gute ist, dass Benutzer für zwei Exchange-Bereitstellungen E-Mails und Anlagen nahtlos schützen sowie geschützte E-Mails und Anlagen nutzen können. Aktivieren Sie für diese Konfiguration [Azure RMS](activate-service.md) und [IRM für Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), und stellen Sie dann den [RMS-Connector](deploy-rms-connector.md) für Exchange Server bereit, und konfigurieren Sie ihn.
+Ja, und das Gute ist, dass Benutzer für zwei Exchange-Bereitstellungen E-Mails und Anlagen nahtlos schützen sowie geschützte E-Mails und Anlagen nutzen können. Aktivieren Sie für diese Konfiguration [Azure RMS](activate-service.md) und [IRM für Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), und stellen Sie dann den [RMS-Connector](deploy-rms-connector.md) für Exchange Server bereit, und konfigurieren Sie ihn.
 
 ## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>Wenn ich diesen Schutz in meiner Produktionsumgebung verwende, ist mein Unternehmen dann an die Lösung gebunden und läuft andernfalls Gefahr, den Zugriff auf Inhalte zu verlieren, die wir mit Azure RMS geschützt haben?
-Nein, Sie behalten immer die Kontrolle über Ihre Daten und können weiterhin darauf zugreifen, selbst wenn Sie sich entscheiden, den Azure Rights Management-Dienst nicht mehr zu verwenden. Weitere Informationen finden Sie unter [Außerbetriebnahme und Deaktivieren von Azure Rights Management](decommission-deactivate.md).
+Nein, Sie behalten immer die Kontrolle über Ihre Daten und können weiterhin darauf zugreifen, selbst wenn Sie sich entscheiden, den Azure Rights Management-Dienst nicht mehr zu verwenden. Weitere Informationen finden Sie unter Außerbetriebsetzen [und Deaktivieren von Azure-Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Kann ich steuern, welche Benutzer Azure RMS verwenden können, um Inhalte zu schützen?
 Ja, Azure Rights Management Service verfügt für dieses Szenario über Onboarding-Steuerelemente für Benutzer. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) im Artikel [Aktivieren des Schutz dienstanweises in Azure Information Protection](activate-service.md) .
@@ -101,7 +101,7 @@ Es gibt keine Verwaltungsoption, die Benutzer daran hindert, Dokumente sicher mi
 
 ## <a name="when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated"></a>Wenn ich ein geschütztes Dokument mit jemandem außerhalb meines Unternehmens teile, wie wird dieser Benutzer authentifiziert?
 
-Standardmäßig verwendet Azure Rights Management Service ein Azure Active Directory-Konto und eine zugehörige E-Mail-Adresse für die Benutzerauthentifizierung, wodurch die Zusammenarbeit zwischen Unternehmen für Administratoren nahtlos wird. Wenn die andere Organisation Azure-Dienste verwendet, haben Benutzer bereits Konten in Azure Active Directory, selbst wenn diese Konten lokal erstellt und verwaltet und dann mit Azure synchronisiert werden. Wenn die Organisation über Office 365 verfügt, verwendet dieser Dienst im Hintergrund auch Azure Active Directory für die Benutzerkonten. Wenn die Organisation des Benutzers keine verwalteten Konten in Azure hat, können sich Benutzer für [RMS for Individuals](./rms-for-individuals.md)registrieren. Dadurch werden ein nicht verwalteter Azure-Mandant und ein Verzeichnis für die Organisation mit einem Konto für den Benutzer erstellt, sodass dieser Benutzer (und nachfolgende Benutzer) für den Azure Rights Management-Dienst authentifiziert werden kann.
+Standardmäßig verwendet Azure Rights Management Service ein Azure Active Directory-Konto und eine zugehörige E-Mail-Adresse für die Benutzerauthentifizierung, wodurch die Zusammenarbeit zwischen Unternehmen für Administratoren nahtlos wird. Wenn die andere Organisation Azure-Dienste verwendet, haben Benutzer bereits Konten in Azure Active Directory, selbst wenn diese Konten lokal erstellt und verwaltet und dann mit Azure synchronisiert werden. Wenn die Organisation über Microsoft 365 verfügt, verwendet dieser Dienst im Unternehmen Azure Active Directory auch für die Benutzerkonten. Wenn die Organisation des Benutzers keine verwalteten Konten in Azure hat, können sich Benutzer für [RMS for Individuals](./rms-for-individuals.md)registrieren. Dadurch werden ein nicht verwalteter Azure-Mandant und ein Verzeichnis für die Organisation mit einem Konto für den Benutzer erstellt, sodass dieser Benutzer (und nachfolgende Benutzer) für den Azure Rights Management-Dienst authentifiziert werden kann.
 
 Die Authentifizierungsmethode für diese Konten kann unterschiedlich sein, je nachdem, wie der Administrator in der anderen Organisation die Azure Active Directory-Konten konfiguriert hat. Beispielsweise können Kennwörter, die für diese Konten erstellt wurden, Verbund oder Kennwörter verwendet werden, die in Active Directory Domain Services erstellt und dann mit Azure Active Directory synchronisiert wurden.
 
@@ -148,13 +148,13 @@ Eine Liste der Dateinamenerweiterungen, die nativ von Azure Rights Management un
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Wie konfiguriere ich einen Mac-Computer zum Schützen und Nachverfolgen von Dokumenten?
 
-Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://admin.microsoft.com sicher, dass Office für Mac installiert ist. Vollständige Anweisungen finden Sie unter [Herunterladen und Installieren oder Neuinstallieren von Office 365 oder Office 2019 auf einem PC oder Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://admin.microsoft.com sicher, dass Office für Mac installiert ist. Vollständige Anweisungen finden [Sie unter herunterladen und installieren oder Neuinstallieren von Microsoft 365 oder Office 2019 auf einem PC oder Mac](https://support.office.com/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
-Öffnen Sie Outlook, und erstellen Sie ein Profil, indem Sie Ihr Office 365-Geschäfts-, Schul- oder Unikonto verwenden. Erstellen Sie anschließend eine neue Nachricht, und führen Sie die folgenden Schritte aus, um Office so zu konfigurieren, dass Dokumente und E-Mails mithilfe von Azure Rights Management-Service geschützt werden können:
+Öffnen Sie Outlook, und erstellen Sie ein Profil mit Ihrem Microsoft 365 Geschäfts-, Schul-oder unikonto. Erstellen Sie anschließend eine neue Nachricht, und führen Sie die folgenden Schritte aus, um Office so zu konfigurieren, dass Dokumente und E-Mails mithilfe von Azure Rights Management-Service geschützt werden können:
 
 1. Klicken Sie in der neuen Nachricht auf der Registerkarte **Optionen** auf **Berechtigungen**, und klicken Sie dann auf **Anmeldeinformationen überprüfen**.
 
-2. Wenn Sie dazu aufgefordert werden, geben Sie die Details Ihres Office 365-Geschäfts-, Schul- oder Unikontos erneut an, und wählen Sie dann **Anmelden** aus.
+2. Wenn **Sie dazu** aufgefordert werden, geben Sie die Details Ihres Microsoft 365 Geschäfts-, Schul-oder unikontos erneut an
 
     Die Azure Rights Management-Vorlagen werden nun heruntergeladen, und **Anmeldeinformationen überprüfen** wird durch Optionen wie **Keine Einschränkungen**, **Nicht weiterleiten** und alle Azure Rights Management-Vorlagen ersetzt, die für Ihren Mandanten veröffentlicht werden. Sie können diese neue Nachricht jetzt abbrechen.
 
@@ -163,7 +163,7 @@ So schützen Sie eine E-Mail-Nachricht oder ein Dokument: Klicken Sie auf der Re
 So verfolgen Sie ein Dokument nach, nachdem Sie es geschützt haben: Auf einem Windows-Computer, auf dem der Azure Information Protection-Client installiert ist, registrieren Sie das Dokument mithilfe einer Office-Anwendung oder des Datei-Explorers bei der Dokumentnachverfolgungs-Website. Anweisungen hierzu finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente](./rms-client/client-track-revoke.md). Auf Ihrem Mac können Sie nun über Ihren Webbrowser zur Website für die Dokumentenverfolgung (https://track.azurerms.com)) navigieren, um dieses Dokument nachzuverfolgen und zu widerrufen.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Wenn ich ein durch RMS geschütztes Office-Dokument öffne, wird die zugehörige temporäre Datei ebenfalls durch RMS geschützt?
-Nein In diesem Szenario enthält die zugehörige temporäre Datei keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei ist die temporäre Datei offensichtlich nicht für die Freigabe vorgesehen und würde auf dem Gerät verbleiben, geschützt durch lokale Sicherheitsmechanismen wie BitLocker und EFS.
+Nein. In diesem Szenario enthält die zugehörige temporäre Datei keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei ist die temporäre Datei offensichtlich nicht für die Freigabe vorgesehen und würde auf dem Gerät verbleiben, geschützt durch lokale Sicherheitsmechanismen wie BitLocker und EFS.
 
 ## <a name="a-feature-i-am-looking-for-doesnt-seem-to-work-with-sharepoint-protected-librariesis-support-for-my-feature-planned"></a>Eine Funktion, die ich Suche, scheint nicht mit SharePoint-geschützten Bibliotheken zu funktionieren – ist die Unterstützung für meine Funktion geplant?
 Derzeit unterstützt Microsoft SharePoint RMS-geschützte Dokumente mithilfe von unm-geschützten Bibliotheken, die Rights Management Vorlagen, die dokumentenverfolgung und einige andere Funktionen nicht unterstützen. Weitere Informationen finden Sie im Abschnitt [SharePoint in Microsoft 365 und SharePoint Server](./office-apps-services-support.md#sharepoint-in-microsoft-365-and-sharepoint-server) im Artikel [Office-Anwendungen und-Dienste](./office-apps-services-support.md) .
@@ -171,9 +171,9 @@ Derzeit unterstützt Microsoft SharePoint RMS-geschützte Dokumente mithilfe von
 Wenn Sie an einer bestimmten Funktion interessiert sind, die noch nicht unterstützt wird, sollten Sie die Ankündigungen im [Blog zu Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-rights-management-services) im Auge behalten.
 
 ## <a name="how-do-i-configure-one-drive-in-sharepoint-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Gewusst wie Konfigurieren eines Laufwerks in SharePoint, sodass Benutzer Ihre Dateien sicher für Personen innerhalb und außerhalb des Unternehmens freigeben können?
-Standardmäßig wird dies als Office 365-Administrator nicht konfiguriert. Benutzer.
+Standardmäßig wird dies als Microsoft 365 Administrator nicht konfiguriert. Benutzer.
 
-Ebenso wie ein SharePoint-Website Administrator für eine SharePoint-Bibliothek, deren Besitzer er ist, "unm" aktiviert und konfiguriert, ist onedrive für Benutzer so konzipiert, dass Sie für Ihre eigene onedrive-Bibliothek "IRiM" aktivieren und konfigurieren können. Mit PowerShell können Sie diese Aufgabe jedoch für sie übernehmen. Anweisungen hierzu finden Sie im Abschnitt [SharePoint in Microsoft 365 und onedrive: IRiM-Konfiguration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration) im Artikel [Office 365: Konfiguration für Clients und Onlinedienste](configure-office365.md) .
+Ebenso wie ein SharePoint-Website Administrator für eine SharePoint-Bibliothek, deren Besitzer er ist, "unm" aktiviert und konfiguriert, ist onedrive für Benutzer so konzipiert, dass Sie für Ihre eigene onedrive-Bibliothek "IRiM" aktivieren und konfigurieren können. Mit PowerShell können Sie diese Aufgabe jedoch für sie übernehmen. Anweisungen hierzu finden Sie unter [SharePoint in Microsoft 365 und onedrive: unm-Konfiguration](configure-office365.md#sharepoint-in-microsoft-365-and-onedrive-irm-configuration).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Kennen Sie Tipps und Tricks für eine erfolgreiche Bereitstellung?
 
@@ -204,4 +204,3 @@ Wie diese Beispiele zeigen, kann Technologie allein nicht immer verhindern, dass
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Worin besteht der Unterschied zwischen einem Benutzer, der eine E-Mail mit „Nicht weiterleiten“ schützt, und einer Vorlage, die das Recht „Weiterleiten“ nicht enthält?
 
 Trotz des Namens und des Erscheinungsbilds ist **Nicht weiterleiten** nicht das Gegenteil des Rechts „Weiterleiten“ oder einer Vorlage. Es handelt sich eigentlich um einen Satz von Rechten, die das Einschränken von kopieren, Drucken und Speichern der e-Mail außerhalb des Postfachs, zusätzlich zum Einschränken der Weiterleitung von e-Mails, beinhalten. Die Rechte werden auf Benutzer über die ausgewählten Empfänger dynamisch angewendet und nicht statisch vom Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt "nicht [weiterleiten" für e-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md).
-

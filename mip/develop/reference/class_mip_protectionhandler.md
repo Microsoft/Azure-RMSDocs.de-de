@@ -1,45 +1,44 @@
 ---
 title: Klassen Schutz Handler
 description: 'Dokumentiert die schutzhandler:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: d3c7a5151d55c143f7f90d3457b32875e614c936
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: e38aaf0e4dfee1d10f67f175eb50119fe3aa484d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564435"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567130"
 ---
-# <a name="class-protectionhandler"></a>Klassen Schutz Handler
- 
+# <a name="class-protectionhandler"></a>Klassen Schutz Handler 
 Verwaltet schutzbezogene Aktionen für eine bestimmte Schutzkonfiguration.
   
 ## <a name="summary"></a>Zusammenfassung
-
-| Member                        | Beschreibungen
-|--------------------------------|---------------------------------------------
-| public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Erstellen Sie einen geschützten Stream, der die Verschlüsselung/Entschlüsselung von Inhalten ermöglicht.
-| public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Verschlüsselt einen Puffer.
-| public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Entschlüsselt einen Puffer.
-| public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Berechnet die Größe (in Byte) des Inhalts, wenn dieser mit diesem ProtectionHandler verschlüsselt werden würde.
-| public int64_t GetBlockSize()  |  Ruft die Blockgröße (in Byte) für den Verschlüsselungsmodus ab, der von diesem ProtectionHandler verwendet wird.
-| Public Std:: Vector \<std::string\> GetRights () Konstanten  |  Ruft die Rechte ab, die dem Benutzer bzw. der Identität erteilt werden, die diesem ProtectionHandler zugeordnet sind.
-| public bool AccessCheck(const std::string& right) const  |  Überprüft, ob der Schutzhandler Benutzerzugriff auf das angegebene Recht gewährt.
-| public const std::string GetIssuedTo()  |  Ruft den mit dem Schutzhandler verknüpften Benutzer ab.
-| public const std::string GetOwner()  |  Ruft die E-Mail-Adresse des Inhaltsbesitzers ab
-| public bool IsIssuedToOwner()  |  Ruft ab, ob der aktuelle Benutzer der Inhaltsbesitzer ist
-| public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Ruft Schutzdetails ab.
-| public const std::string GetContentId()  |  Ruft den eindeutigen Bezeichner für das Dokument bzw. den Inhalt ab.
-| public bool DoesUseDeprecatedAlgorithms()  |  Ruft ab, ob ein Schutzhandler veraltete Kryptografiealgorithmen für die Abwärtskompatibilität nutzt
-| public bool IsAuditedExtractAllowed()  |  Ruft ab, ob ein Schutzhandler dem Benutzer das Recht „audited extract“ (Überwachtes Extrahieren) gewährt oder nicht.
-| Public Konstanten Std:: Vector \<uint8_t\>& getserializedpublishinglicense () Konstanten  |  Serialisiert ProtectionHandler in eine Veröffentlichungslizenz.
-| Public Konstanten Std:: Vector \<uint8_t\>& getserializedprelicense (prelicenzformat) Konstanten  |  Vorab Lizenz erhalten.
-| Enumeration prelicenenformat  |  Prälizenzierungs Format.
+ Members                        | Beschreibungen                                
+--------------------------------|---------------------------------------------
+public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
+public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Verschlüsselt einen Puffer.
+public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Entschlüsselt einen Puffer.
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Berechnet die Größe (in Byte) des Inhalts, wenn dieser mit diesem ProtectionHandler verschlüsselt werden würde.
+public int64_t GetBlockSize()  |  Ruft die Blockgröße (in Byte) für den Verschlüsselungsmodus ab, der von diesem ProtectionHandler verwendet wird.
+Public Std:: Vector \<std::string\> GetRights () Konstanten  |  Ruft die Rechte ab, die dem Benutzer bzw. der Identität erteilt werden, die diesem ProtectionHandler zugeordnet sind.
+public bool AccessCheck(const std::string& right) const  |  Überprüft, ob der Schutzhandler Benutzerzugriff auf das angegebene Recht gewährt.
+public const std::string GetIssuedTo()  |  Ruft den mit dem Schutzhandler verknüpften Benutzer ab.
+public const std::string GetOwner()  |  Ruft die E-Mail-Adresse des Inhaltsbesitzers ab
+public bool IsIssuedToOwner()  |  Ruft ab, ob der aktuelle Benutzer der Inhaltsbesitzer ist
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor()  |  Ruft Schutzdetails ab.
+public const std::string GetContentId()  |  Ruft den eindeutigen Bezeichner für das Dokument bzw. den Inhalt ab.
+public bool DoesUseDeprecatedAlgorithms()  |  Ruft ab, ob ein Schutzhandler veraltete Kryptografiealgorithmen für die Abwärtskompatibilität nutzt
+public bool IsAuditedExtractAllowed()  |  Ruft ab, ob ein Schutzhandler dem Benutzer das Recht „audited extract“ (Überwachtes Extrahieren) gewährt oder nicht.
+Public Konstanten Std:: Vector \<uint8_t\>& getserializedpublishinglicense () Konstanten  |  Serialisiert ProtectionHandler in eine Veröffentlichungslizenz.
+Public Konstanten Std:: Vector \<uint8_t\>& getserializedprelicense (prelicenzformat) Konstanten  |  Vorab Lizenz erhalten.
+öffentlicher chiffrimode getciphermode () konstant  |  Ruft den Verschlüsselungs Modus des Schutz Handlers ab.
+Enumeration prelicenenformat  |  Prälizenzierungs Format.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="createprotectedstream-function"></a>Funktion "deateprotectedstream"
 Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
@@ -204,13 +203,19 @@ Parameter:
 
 
   
-**Gibt Folgendes zurück**: die serialisierte Pre-License-Pre-License-Funktion ermöglicht es einem Benutzer, Inhalte sofort zu nutzen, ohne einen zusätzlichen http-aufzurufen. Der Schutz Handler muss mit einem Schutz Handler erstellt worden sein [::P ublishingsettings:: setprelicenseuseremail-](class_mip_protectionhandler_publishingsettings.md) Wert oder andernfalls wird ein leerer Vektor zurückgegeben.
+**Gibt Folgendes zurück**: die serialisierte Pre-License-Pre-License-Funktion ermöglicht es einem Benutzer, Inhalte sofort zu nutzen, ohne einen zusätzlichen http-aufzurufen. Der Schutz Handler muss mit einem Schutz Handler erstellt worden sein::P ublishingsettings:: setprelicenseuseremail-Wert oder andernfalls wird ein leerer Vektor zurückgegeben.
+  
+### <a name="getciphermode-function"></a>Getciphermode-Funktion
+Ruft den Verschlüsselungs Modus des Schutz Handlers ab.
+
+  
+**Gibt Folgendes zurück**: der Chiffre Modus
   
 ### <a name="prelicenseformat-enum"></a>Prelicenenformat-Enumeration
 
-Prälizenzierungs Format.
+ Werte                         | Beschreibungen                                
+--------------------------------|---------------------------------------------
+Xml            | Von msipc verwendetes XML/SOAP-Legacy Format
+Json            | Vom MIP SDK und RMS SDK verwendetes JSON/Rest-Format
 
-| Werte | Beschreibungen
-|--------|---------------------------------------------
-| Xml    | Von msipc verwendetes XML/SOAP-Legacy Format
-| Json   | Vom MIP SDK und RMS SDK verwendetes JSON/Rest-Format
+Prälizenzierungs Format.

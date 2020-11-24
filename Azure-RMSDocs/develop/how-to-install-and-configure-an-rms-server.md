@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 2a9c12f85898f7331c9954d31354d18534b62fc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 25a45be35851035411436a58fc72682ff4e6d66d
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564101"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568210"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
 
@@ -68,7 +68,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
    - Bei der serverseitigen Ermittlung registriert der Administrator einen Dienstverbindungspunkt (SCP) für den RMS-Stammcluster bei Active Directory, und der Client fragt Active Directory ab, um den SCP zu ermitteln und eine Verbindung mit dem Server herzustellen.
    - Bei der clientseitigen Ermittlung konfigurieren Sie auf dem Computer, auf dem der RMS-Client 2.1 ausgeführt wird, RMS-Dienstermittlungseinstellungen in der Registrierung. Diese Einstellungen verweisen den RMS-Client 2.1 auf den zu verwendenden RMS-Server. Wenn sie vorhanden sind, wird keine serverseitige Ermittlung ausgeführt.
 
-   Zum Konfigurieren der clientseitigen Ermittlung können Sie die folgenden Registrierungsschlüssel festlegen, dass sie auf den RMS-Server verweisen. Informationen zum Konfigurieren der dienstseitigen Ermittlung finden Sie in den [Anmerkungen zur Bereitstellung des RMS-Clients 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
+   Zum Konfigurieren der clientseitigen Ermittlung können Sie die folgenden Registrierungsschlüssel festlegen, dass sie auf den RMS-Server verweisen. Informationen zum Konfigurieren der dienstseitigen Ermittlung finden Sie in den [Anmerkungen zur Bereitstellung des RMS-Clients 2.0](../rms-client/client-deployment-notes.md).
 
 4. **EnterpriseCertification**
 

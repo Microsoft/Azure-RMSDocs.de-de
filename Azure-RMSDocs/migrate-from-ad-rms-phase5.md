@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: b3da193b20e5c65d66fcba380ee55690165ce3b4
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: aba2381e5cc275e3b51156b32bdf88fdae974b5e
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049121"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567874"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -41,7 +41,7 @@ Stellen Sie zum Entfernen des Dienstverbindungspunkts sicher, dass Sie als Unter
 
 4. Wählen Sie **Aktuellen SCP entfernen** aus, und klicken Sie dann auf **OK**.
 
-Überwachen Sie jetzt Ihre AD RMS-Server auf Aktivität. Beispielsweise durch Überprüfen der [Anforderungen im Systemintegritätsbericht](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx) und der [ServiceRequest-Tabelle](https://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) oder durch [Überwachung des Benutzerzugriffs auf geschützte Inhalte](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
+Überwachen Sie jetzt Ihre AD RMS-Server auf Aktivität. Beispielsweise durch Überprüfen der [Anforderungen im Systemintegritätsbericht](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee221012(v=ws.10)) und der [ServiceRequest-Tabelle](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772686(v=ws.10)) oder durch [Überwachung des Benutzerzugriffs auf geschützte Inhalte](https://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx).
 
 Wenn Sie bestätigt haben, dass RMS-Clients nicht mehr mit diesen Servern kommunizieren und Clients erfolgreich Azure Information Protection verwenden, können Sie die AD RMS-Serverrolle von diesen Servern entfernen. Wenn Sie dedizierte Server verwenden, bevorzugen Sie möglicherweise den Vorsichts Schritt zum ersten Herunterfahren der Server für einen bestimmten Zeitraum. So haben Sie Zeit, sicherzustellen, dass es keine gemeldeten Probleme gibt, die den Neustart dieser Server erfordern, um die Dienstkontinuität zu gewährleisten, während Sie untersuchen, weshalb Clients nicht Azure Information Protection verwenden.
 
@@ -68,7 +68,7 @@ Umleitung über DNS:
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11 Durchführen der Clientmigrationstasks
 
-Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574.aspx) erstellt haben.
+Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) erstellt haben.
 
 Wenn diese DNS-Änderungen weitergegeben wurden, ermitteln und verwenden diese Clients automatisch den Azure Rights Management-Dienst. Mac-Computer, die Office Mac ausführen, speichern jedoch die Informationen von AD RMS zwischen. Für diese Computer kann der Vorgang bis zu 30 Tage dauern.
 

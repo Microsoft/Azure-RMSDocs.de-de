@@ -1,39 +1,39 @@
 ---
 title: 'Class fileHandler:: Observer'
 description: 'Dokumentiert die fileHandler:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 90bba9b5cfb27068447512152d14e20c7aa5a7e2
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d469271718d422216f6eaad905e60cd82e7f1244
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763045"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566951"
 ---
 # <a name="class-filehandlerobserver"></a>Class fileHandler:: Observer 
 Observer-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für verknüpfte Ereignisse, die im Zusammenhang mit dem Dateihandler stehen.
 Alle Fehler erben von mip::Error. Der Client sollte die Engine nicht in dem Thread aufrufen, der den Beobachter aufruft.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliches virtuelles void onkreatefilehandlersuccess (Konstante Std::\<shared_ptr fileHandler\>& fileHandler, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der Handler erfolgreich erstellt wurde.
-public virtual void onkreatefilehandlerfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn der Handler einen Fehler ausgelöst hat
-public virtual void onclassifysuccess (Konstante Std\<:: Vector Std:: shared_ptr\<Action\> \>& Actions, Rest Std:: shared_ptr\<void\>& context)  |  Wird beim Klassifizieren von Erfolg aufgerufen.
-public virtual void onclassifyfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn eine Klassifizierung fehlgeschlagen
-public virtual void ongetdecryptedtemporaryfilesuccess (konstant Std:: String& decryptedfilepath, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei erfolgreich abgerufen wird.
-öffentliches virtuelles void-ongetdecryptedtemporaryfilefailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei nicht abgerufen werden konnte.
-public virtual void ongetdecryptedtemporarystreamsuccess (konstant Std::\<shared_ptr Stream\>& decryptedstream, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream erfolgreich abgerufen wurde.
-öffentliches virtuelles void-ongetdecryptedtemporarystreamfailure (Konstante Std:: exception_ptr& Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream abgerufen wurde.
-öffentliches virtuelles void-oncommitsuccess (boolcommit, Konst Std::\<shared_ptr\> void& Kontext)  |  Wird aufgerufen, wenn die Ausführung des Commits für die Änderungen erfolgreich ist und diese erfolgreich in der Datei übernommen werden
-public virtual void oncommitfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Ausführung des Commits für die Änderungen fehlschlägt
-public virtual void oninspectsuccess (Konst Std:: shared_ptr\<fileinspector\>& fileinspector, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Erfolg überprüfen.
-public virtual void oninspectfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn bei der Überprüfung
+public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr\<FileHandler\>& fileHandler, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn der Handler erfolgreich erstellt wurde.
+public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn der Handler einen Fehler ausgelöst hat
+public virtual void onclassifysuccess (Konstante Std:: Vector \<std::shared_ptr\<Action\> \>& Actions, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird beim Klassifizieren von Erfolg aufgerufen.
+public virtual void onclassifyfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn eine Klassifizierung fehlgeschlagen
+public virtual void ongetdecryptedtemporaryfilesuccess (Konstante Std:: String& decryptedfilepath, Konstanten Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei erfolgreich abgerufen wird.
+öffentliches virtuelles void-ongetdecryptedtemporaryfilefailure (konstant Std:: exception_ptr& Fehler, Konstante Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei nicht abgerufen werden konnte.
+public virtual void ongetdecryptedtemporarystreamsuccess (konstant Std:: shared_ptr \<Stream\>& decryptedstream, Konstante Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream erfolgreich abgerufen wurde.
+public virtual void ongetdecryptedtemporarystreamfailure (Konstante Std:: exception_ptr& Error, Konstante Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream abgerufen wurde.
+public virtual void OnCommitSuccess(bool committed, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Ausführung des Commits für die Änderungen erfolgreich ist und diese erfolgreich in der Datei übernommen werden
+public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Ausführung des Commits für die Änderungen fehlschlägt
+public virtual void oninspectsuccess (konstant Std:: shared_ptr \<FileInspector\>& fileinspector, Konstanten Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn Erfolg überprüfen.
+public virtual void oninspectfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn bei der Überprüfung
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="oncreatefilehandlersuccess-function"></a>Onkreatefilehandlersuccess-Funktion
 Wird aufgerufen, wenn der Handler erfolgreich erstellt wurde.

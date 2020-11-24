@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: b0bd50f739a98d261924e4dba96accc40e87e2bb
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: f8b0aa99b4a18f1e2b9d0c9b3ddedf2d745b3e19
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563755"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568282"
 ---
 # <a name="release-notes"></a>Versionshinweise
 
@@ -37,7 +37,7 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 - Es wurde ein Problem behoben, das bestimmt, ob Kenn Wort geschützte Office-Dateien RMS-geschützt sind
 -   Aktualisieren Sie die Lizenzierungs Überprüfung für spezielle Zweck Lizenzen.
 - Updates für die PDF-Schutzvorrichtung.
-- Andere Fehlerbehebungen.
+- Weitere Fehlerbehebungen
 - Aktualisieren Sie, um statisch mit den C-Laufzeitbibliotheken zu verknüpfen.
 
 ## <a name="april-2019---update"></a>April 2019-Update
@@ -51,7 +51,7 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 
 ## <a name="october-2017---update"></a>Oktober 2017: Update
 
-- Hinzufügen von zwei neuen APIs zur Initialisierung bzw. zur Aufhebung der Initialisierung von Umgebungen. Weitere Informationen finden Sie unter [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) und [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Hinzufügen von zwei neuen APIs zur Initialisierung bzw. zur Aufhebung der Initialisierung von Umgebungen. Weitere Informationen finden Sie unter [IpcInitializeEnvironment](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-functions) und [IpcUninitializeEnvironment](/previous-versions/windows/desktop/msipc/microsoft-information-protection-and-control-client-functions).
 - Visio-Dateitypen werden jetzt unterstützt. Weitere Informationen finden Sie unter [Datei-API-Konfiguration](file-api-configuration.md).
 
 ## <a name="february-2016---sdk-documentation-update"></a>Februar 2016 – SDK-Dokumentationsupdate
@@ -59,7 +59,7 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 >[!Note]
 > Die Funktionsdokumentationsupdates in diesem Abschnitt gelten für den SDK-Download vom 12.11.2015.
 
-- **Verbesserter Authentifizierungsablauf** – Verwendung von tokenbasierter Authentifizierung von OAuth2 über die [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). Weitere Informationen zu diesem Prozess und den API-Erweiterungen dafür finden Sie unter [Adal-Authentifizierung für Ihre RMS-fähige Anwendung](how-to-use-adal-authentication.md).
+- **Verbesserter Authentifizierungsablauf** – Verwendung von tokenbasierter Authentifizierung von OAuth2 über die [Azure Active Directory Authentication Library (ADAL)](/azure/active-directory/azuread-dev/active-directory-authentication-libraries). Weitere Informationen zu diesem Prozess und den API-Erweiterungen dafür finden Sie unter [Adal-Authentifizierung für Ihre RMS-fähige Anwendung](how-to-use-adal-authentication.md).
 
 - **Update zu ADAL**: Durch das Update der Anwendung dahingehend, dass sie die ADAL-Authentifizierung statt des Microsoft Online-Anmelde-Assistenten verwendet, ergeben sich für Sie und Ihre Kunden folgende Möglichkeiten:
 
@@ -82,7 +82,7 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 
 ## <a name="may-2015-update"></a>Mai 2015-Update
 
--   **Dienst-apps und cloudbasierter RMS**  -  [IPC \_ Der \_ \_ symmetrische](https://msdn.microsoft.com/library/dn133062.aspx) Anmelde Informations Schlüssel benötigt drei Informationen: symmetrische Schlüssel, **appprincipalid**und **tenantbposid**. Dieser Artikel wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Dienst-apps und cloudbasierter RMS**  -  [IPC \_ Der \_ \_ symmetrische](/previous-versions/windows/desktop/msipc/ipc-credential-symmetric-key) Anmelde Informations Schlüssel benötigt drei Informationen: symmetrische Schlüssel, **appprincipalid** und **tenantbposid**. Dieser Artikel wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>April 2015-Update
 
@@ -91,14 +91,14 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 
     **Hinweis**    Das Flag " **IPC \_ Li \_ deprecated \_ Encryption \_ Algorithmen** " wird in unserer API nicht mehr verfügbar gemacht. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen. Bereits erstellte Anwendungen sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen. Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Weitere Informationen finden Sie unter [Arbeiten mit der Verschlüsselung](working-with-encryption.md).
 
--   **Servermodusanwendungen**, die **IPC\_API\_MODE\_SERVER** als [API-Moduswert](https://msdn.microsoft.com/library/hh535236.aspx) verwenden, benötigen kein Anwendungsmanifest mehr. Sie können Ihre Anwendung mit einem RMS-Produktionsserver testen. Beim Wechseln zur Produktionsumgebung müssen Sie keine Produktionslizenz beziehen. Weitere Informationen zu servermodusanwendungen finden Sie unter [Anwendungs Typen](application-types.md).
+-   **Servermodusanwendungen**, die **IPC\_API\_MODE\_SERVER** als [API-Moduswert](/previous-versions/windows/desktop/msipc/api-mode-values) verwenden, benötigen kein Anwendungsmanifest mehr. Sie können Ihre Anwendung mit einem RMS-Produktionsserver testen. Beim Wechseln zur Produktionsumgebung müssen Sie keine Produktionslizenz beziehen. Weitere Informationen zu servermodusanwendungen finden Sie unter [Anwendungs Typen](application-types.md).
 -   **Protokollierung** wurde jetzt über die Datei- und Ereignisablaufverfolgung für Windows-Methoden implementiert.
 -   Bei Ausführung auf einem **Windows 7 SP1- oder Windows Server 2008 R2-Computer** lesen Sie den Hinweis unter "Wichtige Hinweise für Entwickler".
 
 ## <a name="january-2015-update"></a>Januar 2015-Update
 
 -   **Vergrößerung der unterstützten geschützten Datei (PFILE)**: Jetzt werden PFILE-Dateien über 1 GB unterstützt. Weitere Informationen zu PFILE-Dateien finden Sie unter [Unterstützte Dateiformate](supported-file-formats.md).
--   **Verbesserte Protokollierung für eine bessere Diagnose**: Die Protokollierungsstufen zeigen **FEHLER** oder **WARNUNG** für Nachrichten, die geprüft werden müssen. Alle anderen Nachrichten, einschließlich Ausnahmen, die weiterhin angezeigt werden, werden als **Info**protokolliert.
+-   **Verbesserte Protokollierung für eine bessere Diagnose**: Die Protokollierungsstufen zeigen **FEHLER** oder **WARNUNG** für Nachrichten, die geprüft werden müssen. Alle anderen Nachrichten, einschließlich Ausnahmen, die weiterhin angezeigt werden, werden als **Info** protokolliert.
 
     Auf diese Weise bleiben Ihre Details erhalten. Jetzt werden nur die wichtigsten Nachrichten als WARNUNG angezeigt.
 
@@ -121,18 +121,18 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
     **Hinweis**   -Weitere unterstützende Datentypen und-Strukturen, die hier nicht aufgeführt sind, wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Artikel, die für dieses Release aktualisiert wurden, sind als **vorläufig markiert und können geändert werden**.
 
-    -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
-    -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
-    -   [IpcfGetFileProperty](https://msdn.microsoft.com/library/dn771749.aspx)
-    -   [IpcfLogicalFileRangeToRawFileRange](https://msdn.microsoft.com/library/dn771750.aspx)
-    -   [IpcfReadFile](https://msdn.microsoft.com/library/dn771753.aspx)
-    -   [IpcfSetEndOfFile](https://msdn.microsoft.com/library/dn771754.aspx)
-    -   [IpcfWriteFile](https://msdn.microsoft.com/library/dn771756.aspx)
+    -   [IpcfOpenFileOnHandle](/previous-versions/windows/desktop/msipc/ipcfopenfileonhandle)
+    -   [IpcfOpenFileOnILockBytes](/previous-versions/windows/desktop/msipc/ipcfopenfileonilockbytes)
+    -   [IpcfGetFileProperty](/previous-versions/windows/desktop/msipc/ipcfgetfileproperty)
+    -   [IpcfLogicalFileRangeToRawFileRange](/previous-versions/windows/desktop/msipc/ipcflogicalfilerangetorawfilerange)
+    -   [IpcfReadFile](/previous-versions/windows/desktop/msipc/ipcfreadfile)
+    -   [IpcfSetEndOfFile](/previous-versions/windows/desktop/msipc/ipcfsetendoffile)
+    -   [IpcfWriteFile](/previous-versions/windows/desktop/msipc/ipcfwritefile)
 
 ## <a name="april-2014-update"></a>April 2014-Update
 
 -   Die **Datei-API-Speicherverwendung**, insbesondere für große PFILE-Dateien, wurde erheblich verbessert.
--   Die **Inhalts-ID** ist nun über die Eigenschaft **IPC \_ Li \_ Content \_ ID**beschreibbar. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
+-   Die **Inhalts-ID** ist nun über die Eigenschaft **IPC \_ Li \_ Content \_ ID** beschreibbar. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](/previous-versions/windows/desktop/msipc/license-property-types).
 -   **Manifestanforderungen für die Produktion** – Wenn die RMS-fähige Anwendung bzw. der Diensts im Servermodus ausgeführt wird, ist kein Manifest mehr erforderlich. Weitere Informationen finden Sie unter [Anwendungs Typen](application-types.md).
 -   **Dokumentationsupdates**
 
@@ -162,17 +162,17 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
       - Alle Dateien außer System- und Office-Dateien können mit dem geschützten RMS-Dateiformat (PFILE) geschützt werden.
 
-    Die Datei-API wird über die vier folgenden neuen Funktionen implementiert: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) und [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    Die Datei-API wird über die vier folgenden neuen Funktionen implementiert: [IpcfDecryptFile](/previous-versions/windows/desktop/msipc/ipcfdecryptfile), [IpcfEncryptFile](/previous-versions/windows/desktop/msipc/ipcfencryptfile), [IpcfGetSerializedLicenseFromFile](/previous-versions/windows/desktop/msipc/ipcfgetserializedlicensefromfile) und [IpcfIsFileEncrypted](/previous-versions/windows/desktop/msipc/ipcfisfileencrypted).
 
-    Die Datei-API erfordert, dass der Rights Management Service Client 2.1 auf dem Clientcomputer installiert ist und dass der Computer mit einem RMS-Server verbunden ist. Weitere Informationen zu RMS-Server, RMS-Client und deren Funktionalität finden Sie im TechNet unter [Dokumentation zu RMS für IT-Spezialisten](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
+    Die Datei-API erfordert, dass der Rights Management Service Client 2.1 auf dem Clientcomputer installiert ist und dass der Computer mit einem RMS-Server verbunden ist. Weitere Informationen zu RMS-Server, RMS-Client und deren Funktionalität finden Sie im TechNet unter [Dokumentation zu RMS für IT-Spezialisten](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771234(v=ws.10)).
 
 -   **Problem**: Wenn Sie eine Lizenz von Grund auf neu erstellen, müssen Sie Eigentumsrechte explizit gewähren.
 
-    **Lösung**: Die Anwendung muss dem Lizenzinhaber explizit **Besitzerrechte** hinzufügen, wenn eine von Grund auf neue Lizenz mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt wird. Weitere Informationen finden Sie unter [Hinzufügen expliziter Besitzer Rechte](add-explicit-owner-rights.md).
+    **Lösung**: Die Anwendung muss dem Lizenzinhaber explizit **Besitzerrechte** hinzufügen, wenn eine von Grund auf neue Lizenz mit [IpcCreateLicenseFromScratch](/previous-versions/windows/desktop/msipc/ipccreatelicensefromscratch) erstellt wird. Weitere Informationen finden Sie unter [Hinzufügen expliziter Besitzer Rechte](add-explicit-owner-rights.md).
 
--   **Problem**: Wenn eine Anwendung [ipcprotectwindow](https://msdn.microsoft.com/library/hh535268.aspx) oder [ipcunprotectwindow](https://msdn.microsoft.com/library/hh535272.aspx) zweimal für das gleiche Fenster mithilfe Ihres Handles aufruft, gibt RMS SDK 2,1 einen Fehler in **HRESULT**zurück.
+-   **Problem**: Wenn eine Anwendung [ipcprotectwindow](/previous-versions/windows/desktop/msipc/ipcprotectwindow) oder [ipcunprotectwindow](/previous-versions/windows/desktop/msipc/ipcunprotectwindow) zweimal für das gleiche Fenster mithilfe Ihres Handles aufruft, gibt RMS SDK 2,1 einen Fehler in **HRESULT** zurück.
 
-    **Lösung**: spezifische Anleitungen hierzu finden Sie im Abschnitt "Hinweise" in [ipcprotectwindow](https://msdn.microsoft.com/library/hh535268.aspx) und [ipcunprotectwindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Lösung**: spezifische Anleitungen hierzu finden Sie im Abschnitt "Hinweise" in [ipcprotectwindow](/previous-versions/windows/desktop/msipc/ipcprotectwindow) und [ipcunprotectwindow](/previous-versions/windows/desktop/msipc/ipcunprotectwindow).
 
 -   **Problem**: Bei der Entwicklung für mehrere Architekturen müssen Sie diese Anweisungen verwenden.
 

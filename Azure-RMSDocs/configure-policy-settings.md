@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3a58a256bb000b43314a098d99d76347045a475b
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 8a04682a796ceb4305a98bfcbce2266a5fbd834b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048152"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568150"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "86048152"
 > [!NOTE]
 > Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
 > 
-> Informationen zum Konfigurieren von Richtlinien Einstellungen für den Unified-Bezeichnungs Client finden Sie in der Dokumentation zur Microsoft 365 Konformität. Beispielsweise [erfahren Sie mehr über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> Informationen zum Konfigurieren von Richtlinien Einstellungen für den Unified-Bezeichnungs Client finden Sie in der Dokumentation zur Microsoft 365 Konformität. Weitere Informationen finden Sie unter [Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 Zusätzlich zum Titel und der QuickInfo für die Information Protection-Leiste gibt es einige Einstellungen in der Azure Information Protection-Richtlinie, die Sie unabhängig von den Bezeichnungen konfigurieren können:
 
@@ -40,7 +40,7 @@ Beachten Sie, dass Ihre Richtlinieneinstellungen möglicherweise unterschiedlich
 
 ## <a name="to-configure-the-policy-settings"></a>So konfigurieren Sie die Richtlinien Einstellungen
 
-1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
@@ -56,11 +56,11 @@ Beachten Sie, dass Ihre Richtlinieneinstellungen möglicherweise unterschiedlich
     
     - Senden **von** Überwachungs **Daten an Azure Information Protection Analytics**: bevor Sie einen Azure Log Analytics-Arbeitsbereich für [Azure Information Analytics](reports-aip.md)erstellen, werden die Werte für diese Einstellung deaktiviert und **nicht konfiguriert**. Wenn Sie den Arbeitsbereich erstellen, ändern sich die Werte auf **Aus** und **Ein**.
         
-        Wenn die Einstellung **auf on**festgelegt ist, senden Clients, die Central Reporting unterstützen, Daten an den Azure Information Protection-Dienst. Diese Informationen umfassen, welche Bezeichnungen angewendet werden und wann ein Benutzer eine Bezeichnung mit einer niedrigeren Klassifizierung auswählt oder eine Bezeichnung entfernt. Weitere Informationen zu den gesendeten und gespeicherten Informationen finden Sie im Abschnitt [Informationen zu den gesammelten und an Microsoft gesendeten](reports-aip.md#information-collected-and-sent-to-microsoft) Informationen in der Dokumentation zu Central Reporting. Legen Sie diese Richtlinien Einstellung auf **Off** fest, um zu verhindern, dass diese Daten gesendet werden.
+        Wenn die Einstellung **auf on** festgelegt ist, senden Clients, die Central Reporting unterstützen, Daten an den Azure Information Protection-Dienst. Diese Informationen umfassen, welche Bezeichnungen angewendet werden und wann ein Benutzer eine Bezeichnung mit einer niedrigeren Klassifizierung auswählt oder eine Bezeichnung entfernt. Weitere Informationen zu den gesendeten und gespeicherten Informationen finden Sie im Abschnitt [Informationen zu den gesammelten und an Microsoft gesendeten](reports-aip.md#information-collected-and-sent-to-microsoft) Informationen in der Dokumentation zu Central Reporting. Legen Sie diese Richtlinien Einstellung auf **Off** fest, um zu verhindern, dass diese Daten gesendet werden.
     
     - **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen): Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden.
         
-       Wenn beim Speichern eines Dokuments oder beim Senden einer E-Mail keine Bezeichnung zugewiesen ist, wird der Benutzer zur Auswahl einer Bezeichnung aufgefordert. Zum Beispiel:
+       Wenn beim Speichern eines Dokuments oder beim Senden einer E-Mail keine Bezeichnung zugewiesen ist, wird der Benutzer zur Auswahl einer Bezeichnung aufgefordert. Beispiel:
         
        ![Azure Information Protection-Aufforderung, wenn Beschriftung erzwungen wird](./media/info-protect-enforce-labelv2.png)
         
@@ -109,4 +109,3 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 Um anzuzeigen, wie einige dieser Richtlinieneinstellungen zusammen funktionieren, absolvieren Sie das [Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md).
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
-

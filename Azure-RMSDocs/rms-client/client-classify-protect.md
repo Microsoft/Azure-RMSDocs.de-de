@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2e727e438f0baf5cb61a59b699da811e36e48d4f
-ms.sourcegitcommit: dec5df81b569283a72f0a983d3f53b82cbbc562c
+ms.openlocfilehash: da5c20824af73ed28a602cffb79c3e4167db5bf7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87802078"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568114"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Benutzerhandbuch: klassifizieren und schützen mit dem Azure Information Protection-Client
 
@@ -39,7 +39,7 @@ Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren 
 Wenn Ihre Bezeichnung Schutz für ein Dokument anwendet, ist das geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen für geschützte Dateien nicht Folgendes: Zusammenstellung, Office für das Web, Suche, Dokument Vorschau, Miniaturansicht und eDiscovery.
 
 > [!TIP]
-> Bitten Sie den Administrator, ihre Bezeichnungen auf einheitliche Vertraulichkeits Bezeichnungen zu migrieren, die für diese Speicherorte unterstützt werden, wenn [SharePoint für Vertraulichkeits Bezeichnungen aktiviert ist](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> Bitten Sie den Administrator, ihre Bezeichnungen auf einheitliche Vertraulichkeits Bezeichnungen zu migrieren, die für diese Speicherorte unterstützt werden, wenn [SharePoint für Vertraulichkeits Bezeichnungen aktiviert ist](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Sichere Freigabe einer Datei für Personen außerhalb Ihrer Organisation
 
@@ -88,7 +88,7 @@ Mögliche Gründe:
 
 - Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Um dies zu überprüfen, klicken Sie auf **schützen**  >  **Hilfe und Feedback**. Prüfen Sie im Dialogfeld, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
     
-    Sie benötigen Office Professional Plus nicht, wenn Sie über Office-Apps von Office 365 Business oder Microsoft 365 Business verfügen, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
+    Sie benötigen Office Professional Plus nicht, wenn Sie Office-Apps aus Microsoft 365 Apps für Unternehmen oder Microsoft 365 Business Premium haben, wenn dem Benutzer eine Lizenz für Azure Rights Management (auch bekannt als Azure Information Protection für Office 365) zugewiesen ist.
 
 - Die Bezeichnung befindet sich möglicherweise in einer bereichsbezogenen Richtlinie, die Ihr Konto nicht umfasst. Wenden Sie sich an den Helpdesk oder Ihren Administrator.
 
@@ -195,4 +195,3 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 Konfigurationsanweisungen zum Aktivieren der Richtlinieneinstellung **Make the custom permissions option available to users** (Die Option der benutzerdefinierten Berechtigungen Benutzern zur Verfügung stellen) finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Azure Information Protection](../configure-policy-settings.md).
 
 Weitere Konfigurationsanweisungen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../configure-policy.md).
-

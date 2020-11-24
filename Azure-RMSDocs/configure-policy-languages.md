@@ -1,8 +1,8 @@
 ---
 title: Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 description: Sie können die Unterstützung für verschiedene Sprachen für die Bezeichnungen und Vorlagen erweitern, die in der Information Protection-Leiste für Benutzer angezeigt werden, indem Sie die Sprachen in der Azure Information Protection-Richtlinie angeben und Ihre Übersetzungen importieren.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a582a32a149fcaf6146c5deb13d8b88f682d7b0d
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: f39ba64ed2702f4f994d5626697fa5185e546f2b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048271"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568165"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
@@ -30,7 +30,7 @@ ms.locfileid: "86048271"
 > [!NOTE]
 > Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
 > 
-> Wenn Sie nach Informationen suchen, um verschiedene Sprachen für Vertraulichkeits Bezeichnungen zu konfigurieren, verwenden Sie Office 365 Security & Compliance PowerShell und den *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
+> Wenn Sie nach Informationen suchen, um verschiedene Sprachen für Vertraulichkeits Bezeichnungen zu konfigurieren, verwenden Sie Office 365 Security & Compliance PowerShell und den *localesettings* -Parameter für " [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label)".
 
 Obwohl die Standardbezeichnungen für Azure Information Protection mehrere Sprachen unterstützen, müssen Sie eine Unterstützung für die Bezeichnungsnamen und -beschreibungen konfigurieren, die Sie angeben. Für diese Konfiguration müssen Sie folgende Aktionen ausführen:
 
@@ -52,11 +52,11 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Konfigurieren von Bezeichnungen und Vorlagen für verschiedene Sprachen
 
-1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
-2. Über die **Manage**  >  Menüoption "**Sprachen** verwalten": Wählen Sie im Bereich " **Azure Information Protection-Sprachen** " die Option **neue Sprache für Übersetzung hinzufügen**aus. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
+2. Über die **Manage**  >  Menüoption "**Sprachen** verwalten": Wählen Sie im Bereich " **Azure Information Protection-Sprachen** " die Option **neue Sprache für Übersetzung hinzufügen** aus. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
 
 3. Die ausgewählten Sprachen werden nun im Bereich **Azure Information Protection-Sprachen** angezeigt:
     
@@ -79,7 +79,7 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
     
     Tipp: Sie müssen nicht warten, bis Sie jede Sprachdatei bearbeitet haben, die Sie heruntergeladen haben. Stattdessen können Sie verschiedene Sprachen schrittweise ausrollen, indem Sie in die.zip-Datei eine Teilmenge der gesamten heruntergeladenen Dateien aufnehmen. Wiederholen Sie dann die Schritte 7 und 8, wenn Sie die Übersetzungen für weitere Sprachen abgeschlossen haben.
 
-8. Kehren Sie zum Bereich **Azure Information Protection-Sprachen** zurück, und wählen Sie **importieren**aus. Hinweis: Wenn diese Option nicht verfügbar ist, deaktivieren Sie zuerst das Kontrollkästchen **SPRACHENNAME** oder die Kontrollkästchen der einzeln ausgewählten Sprachen.
+8. Kehren Sie zum Bereich **Azure Information Protection-Sprachen** zurück, und wählen Sie **importieren** aus. Hinweis: Wenn diese Option nicht verfügbar ist, deaktivieren Sie zuerst das Kontrollkästchen **SPRACHENNAME** oder die Kontrollkästchen der einzeln ausgewählten Sprachen.
     
     Nachdem der Import abgeschlossen wurde, werden die lokalisierten Namen und Beschreibungen im Bereich „Benutzer“ heruntergeladen.
 
@@ -115,6 +115,3 @@ In folgenden Szenarios werden keine Namen für lokalisierte Bezeichnungen (und u
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinien zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
-
-
-

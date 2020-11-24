@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: d89ca9894c8d6a145235790fafc25f95570d93cc
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 9e6f2389c5cc552ed3a65485db9adb94af4a4d03
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303612"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567472"
 ---
 # <a name="getting-started"></a>Erste Schritte
 
@@ -31,22 +31,22 @@ In diesem Thema werden Sie durch die Einrichtung Ihrer rechtlich geschützten An
 
 ## <a name="in-this-sections"></a>Abschnitte
 
-| Thema | Description |
+| Thema | BESCHREIBUNG |
 |-------|-------------|
-| [Anmerkungen zu dieser Version](release-notes-rtm.md) | Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.|
-| [Installieren des SDK](install-the-rms-sdk.md) | In diesem Thema werden Sie durch die Installation der Entwicklertools geführt.|
+| [Versionshinweise](release-notes-rtm.md) | Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.|
+| [Installieren des SDKs](install-the-rms-sdk.md) | In diesem Thema werden Sie durch die Installation der Entwicklertools geführt.|
 | [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | Dieses Thema enthält Anleitungen zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des RMS SDK 2.1.|
 | [Entwickeln Ihrer Anwendung](developing-your-application.md) | Dieses Thema bietet grundlegende Anleitungen hinsichtlich der wichtigsten Aspekte einer RMS-fähigen Anwendung, und es kann als Grundlage für die Entwicklung eigener Anwendungen herangezogen werden.|
-| [Testen der Anwendung](how-to-set-up-your-test-environment.md) |Dieses Thema enthält Anleitungen zum Einrichten von Anwendungstests.|
+| [Testen Ihrer Anwendung](how-to-set-up-your-test-environment.md) |Dieses Thema enthält Anleitungen zum Einrichten von Anwendungstests.|
 | [Bereitstellen in der Produktion](deploying-your-application.md) |Dieses Thema führt Sie durch die Bereitstellungsoptionen für die rechtlich geschützte Anwendung.|
 
 
 Verwenden Sie RMS SDK 2.1 gemäß der Anleitung in den folgenden Themen:
 
-- [Installieren des SDK](install-the-rms-sdk.md)
+- [Installieren des SDKs](install-the-rms-sdk.md)
 - [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 - [Entwickeln Ihrer Anwendung](developing-your-application.md)
-- [Testen der Anwendung](how-to-set-up-your-test-environment.md)
+- [Testen Ihrer Anwendung](how-to-set-up-your-test-environment.md)
 - [Bereitstellen in der Produktion](deploying-your-application.md)
 
 ### <a name="why-use-rmssdk21-for-protecting-your-content"></a>Gründe für die Verwendung von RMS SDK 2.1 zum Schutz von Inhalten
@@ -67,6 +67,6 @@ Das RMS SDK 2.1 unterstützt verschiedene wichtige Client- und Serverplattformen
 **Einmal schreiben** – RMS SDK 2.1-Anwendungen müssen nicht mit Codeänderungen aktualisiert oder neu kompiliert werden, um mit den neuesten RMS-Funktionen zu funktionieren. RMS-Funktionen werden in einer vorhandenen Anwendung verfügbar, wenn sie auf dem RMS-Server hinzugefügt werden.
 **Konsistenz** – Das RMS SDK 2.1 erleichtert das Schreiben von Anwendungen, die verschiedene RMS-Konfigurationen auf konsistente Weise erfüllen. Bei Verwendung des SDK müssen Sie, der Anwendungsentwickler, auch einen deutlich geringeren Anteil der RMS-Benutzeroberfläche neu erstellen, sodass ein einheitliches Erscheinungsbild gefördert wird und eine geringere Notwendigkeit zur Schulung der Benutzer besteht.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [RMS-Entwicklerhandbuch](developers-guide.md)

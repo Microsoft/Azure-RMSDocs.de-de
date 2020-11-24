@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b396d65b821f258d08e867bad8331b8603d8ccb9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: eae7071115f417e6ea66a98c1bf8820440938718
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788640"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95567961"
 ---
 # <a name="server"></a>Server
 
@@ -34,21 +34,21 @@ In diesem Thema werden der Zweck und die Funktionen des RMS-Servers für Azure u
 
 Von den vielen installierten Webdiensten sind die folgenden für die Anwendungsentwicklung mit RMS-Server unter Windows Server am wichtigsten.
 
-| Service | Description |
+| Dienst | BESCHREIBUNG |
 |---------|-------------|
 | Verwaltung | Hostet die Verwaltungswebsite, mit der Sie RMS verwalten können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt. Sie können mit der Active Directory Rights Management Services-Skripterstellungs-API Verwaltungsskripts schreiben.|
 | Kontozertifizierung |Erstellt Computerzertifikate, die Computer in der RMS-Zertifikathierarchie identifizieren, und Rechtekontozertifikate, über die Benutzer bestimmten Computern zugeordnet werden. Weitere Informationen finden Sie unter „Aktivieren eines Computers“ und „Aktivieren eines Benutzers“.<p><p>Dieser Dienst wird auf dem Stammzertifizierungsserver ausgeführt. |
 |Lizenzierung | Stellt eine *Endbenutzerlizenz* aus. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
-|Veröffentlichung | Erstellt eine *Veröffentlichungslizenz*, die die Richtlinien definiert, die in einer Endbenutzerlizenz aufgelistet werden können. Weitere Informationen finden Sie unter [Erstellen einer Veröffentlichungslizenz](https://msdn.microsoft.com/library/Aa362355).<p><p>Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
+|Veröffentlichen | Erstellt eine *Veröffentlichungslizenz*, die die Richtlinien definiert, die in einer Endbenutzerlizenz aufgelistet werden können. Weitere Informationen finden Sie unter [Erstellen einer Veröffentlichungslizenz](/previous-versions/windows/desktop/adrms_sdk/creating-an-issuance-license).<p><p>Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
 |Vorzertifizierung | Ermöglicht es einem Server, ein *Rechtekontozertifikat* im Auftrag eines Benutzers anzufordern. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
 |Dienstlocator | Stellt die URL der Dienste zur Zertifizierung, Lizenzierung und Veröffentlichung von Konten für Active Directory bereit, damit diese von RMS-Clients gefunden werden können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
 
-## <a name="related-topics"></a>Zugehörige Themen ##
+## <a name="related-topics"></a>Verwandte Themen ##
 * [Übersicht](ad-rms-overview.md)
-* [Microsoft Internetinformationsdienste](https://www.iis.net/overview)
+* [Microsoft-Internetinformationsdienste](https://www.iis.net/overview)
 * [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)
 * [Microsoft Windows Rights Management Services mit Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)
-* [Active Directory Rights Management Services Scripting API (Active Directory Rights Management Services-Skripterstellungs-API)](https://msdn.microsoft.com/library/Bb968797)
-* [Aktivieren eines Computers](https://msdn.microsoft.com/library/Cc530377)
-* [Aktivieren eines Benutzers](https://msdn.microsoft.com/library/Cc530378)
-* [Erstellen einer Veröffentlichungslizenz](https://msdn.microsoft.com/library/Aa362355)
+* [Active Directory Rights Management Services Scripting API (Active Directory Rights Management Services-Skripterstellungs-API)](/previous-versions/windows/desktop/adrms_script/adrms-script-portal)
+* [Aktivieren eines Computers](/previous-versions/windows/desktop/adrms_sdk/activating-a-computer)
+* [Aktivieren eines Benutzers](/previous-versions/windows/desktop/adrms_sdk/activating-a-user)
+* [Erstellen einer Veröffentlichungslizenz](/previous-versions/windows/desktop/adrms_sdk/creating-an-issuance-license)

@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbdbf45f337b2647bb260c4a9d01c1c777d078a2
-ms.sourcegitcommit: 0f10998e9623f59c36edf89e4661c9c953787aed
+ms.openlocfilehash: 6f095c7cfd7a41663da3fd4f19d47012fa2604b5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810336"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568138"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -32,20 +32,20 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Anwendung oder Dienst|Aktualisierungsmethode nach Änderungen|
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Gilt für Transportregeln und Outlook Web App |Automatische Aktualisierung innerhalb einer Stunde. Weitere Schritte sind nicht erforderlich.|
-|Azure Information Protection-Client|Automatische Aktualisierung, wenn die Azure Information Protection-Richtlinie auf dem Client aktualisiert wird:<br /><br /> – Öffnen einer Office-Anwendung, die die Azure Information Protection-Leiste unterstützt. <br /><br /> – Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen. <br /><br /> – Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).<br /><br /> – Wenn der Microsoft Azure Information Protection-Überprüfungsdienst gestartet wird und die lokale Richtlinie älter als eine Stunde ist. Zusätzlich sucht der Überprüfungsdienst einmal pro Stunde nach Veränderungen und verwendet diese Änderungen beim nächsten Überprüfungszyklus.<br /><br /> – Alle 24 Stunden.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client aktualisiert.|
-|Azure Information Protection-Client für einheitliche Bezeichnungen|Bei Office-Apps werden die Vorlagen automatisch aktualisiert, wenn die APP geöffnet wird.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client für einheitliche Bezeichnung aktualisiert.<br /><br /> Für den Datei-Explorer, PowerShell und den Scanner lädt der Client keine Vorlagen herunter, sondern greift auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
-|Office 365-Apps, Office 2019, Office 2016 und Office 2013|Automatische Aktualisierung nach einem Zeitplan:<br /><br />– Für diese neueren Office-Versionen: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />Weitere Informationen zum Erzwingen einer Aktualisierung vor dem Zeitplan finden Sie im folgenden Abschnitt [: Office 365-apps, Office 2019, Office 2016 und Office 2013: Erzwingen einer Aktualisierung für Vorlagen](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
+|Azure Information Protection-Client|Automatische Aktualisierung, wenn die Azure Information Protection-Richtlinie auf dem Client aktualisiert wird:<br /><br /> – Öffnen einer Office-Anwendung, die die Azure Information Protection-Leiste unterstützt. <br /><br /> – Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen. <br /><br /> – Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).<br /><br /> – Wenn der Microsoft Azure Information Protection-Überprüfungsdienst gestartet wird und die lokale Richtlinie älter als eine Stunde ist. Zusätzlich sucht der Überprüfungsdienst einmal pro Stunde nach Veränderungen und verwendet diese Änderungen beim nächsten Überprüfungszyklus.<br /><br /> – Alle 24 Stunden.<br /><br /> Da dieser Client in Office eng integriert ist, werden auch alle aktualisierten Vorlagen für Microsoft 365-apps, Office 2019, Office 2016 oder Office 2013 ebenfalls für den Azure Information Protection Client aktualisiert.|
+|Azure Information Protection-Client für einheitliche Bezeichnungen|Bei Office-Apps werden die Vorlagen automatisch aktualisiert, wenn die APP geöffnet wird.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Microsoft 365-apps, Office 2019, Office 2016 oder Office 2013 ebenfalls für den Azure Information Protection Unified-Bezeichnungs Client aktualisiert.<br /><br /> Für den Datei-Explorer, PowerShell und den Scanner lädt der Client keine Vorlagen herunter, sondern greift auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
+|Microsoft 365 apps, Office 2019, Office 2016 und Office 2013|Automatische Aktualisierung nach einem Zeitplan:<br /><br />– Für diese neueren Office-Versionen: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />Informationen zum Erzwingen einer Aktualisierung vor dem Zeitplan finden Sie im folgenden Abschnitt [Microsoft 365 apps, Office 2019, Office 2016 und Office 2013: Erzwingen einer Aktualisierung für Vorlagen](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|Automatische Aktualisierung, wenn Benutzer sich von Windows ab- und wieder anmelden und bis zu einer Stunde warten.|
 |Lokales Exchange mit dem Rights Management-Connector<br /><br />Gilt für Transportregeln und Outlook Web App|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich. Outlook Web App speichert allerdings die UI für einen Tag zwischen.|
 |Office 2019 für Mac und Office 2016 für Mac|Wird automatisch aktualisiert, wenn Sie geschützte Inhalte öffnen. Informationen zum Erzwingen einer Aktualisierung finden Sie im folgenden Abschnitt [Office 2019 für Mac und Office 2016 für Mac: Erzwingen einer Aktualisierung für Vorlagen](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Die RMS-Freigabeanwendung für Mac-Computer|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
-|Office 365 ProPlus mit [integrierter Bezeichnung](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Dieser integrierte Bezeichnungs Client lädt keine Vorlagen herunter, greift jedoch auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
+|Office 365 ProPlus mit [integrierter Bezeichnung](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Dieser integrierte Bezeichnungs Client lädt keine Vorlagen herunter, greift jedoch auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
 | | |
 
 Wenn Client Anwendungen Vorlagen herunterladen müssen (anfänglich oder aktualisiert für Änderungen), sollten Sie bis zu 30 Minuten warten, bis der Download abgeschlossen ist und die neuen oder aktualisierten Vorlagen voll funktionstüchtig sind. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Vorlagenkonfiguration und der Netzwerkkonnektivität ab. 
 
-## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates"></a>Office 365-apps, Office 2019, Office 2016 und Office 2013: Erzwingen der Aktualisierung von Vorlagen
-Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Office 2019, Office 2016 oder Office 2013 ausgeführt wird, können Sie den automatischen Zeitplan ändern, sodass geänderte Vorlagen auf Computern häufiger als gemäß dem Standardwert aktualisiert werden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
+## <a name="microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates"></a>Microsoft 365-apps, Office 2019, Office 2016 und Office 2013: Erzwingen einer Aktualisierung für Vorlagen
+Durch Bearbeiten der Registrierung auf den Computern, auf denen Microsoft 365 apps, Office 2019, Office 2016 oder Office 2013 ausgeführt wird, können Sie den automatischen Zeitplan ändern, sodass geänderte Vorlagen auf Computern häufiger als deren Standardwert aktualisiert werden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
 > [!WARNING]
 > Durch eine unsachgemäße Verwendung des Registrierungs-Editors können schwerwiegende Fehler auftreten, die möglicherweise eine Neuinstallation des Betriebssystems erforderlich machen. Microsoft kann nicht garantieren, dass Probleme, die aufgrund einer unsachgemäßen Verwendung des Registrierungs-Editors entstehen, behoben werden können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
@@ -78,7 +78,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
 
 1. Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime**. Die Daten könnten beispielsweise als **2015-04-20T15:52** angezeigt werden. Löschen Sie „2015-04-20T15:52“, sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
-   **Registrierungs Pfad:** HKEY_CURRENT_USER \software\classes\local settings\software\microsoft\msipc \\ < *MicrosoftRMS_FQDN*> \TEMPLATE \\ < *user_alias*>
+   **Registrierungs Pfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> \TEMPLATE \\ < *user_alias*>
 
    **Typ:** REG_SZ
 
@@ -113,9 +113,8 @@ In diesen Versionen von Office für Mac werden Vorlagen aktualisiert, wenn Sie g
 
 2. Starten Sie Outlook für Mac neu.
 
-3. Erstellen Sie eine neue e-Mail, wählen Sie **verschlüsseln**aus, und **überprüfen**Sie die Anmelde Informationen.
+3. Erstellen Sie eine neue e-Mail, wählen Sie **verschlüsseln** aus, und **überprüfen** Sie die Anmelde Informationen.
 
 
 ## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md)
-

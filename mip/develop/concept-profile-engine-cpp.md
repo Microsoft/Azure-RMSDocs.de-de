@@ -6,18 +6,18 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 51934a4a285368a00aaf23780c7fd6c2f315ed7d
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: 8c414b5b66525169b1c55ae83f60e91e69188b53
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563952"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "95568438"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK: Konzepte der Profile- und Engine-Objekte
 
-## <a name="profiles"></a>Profile
+## <a name="profiles"></a>Profiles
 
-Wenn die `MipContext` Klasse zum Speichern von SDK-spezifischen Einstellungen ist, ist das Profil die Stamm Klasse für alle MIP-Bezeichnungen und Schutz spezifischen Vorgänge im MIP SDK. Bevor Sie einen der drei API-Sätze verwenden, muss die Client Anwendung ein Profil erstellen. Zukünftige Vorgänge werden vom Profil oder von anderen Objekten, die dem Profil *hinzugefügt* werden, ausgeführt.
+Wenn die `MipContext` Klasse zum Speichern von SDK-spezifischen Einstellungen ist, ist das Profil die Stamm Klasse für alle MIP-Bezeichnungen und Schutz spezifischen Vorgänge im MIP SDK. Bevor Sie einen der drei API-Sätze verwenden, muss die Client Anwendung ein Profil erstellen. Zukünftige Vorgänge werden vom Profil oder von anderen Objekten, die dem Profil *hinzugefügt* werden, ausgeführt. Es wird nur ein einzelnes Profil Objekt pro Prozess empfohlen. Wenn Sie mehr als eine erstellen, kann dies zu unerwartetem Verhalten führen. 
 
 Es gibt drei Arten von Profilen im MIP SDK:
 

@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 776cebe55505322895e1da80f87f0476f8a893f7
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 66ad27bb61e4cdc24d5c047b8f2c464ba98e5a8d
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047421"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567613"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentkontrolle für Azure Information Protection
 
@@ -49,7 +49,7 @@ Wenn Sie über Benutzer verfügen, für die diese Aktivität von anderen Benutze
 
 Anderen Benutzern werden auf der Website für die Dokumentkontrolle keine Aktivitäten für die Mitglieder dieser Gruppe angezeigt, wenn die Aktivitäten mit Dokumenten zusammenhängen, die für sie freigegeben wurden. Darüber hinaus werden keine E-Mail-Benachrichtigungen an den Benutzer gesendet, der das Dokument freigegeben hat.
 
-Bei Verwendung dieser Konfiguration können alle Benutzer weiterhin die Website für die Dokumentkontrolle verwenden und den Zugriff auf die von ihnen geschützten Dokumente widerrufen. Es werden jedoch keine Aktivitäten für die Benutzer angezeigt, die Sie mit dem Cmdlet "Set-aipservicedonottrackusergroup" angegeben haben.
+Bei Verwendung dieser Konfiguration können alle Benutzer weiterhin die Website für die Dokumentkontrolle verwenden und den Zugriff auf die von ihnen geschützten Dokumente widerrufen. Es werden jedoch keine Aktivitäten für die Benutzer angezeigt, die Sie mit dem Cmdlet "Set-AipServiceDoNotTrackUserGroup" angegeben haben.
 
 Diese Einstellung gilt nur für Endbenutzer. Administratoren für Azure Information Protection können die Aktivitäten aller Benutzer immer nachverfolgen, auch wenn diese Benutzer mithilfe von "Set-aipservicedonottrackusergroup" angegeben werden. Weitere Informationen dazu, wie Administratoren Dokumente für Benutzer nachverfolgen können, finden Sie im Abschnitt [Nachverfolgen und Sperren von Dokumenten für Benutzer](#tracking-and-revoking-documents-for-users).
 
@@ -107,7 +107,7 @@ Eine Anleitung zur Verwendung der Website für die Dokumentkontrolle finden Sie 
 
 Zum Nachverfolgen und Widerrufen eines Dokuments muss es zunächst bei der Website zur Dokumentnachverfolgung registriert werden. Diese Aktion wird ausgeführt, wenn Benutzer bei Verwendung des Azure Information Protection-Clients im Datei-Explorer oder über ihre Office-Apps die Option **Track and revoke** (Verfolgen und widerrufen) auswählen.
 
-Wenn Sie Dateien für Benutzer mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. Zum Beispiel:
+Wenn Sie Dateien für Benutzer mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. Beispiel:
 
 ```ps
 Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking

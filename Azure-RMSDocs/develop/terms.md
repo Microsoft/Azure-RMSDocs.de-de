@@ -14,19 +14,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 87aa190a87426e61d919b8781444239c4ce5d3c7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 4f33a7a730ad8f6f48870ce4b2450007712e7bf1
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790767"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567808"
 ---
-# <a name="terms"></a>Benennungen
+# <a name="terms"></a>Begriffe
 
 Sammlung mit Terminologiedefinitionen für Entwickler, die speziell für Azure Information Protection gelten.
 
 **Veralteter Algorithmus**  
-Eine modale Einstellung, mit der ein älteres Inhaltsschutzschema implementiert wird, bei dem speziell auf den Electronic Codebook-Verschlüsselungsmodus (Electronic Codebook cipher mode; ECB) verwiesen wird. Die Einstellung ermöglicht es Ihnen in diesem SDK, Lizenzen zu generieren, die mit der vom [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) verwendeten MSDRM-Bibliothek kompatibel sind.
+Eine modale Einstellung, mit der ein älteres Inhaltsschutzschema implementiert wird, bei dem speziell auf den Electronic Codebook-Verschlüsselungsmodus (Electronic Codebook cipher mode; ECB) verwiesen wird. Die Einstellung ermöglicht es Ihnen in diesem SDK, Lizenzen zu generieren, die mit der vom [AD Rights Management Services SDK](/previous-versions/windows/desktop/adrms_sdk/active-directory-rights-management-services-sdk-portal) verwendeten MSDRM-Bibliothek kompatibel sind.
 
 Diese Einstellung kann dazu führen, dass Inhalt von Ihrer Anwendung mit einem Verfahren geschützt wird, das den Kundenstandards für den Inhaltsschutz nicht entspricht.
 
@@ -37,4 +37,3 @@ Mit der Einstellung wird verhindert, dass Ihre Anwendung von den kryptografische
 Wird auch als PFile-Format bezeichnet. Es ist das Standardformat für AD RMS und fungiert als Standard für alle RMS-fähigen Anwendungen.
 
 Das PFile-Format ist für den Anwendungsentwickler transparent, da es in das Microsoft Rights Management SDK 4.2 eingebettet ist.
-

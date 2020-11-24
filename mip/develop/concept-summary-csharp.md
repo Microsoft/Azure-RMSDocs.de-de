@@ -1,17 +1,17 @@
 ---
-title: Übersicht über den C# Microsoft Information Protection SDK-Wrapper
-description: Eine kurze Übersicht über die ersten Schritte mit dem MIP SDK .net-Wrapper und den Unterschieden zwischen dem .net-Wrapper C++ und dem SDK.
+title: Übersicht über den c#-Wrapper für Microsoft Information Protection SDK
+description: Eine kurze Übersicht über die ersten Schritte mit dem MIP SDK .net-Wrapper und den Unterschieden zwischen .net Wrapper und C++ SDK.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 21fc590388615b2917ca62fdd848b3a63ce26912
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: da563bc385658d716d6813710495d91b42bbcc83
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556111"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567835"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Einstieg in den Microsoft Information Protection .net-Wrapper
 
@@ -23,7 +23,7 @@ Der verwaltete Wrapper und alle Abhängigkeiten können über nuget in Visual St
 
 Der Microsoft Information Protection .net-Wrapper wird auf den folgenden .net-Plattformen unterstützt:
 
-* .NET Standard 2.0
+* .NET-Standard 2.0
 * .NET 4,0
 
 ## <a name="installing-the-package"></a>Installieren des Pakets
@@ -36,15 +36,15 @@ Es sind keine zusätzlichen Pakete erforderlich. Alle Bibliotheken von Drittanbi
 
 ## <a name="wrapper-details"></a>Wrapper Details
 
-Der .net-Wrapper ist ein von [swig](https://swig.org/) generierter verwalteter Wrapper. Der Wrapper verwendet kompilierte C++ Bibliotheken aus dem Microsoft Information Protection SDK. Diese DLLs sind dieselben DLLs, die in der C++ SDK-Version enthalten sind.
+Der .net-Wrapper ist ein von [swig](https://swig.org/) generierter verwalteter Wrapper. Der Wrapper verwendet kompilierte C++-Bibliotheken aus dem Microsoft Information Protection SDK. Diese DLLs sind dieselben DLLs, die in der C++-Version des SDK enthalten sind.
 
 ## <a name="concept-overlap"></a>Überlappende Konzept
 
-Es gibt einige grundlegende Unterschiede zwischen C++ der SDK-Version und dem verwalteten Wrapper.
+Es gibt einige grundlegende Unterschiede zwischen der C++-Version des SDK und dem verwalteten Wrapper.
 
-* Der .net-Wrapper erfordert nicht die Verwendung von Beobachtern für asynchrone Vorgänge. Alle asynchronen Vorgänge werden über das [aufgabenbasierte asynchrone Muster](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)implementiert.
-* Der .net-Wrapper erfordert die Delegaten, die Teil des C++ SDK sind: authdelegat und genehmidelegat. Diese Delegaten werden über die Schnittstellen implementiert `IAuthDelegate` und `IConsentDelegate`
+* Der .net-Wrapper erfordert nicht die Verwendung von Beobachtern für asynchrone Vorgänge. Alle asynchronen Vorgänge werden über das [aufgabenbasierte asynchrone Muster](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)implementiert.
+* Der .net-Wrapper erfordert die Delegaten, die Teil des C++ SDK sind: authdelegat und genehmidelegat. Diese Delegaten werden über die-Schnittstellen implementiert. `IAuthDelegate``IConsentDelegate`
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Lesen Sie als nächstes das [SDK C# für die Schnellstart-Initialisierung für Microsoft Information Protection (MIP)](quick-app-initialization-csharp.md) , um mit dem Aufbau einer grundlegenden, MIP-fähigen Konsolenanwendung zu beginnen.
+Überprüfen Sie als nächstes die [Schnellstart-Initialisierung für das Microsoft Information Protection (MIP) SDK c#](quick-app-initialization-csharp.md) , um mit dem Aufbau einer grundlegenden, MIP-fähigen Konsolenanwendung zu beginnen.

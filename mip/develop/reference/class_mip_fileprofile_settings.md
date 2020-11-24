@@ -1,39 +1,39 @@
 ---
 title: 'class file profile:: Settings'
 description: 'Dokumentiert die File profile:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 8202dc85cf54b7629d688442a0b386d4ca725ac7
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 5ab95e72c1b6198b8619f1fe6b0f850562ff00df
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762743"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566911"
 ---
 # <a name="class-fileprofilesettings"></a>class file profile:: Settings 
 Einstellungen, die während der Erstellung und Lebensdauer von FileProfile verwendet werden
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konst Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Std:: shared_ptr\<\> genehmidelegat genehmigende Person, Std:\<:\> shared_ptr Observer Observer)  |  FileProfile::Settings-Konstruktor
+öffentliche Einstellungen (Konstante Std:: shared_ptr \<MipContext\>& mipcontext, cachestoragetype cachestoragetype, Std:: shared_ptr genehmidelegat \<ConsentDelegate\> , Std:: shared_ptr \<Observer\> Observer)  |  FileProfile::Settings-Konstruktor
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
-Public Std:: shared_ptr\<genehmidelegat\> getgenehmidelegat () Konstanten  |  Ruft den Zustimmungsdelegaten ab, der die Benutzerzustimmung für die Verbindung mit Diensten anfordert.
-Public Std:: shared_ptr\<Observer\> getobserver () konstant  |  Ruft den Beobachter ab, der Benachrichtigungen von Ereignissen empfängt, die zu FileProfile gehören.
-Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
-Public Std:: shared_ptr\<httpdelegat\> gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
-öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
-Public Std:: shared_ptr\<taskdispatcherdelegat\> gettaskdispatcherdelegat () konstant  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
-öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr\<taskdispatcherdelegat\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
+public std::shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Ruft den Zustimmungsdelegaten ab, der die Benutzerzustimmung für die Verbindung mit Diensten anfordert.
+public std::shared_ptr\<Observer\> GetObserver() const  |  Ruft den Beobachter ab, der Benachrichtigungen von Ereignissen empfängt, die zu FileProfile gehören.
+Public Std:: shared_ptr \<MipContext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
+Public Std:: shared_ptr \<TaskDispatcherDelegate\> gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
+öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr \<TaskDispatcherDelegate\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab.
 öffentliches void setcancachelicenses (bool-abfrageelicenses)  |  Konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 public bool abgebrochen () konstant  |  Ruft ab, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings-Funktion
 FileProfile::Settings-Konstruktor
@@ -45,7 +45,7 @@ Parameter:
 * **cachestoragetype**: speichert jeden zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger. 
 
 
-* **consentDelegate**genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
+* **consentDelegate** genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
 
 
 * **Observer**: Observer-Instanz, die Benachrichtigungen über Ereignisse im Zusammenhang mit File profile empfängt

@@ -1,28 +1,28 @@
 ---
 title: Class applylabelaction
 description: 'Dokumentiert die applylabelaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: df208a53f6cd6ec3806e91c28901a3005b801742
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 1de755d141cd86441ef3eb756d1f46dbdd73f2c4
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763714"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567283"
 ---
 # <a name="class-applylabelaction"></a>Class applylabelaction 
 Aktionen zum Anwenden von Bezeichnungen veranlassen, dass die aufrufende Anwendung eine bestimmte Bezeichnung anwendet.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: shared_ptr\<-Bezeichnung\>& GetLabel () Konstanten  |  Holen Sie sich die erforderliche Bezeichnung.
-Public Konstanten Std:: Vector\<Std:: String\>& getclassificationids () Konstanten  |  Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
+Public Konstanten Std:: shared_ptr \<Label\>& GetLabel ()-Konstanten  |  Holen Sie sich die erforderliche Bezeichnung.
+Public Konstanten Std:: Vector \<std::string\>& getclassificationids () Konstanten  |  Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getlabel-function"></a>GetLabel-Funktion
 Holen Sie sich die erforderliche Bezeichnung.

@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f4039b1c74ae8b341c5afb13a02a743267f00930
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: a3b81890343cd390a42e17dee24708af4367bd8a
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298400"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568006"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Leitfaden zur AIP-Bereitstellung für Klassifizierung, Bezeichnung und Schutz
 
@@ -64,13 +64,13 @@ Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Klassifizieru
 > [!IMPORTANT]
 > Weisen Sie Benutzerlizenzen nicht manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht, um den Azure Rights Management-Dienst für Ihre Organisation zu verwalten. 
 >
-> Für diese Lizenzen wird im Microsoft 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx)**RIGHTSMANAGEMENT_ADHOC** angezeigt. 
+> Für diese Lizenzen wird im Microsoft 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100))**RIGHTSMANAGEMENT_ADHOC** angezeigt. 
 >
 > Weitere Informationen finden Sie unter [RMS for Individuals und Azure Information Protection](./rms-for-individuals.md).
 > 
 ## <a name="prepare-your-tenant-to-use-azure-information-protection"></a>Vorbereiten Ihres Mandanten für Azure Information Protection
 
-Bevor Sie Azure Information Protection verwenden, stellen Sie sicher, dass Sie über Benutzerkonten und-Gruppen in Office 365 oder Azure Active Directory verfügen, die AIP zum Authentifizieren und autorisieren Ihrer Benutzer verwenden kann.
+Bevor Sie Azure Information Protection verwenden, stellen Sie sicher, dass Sie über Benutzerkonten und Gruppen in Microsoft 365 oder Azure Active Directory verfügen, die AIP zum Authentifizieren und autorisieren Ihrer Benutzer verwenden kann.
 
 Erstellen Sie bei Bedarf diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
 
@@ -106,7 +106,7 @@ Stellen Sie fest, ob Sie den klassischen AIP-oder den AIP Unified-Bezeichnungs C
     Weitere Informationen zum Konfigurieren der Bezeichnungen und Richtlinien Einstellungen finden Sie unter:
 
     - **Klassischer Client:** [Konfigurieren von Azure Information Protection-Richtlinie](./configure-policy.md)
-    - **Einheitlicher Bezeichnungs Client:** [Informationen zu Empfindlichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+    - **Einheitlicher Bezeichnungs Client:** [Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels)
     
 1. **Bereitstellen des Clients**
 
@@ -115,7 +115,7 @@ Stellen Sie fest, ob Sie den klassischen AIP-oder den AIP Unified-Bezeichnungs C
     Weitere Informationen finden Sie unter
 
     - **Klassischer Client**: [Administrator Handbuch](./rms-client/client-admin-guide.md)
-    - **Einheitlicher**Bezeichnungs Client: [Administrator Handbuch](./rms-client/clientv2-admin-guide.md)
+    - **Einheitlicher** Bezeichnungs Client: [Administrator Handbuch](./rms-client/clientv2-admin-guide.md)
 
 1. **Erweiterte Konfigurationen einführen**
 
@@ -130,7 +130,7 @@ Stellen Sie fest, ob Sie den klassischen AIP-oder den AIP Unified-Bezeichnungs C
     Weitere Informationen finden Sie unter
 
     - **Klassischer Client**: [Administrator Handbuch: benutzerdefinierte Konfigurationen](rms-client/client-admin-guide-customizations.md)
-    - **Einheitlicher**Bezeichnungs Client: [Administrator Handbuch: benutzerdefinierte Konfigurationen](rms-client/clientv2-admin-guide-customizations.md)
+    - **Einheitlicher** Bezeichnungs Client: [Administrator Handbuch: benutzerdefinierte Konfigurationen](rms-client/clientv2-admin-guide-customizations.md)
      
     > [!TIP]
     > Wenn Sie Bezeichnungen für die automatische Bezeichnung konfiguriert haben, führen Sie den [Azure Information Protection Scanner](deploy-aip-scanner-manage.md) erneut in Ihren lokalen Daten speichern im Ermittlungs Modus aus, und passen Sie Ihre Richtlinie an. 
@@ -166,7 +166,7 @@ Führen Sie die folgenden Schritte aus, um den Schutz der Daten zu vorbereiten:
     
     Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-1. **Aktivieren**Sie den Schutz.
+1. **Aktivieren** Sie den Schutz.
 
     Stellen Sie sicher, dass der Schutzdienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn Sie in mehreren Phasen bereitstellen, konfigurieren Sie die Onboarding-Steuerelemente für Benutzer, um die Fähigkeit der Benutzer einzuschränken, Schutz anzuwenden. 
 
@@ -187,12 +187,12 @@ Führen Sie die folgenden Schritte aus:
     Verwenden Sie je nach Client eine der folgenden Leitfäden:
 
     - Klassisch: [Konfigurieren einer Bezeichnung für den Schutz Rights Management](./configure-policy-protection.md)
-    - Einheitliche Bezeichnung: [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
+    - Einheitliche Bezeichnung: [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels)
     
     > [!IMPORTANT]
     > Benutzer können Bezeichnungen in Outlook anwenden, die Rights Management Schutz auch dann gelten, wenn Exchange nicht für die Verwaltung von Informationsrechten (Information Rights Management, unm) konfiguriert ist. 
     > 
-    > Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM oder die [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
+    > Allerdings bietet Ihre Organisation keine vollständige Funktionalität für die Verwendung von Azure Rights Management Protection mit Exchange, bis Exchange für die Faim-oder [Microsoft 365 Nachrichten Verschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
     > 
 
 1. **Konfigurieren von Office-Anwendungen und -Diensten**
@@ -216,16 +216,16 @@ Führen Sie die folgenden Schritte aus:
     - **Klassischer Client:** [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md)
     - **Einheitlicher Bezeichnungs Client:** [Verwenden von PowerShell mit dem Azure Information Protection Unified-Beschriftungs Client](./rms-client/clientv2-admin-guide-powershell.md)
 
-    Verwenden Sie für cloudbasierte Datenspeicher [Azure Cloud App Security](https://docs.microsoft.com/cloud-app-security). 
+    Verwenden Sie für cloudbasierte Datenspeicher [Azure Cloud App Security](/cloud-app-security). 
 
     > [!TIP]
-    > Obwohl das klassifizieren und schützen vorhandener Dateien in einem Massen Vorgang nicht zu den Haupt Anwendungsfällen von Cloud App Security gehört, können Sie mithilfe von [dokumentierten](https://docs.microsoft.com/cloud-app-security/azip-integration#enable-azure-information-protection) Problem Umgehungen Ihre Dateien klassifizieren und schützen.
+    > Obwohl das klassifizieren und schützen vorhandener Dateien in einem Massen Vorgang nicht zu den Haupt Anwendungsfällen von Cloud App Security gehört, können Sie mithilfe von [dokumentierten](/cloud-app-security/azip-integration#enable-azure-information-protection) Problem Umgehungen Ihre Dateien klassifizieren und schützen.
 
 6. **Bereitstellen des Connectors für durch IRM geschützte Bibliotheken unter SharePoint Server und durch IRM geschützte E-Mails für Exchange lokal**
     
     Wenn Sie SharePoint und Exchange lokal verwenden und deren Funktionen zur Verwaltung von Informationsrechten (IRM) nutzen möchten, installieren und konfigurieren Sie den Rights Management-Connector. 
 
-    Weitere Informationen finden Sie unter Bereitstellen [des Azure Rights Management-Verbindungs-Connector](./deploy-rms-connector.md).
+    Weitere Informationen finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](./deploy-rms-connector.md).
 
 ## <a name="use-and-monitor-your-data-protection-solutions"></a>Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten
 

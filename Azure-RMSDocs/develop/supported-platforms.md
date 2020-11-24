@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4E46521F-8C2F-401A-A481-113CE130ACF0
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8b8572d73216eb0366a8ba0c23ebbb07cdf319a9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 586e063fec81c28c2d3cbb34384ebc5c25968e65
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792075"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567697"
 ---
 # <a name="supported-platforms"></a>Unterstützte Plattformen
 
@@ -27,12 +27,12 @@ In diesem Artikel werden die vom Rights Management Services SDK 2.1 unterstützt
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 
--   Windows 10
+-   Windows 10
 -   Windows Server 2012 R2
 -   Windows Server 2012
 -   Windows 8
 -   Windows Server 2008 R2 SP1
 -   Windows 7 + SP1
 
-**Hinweis:**    Die Verwendung des Vorlagenfeatures wird ab Windows Server 2008 unterstützt.
+**Hinweis**    Die Verwendung der Vorlagen Funktion wird ab Windows Server 2008 unterstützt.
 

@@ -11,12 +11,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 ms.custom: dev
-ms.openlocfilehash: 61eda99c43493ad4221b470781f4a8ea319ce5fc
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 539ad36df7d2c74a00650347abb8ed067dd743c7
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788462"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567823"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Vorgehensweise: Erneuern eines symmetrischen Schlüssels in Azure Information Protection
 
@@ -28,14 +28,14 @@ In den folgenden Schritten wird das Erneuern eines symmetrischen Schlüssels ver
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Das Azure AD PowerShell-Modul (Azure Active Directory) muss wie in der [Azure AD Powershell Reference (Azure AD PowerShell-Referenz)](https://docs.microsoft.com/powershell/msonline/) beschrieben installiert werden.
+* Das Azure AD PowerShell-Modul (Azure Active Directory) muss wie in der [Azure AD Powershell Reference (Azure AD PowerShell-Referenz)](/powershell/msonline/) beschrieben installiert werden.
 
 
 ## <a name="renewing-the-symmetric-key-after-expiry"></a>Erneuern des symmetrischen Schlüssels nach Ablauf
 
-Sie müssen keinen neuen Dienstprinzipal erstellen, wenn der symmetrische Schlüssel, der Ihrer Anwendung zugeordnet ist, abgelaufen ist. Stattdessen können Sie die [PowerShell-Cmdlets](https://docs.microsoft.com/powershell/module/msonline) verwenden, die von Microsoft Online Services (MSol) bereitgestellt wurden, um einen neuen symmetrischen Schlüssel für einen vorhandenen Dienstprinzipal auszustellen.
+Sie müssen keinen neuen Dienstprinzipal erstellen, wenn der symmetrische Schlüssel, der Ihrer Anwendung zugeordnet ist, abgelaufen ist. Stattdessen können Sie die [PowerShell-Cmdlets](/powershell/module/msonline) verwenden, die von Microsoft Online Services (MSol) bereitgestellt wurden, um einen neuen symmetrischen Schlüssel für einen vorhandenen Dienstprinzipal auszustellen.
 
-Um diesen Prozess zu veranschaulichen, nehmen wir an, Sie haben bereits einen neuen Dienstprinzipal mithilfe des [`New-MsolServicePrincipal`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential)-Befehls erstellt.
+Um diesen Prozess zu veranschaulichen, nehmen wir an, dass Sie bereits einen neuen Dienst Prinzipal mit dem Befehl erstellt haben [`New-MsolServicePrincipal`](/powershell/msonline/v1/new-msolserviceprincipalcredential) .
 
 ```
 New-MsolServicePrincipalCredential -ServicePrincipalName "SupportExampleApp"
@@ -61,7 +61,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-Dieser symmetrische Schlüssel läuft am 22.03.2018 um 15:27:53 Uhr ab. Sie müssen den symmetrischen Schlüssel erneuern, um den Dienstprinzipal nach diesem Zeitpunkt noch verwenden zu können. Verwenden Sie hierzu den Befehl [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
+Dieser symmetrische Schlüssel läuft am 22.03.2018 um 15:27:53 Uhr ab. Sie müssen den symmetrischen Schlüssel erneuern, um den Dienstprinzipal nach diesem Zeitpunkt noch verwenden zu können. Verwenden Sie hierzu den [`New-MsolServicePrincipalCredential`](/powershell/msonline/v1/new-msolserviceprincipalcredential) Befehl. 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -72,7 +72,7 @@ Dadurch wird ein neuer symmetrischer Schlüssel für die angegebene **AppPrincip
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-Sie können den Befehl [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) verwenden, um zu überprüfen, dass der neue symmetrische Schlüssel mit dem richtigen Dienstprinzipal verknüpft ist, wie hier dargestellt ist. Beachten Sie, dass der Befehl alle Schlüssel auflistet, die dem Dienstprinzipal derzeit zugeordnet sind.
+Sie können den [`GetMsolServicePrincipalCredential`](/powershell/msonline/v1/get-msolserviceprincipalcredential) Befehl verwenden, um zu überprüfen, ob der neue symmetrische Schlüssel dem richtigen Dienst Prinzipal zugeordnet ist, wie hier gezeigt. Beachten Sie, dass der Befehl alle Schlüssel auflistet, die dem Dienstprinzipal derzeit zugeordnet sind.
 
 ```
 Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
@@ -94,13 +94,13 @@ Usage : Verify
 
 Nachdem Sie überprüft haben, dass der symmetrische Schlüssel wirklich mit dem richtigen Dienstprinzipal verknüpft ist, können Sie die Authentifizierungsparameter des Dienstprinzipals mit dem neuen Schlüssel aktualisieren. 
 
-Sie können anschließend den alten symmetrischen Schlüssel mit dem [`Remove-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/remove-msolserviceprincipalcredential)-Befehl entfernen und mit dem `Get-MsolServicePrincipalCredential`-Befehl überprüfen, dass der Schlüssel entfernt wurde.
+Anschließend können Sie den alten symmetrischen Schlüssel mit dem [`Remove-MsolServicePrincipalCredential`](/powershell/msonline/v1/remove-msolserviceprincipalcredential) Befehl entfernen und überprüfen, ob der Schlüssel mit dem `Get-MsolServicePrincipalCredential` Befehl entfernt wurde.
 
 ```
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
 ```
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [How-to: enable your service application to work with cloud-based RMS (Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung)](how-to-use-file-api-with-aadrm-cloud.md)
-* [Azure Active Directory MSOnline Powershell reference (MSOnline-PowerShell-Referenz für Azure Active Directory)](https://docs.microsoft.com/powershell/msonline/)
+* [Azure Active Directory MSOnline Powershell reference (MSOnline-PowerShell-Referenz für Azure Active Directory)](/powershell/msonline/)

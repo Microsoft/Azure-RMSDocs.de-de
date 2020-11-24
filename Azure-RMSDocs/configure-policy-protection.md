@@ -1,8 +1,8 @@
 ---
 title: Konfigurieren einer Azure Information Protection-Bezeichnung für den Schutz – AIP
 description: Sie können Ihre hochsensiblen Dokumente und E-Mails schützen, indem Sie eine Bezeichnung für die Verwendung des Rights Management-Schutzes konfigurieren.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 141a8e6642745dc36dfd596d11b8153e20c09e69
-ms.sourcegitcommit: 58e7d6e5c1cd3f21af03fe873076f282b684fd98
+ms.openlocfilehash: 3ff562aba7243964275314875a52152ec7053fe2
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334163"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568486"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>So konfigurieren Sie eine Bezeichnung für den Rights Management-Schutz
 
@@ -56,7 +56,7 @@ Weitere Informationen zum Azure Rights Management-Schutz und seiner Funktionswei
 Wenn durch eine Bezeichnung Schutz angewendet wird, ist das geschützte Dokument nicht zum Speichern auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen die folgenden Features für geschützte Dateien nicht: gemeinsamen Dokument Erstellung, Office für das Web, Suche, Dokument Vorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
 
 > [!TIP]
-> Wenn Sie Ihre [Bezeichnungen zu vereinheitlichten Vertraulichkeitsbezeichnungen migrieren](configure-policy-migrate-labels.md) und diese von einem der Admin Center für Bezeichnungen (wie beispielsweise dem Microsoft 365 Compliance Center) aus veröffentlichen, werden Bezeichnungen, die Schutz anwenden, für diese Speicherorte unterstützt. Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+> Wenn Sie Ihre [Bezeichnungen zu vereinheitlichten Vertraulichkeitsbezeichnungen migrieren](configure-policy-migrate-labels.md) und diese von einem der Admin Center für Bezeichnungen (wie beispielsweise dem Microsoft 365 Compliance Center) aus veröffentlichen, werden Bezeichnungen, die Schutz anwenden, für diese Speicherorte unterstützt. Weitere Informationen finden Sie unter  [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange muss für Azure Information Protection nicht konfiguriert werden, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn für Azure Information Protection Exchange konfiguriert wird. Einige Beispiele: Benutzer können geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook im Web anzeigen, geschützte E-Mails können nicht für die Suche indiziert werden, und Sie können Exchange Online DLP nicht für den Rights Management-Schutz konfigurieren. In den folgenden Artikeln erhalten Sie Informationen, mit denen Sie sicherstellen können, dass Exchange diese zusätzlichen Szenarios unterstützt:
 
@@ -113,7 +113,11 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
        Wenn Sie die Option für Outlook auswählen: die Bezeichnung wird in Outlook angezeigt, und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist identisch mit der Option [nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails) .
         
        Bei Auswahl der Option für Word, Excel, PowerPoint und Datei-Explorer gilt Folgendes: Wenn diese Option festgelegt ist, wird die Bezeichnung in diesen Anwendungen angezeigt. Nachdem die Benutzer die Bezeichnung angewendet haben, wird ein Dialogfeld zur Auswahl von benutzerdefinierten Berechtigungen angezeigt. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Stellen Sie sicher, dass die Benutzer über die notwendigen Anweisungen und Anleitungen zum Bereitstellen dieser Werte verfügen.
-    
+
+        > [!NOTE]
+        > Azure Information Protection Unterstützung für das Festlegen von benutzerdefinierten Berechtigungen befindet sich derzeit in der Vorschau Phase. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+        >
+     
    - **Vordefinierte Vorlage auswählen**: Hiermit wird nur eine der Standardvorlagen oder eine von Ihnen konfigurierte benutzerdefinierte Vorlage verwendet. Beachten Sie, dass diese Option nicht zur Anzeige für neue Bezeichnungen verfügbar ist, oder wenn Sie eine Bezeichnung bearbeiten, die zuvor die Option **Berechtigungen festlegen** verwendet hat.
     
      Damit Sie eine vordefinierte Vorlage auswählen können, muss die Vorlage veröffentlicht (nicht archiviert) sein und darf nicht bereits mit einer anderen Bezeichnung verknüpft sein. Wenn Sie diese Option auswählen, können Sie die Schaltfläche **Vorlage bearbeiten** verwenden, um [die Vorlage in eine Bezeichnung zu konvertieren](configure-policy-templates.md#to-convert-templates-to-labels).
@@ -126,7 +130,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Um die Benutzer anzugeben, die geschützte Dokumente und E-Mails öffnen können sollen, wählen Sie **Berechtigungen hinzufügen**. Wählen Sie dann im Bereich **Berechtigungen hinzufügen** die ersten Benutzer und Gruppen aus, die die Rechte besitzen sollen, den von der ausgewählten Bezeichnung geschützten Inhalt nutzen zu können:
     
-   - Wählen Sie **aus der Liste auswählen aus** , in der Sie dann alle Benutzer aus Ihrer Organisation hinzufügen können, indem Sie **Add \<organization name> -All Members**auswählen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Alle authentifizierten Benutzer hinzufügen** auswählen oder das Verzeichnis durchsuchen.
+   - Wählen Sie **aus der Liste auswählen aus** , in der Sie dann alle Benutzer aus Ihrer Organisation hinzufügen können, indem Sie **Add \<organization name> -All Members** auswählen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Alle authentifizierten Benutzer hinzufügen** auswählen oder das Verzeichnis durchsuchen.
         
        Wenn Sie alle Mitglieder auswählen oder das Verzeichnis durchsuchen, müssen die Benutzer oder Gruppen eine E-Mail-Adresse haben. In einer Produktionsumgebung besitzen Benutzer und Gruppen fast immer E-Mail-Adressen, aber in einer einfachen Testumgebung müssen Sie Benutzerkonten oder Gruppen möglicherweise erst E-Mail-Adressen hinzufügen.
         
@@ -202,7 +206,7 @@ Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen auto
 
 Die untergeordneten Bezeichnungen **Alle Mitarbeiter** und **Nur Empfänger** der Bezeichnungen **Vertraulich** und **Streng vertraulich** aus der [Standardrichtlinie](configure-policy-default.md) bieten Beispiele dafür, wie Sie Bezeichnungen zum Anwenden des Schutzes konfigurieren können. Sie können auch die folgenden Beispiele verwenden, um den Schutz für verschiedene Szenarien zu konfigurieren. 
 
-Wählen Sie für jedes nachfolg folgende Beispiel in Ihrem Bereich \<*label name*> **schützen**aus. Klicken Sie auf **Schutz**, um diesen Bereich zu öffnen, wenn der Bereich **Schutz** nicht automatisch geöffnet wird. Dort können Sie die Konfigurationsoptionen für den Schutz auswählen:
+Wählen Sie für jedes nachfolg folgende Beispiel in Ihrem Bereich \<*label name*> **schützen** aus. Klicken Sie auf **Schutz**, um diesen Bereich zu öffnen, wenn der Bereich **Schutz** nicht automatisch geöffnet wird. Dort können Sie die Konfigurationsoptionen für den Schutz auswählen:
 
 ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
@@ -216,9 +220,9 @@ Die Benutzer geben die Gmail-Adresse in das Feld **An** ein.  Danach wählen sie
     
 2. Wählen Sie die Option **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** aus.
 
-3. Stellen Sie sicher, dass die folgende Option ausgewählt ist: **"Nicht weiterleiten" in Outlook anwenden**.
+3. Stellen Sie sicher, dass die folgende Option ausgewählt ist: **In Outlook apply Do Not Forward** („Nicht weiterleiten“ in Outlook anwenden).
 
-4. Deaktivieren Sie die folgende Option, falls sie ausgewählt ist: **Benutzer in Word, Excel, PowerPoint und Datei-Explorer zur Angabe von benutzerdefinierten Berechtigungen auffordern**.
+4. Wenn die Option ausgewählt ist, deaktivieren Sie die folgende Option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions** (Vom Benutzer in Word, Excel, PowerPoint und dem Datei-Explorer benutzerdefinierte Berechtigungen verlangen).
 
 5. Klicken Sie im Bereich **Schutz** auf **OK** und im Bereich **Bezeichnung** auf **Speichern**.
 
@@ -334,4 +338,4 @@ Die Bezeichnungskonfiguration wirkt zunächst einfach:
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy). 
 
-Mit den Nachrichtenflussregeln von Exchange können auch Schutzaktionen basierend auf Ihren Bezeichnungen angewendet werden. Weitere Informationen und Beispiele finden Sie unter [Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen](configure-exo-rules.md).  
+Mit den Nachrichtenflussregeln von Exchange können auch Schutzaktionen basierend auf Ihren Bezeichnungen angewendet werden. Weitere Informationen und Beispiele finden Sie unter [Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen](configure-exo-rules.md).

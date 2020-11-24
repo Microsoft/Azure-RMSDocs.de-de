@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24c40dd9cb4fdccd2103fd40ac9a104e28934a8a
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: a29700cd29d291d80bb425229d958b5e18a5d262
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79483081"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567634"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben
 
@@ -47,9 +47,9 @@ Verwenden Sie die folgenden Informationen, um schnell zum neuen Portal überzuge
 |Erstellen einer bereichsbezogenen Vorlage|Erstellen Sie eine bereichsbezogene Richtlinie, und erstellen Sie in diesem Bereich eine Bezeichnung, die Schutz anwendet. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md).
 |Kopieren einer Vorlage|Sie können eine Vorlage im Azure-Portal nicht kopieren. Wenn Sie möchten, dass zwei Vorlagen über die gleichen Schutzeinstellungen verfügen, müssen Sie die Berechtigungen für jede Bezeichnung festlegen. <br /><br />Weitere Informationen finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Löschen einer Vorlage|Das Löschen von Vorlagen kann zu nicht zugreifbaren Daten führen, weshalb das Azure-Portal diesen Vorgang nicht unterstützt. Sie können jedoch die Bezeichnung löschen und dann das Cmdlet [Remove-aipservicetemplate](/powershell/module/aipservice/remove-aipservicetemplate) von PowerShell verwenden, um die Vorlage zu entfernen. <br /><br />Weitere Informationen finden Sie unter [Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection](configure-policy-delete-reorder.md).
-|Unterstützung mehrerer Sprachen|Wählen Sie im Menü **Verwalten** **Sprachen** aus, um die anpassbaren Felder zu exportieren, die den Namen und die Beschreibung der Vorlage umfassen. Übersetzen Sie die Zeichenfolgen, und importieren Sie diese anschließend in das Portal. <br /><br />Weitere Informationen finden Sie unter [Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](configure-policy-languages.md).
+|Unterstützung für mehrere Sprachen|Wählen Sie in der Menü Auswahl **Verwalten** die Option **Sprachen** aus, um die anpassbaren Felder zu exportieren, die den Vorlagen Namen und die Beschreibung enthalten. Übersetzen Sie die Zeichenfolgen, und importieren Sie diese anschließend in das Portal. <br /><br />Weitere Informationen finden Sie unter [Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](configure-policy-languages.md).
 |Rights Management-Webberichte|Die [zentralisierte Berichterstellung für Azure Information Protection](reports-aip.md) ist ab sofort in der Vorschauversion verfügbar.<br /><br />Sie können auch das PowerShell-Cmdlet " [Get-aipserviceusagelog](/powershell/module/aipservice/get-aipserviceuserlog) " verwenden, um Verwendungs Protokolle für den Azure Rights Management-Dienst herunterzuladen. Sie können diese Daten dann dazu verwenden, benutzerdefinierte Berichte zu erstellen. Weitere Informationen finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](log-analyze-usage.md).
-|Aktivieren und Deaktivieren des Rights Management-Diensts|Wählen Sie im Menü **Verwalten** die Option **Protection activation** (Schutzaktivierung) aus.<br /><br />Weitere Informationen finden Sie unter [Aktivieren des Rights Management Protection Service aus dem Azure-Portal](activate-azure.md).
+|Aktivieren und Deaktivieren des Rights Management-Diensts|Wählen Sie in den Menü Optionen **Verwalten** die Option **Schutz Aktivierung** aus.<br /><br />Weitere Informationen finden Sie unter [Aktivieren des Rights Management Protection Service aus dem Azure-Portal](activate-azure.md).
 
 Bevor Sie Ihre Vorlagen im Azure-Portal bearbeiten oder in Bezeichnungen konvertieren, informieren Sie sich unter [Überlegungen zu Vorlagen im Azure-Portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
@@ -62,7 +62,7 @@ Neue Funktionen im Azure-Portal:
 
 - Sie können Vorlagen in Bezeichnungen konvertieren, sodass Sie ein einzelnes Objekt verwalten, anstatt eine Vorlage und eine Bezeichnung unabhängig zu verwalten. Anweisungen finden Sie unter [Konvertieren von Vorlagen in Bezeichnungen](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Unterstützung für andere Administrator Rollen: während Sie sich beim klassischen Azure-Portal als globaler Administrator anmelden mussten, um Azure Rights Management zu konfigurieren, können Sie sich beim Azure-Portal anmelden, um Azure Information Protection zu verwalten, indem Sie viele andere Administrator Rollen verwenden, die **complianceadministrator** und Kompatibilitäts **Daten Administrator**einschließen. Die vollständige Liste der unterstützten Rollen finden Sie im Abschnitt " [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) ".
+- Unterstützung für andere Administrator Rollen: während Sie sich beim klassischen Azure-Portal als globaler Administrator anmelden mussten, um Azure Rights Management zu konfigurieren, können Sie sich beim Azure-Portal anmelden, um Azure Information Protection zu verwalten, indem Sie viele andere Administrator Rollen verwenden, die **complianceadministrator** und Kompatibilitäts **Daten Administrator** einschließen. Die vollständige Liste der unterstützten Rollen finden Sie im Abschnitt " [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) ".
 
 Die PowerShell-Cmdlets zum Erstellen und Verwalten von Vorlagen und zum Aktivieren oder Deaktivieren des Diensts werden weiterhin ohne Änderungen unterstützt.
 

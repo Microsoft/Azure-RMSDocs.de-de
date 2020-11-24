@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 28f7503fee6e117a4c818f36fbc6f959f06cae8e
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: a07db66ed4edec0e80e3afa44741faecbe6a945b
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972049"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568291"
 ---
 # <a name="ios-and-os-x-setup"></a>Einrichten von iOS und OS X
 
@@ -29,7 +29,7 @@ iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwen
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
-**Beachten Sie**  , dass das SDK keine iPod-Fingereingabe unterstützt.
+**Hinweis**    Dieses SDK unterstützt keine iPod-Finger Eingaben.
 
 
 -   [Voraussetzungen](#prerequisites)
@@ -50,7 +50,7 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     Dieses SDK kann für Entwicklungen für iOS 7.0 und OS X 10.8 und höher verwendet werden.
 
--   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
+-   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](/previous-versions/azure/jj573266(v=azure.100)). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
 
     Weitere Informationen finden Sie unter [ADAL für iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) oder [ADAL für OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal).
 
@@ -111,4 +111,4 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-* [IOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx)
+* [IOS/OS X-API-Referenz](/previous-versions/windows/desktop/msipcthin2/ios)

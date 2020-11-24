@@ -1,28 +1,28 @@
 ---
 title: Class classificationrequest
 description: 'Dokumentiert die classificationrequest:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 0d4b8d3ed5e12698c0044975516b017d1c9376b0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2e509950bad2d219843c2d45ebd3922a19bef7f4
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763546"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567235"
 ---
 # <a name="class-classificationrequest"></a>Class classificationrequest 
 Eine Klasse, die die Anforderung eines Klassifizierungs Aufrufes für den Ausführungs Status enthält.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: String getclassificationid () Konstanten  |  Ruft die ID der Klassifizierungsrichtlinie ab.
 Public Std:: String getrulepackageid () Konstanten  |  Die ID des Regel Pakets erhalten.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getclassificationid-function"></a>Getclassificationid-Funktion
 Ruft die ID der Klassifizierungsrichtlinie ab.

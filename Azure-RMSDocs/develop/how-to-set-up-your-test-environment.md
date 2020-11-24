@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 638a8ec54a850a051795c00b2b1aef4ef47866ff
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: c4c6ac4e2f8463e7d17f8ebd609a1276edbce1f7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564068"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568195"
 ---
 # <a name="testing-your-application"></a>Testen Ihrer Anwendung
 
@@ -41,11 +41,11 @@ Sie können mit Azure RMS oder mit einem RMS-Server Tests durchführen, der unte
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Anleitung geht nicht auf Details ein. Informationen zum Konfigurieren des RMS-Clients 2.1 finden Sie unter [Anmerkungen zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
+Diese Anleitung geht nicht auf Details ein. Informationen zum Konfigurieren des RMS-Clients 2.1 finden Sie unter [Anmerkungen zur Bereitstellung des RMS-Clients 2.1](../rms-client/client-deployment-notes.md).
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Exemplarische Vorgehensweise: Installieren und Konfigurieren eines RMS-Servers](how-to-install-and-configure-an-rms-server.md)
 * [Vorgehensweise: Verwenden der Adal-Authentifizierung](how-to-use-adal-authentication.md)
 * [Installieren des SDKs](install-the-rms-sdk.md)
-* [Hinweise zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
+* [Hinweise zur Bereitstellung des RMS-Clients 2.1](../rms-client/client-deployment-notes.md)

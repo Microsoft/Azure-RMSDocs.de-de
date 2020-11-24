@@ -1,31 +1,31 @@
 ---
 title: Klasse taskdispatcherdelegat
 description: 'Dokumentiert die taskdispatcherdeleg:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b7cd2267b795540a8bb4035a695f5b34f0580b87
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 057ba0d4de58ab4dedf8d3e2f8b2a42b0e5f969a
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764285"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567031"
 ---
 # <a name="class-taskdispatcherdelegate"></a>Klasse taskdispatcherdelegat 
 Eine Klasse, die die Schnittstelle zum MIP SDK-Aufgaben Verteiler definiert.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliches void dispatchtask (Konstanten Std:: String& TaskID, Std:: Function\<void ()\> -Aufgabe)  |  Ausführen einer Aufgabe in einem Hintergrund Thread.
-öffentliches void dispatchtask (Konstante Std:: String& TaskID, Std:: Function\<void ()\> Task, int64_t Delta seconds)  |  Führt eine Aufgabe in einem Hintergrund Thread mit der angegebenen Verzögerung aus.
-öffentliches void executetaskonindependentthread (Konstanten Std:: String& TaskID, Std:: Function\<void ()\> -Aufgabe)  |  Sofortiges Ausführen einer Aufgabe in einem unabhängigen Thread.
+öffentliches void dispatchtask (Konstanten Std:: String& TaskID, Std:: Function- \<void()\> Aufgabe)  |  Ausführen einer Aufgabe in einem Hintergrund Thread.
+öffentliches void dispatchtask (Konstanten Std:: String& TaskID, Std:: Function \<void()\> Task, int64_t Delta seconds)  |  Führt eine Aufgabe in einem Hintergrund Thread mit der angegebenen Verzögerung aus.
+öffentliches void executetaskonindependentthread (Konstanten Std:: String& TaskID, Std:: Function- \<void()\> Aufgabe)  |  Sofortiges Ausführen einer Aufgabe in einem unabhängigen Thread.
 public bool canceltask (Konstante Std:: String& TaskID)  |  Abbrechen einer Hintergrundaufgabe
 öffentliches void cancelalltasks ()  |  Alle Hintergrundaufgaben abbrechen.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="dispatchtask-function"></a>Dispatchtask-Funktion
 Ausführen einer Aufgabe in einem Hintergrund Thread.

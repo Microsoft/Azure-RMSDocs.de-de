@@ -1,10 +1,10 @@
 ---
 title: Unterstützte Dateitypen-Azure Information Protection Client
 description: Technische Details zu den unterstützten Dateitypen, Dateierweiterungen und Schutzebenen für Administratoren, die für den Azure Information Protection-Client für Windows verantwortlich sind.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4213be53fe21491118b4771c22ed43255d5c342d
-ms.sourcegitcommit: 6d10435c67434bdbbdd51b4a3535d0efaf8307da
+ms.openlocfilehash: eb1896adf9899700fe03fa1286509602e73c90bd
+ms.sourcegitcommit: c6b0b092735504fd76d74a46d024321673482098
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86868942"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "95568462"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -81,9 +81,9 @@ In der aktuellen Standardrichtlinie werden Klassifizierung und Schutz durch **Ve
 
 Der Azure Information Protection-Client unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben wird.
 
-|Art des Schutzes|Systemeigen|Allgemein|
+|Art des Schutzes|Systemeigenes Format|Allgemein|
 |----------------------|----------|-----------|
-|Beschreibung|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Sicherheitsebene, zu der Dateikapselung mithilfe des Dateityps PFILE und Authentifizierung gehören, um zu überprüfen, ob ein Benutzer berechtigt ist, die Datei zu öffnen.|
+|BESCHREIBUNG|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Bei anderen unterstützten Dateitypen bietet der generische Schutz eine Schutz Ebene, die die Datei Kapselung mit dem Pfile-Dateityp und die Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.|
 |Schutz|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Der Schutz der Dateien wird auf folgende Weise erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
 |Standardebene für Dateitypen|Dies ist die Standardebene des Schutzes für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt, [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).|Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den nativen Schutz unterstützt werden.|
 
@@ -168,7 +168,7 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information P
 
     - Für 32-Bit-Versionen von Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - Für 64-Bit-Version von Windows: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** und **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**
+    - Für 64-Bit-Version von Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** und **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
 2. Erstellen Sie im neu hinzugefügten Schlüssel (zum Beispiel HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) einen neuen Zeichenfolgenwert (REG_SZ) mit dem Namen **Encryption** und dem Datenwert **Pfile**.
 
@@ -176,7 +176,7 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information P
 
 Diese beiden Einstellungen führen dazu, dass der Azure Information Protection-Client generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn Sie damit Ihr Ziel erreicht haben, ist keine weitere Konfiguration erforderlich. Sie können jedoch Ausnahmen für bestimmte Dateitypen definieren, so dass diese weiterhin systemintern geschützt werden. Zu diesem Zweck müssen Sie drei (für Windows 32-Bit) oder 6 (für Windows 64-Bit) zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
 
-1. Für **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection** und **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** (falls zutreffend): Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne vorangehenden Punkt) hinzu.
+1. Für **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** und **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (falls zutreffend): Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne vorangehenden Punkt) hinzu.
 
     Bei Dateien mit der Dateinamenerweiterung ".docx", erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
 
@@ -256,9 +256,9 @@ Wenn keine weiteren Konfigurationen vorhanden sind, verwendet der Azure Informat
 |PDF |.pdf|
 |Text|.txt; .xml; .csv|
 
-Wenn zusätzliche Konfigurationen vorgenommen werden, können auch andere Dateitypen überprüft werden. Beispielsweise können Sie [eine benutzerdefinierte Erweiterung für die Verwendung des vorhandenen Windows-Filters für Textdateien registrieren](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters) und zusätzliche Filter von Softwareherstellern installieren.
+Wenn zusätzliche Konfigurationen vorgenommen werden, können auch andere Dateitypen überprüft werden. Beispielsweise können Sie [eine benutzerdefinierte Erweiterung für die Verwendung des vorhandenen Windows-Filters für Textdateien registrieren](/windows/desktop/search/-search-ifilter-registering-filters) und zusätzliche Filter von Softwareherstellern installieren.
 
-Wenn Sie überprüfen möchten, welche Filter installiert sind, finden Sie weitere Informationen im Windows Search-Leitfaden für Entwickler unter [Finding a Filter Handler for a Given File Extension (Finden eines Filterhandlers für eine angegebene Erweiterung)](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension).
+Wenn Sie überprüfen möchten, welche Filter installiert sind, finden Sie weitere Informationen im Windows Search-Leitfaden für Entwickler unter [Finding a Filter Handler for a Given File Extension (Finden eines Filterhandlers für eine angegebene Erweiterung)](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension).
 
 In den folgenden Abschnitten finden Sie Konfigurationsanweisungen zum Überprüfen von ZIP- und TIFF-Dateien.
 
@@ -278,7 +278,7 @@ Nach dem Überprüfen der Datei klassifiziert die Überprüfung diese Datei als 
 
 ### <a name="to-inspect-tiff-files-by-using-ocr"></a>Überprüfen von TIFF-Dateien unter Verwendung der OCR
 
-Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) können die optische Zeichenerkennung (OCR) verwenden, um TIFF-Bilder zu überprüfen, wenn Sie das Windows-TIFF-IFilter-Feature installieren und anschließend die [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, auf dem der Scanner oder die PowerShell-Sitzung ausgeführt wird.
+Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) können die optische Zeichenerkennung (OCR) verwenden, um TIFF-Bilder zu überprüfen, wenn Sie das Windows-TIFF-IFilter-Feature installieren und anschließend die [Windows-TIFF-IFilter-Einstellungen](/previous-versions/windows/it-pro/windows-7/dd744701(v=ws.10)) auf dem Computer konfigurieren, auf dem der Scanner oder die PowerShell-Sitzung ausgeführt wird.
 
 Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben und die TIFF-Datei mit einer Bezeichnung klassifiziert und geschützt werden soll, fügen Sie einen Registrierungs Eintrag für diese Dateinamenerweiterung hinzu, um systemeigenen Schutz zu erhalten, wie unter [Verwenden der Registrierung zum Ändern der Dateitypen](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect) vor den Überprüfungs Anweisungen für die Scanner beschrieben.
 
@@ -292,4 +292,3 @@ Nachdem Sie alle Dateitypen ermittelt haben, die vom Azure Information Protectio
 - [Dokumentkontrolle](client-admin-guide-document-tracking.md)
 
 - [PowerShell-Befehle](client-admin-guide-powershell.md)
-

@@ -1,26 +1,26 @@
 ---
 title: Class Protection Handler::P ublishingsettings
 description: Dokumentiert die Schutz Handler::p ublishingsettings-Klasse des MIP-SDK (Microsoft Information Protection).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: fc1de565e103b840c1190b397c247caca515d5bd
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c5edcb9eca5e14d0f0f611f32e2f91d9ed2fcb25
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764420"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567116"
 ---
 # <a name="class-protectionhandlerpublishingsettings"></a>Class Protection Handler::P ublishingsettings 
 Einstellungen zum Erstellen eines Schutz Handlers zum Schutz neuer Inhalte.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public publishingsettings (Konstante Std:: shared_ptr\<schutzdescriptor\>& schutzdescriptor)  |  Schutzhandler:: Settings-Konstruktor zum Erstellen einer neuen Engine.
-Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  | _Noch nicht dokumentiert._
+Public publishingsettings (Konstante Std:: shared_ptr \<ProtectionDescriptor\>& schutzdescriptor)  |  Schutzhandler:: Settings-Konstruktor zum Erstellen einer neuen Engine.
+public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Noch nicht dokumentiert._
 public bool getisauditedextractionallowed () konstant  |  Ruft ab, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 öffentliches void setisauditedextractionallowed (bool isauditedextractionallowed)  |  Legt fest, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 public bool getisdepretoredalgorithmpreferred () konstant  |  Ruft ab, ob der als veraltet markierte Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität bevorzugt wird oder nicht.
@@ -32,7 +32,7 @@ public bool ispublishingformatjson () konstant  |  Ruft ab, ob die zurückgegebe
 öffentliches void setprelicenseuseremail (Konstanten Std:: String& prelicenseuseremail)  |  Legt den Benutzer vor der Lizenz fest.
 Public Konstanten Std:: String& getprelicenseuseremail () Konstanten  |  Ruft den Benutzer vor der Lizenzierung ab.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="publishingsettings-function"></a>Publishingsettings-Funktion
 Schutzhandler:: Settings-Konstruktor zum Erstellen einer neuen Engine.
@@ -43,7 +43,7 @@ Parameter:
 
   
 ### <a name="getprotectiondescriptor-function"></a>Getschutzdescriptor-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getisauditedextractionallowed-function"></a>Getisauditedextractionallowed-Funktion

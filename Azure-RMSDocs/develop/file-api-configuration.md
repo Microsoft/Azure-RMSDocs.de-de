@@ -13,12 +13,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 673a23afa25872981967b48f81397d4a742855a8
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 891f27a971c72465a4a0e61b1b2097c42fa06bd4
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135622"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568312"
 ---
 # <a name="file-api-configuration"></a>Datei-API-Konfiguration
 
@@ -66,7 +66,7 @@ Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens
 > [!Note]
 > Diese Einstellung hat keinen Einfluss auf die Entschlüsselung. Jede verschlüsselte Datei, die mit nativem oder Pfile-Schutz verschlüsselt ist, kann entschlüsselt werden, solange der Benutzer über das **extract** -Recht verfügt.
 
-- **Native**: Systemeigene Verschlüsselung wird verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p*zzz* verschlüsselt, wobei *zzz* die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z.B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Im Folgenden finden Sie eine Liste der Dateierweiterungen, auf die der native Schutz angewendet werden kann.
+- **Native**: Systemeigene Verschlüsselung wird verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p *zzz* verschlüsselt, wobei *zzz* die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z.B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Im Folgenden finden Sie eine Liste der Dateierweiterungen, auf die der native Schutz angewendet werden kann.
 
 - **Pfile**: PFile-Verschlüsselung wird verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
 
@@ -82,7 +82,7 @@ Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten
 -   **TXT-, XML-, JPEG-, PDF-, PNG-, TIFF-, BMP-, GIF-, GIFF-, JPE., JFIF-, JIF-Dateien** – systemeigene Verschlüsselung wird aktiviert (XXX wird zu PXXX).
 -   **Alle anderen Dateien** – Verschlüsselung ist pfile-fähig (XXX wird zu XXX.PFILE)
 
-Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert ist, tritt ein [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)-Fehler auf.
+Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert ist, tritt ein [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes)-Fehler auf.
 
 ### <a name="file-api---file-support-details"></a>Datei-API – Dateiunterstützungsdetails
 
@@ -149,4 +149,4 @@ HKEY_LOCAL_MACHINE
 ## <a name="related-articles"></a>Verwandte Artikel
 
 - [Hinweise für Entwickler](developer-notes.md)
-- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](/previous-versions/windows/desktop/msipc/error-codes)

@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 94fc1ee1613151011fe574ff45bb867f7b6a2d91
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: a91aab5d0d12744fb782bac331cf4b3b4bbc2589
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047336"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568105"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Benutzerhandbuch: Reiner Schutzmodus für den Azure Information Protection-Client
 
@@ -32,7 +32,7 @@ Wenn der Azure Information Protection-Client keine Bezeichnungen aufweist, um Ih
 
 Der reine Schutzmodus wird in den folgenden Szenarien ausgeführt:
 
-- Ihre Organisation verfügt nicht über ein Abonnement für Azure Information Protection, das Features zum Klassifizieren und Schützen von Daten enthält, besitzt aber ein Abonnement für Office 365, das Datenschutz über den Azure Rights Management-Dienst umfasst. 
+- Ihre Organisation verfügt nicht über ein Abonnement für Azure Information Protection, das Klassifizierungs-und Beschriftungs Features umfasst, aber über ein Abonnement für Microsoft 365 verfügt, das den Schutz von Daten mithilfe des Azure-Rights Management Dienstanbieter umfasst. 
     
     - Sie können den Azure Information Protection-Client zum Schützen von Dateien und zum Anzeigen geschützter Dateien verwenden. Sie können Dokumente und E-Mails nicht klassifizieren oder mit Bezeichnungen versehen.
 
@@ -53,13 +53,13 @@ Der reine Schutzmodus wird in den folgenden Szenarien ausgeführt:
 
 ## <a name="limitations-for-protection-only-mode"></a>Einschränkungen für den reinen Schutzmodus
 
-- In Office-Apps wird die Azure Information Protection-Leiste nicht angezeigt. Wenn Sie auf **Schutz**  >  **Leiste anzeigen**klicken, ist diese Menüoption nicht verfügbar.
+- In Office-Apps wird die Azure Information Protection-Leiste nicht angezeigt. Wenn Sie auf **Schutz**  >  **Leiste anzeigen** klicken, ist diese Menüoption nicht verfügbar.
 
 - Wenn Sie das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** mit dem Datei-Explorer verwenden, werden keine Bezeichnungen für die Klassifizierung angezeigt. Stattdessen wird eine Option zum Auswählen von RMS-Vorlagen angezeigt, wie in der vorherigen Abbildung veranschaulicht. 
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Unterstützte Aufgaben für den reinen Schutzmodus
 
-- Schützen (und Aufheben des Schutzes) von Dokumenten und e-Mails in Ihren Office-Apps mithilfe des Office Information Rights Management (unm)-Features: Klicken Sie beispielsweise auf **Datei**  >  **Info**  >  **Schutz Dokument**  >  **beschränken Zugriff**. Weitere Informationen finden Sie unter [Verwenden von Informationsschutz mit Office 365, Office 2019, Office 2016 oder Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
+- Schützen (und Aufheben des Schutzes) von Dokumenten und e-Mails in Ihren Office-Apps mithilfe des Office Information Rights Management (unm)-Features: Klicken Sie beispielsweise auf **Datei**  >  **Info**  >  **Schutz Dokument**  >  **beschränken Zugriff**. Weitere Informationen finden Sie unter [Verwenden von Informationsschutz mit Office 365, Office 2019, Office 2016 oder Office 2013](../help-users.md#using-information-protection-with-office365-office-2019-office-2016-or-office2013).
 
 - Dateien mithilfe des Windows-Datei-Explorer schützen (und den Schutz aufheben): Klicken Sie mit der rechten Maustaste auf die Datei, Dateien oder den Ordner, und wählen Sie dann **Klassifizieren und schützen** aus. Klicken Sie zum Anwenden von Schutz, der von Ihrem Administrator konfiguriert wurde, im Dialogfeld **Klassifizieren und schützen - Azure Information Protection** auf **Vorlage auswählen**, und wählen Sie dann eine der verfügbaren Vorlagen aus.
 

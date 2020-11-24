@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 14ea411732b38883d278d4df22700b8503224be0
-ms.sourcegitcommit: 307258ff0a8a7a3f607c8f47f38a9801d0e06ba1
+ms.openlocfilehash: 6742a2405471b75a70579e9fbf00a792335537d3
+ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2020
-ms.locfileid: "85126644"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "95568441"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>RMS SDK 4,2-Hinweis zur Veraltung 
 
@@ -25,7 +25,7 @@ ms.locfileid: "85126644"
 
 Am 3. März 2020 wurde ein Update der RMS SDK 4,2 für Android, IOS und OSX über das Microsoft Download Center veröffentlicht. Dieses Update ist für alle Anwendungen obligatorisch, die diese RMS SDK Plattformen heute verwenden.  
 
-Am Dienstag, 15. September, 2020 Versionen der RMS SDK, die vor dem März 2020 veröffentlicht wurden, können keine Verbindung mit dem Azure Rights Management-Dienst Endpunkt hergestellt werden. Anwendungen, die RMS SDK 4,2 verwenden, müssen vor diesem Datum aktualisiert werden. 
+Nach dem 1. Dezember 2020, der noch nicht festgelegt werden kann, können Versionen der RMS SDK, die vor dem März 2020 veröffentlicht wurden, keine Verbindung mit dem Azure Rights Management-Dienst Endpunkt herstellen. Anwendungen, die RMS SDK 4,2 verwenden, müssen vor diesem Datum aktualisiert werden. 
 
 ## <a name="reason-for-change"></a>Grund für Änderungen 
 
@@ -33,16 +33,16 @@ In früheren Versionen des-RMS SDK wird das Fixieren von Zertifikaten verwendet,
 
 Moderne Browser verwenden Zertifikat Transparenz Protokolle, um zu überprüfen, ob Zertifikate für berechtigte Domänen Besitzer ausgestellt wurden und dass diese Zertifikate von vertrauenswürdigen Stamm Zertifizierungsstellen ausgestellt werden.  
 
-Um moderne Browser besser zu unterstützen, aktualisiert Microsoft am 15. September 2020 das Zertifikat für `https://api.aadrm.com` auf ein neues Zertifikat, das von einer global vertrauenswürdigen Stamm Zertifizierungsstelle ausgestellt wurde, die ausgestellte Zertifikate für Zertifikat Transparenz Protokolle ausgibt, denen von modernen Browsern vertraut wird. Wenn diese Änderung vollständig ist, können ältere Versionen von RMS SDK, die versuchen, das Zertifikat an das erwartete Stamm Zertifikat anzuhependen, dieses Zertifikat nicht finden. die Verbindung kann nicht hergestellt werden.  
+Um moderne Browser besser zu unterstützen, aktualisiert Microsoft am 1. Dezember 2020 das Zertifikat für `https://api.aadrm.com` auf ein neues Zertifikat, das von einer global vertrauenswürdigen Stamm Zertifizierungsstelle ausgestellt wurde, die ausgestellte Zertifikate für Zertifikat Transparenz Protokolle meldet, denen moderne Browser vertraut sind. Wenn diese Änderung vollständig ist, können ältere Versionen von RMS SDK, die versuchen, das Zertifikat an das erwartete Stamm Zertifikat anzuhependen, dieses Zertifikat nicht finden. die Verbindung kann nicht hergestellt werden.  
 
 ## <a name="client-impact"></a>Client Auswirkung 
 
-Die folgenden Microsoft-Anwendungen verwenden heute die RMS SDI. Updates werden für diese Plattformen zur Verfügung gestellt, und die Geräte sollten vor dem Stichtag für September aktualisiert werden. 
+Die folgenden Microsoft-Anwendungen verwenden heute die RMS SDI. Für diese Plattformen wurden Updates zur Verfügung gestellt, und die Geräte sollten vor dem Stichtag für Dezember aktualisiert werden. 
 
-- Office 2019 für Mac 
-- Office 2016 für Mac 
-- Word, Excel und PowerPoint für IOS 
-- Word, Excel und PowerPoint für Android 
+- Office Pro Plus/2019 für Mac, Version 16,40 oder höher.
+- Office 2016 für Mac, Version 16.16.27 oder höher.
+- Word, Excel und PowerPoint für IOS, Version 2.40.20071600 oder höher.
+- Word, Excel und PowerPoint für Android, Version 16.0.12827.20140 oder höher.
 
 Ressourcen 
 

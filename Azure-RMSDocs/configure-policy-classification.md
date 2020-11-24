@@ -4,19 +4,19 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e760ae71b07c72dc761e51c9ebc07bb52c5b006c
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 0b75dd62f4910a2416806e7b0e8a8682e99fe102
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86047795"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568180"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -45,7 +45,7 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt.
 
-Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Die Schaltflächen **jetzt ändern** und **verwerfen** werden jedoch durch **OK**ersetzt. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
+Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Die Schaltflächen **jetzt ändern** und **verwerfen** werden jedoch durch **OK** ersetzt. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
 
 > [!IMPORTANT]
 >Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.
@@ -75,7 +75,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
 
-1. Wenn Sie dies nicht bereits getan haben, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**. 
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**. 
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
@@ -86,7 +86,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
 4. Wählen Sie im Bereich **Bedingung** die Option **Informationstypen** aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Benutzer** definiert, wenn Sie Ihre eigenen angeben möchten:
     - Für **Informationstypen**: Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
-        Die Informationstypen verwenden die vertraulichen Informationstypen und die Mustererkennung von Office 365 zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Sie können aus vielen häufig verwendeten vertraulichen Informationstypen wählen. Einige davon sind spezifisch für verschiedene Regionen. Weitere Informationen finden Sie in der Office 365-Dokumentation unter [Wonach die vertraulichen Informationstypen suchen](/microsoft-365/compliance/what-the-sensitive-information-types-look-for).
+        Die Informationstypen verwenden die vertraulichen Informationstypen (Data Loss Prevention, DLP) und die Mustererkennung von Microsoft 365 Datenverlust. Sie können aus vielen häufig verwendeten vertraulichen Informationstypen wählen. Einige davon sind spezifisch für verschiedene Regionen. Weitere Informationen finden Sie in den Informationen zu [den sensiblen Informationstypen](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in der Microsoft 365-Dokumentation.
         
         Die Liste der Informationstypen, die Sie im Azure-Portal auswählen können, wird regelmäßig mit allen neuen Office-DLP-Ergänzungen aktualisiert. Die Liste schließt jedoch benutzerdefinierte Typen vertraulicher Informationen aus, die Sie als Regelpaket definiert und in das Office 365 Security & Compliance Center hochgeladen haben.
         
@@ -97,7 +97,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
     
     - Für **Custom** (Benutzerdefiniert): Geben Sie einen Namen und eine Zeichenfolge für den Abgleich an. Diese darf weder Anführungszeichen noch Sonderzeichen enthalten. Legen Sie dann fest, ob für den Abgleich ein regulärer Ausdruck verwendet und ob die Groß-/Kleinschreibung beachtet werden soll. Legen Sie außerdem die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
-        Die regulären Ausdrücke verwenden die RegEx-Muster von Office 365. Damit Sie reguläre Ausdrücke für Ihre benutzerdefinierten Bedingungen einfach angeben können, sehen Sie sich die folgende spezifische Version der [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) von Boost an.
+        Die regulären Ausdrücke verwenden die RegEx-Muster von Office 365. Damit Sie reguläre Ausdrücke für Ihre benutzerdefinierten Bedingungen einfach angeben können, sehen Sie sich die folgende spezifische Version der [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) von Boost an. Benutzerdefinierte reguläre Ausdrücke müssen mit der [.NET-Dokumentation](/dotnet/standard/base-types/character-escapes-in-regular-expressions#character-escapes-in-net)kompatibel sein. Außerdem wird das Perl 5-Escapezeichen, das zum Angeben von Unicode verwendet wird (das Format \x{# # # #...}, wobei # # # #... eine Reihe von hexadezimalen Ziffern) wird **nicht** unterstützt.
         
 5. Entscheiden Sie, ob Sie die Werte unter **Mindestanzahl an Vorkommen** und **Count occurrence with unique value only** (Nur Vorkommen mit eindeutigem Wert zählen) ändern müssen, und klicken Sie dann auf **Speichern**. 
     

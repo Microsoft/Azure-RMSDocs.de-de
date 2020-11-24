@@ -1,30 +1,30 @@
 ---
 title: Klasse httpdelegat
 description: 'Dokumentiert die httpdeleg:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: e1ddc8595e3cba2172228532a84ca68883cc0afd
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d52752538aae982f8f5b0138aaf26deefa0d98a3
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762826"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566887"
 ---
 # <a name="class-httpdelegate"></a>Klasse httpdelegat 
 Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: shared_ptr\<httpoperation\> Send (Konstanten Std::\<shared_ptr HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& context)  |  Sendet die HTTP-Anforderung.
-Public Std:: shared_ptr\<httpoperation\> \<SendAsync (Konstante Std:: shared_ptr HttpRequest\>& Request, Konst Std:: shared_ptr\<void\>& context, Konstanten Std:: Function\<void (Std:: shared_ptr\<httpoperation)\>  |  HTTP-Anforderung asynchron senden.
+public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Sendet die HTTP-Anforderung.
+Public Std:: shared_ptr \<HttpOperation\> SendAsync (Konstante Std:: shared_ptr \<HttpRequest\>& Request, Konst Std:: shared_ptr \<void\>& context, Konstante Std:: Function \<void(std::shared_ptr\<HttpOperation\> )  |  HTTP-Anforderung asynchron senden.
 öffentliches void CancelOperation (Konstante Std:: String& RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
 öffentliches void cancelalloperations ()  |  Abbrechen fortlaufender HTTP-Anforderungen.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="send-function"></a>Send-Funktion
 Sendet die HTTP-Anforderung.

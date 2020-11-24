@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 76bd7d42a00780520bd77c93c9e751d10bed5518
-ms.sourcegitcommit: fc0499f182e9203ccbd4a8685dd880d1311845ad
+ms.openlocfilehash: 163df2020eff0ed390a9c404c77fb8d4745e7227
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79084715"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567523"
 ---
 # <a name="rights-management-sdk42"></a>Rights Management SDK 4.2
 
@@ -29,7 +29,7 @@ ms.locfileid: "79084715"
 
 Das Rights Management SDK 4.2 ist eine vereinfachte API der nächsten Generation, die Entwicklungsaufgaben bei der Aktualisierung Ihrer Geräte-Apps mit Datenschutzfunktionen über Rights Management Services erleichtert. Entwickler können Apps erstellen, die Active Directory-Rechteverwaltungsdienste (AD RMS) oder Azure Rights Management zur Bereitstellung von Datenschutz nutzen. Sie können die Informationen während der transparenten Behandlung von komplexen Sicherheitsmethoden, wie Schlüsselverwaltung, Verschlüsselung und Entschlüsselung, Richtlinien- und Berechtigungserstellung, sicheres Zwischenspeichern und der Kommunikation mit den AD RMS- und Azure RMS-Diensten, problemlos schützen oder nutzen.
 
-## <a name="developer-audience"></a>Entwicklerzielgruppe
+## <a name="developer-audience"></a>Entwicklergruppe
 
 Die RMS SDK 4.2-APIs verwenden Standardprogrammiersprachen und -modelle für jedes Betriebssystem, sodass ihre Verwendung einfach und vertraut ist.
 
@@ -47,8 +47,8 @@ Das RMS SDK 4.2 ist für die folgenden Betriebssysteme verfügbar:
 
 [Übersicht](overview.md) – Rights Management Services ist eine Datenschutztechnologie, die zum Schutz digitaler Informationen vor nicht autorisierter Verwendung beiträgt. Über Ihre rechtlich geschützten Anwendungen können Inhaltsbesitzer definieren, wer ihren Inhalt öffnen, ändern, drucken, weiterleiten oder andere Aktionen damit ausführen kann.
 
-[Erste Schritte:](get-started.md) Bei dieser Version des RMS SDK 4.2 ermöglichen die Leitfäden zum Einrichten der Entwicklungsumgebung für die einzelnen Betriebssysteme/Plattformen einen schnellen Einstieg in die Erstellung einer ersten Anwendung.
+[Erste Schritte](get-started.md) – Bei dieser Version von RMS SDK 4.2 ermöglichen die Leitfäden zum Einrichten der Entwicklungsumgebung für die einzelnen Betriebssysteme/Plattformen einen schnellen Einstieg in die Erstellung einer ersten Anwendung.
 
-[Anleitung für Entwickler und Begriffe:](core-concepts.md) Ziel des RMS SDK 4.2 ist es, die Erstellung von AD RMS-fähigen Anwendungen, die Rights Management Services nutzen, so weit wie möglich zu vereinfachen.
+[Anleitung für Entwickler und Begriffe](core-concepts.md) – Ziel von RMS SDK 4.2 ist es, die Erstellung von AD RMS-fähigen Anwendungen, die Rights Management Services nutzen, so weit wie möglich zu vereinfachen.
 
-[API-Referenz:](api-reference-4-2.md) Das RMS SDK 4.2 unterstützt verschiedene Betriebssysteme, die im folgenden Inhaltsverzeichnis angegeben sind.
+[API-Referenz](api-reference-4-2.md) – RMS SDK 4.2 unterstützt verschiedene Betriebssysteme, die im folgenden Inhaltsverzeichnis angegeben sind.

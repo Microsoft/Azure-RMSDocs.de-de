@@ -1,6 +1,6 @@
 ---
-title: Datei einschließen
-description: Datei einschließen
+title: include file
+description: include file
 services: azure-policy
 author: eross-msft
 ms.service: azure-policy
@@ -9,12 +9,12 @@ ms.collection: M365-security-compliance
 ms.date: 07/01/2018
 ms.author: lizross
 ms.custom: include file
-ms.openlocfilehash: 99039744ae3fc37b7959b6fdfd65bda131d2a617
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 5b279a36f5b53a9dafe2e33137b3a2a015435896
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326713"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567793"
 ---
 >[!Note]
->Wenn Sie mehr über das Anzeigen oder Löschen von personenbezogenen Daten erfahren möchten, lesen Sie die Empfehlungen von Microsoft im [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) und im [Abschnitt „DSGVO“ auf der Website zur Konformität von Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/compliance/gdpr). Allgemeine Informationen zur DSGVO finden Sie [im Abschnitt „DSGVO“ im Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Wenn Sie mehr über das Anzeigen oder Löschen von personenbezogenen Daten erfahren möchten, lesen Sie die Empfehlungen von Microsoft im [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) und im [Abschnitt „DSGVO“ auf der Website zur Konformität von Microsoft 365 Enterprise](/microsoft-365/compliance/gdpr). Allgemeine Informationen über die DSGVO finden Sie im [Abschnitt zur DSGVO im Service Trust-Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

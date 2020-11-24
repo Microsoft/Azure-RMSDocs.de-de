@@ -14,29 +14,29 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 883dc9375e3e862726dd4f0ccf55985b3c8ddd61
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6aa1e633096a332b0071c721c0e96714fdd2d625
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792798"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568066"
 ---
 # <a name="api-sdk-42-reference"></a>API SDK 4.2-Referenz
 
 Azure Information Protection SDK 4.2 unterstützt mehrere Betriebssysteme. Weitere Einzelheiten finden Sie unter [What‘s new](release-notes.md) (Neuheiten).
 
 ### <a name="apple"></a>Apple
-- [iOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
+- [iOS/OS X-API-Referenz](/previous-versions/windows/desktop/msipcthin2/ios): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
 
 ### <a name="google"></a>Google
-- [Android-Namespaces](https://msdn.microsoft.com/library/dn758245.aspx)
+- [Android-Namespaces](/previous-versions/windows/desktop/msipcthin2/android)
 
 ### <a name="linux"></a>Linux
 - [Linux-API-Referenz](linux-c-api-reference.md): Die API-Referenz für unsere Unterstützung von Betriebssystemen mit Linux-Bezug wird auf GitHub gehostet: [RMS SDK für C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### <a name="microsoft"></a>Microsoft
-- [Windows-API-Referenz](https://msdn.microsoft.com/library/dn891914.aspx): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
+- [Windows-API-Referenz](/previous-versions/windows/desktop/msipcthin2/winrt): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erste Schritte](get-started.md)

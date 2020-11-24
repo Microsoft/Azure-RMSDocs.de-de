@@ -1,31 +1,31 @@
 ---
 title: Klasse msgattachmentdata
 description: 'Dokumentiert die msgattachmentdata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cec59e4bea8b62ff16005c02fa7a9516c4fb339d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c729b2907878aa383b058689c55072e53541a595
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761440"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566754"
 ---
 # <a name="class-msgattachmentdata"></a>Klasse msgattachmentdata 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: Vector\<uint8_t\>& GetBytes ()  |  Anlage als binären Byte Vektor erhalten.
-Public Std:: shared_ptr\<Stream\> GetStream () konstant  |  Anlage als binären Stream erhalten.
+Public Konstanten Std:: Vector \<uint8_t\>& GetBytes ()  |  Anlage als binären Byte Vektor erhalten.
+Public Std:: shared_ptr \<Stream\> GetStream () Konstanten  |  Anlage als binären Stream erhalten.
 public const std::string& GetName() const  |  Der Name der Anlage wird als Zeichenfolge angezeigt.
 Public Konstanten Std:: String& getlongname () Konstanten  |  Langen Namen der Anlage als Zeichenfolge erhalten.
 public const std::string& GetPath() const  |  Der Name des Pfads wird als Zeichenfolge angezeigt. Wenn der Pfad nicht leer ist, wird auf Anhang verwiesen.
 Public Konstanten Std:: String& getlongpath () Konstanten  |  Fügen Sie den langen Pfadnamen der Anlage als Zeichenfolge ab. Wenn der Pfad nicht leer ist, wird auf Anhang verwiesen.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getbytes-function"></a>GetBytes-Funktion
 Anlage als binären Byte Vektor erhalten.

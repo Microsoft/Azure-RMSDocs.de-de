@@ -12,18 +12,18 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 06ffea8f623e55eaa482020a9bc8d7583f8c84f7
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d811cf998b6e2d5ce04c4e3ff2208030de15e49c
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935230"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567847"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Konformitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
 Azure Information Protection unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zu Azure Information Protection suchen, jedoch nicht zur Verwendung des Azure Information Protection-Diensts, sehen Sie sich folgende Ressourcen an:
 
-## <a name="suitability-for-different-countries"></a>Eignung für verschiedene Länder/Regionen
+## <a name="suitability-for-different-countries"></a>Eignung für verschiedene Länder
 
 Aufgrund der Unterschiede zwischen Gesetzen und Bestimmungen in verschiedenen Ländern, zwischen Anwendungsfällen und-szenarios und aufgrund der verschiedenen Anforderungen in unterschiedlichen Geschäftssektoren müssen Sie mit Ihrem Rechtsberater sprechen, um zu bestimmen, ob Azure Information Protection für Ihr Land geeignet ist.
 
@@ -41,21 +41,21 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 ## <a name="legal-and-privacy"></a>Rechtliche Hinweise und Datenschutz
 
-- Informationen zum Microsoft Azure-Vertrag: [Microsoft Azure-Vertrag](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Informationen zur Microsoft Azure-Vereinbarung: [Microsoft Azure-Vereinbarung](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Informationen zum Datenschutz bei Microsoft Azure: [Datenschutzerklärung zu Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Informationen zum Microsoft Azure-Datenschutz: [Datenschutzerklärung zu Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicherheit, Konformität und Überwachung
 
-Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Beachten Sie auch Folgendes:
+Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) im Abschnitt [Sicherheits-, Konformitäts- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Zusätzlich:
 
 - Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 
-- FIPS 140-Informationen: [FIPS 140-Überprüfung](https://technet.microsoft.com/library/security/cc750357.aspx)
+- FIPS 140-Informationen: [FIPS 140-Überprüfung](/windows/security/threat-protection/fips-140-validation)
 
 Weitere ausführliche technische Informationen über die Funktionsweise der Schutztechnologie finden Sie unter [Funktionsweise von Azure RMS](./how-does-it-work.md). 
 
-## <a name="service-level-agreements"></a>Vereinbarungen zum Service Level
+## <a name="service-level-agreements"></a>Vereinbarungen zum Servicelevel (SLAs)
 
 - [SLA für Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
@@ -67,5 +67,5 @@ Weitere ausführliche technische Informationen über die Funktionsweise der Schu
 
 - Dokumentation zu Azure Active Directory: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Enterprise-Dokumentation: [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
+- Microsoft 365 Dokumentation: [Microsoft 365 für Dokumentation und Ressourcen von Unternehmen](/Office365/Enterprise/)
 

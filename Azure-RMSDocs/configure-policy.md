@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b64870df8d94ee31cac1d8089aa35686d58a828
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: 35eb3d59031fb30de1c9d6b1c6cdd2745f7d7ef2
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264326"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568246"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -30,7 +30,7 @@ ms.locfileid: "88264326"
 > [!NOTE]
 > Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
 > 
-> Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter Informationen zu [Sensitivitäts Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) aus der Dokumentation zur Microsoft 365 Konformität.
+> Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter Informationen zu [Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) aus der Dokumentation zur Microsoft 365 Konformität.
 
 Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der Azure Information Protection-Client installiert ist.
 
@@ -48,7 +48,7 @@ Azure Information Protection unterstützt verschiedene Abonnementebenen:
 
 - Azure Information Protection P1: Unterstützung für die meisten Klassifizierungs-, Bezeichnungs- und Schutzfunktionen, jedoch keine automatische Klassifizierung oder HYOK
 
-- Office 365, einschließlich des Azure Rights Management-Diensts: Unterstützung für Schutzfunktionen, jedoch keine Klassifizierung und Bezeichnung
+- Microsoft 365, die den Azure Rights Management-Dienst umfasst: Unterstützung für Schutz, aber keine Klassifizierung und Bezeichnung.
 
 Optionen, die ein Azure Information Protection P2-Abonnement erfordern, werden im Portal identifiziert.
 
@@ -56,7 +56,7 @@ Wenn in Ihrer Organisation eine Kombination aus verschiedenen Abonnements vorhan
 
 - **In Ihrer Organisation ist eine Kombination aus Azure Information Protection P1- und Azure Information Protection P2-Lizenzen vorhanden**: Erstellen und verwenden Sie mindestens eine [bereichsbezogene Richtlinie](configure-policy-scope.md) für Benutzer mit einer P2-Lizenz, wenn Sie Optionen konfigurieren, die eine Azure Information Protection P2-Lizenz erfordern. Stellen Sie sicher, dass Ihre globale Richtlinie keine Optionen umfasst, die eine Azure Information Protection P2-Lizenz erfordern.
 
-- **In Ihrer Organisation ist ein Abonnement für Azure Information Protection vorhanden, einige Benutzer verfügen aber nur über eine Lizenz für Office 365, die den Azure Rights Management-Dienst umfasst**: Bearbeiten Sie die Registrierung auf den Computern derjenigen Benutzer, die keine Lizenz für Azure Information Protection besitzen, damit diese Benutzer die Azure Information Protection-Richtlinie nicht herunterladen können. Anweisungen dazu finden Sie im Administratorhandbuch für die folgende Anpassung: [Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **Wenn Ihre Organisation über ein Abonnement für Azure Information Protection verfügt, einige Benutzer aber nur über eine Lizenz für Microsoft 365 verfügen, die den Azure Rights Management-Dienst umfasst**: für die Benutzer, die über keine Lizenz für Azure Information Protection verfügen, bearbeiten Sie die Registrierung auf ihren Computern, damit Sie die Azure Information Protection Richtlinie nicht herunterladen. Anweisungen dazu finden Sie im Administratorhandbuch für die folgende Anpassung: [Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Weitere Informationen zu Abonnements finden Sie unter [Welches Abonnement benötige ich für Azure Information Protection, und welche Features sind enthalten?](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
@@ -163,7 +163,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md)
 
-- [Migrieren von Azure Information Protection-Bezeichnungen zu Office 365](configure-policy-migrate-labels.md)
+- [Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu Microsoft 365](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>In E-Mails und Dokumenten gespeicherte Bezeichnungsinformationen
 
@@ -186,4 +186,3 @@ Beispiele zum Anpassen der Azure Information Protection-Richtlinie und das resul
 - [Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md)
 
 Informationen zur Leistung Ihrer Richtlinie finden Sie unter [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md).
-

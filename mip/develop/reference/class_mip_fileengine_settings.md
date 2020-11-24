@@ -1,33 +1,33 @@
 ---
 title: 'Class fileengine:: Settings'
 description: 'Dokumentiert die fileengine:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5a992c81b4d32a876f5f047a98b229aace7cb075
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 05fb06ec06943b39209c980236643e50d873d451
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763265"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566975"
 ---
 # <a name="class-fileenginesettings"></a>Class fileengine:: Settings 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: String& EngineID, Konst Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
-öffentliche Einstellungen (Konstante Identität& Identität, Konst Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileProfile::Settings-Konstruktor für die Erstellung einer neuen Engine
+öffentliche Einstellungen (Konstante Std:: String& EngineID, Konst Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
+öffentliche Einstellungen (Konstante Identität& Identität, Konst Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileProfile::Settings-Konstruktor für die Erstellung einer neuen Engine
 public const std::string& GetEngineId() const  |  Gibt die Engine-ID zurück.
 public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
 public const Identity& GetIdentity() const  |  Gibt die Engine-Identität zurück.
 public void SetIdentity(const Identity& identity)  |  Legt die Engine-Identität fest.
 public const std::string& GetClientData() const  |  Gibt die Engine-Clientdaten zurück.
 public const std::string& GetLocale() const  |  Gibt das Engine-Gebietsschema zurück.
-öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \>& Wert)  |  Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
+öffentliches void setcustomsettings (Konstante Std:: Vector \<std::pair\<std::string, std::string\> \>& Wert)  |  Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
+Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID für die Engine fest.
 public const std::string& GetSessionId() const  |  Gibt die Sitzungs-ID für die Engine zurück.
 öffentliches void setcloud (Cloud Cloud)  |  Legt optional die zielcloud fest.
@@ -43,12 +43,16 @@ public bool isloadsensitivitytypesaktivierte () Konstante  |  Das Flag zum angeb
 Public Konstanten bool ispfileaktivierte ()  |  Rufen Sie das Flag ab, das angibt, ob pfiles erzeugt.
 öffentliches void setdelegateduseremail (konstant Std:: String& delegateduseremail)  |  Legt den Delegierten Benutzer fest.
 Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
-öffentliches void setlabelfilter (Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  |  Legt den Bezeichnungs Filter fest.
-Public Konstanten Std:: Vector\<labelfiltertype\>& getlabelfilter () Konstanten  |  Ruft den Bezeichnungs Filter ab.
-öffentliches void setauthdelegat (Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
-Public Std:: shared_ptr\<authdelegat\> getauthdelegat () Konstanten  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
+öffentliches void setlabelfilter (Konstante Std:: Vector \<LabelFilterType\>& depreseedlabelfilters)  |  Legt den Bezeichnungs Filter fest.
+Public Konstanten Std:: Vector \<LabelFilterType\>& getlabelfilter () Konstanten  |  Ruft die Beschriftungs Filter ab, die über die veraltete Funktion setlabelfilter festgelegt wurden.
+öffentliches void konfigurierte Funktionen (labelfiltertype labelfiltertype, bool aktiviert)  |  Aktiviert oder deaktiviert die-Funktionalität.
+Public Konstanten Std:: map \<LabelFilterType, bool\>& GetConfig redfunktion() Konstanten  |  Ruft die konfigurierte Funktionalität ab.
+öffentliches void setclassifieraktivierte (Classifier classifiertype, bool aktiviert)  |  Aktiviert oder deaktiviert die Unterstützung für Klassifizierungs Typen.
+Public konstant Std:: map \<Classifier, bool\>& getkonfiguriredclassifiersupport () Konstanten  |  Ruft die unterstützten Klassifizierungs Überschreibungen ab.
+öffentliches void setauthdelegat (Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings-Funktion
 Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
@@ -215,11 +219,47 @@ Parameter:
 Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen. Wenn nicht festgelegt, werden "hyokprotection" und "doublekeyprotection" gefiltert.
   
 ### <a name="getlabelfilter-function"></a>Getlabelfilter-Funktion
-Ruft den Bezeichnungs Filter ab.
+Ruft die Beschriftungs Filter ab, die über die veraltete Funktion setlabelfilter festgelegt wurden.
 
   
 **Gibt Folgendes zurück**: der Bezeichnungs Filter.
 Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.
+  
+### <a name="configurefunctionality-function"></a>Funktion "konfigurier Funktion"
+Aktiviert oder deaktiviert die-Funktionalität.
+
+Parameter:  
+* **labelfiltertype**: der Funktionstyp. 
+
+
+* **aktiviert**: true zum Aktivieren, false zum Deaktivieren
+
+
+Hyokprotection, doublekeyprotection, doublekeyuserdefinedprotection sind standardmäßig deaktiviert und müssen aktiviert werden.
+  
+### <a name="getconfiguredfunctionality-function"></a>Getkonfiguriredfunction-Funktion
+Ruft die konfigurierte Funktionalität ab.
+
+  
+**Gibt Folgendes zurück**: eine Zuordnung der Typen zu einem booleschen Wert, der angibt, ob er aktiviert ist.
+  
+### <a name="setclassifierenabled-function"></a>Setclassifieraktivierte Funktion
+Aktiviert oder deaktiviert die Unterstützung für Klassifizierungs Typen.
+
+Parameter:  
+* **classifiertype**: der Klassifizierungstyp. 
+
+
+* **aktiviert**: true zum Aktivieren, false zum Deaktivieren
+
+
+Nur "sensitiveinformation classifers" ist standardmäßig aktiviert.
+  
+### <a name="getconfiguredclassifiersupport-function"></a>Getkonfiguriredclassifiersupport-Funktion
+Ruft die unterstützten Klassifizierungs Überschreibungen ab.
+
+  
+**Gibt Folgendes zurück**: eine Zuordnung der Typen zu einem booleschen Wert, der angibt, ob Sie mit Unterstützung überschrieben wurden.
   
 ### <a name="setauthdelegate-function"></a>Setauthdelegatfunktion
 Legen Sie den Autorisierungs Delegaten für die Engine fest.

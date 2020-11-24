@@ -1,28 +1,28 @@
 ---
 title: Class fileexecutionstate
 description: 'Dokumentiert die fileexecutionstate:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ca29755d4533d6b7dd51280c2fb71b631bbb9b5c
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: c84f7aa81fd628a8af9598653f0895dc0dd934d2
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763142"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566972"
 ---
 # <a name="class-fileexecutionstate"></a>Class fileexecutionstate 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
-public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konst Std:: shared_ptr\<fileHandler\> &, Konstanten Std::\<Vector Std:: shared_ptr\<classificationrequest\> \> &) Konstanten  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
-public virtual Std:: map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
+public virtual Std:: shared_ptr \<ClassificationResults\> getclassificationresults (Konstanten Std:: shared_ptr \<FileHandler\> &, Konstante Std:: Vector \<std::shared_ptr\<ClassificationRequest\> \> &) konstant.  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual Std:: map \<std::string, std::string\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getdatastate-function"></a>Getdatastate-Funktion
 Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert

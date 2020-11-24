@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6c7ab059ff19cc7f8b41bc345521e9e1798e7769
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: f57529603a8d96a8621195ea4168eb2fe9cc3dc8
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264360"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567541"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien
 
@@ -51,7 +51,7 @@ Wenn die globale Richtlinie beispielsweise eine Bezeichnung namens **Vertraulich
 
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
-2. Über die Menüoption **Klassifizierungen**  >  **Richtlinien** : Wählen Sie im Bereich **Azure Information Protection-Richtlinien** die Option **neue Richtlinie hinzufügen**aus. Daraufhin wird der Bereich **Richtlinie** angezeigt, in dem Ihre vorhandene globale Richtlinie angezeigt wird, in der Sie nun Ihre neue Bereichs bezogene Richtlinie konfigurieren können.
+2. Über die Menüoption **Klassifizierungen**  >  **Richtlinien** : Wählen Sie im Bereich **Azure Information Protection-Richtlinien** die Option **neue Richtlinie hinzufügen** aus. Daraufhin wird der Bereich **Richtlinie** angezeigt, in dem Ihre vorhandene globale Richtlinie angezeigt wird, in der Sie nun Ihre neue Bereichs bezogene Richtlinie konfigurieren können.
 
 3. Geben Sie einen Richtliniennamen und eine Beschreibung an, die nur für Administratoren im Azure-Portal angezeigt wird. Der Name muss für Ihren Mandanten eindeutig sein. Wählen Sie dann **angeben, welche Benutzer/Gruppen diese Richtlinie erhalten**. in den nachfolgenden Bereichen können Sie die Benutzer und Gruppen für diese Richtlinie suchen und auswählen. Die Bezeichnungen und Einstellungen, die Sie in dieser bereichsbezogenen Richtlinie konfigurieren, werden nur auf diese Benutzer angewendet.
     

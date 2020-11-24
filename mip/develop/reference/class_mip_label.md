@@ -1,23 +1,23 @@
 ---
 title: Klassenbezeichnung
 description: 'Dokumentiert die Bezeichnung:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 95eb7c523e7e627aff767169b9d35479839ac72d
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 6a0bd370dd8a0f08156861995c498f4f3710e9e2
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762192"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566855"
 ---
 # <a name="class-label"></a>Klassenbezeichnung 
 Eine Abstraktion für eine einzelne Microsoft Information Protection-Bezeichnung
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ruft die Bezeichnungs-ID ab
 public const std::string& GetName() const  |  Ruft den Bezeichnungsnamen ab
@@ -27,12 +27,12 @@ public int GetSensitivity() const  |  Ruft die Vertraulichkeit der Bezeichnung a
 public const std::string& GetTooltip() const  |  Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
 Public Konstanten Std:: String& getautotooltip () Konstanten  |  Hiermit wird die QuickInfo-Beschreibung der Klassifizierung angezeigt, die dazu führt, dass diese Bezeichnung angewendet wird.
 public bool IsActive() const  |  Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
-Public Std:: weak_ptr\<Bezeichnung\> GetParent () Konstanten  |  Ruft die übergeordnete Bezeichnung ab
-Public Konstanten Std::\<Vector Std:: shared_ptr\<Bezeichnung\> \>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
+public std::weak_ptr\<Label\> GetParent() const  |  Ruft die übergeordnete Bezeichnung ab
+Public Konstanten Std:: Vector \<std::shared_ptr\<Label\> \>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
+Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
 public ActionSource GetActionSource() const  |  Ruft die Aktions Quelle der Bezeichnung ab.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId-Funktion
 Ruft die Bezeichnungs-ID ab

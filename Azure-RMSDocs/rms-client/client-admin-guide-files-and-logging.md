@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection-Clientdateien und Verwendungsprotokollierung
 description: Informationen zu den Clientdateien und zur Verwendungsprotokollierung für den Azure Information Protection-Client für Windows
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 09/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 676a58b6dc16a8a61b1a528f5b5d0a043c427c09
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 4a8ee6c5f3879786b76a8466b198b0b4040a540f
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048951"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568135"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -57,9 +57,9 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 
     - Bezeichnung festlegen: Informations-ID 101
     
-    - Bezeichnung festlegen (unten): Informations-ID 101
+    - Bezeichnung festlegen (unten): Informations-ID 102
     
-    - Bezeichnung festlegen (höher): Informations-ID 101
+    - Bezeichnung festlegen (höher): Informations-ID 103
     
     - Bezeichnung entfernen: Informations-ID 104
     

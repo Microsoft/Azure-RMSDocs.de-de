@@ -1,29 +1,29 @@
 ---
 title: 'Class Protection Handler:: Observer'
 description: 'Dokumentiert die schutzhandler:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 66453d343505cc57427e177eac258b83a2663eb0
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 092448f4af5c27625b8a19f7cfea039e9bcd8071
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764441"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567139"
 ---
 # <a name="class-protectionhandlerobserver"></a>Class Protection Handler:: Observer 
 Schnittstelle, die Benachrichtigungen im Zusammenhang mit ProtectionHandler empfängt
 Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void onkreateschutzhandlersuccess (Konstante Std::\<shared_ptr schutzhandler\>& schutzhandler, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn ProtectionHandler erfolgreich erstellt wurde.
-public virtual void onkreateschutzhandlerfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Erstellung von ProtectionHandler nicht erfolgreich war.
+public virtual void OnCreateProtectionHandlerSuccess(const std::shared_ptr\<ProtectionHandler\>& protectionHandler, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn ProtectionHandler erfolgreich erstellt wurde.
+public virtual void OnCreateProtectionHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Erstellung von ProtectionHandler nicht erfolgreich war.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="oncreateprotectionhandlersuccess-function"></a>Onkreateschutzhandlersuccess-Funktion
 Wird aufgerufen, wenn ProtectionHandler erfolgreich erstellt wurde.

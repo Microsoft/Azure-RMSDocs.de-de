@@ -1,33 +1,33 @@
 ---
 title: class file profile
 description: 'Dokumentiert die File profile:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: cf5950b37953dc32100e8ae2700b6111783cb612
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 6a7ed521ce5a277a72e8b151c8331d537484c86a
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762920"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566927"
 ---
 # <a name="class-fileprofile"></a>class file profile 
 Die FileProfile-Klasse ist die Stammklasse für Microsoft Information Protection-Vorgänge.
 Eine gewöhnliche Anwendung benötigt nur ein Profil.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gibt die Profileinstellungen zurück
-Public Std:: shared_ptr\<AsyncControl\> listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
-Public Std:: shared_ptr\<AsyncControl\> unloadengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu entladen.
-Public Std:: shared_ptr\<AsyncControl\> addengineasync (Konstante fileengine:: Settings& Settings, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, eine neue Datei-Engine zu dem Profil hinzuzufügen.
-Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
-öffentliches void acquirepolicyauthtoken (Cloud Cloud, Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat) konstant  |  Löst einen Authentifizierungs Rückruf für die Richtlinie aus.
+Public Std:: shared_ptr \<AsyncControl\> listenginesasync (Konst Std:: shared_ptr \<void\>& context)  |  Startet den Vorgang zum Auflisten von Engines
+Public Std:: shared_ptr \<AsyncControl\> unloadengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr \<void\>& context)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu entladen.
+Public Std:: shared_ptr \<AsyncControl\> addengineasync (Konstante fileengine:: Settings& Settings, Konstanten Std:: shared_ptr \<void\>& context)  |  Beginnt damit, eine neue Datei-Engine zu dem Profil hinzuzufügen.
+Public Std:: shared_ptr \<AsyncControl\> deleteengineasync (Konstante Std:: String& ID, Konstanten Std:: shared_ptr \<void\>& context)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+öffentliches void acquirepolicyauthtoken (Cloud Cloud, Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat) konstant  |  Löst einen Authentifizierungs Rückruf für die Richtlinie aus.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
 Gibt die Profileinstellungen zurück

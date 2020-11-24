@@ -1,17 +1,17 @@
 ---
 title: Klasse "justifyaction"
 description: 'Dokumentiert die "jufyaction:: nicht definierte"-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: ae2c1dd96c07febf374c50791c915597deea7c76
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d5fa4ef9c61c91c3b9675a38c07e04d52ba7d42c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762189"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566852"
 ---
 # <a name="class-justifyaction"></a>Klasse "justifyaction" 
 Diese Aktion fordert eine Legitimation zum Herabstufen einer Bezeichnung und zum Einstellen der Antwort im Ausführungsstatus an.
@@ -19,8 +19,8 @@ Diese Aktion fordert eine Legitimation zum Herabstufen einer Bezeichnung und zum
 **Siehe auch**: MIP:: executionstate:: isdowngradebug
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Member
-_Noch nicht dokumentiert._
+## <a name="members"></a>Members
+Noch nicht dokumentiert.

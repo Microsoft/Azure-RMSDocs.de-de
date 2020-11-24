@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: d8a9c0e81b7b5bedb1b8f41dc129f4370c827acf
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: dcbd46699ba6c2da864ebb6463adce50872a8e90
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86048594"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567718"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Benutzerhandbuch: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 
@@ -53,7 +53,7 @@ Wenn Sie nach einer bestimmten Option suchen, die Sie häufig für die RMS-Freig
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
-- [Wie möchten Sie vorgehen?](client-user-guide.md#what-do-you-want-to-do)
+- [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 Siehe [Azure Information Protection-Client – Administratorhandbuch](client-admin-guide.md)

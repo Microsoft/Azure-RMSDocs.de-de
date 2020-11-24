@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/10/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c1b80fd786666faa20fe9f67fb72d67ed65a7392
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 079fcab8ee70b26f66171c4e2ba431c423cafa88
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953115"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568483"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -47,7 +47,7 @@ Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie m�
 
 Wenn Sie Administrator Rollen für die delegierte Administration in Ihrer Organisation verwenden, müssen Sie möglicherweise einige Änderungen an der Unified-Bezeichnung-Plattform vornehmen:
 
-Die [Azure AD Rolle](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) wird von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn diese administrative Rolle in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer mit dieser Rolle den Azure AD Rollen des Kompatibilitäts **Administrators**, des Kompatibilitäts **Daten Administrators**oder des **Sicherheits Administrators**hinzu. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
+Die [Azure AD Rolle](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) wird von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn diese administrative Rolle in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer mit dieser Rolle den Azure AD Rollen des Kompatibilitäts **Administrators**, des Kompatibilitäts **Daten Administrators** oder des **Sicherheits Administrators** hinzu. Wenn Sie bei diesem Schritt Hilfe benötigen, finden Sie weitere Informationen unter [Benutzer Zugriff auf das Microsoft 365 Security & Compliance Center](/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
 
 Statt Rollen zu verwenden, können Sie auch im jeweiligen Admin Center eine neue Rollengruppe für diese Benutzer erstellen und dieser Gruppe die Rolle **Administrator für Vertraulichkeitsbezeichnungen** oder **Organisationskonfiguration** zuweisen.
 
@@ -77,7 +77,7 @@ Stellen Sie sicher, dass Sie über [Clients verfügen, die einheitliche Bezeichn
 Richtlinien, einschließlich Richtlinieneinstellungen und der entsprechenden Zugriffberechtigungen (bereichsbezogene Richtlinien), sowie alle erweiterten Clienteinstellungen werden nicht migriert. Zum Konfigurieren dieser Einstellungen nach der Migration der Bezeichnung können Sie folgende Optionen angeben:
 
 - Ihr Admin Center für Vertraulichkeits Bezeichnungen.
-- [Office 365 Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), die Sie verwenden müssen, um [Erweiterte Client Einstellungen](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)zu konfigurieren.
+- [Office 365 Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell), die Sie verwenden müssen, um [Erweiterte Client Einstellungen](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)zu konfigurieren.
     
 > [!IMPORTANT]
 > Nicht alle Einstellungen einer migrierten Bezeichnung werden von den Admin-Centers unterstützt. Verwenden Sie die Tabelle im Abschnitt [In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-admin-centers), um die entsprechenden Einstellungen sowie die empfohlene Vorgehensweise zu ermitteln.
@@ -90,7 +90,7 @@ Richtlinien, einschließlich Richtlinieneinstellungen und der entsprechenden Zug
 - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, können Sie diese Bezeichnungen bearbeiten und die Option **Berechtigungen festlegen** auswählen, um die gleichen Schutzeinstellungen wie in Ihrer Vorlage zu konfigurieren. Bezeichnungen mit vordefinierten Vorlagen verhindern die Bezeichnungsmigration nicht, diese Bezeichnungskonfiguration wird jedoch in den Admin-Centers nicht unterstützt.
         
     > [!TIP]
-    > Um Ihnen bei der Neukonfiguration dieser Bezeichnungen zu helfen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie **Berechtigungen festlegen**auswählen.
+    > Um Ihnen bei der Neukonfiguration dieser Bezeichnungen zu helfen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie **Berechtigungen festlegen** auswählen.
     
 - Nachdem eine Bezeichnung mit cloudbasierten Schutzeinstellungen migriert wurde, ist der sich ergebende Bereich der Schutz Vorlage der Bereich, der in der Azure-Portal definiert ist (oder mithilfe des PowerShell-Moduls aipservice), und der Bereich, der in den Admin Centers definiert ist. 
 
@@ -121,13 +121,13 @@ Untergeordnete Bezeichnungen über verschiedene übergeordnete Elemente, wie z. 
 
 ### <a name="localized-strings-in-labels"></a>Lokalisierte Zeichen folgen in Bezeichnungen
 
-Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Definieren Sie neue lokalisierte Zeichen folgen für die migrierten Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und dem *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
+Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Definieren Sie neue lokalisierte Zeichen folgen für die migrierten Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und dem *localesettings* -Parameter für " [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label)".
 
 ### <a name="editing-migrated-labels-in-the-admin-centers"></a>Bearbeiten von migrierten Bezeichnungen in admin Centers
 
 Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. 
 
-Wenn Sie jedoch eine migrierte Bezeichnung in einem der Admin Center bearbeiten, müssen Sie zum Bereich Azure-Portal, **Azure Information Protection-vereinheitlichte Bezeichnung** zurückkehren und **veröffentlichen**auswählen. 
+Wenn Sie jedoch eine migrierte Bezeichnung in einem der Admin Center bearbeiten, müssen Sie zum Bereich Azure-Portal, **Azure Information Protection-vereinheitlichte Bezeichnung** zurückkehren und **veröffentlichen** auswählen. 
 
 Diese zusätzliche Aktion ist erforderlich, damit die Azure Information Protection-Clients (klassisch) die Bezeichnungs Änderungen übernehmen können.
 
@@ -141,16 +141,16 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 
 |Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für die Admin-Centers|
 |-------------------|---------------------------------------------|-------------------------|
-|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht zutreffend|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
+|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
 |Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungs Farben im Azure-Portal konfigurieren oder [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)verwenden.|
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
 |Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Benutzerdefinierter Schriftart Name, Größe und benutzerdefinierte Schriftfarbe durch RGB-Code für visuelle Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)  |Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Um diese Optionen zu ändern, können Sie die Azure-Portal oder das Cmdlet [**New-Label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center verwenden. Um die Verwaltung zu vereinfachen, sollten Sie die Farbe in eine der aufgelisteten Optionen in den Admin Center ändern. <br /><br />**Hinweis**: das Security & Compliance Center Admin Center unterstützt eine vordefinierte Liste der Schriftart Definitionen. Benutzerdefinierte Schriftarten und Farben werden nur über das Cmdlet " [**New-Label**](https://docs.microsoft.com/powershell/module/exchange/new-label) Office 365 Security & Compliance Center" unterstützt.|
-|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile) |Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen als Text auf Clients angezeigt, anstatt die dynamischen Werte anzuzeigen. |
-|Visuelle Kennzeichnungen pro App|Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. </br></br>Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, wird die Konfiguration der visuellen Markierung als Variablen Text anstelle der visuellen Kennzeichnungen angezeigt, die Sie für die Anzeige in den einzelnen apps konfiguriert haben.  |
-|"Nur für mich" Schutz |Ja|Die Admin Center erlauben Ihnen nicht, die von Ihnen geltenden Verschlüsselungseinstellungen zu speichern, ohne Benutzer anzugeben. Im Azure-Portal führt diese Konfiguration zu einer Bezeichnung, die den [Schutz "nur für mich](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)" betrifft. <br /><br /> Erstellen Sie alternativ eine Bezeichnung, die die Verschlüsselung anwendet und einen Benutzer mit beliebigen Berechtigungen angibt, und bearbeiten Sie dann die zugehörige Schutz Vorlage mithilfe von PowerShell. Verwenden Sie zunächst das Cmdlet [New-aipservicerighundefinition](https://docs.microsoft.com/powershell/module/aipservice/new-aipservicerightsdefinition) (siehe Beispiel 3), und legen Sie dann [-aipservicetemplateproperty](https://docs.microsoft.com/powershell/module/aipservice/set-aipservicetemplateproperty?view=azureipps#examples) mit dem Parameter *rightiondefinitions* fest.|
-|Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht zutreffend|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
+|Benutzerdefinierter Schriftart Name, Größe und benutzerdefinierte Schriftfarbe durch RGB-Code für visuelle Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)  |Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Um diese Optionen zu ändern, können Sie die Azure-Portal oder das Cmdlet [**New-Label**](/powershell/module/exchange/new-label) Office 365 Security & Compliance Center verwenden. Um die Verwaltung zu vereinfachen, sollten Sie die Farbe in eine der aufgelisteten Optionen in den Admin Center ändern. <br /><br />**Hinweis**: das Security & Compliance Center Admin Center unterstützt eine vordefinierte Liste der Schriftart Definitionen. Benutzerdefinierte Schriftarten und Farben werden nur über das Cmdlet " [**New-Label**](/powershell/module/exchange/new-label) Office 365 Security & Compliance Center" unterstützt.|
+|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile) |Ja|Diese Bezeichnung wird von den AIP-Clients und der integrierten Office-Bezeichnung für ausgewählte Apps unterstützt. <br /><br />Wenn Sie mit einer integrierten Bezeichnung arbeiten, die eine APP verwendet, die diese Konfiguration nicht unterstützt, und diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen als Text auf Clients angezeigt, anstatt den dynamischen Wert anzuzeigen.<br /><br />Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables). |
+|Visuelle Kennzeichnungen pro App|Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. <br /><br />Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, wird die Konfiguration der visuellen Markierung als Variablen Text anstelle der visuellen Kennzeichnungen angezeigt, die Sie für die Anzeige in den einzelnen apps konfiguriert haben.  |
+|"Nur für mich" Schutz |Ja|Die Admin Center erlauben Ihnen nicht, die von Ihnen geltenden Verschlüsselungseinstellungen zu speichern, ohne Benutzer anzugeben. Im Azure-Portal führt diese Konfiguration zu einer Bezeichnung, die den [Schutz "nur für mich](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)" betrifft. <br /><br /> Erstellen Sie alternativ eine Bezeichnung, die die Verschlüsselung anwendet und einen Benutzer mit beliebigen Berechtigungen angibt, und bearbeiten Sie dann die zugehörige Schutz Vorlage mithilfe von PowerShell. Verwenden Sie zunächst das Cmdlet [New-aipservicerighundefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) (siehe Beispiel 3), und legen Sie dann [-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) mit dem Parameter *rightiondefinitions* fest.|
+|Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
 
@@ -170,7 +170,7 @@ Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht auf
 
 ###### <a name="footnote-1"></a>Fußnote 1
 
-In Outlook wird der Schutz mit einer Ausnahme beibehalten: Wenn eine e-Mail mit der Option nur verschlüsseln geschützt wurde, wird dieser Schutz entfernt.
+In Outlook wird der Schutz mit einer Ausnahme beibehalten: Wenn eine e-Mail mit der Encrypt-Only-Option geschützt wurde, wird dieser Schutz entfernt.
 
 
 ###### <a name="footnote-2"></a>Fußnote 2
@@ -192,21 +192,18 @@ Sie müssen Kompatibilitäts Administrator, Kompatibilitäts Daten Administrator
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
-2. Wählen Sie in der Menüoption **Verwalten** die Option **vereinheitlichte Bezeichnung**aus.
+2. Wählen Sie in der Menüoption **Verwalten** die Option **vereinheitlichte Bezeichnung** aus.
 
 3. Wählen Sie im Bereich **Azure Information Protection vereinheitlichte Bezeichnung** die Option **aktivieren** aus, und befolgen Sie die Online Anweisungen.
     
-    Wenn die Option zum Aktivieren nicht verfügbar ist, überprüfen Sie den **Status der vereinheitlichten Bezeichnung**: Wenn Sie **aktiviert**sehen, wird für Ihren Mandanten bereits der vereinheitlichte Bezeichnungs Speicher verwendet, und es ist nicht erforderlich, ihre Bezeichnungen zu migrieren.
+    Wenn die Option zum Aktivieren nicht verfügbar ist, überprüfen Sie den **Status der vereinheitlichten Bezeichnung**: Wenn Sie **aktiviert** sehen, wird für Ihren Mandanten bereits der vereinheitlichte Bezeichnungs Speicher verwendet, und es ist nicht erforderlich, ihre Bezeichnungen zu migrieren.
 
 Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Allerdings müssen Sie [diese Bezeichnungen](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) zuerst in einem der Admin Center veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 
 > [!IMPORTANT]
-> Wenn Sie die Bezeichnungen außerhalb des Azure-Portal bearbeiten, kehren Sie für Azure Information Protection Clients (klassisch) zu diesem **Azure Information Protection vereinheitlichten Beschriftungs** Bereich zurück, und wählen Sie **veröffentlichen**aus.
+> Wenn Sie die Bezeichnungen außerhalb des Azure-Portal bearbeiten, kehren Sie für Azure Information Protection Clients (klassisch) zu diesem **Azure Information Protection vereinheitlichten Beschriftungs** Bereich zurück, und wählen Sie **veröffentlichen** aus.
 
 ### <a name="copy-policies"></a>Richtlinien kopieren
-
-> [!NOTE]
-> Diese Option befindet sich in der Vorschau Phase und kann geändert werden.
 
 Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie eine Option zum Kopieren von Richtlinien auswählen. Wenn Sie diese Option auswählen, wird eine einmalige Kopie Ihrer Richtlinien mit Ihren [Richtlinien Einstellungen](configure-policy-settings.md) und [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) an das Admin Center gesendet, in dem Sie Ihre Bezeichnungen verwalten: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center. 
 
@@ -218,11 +215,11 @@ Beachten Sie Folgendes, bevor Sie die Option **Richtlinien kopieren (Vorschau)**
 
 - Richtlinien und Einstellungen können nicht selektiv zum Kopieren ausgewählt werden. Alle Richtlinien (die **globale** Richtlinie und alle Bereichs bezogenen Richtlinien) werden automatisch zum Kopieren ausgewählt, und alle Einstellungen, die als Bezeichnungs Richtlinien Einstellungen unterstützt werden, werden kopiert. Wenn Sie bereits über eine Bezeichnungs Richtlinie mit demselben Namen verfügen, wird Sie mit den Richtlinien Einstellungen in der Azure-Portal überschrieben.
 
-- Einige erweiterte Client Einstellungen werden nicht kopiert, da Sie für den Azure Information Protection Unified Label-Client als *Erweiterte Einstellungen* für die Bezeichnung anstelle von Richtlinien Einstellungen unterstützt werden. Sie können diese Bezeichnung Erweiterte Einstellungen mit [Office 365 Security & Compliance Center PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)konfigurieren. Die erweiterten Client Einstellungen, die nicht kopiert werden:
+- Einige erweiterte Client Einstellungen werden nicht kopiert, da Sie für den Azure Information Protection Unified Label-Client als *Erweiterte Einstellungen* für die Bezeichnung anstelle von Richtlinien Einstellungen unterstützt werden. Sie können diese Bezeichnung Erweiterte Einstellungen mit [Microsoft 365 Security & Compliance Center PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)konfigurieren. Die erweiterten Client Einstellungen, die nicht kopiert werden:
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Anders als bei der Bezeichnung Migration, bei der nachfolgende Änderungen an Bezeichnungen synchronisiert werden, werden bei der Aktion **Richtlinien kopieren** keine nachfolgenden Änderungen an Ihren Richtlinien oder Richtlinien Einstellungen synchronisiert Sie können die Aktion "Richtlinie kopieren" wiederholen, nachdem Sie Änderungen an der Azure-Portal vorgenommen haben, und alle vorhandenen Richtlinien und deren Einstellungen werden erneut überschrieben. Oder verwenden Sie die Cmdlets Set-labelpolicy oder Set-Label mit dem Parameter *advancedsettings* aus Office 365 Security & Compliance Center PowerShell.
+- Anders als bei der Bezeichnung Migration, bei der nachfolgende Änderungen an Bezeichnungen synchronisiert werden, werden bei der Aktion **Richtlinien kopieren** keine nachfolgenden Änderungen an Ihren Richtlinien oder Richtlinien Einstellungen synchronisiert Sie können die Aktion "Richtlinie kopieren" wiederholen, nachdem Sie Änderungen an der Azure-Portal vorgenommen haben, und alle vorhandenen Richtlinien und deren Einstellungen werden erneut überschrieben. Oder verwenden Sie die Cmdlets Set-LabelPolicy oder Set-Label mit dem Parameter *advancedsettings* aus Office 365 Security & Compliance Center PowerShell.
 
 - Die Aktion **Richtlinien kopieren** überprüft vor dem Kopieren Folgendes für jede Richtlinie:
     
@@ -236,6 +233,9 @@ Beachten Sie Folgendes, bevor Sie die Option **Richtlinien kopieren (Vorschau)**
 
 Weitere Informationen zum Konfigurieren der Richtlinien Einstellungen, der erweiterten Client Einstellungen und der Bezeichnungs Einstellungen für den Azure Information Protection Unified Label-Client finden Sie im Administrator Handbuch unter [benutzerdefinierte Konfigurationen für den Azure Information Protection Unified](./rms-client/clientv2-admin-guide-customizations.md) Label-Client.
 
+> [!NOTE]
+> Azure Information Protection Unterstützung für das Kopieren von Richtlinien ist derzeit in der Vorschau Phase In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Clients und Dienste, die einheitliche Bezeichnungen unterstützen
 
 Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheitliche Bezeichnung unterstützen, lesen Sie die Dokumentation, um zu überprüfen, ob Sie Vertraulichkeits Bezeichnungen verwenden können, die von einem der Admin Center veröffentlicht werden: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center. 
@@ -244,21 +244,21 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 
 - Der [Azure Information Protection Unified-Bezeichnungs Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Einen Vergleich dieses Clients mit dem Azure Information Protection-Client (klassisch) finden Sie unter [vergleichen der Bezeichnung Clients für Windows-Computer](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie [unter Unterstützung für Funktionen zur Vertraulichkeits Bezeichnung in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) aus der Dokumentation zur Microsoft 365 Konformität.
+- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie [unter Unterstützung für Funktionen zur Vertraulichkeits Bezeichnung in apps](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) aus der Dokumentation zur Microsoft 365 Konformität.
     
-- Apps von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) verwenden.
+- Apps von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](/information-protection/develop/overview) verwenden.
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Folgende Dienste unterstützen derzeit einheitliche Bezeichnungen:
 
-- [Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+- [Power BI](/power-bi/admin/service-security-data-protection-overview)
 
 - Office Online und Outlook im Web
 
-    Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+    Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
-- Microsoft SharePoint, onedrive for Work-oder School-, onedrive for Home-, Teams-und Office 365-Gruppen
+- Microsoft SharePoint, onedrive for Work oder School, onedrive für Home, Teams und Microsoft 365 Gruppen
     
-    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
+    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen zum Schützen von Inhalten in Microsoft Teams, Microsoft 365 Gruppen und SharePoint-Websites](/microsoft-365/compliance/sensitivity-labels-teams-groups-sites).
 
 - Microsoft Defender Advanced Threat Protection
 
@@ -270,7 +270,7 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
     
     - Wenn die Admin Center keine Empfindlichkeits Bezeichnungen aufweisen, werden Azure Information Protection Bezeichnungen aus dem Azure-Portal abgerufen.
 
-- Dienste von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) verwenden.
+- Dienste von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](/information-protection/develop/overview) verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -280,6 +280,6 @@ Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie in 
 
 - Webinar: [einheitliche Bezeichnung für Aufzeichnung, Karten und FAQs](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
 
-Weitere Informationen zu ihren migrierten Bezeichnungen, die nun in einem der Bezeichnungs enden admin Centers konfiguriert und veröffentlicht werden können, finden [Sie unter Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Erstellen und Konfigurieren von Vertraulichkeits Bezeichnungen und deren Richtlinien](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).
+Weitere Informationen zu ihren migrierten Bezeichnungen, die nun in einem der Bezeichnungs enden admin Centers konfiguriert und veröffentlicht werden können, finden [Sie unter Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Erstellen und Konfigurieren von Vertraulichkeits Bezeichnungen und deren Richtlinien](/microsoft-365/compliance/create-sensitivity-labels).
 
 Wenn Sie dies nicht bereits getan haben, installieren Sie den Azure Information Protection Unified-Bezeichnungs Client. Versionsinformationen, ein Administrator Handbuch und ein Benutzerhandbuch finden Sie unter [Azure Information Protection Unified Bezeichnung Client for Windows](./rms-client/aip-clientv2.md).

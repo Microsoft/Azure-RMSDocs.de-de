@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 22f98a6781dc0ff0b43d1da73c72c2029c960021
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: 3df1283cd678167b7daa4a5fc64b5bb3d6d3fa33
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403373"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567913"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-telemetriekonfiguration
 
@@ -21,15 +21,11 @@ Standardmäßig sendet das Microsoft Information Protection SDK Telemetriedaten 
 
 ## <a name="telemetry-configuration"></a>Telemetriekonfiguration
 
-Telemetrieoptionen im MIP SDK können über [telemetryconfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet)gesteuert werden. Erstellen Sie eine Instanz dieser Klasse, und legen Sie dann **istelemetryoptedout** auf true fest. Geben Sie das Objekt der Klasse **telemetryconfiguration** der Funktion an, die zum Erstellen von **mipcontext**verwendet wird.
-
-Beginnend mit der MIP SDK-Version 1,6 deaktiviert die Einstellungs Option die Telemetrie **vollständig** . In Verisons 1,5 und früher senden wir einen Satz von minimalen Telemetriedaten.
+Telemetrieoptionen im MIP SDK können über [telemetryconfiguration](/dotnet/api/microsoft.informationprotection.telemetryconfiguration)gesteuert werden. Erstellen Sie eine Instanz dieser Klasse, und legen Sie dann **istelemetryoptedout** auf true fest. Geben Sie das Objekt der Klasse **telemetryconfiguration** der Funktion an, die zum Erstellen von **mipcontext** verwendet wird.
 
 ### <a name="minimum-telemetry-events"></a>Minimale telemetrieereignisse
 
-Wenn für die Telemetrie in MIP SDK 1,6 und höher der Wert für die *Abmeldung*festgelegt ist, **werden keine telemetrieereignisse gesendet.** Versionen vor 1,6 weisen folgendes Verhalten auf.
-
-Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Microsoft*gesendet. Alle persönlich identifizierbaren Informationen werden anhand dieser Informationen bereinigt. Diese Daten enthalten Takt Informationen, um zu verstehen, dass das SDK verwendet wird, und System Metadaten. **Es sind keine Benutzerinhalte oder Endbenutzer identifizierbaren Informationen auf den Dienst festgelegt.**
+Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Microsoft* gesendet. Alle persönlich identifizierbaren Informationen werden anhand dieser Informationen bereinigt. Diese Daten enthalten Takt Informationen, um zu verstehen, dass das SDK verwendet wird, und System Metadaten. **Es sind keine Benutzerinhalte oder Endbenutzer identifizierbaren Informationen auf den Dienst festgelegt.**
 
 Überprüfen Sie die folgenden Tabellen, um genau zu sehen, welche Ereignisse und Daten mit dem minimalen telemetriesatz gesendet werden.
 
@@ -86,7 +82,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | LabelId                              | Der Bezeichner für die Inhalts Bezeichnung der geöffneten Datei oder der geöffneten Daten.                                   | Nein       |
 | MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
 | MIP. Version                          | Version des MIP SDK.                                                                | Nein       |
-| ObjectId                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
+| ObjectID                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
 | Vorgang                            | "Ermittlung".                                                                           | Nein       |
 | OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | Nein       |
 | Plattform                             | Betriebssystemversion.                                                              | Nein       |
@@ -127,7 +123,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | Labelidbefore                        | ID der vorherigen Bezeichnung, die in der Datei oder den Daten gespeichert war.                                        | Nein       |
 | MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
 | MIP. Version                          | Version des MIP SDK.                                                                | Nein       |
-| ObjectId                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
+| ObjectID                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
 | Vorgang                            | "Ändern".                                                                              | Nein       |
 | OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | Nein       |
 | Plattform                             | Betriebssystemversion.                                                              | Nein       |
@@ -145,7 +141,6 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
 | UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | Nein       |
 | Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
-
 
 ### <a name="opting-out-in-c"></a>Opt out in C++
 
@@ -182,3 +177,13 @@ mipContext = MIP.CreateMipContext(appInfo,
     telemetryConfiguration);
 ```
 
+## <a name="telemetry-in-mip-sdk-16102-to-16152"></a>Telemetrie in MIP SDK 1.6.102 to 1.6.152
+
+In MIP SDK-Versionen 1.6.102, 103, 113, 151 und 152 wurde dokumentiert, dass, wenn `IsTelemetryOptedOut` auf **true** festgelegt ist, dass keine Telemetriedaten gesendet werden. Es wurde ein Fehler erkannt, dass offengelegte telemetrieereignisse ausgegeben werden, wenn dieses Flag festgelegt ist. Diese telemetrieereignisse werden ausgelöst, wenn die unten im Richtlinien-SDK aufgeführten APIs aufgerufen werden.
+
+- MIP::P olicyengine:: listsensitivitylabels ()
+- MIP::P olicyhandler:: computeactions ()
+- MIP::P olicyhandler:: notifycommitasync ()
+- MIP::P olicyhandler:: getsensitivitylabel ()
+
+Die Funktionalität in MIP SDK 1.6. n kehrt auf das vorherige Verhalten zurück und sendet die Ereignisse, die in [minimalen telemetrieereignissen](#minimum-telemetry-events)ausführlich erläutert werden. MIP SDK 1,7 aktualisiert den Namen von `IsTelemetryOptedOut` auf `SendMinimumTelemetry` und befolgt das gleiche Verhalten wie oben beschrieben.

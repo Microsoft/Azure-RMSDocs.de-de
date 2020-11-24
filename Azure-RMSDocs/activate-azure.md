@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e04a8380a723e0c66cc6bcbc4db3c5a50953a46
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: 8fc07cf4b6bcb02be36c2456bd80c97e4cf9b60c
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482452"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567448"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Aktivieren des Rights Management Protection Service über die Azure-Portal
 
@@ -29,19 +29,19 @@ ms.locfileid: "79482452"
 
 Verwenden Sie diese Anweisungen, wenn Sie den Rights Management Protection Service (Azure RMS) mithilfe der Azure-Portal aus Azure Information Protection aktivieren möchten.
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich am Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies nicht bereits getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
-    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
     Wenn Sie noch nicht auf den Azure Information Protection Bereich zugegriffen haben, lesen Sie die einmaligen [zusätzlichen Schritte](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) zum Hinzufügen dieses Bereichs zum Portal.
     
-    Um den Bereich Azure Information Protection zu öffnen, müssen Sie entweder über einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan verfügen, der Rights Management enthält](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Wenn Sie über eines dieser Abonnements verfügen, jedoch eine Meldung angezeigt wird, dass kein gültiges Abonnement gefunden werden kann, [wenden Sie sich an den Microsoft-Support](information-support.md#to-contact-microsoft-support), oder nutzen Sie die üblichen Supportkanäle.
+    Um den Bereich Azure Information Protection zu öffnen, müssen Sie entweder über einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan verfügen, der Rights Management enthält](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Falls Sie eines dieser Abonnements besitzen und eine Meldung angezeigt wird, dass kein gültiges Abonnement gefunden werden kann, können Sie sich [an den Microsoft-Support wenden](information-support.md#to-contact-microsoft-support) oder Ihre Standardkanäle für den Support verwenden.
 
-2. Navigieren Sie zu den Menüoptionen **Verwalten**, und klicken Sie auf **Protection activation** (Schutzaktivierung). 
+2. Navigieren Sie zu den Menü Optionen **Verwalten** , und wählen Sie **Schutz Aktivierung** aus. 
     
-    Klicken Sie auf **Aktivieren**, und bestätigen Sie dann Ihre Aktion. 
+    Klicken Sie auf **Aktivieren**, und bestätigen Sie anschließend Ihre Aktion. 
 
-Wenn die Aktivierung abgeschlossen ist, zeigt die Informationsleiste **Activation finished successfully** (Aktivierung erfolgreich) an.
+Nach Abschluss der Aktivierung wird in der Informationsleiste die Meldung **Aktivierung erfolgreich abgeschlossen** angezeigt.
 
 
 ## <a name="next-steps"></a>Nächste Schritte

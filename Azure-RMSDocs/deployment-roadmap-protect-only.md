@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecf9257a69a5046592cb52f810e171859df238a4
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: f56373bfd3aa37b13b89a552e1767bd954c81bde
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298397"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568000"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Azure Information Protection bereitstellungsroadmap nur für den Schutz
 
@@ -40,7 +40,7 @@ Diese Roadmap wird für Kunden mit einem Abonnement empfohlen, das nicht sowohl 
 
 Führen Sie die folgenden Schritte aus:
 
-1. [Vergewissern Sie sich, dass Sie über ein Abonnement verfügen, das den AIP-Schutzdienst umfasst](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) [
+1. [Vergewissern Sie sich, dass Sie über ein Abonnement verfügen, das den AIP-Schutzdienst enthält](#confirm-that-you-have-a-subscription-that-includes-the-aip-protection-service) 
 1. [Vorbereiten Ihres Mandanten für Azure Information Protection](#prepare-your-tenant-to-use-azure-information-protection)
 1. [Installieren Sie die Azure Information Protection Classic und Client configure Applications and Services for Rights Management](#install-the-azure-information-protection-classic-and-client-configure-applications-and-services-for-rights-management)
 1. [Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten](#use-and-monitor-your-data-protection-solutions)
@@ -55,7 +55,7 @@ Weisen Sie jedem Benutzer in Ihrer Organisation, der Dokumente und e-Mails schü
 > [!IMPORTANT]
 > Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. 
 >
-> Für diese Lizenzen wird im Microsoft 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx)**RIGHTSMANAGEMENT_ADHOC** angezeigt. 
+> Für diese Lizenzen wird im Microsoft 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](/previous-versions/azure/dn194118(v=azure.100))**RIGHTSMANAGEMENT_ADHOC** angezeigt. 
 >
 > Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](./rms-for-individuals.md).
 
@@ -65,7 +65,7 @@ Führen Sie die folgende Vorbereitungsschritte aus, bevor Sie mit der Verwendung
 
 1. **Richten Sie Ihre Benutzerkonten und Gruppen für AIP ein.**
 
-    Stellen Sie sicher, dass Ihr Office 365-Mandant die Benutzerkonten und -gruppen enthält, die Azure Information Protection zum Authentifizieren und Autorisieren von Benutzern in Ihrer Organisation verwendet. Erstellen Sie bei Bedarf diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
+    Stellen Sie sicher, dass Ihr Microsoft 365 Mandanten die Benutzerkonten und-Gruppen enthält, die von Azure Information Protection zum Authentifizieren und Autorisieren von Benutzern in Ihrer Organisation verwendet werden. Erstellen Sie bei Bedarf diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
 
     Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
 
@@ -87,7 +87,7 @@ Führen Sie die folgende Vorbereitungsschritte aus, bevor Sie mit der Verwendung
 
     Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-1. **Aktivieren**Sie den Schutz.
+1. **Aktivieren** Sie den Schutz.
 
     Stellen Sie sicher, dass der Schutzdienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn Sie in Phasen bereitstellen, konfigurieren Sie die Onboarding-Steuerelemente für Benutzer, um die Fähigkeit der Benutzer einzuschränken, Schutz anzuwenden. 
 
@@ -137,7 +137,7 @@ Führen Sie die folgenden Schritte aus:
     
     Wenn Sie über lokale Dienste verfügen, die Sie mit dem Schutzdienst verwenden möchten, installieren und konfigurieren Sie den Rights Management-Connector. 
 
-    Weitere Informationen finden Sie unter Bereitstellen [des Azure Rights Management-Verbindungs-Connector](./deploy-rms-connector.md).
+    Weitere Informationen finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](./deploy-rms-connector.md).
 
 ## <a name="use-and-monitor-your-data-protection-solutions"></a>Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten
 

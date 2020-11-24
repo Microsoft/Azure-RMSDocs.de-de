@@ -1,31 +1,32 @@
 ---
 title: Class classificationresult
 description: 'Dokumentiert die classificationresult:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b87db224bdd7a571c22de9e382ff9faf3ce656b8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 4e64abc1cca11f11b19238282c9061dc26b29290
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763526"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567229"
 ---
 # <a name="class-classificationresult"></a>Class classificationresult 
 Klasse, die das Ergebnis eines Klassifizierungsaufrufs im Ausführungsstatus enthält
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  Ruft die ID der Klassifizierungsrichtlinie ab.
 public std::string GetName() const  |  Den Namen der Klassifizierungs Richtlinie erhalten.
 public int GetCount() const  |  Ruft die Anzahl der Instanzen ab.
 public int GetConfidenceLevel() const  |  Ruft die Zuverlässigkeit des Ergebnisses ab.
 Public Std:: String getsensitiveinformationerkenctions () Konstanten  |  Die Erkennungen für sensible Informationen erhalten.
+public virtual Std:: Vector \<std::shared_ptr\<mip::DetailedClassificationResult\> \> getdetailedclassificationattributs () konstant  |  Dient zum Ermitteln der spezifischen Erkennungs Bänder, wenn die klassifizierte Klassifizierung aktiviert ist.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId-Funktion
 Ruft die ID der Klassifizierungsrichtlinie ab.
@@ -53,3 +54,9 @@ Die Erkennungen für sensible Informationen erhalten.
 
   
 **Gibt Folgendes zurück**: JSON-Zeichenfolge aller Erkennungen sensibler Informationen. Wenn nicht leer ist, muss ein gültiges JSON-Format vorliegen.
+  
+### <a name="getdetailedclassificationattributes-function"></a>Getdetailedclassificationattribute-Funktion
+Dient zum Ermitteln der spezifischen Erkennungs Bänder, wenn die klassifizierte Klassifizierung aktiviert ist.
+
+  
+**Returns**: ein Vektor der Instanz wird mit unterschiedlichen Vertrauens Schwellenwerten gezählt.

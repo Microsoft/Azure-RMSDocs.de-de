@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb2f7d2cacad3623eb590c338a7f19585e9c80d1
-ms.sourcegitcommit: dd21de9f06ef019634dc2b5d8baf2670bb8171a2
+ms.openlocfilehash: 468e7a5b7ef5482b1027d491adf6b6b4d8271261
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176649"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568141"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -57,7 +57,7 @@ ms.locfileid: "89176649"
 
 - Microsoft Online Services-Anmeldeassistent 7.250.4303.0
 
-    Computer, auf denen Office 2010 ausgeführt wird, benötigen Microsoft Online Services-Anmeldeassistent Version 7.250.4303.0. Diese Version ist in der Clientinstallation enthalten. Wenn Sie eine höhere Version des Anmeldeassistenten besitzen, deinstallieren Sie sie vor der Installation des Azure Information Protection-Clients. Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmelde Assistenten mithilfe der **System Steuerungs**Option  >  **Programm und Features**  >  **deinstallieren oder ändern Sie ein Programm**.
+    Computer, auf denen Office 2010 ausgeführt wird, benötigen Microsoft Online Services-Anmeldeassistent Version 7.250.4303.0. Diese Version ist in der Clientinstallation enthalten. Wenn Sie eine höhere Version des Anmeldeassistenten besitzen, deinstallieren Sie sie vor der Installation des Azure Information Protection-Clients. Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmelde Assistenten mithilfe der **System Steuerungs** Option  >  **Programm und Features**  >  **deinstallieren oder ändern Sie ein Programm**.
 
 - 4482887 KB
 
@@ -67,7 +67,7 @@ ms.locfileid: "89176649"
 
     Konfigurieren Sie die Gruppenrichtlinie für Office 2013 und höher so, dass das Add-In **Microsoft Azure Information Protection** für Office-Anwendungen immer aktiviert ist. Ohne diese Konfiguration wird das Microsoft Azure Information Protection-Add-In möglicherweise deaktiviert, und Benutzer können ihre Dokumente und E-Mails in ihren Office-Anwendungen nicht kennzeichnen.
 
-    - Für Outlook: Verwenden Sie die Gruppenrichtlinieneinstellung, die in der Office-Dokumentation unter [Kontrolle des Systemadministrators über Add-Ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) dokumentiert ist.
+    - Für Outlook: Verwenden Sie die Gruppenrichtlinieneinstellung, die in der Office-Dokumentation unter [Kontrolle des Systemadministrators über Add-Ins](/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) dokumentiert ist.
 
     - Für Word, Excel und PowerPoint: Verwenden Sie die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins**, die im Supportartikel [Keine Add-Ins geladen durch Gruppenrichtlinien für Office 2013 und Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) dokumentiert ist.
 
@@ -79,7 +79,7 @@ ms.locfileid: "89176649"
 
         Für PowerPoint: `MSIP.PowerPointAddin`
 
-- Der AIP-Client wird auf Computern, auf denen der [Exploit-Schutz](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, nicht unterstützt. Achten Sie darauf, den [Exploit-Schutz](../known-issues.md#known-issues-for-installing-the-aip-client) vor der Installation des AIP-Clients zu deaktivieren.  
+- Der AIP-Client wird auf Computern, auf denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, nicht unterstützt. Achten Sie darauf, den [Exploit-Schutz](../known-issues.md#known-issues-for-installing-the-aip-client) vor der Installation des AIP-Clients zu deaktivieren.  
 
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.
@@ -106,7 +106,7 @@ Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Si
 
 1. Führen Sie für eine Standardinstallation einfach die ausführbare Datei aus, z.B. **AzInfoProtection.exe**. 
 
-    Um andere Installationsoptionen anzuzeigen, führen Sie zuerst die ausführbare Datei mit **/Help**aus: `AzInfoProtection.exe /help`
+    Um andere Installationsoptionen anzuzeigen, führen Sie zuerst die ausführbare Datei mit **/Help** aus: `AzInfoProtection.exe /help`
 
     Beispiel zum automatischen Installieren des Clients: `AzInfoProtection.exe /quiet`
 
@@ -120,7 +120,7 @@ Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Si
 
     - **AllowTelemetry=0**: Verwenden Sie diesen Parameter, um die Installationsoption **Senden Sie Nutzungsstatistiken an Microsoft, und & helfen Sie so mit, Azure Information Protection zu verbessern.** zu deaktivieren.
 
-1. Wenn Sie die interaktive Installation verwenden und sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer **Demorichtlinie**, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.
+1. Wenn Sie interaktiv installieren, wählen Sie die Option zum Installieren einer **Demo Richtlinie** aus, wenn Sie keine Verbindung mit Microsoft 365 oder Azure Active Directory herstellen können, aber die Clientseite von Azure Information Protection anzeigen und anzeigen möchten, indem Sie eine lokale Richtlinie zu Demonstrationszwecken verwenden. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.
 
 1. So schließen Sie die Installation ab:
 
@@ -154,7 +154,7 @@ Verwenden Sie das folgende Verfahren, um den Wert zu identifizieren, den Sie fü
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>So identifizieren Sie die Wert, der für den ServiceLocation-Parameter angegeben wird
 
-1. Führen Sie in einer PowerShell-Sitzung zuerst [Connect-aipservice](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) aus, und geben Sie Ihre Administrator Anmelde Informationen an, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen Führen [Sie dann Get-aipserviceconfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)aus.
+1. Führen Sie in einer PowerShell-Sitzung zuerst [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) aus, und geben Sie Ihre Administrator Anmelde Informationen an, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen Führen [Sie dann Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)aus.
 
     Wenn Sie das PowerShell-Modul für den Azure Rights Management-Dienst noch nicht installiert haben, finden Sie weitere Informationen unter [Installieren des PowerShell-Moduls für aipservice](../install-powershell.md).
 
@@ -184,7 +184,7 @@ Denken Sie auch an Folgendes: Wenn Sie Windows Update zum Aktualisieren des Azur
 
 Verwenden Sie bei zentralen Bereitstellungen folgende Informationen, die speziell für die MSI-Installationsversion des Azure Information Protection-Clients gelten. 
 
-Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berücksichtigen Sie neben diesen Anweisungen auch die Informationen unter [Hinzufügen von Apps mit Microsoft Intune](/intune/deploy-use/add-apps).
+Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berücksichtigen Sie neben diesen Anweisungen auch die Informationen unter [Hinzufügen von Apps mit Microsoft Intune](/intune/apps/apps-add).
 
 1. Bei jedem Computer, auf dem die MSI-Datei ausgeführt wird, müssen Sie sicherstellen, dass folgende Softwareabhängigkeiten vorliegen. Fügen Sie diese beispielsweise in ein Paket mit der MSI-Version des Clients ein oder stellen Sie sie nur auf Computern bereit, die diese Abhängigkeiten erfüllen:
     

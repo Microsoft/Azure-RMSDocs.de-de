@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 4f4258811ec634a49f84b76fcf1feb41752311df
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: c600f6e332ec230d73c90faafe8fb602e1d3dd88
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564363"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568330"
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
 
@@ -29,38 +29,38 @@ Dieses Thema führt Sie durch den Bereitstellungsprozess für Ihre AIP/RMS-fähi
 Bevor Sie eine mit AIP/RMS entwickelte Anwendung freigeben können, müssen Sie eine formelle Vereinbarung mit Microsoft beantragen und ausfüllen.
 
 ### <a name="begin-the-process"></a>Beginn des Prozesses
-Erhalten Sie Ihre ipia, indem Sie eine e-Mail an <strong>IPIA@microsoft.com</strong> mit den folgenden Informationen senden:
+Beantragen Sie Ihre IPIA, indem Sie eine E-Mail mit folgenden Informationen an <strong>IPIA@microsoft.com</strong> senden:
 
-**Betreff:** IPIA-Antrag für *Name des Unternehmens*
+**Betreff:** Anfordern einer IPIA für *Name des Unternehmens*
 
 Geben Sie im E-Mail-Text folgende Informationen ein:
-- Anwendungs- und Produktname
-- Vor- und Nachname des Antragstellers
+- Anwendungs- oder Produktname
+- Vor- und Nachnamen des Antragstellers
 - E-Mail-Adresse des Antragstellers
 
 ### <a name="next-steps"></a>Nächste Schritte
-Nach Erhalt Ihres IPIA-Antrags senden wir Ihnen ein Formular (als Word-Dokument).
-Überprüfen Sie die Geschäftsbedingungen der ipia, und geben Sie das Formular <strong>IPIA@microsoft.com</strong> mit den folgenden Informationen an zurück:
+Nach Erhalt Ihrer IPIA-Anforderung senden wir Ihnen ein Formular (als Word-Dokument).
+Überprüfen Sie die Vertragsbedingungen der IPIA, und senden Sie das Formular mit folgenden Informationen an <strong>IPIA@microsoft.com</strong> zurück:
 - Offizieller Name des Unternehmens
-- Bundesstaat/Provinz (USA/Kanada) oder Gründungs-/Sitzland
+- Bundesstaat/Provinz (USA/Kanada) oder Land/Region der Gründung oder Hauptverwaltung des Unternehmens
 - URL des Unternehmens
 - E-Mail-Adresse der Kontaktperson
-- Weitere Unternehmensadressen (optional)
+- Weitere Unternehmensanschriften (optional)
 - Name der Unternehmensanwendung
 - Kurze Beschreibung der Anwendung
 - *Azure-Mandanten-ID*
-- *App-ID* für die Anwendung
+- *App-ID* der Anwendung
 - Unternehmenskontakte, E-Mail-Adressen und Telefonnummern zur Kommunikation in kritischen Situationen
 
 ### <a name="completing-the-agreement"></a>Abschließen der Vereinbarung
-Nach Erhalt Ihres Formulars senden wir Ihnen den Link zur endgültigen IPIA zur digitalen Unterzeichnung. Wenn Sie das Formular unterzeichnet haben, wird es vom zuständigen Microsoft-Vertreter ebenfalls unterzeichnet, womit die Vereinbarung abgeschlossen ist.
+Nachdem wir Ihr Formular erhalten haben, senden wir Ihnen den Link zur endgültigen IPIA zur digitalen Unterzeichnung. Wenn Sie das Formular unterzeichnet haben, wird es vom zuständigen Microsoft-Vertreter ebenfalls unterzeichnet, womit die Vereinbarung abgeschlossen ist.
 
 ### <a name="already-have-a-signed-ipia"></a>Haben Sie bereits eine IPIA unterzeichnet?
-Falls Sie bereits über eine unterzeichnete IPIA verfügen und eine neue *App-ID* für eine zu veröffentlichende Anwendung hinzufügen möchten, senden Sie eine E-Mail an <strong>IPIA@microsoft.com</strong>, und geben Sie folgende Informationen an:
+Wenn Sie bereits über eine unterzeichnete IPIA verfügen und eine neue *App-ID* für eine zu veröffentlichende Anwendung hinzufügen möchten, senden Sie eine E-Mail an <strong>IPIA@microsoft.com</strong>, und geben Sie folgende Informationen an:
 - Name der Unternehmensanwendung
 - Kurze Beschreibung der Anwendung
 - Azure-Mandanten-ID (auch wenn sich diese nicht geändert hat)
-- App-ID für die Anwendung
+- App-ID der Anwendung
 - Unternehmenskontakte, E-Mail-Adressen und Telefonnummern zur Kommunikation in kritischen Situationen
 
 Nach dem Senden der E-Mail kann es bis zu 72 Stunden dauern, bis der Empfang bestätigt wird.
@@ -89,7 +89,7 @@ Sie können den RMS-Client 2.1 interaktiv durch Starten des dazugehörigen Insta
 -   Herunterladen des Installationsprogramms für den RMS-Client 2.1
 -   Integrieren des RMS Client 2.1-Installationsprogramms zur Ausführung im Anwendungsinstallationsprogramm
 
-Ein Beispiel für die Integration des RMS-Clients 2.1 in Ihre Anwendung ist das Paket [Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx). Installieren Sie es selbst, um das Konzept nachzuvollziehen.
+Ein Beispiel für die Integration des RMS-Clients 2.1 in Ihre Anwendung ist das Paket [Rights Protected Folder Explorer](/previous-versions/orphan-topics/ws.10/hh538204(v=ws.10)). Installieren Sie es selbst, um das Konzept nachzuvollziehen.
 
 ### <a name="make-rmsclient21-a-pre-requisite-for-your-application-install"></a>Festlegen von RMS Client 2.1 als Voraussetzung für die Installation der Anwendung
 
@@ -114,14 +114,14 @@ Damit Ihre Endbenutzer Information Protection-Dienste nutzen können, müssen Si
 
 -   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](https://www.microsoft.com/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.
 -   Stellen Sie sicher, dass Ihre Bereitstellung einer rechtefähigen Anwendung diese Dienstauswahl als Voraussetzung überprüft.
--   Informationen zu eigenen Tests und zur Verwendung des Onlinediensts durch die Endbenutzer finden Sie im TechNet-Thema [Roadmap für die Bereitstellung von Azure Information Protection](https://TechNet.Microsoft.Com/library/jj585002.aspx).
+-   Informationen zu eigenen Tests und zur Verwendung des Onlinediensts durch die Endbenutzer finden Sie im TechNet-Thema [Roadmap für die Bereitstellung von Azure Information Protection](../deployment-roadmap.md).
 
-Verwenden Sie außerdem die folgende Konfigurationsanleitung für Ihre App: [Konfigurieren Ihrer App Service-App zur Verwendung der Azure Active Directory-Anmeldung](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
+Verwenden Sie außerdem die folgende Konfigurationsanleitung für Ihre App: [Konfigurieren Ihrer App Service-App zur Verwendung der Azure Active Directory-Anmeldung](/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights Management Services in Ihrer Anwendung finden Sie unter [Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Microsoft Online Services-Anmelde-Assistent](https://www.microsoft.com/download/details.aspx?id=28177)
-* [Roadmap für die Bereitstellung von Azure Information Protection](https://TechNet.Microsoft.Com/library/jj585002.aspx)
+* [Roadmap für die Bereitstellung von Azure Information Protection](../deployment-roadmap.md)
 * [Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)

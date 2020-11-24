@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 59029ba4ebd55cc687d529eec01c58c5cced15c3
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 24479014fcbd0bd93b65d6958d004deb9c7e0c95
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953200"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568102"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -104,4 +104,4 @@ Verwenden Sie DKE, wenn Ihre Organisation:
 > DKE ähnelt dem Feld für die Sicherheitsüberprüfung, bei dem sowohl ein Bank Schlüssel als auch ein Kundenschlüssel erforderlich sind, um Zugriff zu erhalten.
 > Der DKE-Schutz erfordert sowohl den von Microsoft gehaltenen Schlüssel als auch den Kundenschlüssel, um geschützte Inhalte zu entschlüsseln.
 
-Weitere Informationen finden Sie unter [doppelte Schlüssel Verschlüsselung](https://docs.microsoft.com/microsoft-365/compliance/double-key-encryption) in der Microsoft 365-Dokumentation. 
+Weitere Informationen finden Sie unter [doppelte Schlüssel Verschlüsselung](/microsoft-365/compliance/double-key-encryption) in der Microsoft 365-Dokumentation.

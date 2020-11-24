@@ -1,36 +1,45 @@
 ---
 title: Klasse msginspector
 description: 'Dokumentiert die msginspector:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 79a044099c09d799d77f4af11eb0b80ecc21d6d6
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 9f19c53a2c6eca82cdf1469c63436ad56112dc52
+ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761482"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "95567943"
 ---
 # <a name="class-msginspector"></a>Klasse msginspector 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: Vector\<uint8_t\>& GetBody ()  |  Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
+Public Konstanten Std:: Vector \<uint8_t\>& GetBody () Konstanten  |  Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
+Public Ganzzahl ohne Vorzeichen int getcodepage () konstant  |  Codepage für die Text Codierung, die für txt-, HTML-Textformate relevant ist.
 öffentlicher BodyType getbodytype () Konstanten  |  Typ des Get-Texts.
-Public Konstanten Std::\<Vector Std:: shared_ptr\<msgattachmentdata\> \>& getattachments () Konstanten  |  Eine Liste der Anlage als Datenobjekte der Nachrichten Anlage erhalten.
+Public Konstanten Std:: Vector \<std::shared_ptr\<MsgAttachmentData\> \>& getattachments () konstant  |  Eine Liste der Anlage als Datenobjekte der Nachrichten Anlage erhalten.
 Public Inspector Type GetInspector Type () Konstanten  |  Dateitypen erhalten.
-Public Std:: shared_ptr\<Stream\> GetFileStream () konstant  |  Den Dateistream erhalten.
+Public Std:: shared_ptr \<Stream\> GetFileStream () Konstanten  |  Den Dateistream erhalten.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getbody-function"></a>GetBody-Funktion
 Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
 
   
 **Gibt Folgendes zurück**: ein Vektor von Bytes.
+  
+### <a name="getcodepage-function"></a>Getcodepage-Funktion
+Codepage für die Text Codierung, die für txt-, HTML-Textformate relevant ist.
+
+  
+**Gibt Folgendes zurück**: eine nicht signierte Codepage. 
+  
+**Siehe auch**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>Getbodytype-Funktion
 Typ des Get-Texts.

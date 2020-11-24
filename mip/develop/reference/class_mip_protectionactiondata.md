@@ -1,66 +1,66 @@
 ---
 title: Class schutzaktionsdaten
 description: 'Dokumentiert die schutzaktiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 61489477c06e5781e0e013c7f59f263389398cc2
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 5d378300fa0a8f6d6b821e40d13f4f95305e6aa4
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763965"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567166"
 ---
 # <a name="class-protectionactiondata"></a>Class schutzaktionsdaten 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public schutzaktionstyp getschutztype () Konstanten  | _Noch nicht dokumentiert._
 public const std::string& GetTemplateId() const  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getdoublekeyverschlüsseltionurl () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ schutzaktiondata ()  | _Noch nicht dokumentiert._
 öffentlicher Aktions DataType GetType () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std:: map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: map- \<std::string, std::string\>& GetProperties ()-Konstanten  | _Noch nicht dokumentiert._
 Public Std:: String getargumentvalue (Konstanten Std:: String& Key) konstant  | _Noch nicht dokumentiert._
 public const std::string& GetName() const  | _Noch nicht dokumentiert._
-Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \> GetArguments () Konstanten  | _Noch nicht dokumentiert._
+Public Std:: Vector \<std::pair\<std::string, std::string\> \> GetArguments () konstant  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getprotectiontype-function"></a>Getschutztype-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="gettemplateid-function"></a>Gettemplateid-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getdoublekeyencryptionurl-function"></a>Getdoublekeyverschlüsseltionurl-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="protectionactiondata-function"></a>~ Schutzaktiondata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="gettype-function"></a>GetType-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getproperties-function"></a>GetProperties-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getargumentvalue-function"></a>Getargumentvalue-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getname-function"></a>GetName-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getarguments-function"></a>GetArguments-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

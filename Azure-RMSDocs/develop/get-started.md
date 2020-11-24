@@ -6,7 +6,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 38f9c8b6d5b916e025409e1f639749d186c20faa
-ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
+ms.openlocfilehash: 8813cc218e1d7084e6d683496bbdca9205cea68a
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80068591"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567478"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -52,7 +52,7 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
 3. Sehen Sie sich die [Karte mit der SDK-Übersicht](api-reference-4-2.md) an.
 4. Wichtige **Versionsinformationen** und **Entwicklerleitfäden** finden Sie im Thema [Neuheiten](release-notes.md).
 
-   |Thema|Beschreibung|
+   |Thema|BESCHREIBUNG|
    |-----|-----------|
    |[Neuigkeiten](release-notes.md)|Das MS RMS SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung.|
    |[Einrichten der Entwicklerumgebung](setup-developer-environment.md)|In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.|

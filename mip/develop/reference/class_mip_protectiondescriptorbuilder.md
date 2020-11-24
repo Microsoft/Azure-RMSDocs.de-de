@@ -1,35 +1,35 @@
 ---
 title: Class schutzdescriptorbuilder
 description: 'Dokumentiert die schutzdescriptorbuilder:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 11890665b02ade782edcff6c23296ab70c9368f8
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2e5573a896ef0935c33e85a2ed7f73451ced8e7c
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764477"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567154"
 ---
 # <a name="class-protectiondescriptorbuilder"></a>Class schutzdescriptorbuilder 
 Erstellt eine ProtectionDescriptor-Instanz, die den Schutz für ein Inhaltsobjekt beschreibt.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public MIP_API Std:: shared_ptr\<schutzdescriptor\> Build ()  |  Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.
+public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.
 public void SetName(const std::string& value)  |  Legt den Namen für eine Schutzrichtlinie fest.
 public void SetDescription(const std::string& value)  |  Legt die Beschreibung der Schutzrichtlinie fest.
-öffentliches void setcontentvaliduntil (Konstante Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\>& Wert)  |  Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
+öffentliches void setcontentvaliduntil (Konstante Std:: Chrono:: time_point \<std::chrono::system_clock\>& Wert)  |  Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
 public void SetAllowOfflineAccess(bool value)  |  Legt fest, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
 public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der Schutzrichtlinie fest.
-public void "stencryptedappdata" (Konstanten Std::\<Map Std:: String, Std::\> String& Wert)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
-öffentliches void setsignetdappdata (Konstanten Std:: map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
+öffentliches void "stencryptedappdata" (Konstanten Std:: map- \<std::string, std::string\>& Wert)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
+öffentliches void setsignetdappdata (Konstanten Std:: map \<std::string, std::string\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
 öffentliches void setdoublekeyurl (Konstante Std:: String& doublekeyurl)  |  Legt die doppelte Schlüssel-URL fest, die für den benutzerdefinierten Schutz verwendet werden soll.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="build-function"></a>Build-Funktion
 Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.

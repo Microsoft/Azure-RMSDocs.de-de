@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 5c90580a099d1eab3d6d9cca297fda24d7339820
-ms.sourcegitcommit: d1f6f10c9cb95de535d8121e90b211f421825caf
+ms.openlocfilehash: ad1739534335705a928fa7f184e5e26010faa2ae
+ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87298205"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "95567787"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen und Support für Azure Information Protection
 
@@ -54,7 +54,7 @@ Zusätzliche und detailliertere Informationen finden Sie im [technischen Blog zu
 
 Der Azure Information Protection Technical Blog enthält auch eine Zusammenfassung der Änderungen an der [Dokumentation monatlich](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Diese Änderungen können eine neue und aktualisierte Dokumentation für neue Releases, Änderungen an Support Anweisungen sowie Korrekturen und Erläuterungen für vorhandene Releases enthalten.
 
-Die Beiträge zu den doc-Updates lauten: "**Azure Information Protection- \<month year> Dokumentations Update für **".
+Die Beiträge zu den doc-Updates lauten: "**Azure Information Protection- \<month year> Dokumentations Update für**".
 
 ## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
@@ -67,12 +67,12 @@ Unter Umständen sind Sie zu **FastTrack** berechtigt: Sie können den FastTrack
 
 Andere Kunden verwenden die in der folgenden Tabelle angegebenen Supportkanäle – abhängig vom Abonnement für Azure Information Protection:
 
-|Subscription|Anweisungen|
+|Subscription|Instructions|
 |----------------|---------------|
 |Azure Information Protection (eigenständig)|1. Wählen Sie im Azure-Portal unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) die Option **neue Supportanfrage** aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie im Bereich **Basics (Grundlagen** ) die Option **Technical** ( **Problemtyp** ) und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder ein Testabonnement für Azure besitzen.<br /><br /> - **Technical support - Included** (Technischer Support: inbegriffen): Diese Option wird angezeigt, wenn Sie kein Azure-Abonnement besitzen.|
-|Azure Information Protection und ein Office 365-Abonnement<br /><br />Azure Rights Management mit einem Office 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Microsoft 365-Verwaltungsportal sowie Telefonnummern.|
+|Azure Information Protection und ein Microsoft 365-Abonnement<br /><br />Azure-Rights Management mit einem Microsoft 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Microsoft 365-Verwaltungsportal sowie Telefonnummern.|
 |Azure Information Protection mit Enterprise Mobility + Security (EMS)|1. Wählen Sie im Azure-Portal unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) die Option **neue Supportanfrage** aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie im Bereich **Basics (Grundlagen** ) die Option **Technical** ( **Problemtyp** ) und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder ein Testabonnement für Azure besitzen.<br /><br /> - **Technical support - Included** (Technischer Support: inbegriffen): Diese Option wird angezeigt, wenn Sie kein Azure-Abonnement besitzen.|
-|Azure Information Protection mit Microsoft 365 Enterprise|Nutzen Sie die [Office 365-Supportkanäle](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
+|Azure Information Protection mit Microsoft 365 Enterprise|Verwenden Sie die [Microsoft 365 Support Kanäle](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Ansprechpartner. 
 

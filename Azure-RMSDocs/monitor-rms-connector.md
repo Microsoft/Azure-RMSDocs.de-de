@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fec116c8bd0c8f02d57a9772bacf87a11d0966ac
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: ab20a68a2895962095bc83904851ef3a9955dd79
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136971"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568099"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -177,7 +177,7 @@ Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und 
 
 Weitere Informationen zur Verwendungs Protokollierung finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](log-analyze-usage.md).
 
-Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, können Sie [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) von Windows Sysinternals verwenden. Aktivieren Sie die Ablaufverfolgung für den RMS-Connector, indem Sie die Datei „Web.config“ für die Standardwebsite in IIS ändern:
+Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, können Sie [Debugview](/sysinternals/downloads/debugview) von Windows Sysinternals verwenden. Aktivieren Sie die Ablaufverfolgung für den RMS-Connector, indem Sie die Datei „Web.config“ für die Standardwebsite in IIS ändern:
 
 1. Wechseln Sie unter **%programfiles%\Microsoft Rights Management connector\Web Service** zur Datei „web.config“.
 

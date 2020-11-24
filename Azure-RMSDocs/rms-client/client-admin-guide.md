@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b450eb1356eb36bc7b3c18573146985e5c346d
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: fc6a8cd4e891e007c9cf23d5dcb9f2381e068ac8
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88952979"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568123"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -74,7 +74,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Sollten Sie den Azure Information Protection-Client bereitstellen?
 
-Stellen Sie den Azure Information Protection Client bereit, wenn Sie [im Security & Compliance Center von Office 365 keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden Aktionen:
+Stellen Sie den Azure Information Protection Client bereit, wenn Sie in Microsoft 365 keine [Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) verwenden. verwenden Sie stattdessen Azure Information Protection Bezeichnungen, die Sie aus Azure herunterladen, und eine der folgenden Aktionen:
 
 - Sie möchten Dokumente und E-Mails durch Auswählen von Bezeichnungen innerhalb Ihrer Office-Anwendungen (Word, Excel, PowerPoint, Outlook) klassifizieren (und optional schützen).
 
@@ -143,21 +143,21 @@ Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die d
     
     In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
-    - HKEY_CURRENT_USER \software\microsoft\office\15.0\common\identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER \software\microsoft\office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER \software\microsoft\office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER \software\microsoft\office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER \software\classes\local settings\software\microsoft\msipc    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - Der derzeit angemeldete Benutzer wird abgemeldet.
 
 #### <a name="client-status-section"></a>Abschnitt **Clientstatus**
 
-Verwenden Sie den Wert **Verbunden als**, um zu bestätigen, dass der angezeigte Benutzername das Konto identifiziert, das für die Azure Information Protection-Authentifizierung verwendet werden soll. Dieser Benutzername muss mit einem Konto übereinstimmen, das für Office 365 oder Azure Active Directory verwendet wird. Das Konto muss auch zu einem Mandanten gehören, der für Azure Information Protection konfiguriert ist.
+Verwenden Sie den Wert **Verbunden als**, um zu bestätigen, dass der angezeigte Benutzername das Konto identifiziert, das für die Azure Information Protection-Authentifizierung verwendet werden soll. Dieser Benutzername muss mit einem Konto identisch sein, das für Microsoft 365 oder Azure Active Directory verwendet wird. Das Konto muss auch zu einem Mandanten gehören, der für Azure Information Protection konfiguriert ist.
 
 Wenn Sie sich als ein anderer Benutzer anmelden müssen als den angezeigten Benutzer, lesen Sie die Informationen zu Anpassungen unter [Anmelden als ein anderer Benutzer](client-admin-guide-customizations.md#sign-in-as-a-different-user).
 
@@ -169,7 +169,7 @@ Verwenden Sie die Informationen unter **Version**, um zu bestätigen, welche Ver
 
 ## <a name="support-for-multiple-languages"></a>Unterstützung für mehrere Sprachen
 
-Der Azure Information Protection-Client unterstützt alle Sprachen, die Office 365 unterstützt. Eine Liste dieser Sprachen finden Sie im Abschnitt **Office 365, Exchange Online-Schutz und Power BI** auf der Office-Seite zur [internationalen Verfügbarkeit](https://products.office.com/business/international-availability).
+Der Azure Information Protection-Client unterstützt die Sprachen, die von Microsoft 365 unterstützt werden. Eine Liste dieser Sprachen finden Sie auf der Seite [internationale Verfügbarkeit](https://products.office.com/business/international-availability) von Office.
 
 Für diese Sprachen werden Menüoptionen, Dialogfelder und Meldungen des Azure Information Protection-Client in der Sprache des Benutzers angezeigt. Es gibt ein Installationsprogramm, das die Sprache erkennt, weshalb keine weitere Konfiguration erforderlich ist, um den Azure Information Protection-Client für verschiedene Sprachen zu installieren. 
 
@@ -206,9 +206,9 @@ Verwenden Sie die folgenden Anweisungen, um die Überprüfung von einer allgemei
 
 Ab Version 1.48.204.0 ändert der Upgradeprozess von vorherigen Versionen automatisch den Scanner, sodass er seine Konfigurationseinstellungen vom Azure-Portal abruft. Ferner wird das Schema für die Konfigurationsdatenbank des Scanners aktualisiert, und diese Datenbank wird über AzInfoProtection umbenannt:
 
-- Wenn Sie keinen eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_ \<computer_name> **umbenannt. 
+- Wenn Sie keinen eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_ \<computer_name>** umbenannt. 
 
-- Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_ \<profile_name> **umbenannt.
+- Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_ \<profile_name>** umbenannt.
 
 Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden jedoch die folgenden Schritte empfohlen:
 

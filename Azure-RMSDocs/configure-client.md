@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3cdbbeb2b2cd81036c9d736d63fd467ea7770c2
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: abab1e8a35b1928dd752cd287dc20aebded9bb14
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86046215"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567568"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection-Client: Installation und Konfiguration für Clients
 
@@ -59,13 +59,13 @@ Verwenden Sie die Links auf der [Seite Microsoft Azure Information Protection](h
 
 Da die Azure Information Protection Viewer-APP das Microsoft InTune App Software Development Kit verwendet, können Sie die Azure Information Protection Viewer-App für diese Geräte bereitstellen und verwalten, wenn IOS-und Android-Geräte von InTune angemeldet werden:
 
-1. [Hinzufügen der Azure Information Protection-App zu Intune](/intune/apps-add)
+1. [Hinzufügen der Azure Information Protection-App zu Intune](/intune/apps/apps-add)
 
 2. Führen Sie dazu eine der beiden folgenden Aktionen aus:
 
-    - Bereitstellen der App durch [Zuweisen zu Benutzern](/intune/apps-deploy)
+    - Bereitstellen der App durch [Zuweisen zu Benutzern](/intune/apps/apps-deploy)
 
-    - Verwalten der App durch Verwendung von [App-Schutzrichtlinien](/intune/app-protection-policies)
+    - Verwalten der App durch Verwendung von [App-Schutzrichtlinien](/intune/apps/app-protection-policies)
 
 Zusätzliche Informationen zum Hinzufügen der Azure Information Protection-App zu Intune:
 
@@ -77,7 +77,7 @@ Zusätzliche Informationen zum Hinzufügen der Azure Information Protection-App 
     https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
     ```
 
-Wenn die Azure Information Protection-App für eine App-Schutzrichtlinie für Android-Geräte konfiguriert wurde, kann diese App nicht nur geschützte Texte, Bilder und PDF-Dokumente öffnen, sondern auch Audio- und Videodateien. Weitere Informationen finden Sie unter [Anzeigen von Mediendateien mit der Azure Information Protection-App](/intune/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
+Wenn die Azure Information Protection-App für eine App-Schutzrichtlinie für Android-Geräte konfiguriert wurde, kann diese App nicht nur geschützte Texte, Bilder und PDF-Dokumente öffnen, sondern auch Audio- und Videodateien. Weitere Informationen finden Sie unter [Anzeigen von Mediendateien mit der Azure Information Protection-App](/intune/fundamentals/end-user-mam-apps-android#view-media-files-with-the-azure-information-protection-app).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -1,23 +1,23 @@
 ---
 title: addcontenderaderaction-Klasse
 description: 'Dokumentiert die addcontenderaderaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 341c8d22902d937068de3e9afb80aac9cb8305c4
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 090bf4e1ad70238d6023a914fba4786a97a25a0d
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763758"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567325"
 ---
 # <a name="class-addcontentheaderaction"></a>addcontenderaderaction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Inhaltsheader hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  Eine API, mit der das Inhaltsheaderelement markiert wird
 public const std::string& GetText() const  |  Ruft den Text ab, der im Inhaltsheader enthalten sein soll.
@@ -27,13 +27,13 @@ public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in 
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung des Headers ab.
 public int GetMargin() const  |  Ruft den Rand des Headers im unteren Bereich ab
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getuielementname-function"></a>Getuielementname-Funktion
 Eine API, mit der das Inhaltsheaderelement markiert wird
 
   
-**Rückgabe**: Name, der für das UI-Element verwendet werden sollte, das den Kopfzeileninhalt enthält. Wenn der Inhaltsheader entfernt werden muss, wird derselbe Name in [RemoveContentHeaderAction](class_mip_removecontentfooteraction.md) zurückgegeben.
+**Rückgabe**: Name, der für das UI-Element verwendet werden sollte, das den Kopfzeileninhalt enthält. Wenn der Inhaltsheader entfernt werden muss, wird derselbe Name in RemoveContentHeaderAction zurückgegeben.
   
 ### <a name="gettext-function"></a>Gettext-Funktion
 Ruft den Text ab, der im Inhaltsheader enthalten sein soll.

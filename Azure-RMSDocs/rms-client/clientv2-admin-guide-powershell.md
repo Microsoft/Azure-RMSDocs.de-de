@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25851b966b5c28baab003bb949ecf9144cacf66a
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 2133259809b87a66fe5e63e10e1273a0412208b7
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447194"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568054"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
@@ -24,11 +24,11 @@ ms.locfileid: "89447194"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Wenn Sie den Azure Information Protection Unified Bezeichnung-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**installiert, das über Cmdlets für die Bezeichnung verfügt. Zum Beispiel:
+Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection** installiert, das über Cmdlets für die Bezeichnung verfügt. Beispiel:
 
 |Cmdlet für die Bezeichnung|Beispielverwendung|
 |----------------|---------------|
@@ -37,17 +37,20 @@ Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**instal
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Für einen freigegebenen Ordner wird eine bestimmte Bezeichnung auf alle Dateien ohne Bezeichnung angewendet.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
-> [!TIP]
-> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie**  >  für lokale Computer **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **Alle Einstellungen**  >  **Lange Win32-Pfade aktivieren** 
-> 
-> Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
->
-> Weitere Informationen finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
-
 Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Protection** und fügt diesen Ordner der Systemvariablen **PSModulePath** hinzu. Die DLL-Datei für dieses Modul lautet **AIP.dll**.
 
 > [!IMPORTANT]
 > Das azureinformationprotection-Modul unterstützt das Konfigurieren erweiterter Einstellungen für Bezeichnungen oder Bezeichnungs Richtlinien nicht. Für diese Einstellungen benötigen Sie das Office 365 Security & Compliance Center PowerShell. Weitere Informationen finden Sie unter [benutzerdefinierte Konfigurationen für den Azure Information Protection Unified Bezeichnung-Client](clientv2-admin-guide-customizations.md).
+> [!NOTE]
+> Wenn Sie von Azure RMS migriert haben, beachten Sie, dass die RMS-bezogenen Cmdlets für die Verwendung in vereinheitlichter Bezeichnung veraltet sind. Einige davon wurden durch neue Cmdlets für die vereinheitlichte Bezeichnung ersetzt. Weitere Informationen finden Sie unter [Zuordnung von RMS zu Unified Bezeichnung-Cmdlets](#rms-to-unified-labeling-cmdlet-mapping).
+>
+
+> [!TIP]
+> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Richtlinie**  >  für lokale Computer **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **Alle Einstellungen**  >  **Lange Win32-Pfade aktivieren** 
+> 
+> Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
+>
+> Weitere Informationen finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Voraussetzungen für die Verwendung des Moduls "azureinformationprotection"
 
@@ -69,6 +72,25 @@ Typische Szenarien für das Entfernen des Schutzes von Dateien für andere Benut
 
 Sie müssen über ein Rights Management-Nutzungsrecht verfügen oder Administrator sein, um den Schutz von Dateien zu entfernen. Für die Datenermittlung oder Datenwiederherstellung wird in der Regel die Administratorfunktion verwendet. Informationen zum Aktivieren dieses Features und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder Datenwiederherstellung](../configure-super-users.md).
 
+## <a name="rms-to-unified-labeling-cmdlet-mapping"></a>Zuordnung von RMS zu Unified-Beschriftungs-Cmdlets
+
+In der folgenden Tabelle sind die RMS-bezogenen Cmdlets mit den aktualisierten Cmdlets für die vereinheitlichte Bezeichnung zugeordnet.
+
+Wenn Sie z. b. **New-rmsprotectionlicense** mit dem RMS-Schutz verwendet und zu Unified-Bezeichnung migriert haben, verwenden Sie stattdessen **New-aipcustomrights** .
+
+|RMS-Cmdlet  |Unified-Bezeichnung-Cmdlet  |
+|---------|---------|
+|[Get-rmsfilestatus](/powershell/module/azureinformationprotection/get-rmsfilestatus)     |  [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)        |
+|[Get-rmsserver](/powershell/module/azureinformationprotection/get-rmsserver)     |  Nicht relevant für vereinheitlichte Bezeichnung.      |
+|[Get-rmsserverauthentication](/powershell/module/azureinformationprotection/get-rmsserverauthentication)      |   [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Clear-rmsauthentication](/powershell/module/azureinformationprotection/clear-rmsauthentication)     | [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)       |
+|[Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication)     |  [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)      |
+|[Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate)     |       Nicht relevant für vereinheitlichte Bezeichnung  |
+|[New-rmsprotectionlicense](/powershell/module/azureinformationprotection/new-rmsprotectionlicense)     |  [New-aipcustom-Berechtigungen](/powershell/module/azureinformationprotection/new-aipcustompermissions)und [Set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel)mit dem **customberechtigungs** -Parameter      |
+|[Schützen-rmsfile](/powershell/module/azureinformationprotection/protect-rmsfile) |[Set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel)mit dem Parameter " **removeprotection** " |
+| | |
+
+
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
 Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das Cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) verwenden.
@@ -82,7 +104,7 @@ Auf dem Computer, auf dem das aipauthentication-Cmdlet ausgeführt wird, werden 
 > [!NOTE]
 > Wenn Sie für verschiedene Benutzer Bezeichnung-Richtlinien verwenden, müssen Sie möglicherweise eine neue Bezeichnungs Richtlinie erstellen, die alle ihre Bezeichnungen veröffentlicht und die Richtlinie nur für dieses Delegierte Benutzerkonto veröffentlicht.
 
-Wenn das Token in Azure AD abläuft, müssen Sie das Cmdlet erneut ausführen, um ein neues Token abzurufen. Sie können das Zugriffs Token in Azure AD für ein Jahr, zwei Jahre oder so konfigurieren, dass es nie abläuft. Die Parameter für "Set-aipauthentication" verwenden Werte aus einem App-Registrierungsprozess in Azure AD, wie im nächsten Abschnitt beschrieben.
+Wenn das Token in Azure AD abläuft, müssen Sie das Cmdlet erneut ausführen, um ein neues Token abzurufen. Sie können das Zugriffs Token in Azure AD für ein Jahr, zwei Jahre oder so konfigurieren, dass es nie abläuft. Die Parameter für Set-AIPAuthentication verwenden Werte aus einem App-Registrierungsprozess in Azure AD, wie im nächsten Abschnitt beschrieben.
 
 Für das Delegierte Benutzerkonto:
 
@@ -97,13 +119,13 @@ Für das Delegierte Benutzerkonto:
 > [!IMPORTANT]
 > Diese Anweisungen gelten für die aktuelle allgemein verfügbare Version des Unified-Bezeichnungs Clients und gelten auch für die allgemein verfügbare Version des Scanners für diesen Client.
 
-"Set-aipauthentication" erfordert eine APP-Registrierung für die Parameter " *AppID* " und " *appsecret* ". Wenn Sie ein Upgrade von einer früheren Version des Clients durchgeführt und eine APP-Registrierung für die vorherigen *webappid* -und *nativeappid* -Parameter erstellt haben, funktionieren Sie nicht mit dem Unified-Bezeichnungs Client. Sie müssen eine neue APP-Registrierung wie folgt erstellen:
+Set-AIPAuthentication eine APP-Registrierung für die Parameter " *AppID* " und " *appsecret* " erfordert. Wenn Sie ein Upgrade von einer früheren Version des Clients durchgeführt und eine APP-Registrierung für die vorherigen *webappid* -und *nativeappid* -Parameter erstellt haben, funktionieren Sie nicht mit dem Unified-Bezeichnungs Client. Sie müssen eine neue APP-Registrierung wie folgt erstellen:
 
 1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com/) an.
 
 2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory**  >  **Manage**  >  **App-Registrierungen**. 
 
-3. Wählen Sie **+ neue Registrierung**aus. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
+3. Wählen Sie **+ neue Registrierung** aus. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
 
    - **Name**: `AIP-DelegatedUser`
         
@@ -113,28 +135,28 @@ Für das Delegierte Benutzerkonto:
     
     - **Umleitungs-URI (optional)**: **Web** und `https://localhost`
 
-4. Kopieren Sie im Bereich **AIP-delegateduser** den Wert für die **Anwendungs-ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+4. Kopieren Sie im Bereich **AIP-delegateduser** den Wert für die **Anwendungs-ID (Client)**. Der Wert sieht in etwa wie im folgenden Beispiel aus: `77c3c1c3-abf9-404e-8b2b-4652836c8c66` . Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Set-AIPAuthentication-Cmdlet ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
-5. Wählen Sie in der Rand Leiste die Option Zertifikate **Verwalten**  >  **& geheimen**Schlüssel aus.
+5. Wählen Sie in der Rand Leiste die Option Zertifikate **Verwalten**  >  **& geheimen** Schlüssel aus.
 
-6. Wählen Sie im Bereich **AIP-delegateduser-Zertifikate &** geheimen Schlüssel im Bereich geheime **Client** Schlüssel die Option **+ neuer geheimer Client**Schlüssel aus.
+6. Wählen Sie im Bereich **AIP-delegateduser-Zertifikate &** geheimen Schlüssel im Bereich geheime **Client** Schlüssel die Option **+ neuer geheimer Client** Schlüssel aus.
 
-7. Geben Sie unter **geheimen Client Schlüssel hinzufügen**Folgendes an, und wählen Sie dann **Hinzufügen**aus:
+7. Geben Sie unter **geheimen Client Schlüssel hinzufügen** Folgendes an, und wählen Sie dann **Hinzufügen** aus:
     
     - **Beschreibung**: `Azure Information Protection unified labeling client`
-    - **Läuft**ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
+    - **Läuft** ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
 
-8. Kopieren Sie im Bereich **AIP-delegateduser--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` . Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
+8. Kopieren Sie im Bereich **AIP-delegateduser--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4` . Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert** wird. 
     
     Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
 
-9. Wählen Sie in der Rand **Manage**Leiste  >  **API-Berechtigungen**verwalten aus.
+9. Wählen Sie in der Rand **Manage** Leiste  >  **API-Berechtigungen** verwalten aus.
 
-10. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+10. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung hinzufügen** aus.
 
-11. Stellen Sie sicher, dass Sie auf der Registerkarte " **API-Berechtigungen** " auf der Registerkarte " **Microsoft-APIs** " die Option **Azure Rights Management Services**auswählen. Wenn Sie aufgefordert werden, den für Ihre Anwendung erforderlichen Berechtigungs Typen einzugeben, wählen Sie **Anwendungs Berechtigungen**aus.
+11. Stellen Sie sicher, dass Sie auf der Registerkarte " **API-Berechtigungen** " auf der Registerkarte " **Microsoft-APIs** " die Option **Azure Rights Management Services** auswählen. Wenn Sie aufgefordert werden, den für Ihre Anwendung erforderlichen Berechtigungs Typen einzugeben, wählen Sie **Anwendungs Berechtigungen** aus.
 
-12. Erweitern **Sie für SELECT-Berechtigungen**den Eintrag **Inhalt** , und wählen Sie Folgendes aus:
+12. Erweitern **Sie für SELECT-Berechtigungen** den Eintrag **Inhalt** , und wählen Sie Folgendes aus:
     
     -  **Content. delegatedreader** 
     -  **Content. delegatedwriter**
@@ -145,9 +167,9 @@ Für das Delegierte Benutzerkonto:
 
 15. Wählen Sie im Bereich " **AIP-Berechtigungen anfordern** " die APIs aus, die **Meine Organisation verwendet**, und suchen Sie nach **Microsoft Information Protection Sync Service**.
 
-16. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **Anwendungs Berechtigungen**aus.
+16. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **Anwendungs Berechtigungen** aus.
 
-17. Erweitern **Sie für SELECT-Berechtigungen**den Eintrag **unifedpolicy** , und wählen Sie Folgendes aus:
+17. Erweitern **Sie für SELECT-Berechtigungen** den Eintrag **unifedpolicy** , und wählen Sie Folgendes aus:
     
     -  **Unifedpolicy. Tenant. Read**
 
@@ -168,15 +190,15 @@ Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlo
 
 2. Erstellen Sie in ihrer PowerShell-Sitzung eine Variable zum Speichern der Anmelde Informationen für das Windows-Benutzerkonto, das nicht interaktiv ausgeführt wird. Wenn Sie z. b. ein Dienst Konto für den Scanner erstellt haben:
 
-    ```ps
+    ```PowerShell
     $pscreds = Get-Credential "CONTOSO\srv-scanner"
     ```
 
     Sie werden zur Angabe des Kennworts für dieses Konto aufgefordert.
 
-2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Geben Sie außerdem Ihre APP-Registrierungs Werte, Ihre Mandanten-ID und den Namen des Delegierten Benutzerkontos in Azure AD an. Zum Beispiel:
+2. Führen Sie das Set-AIPAuthentication-Cmdlet mit dem *onbehalfof* -Parameter aus, und geben Sie als Wert die soeben erstellte Variable als Wert an. Geben Sie außerdem Ihre APP-Registrierungs Werte, Ihre Mandanten-ID und den Namen des Delegierten Benutzerkontos in Azure AD an. Beispiel:
     
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
     ```
 
@@ -184,9 +206,9 @@ Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlo
 > Wenn der Computer nicht über Internet Zugriff verfügen kann, ist es nicht erforderlich, die app in Azure AD zu erstellen und Set-aipauthentication auszuführen. Befolgen Sie stattdessen die Anweisungen für nicht [verbundene Computer](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen, geben Sie ein `Get-Help <cmdlet name> -online` . Zum Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen, geben Sie ein `Get-Help <cmdlet name> -online` . Beispiel: 
 
-```ps
+```PowerShell
 Get-Help Set-AIPFileLabel -online
 ```
 

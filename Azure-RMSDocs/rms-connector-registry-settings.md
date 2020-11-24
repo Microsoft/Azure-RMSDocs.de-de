@@ -5,7 +5,7 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 11/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 536d3662c5e3e7a90a8da2f6b9d97f522d1f4111
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: fb2a081b03ae8b92fa58073b37336066f087da4c
+ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136926"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "95567715"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
@@ -54,7 +54,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 ## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Exchange 2016- oder Exchange 2013-Registrierungseinstellungen
 
-**Registrierungs Pfad:** HKEY_LOCAL_MACHINE \software\microsoft\msdrm\servicelocation\activation
+**Registrierungs Pfad:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
 **Typ:** Reg_SZ
 
@@ -93,7 +93,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** https://*<\IhreMandantenURL>*
+**Wert:** https://*< \yourtenanturl>*
 
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
@@ -105,7 +105,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 ## <a name="exchange-2010-registry-settings"></a>Exchange 2010-Registrierungseinstellungen
 
-**Registrierungs Pfad:** HKEY_LOCAL_MACHINE \software\microsoft\msdrm\servicelocation\activation
+**Registrierungs Pfad:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
 **Typ:** Reg_SZ
 
@@ -201,7 +201,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 ## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Registrierungseinstellungen für Dateiserver, die die Dateiklassifizierungsinfrastruktur verwenden
 
-**Registrierungs Pfad:** HKEY_LOCAL_MACHINE \software\microsoft\msdrm\servicelocation\enterprilpublishing
+**Registrierungs Pfad:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
 **Typ:** Reg_SZ
 

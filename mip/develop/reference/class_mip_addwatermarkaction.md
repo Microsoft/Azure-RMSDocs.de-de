@@ -1,23 +1,23 @@
 ---
 title: addwatermarkaction-Klasse
 description: 'Dokumentiert die addwatermarkaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: fe2cc80e5abb225a5e83c1b10c1c5f9f99401628
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 60120fbfb9d35cdb92c312af62bddf456dc88cfd
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81763743"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95567316"
 ---
 # <a name="class-addwatermarkaction"></a>addwatermarkaction-Klasse 
 Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  Eine zum Markieren des Wasserzeichenelements genutzte API.
 public WatermarkLayout GetLayout() const  |  Eine zum Abrufen des Wasserzeichenlayouts genutzte API.
@@ -26,7 +26,7 @@ public const std::string& GetFontName() const  |  Ruft den Namen der Schriftart 
 public int GetFontSize() const  |  Ruft den Schriftgrad ab, in dem das Wasserzeichen angezeigt wird.
 public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getuielementname-function"></a>Getuielementname-Funktion
 Eine zum Markieren des Wasserzeichenelements genutzte API.

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8d2b5ad766f02a7c7861d64aaef39e905f578bd1
-ms.sourcegitcommit: 9600ae255e7ccc8eeb49c50727a26e4666415fe2
+ms.openlocfilehash: 2af1d3fad0e831032d8c7f6aa2a312cdfb7a9558
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89447173"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568048"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
@@ -24,11 +24,11 @@ ms.locfileid: "89447173"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified Bezeichnung-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie weitere technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzerhandbuch](clientv2-user-guide.md)zu finden. 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -65,7 +65,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Sollten Sie den Azure Information Protection Unified-Bezeichnungs Client bereitstellen?
 
-Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn Sie [im Office 365 Security & Compliance Center Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)verwenden und eine der folgenden Punkte zutrifft:
+Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn Sie die [Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) in Microsoft 365 verwenden und eine der folgenden Punkte zutrifft:
 
 - Sie möchten Dokumente und e-Mail-Nachrichten klassifizieren (und optional schützen), indem Sie in Ihren Office-Apps (Word, Excel, PowerPoint, Outlook) auf Windows-Computern Bezeichnungen auswählen.
 
@@ -91,7 +91,7 @@ In den folgenden Abschnitten finden Sie Informationen zur Unterstützung bei der
 
 Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und Feedback**, um das Dialogfeld **Microsoft Azure Information Protection** zu öffnen:
 
-- Aus einer Office-Anwendung: Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Sensitivität** die Option **Sensitivität**aus, und wählen Sie dann **Hilfe und Feedback**aus.
+- Aus einer Office-Anwendung: Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Sensitivität** die Option **Sensitivität** aus, und wählen Sie dann **Hilfe und Feedback** aus.
 
 - Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und dann **Hilfe und Feedback** aus. 
 
@@ -128,21 +128,21 @@ Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die de
     
     In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
-    - HKEY_CURRENT_USER \software\microsoft\office\15.0\common\identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT_USER \software\microsoft\office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT_USER \software\microsoft\office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT_USER \software\microsoft\office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER \software\classes\local settings\software\microsoft\msipc
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - Der derzeit angemeldete Benutzer wird abgemeldet.
 
 #### <a name="client-status-section"></a>Abschnitt **Clientstatus**
 
-Verwenden Sie den Wert **Verbunden als**, um zu bestätigen, dass der angezeigte Benutzername das Konto identifiziert, das für die Azure Information Protection-Authentifizierung verwendet werden soll. Dieser Benutzername muss mit einem Konto übereinstimmen, das für Office 365 oder Azure Active Directory verwendet wird. Das Konto muss auch zu einem Office 365-Mandanten gehören, der für Vertraulichkeits Bezeichnungen in Ihrem Bezeichnungs Verwaltungs Portal konfiguriert ist.
+Verwenden Sie den Wert **Verbunden als**, um zu bestätigen, dass der angezeigte Benutzername das Konto identifiziert, das für die Azure Information Protection-Authentifizierung verwendet werden soll. Dieser Benutzername muss mit einem Konto identisch sein, das für Microsoft 365 oder Azure Active Directory verwendet wird. Das Konto muss auch zu einem Microsoft 365 Mandanten gehören, der in Ihrem Beschriftungs Verwaltungs Portal für Vertraulichkeits Bezeichnungen konfiguriert ist.
 
 Wenn Sie sich als ein anderer Benutzer anmelden müssen, der angezeigt wird, finden Sie weitere Informationen unter [Anmelden als anderer](clientv2-admin-guide-customizations.md#sign-in-as-a-different-user) Benutzer.
 
@@ -150,15 +150,15 @@ Verwenden Sie die Informationen unter **Version**, um zu bestätigen, welche Ver
 
 ## <a name="support-for-multiple-languages"></a>Unterstützung für mehrere Sprachen
 
-Der Azure Information Protection Unified Bezeichnung-Client unterstützt die gleichen Sprachen wie Office 365. Eine Liste dieser Sprachen finden Sie im Abschnitt **Office 365, Exchange Online-Schutz und Power BI** auf der Office-Seite zur [internationalen Verfügbarkeit](https://products.office.com/business/international-availability).
+Der Azure Information Protection Unified Bezeichnung-Client unterstützt die gleichen Sprachen wie Office 365. Eine Liste dieser Sprachen finden Sie auf der Seite [internationale Verfügbarkeit](https://products.office.com/business/international-availability) von Office.
 
 Für diese Sprachen werden Menü Optionen, Dialogfelder und Meldungen aus dem Azure Information Protection Unified-Beschriftungs Client in der Sprache des Benutzers angezeigt. Es gibt ein einzelnes Installationsprogramm, das die Sprache erkennt, sodass keine zusätzliche Konfiguration erforderlich ist, um den Azure Information Protection Unified-Bezeichnungs Client für verschiedene Sprachen zu installieren. 
 
-Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht automatisch übersetzt, wenn Sie Bezeichnungen in der Beschriftungs zentrale konfigurieren. Damit Benutzer Bezeichnungen in Ihrer bevorzugten Sprache anzeigen können, stellen Sie Ihre eigenen Übersetzungen bereit, und konfigurieren Sie Sie für die Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und des Parameters *localesettings* für [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). Optische Kennzeichnungen werden nicht übersetzt und unterstützen nicht mehr als eine Sprache.
+Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht automatisch übersetzt, wenn Sie Bezeichnungen in der Beschriftungs zentrale konfigurieren. Damit Benutzer Bezeichnungen in Ihrer bevorzugten Sprache anzeigen können, stellen Sie Ihre eigenen Übersetzungen bereit, und konfigurieren Sie Sie für die Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und des Parameters *localesettings* für [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label). Optische Kennzeichnungen werden nicht übersetzt und unterstützen nicht mehr als eine Sprache.
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
 
 - Online Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung-Benutzerhandbuch](clientv2-user-guide.md)
 
@@ -199,7 +199,7 @@ Anweisungen zum Aktualisieren des Scanners sind davon abhängig, ob Sie ein Upgr
 
 2.    Aktualisieren Sie den Azure Information Protection Unified-Bezeichnungs Client, indem Sie die neueste Version des Unified-Bezeichnungs Clients aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren.
 
-3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`
+3. Führen Sie in einer PowerShell-Sitzung den Update-AIPScanner Befehl mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`
 
 4. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
 
@@ -215,7 +215,7 @@ Das Upgrade des Scanners ist von der Version des klassischen Clients abhängig, 
 
 - [Upgrade von früheren Versionen als 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-Beim Upgrade wird eine neue Datenbank mit dem Namen " **AIPScannerUL_ \<profile_name> **" erstellt, und die vorherige Überprüfungs Datenbank wird für den Fall beibehalten, dass Sie für die vorherige Version benötigt wird. Wenn Sie sicher sind, dass Sie die vorherige Scanner-Datenbank nicht benötigen, können Sie Sie löschen. Da beim Upgrade eine neue Datenbank erstellt wird, werden bei der erstmaligen Ausführung der Überprüfung alle Dateien neu erstellt.
+Beim Upgrade wird eine neue Datenbank mit dem Namen " **AIPScannerUL_ \<profile_name>**" erstellt, und die vorherige Überprüfungs Datenbank wird für den Fall beibehalten, dass Sie für die vorherige Version benötigt wird. Wenn Sie sicher sind, dass Sie die vorherige Scanner-Datenbank nicht benötigen, können Sie Sie löschen. Da beim Upgrade eine neue Datenbank erstellt wird, werden bei der erstmaligen Ausführung der Überprüfung alle Dateien neu erstellt.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Upgrade von der Azure Information Protection Client (klassisch) Version 1.48.204.0 und höheren Versionen dieses Clients
 
@@ -225,9 +225,9 @@ Wenn Sie den Scanner mithilfe der Vorschauversion des Unified-Bezeichnungs Clien
 
 2. Aktualisieren Sie auf den Azure Information Protection Unified-Bezeichnungs Client, indem Sie den Unified-Bezeichnungs Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren.
 
-3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`.
+3. Führen Sie in einer PowerShell-Sitzung den Update-AIPScanner Befehl mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`.
     
-    In diesem Schritt wird eine neue Datenbank mit dem Namen erstellt **AIPScannerUL_ \<profile_name> **
+    In diesem Schritt wird eine neue Datenbank mit dem Namen erstellt **AIPScannerUL_ \<profile_name>**
 
 4. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
 
@@ -254,7 +254,7 @@ Sie können jetzt die restlichen Anweisungen unter Bereitstellen [des Azure Info
 
 ###### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Upgraden in einer anderen Reihenfolge als der der empfohlenen Schritte
 
-Wenn Sie ein Upgrade von einer früheren Version als 1.48.204.0 ausführen und die Überprüfung nicht im Azure-Portal konfigurieren, bevor Sie den Befehl Update-aipscanner ausführen, haben Sie keinen Profilnamen, der angibt, dass die Überprüfungs Konfigurationseinstellungen für den Upgradevorgang identifiziert. 
+Wenn Sie ein Upgrade von einer früheren Version als 1.48.204.0 ausführen und die Überprüfung nicht im Azure-Portal konfigurieren, bevor Sie den Update-AIPScanner-Befehl ausführen, verfügen Sie über keinen Profilnamen, um anzugeben, dass die Überprüfungs Konfigurationseinstellungen für den Upgradevorgang identifiziert. 
 
 Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen Sie genau den Profilnamen angeben, den Sie beim Ausführen des Befehls „Update-AIPScanner“ verwendet haben. Der Scanner wird nur mit Ihren Einstellungen konfiguriert, wenn die Namen identisch sind. 
 
@@ -285,5 +285,3 @@ Wenn Sie den Azure Information Protection-Client bereits installiert haben, helf
 - [Unterstützte Dateitypen](client-admin-guide-file-types.md)
 
 - [PowerShell-Befehle](client-admin-guide-powershell.md)
-
-

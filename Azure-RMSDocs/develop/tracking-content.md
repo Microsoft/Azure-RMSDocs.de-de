@@ -16,12 +16,12 @@ ms.suite: ems
 ms.custom: dev
 experimental: true
 experiment_id: priyamo-test-20160729
-ms.openlocfilehash: aee6442d79c39172f6b082fb2531588ce50c8cf2
-ms.sourcegitcommit: 84b45c949d85a7291c088a050d2a66d356fc9af2
+ms.openlocfilehash: 5159f39d5b91c748abe9fe7e0734c4a6eacbe4d5
+ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87135605"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "95568372"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
 
@@ -47,12 +47,12 @@ Verwenden Sie diese APIs zum Hinzufügen/Aktualisieren einer Inhaltslizenz mit M
 Im Prinzip sind nur für die Dokumentenverfolgung nur das **contentName**- und das **notificationType**-Objekt erforderlich.
 
 
-- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
-- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+- [IpcCreateLicenseMetadataHandle](/previous-versions/windows/desktop/msipc/ipccreatelicensemetadatahandle)
+- [IpcSetLicenseMetadataProperty](/previous-versions/windows/desktop/msipc/ipcsetlicensemetadataproperty)
 
   Wir erwarten, dass Sie alle Metadateneigenschaften festlegen. Diese werden im Folgenden nach Typ aufgelistet.
 
-  Weitere Informationen finden Sie unter [Lizenzmetadaten-Eigenschaftstypen](https://msdn.microsoft.com/library/dn974062.aspx).
+  Weitere Informationen finden Sie unter [Lizenzmetadaten-Eigenschaftstypen](/previous-versions/windows/desktop/msipc/license-metadata-property-types).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -78,16 +78,16 @@ Im Prinzip sind nur für die Dokumentenverfolgung nur das **contentName**- und d
 
     Legen Sie hier das Ursprungsdatum der Datei fest.
 
-- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+- [IpcSerializeLicenseWithMetadata](/previous-versions/windows/desktop/msipc/ipcserializelicensemetadata)
 
 Verwenden Sie die richtige dieser APIs, um die Metadaten Ihrer Datei oder Ihrem Stream hinzuzufügen.
 
-- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
-- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+- [IpcfEncryptFileWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilewithmetadata)
+- [IpcfEncryptFileStreamWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilestreamwithmetadata)
 
 Verwenden Sie schließlich diese API, um das nachverfolgte Dokument beim Nachverfolgungssystem zu registrieren.
 
-- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
+- [IpcRegisterLicense](/previous-versions/windows/desktop/msipc/ipcregisterlicense)
 
 
 ## <a name="2-register-the-document-with-the-rms-service"></a>2. registrieren Sie das Dokument beim RMS-Dienst.
@@ -141,26 +141,25 @@ Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten f
 Das Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App ist genauso einfach wie die Verwendung eines der folgenden URL-Formate:
 
 - Verwenden der Inhalts-ID
-  - Rufen Sie die Inhalts-ID mit [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) oder der [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) ab, wenn die Lizenz serialisiert ist, und verwenden Sie die Lizenzeigenschaft **IPC_LI_CONTENT_ID**. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
-  - Verwenden Sie die Metadaten **contentid** und **Aussteller** , und verwenden Sie das folgende Format:`https://track.azurerms.com/#/{ContentId}/{Issuer}`
+  - Rufen Sie die Inhalts-ID mit [IpcGetLicenseProperty](/previous-versions/windows/desktop/msipc/ipcgetlicenseproperty) oder der [IpcGetSerializedLicenseProperty](/previous-versions/windows/desktop/msipc/ipcgetserializedlicenseproperty) ab, wenn die Lizenz serialisiert ist, und verwenden Sie die Lizenzeigenschaft **IPC_LI_CONTENT_ID**. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](/previous-versions/windows/desktop/msipc/license-property-types).
+  - Verwenden Sie die Metadaten **contentid** und **Aussteller** , und verwenden Sie das folgende Format: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Beispiel – `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
-- Wenn Sie keinen Zugriff auf diese Metadaten haben (d. h., Sie untersuchen die ungeschützte Version des Dokuments), können Sie die **Content_Name** im folgenden Format verwenden:`https://track.azurerms.com/#/?q={ContentName}`
+- Wenn Sie keinen Zugriff auf diese Metadaten haben (d. h., Sie untersuchen die ungeschützte Version des Dokuments), können Sie die **Content_Name** im folgenden Format verwenden: `https://track.azurerms.com/#/?q={ContentName}`
 
   Beispiel: https://track.azurerms.com/#/?q=Secret!.txt
 
 Der Client muss lediglich einen Browser mit der entsprechenden URL öffnen. Im Portal für die RMS-Dokumentnachverfolgung werden die Authentifizierung und alle erforderlichen Umleitungen verarbeitet.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Lizenzmetadaten-Eigenschaftstypen](https://msdn.microsoft.com/library/dn974062.aspx)
-* [Benachrichtigungseinstellungen](https://msdn.microsoft.com/library/dn974063.aspx)
-* [Benachrichtigungstyp](https://msdn.microsoft.com/library/dn974064.aspx)
-* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
-* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
-* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
-* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
-* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
-* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
-
+* [Lizenzmetadaten-Eigenschaftstypen](/previous-versions/windows/desktop/msipc/license-metadata-property-types)
+* [Benachrichtigungseinstellungen](/previous-versions/windows/desktop/msipc/notification-preference)
+* [Benachrichtigungstyp](/previous-versions/windows/desktop/msipc/notification-type)
+* [IpcCreateLicenseMetadataHandle](/previous-versions/windows/desktop/msipc/ipccreatelicensemetadatahandle)
+* [IpcSetLicenseMetadataProperty](/previous-versions/windows/desktop/msipc/ipcsetlicensemetadataproperty)
+* [IpcSerializeLicenseWithMetadata](/previous-versions/windows/desktop/msipc/ipcserializelicensemetadata)
+* [IpcfEncryptFileWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilewithmetadata)
+* [IpcfEncryptFileStreamWithMetadata](/previous-versions/windows/desktop/msipc/ipcfencryptfilestreamwithmetadata)
+* [IpcRegisterLicense](/previous-versions/windows/desktop/msipc/ipcregisterlicense)

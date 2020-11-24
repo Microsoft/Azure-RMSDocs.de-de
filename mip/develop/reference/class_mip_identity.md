@@ -1,23 +1,23 @@
 ---
 title: klassenidentität
 description: 'Dokumentiert die Identity:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 1b1dbbe146832773613124917c1ea6d43f5cf13a
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: ae89ed32a48deae7132bc65adabf86f7fb63ffe1
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81762369"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566871"
 ---
 # <a name="class-identity"></a>klassenidentität 
 Abstraktion für Identity.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Identität ()  |  Standardmäßiger identitätskonstruktor, der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
 öffentliche Identität (Konstante Identität& andere)  |  Der identitätskopierkonstruktor.
@@ -26,7 +26,7 @@ Abstraktion für Identity.
 Public Konstanten Std:: String& GetEmail () konstant  |  Senden Sie die e-Mail.
 public const std::string& GetName() const  |  Den anzeigen amen des Benutzers erhalten. wird zum Markieren von Text verwendet.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="identity-function"></a>Identity-Funktion
 Standardmäßiger identitätskonstruktor, der verwendet wird, wenn eine Benutzer-e-Mail-Adresse

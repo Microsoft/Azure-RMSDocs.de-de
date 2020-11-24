@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/17/2020
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a51376fc2d6114f7d23ec937b4d8ea1238d1655
-ms.sourcegitcommit: 2cb5fa2a8758c916da8265ae53dfb35112c41861
+ms.openlocfilehash: 146fa9442aa5fcb05cebab27f1d4104bd33328f0
+ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88953234"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "95568471"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -40,12 +40,11 @@ Weitere Informationen finden Sie unter [Upgraden und Verwalten des Azure Informa
 
 Jede Version des Azure Information Protection-Clients mit allgemeiner Verfügbarkeit wird bis zu sechs Monate nach dem Release der nächsten Version mit allgemeiner Verfügbarkeit unterstützt. Mit Ausnahme dieses Abschnitts enthält die Dokumentation keine Informationen zu nicht unterstützten Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
 
-Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereitgestellt werden. Verwenden Sie stattdessen die neuste Vorschauversion, um neue Funktionen oder Problembehebungen kennenzulernen und zu testen, die in der nächsten allgemein verfügbaren Version enthalten sein sollen. Veraltete Vorschauversionen werden nicht mehr unterstützt.
-
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Allgemein verfügbare Versionen, die nicht mehr unterstützt werden:
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|1.54.33.0 | 23.10.2019|
 |1.53.10|07/15/2019|
 |1.48.204.0|04/16/2019|
 |1.41.51.0|27.11.2018|
@@ -64,11 +63,13 @@ Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
 
 Ab 6/2/2019 ist für den Bezeichnungs Dienst für Azure Information Protection Verbindungen erforderlich, die TLS 1,2 verwenden.
 
-Alle Client Versionen von 1.4.21.0 veröffentlicht 03/15/2017 unterstützen TLS 1,2. Client Versionen **1.3.155.2**, **1.2.4.0**und **1.1.23.0** verwenden nicht TLS 1,2 und können daher die Azure Information Protection Richtlinie nicht mehr herunterladen.
+Alle Client Versionen von 1.4.21.0 veröffentlicht 03/15/2017 unterstützen TLS 1,2. Client Versionen **1.3.155.2**, **1.2.4.0** und **1.1.23.0** verwenden nicht TLS 1,2 und können daher die Azure Information Protection Richtlinie nicht mehr herunterladen.
 
 ### <a name="release-history"></a>Releaseverlauf
 
 Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstützte Version des Azure Information Protection-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt.
+
+Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phase sind. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 
 > [!NOTE]
 > Kleinere Korrekturen werden nicht aufgelistet. Wenn also ein Problem mit dem Azure Information Protection-Client auftreten sollte, wird empfohlen, dass Sie zuerst überprüfen, ob dieses Problem mit dem neusten allgemein verfügbaren Release behoben wird. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
@@ -77,7 +78,7 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 
 ## <a name="version-154590"></a>Version 1.54.59.0
 
-**Veröffentlicht**: 12/02/2020
+**Veröffentlicht**: 02/12/2020
 
 Diese Version enthält nur Korrekturen. 
 
@@ -90,16 +91,6 @@ Diese Version enthält nur Korrekturen.
 - Probleme im Zusammenhang mit der Client Stabilität beim Arbeiten mit geschützten PDF-Dateien werden gelöst. 
 
 - Schutz Bezeichnungen werden nun erwartungsgemäß entfernt, wenn die Bezeichnung während des e-Mail-Erstellungs Prozesses auf der e-Mail gelöscht wird. 
-
-## <a name="version-154330"></a>Version 1.54.33.0
-
-**Veröffentlicht**: 10/23/2019
-
-Unterstützt durch 08/12/2020
-
-Diese Version umfasst die msipc-Version 1.0.4008.0813 des RMS-Clients.
-
-Diese Version enthält allgemeine Korrekturen für Stabilität und Leistung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
