@@ -1,116 +1,116 @@
 ---
-title: 'MIP:: sensitivityconditiondata-Klasse'
-description: 'Dokumentiert die MIP:: sensitivityconditiondata-Klasse des MIP-SDKs (Microsoft Information Protection).'
-author: BryanLa
+title: Klasse sensitivityconditiondata
+description: 'Dokumentiert die sensitivityconditiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 02/14/2020
-ms.openlocfilehash: f66c93176dc452248fb8d6373d3564f33129f6e7
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: b2b2a3d65331d23fa8d527a8d46185774b604b0b
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489451"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566683"
 ---
-# <a name="class-mipsensitivityconditiondata"></a>MIP:: sensitivityconditiondata-Klasse 
+# <a name="class-sensitivityconditiondata"></a>Klasse sensitivityconditiondata 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetLabelId() const  | _Noch nicht dokumentiert._
 public bool isclassificationermittelte () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ sensitivityconditiondata ()  | _Noch nicht dokumentiert._
 Public conditiondatatype GetType () Konstanten  | _Noch nicht dokumentiert._
 public const std::string& GetName() const  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Vector\<Std:: unique_ptr\<conditiondata\>\>& getsubconditionsdata () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: map- \<std::string, std::string\>& GetProperties ()-Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector \<std::unique_ptr\<ConditionData\> \>& getsubconditionsdata () Konstanten  | _Noch nicht dokumentiert._
 public bool haskeyvalueentries () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getkeyvalueentries () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getkeyvalueentries () Konstanten  | _Noch nicht dokumentiert._
 public bool hasclassificationdata () konstant  | _Noch nicht dokumentiert._
-Public-Konstante classificationdata & getclassificationdata () konstant  | _Noch nicht dokumentiert._
-öffentliches void setName (Konst Std:: String & Name)  | _Noch nicht dokumentiert._
-öffentliches void SetProperties (Std:: Map\<Std:: String, Std:: String\>& Eigenschaften)  | _Noch nicht dokumentiert._
-öffentliches void setsubconditionsdata (Std:: Vector\<Std:: unique_ptr\<conditiondata\>\>& subconditiondata)  | _Noch nicht dokumentiert._
-öffentliches void addkeyvalueentry (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& keyvalueentry)  | _Noch nicht dokumentiert._
-öffentliches void addsubcondition (Std:: unique_ptr\<conditiondata\> Bedingung)  | _Noch nicht dokumentiert._
-öffentliches void addtextentry (Konstanten Std:: String & textentry)  | _Noch nicht dokumentiert._
-öffentliches void setkeyvalueentries (Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& keyvalueentries)  | _Noch nicht dokumentiert._
-öffentliches void addclassificationdata (Std:: unique_ptr\<classificationdata\> classificationdata)  | _Noch nicht dokumentiert._
+Public Konstanten Std:: shared_ptr \<ClassificationData\>& getclassificationdata () Konstanten  | _Noch nicht dokumentiert._
+öffentliches void setName (Konst Std:: String& Name)  | _Noch nicht dokumentiert._
+öffentliches void SetProperties (Std:: map \<std::string, std::string\>&-Eigenschaften)  | _Noch nicht dokumentiert._
+öffentliches void setsubconditionsdata (Std:: Vector \<std::unique_ptr\<ConditionData\> \>& subconditiondata)  | _Noch nicht dokumentiert._
+öffentliches void addkeyvalueentry (Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& keyvalueentry)  | _Noch nicht dokumentiert._
+öffentliches void addsubcondition (Std:: unique_ptr- \<ConditionData\> Bedingung)  | _Noch nicht dokumentiert._
+öffentliches void addtextentry (Konstanten Std:: String& textentry)  | _Noch nicht dokumentiert._
+öffentliches void setkeyvalueentries (Std:: Vector \<std::pair\<std::string, std::string\> \>& keyvalueentries)  | _Noch nicht dokumentiert._
+öffentliches void addclassificationdata (Std:: unique_ptr \<ClassificationData\> classificationdata)  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getlabelid-function"></a>Getlabelid-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="isclassificationdiscovered-function"></a>Isclassificationermittelungsfunktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="sensitivityconditiondata-function"></a>~ Sensitivityconditiondata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="gettype-function"></a>GetType-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getname-function"></a>GetName-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getproperties-function"></a>GetProperties-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getsubconditionsdata-function"></a>Getsubconditionsdata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="haskeyvalueentries-function"></a>Haskeyvalueentries-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getkeyvalueentries-function"></a>Getkeyvalueentries-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="hasclassificationdata-function"></a>Hasclassificationdata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getclassificationdata-function"></a>Getclassificationdata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="setname-function"></a>SetName-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="setproperties-function"></a>SetProperties-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="setsubconditionsdata-function"></a>Setsubconditionsdata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="addkeyvalueentry-function"></a>Addkeyvalueentry-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="addsubcondition-function"></a>Addsubcondition-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="addtextentry-function"></a>Addtextentry-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="setkeyvalueentries-function"></a>Setkeyvalueentries-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="addclassificationdata-function"></a>Addclassificationdata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

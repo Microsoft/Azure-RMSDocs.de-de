@@ -1,27 +1,27 @@
 ---
 title: Klasse sensitivitytypesrulepackage
 description: 'Dokumentiert die sensitivitytypesrulepackage:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b6f4f45c9532cb4c87bbe97cedd294184573c873
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 85157a29eac123a849c3b167b1c32cbd15875653
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764370"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566640"
 ---
 # <a name="class-sensitivitytypesrulepackage"></a>Klasse sensitivitytypesrulepackage 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: String& getrulepackageid () Konstanten  |  ID des Regel Pakets erhalten.
 Public Konstanten Std:: String& getrulepackage () Konstanten  |  Holen Sie sich das Regelpaket.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getrulepackageid-function"></a>Getrulepackageid-Funktion
 ID des Regel Pakets erhalten.

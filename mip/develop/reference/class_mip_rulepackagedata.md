@@ -1,41 +1,41 @@
 ---
 title: Class rulepackagedata
 description: 'Dokumentiert die rulepackagedata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: f04e2cfb00420b8752cdc998e52c77d41ae480b4
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 4f2106518bb2837d85eb5874307fad2639df5d90
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764361"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566653"
 ---
 # <a name="class-rulepackagedata"></a>Class rulepackagedata 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public konstant policyruledata * getruledata () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getlabelretemplateid () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std\<::p Air Std:: String, Std:: shared_ptr\<schutzaktiondata\> \>& getlabeltoprotectiontype () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air \<std::string, std::string\>& getlabelretemplateid () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air \<std::string, std::shared_ptr\<ProtectionActionData\> \>& getlabeltoprotectiontype () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ rulepackagedata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getruledata-function"></a>Getruledata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getlabeltotemplateid-function"></a>GetLabel| TemplateID-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getlabeltoprotectiontype-function"></a>Getlabeltoprotectiontype-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="rulepackagedata-function"></a>~ Rulepackagedata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

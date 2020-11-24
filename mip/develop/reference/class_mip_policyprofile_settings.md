@@ -1,39 +1,39 @@
 ---
 title: 'Class policyprofile:: Settings'
 description: 'Dokumentiert die policyprofile:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 317a6cfaaac7572ae320860a0d5a11fabce356e9
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 2ec38a34f2522448704f1be91d03c62761cafdf6
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760648"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566659"
 ---
 # <a name="class-policyprofilesettings"></a>Class policyprofile:: Settings 
 Einstellungen, die während der Erstellung und Lebensdauer von PolicyProfile verwendet werden
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std::\<shared_ptr mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std:: shared_ptr\<policyprofile:: Observer\>& Observer)  |  Eine Schnittstelle für die Konfiguration des Profils
+öffentliche Einstellungen (Konstante Std:: shared_ptr \<MipContext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std:: shared_ptr \<PolicyProfile::Observer\>& Observer)  |  Eine Schnittstelle für die Konfiguration des Profils
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
-Public Konstante Std:: shared_ptr\<policyprofile:: Observer\>& getobserver () konstant  |  Ruft den Ereignisbeobachter ab.
-Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
-Public Std:: shared_ptr\<httpdelegat\> gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
-öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
-Public Std:: shared_ptr\<taskdispatcherdelegat\> gettaskdispatcherdelegat () konstant  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
-öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr\<taskdispatcherdelegat\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
+Public Konstanten Std:: shared_ptr \<PolicyProfile::Observer\>& getobserver ()-Konstanten  |  Ruft den Ereignisbeobachter ab.
+Public Std:: shared_ptr \<MipContext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
+public std::shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
+public void SetHttpDelegate(const std::shared_ptr\<HttpDelegate\>& httpDelegate)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
+Public Std:: shared_ptr \<TaskDispatcherDelegate\> gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
+öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr \<TaskDispatcherDelegate\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 public void SetSessionId(const std::string& sessionId)  | _Noch nicht dokumentiert._
 public const std::string& GetSessionId() const  | _Noch nicht dokumentiert._
-öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
+öffentliches void setcustomsettings (Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
+Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
 public ~Settings()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings-Funktion
 Eine Schnittstelle für die Konfiguration des Profils
@@ -97,11 +97,11 @@ Parameter:
 Tasks können auf Profil Objekte verweisen, die ihre Zerstörung verhindern, weil taskdispatcher-Warteschlangen nicht freigegeben werden sollten.
   
 ### <a name="setsessionid-function"></a>Funktion "-essionid"
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getsessionid-function"></a>Geungessionid-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="setcustomsettings-function"></a>Setcustomsettings-Funktion
@@ -119,4 +119,4 @@ Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Fea
 **Rückgabe**: Liste von Name-Wert-Paaren
   
 ### <a name="settings-function"></a>~ Settings-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 73c56e5a5e2facf31eeadd59b36197dea8bbecc2
-ms.sourcegitcommit: dc50f9a6c2f66544893278a7fd16dff38eef88c6
+ms.openlocfilehash: e7d1cacde412ab4ca43256309d2f2c53771d94b0
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88563704"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566580"
 ---
 # <a name="functions-c"></a>Funktionen (C++) 
 
@@ -61,9 +61,6 @@ Den Namen des Inhalts Zustands erhalten.
 
 Parameter:  
 * **Aktions Quelle**: der Zustand des Inhalts, an dem gearbeitet wird. 
-
-
-
   
 **Returns**: eine Zeichen folgen Darstellung des Inhalts Zustands.
   
@@ -187,7 +184,7 @@ XOR-Operator (^) für eine Enumeration vom Typ Action
 
 ## <a name="namespace-mipauditmetadatakeys"></a>Namespace MIP:: auditmetadatakeys
 
-Member                        | Beschreibungen                                
+Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: String Sender ()       |  Überwachen von metadatenschlüsseln in der Zeichen folgen Darstellung.
 Public Std:: String-Empfänger ()       | _Noch nicht dokumentiert._
@@ -198,20 +195,20 @@ Public Std:: String LastModifiedDate ()       | _Noch nicht dokumentiert._
 Überwachen von metadatenschlüsseln in der Zeichen folgen Darstellung.
   
 ### <a name="recipients-function"></a>Empfänger Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="lastmodifiedby-function"></a>LastModifiedBy-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="lastmodifieddate-function"></a>LastModifiedDate-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
 
 ## <a name="namespace-miprights"></a>Namespace `mip::rights` 
   
-Member                        | Beschreibungen                                
+Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „owner“ (Besitzer) ab.
 public std::string View()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „view“ (Anzeigen) ab.
@@ -314,7 +311,7 @@ Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
 
 ## <a name="namespace-miproles"></a>Namespace `mip::roles` 
   
-Member                        | Beschreibungen                                
+Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Ruft den Zeichenfolgenbezeichner für die Rolle „viewer“ (Anzeigen) ab.
 public std::string Reviewer()       |  Ruft den Zeichenfolgenbezeichner für die Rolle „reviewer“ (Prüfer) ab.

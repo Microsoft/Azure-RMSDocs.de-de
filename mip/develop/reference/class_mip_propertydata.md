@@ -1,36 +1,36 @@
 ---
 title: PropertyData-Klasse
 description: 'Dokumentiert die PropertyData:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: c1eae1ea75d43f0192a71c2d55a6f5b7f100b3db
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: d1cb95167182edd7ad81c36301c15c6951865190
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760785"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566605"
 ---
 # <a name="class-propertydata"></a>PropertyData-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  | _Noch nicht dokumentiert._
 public const std::string& GetName() const  | _Noch nicht dokumentiert._
 public virtual ~ PropertyData ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getname-function"></a>GetName-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="propertydata-function"></a>~ PropertyData-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.

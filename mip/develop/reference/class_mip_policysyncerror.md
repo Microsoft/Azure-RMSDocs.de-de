@@ -6,19 +6,19 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
-ms.openlocfilehash: 834677cadc540d6729666caf232c56827237b5ae
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: afb0a11008e221470af966be887a0803d6991392
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560856"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566676"
 ---
 # <a name="class-mippolicysyncerror"></a>mip::PolicySyncError-Klasse 
 Ein fehlgeschlagener Versuch, Richtliniendaten zu synchronisieren.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Member
-_Noch nicht dokumentiert._
+## <a name="members"></a>Members
+Noch nicht dokumentiert.

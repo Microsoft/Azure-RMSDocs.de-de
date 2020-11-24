@@ -1,26 +1,26 @@
 ---
 title: 'Class policyengine:: Settings'
 description: 'Dokumentiert die policyengine:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 5e745dd011f9626e031cfcb9c9ae0466e91e2bfe
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 1843256598f4e8c32a80fbba44323fa9eff6729e
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81761072"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566677"
 ---
 # <a name="class-policyenginesettings"></a>Class policyengine:: Settings 
 Definiert die einer PolicyEngine-Klasse zugeordneten Einstellungen.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: String& EngineID, Konst Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  PolicyEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
-öffentliche Einstellungen (Konstante Identität& Identität, Konst Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  PolicyEngine::Settings-Konstruktor zum Erstellen einer neuen Engine
+öffentliche Einstellungen (Konstante Std:: String& EngineID, Konst Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  PolicyEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
+öffentliche Einstellungen (Konstante Identität& Identität, Konst Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  PolicyEngine::Settings-Konstruktor zum Erstellen einer neuen Engine
 public const std::string& GetEngineId() const  |  Ruft die Engine-ID ab.
 public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
 public const Identity& GetIdentity() const  |  Ruft das Identity-Objekt ab.
@@ -28,8 +28,8 @@ public void SetIdentity(const Identity& identity)  |  Legt das Identity-Objekt f
 public const std::string& GetClientData() const  |  Ruft die in den Einstellungen festgelegten Clientdaten ab.
 public void SetClientData(const std::string& clientData)  |  Legt die Zeichenfolge der Clientdaten fest.
 public const std::string& GetLocale() const  |  Gibt die in den Einstellungen festgelegte Gebietseinstellung zurück.
-öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\> \>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
+öffentliches void setcustomsettings (Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
+Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
 public bool isloadsensitivitytypesaktivierte () Konstante  |  Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert sind.
@@ -39,14 +39,18 @@ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  | 
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
 öffentliches void setdelegateduseremail (konstant Std:: String& delegateduseremail)  |  Legt den Delegierten Benutzer fest.
 Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
-öffentliches void setlabelfilter (Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  |  Legt den Bezeichnungs Filter fest.
-Public Konstanten Std:: Vector\<labelfiltertype\>& getlabelfilter () Konstanten  |  Ruft den Bezeichnungs Filter ab.
+öffentliches void setlabelfilter (Konstante Std:: Vector \<LabelFilterType\>& depreseedlabelfilters)  |  Legt den Bezeichnungs Filter fest.
+Public Konstanten Std:: Vector \<LabelFilterType\>& getlabelfilter () Konstanten  |  Ruft die Beschriftungs Filter ab, die über die veraltete Funktion setlabelfilter festgelegt wurden.
+öffentliches void konfigurierte Funktionen (labelfiltertype labelfiltertype, bool aktiviert)  |  Aktiviert oder deaktiviert die-Funktionalität.
+Public Konstanten Std:: map \<LabelFilterType, bool\>& GetConfig redfunktion() Konstanten  |  Ruft die konfigurierte Funktionalität ab.
+öffentliches void setclassifieraktivierte (Classifier classifiertype, bool aktiviert)  |  Aktiviert oder deaktiviert die Unterstützung für Klassifizierungs Typen.
+Public konstant Std:: map \<Classifier, bool\>& getkonfiguriredclassifiersupport () Konstanten  |  Ruft die unterstützten Klassifizierungs Überschreibungen ab.
 öffentliches void setvariabletextmarkingtype (variabletextmarkingtype variabletextmarkingtype)  |  Legt den Typ der Variablen Textmarkierung fest.
 Public variabletextmarkingtype getvariabletextmarkingtype () Konstanten  |  Ruft den Typ der Variablen Textmarkierung ab.
-öffentliches void setauthdelegat (Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
-Public Std:: shared_ptr\<authdelegat\> getauthdelegat () Konstanten  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
+öffentliches void setauthdelegat (Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
+public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Settings-Funktion
 PolicyEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
@@ -229,11 +233,47 @@ Parameter:
 Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen. Wenn nicht festgelegt, werden "hyokprotection" und "doublekeyprotection" gefiltert.
   
 ### <a name="getlabelfilter-function"></a>Getlabelfilter-Funktion
-Ruft den Bezeichnungs Filter ab.
+Ruft die Beschriftungs Filter ab, die über die veraltete Funktion setlabelfilter festgelegt wurden.
 
   
 **Gibt Folgendes zurück**: der Bezeichnungs Filter.
 Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.
+  
+### <a name="configurefunctionality-function"></a>Funktion "konfigurier Funktion"
+Aktiviert oder deaktiviert die-Funktionalität.
+
+Parameter:  
+* **labelfiltertype**: der Funktionstyp. 
+
+
+* **aktiviert**: true zum Aktivieren, false zum Deaktivieren
+
+
+Hyokprotection, doublekeyprotection, doublekeyuserdefinedprotection sind standardmäßig deaktiviert und müssen aktiviert werden.
+  
+### <a name="getconfiguredfunctionality-function"></a>Getkonfiguriredfunction-Funktion
+Ruft die konfigurierte Funktionalität ab.
+
+  
+**Gibt Folgendes zurück**: eine Zuordnung der Typen zu einem booleschen Wert, der angibt, ob er aktiviert ist.
+  
+### <a name="setclassifierenabled-function"></a>Setclassifieraktivierte Funktion
+Aktiviert oder deaktiviert die Unterstützung für Klassifizierungs Typen.
+
+Parameter:  
+* **classifiertype**: der Klassifizierungstyp. 
+
+
+* **aktiviert**: true zum Aktivieren, false zum Deaktivieren
+
+
+Nur "sensitiveinformation classifers" ist standardmäßig aktiviert.
+  
+### <a name="getconfiguredclassifiersupport-function"></a>Getkonfiguriredclassifiersupport-Funktion
+Ruft die unterstützten Klassifizierungs Überschreibungen ab.
+
+  
+**Gibt Folgendes zurück**: eine Zuordnung der Typen zu einem booleschen Wert, der angibt, ob Sie mit Unterstützung überschrieben wurden.
   
 ### <a name="setvariabletextmarkingtype-function"></a>Setvariabletextmarkingtype-Funktion
 Legt den Typ der Variablen Textmarkierung fest.
@@ -247,7 +287,7 @@ Parameter:
 Ruft den Typ der Variablen Textmarkierung ab.
 
   
-**Gibt**folgenden Wert zurück: den Typ der Variablen Textmarkierung.
+**Gibt** folgenden Wert zurück: den Typ der Variablen Textmarkierung.
   
 ### <a name="setauthdelegate-function"></a>Setauthdelegatfunktion
 Legen Sie den Autorisierungs Delegaten für die Engine fest.

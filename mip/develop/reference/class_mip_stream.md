@@ -1,23 +1,23 @@
 ---
 title: Klassen Datenstrom
 description: 'Dokumentiert die Stream:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: b2c8be3d6997985b62933d40bf855e48a20ca928
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: a370d6917306f2865c1d91eb7fa90c2880497a04
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764338"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566623"
 ---
 # <a name="class-stream"></a>Klassen Datenstrom 
 Eine Klasse, die die Schnittstelle zwischen dem MIP SDK und dem streambasierten Inhalt definiert.
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Wird in einen Puffer aus dem Stream eingelesen.
 public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Wird aus einem Puffer in den Stream geschrieben.
@@ -29,7 +29,7 @@ public int64_t Position()  |  Ruft die aktuelle Position im Stream ab.
 public int64_t Size()  |  Ruft den Umfang des Inhalts im Stream ab.
 public void Size(int64_t value)  |  Legt die Größe des Streams fest.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="read-function"></a>Read-Funktion
 Wird in einen Puffer aus dem Stream eingelesen.

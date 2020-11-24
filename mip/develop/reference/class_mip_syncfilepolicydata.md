@@ -1,51 +1,51 @@
 ---
 title: syncfilepolicydata-Klasse
 description: 'Dokumentiert die syncfilepolicydata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 04/16/2020
-ms.openlocfilehash: 516b6ea2e3282ac17e4a17da979285ea23d76d05
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.author: mbaldwin
+ms.date: 09/21/2020
+ms.openlocfilehash: 4da84cb31db961f81fe287d31cf98d84a4ff4c08
+ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764326"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "95566557"
 ---
 # <a name="class-syncfilepolicydata"></a>syncfilepolicydata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten labelgroupdata * getlabelgroupdata () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std::\<Vector Std:: unique_ptr\<policypackagedata\> \>& getpoliciespackagedata () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector \<std::unique_ptr\<PolicyPackageData\> \>& getpoliciespackagedata () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getupn () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: unordered_map\<Std:: String, Std:: String\>& getclassificationlist () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: shared_ptr \<ClassifierUniqueIds\>& getclassificationlist () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getuserobjectid () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ syncfilepolicydata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getlabelgroupdata-function"></a>Getlabelgroupdata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getpoliciespackagedata-function"></a>Getpoliciespackagedata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getupn-function"></a>Getupn-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getclassificationlist-function"></a>Getclassificationlist-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="getuserobjectid-function"></a>Getuserobjectid-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
 
   
 ### <a name="syncfilepolicydata-function"></a>~ Syncfilepolicydata-Funktion
-_Noch nicht dokumentiert._
+Noch nicht dokumentiert.
