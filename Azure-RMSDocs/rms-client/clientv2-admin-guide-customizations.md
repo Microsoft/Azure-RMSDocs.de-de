@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edfd5a5f309228c7f75a895e40826b65af74e1d7
-ms.sourcegitcommit: 04b9d7ee1ce8b6662ceda5a13b7b0d5630c91d28
+ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
+ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "95568540"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96034386"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -171,6 +171,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](/powershel
 |Pfilesupportedextensions|[Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
+|Removeexternalmarkingfromcustomlayouts | [Entfernen externer Inhalts Markierungen aus benutzerdefinierten Layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
 |ReportAnIssueLink|[Add "Report an Issue" for users ("Problem melden" für Benutzer hinzufügen)](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -462,19 +463,14 @@ Sie benötigen dann mindestens eine weitere erweiterte Clienteinstellung, **Exte
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Konfigurieren von ExternalContentMarkingToRemove
 
-Wenn Sie den Zeichenfolgenwert für den Schlüssel **ExternalContentMarkingToRemove** angeben, stehen drei Optionen zur Verfügung, die reguläre Ausdrücke verwenden:
+Wenn Sie den Zeichen folgen Wert für den **externalcontentmarkingtoremove** -Schlüssel angeben, haben Sie drei Optionen, die reguläre Ausdrücke verwenden. Verwenden Sie für jedes dieser Szenarien die Syntax, die in der Spalte **Beispiel Wert** in der folgenden Tabelle angezeigt wird:
 
-- Partielle Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
-
-    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten diese Kopf- oder Fußzeilen vollständig entfernen. Geben Sie den Wert `*TEXT*` an.
-
-- Vollständige Übereinstimmung, um nur bestimmte Wörter aus der Kopf- oder Fußzeile zu entfernen.
-
-    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten nur das Wort **TEXT** entfernen, wodurch die Zeichenfolge der Kopf- oder Fußzeile **TO REMOVE** entspricht. Geben Sie den Wert `TEXT ` an.
-
-- Vollständige Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
-
-    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten die Kopf- oder Fußzeilen entfernen, die genau diese Zeichenfolge enthalten. Geben Sie den Wert `^TEXT TO REMOVE$` an.
+|Option  |Beispiel Beschreibung |Beispielwert|
+|---------|---------|---------|
+|**Teilweise Übereinstimmung, um alles in der Kopf-oder Fußzeile zu entfernen**     | Die Kopf-oder Fußzeilen enthalten den Zeichen folgen Text, der **entfernt werden soll**, und Sie möchten diese Kopf-oder Fußzeilen vollständig entfernen.   |`*TEXT*`  | 
+|**Complete Match, um nur bestimmte Wörter in der Kopf-oder Fußzeile zu entfernen**     |    Die Kopf-oder Fußzeilen enthalten den Zeichen folgen Text, der **entfernt werden soll**, und Sie möchten nur den Word- **Text** entfernen, sodass die Kopf-oder Fußzeilen Zeichenfolge **entfernt werden soll**.      |`TEXT ` |
+|**Vollständige Abgleich zum Entfernen aller Elemente in der Kopf-oder Fußzeile**     |Ihre Kopf-oder Fußzeilen haben den Zeichen folgen **Text, der entfernt werden soll**. Sie möchten die Kopf- oder Fußzeilen entfernen, die genau diese Zeichenfolge enthalten.         |`^TEXT TO REMOVE$`|
+|     |         | |
 
 
 Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß- und Kleinschreibung. Die maximale Zeichen folgen Länge beträgt 255 Zeichen und darf keine Leerzeichen enthalten. 
@@ -495,7 +491,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="multiline-headers-or-footers"></a>Mehrzeilige Kopf- oder Fußzeilen
 
-Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstellen Sie einen Schlüssel und einen Wert für jede Zeile. Angenommen, folgende Fußzeile mit zwei Zeilen ist vorhanden:
+Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstellen Sie einen Schlüssel und einen Wert für jede Zeile. Wenn Sie z. b. die folgende Fußzeile mit zwei Zeilen haben:
 
 **The file is classified as Confidential**
 
@@ -517,13 +513,20 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>Optimierung für PowerPoint
 
-In PowerPoint werden Fußzeilen als Formen implementiert. Wenn Sie vermeiden möchten, dass Formen entfernt werden, die den angegeben Text enthalten, jedoch keine Kopf- oder Fußzeilen sind, verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **PowerPointShapeNameToRemove**. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
+Kopf-und Fußzeilen in PowerPoint werden als Formen implementiert. 
+
+Verwenden Sie eine zusätzliche erweiterte Client Einstellung mit dem Namen **powerpointshapenametoremove**, um das Entfernen von Formen zu vermeiden, die den von Ihnen angegebenen Text enthalten, aber *keine* Kopf-oder Fußzeilen sind. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
 
 - Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
 
 - Wenn dieser Wert angegeben wird, werden nur die Formen, die den Form Namen Kriterien entsprechen, sowie Text, der mit der mit **externalcontentmarkingtoremove** bereitgestellten Zeichenfolge übereinstimmt, entfernt.
 
-**So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:**
+Wenn Sie benutzerdefinierte Layouts in PowerPoint konfiguriert haben, ist das Standardverhalten, dass die in benutzerdefinierten Layouts gefundenen Formen ignoriert werden. Um externe Inhalts Markierungen explizit aus den benutzerdefinierten Layouts zu entfernen, legen Sie die erweiterte **removeexternalmarkingfromcustomlayouts** -Eigenschaft auf **true fest.**
+
+> [!NOTE]
+> PowerPoint-Shape-Typen, die für die erweiterten Client Einstellungen unterstützt werden, die in diesem Abschnitt beschrieben werden, sind: **msotextbox,** **msotexteffect** und **msoplachalter** .
+>
+##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Suchen Sie den Namen der Form, die Sie als Kopf-oder Fußzeile verwenden.
 
 1. Zeigen Sie in PowerPoint den Bereich **Auswahl** an: **Format** > **Anordnen** > **Auswahlbereich**.
 
@@ -555,6 +558,22 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
+```
+
+##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>Entfernen externer Inhalts Markierungen aus benutzerdefinierten Layouts in PowerPoint
+
+Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Standardmäßig werden durch die Logik zum Entfernen externer Inhalts Markierungen benutzerdefinierte, in PowerPoint konfigurierte Layouts ignoriert. Um diese Logik auf benutzerdefinierte Layouts auszuweiten, legen Sie die erweiterte **removeexternalmarkingfromcustomlayouts** -Eigenschaft auf **true** fest.
+
+- Schlüssel: **removeexternalmarkingfromcustomlayouts**
+
+- Wert: **true**
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
 ```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer
@@ -1482,7 +1501,7 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |BESCHREIBUNG  |
+|Parameter  |Beschreibung  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
 | `${MatchedLabelName}`      | Die **Bezeichnung** "Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
