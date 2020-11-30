@@ -14,11 +14,11 @@ ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 635ab25150dd18e50da8b93b4f0ec4c145320e19
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568474"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316805"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 266ff1c9ff09b9b9b1a2133601f5adf44a4c7d4a
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: a1833ca3bb60030414213076f68ca78ddb5534af
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568564"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316244"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Voraussetzungen für das Installieren und Bereitstellen des Azure Information Protection-Scanners für einheitliche Bezeichnungen
 
@@ -67,7 +67,7 @@ Wenn Sie dieses Konto aufgrund ihrer Organisations Richtlinien nicht synchronisi
 
 Für dieses Dienstkonto gelten die folgenden Anforderungen:
 
-|Anforderung  |Details  |
+|Anforderungen  |Details  |
 |---------|---------|
 |**Lokale** Benutzerrechte Zuweisung anmelden     |Erforderlich, um die Überprüfung zu installieren und zu konfigurieren, aber nicht zum Ausführen von Scans erforderlich.  </br></br>Nachdem Sie sich vergewissert haben, dass die Überprüfung Dateien ermitteln, klassifizieren und schützen kann, können Sie diese direkt aus dem Dienst Konto entfernen.  </br></br>Wenn diese Berechtigung auch für kurze Zeit nicht möglich ist, ist dies aufgrund ihrer Organisations Richtlinien nicht möglich. Weitere Informationen hierzu finden Sie unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).         |
 |**Anmeldung als Dienst** für die Zuweisung von Benutzerrechten.     |  Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich.        |
@@ -152,7 +152,7 @@ Das *Scanner-Konto* ist das Konto, das Sie im **delegateduser** -Parameter des C
 
 Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sehen Sie sich die [Anweisungen für alternative Konfigurationen unten an](#restriction-your-labels-do-not-have-auto-labeling-conditions) .
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels)
 - [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](/microsoft-365/compliance/apply-sensitivity-label-automatically)
@@ -163,11 +163,13 @@ Weitere Informationen finden Sie unter
 
 Stellen Sie sicher, dass Ihr SharePoint-Server die folgenden Anforderungen erfüllt, um SharePoint-Dokument Bibliotheken und-Ordner zu überprüfen:
 
-- **Unterstützte Versionen.** Folgende Versionen werden unterstützt: SharePoint 2019, SharePoint 2016 und SharePoint 2013. Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.
-
-- **Versionsverwaltung.** Wenn Sie die [Versions](/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein.  
-
-- **Große SharePoint-Farmen.** Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. Weitere Informationen finden Sie unter [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+|Anforderung  |BESCHREIBUNG  |
+|---------|---------|
+|**Unterstützte Versionen** | Folgende Versionen werden unterstützt: SharePoint 2019, SharePoint 2016 und SharePoint 2013. <br> Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.     |
+|**Versionsverwaltung**     |  Wenn Sie die [Versions](/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. <br><br>Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein.       |
+|**Große SharePoint-Farmen** |Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. <br><br>Weitere Informationen finden Sie unter [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server). |
+|**Lange Dateipfade**  |Wenn Sie über lange Dateipfade in SharePoint verfügen, stellen Sie sicher, dass der [HttpRuntime. maxurllength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) -Wert des SharePoint-Servers größer als die Standard-260-Zeichen ist. <br><br>Weitere Informationen finden Sie unter [vermeiden von Überprüfungs Timeouts in SharePoint](rms-client/clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint). | 
+| | |
 
 ## <a name="microsoft-office-requirements"></a>Microsoft Office Anforderungen
 
@@ -243,11 +245,21 @@ Weitere Informationen zum Verwalten von SharePoint-Richtlinien Ebenen finden Sie
 
 Obwohl der Unified Label-Client keinen Schutz ohne Internetverbindung anwenden kann, kann der Scanner weiterhin Bezeichnungen auf der Grundlage importierter Richtlinien anwenden.
 
-Führen Sie die folgenden Schritte aus, um einen getrennten Computer zu unterstützen:
+Verwenden Sie eine der folgenden Methoden, um einen getrennten Computer zu unterstützen:
+
+- [Verwenden des Azure-Portal](#use-the-azure-portal-with-a-disconnected-computer) (empfohlen, wenn möglich)
+
+- [Verwenden von PowerShell](#use-powershell-with-a-disconnected-computer)
+
+#### <a name="use-the-azure-portal-with-a-disconnected-computer"></a>Verwenden des Azure-Portal mit einem getrennten Computer
+
+Führen Sie die folgenden Schritte aus, um einen vom Azure-Portal getrennten Computer zu unterstützen:
 
 1.  Konfigurieren Sie Bezeichnungen in der Richtlinie, und verwenden Sie dann das [Verfahren zur Unterstützung von getrennten Computern](rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers) , um die Offline Klassifizierung und-Bezeichnung zu aktivieren
 
-1. Aktivieren Sie die Offline Verwaltung für Inhalts Scanaufträge:
+1. Aktivieren Sie die Offline Verwaltung für Inhalts-und Netzwerk Scanaufträge wie folgt:
+
+    **Aktivieren Sie die Offline Verwaltung für Inhalts Scanaufträge:**
 
     1. Legen Sie den Scanner mithilfe des Cmdlets [Set-aipscannerconfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) im **Offline** Modus fest.
 
@@ -259,7 +271,7 @@ Führen Sie die folgenden Schritte aus, um einen getrennten Computer zu unterst�
     
     Die Ergebnisse für Offline-Inhalts Scanaufträge befinden sich unter: **%LocalAppData%\microsoft\msip\scanner\reports** .
     
-1. Offline Verwaltung von Netzwerk Scan Aufträgen aktivieren:
+    **Offline Verwaltung von Netzwerk Scan Aufträgen aktivieren:**
 
     1. Legen Sie mithilfe des Cmdlets [Set-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) den Netzwerk Ermittlungsdienst für die Funktion im Offline Modus fest.
 
@@ -270,6 +282,37 @@ Führen Sie die folgenden Schritte aus, um einen getrennten Computer zu unterst�
     1.  Importieren Sie den Netzwerk Scanauftrag mithilfe der Datei, die mit dem Cluster Namen übereinstimmt, mithilfe des [Import-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/import-mipnetworkdiscoveryconfiguration) -Cmdlets.  
     
     Die Ergebnisse für Offline-Netzwerk Scanaufträge befinden sich unter: **%LocalAppData%\microsoft\msip\scanner\reports** .
+
+#### <a name="use-powershell-with-a-disconnected-computer"></a>Verwenden von PowerShell mit einem getrennten Computer
+
+Führen Sie die folgenden Schritte aus, um einen nicht verbundenen Computer nur mithilfe von PowerShell zu unterstützen:
+
+**Verwalten Sie Ihre Inhalts Scanaufträge nur mit PowerShell:**
+
+1. Legen Sie den Scanner mithilfe des Cmdlets [Set-aipscannerconfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) im **Offline** Modus fest.
+
+1. Erstellen Sie mit dem Cmdlet " [Set-aipscannercontentscanjob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob) " einen neuen inhaltscanauftrag, und verwenden Sie dabei den obligatorischen `-Enforce On` Parameter.
+
+1. Fügen Sie Ihre Depots mithilfe des Cmdlets [Add-aipscannerrepository](/powershell/module/azureinformationprotection/add-aipscannerrepository) mit dem Pfad zu dem Repository hinzu, das Sie hinzufügen möchten.
+
+    > [!TIP]
+    > Um zu verhindern, dass das Repository Einstellungen aus Ihrem inhaltscanauftrag erbt, fügen Sie den `OverrideContentScanJob On` Parameter sowie die Werte für zusätzliche Einstellungen hinzu.
+    >
+    > Um Details für ein vorhandenes Repository zu bearbeiten, verwenden Sie den Befehl [Set-aipscannerrepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) .
+    >
+ 
+1. Verwenden Sie die Cmdlets [Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob) und [Get-aipscannerrepository](/powershell/module/azureinformationprotection/get-aipscannerrepository) , um Informationen zu den aktuellen Einstellungen Ihres Inhalts Scan Auftrags zurückzugeben. 
+
+1. Verwenden Sie den Befehl [Set-aipscannerrepository](/powershell/module/azureinformationprotection/set-aipscannerrepository) , um Details für ein vorhandenes Repository zu aktualisieren.
+
+1. Führen Sie den Content Scan-Auftrag mit dem Cmdlet [Start-aipscan](/powershell/module/azureinformationprotection/start-aipscan) sofort aus, wenn dies erforderlich ist. 
+
+    Die Ergebnisse für Offline-Inhalts Scanaufträge befinden sich unter: **%LocalAppData%\microsoft\msip\scanner\reports** .
+
+1. Wenn Sie ein Repository oder einen gesamten inhaltscanauftrag entfernen müssen, verwenden Sie die folgenden Cmdlets:
+
+    - [Remove-aipscannercontentscanjob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+    - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Einschränkung: Die Sysadmin-Rolle kann nicht gewährt werden oder Datenbanken müssen manuell erstellt und konfiguriert werden.
 

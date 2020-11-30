@@ -12,11 +12,11 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568162"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316414"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 

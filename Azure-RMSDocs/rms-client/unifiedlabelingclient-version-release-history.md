@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b9eaa35d1fde58863a9f9ef9c5160a2bb103d031
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: ce85af63a70bf6ee4119e5c5fb22a797fb27df16
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568468"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316788"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -60,12 +60,67 @@ Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
 
 Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterstützte Version des Azure Information Protection Unified Bezeichnung-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
 
+Die neueste Version von Azure Information Protection befindet sich derzeit in der Vorschau Phase. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+
 > [!NOTE]
 > Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## <a name="version-291010-public-preview"></a>Version 2.9.101.0 (öffentliche Vorschau)
+
+Unified Bezeichnung Scanner-Version 2.9.101.0
+
+**Veröffentlicht** 11/30/2020
+
+Die folgenden neuen Features wurden für den lokalen [Scanner für die einheitliche Bezeichnung](../deploy-aip-scanner.md) in Version 2.9.101.0 veröffentlicht:
+
+- [PowerShell-Unterstützung für nicht verbundene Scanner-Server](#powershell-support-for-disconnected-scanner-servers)
+- [Unterstützung für NFS-Depots in Inhalts Scan Aufträgen](#support-for-nfs-repositories-in-content-scan-jobs)
+- [Unterstützung für sensible Informationstypen hinzugefügt](#added-support-for-sensitive-information-types)
+### <a name="powershell-support-for-disconnected-scanner-servers"></a>PowerShell-Unterstützung für nicht verbundene Scanner-Server
+Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unterstützt jetzt die Verwaltung von Inhalts Überprüfungs Aufträgen für Scanner-Server, die keine Verbindung mit dem Internet herstellen können, über PowerShell.
+
+Zur Unterstützung von getrennten Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
+
+|Cmdlet  |BESCHREIBUNG  |
+|---------|---------|
+|**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Fügt ihrem inhaltscanauftrag ein neues Repository hinzu.        |
+|**[Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Ruft Details zum inhaltscanauftrag ab.   |
+|**[Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)**     |  Ruft Details zu den für Ihren inhaltscanauftrag definierten Depots ab.       |
+|**[Remove-aipscannercontentscanjob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)**       |    Löscht ihren inhaltscanauftrag.     |
+| **[Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)**    |   Entfernt ein Repository aus Ihrem inhaltscanauftrag.      |
+|**[Set-aipscannercontentscanjob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)**     |   Definiert Einstellungen für Ihren inhaltscanauftrag.      |
+**[Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)**     |   Definiert die Einstellungen für ein vorhandenes Repository in Ihrem inhaltscanauftrag.      |
+| | |
+
+
+Das Cmdlet " [**Set-mipnetworkdiscovery**](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery) " wurde ebenfalls hinzugefügt, um zusätzliche Unterstützung zu bieten, sodass Sie die Installationseinstellungen für den Netzwerk Ermittlungsdienst über PowerShell aktualisieren können.
+
+Weitere Informationen finden Sie unter [Wenn der Überprüfungs Server keine Internet Konnektivität haben kann](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) und [den Scanner konfigurieren](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
+
+### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Unterstützung für NFS-Depots in Inhalts Scan Aufträgen
+
+Nun können Sie Ihren Inhalts Überprüfungs Aufträgen zusätzlich zu SMB-Dateifreigaben und SharePoint-Depots NFS-Repository hinzufügen.
+
+Weitere Informationen finden Sie unter [Erstellen eines Inhalts Scan Auftrags](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
+
+### <a name="added-support-for-sensitive-information-types"></a>Unterstützung für sensible Informationstypen hinzugefügt
+Wir haben Unterstützung für zusätzliche vertrauliche Informationstypen in Azure Information Protection hinzugefügt, wie z. b. die **Geschäftsnummer von Australien,** die **australische Firmennummer** oder die Personalausweisnummer **.** 
+
+Weitere Informationen finden Sie in den [Entitäts Definitionen für sensible Informationen](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in der Microsoft 365-Dokumentation.
+### <a name="fixes-and-improvements"></a>Korrekturen und Verbesserungen
+
+Die folgenden Korrekturen wurden in Version 2.9.101.0 des [Azure Information Protection Unified-Beschriftungs Scanners](../deploy-aip-scanner.md)übermittelt:
+
+- Unterstützung für Bindestriche ( **-** ) in [Scanner-Datenbanknamen](../deploy-aip-scanner-prereqs.md) hinzugefügt
+- Updates in Berichten für den Fall, dass die Option " **[auf Inhalt basierende](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** Bezeichnungs Dateien" auf **Off** festgelegt ist
+- [Verbesserter Arbeitsspeicher Verbrauch](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) für eine große Anzahl von Informationstyp Übereinstimmungen
+- Unterstützung für [lokale SharePoint-](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) Pfade, die mit einem Schrägstrich ( **/** ) enden
+- Erweiterte SharePoint-Scan [Geschwindigkeit](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Unterstützung für das [vermeiden eines Timeouts](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) beim Scannen eines SharePoint-Servers.
 
 ## <a name="version-28850"></a>Version 2.8.85.0
 
@@ -75,11 +130,11 @@ Unified-Beschriftungs Scanner und Client Version 2.8.85.0
 
 Diese Version enthält die folgenden neuen Features, Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner und-Client:
 
-- [Neue Features für den Unified-Beschriftungs Scanner](#new-features-for-the-unified-labeling-scanner)
-- [Neue Features für den Unified-Bezeichnungs Client](#new-features-for-the-unified-labeling-client)
-- [Korrekturen und Verbesserungen](#fixes-and-improvements)
+- [Neue Features für den Unified-Beschriftungs Scanner](#new-features-for-the-unified-labeling-scanner-version-28850)
+- [Neue Features für den Unified-Bezeichnungs Client](#new-features-for-the-unified-labeling-client-version-28850)
+- [Korrekturen und Verbesserungen](#fixes-and-improvements-version-28850)
 
-### <a name="new-features-for-the-unified-labeling-scanner"></a>Neue Features für den Unified-Beschriftungs Scanner
+### <a name="new-features-for-the-unified-labeling-scanner-version-28850"></a>Neue Features für den Unified-Bezeichnungs Scanner, Version 2.8.85.0
 
 - [Optionale vollständige neuänderungen für erkannte Änderungen](#optional-full-rescans-for-changes-detected)
 - [Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)
@@ -118,7 +173,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 **So verwenden Sie den Netzwerk Ermittlungsdienst**
 
-1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie unter
+1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie unter:
     - [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Erstellen eines Scanner-Clusters](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
     
@@ -155,7 +210,7 @@ Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 |[**Deinstallation von mipnetworkdiscovery**](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)     |  Deinstalliert den Netzwerk Ermittlungsdienst.       |
 | | |
 
-### <a name="new-features-for-the-unified-labeling-client"></a>Neue Features für den Unified-Bezeichnungs Client
+### <a name="new-features-for-the-unified-labeling-client-version-28850"></a>Neue Features für den Unified-Bezeichnungs Client, Version 2.8.85.0
 
 - [Anpassungen von Administratoren für AIP-Popups in Outlook](#administrator-customizations-for-aip-popups-in-outlook) 
 - [Administrator Anpassungen für entsprechende Eingabe Aufforderungen](#administrator-customizations-for-justification-prompts) 
@@ -184,17 +239,17 @@ Weitere Informationen finden Sie unter [zugreifen](../audit-logs.md#access-audit
 
 Azure Information Protection unterstützt jetzt eine DKE-vorlagenbasierte (Double Key Encryption) vorlagenbasierte Bezeichnung in der Überprüfung sowie die Verwendung des Datei-Explorers und von PowerShell.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-implement-tenant-key.md)
 - [Doppelte Schlüssel Verschlüsselung](/microsoft-365/compliance/double-key-encryption) in den Microsoft 365-Dokumentation
 
-### <a name="fixes-and-improvements"></a>Korrekturen und Verbesserungen
+### <a name="fixes-and-improvements-version-28850"></a>Korrekturen und Verbesserungen, Version 2.8.85.0
 
-- [Korrekturen und Verbesserungen bei Scanner](#azure-information-protection-scanner-fixed-issues)
-- [Client Korrekturen und-Verbesserungen](#azure-information-protection-client-fixed-issues)
+- [Korrekturen und Verbesserungen bei Scanner](#azure-information-protection-scanner-fixed-issues-version-28850)
+- [Client Korrekturen und-Verbesserungen](#azure-information-protection-client-fixed-issues-version-28850)
 
-#### <a name="azure-information-protection-scanner-fixed-issues"></a>Behobene Probleme mit Azure Information Protection Scanner
+#### <a name="azure-information-protection-scanner-fixed-issues-version-28850"></a>Behobene Probleme mit Azure Information Protection Scanner, Version 2.8.85.0
 
 Die folgenden Korrekturen wurden in Version 2.8.85.0 des Azure Information Protection Unified-Beschriftungs Scanners übermittelt:
 
@@ -203,7 +258,7 @@ Die folgenden Korrekturen wurden in Version 2.8.85.0 des Azure Information Prote
 - Der AIP-Scanner unterstützt jetzt [SharePoint](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) -Dateien mit einem Punkt im Pfad, aber keine Erweiterung. Beispielsweise wird eine Datei mit dem Pfad `https://sharepoint.contoso.com/shared documents/meeting-notes` ohne Erweiterung nun erfolgreich gescannt.
 - Der AIP-Scanner unterstützt jetzt [benutzerdefinierte vertrauliche Informationstypen](../deploy-aip-scanner-configure-install.md#identify-all-custom-conditions-and-known-sensitive-information-types) , die im Microsoft Security and Compliance Center erstellt wurden und keiner Richtlinie angehören.
 
-#### <a name="azure-information-protection-client-fixed-issues"></a>Behobene Probleme mit Azure Information Protection Clients
+#### <a name="azure-information-protection-client-fixed-issues-version-28850"></a>Probleme bei der Azure Information Protection Clients behoben, Version 2.8.85.0
 
 Die folgenden Korrekturen wurden in Version 2.8.85.0 des Azure Information Protection Unified-Bezeichnung Client übermittelt:
 
@@ -281,7 +336,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
 
@@ -299,6 +354,7 @@ Kunden, die über ein TLS-Setup verfügen, das TLS 1,2 nicht unterstützt, müss
 Weitere Informationen zu den Anforderungen finden Sie unter [Firewalls und Netzwerkinfrastruktur Anforderungen](../requirements.md#firewalls-and-network-infrastructure).
 
 **Korrekturen und Verbesserungen** 
+
 - SQL-Verbesserungen für Scanner für
     - Leistung
     - Dateien mit einer großen Anzahl von Informationstypen

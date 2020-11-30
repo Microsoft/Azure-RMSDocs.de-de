@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: cfe396cea14effdd77b912b32c7c64296806b4be
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568477"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316227"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Byok-Details (Bring your own Key) für Azure Information Protection
 
@@ -300,7 +300,7 @@ Führen Sie den folgenden Befehl aus, um den Azure Rights Management-Dienst Prin
 az keyvault role assignment create --hsm-name "ContosoMHSM" --role "Managed HSM Crypto User" --assignee 00000012-0000-0000-c000-000000000000 --scope /keys/contosomhsmkey
 ```
 
-Hierbei gilt:
+Hierbei gilt Folgendes:
 - **00000012-0000-0000-C000-000000000000** ist die GUID, die in diesem Befehl verwendet werden soll.
 - "" Ist ein Beispiel für einen **HSM-** Namen. Wenn Sie diesen Befehl ausführen, ersetzen Sie diesen Wert durch ihren eigenen HSM-Namen.
 

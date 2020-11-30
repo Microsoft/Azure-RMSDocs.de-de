@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.date: 07/29/2020
 ms.author: tommos
 ms.openlocfilehash: fdbcf9d618612021a971af34380b65dc062c2802
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567916"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316533"
 ---
 # <a name="microsoft-information-protection-sdk---proxy-support"></a>Microsoft Information Protection SDK-Proxy Unterstützung
 
@@ -74,4 +74,4 @@ Wenn ein benutzerdefinierter HTTP-Delegat keine Option ist, muss der Proxy umgan
 | Schutzdienst | https://api.aadrm.com                                                                                                                                                   |
 | Richtlinie             | https:// \* . Protection.Outlook.com                                                                                                                                       |
 | Überwachungsprotokollierung      | https:// \* . Events.Data.Microsoft.com, https:// \* . Aria.Microsoft.com (nur IOS)                                                                                          |
-| Authentication     | [Lesen Sie Azure AD Dokumentation.](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |
+| Authentifizierung     | [Lesen Sie Azure AD Dokumentation.](/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints) |

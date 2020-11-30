@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 33e6d4205fbfc2c168514fc30cc20acbd9d8578f
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568552"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316268"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Was ist der Azure Information Protection-Scanner für einheitliche Bezeichnungen?
 
@@ -32,7 +32,7 @@ Verwenden Sie die Informationen in diesem Abschnitt, um sich über den Azure Inf
 
 Der AIP-Scanner wird als Dienst unter Windows Server ausgeführt und ermöglicht das ermitteln, klassifizieren und schützen von Dateien in den folgenden Daten speichern:
 
-- **UNC-Pfade** für Netzwerkfreigaben, die das SMB-Protokoll (Server Message Block) verwenden.
+- **UNC-Pfade** für Netzwerkfreigaben, die das SMB-oder NFS-Protokoll (Vorschau) verwenden.
 
 - **SharePoint-Dokument Bibliotheken und-Ordner** für SharePoint Server 2019 über SharePoint Server 2013. SharePoint 2010 wird auch für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
 

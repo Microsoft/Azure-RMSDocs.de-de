@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren und Konfigurieren des Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 11/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e6e90124dfae07e4ccc02a1d047fc15627b7b35f
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: de4c71b6cb7b6836d6757c7cd74bc21e30999a38
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568480"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316567"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -238,6 +238,7 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
     |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Eine der folgenden Möglichkeiten: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
     |**Bestimmte SharePoint-Bibliothek**     | Eine der folgenden Möglichkeiten: <br />- `http://<SharePoint server name>/<library name>` <br />- `http://SharePoint server name>/.../<library name>`       |
     |**Bestimmter SharePoint-Ordner**     | `http://<SharePoint server name>/.../<folder name>`        |
+    | | |
     
 
 1. Wiederholen Sie die vorherigen Schritte, um beliebig viele Depots hinzuzufügen.
@@ -262,7 +263,7 @@ Nachdem Sie [den Azure Information Protection Scanner im Azure-Portal konfigurie
 
 1. Führen Sie das Cmdlet [install-aipscanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus, und geben Sie dabei die SQL Server Instanz an, auf der eine Datenbank für den Azure Information Protection Scanner erstellt werden soll, und den Namen des scannerclusters, den Sie im vorherigen Abschnitt angegeben haben: 
     
-    ```
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
     
@@ -473,15 +474,17 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 
 In diesem Abschnitt werden die für den Azure Information Protection Scanner unterstützten PowerShell-Cmdlets aufgeführt.
 
-> [!NOTE]
-> Der Azure Information Protection Scanner wird vom Azure-Portal konfiguriert. Aus diesem Grund sind Cmdlets, die in früheren Versionen verwendet wurden, um Daten Depots und die Liste der überprüften Dateitypen zu konfigurieren, mittlerweile veraltet.
-> 
-
 Zu den unterstützten Cmdlets für den Scanner gehören:
+
+- [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)
 
 - [Export-aiplogs](/powershell/module/azureinformationprotection/Export-AIPLogs)
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
+
+- [Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)
+
+- [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/get-aipscannerrepository)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
@@ -493,6 +496,8 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 
 - [Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
+- [Set-mipnetworkdiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
+
 - [Import-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/Import-MIPNetworkDiscoveryConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
@@ -503,6 +508,10 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
 
+- [Set-aipscannercontentscanjob](/powershell/module/azureinformationprotection/set-aipscannercontentscanjob)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
+
 - [Set-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
@@ -512,6 +521,10 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 - [Start-mipnetworkdiscovery](/powershell/module/azureinformationprotection/Start-MIPNetworkDiscovery)
 
 - ["Beendet-aipscan"](/powershell/module/azureinformationprotection/Stop-AIPScan)
+
+- [Remove-aipscannercontentscanjob](/powershell/module/azureinformationprotection/remove-aipscannercontentscanjob)
+
+- [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/remove-aipscannerrepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb085aa7de8555594d33bc0b2e0ea4d06034aa2
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: fcdfc020061428959e2137a46347b49b150ad73a
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568561"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316703"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -61,9 +61,9 @@ Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es kei
     
    - Für alle Benutzer in der ersten externen Organisation: Klicken Sie auf **Geben Sie Details ein**, und geben Sie im Mandanten der Organisation den Namen einer Domain ein. Beispiel: fabrikam.com.
     
-   - Für die Gruppe in der zweiten externen Organisation: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispiel: sales@contoso.com.
+   - Für die Gruppe in der zweiten externen Organisation: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispielsweise sales@contoso.com.
     
-   - Für den Benutzer ohne Azure AD-Konto: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse des Benutzers ein. Beispiel: bengi.turan@gmail.com. 
+   - Für den Benutzer ohne Azure AD-Konto: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse des Benutzers ein. Beispielsweise bengi.turan@gmail.com. 
 
 4. Wenn Sie allen Benutzern dieselben Berechtigungen erteilen möchten: Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** die Berechtigung **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus.
     
@@ -138,16 +138,13 @@ Zusätzlich wird die Dokumentanzeige durch folgende Szenarien unterstützt:
 
 |Plattformen zum Anzeigen und Bearbeiten von Dokumenten: <br />Word, Excel, PowerPoint|Authentifizierungsmethode:<br />Azure AD|Authentifizierungsmethode:<br />Microsoft-Konto|
 |---------------|----------|-----------|-----------|
-|Windows|Ja [[1]](#footnote-1)|Ja [[2]](#footnote-2)|
-|iOS|Ja [[1]](#footnote-1)|Ja (Version 1385219 und höher) |
-|Android|Ja [[1]](#footnote-1)|Ja (Version 13029 und höher)|
-|macOS|Ja [[1]](#footnote-1)|Nein|
+|Windows|Ja [[1]](#footnote-1)|Ja (nur Microsoft 365-Apps)|
+|iOS|Ja [[1]](#footnote-1)|Ja (Version 2,42 und höher) |
+|Android|Ja [[1]](#footnote-1)|Ja (Version 16.0.13029 und höher)|
+|macOS|Ja [[1]](#footnote-1)|Ja (Version 16,42 und höher)|
 
 ###### <a name="footnote-1"></a>Fußnote 1
 Unterstützt die Benutzerkonten, Gruppen mit aktivierter E-Mail-Funktion, alle Mitglieder. Benutzerkonten und Gruppen mit aktivierter E-Mail-Funktion schließen Gastkonten mit ein. Mitglieder beinhalten keine Gastkonten.
-
-###### <a name="footnote-2"></a>Fußnote 2
-Wird derzeit nur von Microsoft 365-Apps unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

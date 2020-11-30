@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a0b8df95c28b6d49610411b8f93678b70cf7226a
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e5e5e4195f22be28bd290ab3cac9d96e6ca142e2
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568243"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316462"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
@@ -27,88 +27,96 @@ ms.locfileid: "95568243"
 
 Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 der Bereitstellung [des Azure Rights Management-Verbindungs-Connector](deploy-rms-connector.md).
 
-Stellen Sie zunächst sicher, dass Sie den RMS-Verbindungsdienst installiert und konfiguriert haben und dass Sie alle [Voraussetzungen](deploy-rms-connector.md#prerequisites-for-the-rms-connector) für die Server, die den Verbindungsdienst verwenden können, überprüft haben.
-
+**Voraussetzungen:** Bevor Sie beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
+    - Der RMS-Connector wurde installiert und konfiguriert.
+    - Alle [Voraussetzungen](deploy-rms-connector.md#prerequisites-for-the-rms-connector) für die Server, von denen der Connector verwendet wird, wurden geprüft.
 
 ## <a name="configuring-servers-to-use-the-rms-connector"></a>Konfigurieren von Servern für die Verwendung des RMS-Verbindungsdiensts
-Nachdem Sie den RMS-Connector installiert und konfiguriert haben, können Sie Ihre lokalen Server konfigurieren, die den Azure Rights Management-Dienst verwenden und mithilfe des Connectors diese Schutztechnologie verwenden werden. Dies bedeutet, dass die folgenden Server zu konfigurieren sind:
+Nachdem Sie den RMS-Verbindungs Dienst installiert und konfiguriert haben, können Sie die lokalen Server konfigurieren, die eine Verbindung mit dem Azure Rights Management-Dienst herstellen, und diese Schutz Technologie mithilfe des-Verbindungs Dienstanbieter verwenden. 
 
--   **Für Exchange 2016 und Exchange 2013**: Clientzugriffsserver und Postfachserver
+Dies bedeutet, dass die folgenden Server zu konfigurieren sind:
 
--   **Für Exchange 2010 und Exchange 2019**: Client Zugriffs Server und Hub-Transport-Server
+|Environment  |Zu konfigurier gende Server  |
+|---------|---------|
+|**Exchange 2016 und Exchange 2013**     |  Clientzugriffsserver und Postfachserver       |
+|**Exchange 2019**     |   Clientzugriffsserver und Hub-Transport-Server      |
+|**SharePoint**     |    Front-End-SharePoint-Webserver, einschließlich der Server, die den zentralen Verwaltungsserver hosten     |
+|**Dateiklassifizierungsinfrastruktur**     |   Windows Server-Computer, auf denen der Ressourcen-Manager für Dateien installiert ist      |
+| | |
 
--   **Für SharePoint**: Front-End-SharePoint-Webserver, einschließlich der Server, die den zentralen Verwaltungsserver hosten
+Diese Konfiguration erfordert Registrierungs Einstellungen mit den folgenden Optionen:
 
--   **Für die Datei Klassifizierungs Infrastruktur**: Windows Server-Computer mit installierter Datei Ressourcen-Manager
-
-Diese Konfiguration erfordert das Festlegen von Registrierungseinstellungen. Zu diesem Zweck haben Sie zwei Optionen: automatisch mithilfe des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst oder manuell durch Bearbeiten der Registrierung.
-
----
-
-**Automatisch mithilfe des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst:**
-
-- Vorteile:
-
-    - Keine direkte Bearbeitung der Registrierung. Diese wird für Sie mithilfe eines Skripts automatisiert.
-
-    - Keine Notwendigkeit zur Ausführung eines Windows PowerShell-Cmdlets, um Ihre Microsoft RMS-URL abzurufen.
-
-    - Die Voraussetzungen werden automatisch für Sie überprüft (aber nicht automatisch behoben), wenn die Ausführung lokal erfolgt.
-
-Nachteile:
-
-- Wenn Sie das Tool ausführen, müssen Sie eine Verbindung mit einem Server herstellen, auf dem bereits der RMS-Verbindungsdienst ausgeführt wird.
-
----
-
-**Manuell durch Bearbeitung der Registrierung:**
-
-- Vorteile:
-
-    - Es ist keine Verbindung mit einem Server erforderlich, auf dem der RMS-Verbindungsdienst ausgeführt wird.
-
-- Nachteile:
-
-    - Höherer Verwaltungsaufwand, der fehleranfällig ist.
-
-    - Sie müssen Ihre Microsoft RMS-URL abrufen, wofür Sie einen Windows PowerShell-Befehl ausführen müssen.
-
-    - Sie müssen immer alle Überprüfungen der Voraussetzungen selbst durchführen.
-
-
----
+- [Registrierungs Einstellungen automatisch bearbeiten](#edit-registry-settings-automatically---advantages-and-disadvantages)
+- [Manuelles Bearbeiten von Registrierungs Einstellungen](#edit-registry-settings-manually---advantages-and-disadvantages)
 
 > [!IMPORTANT]
 > In beiden Fällen müssen Sie manuell alle vorausgesetzten Komponenten installieren und Exchange, SharePoint und die Dateiklassifizierungsinfrastruktur zur Verwendung von Rights Management konfigurieren.
 
-Für die meisten Organisationen stellt die automatische Konfiguration unter Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst die bessere Möglichkeit dar, weil sie effizienter und zuverlässiger als eine manuelle Konfiguration ist.
+> [!NOTE]
+> Für die meisten Organisationen stellt die automatische Konfiguration unter Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst die bessere Möglichkeit dar, weil sie effizienter und zuverlässiger als eine manuelle Konfiguration ist.
+> 
 
-Nachdem Sie die Konfigurationsänderungen auf diesen Servern vorgenommen haben, müssen Sie sie neu starten, wenn auf diesen Exchange oder SharePoint ausgeführt wird und die Server zuvor zur Verwendung von AD RMS konfiguriert waren. Sie brauchen diese Server nicht neu zu starten, wenn Sie sie zum ersten Mal für Rights Management konfigurieren. Der Dateiserver, der zur Verwendung der Dateiklassifizierungsinfrastruktur konfiguriert ist, muss nach diesen Konfigurationsänderungen immer neu gestartet werden.
+Nachdem Sie die Konfigurationsänderungen auf diesen Servern vorgenommen haben, müssen Sie Sie neu starten, wenn Exchange oder SharePoint ausgeführt wird und Sie zuvor für die Verwendung von AD RMS konfiguriert wurden. Sie brauchen diese Server nicht neu zu starten, wenn Sie sie zum ersten Mal für Rights Management konfigurieren. 
+
+Der Dateiserver, der zur Verwendung der Dateiklassifizierungsinfrastruktur konfiguriert ist, muss nach diesen Konfigurationsänderungen immer neu gestartet werden.
+### <a name="edit-registry-settings-automatically---advantages-and-disadvantages"></a>Registrierungs Einstellungen automatisch bearbeiten: vor-und Nachteile
+
+Bearbeiten Sie die Registrierungs Einstellungen automatisch mithilfe des Server Konfigurationstools für Microsoft RMS Connector.
+
+**Einige Vorteile:**
+
+- Keine direkte Bearbeitung der Registrierung. Diese wird für Sie mithilfe eines Skripts automatisiert.
+
+- Keine Notwendigkeit zur Ausführung eines Windows PowerShell-Cmdlets, um Ihre Microsoft RMS-URL abzurufen.
+
+- Die Voraussetzungen werden automatisch für Sie überprüft (aber nicht automatisch behoben), wenn die Ausführung lokal erfolgt.
+
+**Nachteile umfassen Folgendes**: Wenn Sie das Tool ausführen, müssen Sie eine Verbindung mit einem Server herstellen, auf dem bereits der RMS-Connector ausgeführt wird.
+
+Weitere Informationen finden Sie unter [Verwenden des Server Konfigurationstools für Microsoft RMS Connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
+### <a name="edit-registry-settings-manually---advantages-and-disadvantages"></a>Manuelles Bearbeiten von Registrierungs Einstellungen: vor-und Nachteile
+
+Zu den **Vorteilen gehören**: Es ist keine Verbindung mit einem Server erforderlich, auf dem der RMS-Connector ausgeführt wird
+
+**Zu den Nachteile gehören:**
+
+- Höherer Verwaltungsaufwand, der fehleranfällig ist.
+
+- Sie müssen Ihre Microsoft RMS-URL abrufen, wofür Sie einen Windows PowerShell-Befehl ausführen müssen.
+
+- Sie müssen immer alle Überprüfungen der Voraussetzungen selbst durchführen.
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst
 
-1.  Wenn Sie das Skript für das Server Konfigurationstool für Microsoft RMS Connector (GenConnectorConfig.ps1) nicht bereits heruntergeladen haben, laden Sie es aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106)herunter.
+1.  Wenn Sie das Skript für das Server Konfigurationstool für Microsoft RMS Connector **(GenConnectorConfig.ps1)** nicht bereits heruntergeladen haben, laden Sie es aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106)herunter.
 
-2.  Speichern Sie die Datei „GenConnectorConfig.ps1“ auf dem Computer, auf dem Sie das Tool ausführen möchten. Wenn Sie das Tool lokal ausführen, muss dies der Server sein, den Sie für die Kommunikation mit dem RMS-Verbindungsdienst konfigurieren möchten. Andernfalls können Sie sie auf einem beliebigen Computer speichern.
+2.  Speichern Sie die **GenConnectorConfig.ps1** Datei auf dem Computer, auf dem Sie das Tool ausführen möchten. 
+
+    Wenn Sie das Tool lokal ausführen, muss dies der Server sein, den Sie für die Kommunikation mit dem RMS-Verbindungsdienst konfigurieren möchten. Andernfalls können Sie sie auf einem beliebigen Computer speichern.
 
 3.  Entscheiden Sie, wie das Tool ausgeführt werden soll:
-
-    -   **Lokal**: Sie können das Tool interaktiv auf dem Server ausführen, der für die Kommunikation mit dem RMS-Verbindungsdienst konfiguriert werden soll. Dies ist nützlich für eine einmalige Konfiguration, beispielsweise in einer Testumgebung.
-
-    -   **Softwarebereitstellung**: Sie können das Tool ausführen, um Registrierungsdateien zu erzeugen, die Sie dann auf einem oder mehreren relevanten Servern bereitstellen, indem Sie eine Systemverwaltungsanwendung verwenden, die Softwarebereitstellung unterstützt, z. B. System Center Configuration Manager.
-
-    -   **Gruppenrichtlinien**: Sie können das Tool ausführen, um ein Skript zu erzeugen, das Sie an einen Administrator weitergeben können, der Gruppenrichtlinienobjekte für die zu konfigurierenden Server erstellen kann. Dieses Skript erstellt ein Gruppenrichtlinienobjekt für jeden Servertyp, der konfiguriert werden soll, dem der Administrator dann die relevanten Server zuweisen kann.
+    
+    |Methode  |BESCHREIBUNG  |
+    |---------|---------|
+    |**Zutaten**     |  Führen Sie das Tool interaktiv von dem Server aus, der für die Kommunikation mit dem RMS-Connector konfiguriert werden soll. <br><br>**Tipp**: Dies ist nützlich für eine einmalige Konfiguration, z. b. eine Testumgebung.       |
+    |**Softwarebereitstellung**     |  Führen Sie das Tool aus, um Registrierungsdateien zu entwickeln, die Sie dann auf einem oder mehreren relevanten Servern bereitstellen. <br><br>Stellen Sie die Registrierungsdateien mithilfe einer Systems Management-Anwendung bereit, die Software Bereitstellung unterstützt, z. b. System Center Configuration Manager       |
+    |**Gruppenrichtlinie**     | Führen Sie das Tool aus, um ein Skript zu erstellen, das Sie einem Administrator zur Verfügung stellen, der Gruppenrichtlinie Objekte für die zu konfigurierenden Server erstellen kann. <br><br>Dieses Skript erstellt ein Gruppenrichtlinienobjekt für jeden Servertyp, der konfiguriert werden soll, dem der Administrator dann die relevanten Server zuweisen kann.        |
+    | | |
 
     > [!NOTE]
     > Dieses Tool konfiguriert die Server, die mit dem RMS-Verbindungsdienst kommunizieren werden und am Anfang dieses Abschnitts aufgelistet sind. Führen Sie dieses Tool nicht auf den Servern aus, auf denen der RMS-Verbindungsdienst ausgeführt wird.
 
-4.  Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**, und verwenden Sie den Befehl „Get-help“, um Anleitungen zur Verwendung des Tools für Ihre gewählte Konfigurationsmethode anzuzeigen:
+4.  Starten Sie Windows PowerShell mit der Option **als Administrator ausführen** , und verwenden Sie den Befehl **Get-Help** , um Anweisungen zur Verwendung des Tools für die gewählte Konfigurations Methode zu erhalten:
 
-    ```
+    ```PowerShell
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-Zum Ausführen des Skripts müssen Sie die URL des RMS-Connectors für Ihre Organisation eingeben. Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Beispiel: https: \/ /Connector.contoso.com. Das Tool verwendet dann diese URL, um sich mit den Servern zu verbinden, auf denen der RMS-Verbindungsdienst ausgeführt wird, und um weitere Parameter abzurufen, die zum Erstellen der erforderlichen Konfigurationen verwendet werden.
+Zum Ausführen des Skripts müssen Sie die URL des RMS-Connectors für Ihre Organisation eingeben. 
+
+Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Beispielsweise `https:\//connector.contoso.com`. 
+
+Das Tool verwendet dann diese URL, um sich mit den Servern zu verbinden, auf denen der RMS-Verbindungsdienst ausgeführt wird, und um weitere Parameter abzurufen, die zum Erstellen der erforderlichen Konfigurationen verwendet werden.
 
 > [!IMPORTANT]
 > Wenn Sie dieses Tool ausführen, stellen Sie sicher, dass Sie den Namen des RMS-Verbindungsdiensts mit Lastenausgleich für Ihre Organisation angeben, und nicht den Namen eines einzelnen Servers, auf dem der RMS-Verbindungsdienst ausgeführt wird.
@@ -121,27 +129,26 @@ In den folgenden Abschnitten finden Sie spezifische Informationen für jeden Die
 
 -   [Konfigurieren eines Dateiservers, der die Dateiklassifizierungsinfrastruktur verwendet, für die Verwendung des Verbindungsdiensts](#configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector)
 
-> [!NOTE]
-> Nachdem diese Server zur Verwendung des Verbindungsdiensts konfiguriert sind, funktionieren Anwendungen, die lokal auf diesen Servern installiert sind, möglicherweise nicht mit RMS. Wenn dies eintritt, liegt das daran, dass die Anwendungen versuchen, den Verbindungsdienst zu verwenden, statt RMS direkt zu verwenden – dies wird aber nicht unterstützt.
->
-> Wenn Office 2010 lokal auf einem Exchange-Server installiert ist, können die unm-Features der Client-App außerdem von diesem Computer aus funktionieren, nachdem der Server für die Verwendung des Verbindungs Diensts konfiguriert wurde. Dies wird jedoch nicht unterstützt.
->
-> In beiden Szenarios müssen Sie die Clientanwendungen auf getrennten Computern installieren, die nicht für die Verwendung des Verbindungsdiensts konfiguriert sind. Sie verwenden dann korrekt RMS direkt.
+**Wann müssen Client Anwendungen auf separaten Computern installiert werden, die nicht für die Verwendung des Verbindungs-Connector konfiguriert sind**
+
+Nachdem diese Server zur Verwendung des Verbindungsdiensts konfiguriert sind, funktionieren Anwendungen, die lokal auf diesen Servern installiert sind, möglicherweise nicht mit RMS. Wenn dies eintritt, liegt das daran, dass die Anwendungen versuchen, den Verbindungsdienst zu verwenden, statt RMS direkt zu verwenden – dies wird aber nicht unterstützt.
+
+Wenn Office 2010 lokal auf einem Exchange-Server installiert ist, können die unm-Features der Client-App außerdem von diesem Computer aus funktionieren, nachdem der Server für die Verwendung des Verbindungs Diensts konfiguriert wurde. Dies wird jedoch nicht unterstützt.
+
+In beiden Szenarios müssen Sie die Clientanwendungen auf getrennten Computern installieren, die nicht für die Verwendung des Verbindungsdiensts konfiguriert sind. Sie verwenden dann korrekt RMS direkt.
 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Konfigurieren eines Exchange-Servers für die Verwendung des Verbindungsdiensts
 Die folgenden Exchange-Rollen kommunizieren mit dem RMS-Verbindungsdienst:
 
 -   Für Exchange 2016 und Exchange 2013: Clientzugriffsserver und Postfachserver
 
--   Für Exchange 2010 und Exchange 2019: Client Zugriffs Server und Hub-Transport-Server
+-   Für Exchange 2019: Client Zugriffs Server und Hub-Transport-Server
 
 Damit diese Server, auf denen Exchange ausgeführt wird, den RMS-Verbindungsdienst verwenden, müssen sie eine der folgenden Softwareversionen ausführen:
 
 -   Exchange Server 2016
 
 -   Exchange Server 2013 mit kumulativem Update 3 für Exchange 2013
-
--   Exchange Server 2010 mit Exchange 2010 Service Pack 3 Updaterollup 6
 
 -   Exchange Server 2019
 
@@ -153,27 +160,31 @@ Auf diesen Servern muss außerdem eine Version 1 des RMS-Clients (auch als MSDRM
 
 ### <a name="to-configure-exchange-servers-to-use-the-connector"></a>So konfigurieren Sie Exchange-Server für die Verwendung des Verbindungsdiensts
 
-1. Stellen Sie sicher, dass die Exchange-Server für die Verwendung des RMS-Verbindungsdiensts autorisiert sind, indem Sie das Administrationstool des RMS-Verbindungsdiensts und die Informationen aus dem Abschnitt [Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) verwenden. Diese Konfiguration ist erforderlich, damit Exchange den RMS-Verbindungsdienst verwenden kann.
+1. Stellen Sie sicher, dass die Exchange-Server für die Verwendung des RMS-Verbindungsdiensts autorisiert sind, indem Sie das Administrationstool des RMS-Verbindungsdiensts und die Informationen aus dem Abschnitt [Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) verwenden. 
+
+    Diese Konfiguration ist erforderlich, damit Exchange den RMS-Verbindungsdienst verwenden kann.
 
 2. Führen Sie für die Exchange-Serverrollen, die mit dem RMS-Verbindungsdienst kommunizieren, einen der folgenden Schritte aus:
 
-   -   Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus. Weitere Informationen finden Sie unter [Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in diesem Artikel.
+   -   **Führen Sie das Server Konfigurationstool für Microsoft RMS Connector aus**. 
 
-       Um das Tool beispielsweise lokal auszuführen, um einen Server mit Exchange 2016 oder Exchange 2013 zu konfigurieren:
+       Weitere Informationen finden Sie unter [Verwenden des Server Konfigurationstools für Microsoft RMS Connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
-       ```
+        Um das Tool beispielsweise lokal auszuführen, um einen Server mit Exchange 2016 oder Exchange 2013 zu konfigurieren:
+
+       ```PowerShell
        .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
        ```
 
-   -   Nehmen Sie manuelle Registrierungsänderungen mithilfe der Informationen unter [Registrierungseinstellungen für den RMS-Verbindungsdienst](rms-connector-registry-settings.md) vor, um Registrierungseinstellungen manuell den Servern hinzuzufügen. 
+    
+   -   **Manuelle Registrierungs Änderungen vornehmen** Weitere Informationen finden Sie unter [Registrierungs Einstellungen für den RMS-Connector](rms-connector-registry-settings.md). 
 
-3. Aktivieren Sie die unm-Funktionalität für Exchange mithilfe des Exchange PowerShell-Cmdlets [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) , und legen Sie `InternalLicensingEnabled $true` und fest `ClientAccessServerEnabled $true` .
+3. Aktivieren Sie die unm-Funktionalität für Exchange mithilfe des Exchange PowerShell-Cmdlets [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration). Legen Sie `InternalLicensingEnabled $true` und `ClientAccessServerEnabled $true` fest.
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>Konfigurieren eines SharePoint-Servers für die Verwendung des Verbindungsdiensts
-Die folgenden SharePoint-Rollen kommunizieren mit dem RMS-Connector:
 
--   Front-End-SharePoint-Webserver, einschließlich der Server, die den zentralen Verwaltungsserver hosten
+Front-End-SharePoint-Webserver, einschließlich der Server, die den zentralen Verwaltungs Server hosten, kommunizieren mit dem RMS-Connector.
 
 Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdienst verwenden, müssen sie eine der folgenden Softwareversionen ausführen:
 
@@ -185,7 +196,9 @@ Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdi
 
 -   SharePoint Server 2010
 
-Auf einem Server, auf dem SharePoint 2019, 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des msipc-Clients 2,1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Um sicherzustellen, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396)herunter.
+Auf einem Server, auf dem SharePoint 2019, 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des msipc-Clients 2,1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. 
+
+Um sicherzustellen, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396)herunter.
 
 > [!WARNING]
 > Es gibt mehrere Versionen des MSIPC 2.1-Clients, achten Sie also darauf, dass Sie Version 1.0.2004.0 oder höher haben.
@@ -196,30 +209,38 @@ Auf Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients installiert 
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>So konfigurieren Sie SharePoint-Server für die Verwendung des Verbindungsdiensts
 
-1. Stellen Sie sicher, dass die SharePoint-Server für die Verwendung des RMS-Verbindungsdiensts autorisiert sind, indem Sie das Administrationstool des RMS-Verbindungsdiensts und die Informationen aus dem Abschnitt [Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) verwenden. Diese Konfiguration ist erforderlich, damit Ihre SharePoint-Server den RMS-Verbindungsdienst verwenden können.
+1. Stellen Sie sicher, dass die SharePoint-Server für die Verwendung des RMS-Verbindungsdiensts autorisiert sind, indem Sie das Administrationstool des RMS-Verbindungsdiensts und die Informationen aus dem Abschnitt [Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) verwenden. 
+
+    Diese Konfiguration ist erforderlich, damit Ihre SharePoint-Server den RMS-Verbindungsdienst verwenden können.
 
 2.  Führen Sie auf den SharePoint-Servern, die mit dem RMS-Verbindungsdienst kommunizieren, einen der folgenden Schritte aus:
 
-    -   Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus. Weitere Informationen finden Sie unter [Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in diesem Artikel.
+    -   **Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus.** 
+
+        Weitere Informationen finden Sie unter [Verwenden des Server Konfigurationstools für Microsoft RMS Connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
         Um das Tool beispielsweise lokal auszuführen, um einen Server zu konfigurieren, auf dem SharePoint 2019, 2016 oder SharePoint 2013 ausgeführt wird:
 
-        ```
+        ```PowerShell
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   Wenn Sie SharePoint 2019, 2016 oder SharePoint 2013 verwenden, nehmen Sie manuelle Registrierungs Änderungen vor, indem Sie die Informationen unter [Registrierungs Einstellungen für den RMS-Connector](rms-connector-registry-settings.md) verwenden, um Registrierungs Einstellungen auf den Servern manuell hinzuzufügen. 
+    -   **Wenn Sie SharePoint 2019, 2016 oder SharePoint 2013 verwenden, nehmen Sie manuelle Registrierungs Änderungen vor,** indem Sie die Informationen unter [Registrierungs Einstellungen für den RMS-Connector](rms-connector-registry-settings.md) verwenden, um Registrierungs Einstellungen auf den Servern manuell hinzuzufügen. 
 
 3.  Aktivieren Sie IRM in SharePoint. Weitere Informationen finden Sie unter [Verfahren zur Verwaltung von Informationsrechten](/previous-versions/office/sharepoint-server-2010/hh545607(v=office.14)) in der SharePoint-Bibliothek.
 
-    Wenn Sie diese Anleitungen befolgen, müssen Sie SharePoint für die Verwendung des Verbindungsdiensts konfigurieren, indem Sie **Diesen RMS-Server verwenden** angeben und dann die URL des Verbindungsdiensts mit Lastenausgleich eingeben, die Sie konfiguriert haben. Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Wenn Ihr Connector-Name z. b. https: \/ /Connector.contoso.com lautet, sieht Ihre Konfiguration wie in der folgenden Abbildung aus:
+    Wenn Sie diese Anleitungen befolgen, müssen Sie SharePoint für die Verwendung des Verbindungsdiensts konfigurieren, indem Sie **Diesen RMS-Server verwenden** angeben und dann die URL des Verbindungsdiensts mit Lastenausgleich eingeben, die Sie konfiguriert haben. 
+
+    Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. 
+
+    Wenn Ihr Connector beispielsweise den Namen `https:\//connector.contoso.com` hat, sieht Ihre Konfiguration wie im folgenden Bild aus:
 
     ![Konfigurieren von SharePoint Server für den RMS-Connector](./media/AzRMS_SharePointConnector.png)
 
     Nachdem in einer SharePoint-Farm IRM aktiviert ist, können Sie IRM für einzelne Bibliotheken aktivieren, indem Sie die Option **Verwaltung von Informationsrechten** auf der Seite **Bibliothekseinstellungen** für jede der Bibliotheken verwenden.
 
-
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Konfigurieren eines Dateiservers, der die Dateiklassifizierungsinfrastruktur verwendet, für die Verwendung des Verbindungsdiensts
+
 Damit ein Dateiserver den RMS-Connector und die Dateiklassifizierungsinfrastruktur verwendet, um Office-Dokumente zu schützen, muss er eins der folgenden Betriebssysteme ausführen:
 
 - Windows Server 2016
@@ -230,11 +251,15 @@ Damit ein Dateiserver den RMS-Connector und die Dateiklassifizierungsinfrastrukt
 
 ### <a name="to-configure-file-servers-to-use-the-connector"></a>So konfigurieren Sie Dateiserver für die Verwendung des Verbindungsdiensts
 
-1. Stellen Sie sicher, dass die Dateiserver für die Verwendung des RMS-Verbindungsdiensts autorisiert sind, indem Sie das Administrationstool des RMS-Verbindungsdiensts und die Informationen aus dem Abschnitt [Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) verwenden. Diese Konfiguration ist erforderlich, damit Ihre Dateiserver den RMS-Verbindungsdienst verwenden können.
+1. Stellen Sie sicher, dass die Dateiserver für die Verwendung des RMS-Verbindungsdiensts autorisiert sind, indem Sie das Administrationstool des RMS-Verbindungsdiensts und die Informationen aus dem Abschnitt [Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector) verwenden. 
+
+    Diese Konfiguration ist erforderlich, damit Ihre Dateiserver den RMS-Verbindungsdienst verwenden können.
 
 2. Führen Sie auf den Dateiservern, die für die Dateiklassifizierungsinfrastruktur konfiguriert sind und mit dem RMS-Verbindungsdienst kommunizieren, einen der folgenden Schritte aus:
 
-    -   Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus. Weitere Informationen finden Sie unter [Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in diesem Artikel.
+    -   **Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus.** 
+    
+        Weitere Informationen finden Sie unter [Verwenden des Server Konfigurationstools für Microsoft RMS Connector](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector).
 
         Um beispielsweise das Tool lokal zum Konfigurieren eines Servers mit ausgeführter FCI auszuführen:
 
@@ -242,15 +267,21 @@ Damit ein Dateiserver den RMS-Connector und die Dateiklassifizierungsinfrastrukt
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetFCI2012
         ```
 
-    - Nehmen Sie manuelle Registrierungsänderungen mithilfe der Informationen unter [Registrierungseinstellungen für den RMS-Verbindungsdienst](rms-connector-registry-settings.md) vor, um Registrierungseinstellungen manuell den Servern hinzuzufügen. 
+    - Bearbeiten Sie manuell die **Registrierung** , indem Sie die Informationen unter [Registrierungs Einstellungen für den RMS-Connector](rms-connector-registry-settings.md) verwenden, um auf den Servern manuell Registrierungs Einstellungen hinzuzufügen. 
 
-3. Erstellen Sie Klassifizierungsregeln und Dateiverwaltungsaufgaben zum Schützen von Dokumenten mit RMS-Verschlüsselung, und geben Sie dann eine RMS-Vorlage an, um die RMS-Richtlinien automatisch anzuwenden. Weitere Informationen finden Sie unter [Ressourcen-Manager für Dateiserver (Übersicht)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11)) in der Windows Server-Dokumentationsbibliothek.
+3. Erstellen Sie Klassifizierungsregeln und Dateiverwaltungsaufgaben zum Schützen von Dokumenten mit RMS-Verschlüsselung, und geben Sie dann eine RMS-Vorlage an, um die RMS-Richtlinien automatisch anzuwenden. 
+
+    Weitere Informationen finden Sie unter [Ressourcen-Manager für Dateiserver (Übersicht)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11)) in der Windows Server-Dokumentationsbibliothek.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nachdem der RMS-Connector installiert und konfiguriert ist und Ihre Server für dessen Verwendung konfiguriert sind, können IT-Administratoren und Benutzer E-Mail-Nachrichten und Dokumente mithilfe des Azure Rights Management Service schützen und verwenden. Um dies für Benutzer zu vereinfachen, können Sie den Azure Information Protection-Client bereitstellen, der ein Add-On für Office installiert und dem Datei-Explorer neue Kontextmenüoptionen hinzufügt. Weitere Informationen finden Sie unter [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md).
+Nachdem der RMS-Connector installiert und konfiguriert ist und Ihre Server für dessen Verwendung konfiguriert sind, können IT-Administratoren und Benutzer E-Mail-Nachrichten und Dokumente mithilfe des Azure Rights Management Service schützen und verwenden. 
+
+Um dies für Benutzer zu vereinfachen, können Sie den Azure Information Protection-Client bereitstellen, der ein Add-On für Office installiert und dem Datei-Explorer neue Kontextmenüoptionen hinzufügt. 
+
+Weitere Informationen finden Sie unter [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md).
 
 Beachten Sie Folgendes: Wenn Sie Abteilungsvorlagen konfigurieren, die Sie mit Exchange-Transportregeln oder Windows Server FCI verwenden möchten, muss in der Bereichskonfiguration für die Anwendungskompatibilitätsoption das Kontrollkästchen **Zeigen Sie diese Vorlage allen Benutzern, wenn die Anwendungen die Benutzeridentität nicht unterstützen.** aktiviert sein.
 
-Sie können die [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von Azure Rights Management für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten.
+Sie können die [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap-classify-label-protect.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von Azure Rights Management für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten.
 
 Informationen zum Überwachen des RMS-Connectors finden Sie unter [Überwachen des Azure Rights Management-Connectors](monitor-rms-connector.md).

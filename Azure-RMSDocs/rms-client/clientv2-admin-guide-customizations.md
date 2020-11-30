@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 11/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cd640f1fd60f1ca9872bb3741bfa5d1f0426b18e
-ms.sourcegitcommit: 1c12edc8ca4bfac9eb4e87516908cafe6e5dd42a
+ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034386"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316839"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -765,12 +765,14 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
     
     - Wert **\<**domain names, comma separated**>**
 
-Sie haben beispielsweise die Einstellung für den erweiterten Client " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookjustifytreuddomains** " und " **contoso.com**" an. Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, john@sales.contoso.com Wenn er **vertraulich \ alle Mitarbeiter** heißt, aber das Senden einer e-Mail mit derselben Bezeichnung an ein Gmail-Konto blockiert wird.
+Nehmen wir beispielsweise an, Sie haben die erweiterte Client Einstellung " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. 
+
+Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookblocktreuddomains** " mit **contoso.com an.** Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, `john@sales.contoso.com` Wenn er als **vertraulich \ alle Mitarbeiter** bezeichnet wird. es wird jedoch blockiert, eine e-Mail mit derselben Bezeichnung an ein Gmail-Konto zu senden.
 
 PowerShell-Beispiel Befehle, deren Bezeichnung "Global" lautet:
 
 ```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="contoso.com"}
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
@@ -1462,7 +1464,7 @@ Definieren Sie die JSON-Syntax Ihrer Regel wie folgt:
 "nodes" : []
 ```
 
-Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter
+Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter:
 
 - [Syntax der Regel Bedingung](#rule-condition-syntax)
 - [Syntax der Regel Aktion](#rule-action-syntax)
@@ -1501,7 +1503,7 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |Beschreibung  |
+|Parameter  |BESCHREIBUNG  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
 | `${MatchedLabelName}`      | Die **Bezeichnung** "Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
@@ -1826,6 +1828,24 @@ Ab [Version 2.8.85.0](unifiedlabelingclient-version-release-history.md#version-2
     ```PowerShell
     Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointFileWebRequestTimeout="00:10:00"}
     ```
+
+### <a name="avoid-scanner-timeouts-in-sharepoint"></a>Vermeiden von Überprüfungs Timeouts in SharePoint
+
+Wenn Sie über lange Dateipfade in SharePoint-Version 2013 oder höher verfügen, stellen Sie sicher, dass der [HttpRuntime. maxurllength](/dotnet/api/system.web.configuration.httpruntimesection.maxurllength) -Wert des SharePoint-Servers größer als die standardmäßigen 260-Zeichen ist.
+
+Dieser Wert wird in der **HttpRuntimeSection** -Klasse der `ASP.NET` Konfiguration definiert. Wenn Sie diesen Wert aktualisieren müssen, gehen Sie wie folgt vor:
+
+1. Sichern Sie Ihre **web.config** Konfiguration. 
+
+1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Beispiel:
+
+    ```c#
+    <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
+    ```
+
+1. Starten Sie den SharePoint-Webserver neu, und überprüfen Sie, ob er ordnungsgemäß geladen 
+
+    Wählen Sie beispielsweise im Windows IIS-Manager (Internet Information Servers) ihren Standort aus, und klicken Sie dann unter **Website verwalten** auf **neu starten**. 
 
 ## <a name="prevent-outlook-performance-issues-with-smime-emails"></a>Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails
 
