@@ -8,11 +8,11 @@ ms.date: 09/15/2020
 ms.author: tommos
 ms.custom: has-adal-ref
 ms.openlocfilehash: b0aeeabeabf6dc4c3bba39ea2f58374b98bac491
-ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
+ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044378"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96316737"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C#)
 
@@ -112,7 +112,7 @@ Erstellen Sie nun eine Implementierung für einen Zustimmungsdelegaten, indem Si
 
 1. Fügen Sie mit der gleichen Visual Studio-Funktion „Klasse hinzufügen“, die wir vorher verwendet haben, eine weitere Klasse zu Ihrem Projekt hinzu. Geben Sie dieses Mal „ConsentDelegateImplementation“ in das Feld **Klassenname** ein.
 
-2. Aktualisieren Sie jetzt **ConsentDelegateImpl.cs** , damit Ihre neue Zustimmungsdelegatklasse implementiert wird: Fügen Sie die using-Anweisung für `Microsoft.InformationProtection` hinzu, und legen Sie die Klasse darauf fest, `IConsentDelegate` zu erben.
+2. Aktualisieren Sie jetzt **ConsentDelegateImpl.cs**, damit Ihre neue Zustimmungsdelegatklasse implementiert wird: Fügen Sie die using-Anweisung für `Microsoft.InformationProtection` hinzu, und legen Sie die Klasse darauf fest, `IConsentDelegate` zu erben.
 
      ```csharp
      class ConsentDelegateImplementation : IConsentDelegate
