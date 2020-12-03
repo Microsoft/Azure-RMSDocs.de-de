@@ -1,17 +1,17 @@
 ---
 title: Struktur telemetryconfiguration
-description: Dokumentiert Strukturen, die mit dem Microsoft Information Protection (MIP) SDK verknüpft sind.
+description: Dokumentiert die telemetryconfiguration-Struktur.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 09/21/2020
-ms.openlocfilehash: 0599dfb9fdc5d37849c19c9284b2d6fd27cec606
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: a152f604feabe66e354b0c85abd2d7cfca64e7b5
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566748"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535806"
 ---
 # <a name="struct-telemetryconfiguration"></a>Struktur telemetryconfiguration 
 Benutzerdefinierte telemetrieeinstellungen (nicht häufig verwendet)

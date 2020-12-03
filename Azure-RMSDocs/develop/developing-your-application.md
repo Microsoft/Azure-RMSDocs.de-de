@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev, has-adal-ref
-ms.openlocfilehash: 2fc3fecd33d6e461156e8c608eae91dee17dff2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e0dedeffe2f10b1d312a865acdc64a1248144776
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568321"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536061"
 ---
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
 
@@ -51,7 +51,7 @@ Nachdem der Dienst aktiviert wurde, benötigen Sie PowerShell-Komponenten für d
 >Notieren Sie den BPOSId-Wert (Mandanten-ID). Sie wird später benötigt.
 
 *Beispielausgabe* 
- ![ Cmdlet-Ausgabe](../media/develop/output-of-Get-AadrmConfiguration.png)
+ ![ Ausgabe des Cmdlets "Get-aadrmconfiguration"](../media/develop/output-of-Get-AadrmConfiguration.png)
 
 - Trennen Sie die Verbindung mit dem Dienst: `Disconnect-AipServiceService`
 
@@ -67,12 +67,12 @@ Führen Sie die folgenden Schritte aus, um einen Dienstprinzipal zu erstellen:
   > Notieren Sie den symmetrischen Schlüssel und die Anwendungsprinzipal-ID für die spätere Verwendung.
 
 *Beispielausgabe* 
- ![ Cmdlet-Ausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
+ ![ Newmsolserviceprincipal-Cmdlet-Ausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
 
 - Fügen Sie Ihre Anwendungsprinzipal-ID, den symmetrischen Schlüssel und die Mandanten-ID zur Datei „App.config“ der Anwendung hinzu.
 
 *Beispiel App.config Datei* 
- ![ Cmdlet-Ausgabe](../media/develop/example-App.config-file.png)
+ ![ Beispiel App.config Datei](../media/develop/example-App.config-file.png)
 
 - *ClientID* und *RedirectUri* wurden Ihnen beim Registrieren Ihrer Anwendung in Azure zur Verfügung gestellt. Weitere Informationen zum Registrieren Ihrer Anwendung in Azure und zum Abrufen von *ClientID* und *RedirectUri* finden Sie unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md).
 
