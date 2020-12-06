@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f426f62f071885932ad436735e5a1bfe8663fa2f
-ms.sourcegitcommit: 2b9ef3b97609dca6f6d64d78aff83e44d4aafc4d
+ms.openlocfilehash: e9817c21662ed6a606a30b851aff97bbbc5bb863
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96556024"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740604"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Voraussetzungen für das Installieren und Bereitstellen des Azure Information Protection-Scanners für einheitliche Bezeichnungen
 
@@ -57,7 +57,8 @@ Sie müssen über einen Windows Server-Computer verfügen, auf dem die Überprü
 |**Speicherplatz**     |10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien. </br></br>Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. </br></br>Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen.
 |**Betriebssystem**     |-Windows Server 2019 </br>- Windows Server 2016 </br>Windows Server 2012 R2 </br></br>**Hinweis:** Zu Test-oder Evaluierungs Zwecken in einer nicht-Produktionsumgebung können Sie auch ein beliebiges Windows-Betriebssystem verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices)wird.
 |**Netzwerkverbindungen**     | Bei dem Überprüfungs Computer kann es sich um einen physischen oder virtuellen Computer mit einer schnellen und zuverlässigen Netzwerkverbindung mit den zu überprüfenden Daten speichern handeln. </br></br> Wenn die Internetverbindung aufgrund ihrer Organisations Richtlinien nicht möglich ist, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations). </br></br>Stellen Sie andernfalls sicher, dass dieser Computer über eine Internetverbindung verfügt, die die folgenden URLs über HTTPS (Port 443) zulässt:</br><br />-  \*. aadrm.com <br />-  \*. azurerms.com<br />-  \*. informationprotection.Azure.com <br /> -informationprotection.Hosting.Portal.Azure.net <br /> - \*. Aria.Microsoft.com <br />-  \*. Protection.Outlook.com |
-| ||
+|**NFS-Freigaben** |Dienste für NFS müssen auf dem Überprüfungs Computer bereitgestellt werden, um Scans für NFS-Freigaben zu unterstützen. <br><br>Navigieren Sie auf Ihrem Computer zum Dialogfeld "Einstellungen" (Windows- **Funktionen aktivieren oder deaktivieren)** , und wählen Sie die folgenden Elemente **aus: Dienste für NFS**  >  -**Verwaltungs Tools** und **Client für NFS**. |
+| | |
 
 ## <a name="service-account-requirements"></a>Dienstkontenanforderungen
 
@@ -69,7 +70,7 @@ Wenn Sie dieses Konto aufgrund ihrer Organisations Richtlinien nicht synchronisi
 
 Für dieses Dienstkonto gelten die folgenden Anforderungen:
 
-|Anforderung  |Details  |
+|Anforderungen  |Details  |
 |---------|---------|
 |**Lokale** Benutzerrechte Zuweisung anmelden     |Erforderlich, um die Überprüfung zu installieren und zu konfigurieren, aber nicht zum Ausführen von Scans erforderlich.  </br></br>Nachdem Sie sich vergewissert haben, dass die Überprüfung Dateien ermitteln, klassifizieren und schützen kann, können Sie diese direkt aus dem Dienst Konto entfernen.  </br></br>Wenn diese Berechtigung auch für kurze Zeit nicht möglich ist, ist dies aufgrund ihrer Organisations Richtlinien nicht möglich. Weitere Informationen hierzu finden Sie unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).         |
 |**Anmeldung als Dienst** für die Zuweisung von Benutzerrechten.     |  Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich.        |
@@ -165,7 +166,7 @@ Weitere Informationen finden Sie unter
 
 Stellen Sie sicher, dass Ihr SharePoint-Server die folgenden Anforderungen erfüllt, um SharePoint-Dokument Bibliotheken und-Ordner zu überprüfen:
 
-|Anforderung  |Beschreibung  |
+|Anforderung  |BESCHREIBUNG  |
 |---------|---------|
 |**Unterstützte Versionen** | Folgende Versionen werden unterstützt: SharePoint 2019, SharePoint 2016 und SharePoint 2013. <br> Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.     |
 |**Versionsverwaltung**     |  Wenn Sie die [Versions](/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. <br><br>Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein.       |
@@ -188,7 +189,7 @@ Zum Scannen von Dateien müssen standardmäßig die Dateipfade maximal 260 Zeich
 
 Zum Überprüfen von Dateien mit Dateipfaden mit mehr als 260 Zeichen installieren Sie die Überprüfung auf einem Computer mit einer der folgenden Windows-Versionen, und konfigurieren Sie den Computer nach Bedarf:
 
-|Windows-Version  |Beschreibung  |
+|Windows-Version  |BESCHREIBUNG  |
 |---------|---------|
 |**Windows 2016 oder höher**     |   Konfigurieren des Computers zur Unterstützung von langen Pfaden      |
 |**Windows 10 oder Windows Server 2016**     | Definieren Sie die folgende [Gruppenrichtlinien Einstellung](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **lokale Computer Richtlinie**  >  **Computerkonfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **aktivieren Win32 Long-Pfade**.    </br></br>Weitere Informationen zur Unterstützung von langen Dateipfaden in diesen Versionen finden Sie im Abschnitt [Maximale Pfadlängen Beschränkung](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Windows 10-Entwicklerdokumentation.    |
@@ -392,7 +393,7 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 
 Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sollten Sie beim Konfigurieren Ihres Scanners eine der folgenden Optionen verwenden:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
 |**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle** fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
 |**Empfohlene Bezeichnung verwenden**     |  Legen Sie im [Inhalts Überprüfungs Auftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option **Empfohlene Bezeichnung als automatisch behandeln** auf ein **fest.**</br></br> Mit dieser Einstellung wird der Scanner so konfiguriert, dass alle empfohlenen Bezeichnungen automatisch auf ihren Inhalt angewendet werden.      |

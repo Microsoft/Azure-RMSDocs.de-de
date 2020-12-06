@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8a37c13f9ad51e2aef03c8e6377633c72f83f063
-ms.sourcegitcommit: 6e50dc8c21be370ce22ff7cbafdbed8c9f3c988f
+ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
+ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544639"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "96740621"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -104,6 +104,16 @@ Weitere Informationen finden Sie unter [Wenn der Überprüfungs Server keine Int
 ### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Unterstützung für NFS-Depots in Inhalts Scan Aufträgen
 
 Nun können Sie Ihren Inhalts Überprüfungs Aufträgen zusätzlich zu SMB-Dateifreigaben und SharePoint-Depots NFS-Repository hinzufügen.
+
+Dienste für NFS müssen auf dem Überprüfungs Computer bereitgestellt werden, um Scans für NFS-Freigaben zu unterstützen:
+
+1. Navigieren Sie auf Ihrem Computer zum Dialogfeld "Einstellungen" (Windows-Funktionen ein- **oder ausschalten)** .
+
+1. Wählen Sie die folgenden Elemente aus: 
+
+    - **Dienste für NFS** 
+        - **Verwaltungs Tools**
+        - **Client für NFS**.
 
 Weitere Informationen finden Sie unter [Erstellen eines Inhalts Scan Auftrags](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
