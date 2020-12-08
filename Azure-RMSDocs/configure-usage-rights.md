@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 74f141054d177ccabea88f6521ebb2ba6a930be5
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568240"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849775"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
@@ -124,7 +124,14 @@ Ein Benutzer möchte per E-Mail einige Informationen an bestimmte Personen in de
 
 Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, wird die E-Mail-Option **Encrypt Only** (Nur verschlüsseln) verfügbar.
 
-Diese Option ist für Mandanten verfügbar, die Exchange Online verwenden und in Outlook im Web ausgewählt werden können, als weitere Rechte Schutz Option für eine Nachrichtenfluss Regel, als Office 365 DLP-Aktion und von Outlook (Mindestversion [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) für Microsoft 365-Apps für Unternehmen und mindestens Version 1805, wenn Sie über [Microsoft 365 apps verfügen, die Azure RMS unterstützen](requirements-applications.md#windows-computers-for-information-rights-management-irm). Weitere Informationen zur Encrypt-Only-Option finden Sie in der folgenden Blogbeitrag-Ankündigung des Office-Teams: Verschlüsseln der Verschlüsselung [nur bei der Office 365-Nachrichten Verschlüsselung](https://aka.ms/omefeb2018).
+Diese Option ist für Mandanten verfügbar, die Exchange Online verwenden und wie folgt ausgewählt werden können:
+
+- **In Outlook im Web**
+- **Als weitere Rechte Schutz Option** für eine Nachrichtenfluss Regel
+- **Als Office 365 DLP-Aktion**
+- In **Outlook** für die Versionen, die in der [Tabelle der unterstützten Versionen für Microsoft 365-apps nach Aktualisierungs Kanal](/officeupdates/update-history-microsoft365-apps-by-date)aufgeführt sind, wenn Sie über [Microsoft 365 apps verfügen, die Azure RMS unterstützen](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
+
+Weitere Informationen zur Encrypt-Only-Option finden Sie in der folgenden Blogbeitrag-Ankündigung des Office-Teams: Verschlüsseln der Verschlüsselung [nur bei der Office 365-Nachrichten Verschlüsselung](https://aka.ms/omefeb2018).
 
 Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer **Speichern unter, Exportieren** und **Vollzugriff**. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Sie können eine E-Mail aber kopieren, ausdrucken und weiterleiten. 
 
@@ -154,7 +161,7 @@ Dem Rights Management-Aussteller wird immer das Nutzungsrecht „Vollzugriff“ 
 
 - Der Rights Management-Aussteller kann ein Dokument immer noch öffnen, nachdem es widerrufen wurde. 
 
-Standardmäßig ist dieses Konto auch der **Rights Management-Besitzer** dieses Inhalts, was der Fall ist, wenn ein Benutzer, der das Dokument oder die E-Mail erstellt hat, den Schutz initiiert. Aber es gibt einige Szenarien, in denen ein Administrator oder Dienst Inhalte im Auftrag von Benutzern schützen kann. Beispiel:
+Standardmäßig ist dieses Konto auch der **Rights Management-Besitzer** dieses Inhalts, was der Fall ist, wenn ein Benutzer, der das Dokument oder die E-Mail erstellt hat, den Schutz initiiert. Aber es gibt einige Szenarien, in denen ein Administrator oder Dienst Inhalte im Auftrag von Benutzern schützen kann. Zum Beispiel:
 
 - Ein Administrator schützt viele Dateien auf einer Dateifreigabe auf einmal: Das Administratorkonto in Azure AD schützt die Dokumente für die Benutzer.
 

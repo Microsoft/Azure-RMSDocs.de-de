@@ -5,19 +5,19 @@ author: mlottner
 ms.author: mlottner
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: abab1e8a35b1928dd752cd287dc20aebded9bb14
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: e19400a0901c62bd00f7cd965e23ea01c36be395
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567568"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849741"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection-Client: Installation und Konfiguration für Clients
 
@@ -38,7 +38,7 @@ Der klassische Client unterstützt auch eine Website zum Nachverfolgen von Dokum
 
 Informationen zu einer Unternehmens Installation und-Konfiguration des Clients für Windows finden Sie in den folgenden Administrator Handbüchern:
 
-- Einheitlicher Bezeichnungs Client: [Azure Information Protection Unified-Bezeichnung Client Administrator Handbuch](./rms-client/clientv2-admin-guide.md)] (./RMS-Client/Client-Admin-Guide.MD)
+- Einheitlicher Bezeichnungs Client: [Azure Information Protection Unified-Bezeichnung Client Administrator Handbuch](./rms-client/clientv2-admin-guide.md)
 
 - Klassischer Client: [Azure Information Protection-Client Administrator Handbuch](./rms-client/client-admin-guide.md)
 

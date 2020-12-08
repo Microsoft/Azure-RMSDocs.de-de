@@ -1,10 +1,10 @@
 ---
 title: 'Häufig gestellte Fragen (FAQs) zu Azure RMS: AIP'
 description: Einige häufig gestellte Fragen zum Datenschutzdienst Azure Rights Management (Azure RMS) aus Azure Information Protection.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d5da3848ab1791a9cfe4ac00ae28193669190435
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 46d03db1a8e66b0e1753606a4a5e152047e43d22
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567796"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849724"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -88,14 +88,14 @@ Tipp: Verwenden Sie das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Ich verwende eine Hybridbereitstellung von Exchange mit einigen Benutzern unter Exchange Online und anderen unter Exchange Server. Wird dies von Azure RMS unterstützt?
 Ja, und das Gute ist, dass Benutzer für zwei Exchange-Bereitstellungen E-Mails und Anlagen nahtlos schützen sowie geschützte E-Mails und Anlagen nutzen können. Aktivieren Sie für diese Konfiguration [Azure RMS](activate-service.md) und [IRM für Exchange Online](/microsoft-365/enterprise/activate-rms-in-microsoft-365), und stellen Sie dann den [RMS-Connector](deploy-rms-connector.md) für Exchange Server bereit, und konfigurieren Sie ihn.
 
-## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azurerms"></a>Wenn ich diesen Schutz in meiner Produktionsumgebung verwende, ist mein Unternehmen dann an die Lösung gebunden und läuft andernfalls Gefahr, den Zugriff auf Inhalte zu verlieren, die wir mit Azure RMS geschützt haben?
-Nein, Sie behalten immer die Kontrolle über Ihre Daten und können weiterhin darauf zugreifen, selbst wenn Sie sich entscheiden, den Azure Rights Management-Dienst nicht mehr zu verwenden. Weitere Informationen finden Sie unter Außerbetriebsetzen [und Deaktivieren von Azure-Rights Management](decommission-deactivate.md).
+## <a name="if-i-use-this-protection-for-my-production-environment-is-my-company-then-locked-into-the-solution-or-risk-losing-access-to-content-that-we-protected-with-azure-rms"></a>Wenn ich diesen Schutz für meine Produktionsumgebung verwende, ist mein Unternehmen dann an die Lösung gebunden oder riskiert es, den Zugriff auf Inhalte zu verlieren, die wir mit Azure RMS geschützt haben?
+Nein, Sie behalten immer die Kontrolle über Ihre Daten und können weiterhin darauf zugreifen, auch wenn Sie sich entscheiden, Azure Rights Management Service nicht mehr zu nutzen. Weitere Informationen finden Sie unter Außerbetriebsetzen [und Deaktivieren von Azure-Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Kann ich steuern, welche Benutzer Azure RMS verwenden können, um Inhalte zu schützen?
 Ja, Azure Rights Management Service verfügt für dieses Szenario über Onboarding-Steuerelemente für Benutzer. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) im Artikel [Aktivieren des Schutz dienstanweises in Azure Information Protection](activate-service.md) .
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Kann ich verhindern, dass Benutzer geschützte Dokumente für bestimmte Organisationen freigeben?
-Einer der größten Vorteile der Verwendung des Azure Rights Management-Diensts für den Schutz von Daten besteht darin, dass er B2B-Zusammenarbeit unterstützt, ohne dass Sie explizite Vertrauensstellungen für jede Partnerorganisation konfigurieren müssen, denn Azure AD übernimmt die Authentifizierung für Sie.
+Einer der größten Vorteile der Verwendung von Azure Rights Management Service für den Datenschutz besteht darin, dass die Zusammenarbeit zwischen Unternehmen unterstützt wird, ohne dass Sie explizite Vertrauensstellungen für jede Partnerorganisation konfigurieren müssen, da Azure AD die Authentifizierung für Sie übernimmt.
 
 Es gibt keine Verwaltungsoption, die Benutzer daran hindert, Dokumente sicher mit bestimmten Organisationen auszutauschen. Beispielsweise möchten Sie eine Organisation blockieren, der Sie nicht vertrauen oder die ein konkurrierendes Unternehmen hat. Das Senden geschützter Dokumente an Benutzer in diesen Organisationen durch den Azure Rights Management-Dienst zu verhindern, wäre nicht sinnvoll, da die Benutzer Ihre Dokumente dann ungeschützt freigeben würden. Dies ist wahrscheinlich das letzte, was Sie in diesem Szenario tun möchten. Beispielsweise könnten Sie nicht erkennen, wer vertrauliche Unternehmensdokumente für welche Benutzer in diesen Organisationen freigibt, was Sie tun können, wenn das Dokument (oder die e-Mail) durch den Azure Rights Management-Dienst geschützt wird.
 
@@ -184,6 +184,7 @@ Da Azure Information Protection die sichere Freigabe von Daten für jedermann un
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Wie erhalten wir erneut Zugriff auf Dateien, die von einem Mitarbeiter geschützt wurden, der das Unternehmen inzwischen verlassen hat?
 Verwenden Sie das [Feature Administrator (super user)](configure-super-users.md), das autorisierten Benutzern das Nutzungsrecht „Vollzugriff“ für alle Dokumente und E-Mails gewährt, die durch Ihren Mandanten geschützt sind. Administratoren können diesen geschützten Inhalt immer lesen und bei Bedarf den Schutz aufheben oder den Inhalt erneut für andere Benutzer schützen. Mit diesem Feature können autorisierte Dienste bei Bedarf Dateien indizieren und untersuchen.
 
+Wenn Ihre Inhalte in SharePoint oder onedrive gespeichert sind, können Administratoren das [Unlock-sensitivitylabelverschlüsseltedfile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) -Cmdlet ausführen, um die Vertraulichkeits Bezeichnung und die Verschlüsselung zu entfernen. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Wenn ich den Widerruf auf der Dokumentnachverfolgungsseite teste, sehe ich eine Meldung, die besagt, dass Personen bis zu 30 Tage lang auf das Dokument zugreifen können. Ist dieser Zeitraum konfigurierbar?
 
 Ja. Diese Meldung gibt die [Nutzungslizenz](configure-usage-rights.md#rights-management-use-license) für diese bestimmte Datei an.

@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen zu Azure Information Protection und
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 36ef25b54fed8d73f33158f2c62670434c5d2f31
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: d528c715b54c063a267694fb974ef685fe264ea3
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568525"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849758"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -94,7 +94,7 @@ Wenn Sie ein Administrator sind und nicht sicher sind, welcher Client verwendet 
 
 Wenn Sie ein Benutzer sind, der überprüfen möchte, ob der klassische oder einheitliche Bezeichnungs Client installiert ist, klicken Sie auf **Hilfe und Feedback** , um das Dialogfeld **Microsoft Azure Information Protection** anzuzeigen. 
 
-Beispiel:
+Zum Beispiel:
 
 :::image type="content" source="media/client-about.png" alt-text="Ermitteln, ob der klassische oder der einheitliche Client installiert ist":::
 
@@ -182,11 +182,9 @@ Beachten Sie außerdem Folgendes, wenn Sie administrative Aufgaben und Rollen ve
 |---------|---------|
 |**Unterstützte Kontotypen**     | Microsoft-Konten werden für die delegierte Administration von Azure Information Protection nicht unterstützt, auch wenn diese Konten einer der aufgeführten Administrator Rollen zugewiesen sind.         |
 |**Onboarding-Steuerelemente**     |Wenn Sie [Onboardingsteuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben, wird die Möglichkeit zum Verwalten von Azure Information Protection mit Ausnahme des RMS-Connectors durch diese Konfiguration nicht beeinflusst. <br /><br />Wenn Sie z. b. onboardingsteuerelemente konfiguriert haben, sodass die Möglichkeit zum Schützen von Inhalten auf die *IT-Abteilungs* Gruppe beschränkt ist, muss das Konto, das zum Installieren und Konfigurieren des RMS-Verbindungs Dienst verwendet wird, ein Mitglied dieser Gruppe sein.          |
-|**Entfernen des Schutzes**     |  Administratoren können nicht automatisch den Schutz von Dokumenten oder e-Mails entfernen, die durch Azure Information Protection geschützt wurden. <br /><br />Nur Benutzer, die als Super Benutzer zugewiesen sind, können den Schutz entfernen, und zwar nur, wenn die Administrator Funktion aktiviert ist. <br /><br />Alle Benutzer mit Administrator Berechtigungen für Azure Information Protection können die Administrator Funktion aktivieren und Benutzer als Administratoren zuweisen, einschließlich ihres eigenen Kontos.<br /><br />Diese Aktionen werden in einem Administratorprotokoll aufgezeichnet. <br /><br />Weitere Informationen finden Sie im Abschnitt bewährte Sicherheitsmethoden unter [Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder Datenwiederherstellung](configure-super-users.md). 
-       |
-|**Migrieren zum vereinheitlichten Bezeichnungs Speicher**      |  Wenn Sie die Azure Information Protection Bezeichnungen in den einheitlichen Bezeichnungs Speicher migrieren, lesen Sie den folgenden Abschnitt aus der Dokumentation zur Bezeichnung Migration: <br />[Administrative Rollen, die die vereinheitlichte Bezeichnung-Plattform unterstützen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform).
-       |
-
+|**Entfernen des Schutzes**     |  Administratoren können nicht automatisch den Schutz von Dokumenten oder e-Mails entfernen, die durch Azure Information Protection geschützt wurden. <br /><br />Nur Benutzer, die als Super Benutzer zugewiesen sind, können den Schutz entfernen, und zwar nur, wenn die Administrator Funktion aktiviert ist. <br /><br />Alle Benutzer mit Administrator Berechtigungen für Azure Information Protection können die Administrator Funktion aktivieren und Benutzer als Administratoren zuweisen, einschließlich ihres eigenen Kontos.<br /><br />Diese Aktionen werden in einem Administratorprotokoll aufgezeichnet. <br /><br />Weitere Informationen finden Sie im Abschnitt bewährte Sicherheitsmethoden unter [Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder Datenwiederherstellung](configure-super-users.md). <br><br>**Tipp:** Wenn Ihre Inhalte in SharePoint oder onedrive gespeichert sind, können Administratoren das [Unlock-sensitivitylabelverschlüsseltedfile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) -Cmdlet ausführen, um die Vertraulichkeits Bezeichnung und die Verschlüsselung zu entfernen. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document). |
+|**Migrieren zum vereinheitlichten Bezeichnungs Speicher**      |  Wenn Sie die Azure Information Protection Bezeichnungen in den einheitlichen Bezeichnungs Speicher migrieren, lesen Sie den folgenden Abschnitt aus der Dokumentation zur Bezeichnung Migration: <br />[Administrative Rollen, die die vereinheitlichte Bezeichnung-Plattform unterstützen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform). |
+| | |
 ### <a name="azure-information-protection-administrator"></a>Azure Information Protection-Administrator
 
 Mit dieser Azure Active Directory Administrator Rolle kann ein Administrator Azure Information Protection, aber keine anderen Dienste konfigurieren. 
@@ -289,7 +287,7 @@ Zusätzliche Informationen:
 
 |Thema  |Details  |
 |---------|---------|
-|**Auswertungs Häufigkeit**    | Bei Windows-Computern und der aktuellen Vorschauversion werden die Richtlinien für den bedingten Zugriff für Azure Information Protection ausgewertet, wenn die [Benutzerumgebung initialisiert wird](./how-does-it-work.md#initializing-the-user-environment) (dieser Prozess wird auch als bootstrapping bezeichnet), und dann alle 30 Tage.<br /><br />Um zu optimieren, wie oft Ihre Richtlinien für den bedingten Zugriff ausgewertet werden, konfigurieren Sie die Gültigkeits [Dauer des](/azure/active-directory/active-directory-configurable-token-lifetimes)Tokens.       |
+|**Auswertungshäufigkeit**    | Bei Windows-Computern und der aktuellen Vorschauversion werden die Richtlinien für den bedingten Zugriff für Azure Information Protection ausgewertet, wenn die [Benutzerumgebung initialisiert wird](./how-does-it-work.md#initializing-the-user-environment) (dieser Prozess wird auch als bootstrapping bezeichnet), und dann alle 30 Tage.<br /><br />Um zu optimieren, wie oft Ihre Richtlinien für den bedingten Zugriff ausgewertet werden, konfigurieren Sie die Gültigkeits [Dauer des](/azure/active-directory/active-directory-configurable-token-lifetimes)Tokens.       |
 |**Administratorkonten**     |Es wird empfohlen, dass Sie Ihren Richtlinien für den bedingten Zugriff keine Administrator Konten hinzufügen, da diese Konten nicht auf den Bereich Azure Information Protection im Azure-Portal zugreifen können.         |
 |**MFA-und B2B-Zusammenarbeit**     | Wenn Sie MFA in Ihren Richtlinien für bedingten Zugriff für die Zusammenarbeit mit anderen Unternehmen (B2B) verwenden, müssen Sie [Azure AD B2B-Zusammenarbeit](/azure/active-directory/b2b/what-is-b2b) verwenden und Gastkonten für die Benutzer erstellen, mit denen Sie in dem anderen Unternehmen zusammenarbeiten möchten.        |
 |**Eingabe Aufforderungen für Nutzungsbedingungen**     |  Mit der Azure AD Vorschauversion vom Dezember 2018 können Sie [Benutzer auffordern, Nutzungsbedingungen zu akzeptieren](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Updates-to-Azure-AD-Terms-of-Use-functionality-within/ba-p/294822) , bevor Sie ein geschütztes Dokument zum ersten Mal öffnen.       |

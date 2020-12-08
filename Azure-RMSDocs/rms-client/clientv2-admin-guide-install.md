@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren zum Bereitstelle
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
+ms.date: 12/07/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cbb554d09d24b1403c24f52fd5215fdee71ab61
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 7fabd12e3ca0dc08f8c5617b37252ac5adc22948
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95735047"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849673"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -66,7 +66,7 @@ Geben Sie die folgenden programmgesteuerten Bezeichner (ProgID) für AIP an, und
 
 Der Azure Information Protection Unified Label-Client kann Dokumente und e-Mails mit den Office-Anwendungen Word, Excel, PowerPoint und Outlook aus einer der folgenden Office-Editionen bezeichnen und schützen:
 
-- Office-Apps: Mindestversion 1805, Build 9330,2078 aus Microsoft 365 Apps für Unternehmen oder Microsoft 365 Business Premium, wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen ist (auch bekannt als Azure Information Protection für Office 365).
+- Office-Apps für die Versionen, die in der [Tabelle der unterstützten Versionen für Microsoft 365-apps nach Aktualisierungs Kanal](/officeupdates/update-history-microsoft365-apps-by-date)aufgeführt sind, von Microsoft 365 Apps für Unternehmen oder Microsoft 365 Business Premium, wenn dem Benutzer eine Lizenz für Azure Rights Management zugewiesen wird (auch bekannt als Azure Information Protection für Office 365)
 - Microsoft 365 Apps for Enterprise
 - Office Professional Plus 2019
 - Office Professional Plus 2016

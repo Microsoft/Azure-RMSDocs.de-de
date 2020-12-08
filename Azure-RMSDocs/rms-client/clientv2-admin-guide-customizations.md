@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0fe8286b9fab39a8ac9df3112866d21caa835e5f
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316839"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849860"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -36,7 +36,7 @@ Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die f
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine **Erweiterte Einstellung für die erweiterte Einstellung * Bezeichnung** _.
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine _*_Erweiterte Einstellung_*_ für die Bezeichnung.
@@ -702,6 +702,12 @@ Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden 
 
 Erstellen Sie für die ausgewählte Richtlinie mindestens eine der folgenden erweiterten Einstellungen mit den folgenden Schlüsseln. Geben Sie für die Werte eine oder mehrere Bezeichnungen durch die GUIDs an, die jeweils durch ein Komma getrennt sind.
 
+> [!NOTE]
+> Die erweiterten Einstellungen in diesem Abschnitt gelten für den Fall, dass eine *bestimmte* Bezeichnung verwendet wird.
+> 
+> Wenn Sie erweiterte Einstellungen für *nicht beschrifteten* Inhalt konfiguriert haben, z. b. mit der Einstellung **[outlookunlabeledkollaborationaction](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)** erweitert, und ihre Popup Nachrichten für nicht beschrifteten Inhalt anpassen möchten, verwenden Sie eine JSON-Datei, um die erweiterten Einstellungen zu definieren. Weitere Informationen finden Sie unter [Anpassen von Outlook-Popup Nachrichten](#customize-outlook-popup-messages).
+> 
+
 Beispiel Wert für mehrere Bezeichnungs-GUIDs als durch Trennzeichen getrennte Zeichenfolge: 
 
 ```sh
@@ -1088,7 +1094,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Beispiel:
+Zum Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1253,7 +1259,7 @@ So melden Sie sich als ein anderer Benutzer an:
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und wählen Sie im Abschnitt aktualisierter **Client Status** die Option **Anmelden** aus.
 
-Außerdem zu beachten:
+Darüber hinaus gilt:
 
 - Wenn der Azure Information Protection Unified Bezeichnung-Client nach dem Ausführen dieser Schritte weiterhin mit dem alten Konto angemeldet ist, löschen Sie alle Cookies aus Internet Explorer, und wiederholen Sie dann die Schritte 1 und 2.
 
@@ -1339,7 +1345,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Lese-oder archivierte Dateien überspringen**
 
-Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Beispiel:
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1389,7 +1395,7 @@ Beispielsweise können Sie als Administrator Ihre Benutzer daran erinnern, keine
 
 Um den standardmäßigen **anderen** Text zu ändern, der angezeigt wird, verwenden Sie die erweiterte Eigenschaft "Recht **cationtextforusertext** " mit dem [Set-labelpolicy](/powershell/module/exchange/set-labelpolicy) -Cmdlet. Legen Sie den Wert auf den Text fest, den Sie stattdessen verwenden möchten.
 
-Beispiel:
+Zum Beispiel:
 
 ``` PowerShell
 
@@ -1464,7 +1470,7 @@ Definieren Sie die JSON-Syntax Ihrer Regel wie folgt:
 "nodes" : []
 ```
 
-Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter:
+Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt.    Weitere Informationen finden Sie unter
 
 - [Syntax der Regel Bedingung](#rule-condition-syntax)
 - [Syntax der Regel Aktion](#rule-action-syntax)
@@ -1837,7 +1843,7 @@ Dieser Wert wird in der **HttpRuntimeSection** -Klasse der `ASP.NET` Konfigurati
 
 1. Sichern Sie Ihre **web.config** Konfiguration. 
 
-1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Beispiel:
+1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Zum Beispiel:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
