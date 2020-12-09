@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2461aed992c46859191a118db72c97ca90815315
-ms.sourcegitcommit: 1e028d89d179d0ef81851d969f5d0dc90b8dd45c
+ms.openlocfilehash: f25b020a72a48e79b24840a597aefd4cc9e594af
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93245098"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849700"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -40,7 +40,7 @@ Diese Anwendungen und Lösungen werden „RMS-aktiviert“ genannt. Sie bieten �
 |---------|---------|
 |**Word, Excel, PowerPoint**    | - [Microsoft 365 Apps](#microsoft-365-app-support) <br />- Office 2010 <br />– Office 2013<br />- Office 2016 <br />– Office 2019 <br />- [Office für das Web (Anzeige von geschützten Dokumenten)](#viewing-protected-documents-in-office-for-the-web)<br />- [Webbrowser](#web-browser-support)        |
 |[**Email**](#viewing-protected-content-in-email-clients)      |   – Outlook 2010<br />– Outlook 2013<br />– Outlook 2016 <br />– Outlook 2019 <br />– Outlook von Microsoft 365 Apps for Enterprise<br />- [Webbrowser](#web-browser-support)<br />- [Windows Mail](#email-clients-using-exchange-activesync-irm)|
-|[**Weitere Dateitypen**](#supported-text-and-image-file-types)    |  – Visio von Microsoft 365 Apps, Office 2019 und Office 2016: **.vsdm,** **.vsdx,** **.vssm** , **.vstm** , **.vssx** , **.vstx** <br />– Azure Information Protection-Client für Windows: Text, Bilder, **PFILE** <br />– SealPath RMS-Plug-In für AutoCAD: **.dwg**       |
+|[**Weitere Dateitypen**](#supported-text-and-image-file-types)    |  – Visio von Microsoft 365 Apps, Office 2019 und Office 2016: **.vsdm,** **.vsdx,** **.vssm**, **.vstm**, **.vssx**, **.vstx** <br />– Azure Information Protection-Client für Windows: Text, Bilder, **PFILE** <br />– SealPath RMS-Plug-In für AutoCAD: **.dwg**       |
 | | |
 
 ## <a name="macos-rms-enlightened-applications"></a>RMS-aktivierte Anwendungen für macOS
@@ -123,8 +123,8 @@ Weitere Informationen finden Sie unter [Unterstützte Dateitypen](./rms-client/c
 ### <a name="microsoft-365-app-support"></a>Microsoft 365 App-Unterstützung
 
 Enthält: 
-- Office-Apps mit Mindestversion 1805, Build 9330.2078 von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium. Diese Edition wird nur unterstützt, wenn dem Benutzer eine Azure Rights Management-Lizenz (auch als „Azure Information Protection für Microsoft 365 Business Premium“ bezeichnet) zugewiesen wurde.
-- Microsoft 365 Apps for Enterprise
+- Office-Apps für die in der [Tabelle der unterstützten Versionen für Microsoft 365-Apps nach Updatekanal](/officeupdates/update-history-microsoft365-apps-by-date) aufgeführten Versionen von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
+- Microsoft 365 Apps for Enterprise
 
 ### <a name="viewing-protected-documents-in-office-for-the-web"></a>Anzeigen von in Office für das Web geschützten Dokumenten
 
@@ -170,7 +170,7 @@ Siehe auch: [Dienstbeschreibung für Office-Anwendungen](/office365/servicedescr
 
 Die folgenden Office-Clientsuites unterstützen den Schutz von Dateien und E-Mails auf Windows-Computern mithilfe von Azure Rights Management:
 
-- **Office-Apps mit Mindestversion 1805, Build 9330.2078 von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium** , wenn Ihnen eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
+- **Office-Apps** für die in der [Tabelle der unterstützten Versionen für Microsoft 365-Apps nach Updatekanal](/officeupdates/update-history-microsoft365-apps-by-date) aufgeführten Versionen von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
 
 - **Microsoft 365 Apps for Enterprise**
 
@@ -211,7 +211,7 @@ Alle Editionen von Office für Mac 2019 und Office für Mac 2016 können geschü
 > 
 ## <a name="azure-information-protection-apps-for-ios-and-android"></a>Azure Information Protection-Apps für iOS und Android
 
-Die Azure Information Protection-App für iOS und Android stellt einen Viewer für rechtegeschützte E-Mail-Nachrichten ( **RPMSG** -Dateien) für den Fall bereit, dass auf diesen mobilen Geräten keine E-Mail-App installiert ist, mit der geschützte E-Mails geöffnet werden können. Mit dieser App können Sie außerdem rechtegeschützte PDF-Dateien, Bilder und Textdateien anzeigen.
+Die Azure Information Protection-App für iOS und Android stellt einen Viewer für rechtegeschützte E-Mail-Nachrichten (**RPMSG**-Dateien) für den Fall bereit, dass auf diesen mobilen Geräten keine E-Mail-App installiert ist, mit der geschützte E-Mails geöffnet werden können. Mit dieser App können Sie außerdem rechtegeschützte PDF-Dateien, Bilder und Textdateien anzeigen.
 
 Wenn Ihre iOS- und Android-Geräte durch Microsoft Intune registriert wurden, können Benutzer die App über das Unternehmensportal installieren, und Sie können die App mithilfe der [App-Schutzrichtlinien](/intune/apps/app-protection-policies) von Intune verwalten.
 
@@ -225,7 +225,7 @@ Der Azure Information Protection-Client (AIP) umfasst zwei Versionen mit Adminis
     - [Administratorhandbuch](./rms-client/clientv2-admin-guide.md)
     - [Benutzerhandbuch](./rms-client/clientv2-user-guide.md)
 
-- **Klassischer Client** :
+- **Klassischer Client**:
     - [Administratorhandbuch](./rms-client/client-admin-guide.md)
     - [Benutzerhandbuch](./rms-client/client-user-guide.md)
 
@@ -236,7 +236,7 @@ Laden Sie die relevante App von der [Microsoft Azure Information Protection-Seit
 > 
 ## <a name="rights-management-sharing-app"></a>Rights Management-Freigabeanwendung
 
-Für Mac-Computer stellt die Rights Management-Freigabeanwendung einen Viewer für geschützte PDF-Dateien ( **PPDF** ), geschützte Textbilder und allgemein geschützte Dateien bereit. Sie kann auch Bilddateien, jedoch keine anderen Dateien schützen. Verwenden Sie zum Schützen von Office-Dateien auf diesen Computern Office für Mac oder Microsoft 365 Apps for Enterprise. 
+Für Mac-Computer stellt die Rights Management-Freigabeanwendung einen Viewer für geschützte PDF-Dateien (**PPDF**), geschützte Textbilder und allgemein geschützte Dateien bereit. Sie kann auch Bilddateien, jedoch keine anderen Dateien schützen. Verwenden Sie zum Schützen von Office-Dateien auf diesen Computern Office für Mac oder Microsoft 365 Apps for Enterprise. 
 
 Weitere Informationen finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](/previous-versions/msdn10/dn451248(v=msdn.10)).
 
