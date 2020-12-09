@@ -13,12 +13,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: has-adal-ref
-ms.openlocfilehash: 63beff811a9a9d6d08cfb7d2119c976e91097109
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 65e7e70d6cd144905c37d0c20c05f5841f310c42
+ms.sourcegitcommit: 03fef7cf0a7687962bfd3f0cd221541520f4a317
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568381"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862512"
 ---
 # <a name="whats-new-and-release-notes"></a>Neues und Anmerkungen zu dieser Version
 
@@ -138,7 +138,7 @@ Die Version 4.1 des RMS SDK bietet die folgenden neuen Features für Google Andr
 
     Beispiel: MSUserPolicy.name wurde in [MSUserPolicy.policyName](/previous-versions/windows/desktop/msipcthin2/msuserpolicy-name-property-objc) geändert.
 
-## <a name="release-notes"></a>Versionshinweise
+## <a name="release-notes"></a>Anmerkungen zu diesem Release
 
 Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen der Microsoft Rights Management SDK 4.x-APIs, die Sie als Entwickler berücksichtigen sollten.
 
@@ -158,7 +158,7 @@ Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen d
 
 -   Wenn Sie eine Beispiel-App auf einem Kindle-Gerät von Amazon® verwenden, um PTXT-Anlagen anzuzeigen, müssen Sie die Datei zum Anzeigen herunterladen.
 
-    **Lösung**: Ein bekanntes Problem, das in der Zukunft behoben wird.
+    **Lösung** : Dies ist ein bekanntes Problem, und es ist unwahrscheinlich, dass ein Problem vorliegt. Wir empfehlen Ihnen, stattdessen das [Microsoft Information Protection SDK](/information-protection/develop/) zu untersuchen.
 
 -   Eine Anwendung, die das SDK verwendet, stürzt möglicherweise ab, wenn mehrere Instanzen zulässig sind.
 
@@ -197,7 +197,7 @@ Dieser Abschnitt enthält Informationen zur aktuellen und vorherigen Versionen d
 
 
 
-**Hinweis**    MDI-Anwendungen werden von unserer IOS-API nicht unterstützt.
+**Hinweis** MDI-Anwendungen werden von unserer iOS-API nicht unterstützt.
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
