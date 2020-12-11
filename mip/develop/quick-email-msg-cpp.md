@@ -1,17 +1,17 @@
 ---
 title: 'Datei-API: Verarbeiten von E-Mail-Dateien (.msg-Dateien) (C++)'
-description: In diesem Artikel erfahren Sie, wie Sie MSG-Dateien mithilfe der Datei-API des MIP-SDK verarbeiten können.
+description: In diesem Artikel erfahren Sie, wie Sie MSG-Dateien mithilfe der Datei-API des MIP-SDK verarbeiten können (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/08/2020
 ms.author: v-anikep
-ms.openlocfilehash: ef6f8db6915242a830d252eec4509fa67eecbb8c
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.openlocfilehash: ab070974fc8c03236269a40b2230862e87e19e6b
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403311"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536016"
 ---
 # <a name="file-api---process-email-msg-files-c"></a>Datei-API: Verarbeiten von E-Mail-Dateien (.msg-Dateien) (C++)
 

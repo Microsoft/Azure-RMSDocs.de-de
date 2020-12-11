@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 6222326e569d03fbb208d42aacd7efb7ab406a78
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 0f8ed60420b5a0c4fcc0f8264d54f696f5c439a2
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766370"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535891"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Schnellstart: Initialisierung der Clientanwendung für Schutz-APIs (C#)
 
@@ -63,7 +63,7 @@ Sofern nicht bereits geschehen, führen Sie die unter [Schnellstart: Initialisie
 
 3. Der verwaltete Wrapper enthält eine statische Klasse (`Microsoft.InformationProtection.MIP`), die für die Initialisierung, das Erstellen eines `MipContext`-Elements, das Laden von Profilen und das Freigeben von Ressourcen verwendet wird. Zum Initialisieren des Wrappers für Datei-API-Vorgänge rufen Sie `MIP.Initialize()` auf und übergeben `MipComponent.Protection`, um die benötigten Bibliotheken für Schutzvorgänge zu laden.
 
-4. Fügen Sie in der `Main()`-Methode der Datei *Program.cs* folgenden Codeausschnitt ein. Ersetzen Sie **\<application-id\>** hierbei durch die ID der Azure AD-Anwendungsregistrierung, die Sie zuvor erstellt haben.
+4. Fügen Sie in der `Main()`-Methode der Datei *Program.cs* folgenden Codeausschnitt ein. Ersetzen Sie **\<application-id\>** hierbei durch die ID der Azure AD-Anwendungsregistierung, die Sie zuvor erstellt haben.
 
 ```csharp
 using System;

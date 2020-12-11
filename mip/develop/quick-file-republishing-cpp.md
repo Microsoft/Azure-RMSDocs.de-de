@@ -1,17 +1,17 @@
 ---
 title: 'Vorgehensweise: Erneutes Veröffentlichen in C++'
-description: In diesem Artikel erfahren Sie, wie Sie den Schutzhandler zum erneuten Veröffentlichen wiederverwenden.
+description: In diesem Artikel erfahren Sie, wie Sie den Schutzhandler zum erneuten Veröffentlichen wiederverwenden (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
 ms.author: v-anikep
-ms.openlocfilehash: 49fac8fb748cec60abbe3af779670c928c1608a1
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: a9edf2faf674968edf0121b677a79be39ec86cc7
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91421149"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535857"
 ---
 # <a name="file-api-re-publishing-quickstart-c"></a>Schnellstart für die erneute Veröffentlichung mit der Datei-API ( C++ )
 
@@ -140,7 +140,7 @@ if (protectionHandler->AccessCheck("Edit")) {
 
 Erstellen und testen Sie die Clientanwendung.
 
-1. Drücken Sie STRG+UMSCHALT+B ( **Projektmappe erstellen** ), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 ( **Debuggen starten** ) zum Ausführen der Anwendung.
+1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
 2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Führen Sie das PowerShell-Skript wie zuvor im Schnellstart „Festlegen und Abrufen von Vertraulichkeitsbezeichnungen“ aus, um jedes Mal das Token anhand der angegebenen Werte für $authority und $resourceUrl abzurufen.
 

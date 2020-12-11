@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c8ace8c73584cdd6eb0cfe6652d944e1b95f46d8
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 37638bfbc47a4a4d075114540ec65ea5d6372a30
+ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91428819"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849826"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -60,7 +60,7 @@ Voraussetzungen für dieses Tutorial:
 
 4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
-    - Office-Apps mit Mindestversion 1805, Build 9330.2078 von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium, wenn Ihnen eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
+    - Office-Apps für die in der [Tabelle der unterstützten Versionen für Microsoft 365-Apps nach Updatekanal](/officeupdates/update-history-microsoft365-apps-by-date) aufgeführten Versionen von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
     
     - Microsoft 365 Apps for Enterprise
     

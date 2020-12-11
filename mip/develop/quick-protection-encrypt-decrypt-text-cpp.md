@@ -1,18 +1,18 @@
 ---
 title: 'Schnellstart: Verschlüsseln/Entschlüsseln von Text mit der Schutz-API im MIP SDK für C++'
-description: Dieser Schnellstart zeigt die Verwendung der Schutz-API im Microsoft Information Protection SDK für C++, um Ad-hoc-Text mithilfe einer Schutzvorlage zu verschlüsseln und zu entschlüsseln.
+description: Dieser Schnellstart zeigt die Verwendung der Schutz-API im Microsoft Information Protection SDK für C++, um Ad-hoc-Text mithilfe einer Schutzvorlage zu verschlüsseln und zu entschlüsseln (C++).
 services: information-protection
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
 ms.author: v-anikep
-ms.openlocfilehash: 24d52a73620a7f186c425532f5132cac2a46f405
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: 1258bfcd6c47611b439a29406ed0e78b644a5803
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81766336"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535840"
 ---
 # <a name="quickstart-encryptdecrypt-text-using-mip-sdk-c"></a>Schnellstart: Verschlüsseln/Entschlüsseln von Text mit dem MIP SDK (C++)
 

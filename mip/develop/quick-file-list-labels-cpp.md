@@ -1,18 +1,18 @@
 ---
 title: 'Schnellstart: Auflisten der Vertraulichkeitsbezeichnungen in einem MIP-Mandanten (Microsoft Information Protection) mithilfe des C++-MIP SDKs'
-description: In diesen Schnellstart wird veranschaulicht, wie Sie das Microsoft Information Protection SDK mit C++ nutzen, um die Vertraulichkeitsbezeichnungen in Ihrem Mandanten aufzulisten.
+description: In diesen Schnellstart wird veranschaulicht, wie Sie das Microsoft Information Protection SDK mit C++ nutzen, um die Vertraulichkeitsbezeichnungen in Ihrem Mandanten aufzulisten (C++).
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 07782b754c63b4289bf5630eb41b6885b30c7c78
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971607"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96536044"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)
 

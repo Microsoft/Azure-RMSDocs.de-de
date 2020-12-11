@@ -1,18 +1,18 @@
 ---
 title: 'Schnellstart: Auflisten der verfügbaren Schutzvorlagen für einen authentifizierten Benutzer in einem Microsoft Information Protection-Mandanten (MIP) mit dem MIP SDK für C++'
-description: Dieser Schnellstart zeigt die Verwendung der Schutz-API im Microsoft Information Protection SDK für C++, um die für einen Benutzer verfügbaren Schutzvorlagen aufzulisten.
+description: Dieser Schnellstart zeigt die Verwendung der Schutz-API im Microsoft Information Protection SDK für C++, um die für einen Benutzer verfügbaren Schutzvorlagen aufzulisten (C++).
 author: Pathak-Aniket
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: v-anikep
 ms.custom: has-adal-ref
-ms.openlocfilehash: c8af932e5210bdf2445926c6584d4680a6fb0158
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: cc38554ccd9d1ff33c41c4d9adf37b097b7b8547
+ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91588273"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535908"
 ---
 # <a name="quickstart-list-protection-templates-c"></a>Schnellstart: Auflisten von Schutzvorlagen (C++)
 
@@ -52,7 +52,7 @@ Fügen Sie Logik zum Auflisten der für einen Benutzer verfügbaren Schutzvorlag
     engine->GetTemplatesAsync(engineObserver, loadPromise);
     auto templates = loadFuture.get();
 
-    cout << "*** Template List: " << endl;
+    cout << "**_ Template List: " << endl;
 
     for (const auto& protectionTemplate : templates) {
         cout << "Name: " << protectionTemplate->GetName() << " : " << protectionTemplate->GetId() << endl;
@@ -84,7 +84,7 @@ Verwenden Sie das folgende PowerShell-Skript, um die Zugriffstoken zu generieren
 
 Letztendlich erstellen und testen Sie die Clientanwendung.
 
-1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
+1. Drücken Sie STRG+UMSCHALT+B (_*Projektmappe erstellen **), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, drücken Sie F5 (** Debuggen starten**), um Ihre Anwendung auszuführen.
 
 2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Sie können ein zuvor generiertes Token erneut verwenden, wenn Sie mehrmals dazu aufgefordert werden und die Werte gleich sind:
 
@@ -112,7 +112,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 4. Nachdem das Zugriffstoken in die Eingabeaufforderung aus Schritt 2 eingefügt wurden, sollten in der Konsolenausgabe die Schutzvorlagen für den authentifizierten Benutzer angezeigt werden, ähnlich wie im folgenden Beispiel:
 
    ```console
-   *** Template List:
+   **_ Template List:
    Name: Confidential \ All Employees : a74f5027-f3e3-4c55-abcd-74c2ee41b607
    Name: Highly Confidential \ All Employees : bb7ed207-046a-4caf-9826-647cff56b990
    Name: Confidential : 174bc02a-6e22-4cf2-9309-cb3d47142b05
@@ -133,7 +133,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 | Zusammenfassung | Fehlermeldung | Lösung |
 |---------|---------------|----------|
-| Falscher Umleitungs-URI in der Anwendungsregistrierung oder im PowerShell-Skript (AADSTS50011) |*AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* (AADSTS50011: Die in der Anforderung angegebene Antwort-URL entspricht nicht den für die Anwendung konfigurierten Antwort-URLs: „ac6348d6-0d2f-4786-af33-07ad46e69bfc“.) | Überprüfen Sie den verwendeten Umleitungs-URI, indem Sie einen der folgenden Schritte ausführen:<br><br><li>Aktualisieren Sie den Umleitungs-URI in der Azure AD-Anwendungskonfiguration, sodass er mit Ihrem PowerShell-Skript übereinstimmt. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie den Umleitungs-URI ordnungsgemäß konfiguriert haben.<br><li>Aktualisieren Sie die `redirectUri`-Variable in Ihrem PowerShell-Skript entsprechend Ihrer Anwendungsregistrierung. |
+| Falscher Umleitungs-URI in der Anwendungsregistrierung oder im PowerShell-Skript (AADSTS50011) |_AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* (AADSTS50011: Die in der Anforderung angegebene Antwort-URL entspricht nicht den für die Anwendung konfigurierten Antwort-URLs: „ac6348d6-0d2f-4786-af33-07ad46e69bfc“.) | Überprüfen Sie den verwendeten Umleitungs-URI, indem Sie einen der folgenden Schritte ausführen:<br><br><li>Aktualisieren Sie den Umleitungs-URI in der Azure AD-Anwendungskonfiguration, sodass er mit Ihrem PowerShell-Skript übereinstimmt. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie den Umleitungs-URI ordnungsgemäß konfiguriert haben.<br><li>Aktualisieren Sie die `redirectUri`-Variable in Ihrem PowerShell-Skript entsprechend Ihrer Anwendungsregistrierung. |
 | Falsches Anmeldekonto (AADSTS50020) | *AADSTS50020: User account 'user@domain.com' from identity provider 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' does not exist in tenant 'Organization name' and cannot access the application '0edbblll-8773-44de-b87c-b8c6276d41eb' in that tenant.* (Das Benutzerkonto „user@domain.com“ vom Identitätsanbieter „https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/“ ist im Mandanten „Name der Organisation“ nicht vorhanden und kann in diesem Mandanten nicht auf die Anwendung „0edbblll-8773-44de-b87c-b8c6276d41eb“ zugreifen.) | Führen Sie einen der folgenden Schritte aus:<br><br><li>Führen Sie das PowerShell-Skript erneut aus, aber achten Sie darauf, ein Konto vom gleichen Mandanten zu verwenden, bei dem Ihre Azure AD-Anwendung registriert ist.<br><li>Wenn Ihr Anmeldekonto richtig war, ist Ihre PowerShell-Hostsitzung möglicherweise unter einem anderen Konto authentifiziert. Beenden Sie in diesem Fall den Skripthost, und öffnen Sie ihn erneut. Versuchen Sie dann erneut, das Skript auszuführen.<br><li>Wenn Sie diesen Schnellstart mit einer Web-App (anstelle einer nativen App) durchführen und sich mit einem Konto von einem anderen Mandanten anmelden müssen, stellen Sie sicher, dass Ihre Azure AD-Anwendungsregistrierung für die Verwendung mehrerer Mandanten aktiviert ist. Dies können Sie überprüfen, indem Sie das Feature „Manifest bearbeiten“ in der Anwendungsregistrierung verwenden und sicherstellen, dass `"availableToOtherTenants": true,` angegeben wird. |
 | Falsche Berechtigungen in der Anwendungsregistrierung (AADSTS65005) | *AADSTS65005: Invalid resource. The client has requested access to a resource, which is not listed in the requested permissions in the client's application registration. Client app ID: 0edbblll-8773-44de-b87c-b8c6276d41eb. Resource value from request: https://syncservice.o365syncservice.com/. Resource app ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000.* (Ungültige Ressource. Der Client hat den Zugriff auf eine Ressource angefordert, die in den angeforderten Berechtigungen in der Anwendungsregistrierung des Clients nicht aufgeführt ist. Client-App-ID: „0edbblll-8773-44de-b87c-b8c6276d41eb“. Ressourcenwert aus der Anforderung: „https://syncservice.o365syncservice.com/“. Ressourcen-App-ID: „870c4f2e-85b6-4d43-bdda-6ed9a579b725.“. Liste der gültigen Ressourcen aus der Anwendungsregistrierung: „00000002-0000-0000-c000-000000000000“.) | Aktualisieren Sie die Berechtigungsanforderungen in der Azure AD-Anwendungskonfiguration. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie die Berechtigungsanforderungen in Ihrer Anwendungsregistrierung ordnungsgemäß konfiguriert haben. |
 
