@@ -12,19 +12,18 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cf8cdfd170dc03cb3f2a05cc2ed22ef7b19f9bb7
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a24332d284c8f1884d357765f4a30c07fb992df0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316380"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382767"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection-Scanners
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
-
->[!NOTE]
-> Wenn Sie den klassischen Scanner verwenden, finden Sie weitere Informationen unter [Installieren und Konfigurieren des Azure Information Protection klassischen Scanner](deploy-aip-scanner-configure-install-classic.md).
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Relevant für**: [nur AIP Unified Bezeichnung Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Scanner finden Sie unter [Ausführen der Azure Information Protection klassischen Scanner](deploy-aip-scanner-manage-classic.md). *
 
 Nachdem Sie die [Systemanforderungen](deploy-aip-scanner-prereqs.md) bestätigt und [Ihren Scanner konfiguriert und installiert](deploy-aip-scanner-configure-install.md)haben, [führen Sie einen Ermittlungs Scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner) aus, um zu beginnen.
 
@@ -111,7 +110,7 @@ Beim [ersten Scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner)Vorga
 
 Die erneute Überprüfung aller Dateien ist in der Regel hilfreich, wenn Sie möchten, dass die Berichte alle Dateien einschließen, wenn Sie Änderungen vorgenommen haben, die Sie auf alle Dateien anwenden möchten, und wenn die Überprüfung im Ermittlungs Modus ausgeführt wird.
 
-**So führen Sie einen vollständigen erneuten Scan manuell aus:**
+So **führen Sie einen vollständigen erneuten Scan manuell** aus:
 
 1. Navigieren Sie in der Azure-Portal zum Bereich **Azure Information Protection-Inhalts Scanaufträge** .
 
@@ -185,7 +184,5 @@ Das Diagnosetool überprüft die folgenden Details und exportiert dann eine Prot
 ## <a name="next-steps"></a>Nächste Schritte
 
 - Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
-
-- Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen zu diesem und anderen Szenarien, in denen PowerShell verwendet wird, finden [Sie unter Verwenden von PowerShell mit dem Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide-powershell.md).

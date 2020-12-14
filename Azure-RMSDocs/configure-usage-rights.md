@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -13,23 +13,28 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46ad00630997afd598d1476cba3c877e1a604864
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382886"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> 
+> Aus Gründen der Vollständigkeit enthält der Artikel Werte aus dem klassischen Azure-Portal, das am 8. Januar 2018 außer Kraft gesetzt wurde.
 
 Wenn Sie Vertraulichkeits Bezeichnungen oder Schutz Vorlagen für die Verschlüsselung konfigurieren, wählen Sie die Nutzungsrechte aus, die dann automatisch angewendet werden, wenn die Bezeichnung oder die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Sie können z.B. im Azure-Portal Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren. Alternativ können Benutzer die Nutzungsrechte selbst auswählen und anwenden.
 
 Verwenden Sie diesen Artikel, um die gewünschten Nutzungsrechte für die verwendete Anwendung zu konfigurieren und um zu verstehen, wie diese Rechte von Anwendungen interpretiert werden sollen. Allerdings kann es sein, dass Anwendungen in der Art und Weise variieren, in der Sie die Rechte implementieren, sodass Sie sich stets in der zugehörigen Dokumentation ansehen und ihre eigenen Tests mit den Anwendungen durchführen, die Benutzer zum Überprüfen des Verhaltens verwenden
 
-> [!NOTE] 
-> Aus Gründen der Vollständigkeit enthält der Artikel Werte aus dem klassischen Azure-Portal, das am 8. Januar 2018 außer Kraft gesetzt wurde.
 
 ## <a name="usage-rights-and-descriptions"></a>Nutzungsrechte und Beschreibungen
 In der folgenden Tabelle sind die Nutzungsrechte aufgelistet und beschrieben, die Rights Management unterstützt, und wie sie verwendet und interpretiert werden. Sie sind mit ihrem **allgemeinen Namen** aufgelistet, wie die Nutzungsrechte in der Regel angezeigt werden, bzw. über den auf sie verwiesen wird, als benutzerfreundlichere Version des Einzelwortwerts, der im Code verwendet wird (der **Richtliniencodierungswert**). 
@@ -38,7 +43,9 @@ In dieser Tabelle gilt Folgendes:
 
 - Die **API-Konstante oder der API-Wert** ist der SDK-Name für einen msipc-API-Befehl, der verwendet wird, wenn Sie eine Anwendung schreiben, die ein Nutzungsrecht prüft, oder einer Richtlinie ein Nutzungsrecht hinzufügt.
 
-- Die **Bezeichnung Admin Center** bezieht sich auf den Speicherort der Vertraulichkeits Bezeichnungen und kann entweder das Microsoft 365 Compliance Center, das Microsoft 365 Security Center oder das Security & Compliance Center von Office 365 sein.
+- Die **Bezeichnung Admin Center** bezieht sich auf den Speicherort der Vertraulichkeits Bezeichnungen und kann entweder das Microsoft 365 Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Security & Compliance Center sein.
+
+    Wenn Sie über den klassischen Client verfügen, konfigurieren Sie Ihre Bezeichnungen und Bezeichnungs Richtlinien im Azure-Portal.
 
 
 |Nutzungsrecht|BESCHREIBUNG|Implementierung|
@@ -86,16 +93,6 @@ Gilt nicht für den Azure Information Protection-Client für Windows.
 
 ###### <a name="footnote-4"></a>Fußnote 4
 Nicht in der Bezeichnung Admin Center, der Azure-Portal oder dem Azure Information Protection Client für Windows enthalten.
-
-## <a name="rights-included-in-the-default-templates"></a>In den Standardvorlagen enthaltene Rechte
-Die folgende Tabelle enthält die Nutzungsrechte, die enthalten sind, wenn die Standardvorlagen erstellt werden. Die Nutzungsrechte sind nach ihren [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
-
-Diese Standardvorlagen werden beim Erwerb Ihres Abonnements erstellt, und die Namen und Nutzungsrechte können im Azure-Portal und mit [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty) [geändert](configure-policy-templates.md) werden. 
-
-|Anzeigename der Vorlage|Nutzungsrechte vom 6. Oktober 2017 bis zum aktuellen Datum|Nutzungsrechte vor dem 6. Oktober 2017|
-|----------------|--------------------|----------|
-|\<*organization name> -Nur vertrauliche Ansicht * <br /><br />oder<br /><br /> *Streng vertraulich \ alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Kopieren; Rechte anzeigen; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten|Anzeigen, Öffnen, Lesen|
-|\<*organization name>Vertraulich <br /><br />oder <br /><br />*Vertraulich \ alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Speichern unter; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten; Vollzugriff|Anzeigen, Öffnen, Lesen; Speichern unter; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
 
 ## <a name="do-not-forward-option-for-emails"></a>„Nicht weiterleiten“-Option für E-Mails
 
@@ -196,6 +193,19 @@ Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz für einen Mandan
 - Wenn Sie eine Vorlage mithilfe von PowerShell konfigurieren, verwendet die Gültigkeitsdauer der Nutzungslizenz ihren Wert aus dem *licensevalidityduration* -Parameter in den Cmdlets " [Set-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty) " und " [Add-aipservicetemplate](/powershell/module/aipservice/add-aipservicetemplate) ".
     
     Weitere Informationen und Anleitungen zum Konfigurieren dieser Einstellung mithilfe von PowerShell finden Sie in der Hilfe zu dem jeweiligen Cmdlet.
+
+## <a name="rights-included-in-the-default-templates"></a>In den Standardvorlagen enthaltene Rechte
+
+**Relevant für**: nur AIP Classic Client
+
+Die folgende Tabelle enthält die Nutzungsrechte, die enthalten sind, wenn die Standardvorlagen erstellt werden. Die Nutzungsrechte sind nach ihren [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
+
+Diese Standardvorlagen werden beim Erwerb Ihres Abonnements erstellt, und die Namen und Nutzungsrechte können im Azure-Portal und mit [PowerShell](/powershell/module/aipservice/set-aipservicetemplateproperty) [geändert](configure-policy-templates.md) werden. 
+
+|Anzeigename der Vorlage|Nutzungsrechte vom 6. Oktober 2017 bis zum aktuellen Datum|Nutzungsrechte vor dem 6. Oktober 2017|
+|----------------|--------------------|----------|
+|\<*organization name> -Nur vertrauliche Ansicht * <br /><br />oder<br /><br /> *Streng vertraulich \ alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Kopieren; Rechte anzeigen; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten|Anzeigen, Öffnen, Lesen|
+|\<*organization name>Vertraulich <br /><br />oder <br /><br />*Vertraulich \ alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Speichern unter; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten; Vollzugriff|Anzeigen, Öffnen, Lesen; Speichern unter; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
 
 ## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)

@@ -1,52 +1,49 @@
 ---
 title: 'Azure Information Protection-Client: Installation und Konfiguration'
 description: Informationen für Administratoren zum Bereitstellen der Azure Information Protection Clients auf Windows-Computern und mobilen Geräten.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e19400a0901c62bd00f7cd965e23ea01c36be395
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: ca4dfed92aafb690da28e5164496b924c9c3fe7e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383600"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection-Client: Installation und Konfiguration für Clients
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Computer, auf denen Office 2010 ausgeführt wird, benötigen entweder den Azure Information Protection Client (klassisch) oder den Azure Information Protection Unified-Bezeichnung-Client, um sich beim Azure Information Protection Dienst zu authentifizieren.
+Für Computer, auf denen Office 2010 ausgeführt wird, muss sich der Azure Information Protection Client beim Azure Information Protection-Dienst authentifizieren.
 
-Der Unterschied zwischen diesen beiden Clients ist nicht sicher?  Siehe [worin besteht der Unterschied zwischen dem Azure Information Protection-Client und dem Azure Information Protection Unified-Bezeichnungs Client?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+Der AIP Unified Label-Client wird für alle Windows-Computer empfohlen, da er ein Office-Add-in installiert, das Benutzern das einfache bezeichnen und schützen von Dokumenten direkt über das Office-Menüband ermöglicht. Der Client bietet auch Bezeichnung und Schutz für Dateitypen, die nicht vom integrierten Schutzdienst (Azure Rights Management) unterstützt werden, sowie einen Viewer für geschützte Dateien, die nicht von Office-Apps geöffnet werden können. Es gibt einen ähnlichen Viewer für IOS und Android.
 
-Diese Clients werden auch für alle Windows-Computer empfohlen, da Sie ein Office-Add-in installieren, sodass Benutzer Dokumente und e-Mails ganz einfach direkt über das Office-Menüband bezeichnen und schützen können. Diese Clients bieten außerdem Bezeichnungen und Schutz für Dateitypen, die nicht nativ vom Schutzdienst (Azure Rights Management) unterstützt werden, und einen Viewer für geschützte Dateien, die nicht von Office-Apps geöffnet werden können. Es gibt einen ähnlichen Viewer für IOS und Android.
-
-Der klassische Client unterstützt auch eine Website zum Nachverfolgen von Dokumenten, auf der Benutzer geschützte Dateien verfolgen und widerrufen können.
+Wenn Sie den klassischen AIP-Client installiert haben, verfügen Sie auch über eine Website zum Nachverfolgen von Dokumenten, auf der Benutzer geschützte Dateien verfolgen und widerrufen können.
 
 ## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Azure Information Protection-Client für Windows: Installation und Konfiguration
 
-Informationen zu einer Unternehmens Installation und-Konfiguration des Clients für Windows finden Sie in den folgenden Administrator Handbüchern:
+Informationen zu einer Unternehmens Installation und-Konfiguration des Clients für Windows finden Sie im [Azure Information Protection Unified-Bezeichnung Client Administrator Handbuch](./rms-client/clientv2-admin-guide.md).
 
-- Einheitlicher Bezeichnungs Client: [Azure Information Protection Unified-Bezeichnung Client Administrator Handbuch](./rms-client/clientv2-admin-guide.md)
+Wenn Sie diese Clients schnell für einen einzelnen Computer installieren und testen möchten, finden Sie weitere Informationen unter [herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Clients](./rms-client/install-unifiedlabelingclient-app.md).
 
-- Klassischer Client: [Azure Information Protection-Client Administrator Handbuch](./rms-client/client-admin-guide.md)
+**Nur klassischer Client**: Wenn Sie den klassischen-Client installiert haben, verwenden Sie stattdessen die folgenden Links:
 
-Wenn Sie diese Clients jedoch schnell für einen einzelnen Computer installieren und testen möchten, finden Sie die folgenden Anweisungen in den Benutzerhandbüchern:
-
-- Einheitlicher Bezeichnungs Client: [herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client](./rms-client/install-unifiedlabelingclient-app.md)
-
-- Klassischer Client: [Laden Sie den Azure Information Protection Client](./rms-client/install-client-app.md) aus dem [Azure Information Protection Client-Benutzerhandbuch](./rms-client/client-user-guide.md)herunter, und installieren Sie ihn.
+- [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md)
+- [Laden Sie den Azure Information Protection Client herunter, und installieren Sie](./rms-client/install-client-app.md)ihn.
 
 ## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>Die Azure Information Protection-App für IOS und Android: Installation und Verwaltung
 

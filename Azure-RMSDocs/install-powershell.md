@@ -5,23 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57d8ac29ea58eab7820d642876e246b5ff985c4e
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 8cc07942c5ccb901518957a304c60adfe5c86a8f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568339"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383719"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installieren des PowerShell-Moduls für AIPService
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die folgenden Informationen, um das Windows PowerShell-Modul für den Schutzdienst von Azure Information Protection zu installieren. Der Name dieses Moduls ist aipservice und ersetzt die vorherige Version mit dem Namen aadrm.
 
@@ -44,7 +46,7 @@ Das neuere Modul verfügt über Aliase für die Cmdlet-Namen im älteren Modul, 
 
 Wenn Sie das aadrm-Modul von der PowerShell-Katalog installiert haben, starten Sie zum Deinstallieren eine PowerShell-Sitzung mit der Option **als Administrator ausführen** , und geben Sie Folgendes ein:
 
-```ps
+```PowerShell
 Uninstall-Module -Name AADRM
 ```
 
@@ -62,7 +64,7 @@ Weitere Informationen zum aipservice-Modul auf dem PowerShell-Katalog finden Sie
 
 Um das aipservice-Modul zu installieren, starten Sie eine PowerShell-Sitzung mit der Option **als Administrator ausführen** , und geben Sie Folgendes ein:
 
-```ps
+```PowerShell
 Install-Module -Name AIPService
 ```
 
@@ -70,7 +72,7 @@ Wenn Sie vor dem Installieren von einem nicht vertrauenswürdigen Repository gew
 
 Wenn Sie eine frühere Version des aipservice-Moduls aus dem Katalog installiert haben, aktualisieren Sie Sie auf den neuesten Wert, indem Sie Folgendes eingeben:
 
-```ps
+```PowerShell
 Update-Module -Name AIPService
 ```
 
@@ -78,7 +80,7 @@ Update-Module -Name AIPService
 
 Überprüfen Sie in einer Windows PowerShell-Sitzung die Version des installierten Moduls. Diese Überprüfung ist besonders wichtig, wenn Sie ein Upgrade von einer älteren Version durchgeführt haben:
 
-```ps
+```PowerShell
 (Get-Module AIPService –ListAvailable).Version
 ```
 
@@ -88,13 +90,13 @@ Update-Module -Name AIPService
 
 Geben Sie Folgendes ein, um die verfügbaren Cmdlets anzuzeigen:
 
-```ps
+```Powershell
 Get-Command -Module AIPService
 ```
 
-Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Beispiel:
+Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Zum Beispiel:
 
-```powershell
+```PowerShell
 Get-Help Connect-AipService -online
 ```
 

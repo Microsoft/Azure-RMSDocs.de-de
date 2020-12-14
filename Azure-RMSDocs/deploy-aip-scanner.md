@@ -12,20 +12,20 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35bb27bbb6cbfeb8fa4291c9442c95190b92e28b
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316268"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382546"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Was ist der Azure Information Protection-Scanner für einheitliche Bezeichnungen?
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
+>
+>***Relevant für**: [nur AIP Unified Bezeichnung Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie unter [Was ist der klassische Azure Information Protection-Scanner?](deploy-aip-scanner-classic.md)*
 
 >[!NOTE] 
-> Wenn Sie den klassischen Scanner verwenden, finden Sie weitere Informationen unter [Was ist der Azure Information Protection klassische Scanner?](deploy-aip-scanner-classic.md).
->
 > Verwenden Sie zum Überprüfen und Bezeichnen von Dateien auf Cloudrepositorys [Cloud App Security](/cloud-app-security/) anstelle des Scanners.
 
 Verwenden Sie die Informationen in diesem Abschnitt, um sich über den Azure Information Protection Unified-Bezeichnungs Scanner zu informieren und dann zu installieren, zu konfigurieren, auszuführen und ggf. Probleme zu beheben.
@@ -53,7 +53,7 @@ Der Scanner verwendet den Azure Information Protection Client und kann dieselben
 Führen Sie eine der folgenden Aktionen aus, um Ihre Scans nach Bedarf zu konfigurieren:
 
 - **Führen Sie die Überprüfung nur im Ermittlungs Modus aus** , um Berichte zu erstellen, mit denen Sie überprüfen, was geschieht, wenn Ihre Dateien beschriftet werden
-- **Führen Sie den Scanner aus, um Dateien mit sensiblen Informationen zu ermitteln,** ohne Bezeichnungen zu konfigurieren, die die automatische Klassifizierung anwenden.
+- **Führen Sie den Scanner aus, um Dateien mit sensiblen Informationen zu ermitteln**, ohne Bezeichnungen zu konfigurieren, die die automatische Klassifizierung anwenden.
 - **Führen Sie den Scanner automatisch** aus, um die Bezeichnungen wie konfiguriert anzuwenden. 
 - **Definieren Sie eine Liste der Dateitypen** , um bestimmte Dateien anzugeben, die gescannt oder ausgeschlossen werden sollen.
 
@@ -84,7 +84,7 @@ Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschloss
 
 Der Scanner berücksichtigt auch alle Dateilisten, die explizit für die Überprüfung definiert oder von der Überprüfung ausgeschlossen werden sollen. Dateilisten gelten standardmäßig für alle Daten Depots und können auch nur für bestimmte Depots definiert werden.
 
-Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Beispiel:
+Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Zum Beispiel:
 
 ![Konfigurieren der zu überprüfenden Dateitypen für den Azure Information Protection-Scanner](./media/scanner-file-types.png)
 
@@ -113,7 +113,7 @@ Wenn Sie überprüfen möchten, ob dies die Ursache für die Beendigung des Scan
 Weitere Informationen zum Anzeigen des aktuellen Port Bereichs und zum Erhöhen des aktuellen Port Bereichs finden Sie unter [Einstellungen, die geändert werden können, um die Netzwerkleistung zu verbessern](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 > [!TIP]
-> Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert für die Listenansicht erhöhen, der den Standardwert **5.000 hat.**
+> Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert für die Listenansicht erhöhen, der den Standardwert **5.000** hat.
 >
 > Weitere Informationen finden Sie unter [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 >
@@ -133,7 +133,7 @@ Der AIP-Scanner kann die Dateien unter den folgenden Umständen nicht bezeichnen
 
     Andere Dateitypen können zum Schutz hinzugefügt werden, wenn Sie [die Typen der zu schützenden Dateien ändern](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Beispiel:** Nach dem Überprüfen von txt-Dateien kann die Überprüfung keine Bezeichnung anwenden, die nur für die Klassifizierung konfiguriert ist, da der txt-Dateityp nur Klassifizierung unterstützt. 
+**Beispiel**: nach der Überprüfung von txt-Dateien kann der Scanner keine Bezeichnung anwenden, die nur für die Klassifizierung konfiguriert ist, da der Dateityp ". txt" nur die Klassifizierung unterstützt. 
 
 Wenn die Bezeichnung jedoch für die Klassifizierung und den Schutz konfiguriert ist und der txt-Dateityp für die Überprüfung enthalten ist, kann der Scanner die Datei bezeichnen.
 
@@ -145,12 +145,10 @@ Weitere Informationen zum Bereitstellen des Scanners finden Sie in den folgenden
 - [Konfigurieren und Installieren des AIP-Scanners](deploy-aip-scanner-configure-install.md)
 - [Ausführen von Scans mit dem AIP-Scanner](deploy-aip-scanner-manage.md)
 
-**Weitere Informationen:**
+**Weitere Informationen**:
 
 - Weitere Informationen finden Sie in unserem Blog zu bewährten Methoden für die einheitliche Bezeichnung Scanner: [bewährte Methoden für die Bereitstellung und Verwendung des AIP-UL-Scanners](https://aka.ms/AIPScannerBestPractices) .
 
 - Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-- Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
-
-- Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen zu diesem und anderen Szenarien, in denen PowerShell verwendet wird, finden [Sie unter Verwenden von PowerShell mit dem Azure Information Protection Unified-Beschriftungs Client](./rms-client/clientv2-admin-guide-powershell.md) .
+- Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen zu diesem und anderen Szenarien, in denen PowerShell verwendet wird, finden [Sie unter Verwenden von PowerShell mit dem Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide-powershell.md).

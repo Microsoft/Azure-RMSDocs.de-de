@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e7431ebdf016b89e1750b833dc4fca2d9646b195
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0b13ccec5c4ca4fcdad1ac145a289a727fddd38a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316720"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382019"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die folgenden Informationen für Phase 4 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 8 bis 9 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
@@ -151,13 +152,13 @@ Fügen Sie für alle Exchange-Server die folgenden Registrierungswerte zu „Lic
 
 1. Fügen Sie für **Exchange 2013 und Exchange 2016** den folgenden Registrierungs Wert hinzu:
 
-    - **Registrierungs Pfad:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
+    - **Registrierungs Pfad**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection`
 
-    - **Typ:** Reg_SZ
+    - **Typ**: REG_SZ
 
     - **Wert**: `https://\<AD RMS Intranet Licensing URL\>/_wmcs/licensing`
 
-    - **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
+    - **Daten**: eine der folgenden Angaben, abhängig davon, ob Sie http oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
         
@@ -165,13 +166,13 @@ Fügen Sie für alle Exchange-Server die folgenden Registrierungswerte zu „Lic
 
 1. Fügen Sie für Exchange 2013 den folgenden zusätzlichen Registrierungs Wert hinzu:
 
-    - **Registrierungs Pfad:**`HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
+    - **Registrierungs Pfad**: `HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection` 
 
-    - **Typ:** Reg_SZ
+    - **Typ**: REG_SZ
 
-    - **Wert:** https:// \<AD RMS Extranet Licensing URL\> /_wmcs/licensing
+    - **Wert**: https:// \<AD RMS Extranet Licensing URL\> /_wmcs/licensing
 
-    - **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
+    - **Daten**: eine der folgenden Angaben, abhängig davon, ob Sie http oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
 
         - `http://\<connector FQDN\>/_wmcs/licensing`
 

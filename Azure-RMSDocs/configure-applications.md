@@ -1,11 +1,11 @@
 ---
 title: Konfigurieren von Anwendungen für Azure Rights Management – AIP
 description: Hier finden Sie Anleitung für Administratoren zum Konfigurieren von Anwendungen und Diensten für die Unterstützung des Azure Rights Management-Schutzdiensts für Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
-ms.topic: how-to
+author: batamig
+ms.author: bagol
+manager: rkarlin
+ms.date: 11/11/2020
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
@@ -13,23 +13,30 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9deba7b1f62e501d49944410c4347743be3341cf
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 1f8100e22f1608ebbd678ec5f97f77b4abd53ff0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383651"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Information Protection bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung der Rights Management-Funktionen für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
 >
-> Klicken Sie bei Office-Anwendungen z. B. auf das Hilfesymbol, und geben Sie Suchbegriffe wie **Rights Management** oder **IRM** ein. Informationen zum Azure Information Protection-Client für Windows finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md).
+> Klicken Sie bei Office-Anwendungen z. B. auf das Hilfesymbol, und geben Sie Suchbegriffe wie **Rights Management** oder **IRM** ein. Informationen zum Azure Information Protection-Client für Windows finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/clientv2-user-guide.md).
 
-Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen, um Anwendungen, den Azure Information Protection-Client und Dienste zu konfigurieren. Beispielsweise Office-Anwendungen wie Word 2019, Word 2016 und Word 2013. Außerdem Dienste wie Exchange Online (Transport Regeln, Verhinderung von Datenverlust, nicht weiterleiten und Nachrichten Verschlüsselung) und Microsoft SharePoint (geschützte Bibliotheken). Informationen dazu, wie diese Anwendungen und Dienste den Datenschutzdienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
+Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen zum Konfigurieren von Anwendungen, des Azure Information Protection Clients und der Dienste, wie z. b.:
+
+- **Office-Anwendungen**, wie z. b. Word 2019, Word 2016 und Word 2013. 
+- **Dienste** wie Exchange Online (Transport Regeln, Verhinderung von Datenverlust, nicht weiterleiten und Nachrichten Verschlüsselung) und Microsoft SharePoint (geschützte Bibliotheken). 
+
+Informationen dazu, wie diese Anwendungen und Dienste den Datenschutzdienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
@@ -53,7 +60,10 @@ Informationen zum Konfigurieren von lokalen Servern, z. b. Exchange Server und S
 Zusätzlich zu diesen Anwendungen und Diensten gibt es noch andere Anwendungen, die die Rights Management-APIs unterstützen. Diese Kategorie umfasst Branchenanwendungen, die intern mithilfe des Rights Management-SDK geschrieben wurden, sowie Anwendungen von Softwareherstellern, die mithilfe des Rights Management-SDK geschrieben wurden. Befolgen Sie für diese Anwendungen die Anweisungen, die zusammen mit der jeweiligen Anwendung bereitgestellt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nachdem Sie Ihre Anwendungen für die Unterstützung des Azure Rights Management-Diensts konfiguriert haben, können Sie die [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von Azure Information Protection für Benutzer und Administratoren weitere Konfigurationsschritte ausführen möchten. Wenn dies nicht der Fall ist, helfen Ihnen unter Umständen die folgenden Informationen weiter:
+
+Nachdem Sie Ihre Anwendungen für die Unterstützung des Azure-Rights Management Dienstanbieter konfiguriert haben, verwenden Sie die [AIP-Bereitstellungs Roadmap für Klassifizierung, Bezeichnung und Schutz](deployment-roadmap-classify-label-protect.md) , um zu überprüfen, ob Sie vor dem Rollout Azure Information Protection für Benutzer und Administratoren weitere Konfigurationsschritte ausführen möchten. 
+
+Wenn dies nicht der Fall ist, helfen Ihnen unter Umständen die folgenden Informationen weiter:
 
 - [Überprüfen des Azure Rights Management-Diensts](verify.md)
 

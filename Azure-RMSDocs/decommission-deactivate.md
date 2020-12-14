@@ -1,11 +1,11 @@
 ---
 title: Außer Betrieb nehmen und Deaktivieren von Azure RMS
 description: Informationen und Anweisungen für den Fall, dass Sie den cloudbasierten Schutzdienst von Azure Information Protection nicht mehr verwenden möchten.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
@@ -13,16 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f52bcf18c1348f4e4b6f4985c355ba227308cdc1
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 7098c7c4cf2012bbc0aadc71240267e104b20723
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568234"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382835"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Außerbetriebsetzen und Deaktivieren des Schutzes für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Sie steuern immer, ob Ihre Organisation Inhalt mithilfe des Azure Rights Management-Diensts von Azure Information Protection schützt. Wenn Sie entscheiden, dass dieser Datenschutzdienst nicht mehr verwendet werden soll, können Sie sich sicher sein, dass Ihnen die bisher geschützten Inhalte trotzdem weiter uneingeschränkt zur Verfügung stehen.
 
@@ -39,10 +41,11 @@ Wenn Sie über Ihren Azure Information Protection Mandanten Schlüssel und die T
 
 |Wenn dies auf Sie zutrifft, ...|… gehen Sie wie folgt vor:|
 |----------------------------|--------------|
-|Sie möchten, dass alle Benutzer weiterhin Rights Management verwenden, wobei sie jedoch eine lokale Lösung statt Azure Information Protection verwenden sollen →|Leiten Sie Ihre Clients mit dem Registrierungsschlüssel **licensingredirection** für Office 2016 oder Office 2013 an die lokale Bereitstellung um. Anweisungen hierzu finden Sie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** für Office 2010, wie unter [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))beschrieben.|
-|Sie möchten die Rights Management-Technologie überhaupt nicht mehr verwenden    →|Gewähren Sie einem designierten Administrator [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diesen Benutzer.<br /><br />Dieser Administrator kann dann das PowerShell-Modul dieses Clients verwenden, um Dateien in Ordnern, die durch Azure Information Protection geschützt wurden, Massen entschlüsselt. Dateien werden auf die ungeschützte Einstellung zurückgesetzt und können deshalb ohne Rights Management-Technologie wie Azure Information Protection oder AD RMS gelesen werden. Da dieses PowerShell-Modul sowohl mit Azure Information Protection als auch mit AD RMS verwendet werden kann, haben Sie die Möglichkeit, Dateien vor oder nach dem Deaktivieren des Schutz Dienstanbieter von Azure Information Protection oder einer Kombination zu entschlüsseln.|
+|Sie möchten, dass alle Benutzer weiterhin Rights Management verwenden, wobei Sie jedoch eine lokale Lösung statt Azure Information Protection verwenden möchten.    →|Leiten Sie Ihre Clients mit dem Registrierungsschlüssel **licensingredirection** für Office 2016 oder Office 2013 an die lokale Bereitstellung um. Anweisungen hierzu finden Sie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** für Office 2010, wie unter [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))beschrieben.|
+|Sie möchten die Rights Management-Technologie überhaupt nicht mehr verwenden    →|Gewähren Sie einem designierten Administrator [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diesen Benutzer.<br /><br />Dieser Administrator kann dann das PowerShell-Modul dieses Clients verwenden, um Dateien in Ordnern, die durch Azure Information Protection geschützt wurden, Massen entschlüsselt. Dateien werden auf die ungeschützte Einstellung zurückgesetzt und können deshalb ohne Rights Management-Technologie wie Azure Information Protection oder AD RMS gelesen werden. Da dieses PowerShell-Modul sowohl mit Azure Information Protection als auch mit AD RMS verwendet werden kann, haben Sie die Möglichkeit, Dateien vor oder nach dem Deaktivieren des Schutz Dienstanbieter von Azure Information Protection oder einer Kombination zu entschlüsseln.|
 |Sie sind nicht in der Lage, alle Dateien zu identifizieren, die durch Azure Information Protection geschützt wurden. Oder Sie möchten, dass alle Benutzer geschützte Dateien, die ausgelassen wurden, automatisch lesen können →|Stellen Sie eine Registrierungs Einstellung auf allen Client Computern bereit, indem Sie den Registrierungsschlüssel **licensingredirection** für Office 2016 und Office 2013 verwenden, wie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients beschrieben. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** , wie unter [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))beschrieben.<br /><br />Stellen Sie außerdem eine weitere Registrierungs Einstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **disablecreation** auf **1** fest, wie unter [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))beschrieben.|
-|Sie möchten einen kontrollierten, manuellen Wiederherstellungsdienst für Dateien verwenden, die übergangen wurden    →|Gewähren Sie designierten Benutzern in einer Datenwiederherstellungsgruppe [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diese Benutzer, sodass diese den Dateischutz aufheben können, wenn diese Aktion von Standardbenutzern angefordert wird.<br /><br />Stellen Sie auf allen Computern die Registrierungs Einstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **disablecreation** auf **1** fest, wie unter [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))beschrieben.|
+|Sie möchten einen kontrollierten, manuellen Wiederherstellungsdienst für Dateien verwenden, die übergangen wurden    →|Gewähren Sie designierten Benutzern in einer Datenwiederherstellungsgruppe [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diese Benutzer, sodass diese den Dateischutz aufheben können, wenn diese Aktion von Standardbenutzern angefordert wird.<br /><br />Stellen Sie auf allen Computern die Registrierungs Einstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **disablecreation** auf **1** fest, wie unter [Office Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772637(v=ws.10))beschrieben.|
+| | |
 
 Weitere Informationen zu den Vorgehensweisen in dieser Tabelle finden Sie in den folgenden Ressourcen:
 

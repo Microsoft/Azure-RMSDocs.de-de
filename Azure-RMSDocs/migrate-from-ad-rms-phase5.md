@@ -1,11 +1,11 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection – Phase 5
 description: Phase 5 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 10 bis 12 der Migration von AD RMS zu Azure Information Protection ab.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: aba2381e5cc275e3b51156b32bdf88fdae974b5e
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: abad66a1e62a4e70bc4d5a9452b47abd7dd23004
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382002"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die folgenden Informationen für Phase 5 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 10 bis 12 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
@@ -45,10 +46,14 @@ Stellen Sie zum Entfernen des Dienstverbindungspunkts sicher, dass Sie als Unter
 
 Wenn Sie bestätigt haben, dass RMS-Clients nicht mehr mit diesen Servern kommunizieren und Clients erfolgreich Azure Information Protection verwenden, können Sie die AD RMS-Serverrolle von diesen Servern entfernen. Wenn Sie dedizierte Server verwenden, bevorzugen Sie möglicherweise den Vorsichts Schritt zum ersten Herunterfahren der Server für einen bestimmten Zeitraum. So haben Sie Zeit, sicherzustellen, dass es keine gemeldeten Probleme gibt, die den Neustart dieser Server erfordern, um die Dienstkontinuität zu gewährleisten, während Sie untersuchen, weshalb Clients nicht Azure Information Protection verwenden.
 
-Nachdem Sie die Bereitstellung Ihrer AD RMS-Server aufgehoben haben, können Sie sich Ihre Vorlagen im Azure-Portal anschauen. Konvertieren Sie sie z.B. in Bezeichnungen, konsolidieren Sie sie, sodass Benutzer weniger Wahlmöglichkeiten haben, oder konfigurieren Sie sie neu. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](./configure-policy-templates.md).
+Nachdem Sie die Bereitstellung Ihrer AD RMS Server durch yo aufgehoben haben, können Sie die Möglichkeit haben, Ihre Vorlage und Bezeichnungen zu überprüfen. Konvertieren Sie z. b. Vorlagen in Bezeichnungen, konsolidieren Sie Sie, damit Benutzer weniger auswählen können, oder konfigurieren Sie Sie neu. Dies wäre auch ein guter Zeitpunkt, Standardvorlagen zu veröffentlichen.
+
+Verwenden Sie für Vertraulichkeits Bezeichnungen und den Unified Label-Client ihre Bezeichnung Admin Center, einschließlich der Microsoft 365 Security Center, Microsoft 365 Compliance Center oder des Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der Microsoft 365-Dokumentation.
+
+Wenn Sie den klassischen Client verwenden, verwenden Sie den Azure-Portal. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](./configure-policy-templates.md).
 
 >[!IMPORTANT]
-> Am Ende dieser Migration können Ihre AD RMS-Cluster nicht mit Azure Information Protection und der HYOK-Option (Hold Your Own Key) verwendet werden. Wenn Sie sich dazu entscheiden, HYOK für die Azure Information Protection-Bezeichnung aufgrund der nun festliegenden Umleitungen zu verwenden, muss der AD RMS-Cluster, den Sie verwenden, über unterschiedliche Lizenzierungs-URLs für die in den Clustern verfügen, die Sie migriert haben.
+> Am Ende dieser Migration kann der AD RMS Cluster nicht mit Azure Information Protection und der Option hold your own Key ([Hyok](configure-adrms-restrictions.md)) verwendet werden. Wenn Sie den klassischen Client mit Hyok verwenden, muss der AD RMS Cluster, den Sie verwenden, aufgrund der nun vorhandenen Umleitungen über unterschiedliche Lizenzierungs-URLs für diejenigen in den Clustern verfügen, die Sie migriert haben.
 
 ### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Zusätzliche Konfiguration für Computer, auf denen Office 2010 ausgeführt wird
 
@@ -100,12 +105,12 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
 1. Stellen Sie in einer PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
 
 2. Run the following command, and enter **Y** to confirm:
 
-    ```ps
+    ```PowerShell
     Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     ```
 
@@ -113,7 +118,7 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
 3. Bestätigen Sie, dass Onboarding-Steuerelemente nicht länger festgelegt sind:
 
-    ```ps    
+    ```PowerShell    
     Get-AipServiceOnboardingControlPolicy
     ```
 
@@ -138,7 +143,7 @@ So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 - **Wenn Ihr Mandanten Schlüssel von Microsoft verwaltet wird**: führen Sie das PowerShell-Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, und geben Sie den Schlüssel Bezeichner für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert angeben, der angegeben werden soll, indem Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
 
         
-    ```ps
+    ```PowerShell
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
     ```
 
@@ -149,4 +154,4 @@ Weitere Informationen zum Verwalten des Azure Information Protection-Mandantensc
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie die Migration nun abgeschlossen haben, können Sie sich die [Roadmap für die Bereitstellung](deployment-roadmap.md) ansehen, um die ggf. erforderlichen weiteren Bereitstellungsaufgaben zu ermitteln.
+Nachdem Sie die Migration abgeschlossen haben, lesen Sie die [Dokumentation zur AIP-Bereitstellung für Klassifizierung, Bezeichnung und Schutz](deployment-roadmap-classify-label-protect.md) , um alle anderen Bereitstellungs Aufgaben zu identifizieren, die Sie möglicherweise ausführen müssen.

@@ -4,27 +4,29 @@ description: Verwenden Sie diese Schritte, um Azure Information Protection (AIP)
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/23/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3b81890343cd390a42e17dee24708af4367bd8a
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 594d6fed74e2a8330c2a523ddbab5da2dd3d880c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382495"
 ---
 # <a name="aip-deployment-roadmap-for-classification-labeling-and-protection"></a>Leitfaden zur AIP-Bereitstellung für Klassifizierung, Bezeichnung und Schutz
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die folgenden Schritte als Empfehlungen, die Sie beim vorbereiten, implementieren und Verwalten von Azure Information Protection für Ihre Organisation unterstützen, wenn Sie Ihre Daten klassifizieren, bezeichnen und schützen möchten.
 
@@ -32,13 +34,11 @@ Diese Roadmap wird für alle Kunden mit einem unterstützenden Abonnement empfoh
 
 Bezeichnungen können auch Schutz anwenden, um diesen Schritt für Ihre Benutzer zu vereinfachen. 
 
-Diese Roadmap wird sowohl für AIP-Bezeichnungen unterstützt, die mit dem klassischen Client erstellt wurden, als auch für Vertraulichkeits Bezeichnungen, die die [vereinheitlichte Bezeichnung](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)verwenden.
-
 > [!TIP]
 > Alternativ können Sie einen der folgenden Artikel suchen:
 > - [AIP-Roadmap nur zum Schutz von Daten](deployment-roadmap-protect-only.md)
 > - [Schrittanleitungen für häufige Szenarien, in denen Azure Information Protection verwendet wird](how-to-guides.md)
->- [Azure Information Protection releaseroadmap](information-support.md#information-about-new-releases-and-updates)
+> - [Azure Information Protection releaseroadmap](information-support.md#information-about-new-releases-and-updates)
 
 ## <a name="deployment-process"></a>Bereitstellungsprozess
 
@@ -78,23 +78,19 @@ Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen f�
 
 ## <a name="configure-and-deploy-classification-and-labeling"></a>Konfigurieren und Bereitstellen von Klassifizierungen und Bezeichnungen
 
-Stellen Sie fest, ob Sie den klassischen AIP-oder den AIP Unified-Bezeichnungs Client verwenden oder ob Sie beide Clients benötigen.
+Führen Sie die folgenden Schritte aus:
 
-1. **Bestimmen Sie den Client, den Sie verwenden möchten.**
+1. **Dateien scannen (optional, jedoch empfohlen)**
 
-    Entscheiden Sie, welcher Client Sie an diesem Punkt benötigen, damit Sie wissen, welches Verwaltungs Portal Sie beim Konfigurieren von Bezeichnungen und Richtlinien Einstellungen verwenden sollten.
+    Stellen Sie [den Azure Information Protection-Client](quickstart-deploy-client.md)bereit, und [Installieren](tutorial-install-scanner.md) und führen Sie dann [den Scanner](tutorial-scan-networks-and-content.md) aus, um die vertraulichen Informationen zu ermitteln, die Sie in Ihren lokalen Daten speichern haben. 
 
-    Weitere Informationen finden Sie unter [auswählen des zu verwendenden Azure Information Protection Clients](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+    Die Informationen, die der Scanner findet, können Ihnen bei Ihrer Klassifizierungstaxonomie helfen und wertvolle Informationen darüber liefern, welche Bezeichnungen Sie benötigen und welche Dateien geschützt werden müssen.
 
-1. **Scannen Sie Ihre Dateien (optional, jedoch empfohlen).**
-
-    Stellen Sie [den AIP-Scanner bereit, und führen](deploy-aip-scanner.md) Sie ihn aus, um die vertraulichen Informationen in Ihren lokalen Daten speichern zu ermitteln. Die Informationen, die der Scanner findet, können Ihnen bei Ihrer Klassifizierungstaxonomie helfen und wertvolle Informationen darüber liefern, welche Bezeichnungen Sie benötigen und welche Dateien geschützt werden müssen.
-
-    Der Überprüfungs Modus für Scanner erfordert keine Bezeichnungs Konfiguration oder Taxonomie und ist daher in dieser frühen Phase der Bereitstellung geeignet. Sie können diese Scannerkonfiguration auch parallel mit den folgenden Bereitstellungs Schritten verwenden, bis Sie die empfohlene oder automatische Bezeichnung konfigurieren.
+    Der Überprüfungs **Modus für** Scanner erfordert keine Bezeichnungs Konfiguration oder Taxonomie und ist daher in dieser frühen Phase der Bereitstellung geeignet. Sie können diese Scannerkonfiguration auch parallel mit den folgenden Bereitstellungs Schritten verwenden, bis Sie die empfohlene oder automatische Bezeichnung konfigurieren.
 
 1. **Anpassen der AIP-Standard Richtlinie**.
 
-    Wenn Sie noch nicht über eine Klassifizierungs Strategie verfügen, verwenden Sie die [Standard-Azure Information Protection Richtlinie](./configure-policy-default.md) als Grundlage für die Bestimmung der Bezeichnungen, die Sie für Ihre Daten benötigen. Passen Sie diese Bezeichnungen nach Bedarf an Ihre Anforderungen an.
+    Wenn Sie noch nicht über eine Klassifizierungs Strategie verfügen, verwenden Sie eine Standard Richtlinie als Grundlage für die Bestimmung der Bezeichnungen, die Sie für Ihre Daten benötigen. Passen Sie diese Bezeichnungen nach Bedarf an Ihre Anforderungen an.
 
     Beispielsweise können Sie Ihre Bezeichnungen mit den folgenden Details neu konfigurieren:
 
@@ -103,19 +99,13 @@ Stellen Sie fest, ob Sie den klassischen AIP-oder den AIP Unified-Bezeichnungs C
     - Schreiben Sie einen Benutzer Leit Faden, um zu erläutern, welche Bezeichnung in jedem Szenario angewendet werden sollte.
     - Wenn Ihre Standard Richtlinie mit Bezeichnungen erstellt wurde, die den Schutz automatisch anwenden, können Sie die Schutzeinstellungen vorübergehend entfernen oder die Bezeichnung deaktivieren, während Sie die Einstellungen testen. 
 
-    Weitere Informationen zum Konfigurieren der Bezeichnungen und Richtlinien Einstellungen finden Sie unter:
+    Vertraulichkeits Bezeichnungen und Beschriftungs Richtlinien für den Unified Label-Client werden im Microsoft 365 Security Center, Microsoft 365 Compliance Center oder im Microsoft 365 Security & Compliance Center konfiguriert. Weitere Informationen finden Sie unter Informationen [zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
-    - **Klassischer Client:** [Konfigurieren von Azure Information Protection-Richtlinie](./configure-policy.md)
-    - **Einheitlicher Bezeichnungs Client:** [Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels)
-    
-1. **Bereitstellen des Clients**
+1. **Bereitstellen des Clients für Ihre Benutzer**
 
-    Nachdem Sie eine Richtlinie konfiguriert haben, stellen Sie den Azure Information Protection klassischen und/oder vereinheitlichten Bezeichnungs Client für Ihre Benutzer bereit. Bereitstellen von Benutzer Schulungen und spezifischen Anweisungen, wann die Bezeichnungen ausgewählt werden sollen. 
+    Nachdem Sie eine Richtlinie konfiguriert haben, stellen Sie den Azure Information Protection Client für Ihre Benutzer bereit. Bereitstellen von Benutzer Schulungen und spezifischen Anweisungen, wann die Bezeichnungen ausgewählt werden sollen. 
 
-    Weitere Informationen finden Sie unter
-
-    - **Klassischer Client**: [Administrator Handbuch](./rms-client/client-admin-guide.md)
-    - **Einheitlicher** Bezeichnungs Client: [Administrator Handbuch](./rms-client/clientv2-admin-guide.md)
+    Weitere Informationen finden Sie im Unified Bezeichnungs [Client-Administrator Handbuch](./rms-client/clientv2-admin-guide.md).
 
 1. **Erweiterte Konfigurationen einführen**
 
@@ -127,10 +117,7 @@ Stellen Sie fest, ob Sie den klassischen AIP-oder den AIP Unified-Bezeichnungs C
     - Anpassen von Kopfzeilen, Fußzeilen oder Wasserzeichen
     - Empfohlene und automatische Bezeichnung
 
-    Weitere Informationen finden Sie unter
-
-    - **Klassischer Client**: [Administrator Handbuch: benutzerdefinierte Konfigurationen](rms-client/client-admin-guide-customizations.md)
-    - **Einheitlicher** Bezeichnungs Client: [Administrator Handbuch: benutzerdefinierte Konfigurationen](rms-client/clientv2-admin-guide-customizations.md)
+    Weitere Informationen finden Sie unter [Administrator Handbuch: benutzerdefinierte Konfigurationen](rms-client/client-admin-guide-customizations.md).
      
     > [!TIP]
     > Wenn Sie Bezeichnungen für die automatische Bezeichnung konfiguriert haben, führen Sie den [Azure Information Protection Scanner](deploy-aip-scanner-manage.md) erneut in Ihren lokalen Daten speichern im Ermittlungs Modus aus, und passen Sie Ihre Richtlinie an. 
@@ -147,16 +134,12 @@ Führen Sie die folgenden Schritte aus, um den Schutz der Daten zu vorbereiten:
 1. Legen **Sie fest, wie Sie Ihren Mandanten Schlüssel verwalten möchten**.
 
     Entscheiden Sie, ob Sie möchten, dass Microsoft Ihren Mandantenschlüssel verwaltet (Standard), oder ob Sie Ihren Mandantenschlüssel selber generieren und verwalten möchten (bekannt als BYOK, Bring Your Own Key). 
-
-    > [!NOTE]
-    > Je nach Client sind zusätzliche Optionen für "Hold Your Own Key" (Hyok) oder die Verschlüsselung mit Doppel Schlüsseln verfügbar, um die Sicherheit zu erhöhen. .
-    >
  
-    Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection Mandanten Schlüssels](plan-implement-tenant-key.md)
+    Weitere Informationen und Optionen für zusätzlichen lokalen Schutz finden [Sie unter Planning and Implementierungs your Azure Information Protection Tenant Key](plan-implement-tenant-key.md).
 
 1. **Installieren Sie PowerShell für AIP**.
 
-    Installieren Sie das PowerShell-Modul für aipservice auf mindestens einem Computer, der über Internet Zugriff verfügt. Sie können diesen Schritt jetzt oder später durchführen. 
+    Installieren Sie das PowerShell-Modul für **aipservice** auf mindestens einem Computer, der über Internet Zugriff verfügt. Sie können diesen Schritt jetzt oder später durchführen. 
 
     Weitere Informationen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](./install-powershell.md).
 
@@ -184,17 +167,14 @@ Führen Sie die folgenden Schritte aus:
 
 1. **Aktualisieren ihrer Bezeichnungen zum Anwenden des Schutzes**
     
-    Verwenden Sie je nach Client eine der folgenden Leitfäden:
+    Weitere Informationen finden Sie unter [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels).
 
-    - Klassisch: [Konfigurieren einer Bezeichnung für den Schutz Rights Management](./configure-policy-protection.md)
-    - Einheitliche Bezeichnung: [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels)
-    
     > [!IMPORTANT]
     > Benutzer können Bezeichnungen in Outlook anwenden, die Rights Management Schutz auch dann gelten, wenn Exchange nicht für die Verwaltung von Informationsrechten (Information Rights Management, unm) konfiguriert ist. 
     > 
     > Allerdings bietet Ihre Organisation keine vollständige Funktionalität für die Verwendung von Azure Rights Management Protection mit Exchange, bis Exchange für die Faim-oder [Microsoft 365 Nachrichten Verschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e)konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
     > 
-
+    
 1. **Konfigurieren von Office-Anwendungen und -Diensten**
     
     Konfigurieren Sie Office-Anwendungen und-Dienste für die Features zur Verwaltung von Informationsrechten (Information Rights Management, unm) in Microsoft SharePoint oder Exchange Online. 
@@ -203,7 +183,7 @@ Führen Sie die folgenden Schritte aus:
 
 1. **Konfigurieren des Administratorfeatures für die Datenwiederherstellung**
     
-    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen – Data Leak Prevention, Gateways zur Inhaltsverschlüsselung (Content Encryption Gateways, CEG) und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. 
+    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen, Gateways zur Inhaltsverschlüsselung und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. 
 
     Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder Datenwiederherstellung](./configure-super-users.md).
 
@@ -211,10 +191,7 @@ Führen Sie die folgenden Schritte aus:
     
     Führen Sie nun für Ihre lokalen Datenspeicher den [Azure Information Protection-Scanner](deploy-aip-scanner.md) im Erzwingungsmodus aus, sodass Dateien automatisch mit einer Bezeichnung versehen werden.
     
-    Verwenden Sie für Dateien auf PCs PowerShell-Cmdlets, um Dateien zu klassifizieren und zu schützen. Weitere Informationen finden Sie in den folgenden Leitfäden, je nach Client:
-    
-    - **Klassischer Client:** [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md)
-    - **Einheitlicher Bezeichnungs Client:** [Verwenden von PowerShell mit dem Azure Information Protection Unified-Beschriftungs Client](./rms-client/clientv2-admin-guide-powershell.md)
+    Verwenden Sie für Dateien auf PCs PowerShell-Cmdlets, um Dateien zu klassifizieren und zu schützen. Weitere Informationen finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide-powershell.md).
 
     Verwenden Sie für cloudbasierte Datenspeicher [Azure Cloud App Security](/cloud-app-security). 
 
@@ -234,7 +211,6 @@ Nun können Sie überwachen, wie Ihre Organisation die von Ihnen konfigurierten 
 Weitere Informationen finden Sie auf den folgenden Seiten:
 
 - [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md) (derzeit in der Vorschau)
-- [Lokale Verwendungs Protokollierung mit Windows-Ereignis Monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) für den Azure Information Protection klassischen Client
 - [Protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](./log-analyze-usage.md)
 
 ## <a name="administer-the-protection-service-for-your-tenant-account-as-needed"></a>Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
@@ -243,6 +219,25 @@ Wenn Sie mit der Verwendung des Schutzdiensts beginnen, kann PowerShell nützlic
 
 Weitere Informationen finden Sie unter [Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](./administer-powershell.md).
 
+## <a name="references-for-classic-client-environments"></a>Verweise für klassische Client Umgebungen
+
+**Relevant für**: nur AIP Classic Client
+
+Wenn Sie den klassischen Client verwenden, verwenden Sie anstelle der oben verknüpften Verweise die folgenden Verweise:
+
+- Stellen Sie die mit dem klassischen Client bereitgestellte Überprüfung bereit, **und führen** Sie Sie aus. Weitere Informationen finden Sie unter [Was ist der Azure Information Protection klassischen Scanner?](deploy-aip-scanner-classic.md)
+
+- **Konfigurieren Sie die Richtlinie im Azure-Portal.** Weitere Informationen finden Sie unter [Konfigurieren Azure Information Protection Richtlinie](./configure-policy.md) und [Konfigurieren einer Bezeichnung für Rights Management Schutz](./configure-policy-protection.md).
+
+- Stellen **Sie Ihren Client für Benutzer** bereit, indem Sie das [klassische Client Administrator Handbuch](./rms-client/client-admin-guide.md) und die [benutzerdefinierten Konfigurations Anweisungen für den klassischen Client](rms-client/client-admin-guide-customizations.md)verwenden.
+
+- **PowerShell-Anweisungen**: [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md)
+
+- **Lokale Überwachung**: [Protokollierung der lokalen Verwendung mit Windows-Ereignis Monitor](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client)
+
+> [!TIP]
+> Möglicherweise interessieren Sie sich auch für die [Azure Information Protection Bereitstellungs Roadmap für den Schutz](deployment-roadmap-protect-only.md), die nur für den klassischen Client unterstützt wird.
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie Azure Information Protection bereitstellen, ist es möglicherweise hilfreich, die [häufig gestellten Fragen](faqs.md)und die Seite [Informationen und Support](information-support.md) für weitere Ressourcen zu überprüfen.
+Wenn Sie Azure Information Protection bereitstellen, ist es möglicherweise hilfreich, die [häufig gestellten Fragen](faqs.md), [bekannten Probleme](known-issues.md)und die Seite [Informationen und Support](information-support.md) für weitere Ressourcen zu überprüfen.

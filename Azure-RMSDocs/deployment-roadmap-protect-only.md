@@ -5,32 +5,34 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f56373bfd3aa37b13b89a552e1767bd954c81bde
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 63de1f09defa880d7b639e62a3100b007831bdf7
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568000"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382478"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Azure Information Protection bereitstellungsroadmap nur für den Schutz
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [Azure Information Protection klassischer Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 > [!TIP]
 > Alternativ können Sie einen der folgenden Artikel suchen:
 > - [Leitfaden zur AIP-Bereitstellung für Klassifizierung, Bezeichnung und Schutz](deployment-roadmap-classify-label-protect.md)
 > - [Schrittanleitungen für häufige Szenarien, in denen Azure Information Protection verwendet wird](how-to-guides.md)
->- [Azure Information Protection releaseroadmap](information-support.md#information-about-new-releases-and-updates)
+> - [Azure Information Protection releaseroadmap](information-support.md#information-about-new-releases-and-updates)
 
 Verwenden Sie die folgenden Schritte als Empfehlungen, die Sie beim vorbereiten, implementieren und Verwalten von Azure Information Protection für Ihre Organisation unterstützen, wenn Sie nur den Schutz von Daten implementieren möchten.
 
@@ -63,7 +65,7 @@ Weisen Sie jedem Benutzer in Ihrer Organisation, der Dokumente und e-Mails schü
 
 Führen Sie die folgende Vorbereitungsschritte aus, bevor Sie mit der Verwendung des Schutzdiensts von Azure Information Protection beginnen:
 
-1. **Richten Sie Ihre Benutzerkonten und Gruppen für AIP ein.**
+1. **Einrichten von Benutzerkonten und Gruppen für aip**
 
     Stellen Sie sicher, dass Ihr Microsoft 365 Mandanten die Benutzerkonten und-Gruppen enthält, die von Azure Information Protection zum Authentifizieren und Autorisieren von Benutzern in Ihrer Organisation verwendet werden. Erstellen Sie bei Bedarf diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
 
@@ -75,29 +77,29 @@ Führen Sie die folgende Vorbereitungsschritte aus, bevor Sie mit der Verwendung
 
     Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
-1. **Installieren Sie PowerShell für AIP**.
+1. **Installieren von PowerShell für aip**
 
     Installieren Sie das PowerShell-Modul für aipservice auf mindestens einem Computer, der über Internet Zugriff verfügt. Sie können diesen Schritt jetzt oder später durchführen. 
 
     Weitere Informationen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](./install-powershell.md).
 
-1. **Nur AD RMS: Migrieren Sie Ihre Daten in die Cloud**.
+1. **Nur AD RMS: Migrieren Sie Ihre Daten in die Cloud.**
 
     Wenn Sie derzeit AD RMS verwenden: Führen Sie eine Migration durch, um die Schlüssel, Vorlagen und URLs in die Cloud zu verschieben. 
 
     Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-1. **Aktivieren** Sie den Schutz.
+1. **Schutz aktivieren**
 
     Stellen Sie sicher, dass der Schutzdienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn Sie in Phasen bereitstellen, konfigurieren Sie die Onboarding-Steuerelemente für Benutzer, um die Fähigkeit der Benutzer einzuschränken, Schutz anzuwenden. 
 
     Weitere Informationen finden Sie unter [Aktivieren des Schutzdiensts von Azure Information Protection](./activate-service.md).
 
-1. **Konfigurieren Sie optionale Features nach Bedarf**.
+1. **Optionale Features nach Bedarf konfigurieren**
 
     Es empfiehlt sich, eine der folgenden Features entweder jetzt oder später zu konfigurieren.
     
-    |Funktion  |BESCHREIBUNG  |
+    |Funktion  |Beschreibung  |
     |---------|---------|
     |**Benutzerdefinierte Vorlagen für Schutzeinstellungen**     |  Wenn die Standardvorlagen für Ihre Organisation nicht ausreichen, konfigurieren Sie benutzerdefinierte Vorlagen. </br>Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](./configure-policy-templates.md).       |
     |**Nutzungsprotokollierung**     | Konfigurieren Sie die Verwendungs Protokollierung, um zu überwachen, wie Ihre Organisation den Schutzdienst verwendet. </br>Weitere Informationen finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](./log-analyze-usage.md).        |
@@ -111,7 +113,7 @@ Führen Sie die folgenden Schritte aus:
     
     Installieren Sie den klassischen Client für Benutzer, um Office 2010 zu unterstützen, um andere Dateien als Office-Dokumente und e-Mails zu schützen und geschützte Dokumente zu verfolgen und Benutzer Schulungen für diesen Client bereitzustellen. 
 
-    Weitere Informationen finden Sie unter [Azure Information Protection-Client für Windows](./rms-client/aip-client.md).
+    Weitere Informationen finden Sie unter [Azure Information Protection Classic Client for Windows](./rms-client/aip-client.md).
 
 2. **Konfigurieren von Office-Anwendungen und -Diensten**
     
@@ -121,7 +123,7 @@ Führen Sie die folgenden Schritte aus:
 
 3. **Konfigurieren des Administratorfeatures für die Datenwiederherstellung**
     
-    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen – Data Leak Prevention, Gateways zur Inhaltsverschlüsselung (Content Encryption Gateways, CEG) und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. 
+    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen, Gateways zur Inhaltsverschlüsselung und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. 
 
     Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder Datenwiederherstellung](./configure-super-users.md).
 
@@ -143,7 +145,7 @@ Führen Sie die folgenden Schritte aus:
 
 Sie sind jetzt bereit, Ihre Daten zu schützen und zu protokollieren, wie Ihr Unternehmen den Schutzdienst verwendet. 
 
-Weitere Informationen finden Sie unter
+   Weitere Informationen finden Sie unter
 
 - [Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](./help-users.md)
 - [Protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](./log-analyze-usage.md)

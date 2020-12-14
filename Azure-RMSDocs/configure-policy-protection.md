@@ -5,32 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3ff562aba7243964275314875a52152ec7053fe2
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: 17c60e535e41f5678ca94d3744b487c566a3247d
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568486"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383107"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>So konfigurieren Sie eine Bezeichnung für den Rights Management-Schutz
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden [Sie unter Informationen zu Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Einschränken des Zugriffs auf Inhalte mithilfe von Verschlüsselung in sensiblen Bezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels) aus der Microsoft 365-Dokumentation. *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
-
-> [!NOTE]
-> Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
-> 
-> Informationen zum Konfigurieren einer Vertraulichkeits Bezeichnung zum Anwenden Rights Management Schutzes finden Sie in der Dokumentation zur Microsoft 365 Konformität. Ein Beispiel ist der Artikel [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
 
 Sie können Ihre hochsensiblen Dokumente und E-Mails schützen, indem Sie einen Rights Management-Dienst verwenden. Dieser Dienst verwendet Verschlüsselung, Identität und Autorisierungsrichtlinien, um Datenverluste zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die für die Verwendung des Rights Management-Schutzes für Dokumente und E-Mails konfiguriert ist. Benutzer können auch die Schaltfläche **Nicht weiterleiten** in Outlook verwenden.
 

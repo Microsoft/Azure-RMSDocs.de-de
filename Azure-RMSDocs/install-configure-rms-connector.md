@@ -1,11 +1,11 @@
 ---
 title: Installieren und Konfigurieren des Rights Management-Connectors – AIP
 description: Hier erhalten Sie Informationen zum Installieren und Konfigurieren des Connectors von Azure Rights Management (RMS). Diese Verfahren beziehen sich auf die unter „Bereitstellen des Azure Rights Management-Connectors“ beschriebenen Schritte 1 bis 4.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 07/28/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
@@ -13,16 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd8a63f3bc761cd7bcaa7b8b40a3309488385acb
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ef3a9198af5fb44927438c66262e30acf439f2eb
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568351"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383855"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Connectors
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2 und Windows Server 2012*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, 2016, 2012 R2 und Windows Server 2012 *
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Anhand der folgenden Informationen können Sie den Connector von Azure Rights Management (RMS) installieren und konfigurieren. Diese Verfahren beziehen sich auf die unter [Bereitstellen des Azure Rights Management-Connectors](deploy-rms-connector.md) beschriebenen Schritte 1 bis 4.
 
@@ -47,7 +49,7 @@ Stellen Sie sicher, dass Sie die richtige Azure Sovereign Cloud-Instanz kennen, 
 
     Laden Sie zum Installieren des RMS-Connectors die Datei „RMSConnectorSetup.exe“ herunter.
 
-    Zusätzlich:
+    Berücksichtigen Sie zudem Folgendes:
 
     -   Wenn Sie das Serverkonfigurationstool für den RMS-Connector verwenden möchten, um die Konfiguration der Registrierungseinstellungen auf Ihren lokalen Servern zu automatisieren, müssen Sie auch die Komponente „GenConnectorConfig.ps1“ herunterladen.
 
@@ -132,7 +134,7 @@ Wenn Sie den RMS-Connector deinstallieren müssen, führen Sie den Assistenten e
 
 Wenn während der Installation Probleme auftreten, überprüfen Sie das Installationsprotokoll: **%LocalAppData%\Temp\Microsoft Rights Management connector_ \<date and time> . log** 
 
-Ihr Installationsprotokoll könnte beispielsweise wie folgt aussehen: „C:\Benutzer\Administrator\AppData\Local\Temp\Microsoft Rights Management-Connector_20170803110352.log“.
+Beispielsweise könnte das Installationsprotokoll etwa wie **C:\Users\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352. log aussehen.**
 
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorisieren von Servern für die Verwendung des RMS-Connectors
 Wenn Sie den RMS-Connector auf mindestens zwei Computern installiert haben, können Sie die Server und Dienste autorisieren, die den RMS-Connector verwenden sollen. Beispielsweise Server, auf denen Exchange Server 2013 oder SharePoint Server 2013 ausgeführt wird.
@@ -173,7 +175,7 @@ Weitere Informationen zu den verschiedenen Serverrollen:
         > [!TIP]
         > Wenn sich diese beiden Konten unterscheiden, sollten Sie in Erwägung ziehen, eine einzige Gruppe zu erstellen, die beide Konten enthält, um den Verwaltungsaufwand zu minimieren.
 
--   Für Dateiserver, die die Dateiklassifizierungsinfrastruktur verwenden, werden die zugeordneten Dienste unter dem lokalen Systemkonto ausgeführt, sodass Sie das Computerkonto für die Dateiserver (z. B. SERVERNAME$) oder eine Gruppe, die diese Computerkonten enthält, autorisieren müssen.
+-   Für Dateiserver, die die Datei Klassifizierungs Infrastruktur verwenden, werden die zugeordneten Dienste als lokales System Konto ausgeführt. Daher müssen Sie das Computer Konto für die Dateiserver (z. b. **Servername $**) oder eine Gruppe, die diese Computer Konten enthält, autorisieren.
 
 Wenn Sie mit dem Hinzufügen von Servern zu der Liste fertig sind, klicken Sie auf **Schließen**.
 
@@ -191,13 +193,13 @@ Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert wurde, ko
 
 Verwenden Sie die folgenden Einstellungen, um den NLB-Cluster zu konfigurieren:
 
--   Ports: 80 (für HTTP) oder 443 (für HTTPS)
+-   **Ports**: 80 (für http) oder 443 (für HTTPS)
 
     Weitere Informationen dazu, ob Sie HTTP oder HTTPS verwenden sollten, finden Sie im nächsten Abschnitt.
 
--   Affinität: Keine
+-   **Affinität**: keine
 
--   Verteilungsmethode: Gleich
+-  **Verteilungsmethode**: gleich
 
 Dieser Name, den Sie für das System mit Lastenausgleich (für die Server, auf denen der RMS-Connectordienst ausgeführt wird) definieren, ist der Name des RMS-Connectors Ihrer Organisation, den Sie später beim Konfigurieren der lokalen Server für die Verwendung von Azure RMS verwenden.
 

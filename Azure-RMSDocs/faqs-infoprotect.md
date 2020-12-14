@@ -1,10 +1,10 @@
 ---
 title: Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen – AIP
 description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezeichnungen bei Azure Information Protection beziehen? Vielleicht finden Sie hier eine Antwort.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,33 +12,43 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d22a79a3968e164e2bec8c3852c4ab0c181e5ef8
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: d4bfec07900404c39a17a90468a726f6632078fe
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316312"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382274"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Weitere Informationen finden Sie auch in den häufig gestellten Fragen [zum klassischen Client](faqs-classic.md). *
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Haben Sie Fragen zu Azure Information Protection, die sich speziell auf Klassifizierungen und Bezeichnungen beziehen?  Vielleicht finden Sie hier eine Antwort. 
 
 ## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Welchen Client installiere ich zum Testen neuer Funktionen?
 
-Derzeit gibt es zwei Azure Information Protection Clients für Windows: 
+Es wird empfohlen, den **Azure Information Protection Unified Bezeichnung-Client** zu installieren. Der Unified Label-Client lädt Bezeichnungen und Richtlinien Einstellungen von einem der folgenden admin Centers herunter: 
 
-- Der **Azure Information Protection Unified** Label-Client, der Bezeichnungen und Richtlinien Einstellungen von einem der folgenden Admin Center herunterlädt: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Dieser Client ist nun allgemein verfügbar und verfügt möglicherweise über eine Vorschauversion, um zusätzliche Funktionen für eine zukünftige Version zu testen.
+- Office 365 Security & Compliance Center
+- Microsoft 365 Security Center
+- Microsoft 365 Compliance Center.
 
-- Der **Azure Information Protection-Client (klassisch)** , der Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunterlädt. Dieser Client baut auf früheren Versionen der allgemeinen Verfügbarkeit des Clients auf.
+Dieser Client ist nun allgemein verfügbar und verfügt möglicherweise über eine Vorschauversion, um zusätzliche Funktionen für eine zukünftige Version zu testen.
 
-Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client. Weitere Informationen sowie eine Tabelle zum Vergleich der Features und Funktionen finden Sie unter [Auswählen des zu verwendenden Azure Information Protection-Clients](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Wenn Sie weiterhin Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](configure-policy-migrate-labels.md)haben, verwenden Sie stattdessen den **klassischen Azure Information Protection-Client** .
 
-Der Azure Information Protection-Client wird nur unter Windows unterstützt. Verwenden Sie zum klassifizieren und schützen von Dokumenten und e-Mails auf Ios, Android, macOS und im Web [Office-Apps, die die integrierte Bezeichnung unterstützen](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+Weitere Informationen, einschließlich einer Funktions-und Funktionalitäts Vergleichstabelle, finden [Sie unter Auswählen der Windows-beschriftungslösung](rms-client/use-client.md#choose-your-windows-labeling-solution).
+
+> [!TIP]
+> Der Azure Information Protection-Client wird nur unter Windows unterstützt. 
+>
+> Verwenden Sie zum klassifizieren und schützen von Dokumenten und e-Mails auf Ios, Android, macOS und im Web [Office-Apps, die die integrierte Bezeichnung unterstützen](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). 
+> 
 
 ## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Wo finde ich Informationen zur Verwendung von Vertraulichkeits Bezeichnungen für Office-Apps?
 
@@ -64,7 +74,7 @@ Bei der Verwendung von untergeordneten Bezeichnungen konfigurieren Sie optische 
 
 ## <a name="how-do-i-prevent-somebody-from-removing-or-changing-a-label"></a>Wie hindere ich jemanden daran, eine Bezeichnung zu entfernen oder zu ändern?
 
-Es gibt zwar eine [Richtlinien Einstellung](configure-policy-settings.md) , bei der Benutzer angeben müssen, warum Sie eine Klassifizierungs Bezeichnung herabsetzen, eine Bezeichnung entfernen oder den Schutz entfernen, aber diese Einstellung verhindert diese Aktionen nicht. Um Benutzer daran zu hindern, eine Bezeichnung zu entfernen oder zu ändern, muss der Inhalt bereits geschützt sein. Die Schutzberechtigungen erteilen dem Benutzer nicht das [Nutzungsrecht](configure-usage-rights.md) „Exportieren“ oder „Vollzugriff“. 
+Um Benutzer daran zu hindern, eine Bezeichnung zu entfernen oder zu ändern, muss der Inhalt bereits geschützt sein. Die Schutzberechtigungen erteilen dem Benutzer nicht das [Nutzungsrecht](configure-usage-rights.md) „Exportieren“ oder „Vollzugriff“. 
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Wenn eine E-Mail eine Bezeichnung umfasst, erhalten Anlagen dann automatisch dieselbe Bezeichnung?
 
@@ -74,36 +84,4 @@ Nein. Wenn Sie einer E-Mail-Nachricht mit Anlagen eine Bezeichnung zuweisen, erb
 
 Da Azure Information Protection persistente Metadaten für die Klassifizierung verwendet, die eine Klartextbezeichnung enthalten, können diese Informationen von DLP-Lösungen und anderen Anwendungen gelesen werden. 
 
-Weitere Informationen zu diesen Metadaten finden Sie unter [In E-Mails und Dokumenten gespeicherte Bezeichnungsinformationen](configure-policy.md#label-information-stored-in-emails-and-documents).
-
 Beispiele für die Verwendung dieser Metadaten mit Exchange Online-Nachrichtenflussregeln finden Sie unter [Konfigurieren von Exchange Online-Nachrichtenflussregeln für Azure Information Protection-Bezeichnungen](configure-exo-rules.md).
-
-## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Kann ich eine Dokumentvorlage erstellen, die automatisch die Klassifizierung umfasst?
-
-Ja. Sie können eine Bezeichnung konfigurieren, um [eine Kopf- oder Fußzeile anzuwenden, die den Namen der Bezeichnung enthält](configure-policy-markings.md). Wenn dies jedoch nicht Ihren Anforderungen entspricht, können Sie nur für den Azure Information Protection Client (klassisch) eine Dokument Vorlage mit der gewünschten Formatierung erstellen und die Klassifizierung als Feldcode hinzufügen. 
-
-Beispielsweise könnten Sie eine Tabelle in der Kopfzeile des Dokuments einrichten, die die Klassifizierung angezeigt. Verwenden Sie alternativ eine bestimmte Formulierung für eine Einführung, die auf die Klassifizierung des Dokuments verweist.
-
-So fügen Sie diesen Feldcode Ihrem Dokument hinzu:
-
-1. Geben Sie dem Dokument eine Bezeichnung, und speichern Sie es. So werden neue Metadatenfelder erstellt, die Sie jetzt für Ihren Feldcode verwenden können.
-
-2. Positionieren Sie den Cursor im Dokument dort, wo Sie die Bezeichnung der Klassifizierung hinzufügen möchten, und wählen Sie anschließend auf der Registerkarte **Einfügen****Text** > **Schnellbausteine** > **Feld** aus.
-
-3. Wählen Sie im Dialogfeld **Feld** in der Dropdownliste **Kategorien****Dokumentinformationen** aus. Wählen Sie dann in der Dropdownliste **Feldernamen****DocProperty** aus.
-
-4. Wählen Sie in der Dropdownliste **Eigenschaft****Vertraulichkeit** und dann **OK**.
-
-Die aktuelle Klassifizierung der Bezeichnung wird im Dokument angezeigt, und dieser Wert wird automatisch aktualisiert, wenn Sie das Dokument öffnen oder die Vorlage verwenden. Wenn sich also die Bezeichnung ändert, wird die Klassifizierung, die für diesen Feldcode angezeigt wird, automatisch im Dokument aktualisiert.
-
-## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>Wie unterscheidet sich die Klassifizierung für e-Mails mit Azure Information Protection von der Exchange-Nachrichtenklassifizierung?
-
-Die Exchange-Nachrichtenklassifizierung ist ein älteres Feature, mit dem e-Mails klassifiziert werden können, und es wird unabhängig von Azure Information Protection Bezeichnungen oder Vertraulichkeits Bezeichnungen implementiert, die die Klassifizierung anwenden.
-
-Sie können dieses ältere Feature jedoch in Bezeichnungen integrieren, sodass Benutzer, die eine e-Mail mithilfe von Outlook im Web klassifizieren und einige Mobile Mail-Anwendungen verwenden, automatisch die Bezeichnung Klassifizierung und entsprechende Bezeichnungs Markierungen hinzufügen.
-
-Auf dieselbe Weise können Sie Ihre Bezeichnungen mit Outlook im Web und diesen mobilen E-Mail-Anwendungen verwenden.
-
-Beachten Sie, dass dies nicht erforderlich ist, wenn Sie Outlook im Web mit Exchange Online verwenden, da diese Kombination eine integrierte Bezeichnung unterstützt, wenn Sie Vertraulichkeits Bezeichnungen aus dem Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft Compliance Center veröffentlichen.
-
-Wenn Sie die integrierte Bezeichnung nicht mit Outlook im Web verwenden können, finden Sie weitere Informationen in den Konfigurationsschritten für diese Problem Umgehung: [Integration in die Legacy-Exchange-Nachrichtenklassifizierung](rms-client/client-admin-guide-customizations.md#integration-with-the-legacy-exchange-message-classification) .

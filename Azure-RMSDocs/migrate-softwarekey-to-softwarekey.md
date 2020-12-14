@@ -1,11 +1,11 @@
 ---
 title: Migrieren softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln – AIP
 description: Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Information Protection sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/03/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 236f8047aee405bea5b0c0a34d022de758048d31
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: a9ef31330b5bc0039ad01f76134ebb5075edd1e6
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137021"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383736"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
+>**Gilt für*: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten. 
 
@@ -35,7 +36,7 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
 
 1. Verwenden Sie auf einer Arbeitsstation mit Internetverbindung das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) , um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
     
@@ -47,13 +48,13 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
     
     Führen Sie z.B. zuerst folgenden Befehl aus, um ein Kennwort zu speichern:
     
-    ```ps
+    ```PowerShell
     $TPD_Password = Read-Host -AsSecureString
     ```
 
     Geben Sie das Kennwort ein, das Sie für den Export der ersten Konfigurationsdatendatei angegeben haben. Führen Sie den folgenden Befehl aus, und bestätigen Sie, dass Sie diese Aktion ausführen möchten („E:\contosokey1.xml“ dient hier als Beispiel für diese Konfigurationsdatei):
 
-    ```ps
+    ```PowerShell
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
@@ -61,7 +62,7 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
 
 4.  Verwenden Sie das [Disconnect-aipserviceservice-](/powershell/module/aipservice/disconnect-aipservice) Cmdlet, um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
-    ```ps
+    ```PowerShell
     Disconnect-AipServiceService
     ```
 

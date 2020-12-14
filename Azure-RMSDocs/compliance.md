@@ -1,9 +1,9 @@
 ---
 title: Kompatibilitätsinformationen zu Azure Information Protection
-description: Ergänzende Informationen zu Azure Information Protection, darunter rechtliche Hinweise, Informationen zur Kompatibilität und SLAs.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Ergänzende Informationen zu Azure Information Protection, darunter rechtliche Hinweise, Informationen zur Konformität und SLAs.
+author: batamig
+ms.author: bagol
+manager: rkarlin
 ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,14 +12,21 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d811cf998b6e2d5ce04c4e3ff2208030de15e49c
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: d3de605c8427745e51df2ea1ffbee110c9106138
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383886"
 ---
-# <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Konformitätsinformationen und ergänzende Informationen zu Azure Information Protection
+# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection
+
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zu Azure Information Protection suchen, jedoch nicht zur Verwendung des Azure Information Protection-Diensts, sehen Sie sich folgende Ressourcen an:
 
@@ -33,10 +40,14 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 - Alle Verschlüsselungsschlüssel, die von Azure Information Protection verwendet werden, werden mit einem kundenspezifischen Stammschlüssel geschützt, der RSA 2048-Bit verwendet. RSA 1024-Bit wird zur Rückwärtskompatibilität auch unterstützt. [Weitere Informationen](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Kundenspezifische Stamm Schlüssel werden entweder von Microsoft verwaltet oder vom Kunden in einem nchiffre-HSM bereitgestellt, indem "[Bring your own Key](plan-implement-tenant-key.md)" (Byok) verwendet wird. Azure Information Protection unterstützt zudem eingeschränkte Funktionen mit einem lokalen Schlüssel durch [Hold Your Own Key (HYOK)](configure-adrms-restrictions.md) für Inhalte, für die erforderlich ist, dass sie nicht mit einem cloudbasierten Schlüssel geschützt werden.
+- Kundenspezifische Stamm Schlüssel werden entweder von Microsoft verwaltet oder vom Kunden in einem nchiffre-HSM bereitgestellt, indem "Bring your own Key" (Byok) verwendet wird. Azure Information Protection unterstützt auch Features für den lokalen Schutz, für Inhalte, die nicht mit einem cloudbasierten Schlüssel geschützt werden können. Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
 - Azure Information Protection wird weltweit in regionalen Rechenzentren gehostet. Schlüssel und Richtlinien von Azure Information Protection bleiben immer in der Region, in der sie ursprünglich bereitgestellt wurden.
- 
+
+    > [!NOTE]
+    > Azure Information Protection Richtlinien sind nur für den klassischen AIP-Client relevant.
+    >
+  
 - Azure Information Protection überträgt keine Dokumentinhalte von Clients an den Azure Information Protection-Dienst. Vorgänge zum Ver- und Entschlüsseln von Inhalten werden direkt auf den Clientgerät durchgeführt. Für dienstbasiertes Rendern können diese Vorgänge auch im Dienst durchgeführt werden, der den Inhalt rendert. [Weitere Informationen](./how-does-it-work.md)
 
 ## <a name="legal-and-privacy"></a>Rechtliche Hinweise und Datenschutz
@@ -47,7 +58,7 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 ## <a name="security-compliance-and-auditing"></a>Sicherheit, Konformität und Überwachung
 
-Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) im Abschnitt [Sicherheits-, Konformitäts- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Zusätzlich:
+Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./what-is-azure-rms.md#business-problems-solved-by-azure-rights-management) im Abschnitt [Sicherheits-, Konformitäts- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Berücksichtigen Sie zudem Folgendes:
 
 - Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 

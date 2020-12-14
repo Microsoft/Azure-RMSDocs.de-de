@@ -5,32 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f39ba64ed2702f4f994d5626697fa5185e546f2b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e6eeada66c38a9c3c0095f22165dbf0454d04290
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568165"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383260"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) . Verwenden Sie den *localesettings* -Parameter für das Cmdlet " [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label) ", um verschiedene Sprachen für Vertraulichkeits Bezeichnungen zu konfigurieren. *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
-
-> [!NOTE]
-> Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
-> 
-> Wenn Sie nach Informationen suchen, um verschiedene Sprachen für Vertraulichkeits Bezeichnungen zu konfigurieren, verwenden Sie Office 365 Security & Compliance PowerShell und den *localesettings* -Parameter für " [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label)".
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
 
 Obwohl die Standardbezeichnungen für Azure Information Protection mehrere Sprachen unterstützen, müssen Sie eine Unterstützung für die Bezeichnungsnamen und -beschreibungen konfigurieren, die Sie angeben. Für diese Konfiguration müssen Sie folgende Aktionen ausführen:
 
@@ -56,7 +52,7 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
     
     Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
-2. Über die **Manage**  >  Menüoption "**Sprachen** verwalten": Wählen Sie im Bereich " **Azure Information Protection-Sprachen** " die Option **neue Sprache für Übersetzung hinzufügen** aus. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
+2. Über die   >  Menüoption "**Sprachen** verwalten": Wählen Sie im Bereich " **Azure Information Protection-Sprachen** " die Option **neue Sprache für Übersetzung hinzufügen** aus. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
 
 3. Die ausgewählten Sprachen werden nun im Bereich **Azure Information Protection-Sprachen** angezeigt:
     
@@ -89,13 +85,13 @@ Sie müssen diesen Vorgang wiederholen, wenn Sie eine neue Sprache unterstützen
 
 Wenn Benutzer eine Azure Information Protection-Richtlinie mit verschiedenen unterstützten Sprachen herunterladen, wird die Sprache, in denen Bezeichnungsnamen und QuickInfos für Benutzer angezeigt werden, gemäß folgender Logik ausgewählt:
 
-**Bei Bezeichnungen und QuickInfos, die Benutzer in der Azure Information Protection-Leiste in Office-Apps sehen:**
+**Für die Bezeichnungen und Quick Infos, die Benutzern auf der Azure Information Protection Leiste in Office-Apps angezeigt** werden:
 
 - Wenn eine direkte Übereinstimmung für die Sprache der Office-App gefunden wird, werden Bezeichnungsnamen und Beschreibungen in dieser Sprache angezeigt.
 
 - Wenn keine direkte Übereinstimmung für die Sprache der Office-App gefunden wird, werden Bezeichnungsnamen und Beschreibungen in der Sprache angezeigt, die Sie für alle Benutzer standardmäßig festgelegt haben. Bei dieser Sprache handelt es sich in der Regel um Englisch. Diese Sprache wird in der Standardrichtlinie verwendet.
 
-**Bei Bezeichnungen und QuickInfos, die Benutzern angezeigt werden, wenn sie per Rechtsklick Dateien oder Ordner klassifizieren und schützen:**
+**Für die Bezeichnungen und Quick Infos, die Benutzern angezeigt werden, wenn Sie mit der rechten Maustaste zum klassifizieren und schützen von Dateien oder Ordnern verwendet** werden:
 
 - Wenn eine direkte Übereinstimmung für die Sprache ihres Betriebssystems gefunden wird, werden Bezeichnungsnamen und Beschreibungen in dieser Sprache angezeigt.
 

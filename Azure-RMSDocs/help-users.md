@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
@@ -13,22 +13,29 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: caf5e33e58e266ba05f337000fe769b257eec832
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 0954f3caa116ee100ed819f71f5be04f36392bd9
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382172"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt und konfiguriert haben, können Sie Ihren Benutzern und Administratoren sowie Ihrem Helpdesk Hilfe und Anleitung bieten:
 
 -   **Endbenutzer Informationen**
     
-    Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. Wenn Sie [Vorlagen](configure-policy-templates.md) konfiguriert haben, sollten Sie Anleitungen zur Auswahl bereitstellen, wenn der Vorlagenname und die Beschreibung nicht aussagekräftig genug sind, um die richtige Vorlage auswählen zu können.
+    Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. 
+
+    Wenn Sie über den klassischen AIP-Client verfügen und [Vorlagen](configure-policy-templates.md)konfiguriert haben, geben Sie Anweisungen dazu an, welche auszuwählen sind, wenn der Vorlagen Name und die Beschreibung nicht ausreichen, um die richtige auszuwählen.
     
     > [!TIP]
     > Beispielvideos für Endbenutzer:
@@ -43,7 +50,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
 -   **Helpdesk-Informationen**
     
-    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installationsüberprüfungen und Problembehandlung](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
+    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installationsüberprüfungen und Problembehandlung](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting).
     
     Wenn legitime Anforderungen vorhanden sind, die über uneingeschränkten Zugriff auf geschützte Dokumente verfügen, stellen Sie sicher, dass der Helpdesk über Prozesse verfügt, um diesen Zugriff mithilfe der Azure Information Protection Administrator [Funktion](configure-super-users.md)anzufordern. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat.
     
@@ -61,10 +68,11 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
         
         Unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md) erfahren Sie, wie Sie prüfen können, ob ein bestimmter Benutzer oder eine bestimmte Gruppe von Azure Active Directory dafür autorisiert werden kann, geschützte Inhalte zu schützen oder zu nutzen.
         
-        Wenn Benutzer melden, dass sie geschützte Inhalte nicht öffnen können, sie aber die erforderlichen Berechtigungen haben, besteht das Problem möglicherweise darin, dass sich der Benutzer nicht in der richtigen Gruppe befindet, die für eine Rights Management-Vorlage konfiguriert ist. Oder das Problem ist, dass es erforderlich ist, dass die [Vorlage für den Benutzer oder die Gruppe neu konfiguriert wird](configure-policy-templates.md). 
-        
         Wenn die Rechte, die Benutzer haben, nicht wie erwartet sind, überprüfen Sie in der [Tabelle mit den Nutzungsrechten](configure-usage-rights.md#usage-rights-and-descriptions) die Beschreibung und etwaige anwendungsspezifische Implementierungen der Rechte.
 
+        **Nur klassischer Client**: Wenn Benutzer melden, dass Sie geschützte Inhalte zwar öffnen können, jedoch nicht über die erforderlichen Berechtigungen verfügen, besteht das Problem möglicherweise darin, dass sich der Benutzer nicht in der richtigen Gruppe befindet, die für eine Rights Management Vorlage konfiguriert ist. Oder das Problem ist, dass es erforderlich ist, dass die [Vorlage für den Benutzer oder die Gruppe neu konfiguriert wird](configure-policy-templates.md). 
+        
+        
 Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen von Dokumenten und E-Mails zu helfen.
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Verwenden des Informationsschutzes mit dem Azure Information Protection-Client
@@ -73,11 +81,12 @@ Wenn Benutzer Office 2010 verwenden, ist der Azure Information Protection-Client
 
 Der Azure Information Protection-Client erleichtert Benutzern nicht nur, Dokumente und E-Mails zu schützen, sondern auch das Nachverfolgen der Dokumente, die sie geschützt haben. Nachverfolgte Dokumente können auch widerrufen werden, wenn die zuvor autorisierten Benutzer keinen Zugriff mehr darauf haben sollen.
 
-Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md).
+Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/clientv2-user-guide.md).
 
 
 ## <a name="using-information-protection-with-office-365-office-2019-office-2016-or-office-2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2019, Office 2016 oder Office 2013
-Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Zudem wird die Schaltfläche **Schützen** nicht im Menüband oder die Option **Klassifizieren und schützen** nicht im Datei-Explorer angezeigt. Mithilfe dieser Ergänzungen können Dokumente und E-Mails einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
+
+Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Außerdem wird die **Vertraulichkeits** Schaltfläche auf dem Menüband nicht angezeigt, oder Sie können im Datei **-Explorer klassifizieren und schützen** . Mithilfe dieser Ergänzungen können Dokumente und E-Mails einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung von Informationsschutz mit diesen Anwendungen zu finden, suchen Sie nach **IRM** und dem Anwendungsnamen und der Version.

@@ -4,7 +4,7 @@ description: Informieren Sie sich über die nächsten Schritte nach dem Planen d
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/21/2020
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,27 +13,33 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1dbced335e32aa874309ead00f7c3f7a5fcc42f9
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: 9756710e29c82ef953633697cb989942d1844496
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567679"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382240"
 ---
 # <a name="getting-started-with-tenant-root-keys"></a>Ersten Schritte mit Mandanten Stamm Schlüsseln
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Nachdem Sie Ihren Mandanten Schlüssel nach Bedarf geplant, erstellt und konfiguriert haben, fahren Sie mit den folgenden Schritten fort:
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+
+Nachdem [Sie Ihren Mandanten Schlüssel nach Bedarf geplant, erstellt und konfiguriert](plan-implement-tenant-key.md) haben, fahren Sie mit den folgenden Schritten fort:
 
 - [Beginnen Sie mit der Verwendung Ihres Mandanten Schlüssels](#start-using-your-tenant-key)
 - [Verwendungs Protokollierung beachten](#consider-usage-logging)
 
 Weitere Informationen zu den Lebenszyklus Vorgängen, die für Ihren Mandanten Schlüssel unterstützt werden, finden [Sie unter Vorgänge für Ihren Azure Information Protection Mandanten Schlüssel](./operations-tenant-key.md).
 
-> [!TIP]
-> Wenn Ihre Organisation lokalen Schutz für streng sensible Inhalte erfordert, konfigurieren Sie entweder den [Hyok-Schutz](configure-adrms-restrictions.md) (nur klassische Clients) oder den [DKE-Schutz](plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) (nur Unified-Bezeichnung-Client).
-> 
+Wenn Ihre Organisation lokalen Schutz für streng sensible Inhalte erfordert, konfigurieren Sie den [DKE-Schutz](plan-implement-tenant-key.md#double-key-encryption-dke) (nur Unified-Bezeichnungs Client).
+
+Wenn Sie lokalen Schutz benötigen und den klassischen Client verwenden, sollten Sie stattdessen den [Hyok-Schutz](configure-adrms-restrictions.md) konfigurieren.
+ 
 
 ## <a name="start-using-your-tenant-key"></a>Beginnen Sie mit der Verwendung Ihres Mandanten Schlüssels
 

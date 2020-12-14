@@ -1,11 +1,11 @@
 ---
 title: Migrieren HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln – AIP
 description: Anweisungen, die Teil des Migrations Pfads von AD RMS zu Azure Information Protection sind und nur anwendbar sind, wenn Ihr AD RMS Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Information Protection mit einem HSM-geschützten Mandanten Schlüssel in Azure Key Vault durchlaufen möchten.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/11/2019
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
@@ -13,17 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43df572d29d98127de8cbdf594d85cd58f4db483
-ms.sourcegitcommit: 223e26b0ca4589317167064dcee82ad0a6a8d663
+ms.openlocfilehash: 1ce00be84ddde6493c5b8851fa8473024e08dc00
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86049087"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382053"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>***Gilt für**: Active Directory Rights Management Services [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Information Protection mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten. 
 
@@ -51,7 +52,7 @@ Diese Verfahren werden vom Administrator für Azure Key Vault durchgeführt.
 
    - Führen Sie nicht die Schritte zum **Generieren Ihres Mandantenschlüssels** aus, da Sie bereits über das Äquivalent aus Ihrer AD RMS-Bereitstellung verfügen. Identifizieren Sie stattdessen die Schlüssel, die von Ihrem AD RMS Server aus der nchiffre Installation verwendet werden, und bereiten Sie diese Schlüssel für die Übertragung vor, und übertragen Sie Sie dann an Azure Key Vault. 
         
-        Verschlüsselte Schlüsseldateien für die nchiffre werden **Key_<<em>keyappname</em>>_<<em>KeyIdentifier</em> > ** lokal auf dem Server benannt. Beispiel: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Sie benötigen den **mscapi** -Wert als keyappname und ihren eigenen Wert für den Schlüssel Bezeichner, wenn Sie den Befehl keytransferremote ausführen, um eine Kopie des Schlüssels mit reduzierten Berechtigungen zu erstellen.
+        Verschlüsselte Schlüsseldateien für die nchiffre werden **Key_<<em>keyappname</em>>_<<em>KeyIdentifier</em> >** lokal auf dem Server benannt. Beispiel: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Sie benötigen den **mscapi** -Wert als keyappname und ihren eigenen Wert für den Schlüssel Bezeichner, wenn Sie den Befehl keytransferremote ausführen, um eine Kopie des Schlüssels mit reduzierten Berechtigungen zu erstellen.
         
         Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Dies sieht in etwa wie folgt aus \: : https//ContosoRMS-KV.Vault.Azure.net/Keys/ContosoRMS-Byok/aaaabbbbcccc111122223333. Notieren Sie sich diese URL, da der Azure Information Protection-Administrator sie benötigt, um dem Azure Rights Management-Dienst mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 

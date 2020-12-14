@@ -1,11 +1,11 @@
 ---
 title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
-description: Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den Azure Information Protection-Client (klassisch) müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
+description: Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den Azure Information Protection klassischen Client müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: batamig
 ms.author: bagol
 ms.date: 08/17/2020
 manager: rkarlin
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
@@ -13,24 +13,21 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35eb3d59031fb30de1c9d6b1c6cdd2745f7d7ef2
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 722d5ec64fc93da5a7da8d5cad57c679345faf01
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568246"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382971"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) . *
 
-
-> [!NOTE]
-> Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
-> 
-> Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter Informationen zu [Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) aus der Dokumentation zur Microsoft 365 Konformität.
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der Azure Information Protection-Client installiert ist.
 

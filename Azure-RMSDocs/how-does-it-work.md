@@ -1,10 +1,10 @@
 ---
 title: Funktionsweise von Azure RMS – Azure Information Protection
 description: Aufschlüsselung der Funktionsweise von Azure RMS, der verwendeten kryptografischen Steuerelemente sowie Schritt-für-Schritt-Diagramme zur Funktionsweise dieses Prozesses.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9604ca61aff2d01d66e6f328b88ca264ab031785
-ms.sourcegitcommit: 551e3f5b8956da49383495561043167597a230d9
+ms.openlocfilehash: 8adba522d85bec9d2d1062c510b10ae9b96368a3
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86136648"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381747"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified Bezeichnung Client und Classic Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
 
 Ein wichtiger Aspekt der Funktionsweise von Azure RMS ist, dass dieser Datenschutzdienst von Azure Information Protection Ihre Daten im Rahmen des Schutzprozesses weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder in Azure gespeichert, es sei denn, Sie speichern sie explizit in Azure oder verwenden einen anderen Clouddienst, der sie in Azure speichert. Azure RMS sorgt lediglich dafür, dass die Daten in einem Dokument nur für autorisierte Benutzer und Dienste lesbar sind:
 
@@ -32,7 +34,7 @@ Ein wichtiger Aspekt der Funktionsweise von Azure RMS ist, dass dieser Datenschu
 
 Die folgende Abbildung gibt einen Überblick über die Funktionsweise dieses Prozesses. Ein Dokument, das die geheime Formel enthält, ist geschützt und wird dann von einem autorisierten Benutzer oder Dienst erfolgreich geöffnet. Das Dokument wird durch einen Inhaltsschlüssel (der grüne Schlüssel in der Abbildung) geschützt. Er ist für jedes Dokument eindeutig und wird im Dateiheader gespeichert. Dort ist er durch den Stammschlüssel Ihres Azure Information Protection-Mandanten geschützt (der rote Schlüssel in der Abbildung). Ihr Mandantenschlüssel kann von Microsoft generiert und verwaltet werden, oder Sie können Ihren eigenen Mandantenschlüssel generieren und verwalten.
 
-Während des gesamten Schutzvorgangs (wenn Azure RMS Daten verschlüsselt und entschlüsselt, autorisiert und Einschränkungen durchsetzt) wird die geheime Formel niemals an Azure gesendet.
+Während des gesamten Schutzprozesses, bei dem Azure RMS verschlüsselt und entschlüsselt, autorisiert und Einschränkungen durchsetzt, wird die geheime Formel niemals an Azure gesendet.
 
 ![Schutz einer Datei durch Azure RMS](./media/AzRMS_SecretColaFormula_final.png)
 
@@ -49,6 +51,7 @@ Auch wenn Sie die Funktionsweise dieser Technologie nicht im Detail kennen müss
 |Algorithmus: AES<br /><br />Schlüssellänge: 128 Bits und 256 Bits [[1]](#footnote-1)|Inhaltsschutz|
 |Algorithmus: RSA<br /><br />Schlüssellänge: 2048 Bits [[2]](#footnote-2)|Schlüsselschutz|
 |SHA-256|Zertifikatsignierung|
+| | |
 
 ###### <a name="footnote-1"></a>Fußnote 1 
 
@@ -80,6 +83,7 @@ Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit de
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsnutzung
+
 Sehen Sie sich zum besseren Verständnis der Funktionsweise von Azure RMS einen typischen Ablauf an, nachdem der [Azure Rights Management-Dienst aktiviert wurde](activate-service.md) und ein Benutzer den Rights Management-Dienst erstmals auf seinem Windows-Computer verwendet (ein Vorgang, der auch als **Initialisierung der Benutzerumgebung** oder Bootstrapping bezeichnet wird), **Inhalte geschützt werden** (ein Dokument oder eine E-Mail) und dann ein Inhalt **genutzt** (geöffnet und verwendet) wird, der durch eine andere Person geschützt wurde.
 
 Nach der Initialisierung der Benutzerumgebung kann der Benutzer Dokumente schützen oder geschützte Dokumente auf diesem Computer nutzen.
@@ -155,7 +159,7 @@ Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien.
 
 - **Mobile Geräte**: Wenn mobile Geräte Dateien mit dem Azure Rights Management-Dienst schützen oder nutzen, sind die Prozessabläufe wesentlich einfacher. Mobile Geräte durchlaufen nicht zuerst den Initialisierungsprozess, da stattdessen jede Transaktion (zum Schützen oder Nutzen von Inhalten) unabhängig ist. Ebenso wie Windows-Computer stellen mobile Geräte eine Verbindung mit dem Azure Rights Management-Dienst her und authentifizieren sich. Zum Schützen von Inhalten übermitteln mobile Geräte eine Richtlinie, und der Azure Rights Management-Dienst sendet ihnen eine Veröffentlichungslizenz und einen symmetrischen Schlüssel zum Schützen des Dokuments. Zum Nutzen von Inhalten senden mobile Geräte die Dokumentrichtlinie an den Azure Rights Management-Dienst und fordern eine Nutzungslizenz an, um das Dokument zu nutzen, wenn sie eine Verbindung mit dem Azure Rights Management-Dienst herstellen und sich authentifizieren. Als Antwort sendet der Azure Rights Management-Dienst die erforderlichen Schlüssel und Einschränkungen an das mobile Gerät. Beide Prozesse verwenden TLS, um den Schlüsselaustausch und andere Kommunikation zu schützen.
 
-- **RMS-Connector**: Wenn der Azure Rights Management-Dienst mit dem RMS-Connector verwendet wird, bleiben die Prozessabläufe unverändert. Der einzige Unterschied besteht darin, dass der Connector als Relay zwischen den lokalen Diensten (z. B. Exchange Server und SharePoint Server) und dem Azure Rights Management-Dienst fungiert. Der Connector selbst führt keine Vorgänge aus, z. B. die Initialisierung der Benutzerumgebung oder Ver- und Entschlüsselung. Es leitet lediglich die Kommunikation weiter, die normalerweise an einen AD RMS-Server gesendet würde, der die Übersetzung zwischen den Protokollen verarbeitet, die auf jeder Seite verwendet werden. In diesem Szenarien können Sie den Azure Rights Management-Dienst mit lokalen Diensten verwenden.
+- **RMS-Connector**: Wenn der Azure Rights Management-Dienst mit dem RMS-Connector verwendet wird, bleiben die Prozessabläufe unverändert. Der einzige Unterschied besteht darin, dass der Connector als Relay zwischen den lokalen Diensten (z. B. Exchange Server und SharePoint Server) und dem Azure Rights Management-Dienst fungiert. Der Connector selbst führt keine Vorgänge aus, z. B. die Initialisierung der Benutzerumgebung oder Ver- und Entschlüsselung. Er leitet lediglich die Kommunikation weiter, die normalerweise an einen AD RMS-Server gehen würde, und verarbeitet die Übersetzung zwischen den Protokollen, die auf beiden Seiten verwendet werden. In diesem Szenario können Sie den Azure Rights Management-Dienst mit lokalen Diensten verwenden.
 
 - **Generischer Schutz (PFILE)**: Wenn der Azure Rights Management-Dienst eine Datei generisch schützt, ist der Ablauf beim Inhaltsschutz grundsätzlich identisch, jedoch mit der Ausnahme, dass der RMS-Client eine Richtlinie erstellt, die alle Rechte gewährt. Bei Nutzung der Datei wird sie entschlüsselt, bevor sie an die Zielanwendung übergeben wird. In diesem Szenario können Sie alle Dateien selbst dann schützen, wenn sie keine systemeigene Unterstützung für RMS besitzen.
 
@@ -165,9 +169,14 @@ Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien.
 
 Wenn Sie weitere Informationen zum Azure Rights Management-Dienst benötigen, lesen Sie die anderen Artikel im Abschnitt **Verstehen und Kennenlernen**, z. B. [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md), um zu erfahren, wie Ihre vorhandenen Anwendungen zur Bereitstellung einer Datenschutzlösung in Azure Rights Management integriert werden können. 
 
-Lesen Sie [Terminologie für Azure Information Protection](./terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie den Azure Rights Management-Dienst konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Anforderungen an Azure Information Protection](requirements.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es ohne weitere Vorbereitung gleich selbst ausprobieren möchten, verwenden Sie das [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md).
+Lesen Sie [Terminologie für Azure Information Protection](./terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie den Azure Rights Management-Dienst konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Anforderungen an Azure Information Protection](requirements.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es selbst ausprobieren möchten, verwenden Sie den Schnellstart und die Tutorials:
 
-Wenn Sie soweit sind, mit der Bereitstellung von Datenschutz für Ihre Organisation zu beginnen, finden Sie die Bereitstellungsschritte und Links zu praktischen Anweisungen in der [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md).
+- [Schnellstart: Bereitstellen des Clients für einheitliche Bezeichnungen](quickstart-deploy-client.md)
+- [Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen](tutorial-install-scanner.md)
+- [Tutorial: Erkennen vertraulicher Inhalte mit dem Azure Information Protection-Scanner (AIP)](tutorial-scan-networks-and-content.md)
+- [Tutorial: Verhindern übermäßiger Freigaben in Outlook mit Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
+
+Wenn Sie bereit sind, mit der Bereitstellung von Datenschutz für Ihre Organisation zu beginnen, verwenden Sie die [AIP-Bereitstellungs Roadmap für Klassifizierung, Bezeichnung und Schutz](deployment-roadmap-classify-label-protect.md) für Ihre Bereitstellungs Schritte und Links zu Anleitungen.
 
 > [!TIP]
 > Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links unter [Informationen und Support für Azure Information Protection](information-support.md).

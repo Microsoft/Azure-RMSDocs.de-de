@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/16/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
@@ -13,29 +13,30 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2cf3c5c9c353c74287fb6f94ecc6d1c161e2198d
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: c2ce080c290bf3e2b04cc433e9347e3a1e074746
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383056"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden [Sie unter Informationen zu Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Einschränken des Zugriffs auf Inhalte mithilfe von Verschlüsselung in sensiblen Bezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels) aus der Microsoft 365-Dokumentation. *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
 
 Schutzvorlagen, auch als Rights Management-Vorlagen bekannt, sind eine Reihe von vom Administrator definierten Schutzeinstellungen für Azure Information Protection. Diese Einstellungen enthalten Ihre ausgewählten [Nutzungsrechte](configure-usage-rights.md) für autorisierte Benutzer sowie Zugriffssteuerungen für den Ablauf und den Offlinezugriff. Diese Vorlagen sind in der Azure Information Protection-Richtlinie integriert. 
 
-**Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst (Azure Information Protection P1 oder P2):**
+**Wenn Sie über ein Abonnement verfügen, das Klassifizierung, Bezeichnung und Schutz umfasst (Azure Information Protection P1 oder P2)**:
 
 - Vorlagen, die nicht in ihre Bezeichnungen für Ihren Mandanten integriert sind, werden im Bereich " **Schutz Vorlagen** " angezeigt, nachdem ihre Bezeichnungen im Bereich " **Azure Information Protection-Bezeichnungen** " angezeigt wurden. Um zu diesem Bereich zu navigieren, wählen Sie die Menüoption **Klassifizierungen**  >  **Bezeichnungen** aus. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung mit ihnen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
 
-**Wenn Sie über ein Abonnement verfügen, das nur Schutz umfasst (ein Microsoft 365 Abonnement, das den Azure Rights Management-Dienst umfasst):**
+**Wenn Sie über ein Abonnement verfügen, das nur Schutz umfasst (ein Microsoft 365 Abonnement, das den Azure Rights Management-Dienst umfasst)**:
 
 - Vorlagen für Ihren Mandanten werden im Bereich " **Schutz Vorlagen** " im Bereich " **Azure Information Protection-Bezeichnungen** " angezeigt. Um zu diesem Bereich zu navigieren, wählen Sie die Menüoption **Klassifizierungen**  >  **Bezeichnungen** aus. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Diese Einstellungen haben jedoch entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
 

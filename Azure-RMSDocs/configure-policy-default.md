@@ -10,26 +10,21 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6f50cd82076e8906ddf2ecaf0ec2d63350fffc35
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: f68561ed0d3d655dfdeb8feb380941106ea2674c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568504"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383379"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) . *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
-
-> [!NOTE]
-> Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) an.
-> 
-> Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter Informationen zu [Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) aus der Dokumentation zur Microsoft 365 Konformität.
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Anhand der folgenden Informationen erfahren Sie, wie die Standardrichtlinie für Azure Information Protection konfiguriert wird.
 
@@ -40,7 +35,7 @@ Sie können auf die folgenden Werte verweisen, um die Azure Information Protecti
 > [!IMPORTANT]
 > Ab dem 2019 werden die Standard Bezeichnungen nicht automatisch für neue Kunden erstellt. Diese Mandanten werden automatisch für die Plattform für einheitliche Bezeichnungen bereitgestellt, sodass Bezeichnungen nach der Konfiguration im Azure-Portal nicht extra migriert werden müssen.
 > 
-> Wenn für diese Mandanten noch keine Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center erstellt wurden, können Sie Standardbezeichnungen auf Grundlage der aktuellen Standardrichtlinie für Azure Information Protection erstellen. Wählen Sie hierzu im Bereich **Bezeichnungen** die Option **Standard Bezeichnungen generieren** aus, und fügen Sie die Bezeichnungen der globalen Richtlinie hinzu. Wenn die Option zum Generieren von Standard Bezeichnungen nicht angezeigt wird, müssen Sie möglicherweise zuerst vereinheitlichte Bezeichnung über **Manage** den Bereich  >  **vereinheitlichte Bezeichnung** verwalten aktivieren. Ausführliche Hinweise finden Sie unter [Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal](quickstart-viewpolicy.md).
+> Wenn für diese Mandanten noch keine Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center erstellt wurden, können Sie Standardbezeichnungen auf Grundlage der aktuellen Standardrichtlinie für Azure Information Protection erstellen. Wählen Sie hierzu im Bereich **Bezeichnungen** die Option **Standard Bezeichnungen generieren** aus, und fügen Sie die Bezeichnungen der globalen Richtlinie hinzu. Wenn die Option zum Generieren von Standard Bezeichnungen nicht angezeigt wird, müssen Sie möglicherweise zuerst vereinheitlichte Bezeichnung über den Bereich  >  **vereinheitlichte Bezeichnung** verwalten aktivieren. Ausführliche Hinweise finden Sie unter [Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal](quickstart-viewpolicy.md).
 
 
 ## <a name="current-default-policy"></a>Aktuelle Standardrichtlinie
@@ -76,7 +71,7 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Bezeichnung|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
 |Persönlich|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
 |Öffentlich|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
@@ -87,7 +82,7 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Bezeichnung|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Azure (Cloud-Schlüssel) [[1]](#footnote-1)|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
@@ -136,7 +131,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Bezeichnung|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
 |Persönlich|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
 |Öffentlich|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
@@ -147,7 +142,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Bezeichnung|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
@@ -176,7 +171,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Bezeichnung|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
 |Persönlich|Nur zur privaten Verwendung. This data will not be monitored by the organization. Personal information must not include any business-related data (Persönliche Informationen dürfen keine geschäftlichen Daten enthalten).|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
 |Öffentlich|Diese internen Informationen können von beliebigen Benutzern innerhalb oder außerhalb des Unternehmens verwendet werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
@@ -187,7 +182,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Bezeichnung|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
 |Secret > All Company (Geheim > Gesamtes Unternehmen)|This data includes sensitive business information - permitted for all company employees. (Diese Daten umfassen sensible Geschäftsinformationen, die für alle Mitarbeiter des Unternehmens zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|
 |Secret \ My Group (Geheim > Meine Gruppe)|This data includes sensitive business information - permitted for employee groups only (Diese Daten umfassen sensible Geschäftsinformationen, die nur für bestimmte Mitarbeitergruppen zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: keine<br /><br />**Schutz**: Keiner|

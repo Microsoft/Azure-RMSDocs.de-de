@@ -1,10 +1,10 @@
 ---
 title: 'Vom Kunden verwaltet: Lebenszyklusvorgänge für AIP-Mandantenschlüssel'
 description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wenn Ihr Mandantenschlüssel für Azure Information Protection von Ihnen verwaltet wird (BYOK-Szenario, „Bring Your Own Key“).
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 12/06/2019
+ms.date: 11/11/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1e06581cb7291674d3a94c99338a9749b46f9a0
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: a8365e49bd25fc50fefdf2a0645fc5e9ac5b30c6
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567625"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381543"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Wenn Ihr Mandantenschlüssel für Azure Information Protection von Ihnen verwaltet wird (BYOK-Szenario), finden Sie in den folgenden Abschnitten weitere Informationen zu den Lebenszyklusvorgängen, die für diese Topologie relevant sind.
 
@@ -35,6 +37,7 @@ Um Ihren vom Kunden verwalteten Mandanten Schlüssel zu widerrufen, ändern Sie 
 Wenn Sie Ihr Abonnement für Azure Information Protection kündigen, wird Ihr Mandantenschlüssel in Azure Information Protection nicht mehr verwendet. Es ist keine weitere Aktion erforderlich.
 
 ## <a name="rekey-your-tenant-key"></a>Neuerstellung Ihres Mandantenschlüssels
+
 Die Neuerstellung eines Schlüssels wird auch als „Rollover“ bezeichnet. Wenn Sie diesen Vorgang ausführen, verwendet Azure Information Protection nicht mehr den vorhandenen Mandantenschlüssel zum Schützen von Dokumenten und E-Mails sondern einen anderen Schlüssel. Richtlinien und Vorlagen werden umgehend erneut signiert. Diese Umstellung erfolgt jedoch gestaffelt für vorhandene Kunden und Dienste, die Azure Information Protection verwenden. Daher werden neue Inhalte eine Zeit lang noch durch den alten Mandantenschlüssel geschützt.
 
 Um einen neuen Schlüssel zu erstellen, müssen Sie das Mandantenschlüsselobjekt konfigurieren und den alternativen Schlüssel angeben, der verwendet werden soll. Anschließend wird der zuvor verwendete Schlüssel für Azure Information Protection automatisch als archiviert gekennzeichnet. Diese Konfiguration stellt sicher, dass der Inhalt, der mithilfe dieses Schlüssels geschützt wurde, weiterhin zugänglich ist.
@@ -51,9 +54,9 @@ Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neu
 
 1. Nur, wenn sich der neue Schlüssel in einem anderen Schlüssel Tresor befindet, den Sie bereits für Azure Information Protection verwenden: autorisieren Sie Azure Information Protection, den Schlüssel Tresor zu verwenden, indem Sie das Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) verwenden.
 
-2. Wenn Azure Information Protection den Schlüssel, den Sie verwenden möchten, nicht bereits kennen, führen Sie das Cmdlet [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) aus.
+1. Wenn Azure Information Protection den Schlüssel, den Sie verwenden möchten, nicht bereits kennen, führen Sie das Cmdlet [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) aus.
 
-3. Konfigurieren Sie das Mandanten Schlüsselobjekt mithilfe des Cmdlets [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) ausführen.
+1. Konfigurieren Sie das Mandanten Schlüsselobjekt mithilfe des Cmdlets [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) ausführen.
 
 Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 
@@ -65,6 +68,7 @@ Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 - Eine Anleitung zur Nutzung eines anderen, von Microsoft verwalteten Schlüssel finden Sie im Abschnitt [Neuerstellung Ihres Mandantenschlüssels](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) für von Microsoft verwaltete Vorgänge.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
+
 Da Sie Ihren Mandantenschlüssel verwalten, sind Sie verantwortlich für das Sichern des Schlüssels, den Azure Information Protection verwendet. 
 
 Wenn Sie Ihren Mandanten Schlüssel lokal generiert haben, in einem nchiffre-HSM: um den Schlüssel zu sichern, sichern Sie die tokenschlüsseldatei, die World-Datei und die Administrator Karten. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten diese Tokenschlüsseldatei aber nicht als vollwertige Sicherung ansehen. Wenn Sie z. b. jemals eine nur-Text-Kopie Ihres Schlüssels zur Verwendung außerhalb eines nchiffre-HSM benötigen, kann Azure Key Vault ihn nicht für Sie abrufen, da er nur über eine nicht wiederherstellbare Kopie verfügt.
@@ -72,9 +76,11 @@ Wenn Sie Ihren Mandanten Schlüssel lokal generiert haben, in einem nchiffre-HSM
 Azure Key Vault besitzt ein [Sicherungs-Cmdlet](/powershell/module/az.keyvault/backup-azkeyvaultkey), das Sie zum Sichern eines Schlüssels verwenden können, indem Sie dieses herunterladen und in einer Datei speichern. Da der heruntergeladene Inhalt verschlüsselt ist, kann dieser nicht außerhalb von Azure Key Vault verwendet werden. 
 
 ## <a name="export-your-tenant-key"></a>Exportieren Ihres Mandantenschlüssels
+
 Wenn Sie BYOK verwenden, können Sie Ihren Mandantenschlüssel nicht aus Azure Key Vault oder Azure Information Protection exportieren. Die Kopie in Azure Key Vault ist nicht wiederherstellbar. 
 
 ## <a name="respond-to-a-breach"></a>Reaktion auf eine Sicherheitsverletzung
+
 Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der Schlüsseltechnologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen auftreten.
 
 Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Vorfall auf Ihre Assets auswirkt, benachrichtigt Microsoft den globalen Administrator Ihres Mandanten per e-Mail.
@@ -87,3 +93,4 @@ Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorg
 |Eine nicht autorisierte Person oder Schadsoftware hat Rechte zur Verwendung Ihres Mandantenschlüssels erlangt, aber nicht den Schlüssel selbst.|Die Neuerstellung Ihres Mandantenschlüssels schafft hierbei keine Abhilfe, stattdessen ist eine Ursachenanalyse erforderlich. Wenn ein Prozess- oder Softwarefehler dafür verantwortlich war, dass die nicht autorisierte Person Zugriff erlangt hat, muss dieser Zustand behoben werden.|
 |Entdeckte Sicherheitslücke in HSM-Technologie der aktuellen Generation.|Microsoft muss die HSMs aktualisieren. Wenn es Anlass gibt, zu glauben, dass durch die Sicherheitslücke Schlüssel kompromittiert wurden, weist Microsoft alle Kunden an, ihre Mandantenschlüssel neu zu erstellen.|
 |Im RSA-Algorithmus oder bei der Schlüssellänge entdeckte Sicherheitslücken oder auch Brute-Force-Angriffe werden von der Rechenleistung her möglich.|Microsoft muss Azure Key Vault oder Azure Information Protection so aktualisieren, dass neue, robuste Algorithmen und längere Schlüssellängen unterstützt werden, und alle Kunden anweisen, ihre Mandantenschlüssel neu zu erstellen.|
+| | |
