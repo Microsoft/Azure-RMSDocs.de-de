@@ -1,11 +1,11 @@
 ---
-title: Benutzerdefinierte Konfigurationen-Azure Information Protection Client
-description: Informationen zum Anpassen des Azure Information Protection-Clients für Windows
+title: Benutzerdefinierte Konfigurationen-Azure Information Protection klassischer Client
+description: Informationen zum Anpassen des Azure Information Protection klassischen Clients für Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,27 +13,27 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b81566a0853776a2b06e9a731e0cb3cf11fa5ff
-ms.sourcegitcommit: 3780bd234c0af60d4376f1cae093b8b0ab035a9f
+ms.openlocfilehash: 994b4ae32424fe4994cbb8e7b77ed4acc5867bdb
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568489"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386201"
 ---
-# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-classic-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection klassischen Client
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie im Unified-Bezeichnungs [Client-Administrator Handbuch](clientv2-admin-guide-customizations.md). *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
 Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere sind erweiterte Einstellungen, die Sie im Azure-Portal konfigurieren und anschließend für das Herunterladen durch Clients veröffentlichen müssen.  
 
-### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Konfigurieren erweiterter Clientkonfigurationseinstellungen im Portal
+### <a name="how-to-configure-advanced-classic-client-configuration-settings-in-the-portal"></a>Konfigurieren erweiterter klassischer Client Konfigurationseinstellungen im Portal
 
 1. Wenn Sie dies noch nicht getan haben, melden Sie sich in einem neuen Browserfenster beim [Azure-Portal an](../configure-policy.md#signing-in-to-the-azure-portal), und navigieren Sie dann zum Bereich **Azure Information Protection** .
 
@@ -49,7 +49,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 
 6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten: Wählen Sie im Bereich **Erweiterte Einstellungen** das Kontextmenü (**...**) neben der Einstellung aus, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie anschließend auf **Speichern und Schließen**.
 
-#### <a name="available-advanced-client-settings"></a>Verfügbare erweiterte Clienteinstellungen
+#### <a name="available-advanced-classic-client-settings"></a>Verfügbare erweiterte klassische Client Einstellungen
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
@@ -111,7 +111,7 @@ So melden Sie sich als ein anderer Benutzer an:
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
 
-Außerdem zu beachten:
+Darüber hinaus gilt:
 
 - Wenn der Azure Information Protection-Client nach Abschluss dieser Schritte noch mit dem alten Konto angemeldet ist, löschen Sie im Internet Explorer alle Cookies, und wiederholen Sie dann die Schritte 1 und 2.
 
@@ -124,7 +124,7 @@ Außerdem zu beachten:
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt
 
-Wenn Ihre Organisation keine Lizenzen für Azure Information Protection besitzt, aber Lizenzen für Microsoft 365 enthält, die den Azure Rights Management-Dienst zum Schutz von Daten enthalten, wird der Azure Information Protection Client für Windows automatisch im reinen [Schutzmodus](client-protection-only-mode.md)ausgeführt.
+Wenn Ihre Organisation keine Lizenzen für Azure Information Protection besitzt, aber Lizenzen für Microsoft 365 enthält, die den Azure Rights Management-Dienst zum Schutz von Daten enthalten, wird der klassische AIP-Client automatisch im reinen [Schutzmodus](client-protection-only-mode.md)ausgeführt.
 
 Wenn Ihre Organisation jedoch über ein Abonnement für Azure Information Protection verfügt, können standardmäßig alle Windows-Computer die Azure Information Protection-Richtlinie herunterladen. Der Azure Information Protection-Client ist nicht für die Überprüfung und Erzwingung von Lizenzen zuständig. 
 
@@ -138,7 +138,7 @@ Suchen Sie nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf **0** f
 
 ## <a name="add-report-an-issue-for-users"></a>Add "Report an Issue" for users ("Problem melden" für Benutzer hinzufügen)
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn Sie die folgende erweiterte Clienteinstellung angeben, wird Benutzern die Option **Problem melden** angezeigt, die sie aus dem Clientdialogfeld **Hilfe und Feedback** auswählen können. Geben Sie eine HTTP-Zeichenfolge für den Link an. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. 
 
@@ -164,7 +164,7 @@ Der Azure Information Protection-Client versucht standardmäßig, eine Verbindun
 
 Beachten Sie, dass der Client ohne Internetverbindung keinen Schutz (bzw. keinen Schutz) mithilfe des cloudbasierten Schlüssels Ihrer Organisation anwenden kann. Stattdessen ist der Client auf die Verwendung von Bezeichnungen beschränkt, für die ausschließlich die Klassifizierung verwendet wird, oder auf den Schutz mit [HYOK](../configure-adrms-restrictions.md).
 
-Sie können eine Anmeldeaufforderung für den Azure Information Protection-Dienst verhindern, indem Sie eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) verwenden. Diese müssen Sie im Azure-Portal konfigurieren und die Richtlinie dann für Computer herunterladen. Darüber hinaus können Sie dies diese Anmeldeaufforderung verhindern, indem Sie die Registrierung bearbeiten:
+Sie können eine Anmeldeaufforderung für den Azure Information Protection-Dienst verhindern, indem Sie eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) verwenden. Diese müssen Sie im Azure-Portal konfigurieren und die Richtlinie dann für Computer herunterladen. Darüber hinaus können Sie dies diese Anmeldeaufforderung verhindern, indem Sie die Registrierung bearbeiten:
 
 - So konfigurieren Sie die erweiterte Clienteinstellung:
     
@@ -204,7 +204,7 @@ Wenn auf dem Computer, auf dem der Computer ausgeführt wird, die aktuelle GA-Ve
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ausblenden oder Anzeigen der Schaltfläche „Nicht weiterleiten“ in Outlook
 
-Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Die Schaltfläche „Nicht weiterleiten“ dem Outlook-Menüband hinzufügen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen.
+Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Die Schaltfläche „Nicht weiterleiten“ dem Outlook-Menüband hinzufügen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen.
 
 Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterleiten** auf dem Menüband in Outlook ausgeblendet oder angezeigt. Diese Einstellung hat keine Auswirkung auf die Option „Nicht weiterleiten“ der Office-Menüs.
 
@@ -216,7 +216,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer
 
-Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../configure-policy-settings.md) **Make the custom permissions option available for users** (Die benutzerdefinierte Berechtigungsoption für Benutzer verfügbar machen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen. 
+Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../configure-policy-settings.md) **Make the custom permissions option available for users** (Die benutzerdefinierte Berechtigungsoption für Benutzer verfügbar machen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen. 
 
 Wenn Sie diese Einstellung konfigurieren und die Richtlinie für Benutzer veröffentlichen, werden die benutzerdefinierten Berechtigungsoptionen für Benutzer sichtbar, woraufhin diese ihre eigenen Schutzeinstellungen auswählen können. Alternativ werden die Optionen ausgeblendet, damit Benutzer ihre Schutzeinstellungen nicht auswählen können, es sei denn, sie werden dazu aufgefordert.
 
@@ -228,7 +228,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **Option für benutzerdefinierte Berechtigungen für Benutzer verfügbar machen** oder die entsprechende Clienteinstellung im vorherigen Abschnitt konfigurieren, können Benutzer benutzerdefinierte Berechtigungen nicht sehen oder ändern, die für ein geschütztes Dokument bereits festgelegt wurden. 
 
@@ -246,7 +246,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection-Leiste dauerhaft ausblenden
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Verwenden Sie diese nur, wenn die [Richtlinieneinstellung](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Die Information Protection-Leiste in Office-Apps anzeigen) auf **Ein** festgelegt ist.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Verwenden Sie diese nur, wenn die [Richtlinieneinstellung](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Die Information Protection-Leiste in Office-Apps anzeigen) auf **Ein** festgelegt ist.
 
 Wenn ein Benutzer standardmäßig die Option **Leiste anzeigen** von der Registerkarte **Start** entfernt, werden die **Schutzgruppe**, die Schaltfläche **Schützen** und die Leiste „Information Protection“ nicht länger in der Office-App angezeigt. Die Leiste wird jedoch automatisch wieder beim nächsten Öffnen der Office-App angezeigt.
 
@@ -262,7 +262,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="enable-order-support-for-sublabels-on-attachments"></a>Aktivieren der Unterstützung der Reihenfolge für untergeordnete Bezeichnungen bei Anlagen
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Verwenden Sie diese Einstellung, wenn Sie über untergeordnete Bezeichnungen verfügen und die folgende [Richtlinieneinstellung](../configure-policy-settings.md) konfiguriert haben:
 
@@ -280,7 +280,7 @@ Mit dieser Einstellung wird die untergeordnete Bezeichnung, die sich am nächste
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie die [Richtlinien Einstellung](../configure-policy-settings.md) aktivieren, **müssen alle Dokumente und e-Mails standardmäßig über eine Bezeichnung verfügen**, sodass für alle gespeicherten Dokumente und gesendeten e-Mails eine Bezeichnung angewendet werden muss. Wenn Sie die folgende erweiterte Einstellung konfigurieren, gilt die Richtlinien Einstellung nur für Office-Dokumente und nicht für Outlook-Nachrichten.
 
@@ -292,7 +292,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Aktivieren der empfohlenen Klassifizierung in Outlook
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn Sie eine Bezeichnung für die empfohlene Klassifizierung konfigurieren, werden Benutzer dazu aufgefordert, die empfohlene Bezeichnung in Word, Excel und PowerPoint anzunehmen oder abzulehnen. Diese Einstellung erweitert diese Bezeichnungsempfehlung, sodass sie auch in Outlook angezeigt wird.
 
@@ -308,7 +308,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben
 
-Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie die folgenden erweiterten Clienteinstellungen erstellen und konfigurieren, werden Benutzern Popupmeldungen in Outlook angezeigt, die sie vor dem Senden einer E-Mail warnen können, oder sie nach einer Legitimierung fragen, warum sie eine E-Mail versenden, oder sie aus folgenden Gründen davon abhalten, eine E-Mail zu senden:
 
@@ -354,7 +354,7 @@ In den folgenden Abschnitten finden Sie Konfigurations Anweisungen für jede erw
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
 
-Um die Popupmeldungen für bestimmte Bezeichnungen implementieren zu können, benötigen Sie die Bezeichnungs-ID der entsprechenden Bezeichnungen. Der Bezeichnungs-ID-Wert wird **Label** im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die Bezeichnungs-ID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die ID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
+Um die Popupmeldungen für bestimmte Bezeichnungen implementieren zu können, benötigen Sie die Bezeichnungs-ID der entsprechenden Bezeichnungen. Der Bezeichnungs-ID-Wert wird  im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die Bezeichnungs-ID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die ID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 
 Erstellen Sie mit den folgenden Schlüsseln eine oder mehr der folgenden erweiterten Clienteinstellungen. Geben Sie als Werte ein oder mehrere Bezeichnungen mit deren IDs an, und trennen Sie die einzelnen Werte mit Kommas.
 
@@ -485,11 +485,11 @@ Wenn Sie diese Client Einstellung nicht angeben, wird der Wert, den Sie für "ou
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn Sie diese Einstellung konfigurieren, wendet Outlook für die Einstellung **Standardbezeichnung auswählen** nicht die in der Azure Information Protection-Richtlinie konfigurierte Standardbezeichnung an. Stattdessen kann Outlook eine andere Standardbezeichnung oder gar keine Bezeichnung anwenden.
 
-Um eine andere Bezeichnung anzuwenden, müssen Sie die Bezeichnungs-ID angeben. Der Bezeichnungs-ID-Wert wird **Label** im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die Bezeichnungs-ID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die ID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
+Um eine andere Bezeichnung anzuwenden, müssen Sie die Bezeichnungs-ID angeben. Der Bezeichnungs-ID-Wert wird  im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die Bezeichnungs-ID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die ID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 
 Damit Outlook nicht die Standardbezeichnung anwendet, geben Sie **None** (Keine) an.
 
@@ -501,7 +501,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Verwenden Sie diese Einstellung nur, wenn Sie eine funktionierende [S/MIME-Bereitstellung](/exchange/s-mime-for-message-signing-and-encryption) haben und eine Bezeichnung diese Schutzmethode automatisch auf E-Mails anwenden soll und nicht den Rights Management-Schutz vor Azure Information Protection. Der resultierende Schutz ist derselbe wie bei der manuellen Auswahl von S/MIME-Optionen in Outlook.
 
@@ -509,7 +509,7 @@ In dieser Konfiguration müssen Sie eine erweiterte Clienteinstellung namens **L
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-Der Bezeichnungs-ID-Wert wird **Label** im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Um S/MIME mit einer untergeordneten Bezeichnung zu verwenden, geben Sie immer die ID der untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung. Wenn Sie eine untergeordnete Bezeichnung angegeben, muss sich die übergeordnete Bezeichnung im gleichen Bereich oder in der globalen Richtlinie befinden.
+Der Bezeichnungs-ID-Wert wird  im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Um S/MIME mit einer untergeordneten Bezeichnung zu verwenden, geben Sie immer die ID der untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung. Wenn Sie eine untergeordnete Bezeichnung angegeben, muss sich die übergeordnete Bezeichnung im gleichen Bereich oder in der globalen Richtlinie befinden.
 
 Folgende S/MIME-Aktionen sind möglich:
 
@@ -541,7 +541,7 @@ Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie die Be
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>„Not now“ („Nicht jetzt“) für Dokumente bei Verwendung der obligatorischen Bezeichnung entfernen
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md)**All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung haben) verwenden, werden die Benutzer beim ersten Speichern eines Offices-Dokuments und beim Senden einer E-Mail dazu aufgefordert, eine Bezeichnung zu wählen. Bei Office-Dokumenten können Benutzer **Not now** (nicht jetzt) wählen, um die Aufforderung zum Auswählen einer Bezeichnung vorübergehend zu schließen und zum Dokument zurückzukehren. Sie können das gespeicherte Dokument jedoch nicht schließen, ohne es zu bezeichnen. 
 
@@ -555,7 +555,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.  
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.  
 
 Wenn Sie diese Einstellung konfigurieren, ändert sich das [Standardverhalten](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied), wie der Azure Information Protection-Client automatische und empfohlene Bezeichnungen auf Dokumente anwendet, wie folgt: 
 
@@ -579,7 +579,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn die aktuelle Version des Azure Information Protection-Clients eine PDF-Datei schützt, verbleibt die daraus resultierende Erweiterung bei PDF und entspricht somit dem ISO-Standard für die Verschlüsselung von PDF-Dateien. Weitere Informationen zu diesem Standard finden Sie im Abschnitt **7.6 Encryption** (7.6 Verschlüsselung) aus dem [Dokument, das von ISO 32000-1 abgeleitet](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) und von Adobe Systems Incorporated veröffentlicht wird.
 
@@ -591,7 +591,7 @@ Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Cl
 
 Sie könnten diese Einstellung zum Beispiel für alle Benutzer benötigen, wenn Sie einen PDF-Reader verwenden, der den ISO-Standard für die PDF-Verschlüsselung nicht unterstützt. Oder Sie müssen sie möglicherweise für einige Benutzer konfigurieren, wenn Sie nach und nach zu einem PDF-Reader wechseln, der das neue Format unterstützt. Ein weiterer möglicher Grund für die Verwendung dieser Einstellung besteht, wenn Sie signierten PDF-Dokumenten Schutz hinzufügen müssen. Signierte PDF-Dokumente können zusätzlich mit dem PPDF-Format geschützt werden, da dieser Schutz als Wrapper für die Datei implementiert wird. 
 
-Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden. Darüber hinaus schützt die Überprüfung nicht mehr standardmäßig PDF-Dokumente. Wenn Sie möchten, dass PDF-Dokumente durch den Scanner geschützt werden **,** Wenn **EnablePDFv2Protection** auf false festgelegt ist, müssen Sie [die Registrierung bearbeiten](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect).
+Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden. Darüber hinaus schützt die Überprüfung nicht mehr standardmäßig PDF-Dokumente. Wenn Sie möchten, dass PDF-Dokumente durch den Scanner geschützt werden, wenn **EnablePDFv2Protection** auf **false** festgelegt ist, müssen Sie [die Registrierung bearbeiten](../deploy-aip-scanner-configure-install-classic.md#change-which-file-types-to-protect).
 
 Weitere Informationen zu dieser neuen PDF-Verschlüsselung finden Sie im Blogbeitrag [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
@@ -607,7 +607,7 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiel:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
     
     ```ps
     Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
@@ -621,13 +621,13 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Entscheiden Sie, ob Sie den Benutzer fortsetzen oder den Benutzer (der Wert, der für den **rmsissuer** angezeigt wird) zum Entfernen der Bezeichnung und zum erneuten Anwenden der Bezeichnung sowie ihrer ursprünglichen benutzerdefinierten Berechtigungen auffordern.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Zum Beispiel: 
 
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
     ```
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiel:
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
     
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
@@ -662,7 +662,7 @@ Aufgrund dieser Änderung in der Registrierung werden die folgenden Szenarios un
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Diese Konfiguration ist derzeit nicht mit dem neuen Standardverhalten kompatibel, das PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung schützt. In diesem Szenario können PPDF-Dateien nicht mit Datei-Explorer, PowerShell oder der Überprüfung geöffnet werden. Um dieses Problem zu beheben, verwenden Sie die erweiterte Clienteinstellung, mit der [der ISO-Standard nicht für die PDF-Verschlüsselung verwendet wird](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
@@ -685,7 +685,7 @@ In dieser Konfiguration müssen Sie eine erweiterte Clienteinstellung namens **L
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-Der Bezeichnungs-ID-Wert wird **Label** im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Damit eine untergeordnete Bezeichnung angegeben werden kann, muss sich die übergeordnete Bezeichnung im gleichen Bereich oder in der globalen Richtlinie befinden.
+Der Bezeichnungs-ID-Wert wird  im Bezeichnungs Bereich angezeigt, wenn Sie die Azure Information Protection Richtlinie in der Azure-Portal anzeigen oder konfigurieren. Damit eine untergeordnete Bezeichnung angegeben werden kann, muss sich die übergeordnete Bezeichnung im gleichen Bereich oder in der globalen Richtlinie befinden.
 
 Geben Sie einen Namen für die Migrationsregel an. Verwenden Sie einen aussagekräftigen Namen, der angibt, wie Bezeichnungen aus Ihrer vorherigen Bezeichnungslösung zu einer Azure Information Protection-Bezeichnung zugeordnet werden sollen. Der Name wird in den Scannerberichten und in der Ereignisanzeige angezeigt. Beachten Sie, dass durch diese Einstellung keine ursprüngliche Bezeichnung aus dem Dokument bzw. keine optische Kennzeichnung im Dokument entfernt wird, die von der ursprünglichen Bezeichnung möglicherweise angewendet wurde. Weitere Informationen zum Entfernen von Kopf- und Fußzeilen finden Sie im nächsten Abschnitt unter [Remove headers and footers from other labeling solutions (Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen)](#remove-headers-and-footers-from-other-labeling-solutions).
 
@@ -744,7 +744,7 @@ Erweiterte Clienteinstellung:
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen
 
-Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Mit diesen Einstellungen können Sie textbasierte Kopf- und Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Die ältere Fußzeile enthält beispielsweise den Namen einer alten Bezeichnung, die Sie nun mit einem neuen Bezeichnungsnamen und einer eigenen Fußzeile zu Azure Information Protection migriert haben.
 
@@ -846,7 +846,7 @@ Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüf
 > [!NOTE]
 > Wenn Sie diese Konfiguration und die Konfiguration zum [Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions) verwenden, erhält die Einstellung für die Bezeichnungsmigration Vorrang. 
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn Sie diese Einstellung konfigurieren, können Sie ein Office-Dokument klassifizieren (und unter Umständen schützen), wenn es über eine benutzerdefinierte Eigenschaft mit einem Wert verfügt, der einem Ihrer Bezeichnungsnamen entspricht. Diese benutzerdefinierte Eigenschaft kann aus einer Klassifizierungslösung stammen oder von SharePoint als eine Eigenschaft festgelegt worden sein.
 
@@ -874,7 +874,7 @@ Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird 
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn der Azure Information Protection-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Wenn der Client nicht so konfiguriert ist, dass er keine Überwachungsinformationen sendet, werden alle gefundenen sensiblen Informationstypen (vordefiniert oder Benutzer definiert) an [Azure Information Protection Analytics](../reports-aip.md)gesendet. 
 
@@ -886,7 +886,7 @@ Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet,
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden, die Informationen sind jedoch auf die Bezeichnungs Aktivität beschränkt.
 
-Beispiel:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie feststellen, dass ein Benutzer auf Financial.docx mit der Bezeichnung **vertraulich \ Sales** zugegriffen hat.
 
@@ -896,7 +896,7 @@ Beispiel:
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie das Kontrollkästchen für [Azure Information Protection Analytics](../reports-aip.md) aktivieren, das eine tiefere Analyse Ihrer sensiblen Daten ermöglicht, sammelt die Inhalts Übereinstimmungen für Ihre sensiblen Informationstypen oder Ihre benutzerdefinierten Bedingungen. diese Informationen werden standardmäßig von allen Benutzern gesendet. dazu gehören Dienst Konten, die den Azure Information Protection Scanner ausführen. Wenn Sie einige Benutzer haben, die diese Daten nicht senden sollten, erstellen Sie die folgende erweiterte Clienteinstellung in einer [bereichsbezogenen Richtlinie](../configure-policy-scope.md) für diese Benutzer: 
 
@@ -907,7 +907,7 @@ Wenn Sie das Kontrollkästchen für [Azure Information Protection Analytics](../
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Begrenzen der Anzahl der von der Überprüfung verwendeten Threads
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Standardmäßig verwendet die Überprüfung alle verfügbaren Prozessorressourcen des Computers, auf dem der Überprüfungsdienst ausgeführt wird. Wenn Sie die CPU-Nutzung während der Überprüfungsvorgänge des Diensts begrenzen müssen, erstellen Sie die folgende erweiterte Einstellung. 
 
@@ -921,7 +921,7 @@ Wenn Sie den Wert zu Testzwecken zum ersten Mal konfigurieren, empfehlen wir Ihn
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Deaktivieren der niedrigen Integritätsebene für den Scanner
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Die Vorschauversion der Azure Information Protection-Überprüfung wird standardmäßig mit einer niedrigen Integritätsebene ausgeführt. Diese Einstellung bietet eine höhere Sicherheitsisolationsstufe, beeinträchtigt jedoch die Leistung. Eine niedrige Integritätsebene eignet sich, wenn Sie den Scanner mit einem Konto ausführen, das privilegierte Zugriffsrechte hat (z.B. ein lokales Administratorkonto), da diese Einstellung den Computer schützt, der den Scanner ausführt.
 
@@ -937,7 +937,7 @@ Wenn Sie diese erweiterte Einstellung so konfigurieren möchten, dass der Scanne
 
 ## <a name="change-the-timeout-settings-for-the-scanner"></a>Ändern der Timeout Einstellungen für die Überprüfung
 
-Diese Konfiguration verwendet [Erweiterte Client Einstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal) , die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet [Erweiterte Client Einstellungen](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal) , die Sie im Azure-Portal konfigurieren müssen.
 
 Standardmäßig hat der Azure Information Protection Scanner einen Timeout Zeitraum von 00:15:00 (15 Minuten), um jede Datei auf vertrauliche Informationstypen oder Regex-Ausdrücke zu überprüfen, die Sie für benutzerdefinierte Bedingungen konfiguriert haben. Wenn das Timeout für diesen Prozess zur Inhalts Extraktion erreicht wird, werden alle Ergebnisse vor dem Timeout zurückgegeben, und die weitere Überprüfung der Datei wird beendet. In diesem Szenario wird die folgende Fehlermeldung in%*LocalAppData*% \ microsoft\msip\protokolle\msipscanner.iplog (gezippt bei mehreren Protokollen) protokolliert: **getcontentparts ist fehlgeschlagen** , und **der Vorgang wurde** in den Details abgebrochen.
 
@@ -973,7 +973,7 @@ Um den Timeout Zeitraum für die Dateiverarbeitung zu ändern, konfigurieren Sie
 
 ## <a name="change-the-local-logging-level"></a>Ändern des lokalen Protokolliergrads
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Der Azure Information Protection-Client schreibt Clientprotokolldateien standardmäßig in den Ordner **%localappdata%\Microsoft\MSIP**. Diese Dateien dienen zur Problembehandlung durch den Microsoft-Support.
  
@@ -995,7 +995,7 @@ Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
 
 - Ablauf **Verfolgung**: ausführliche Protokollierung (die Standardeinstellung für Clients). Für den Scanner bringt diese Einstellung eine erhebliche Beeinträchtigung der Leistung mit sich und sollte für den Scanner nur aktiviert werden, wenn der Microsoft Support dazu auffordert. Wenn Sie angewiesen werden, diesen Protokolliergrad für den Scanner festzulegen, denken Sie nach dem Sammeln der relevanten Protokolle daran, einen anderen Wert festzulegen.
 
-Durch diese erweiterte Clienteinstellung ändern sich weder die Informationen, die für die [zentrale Berichterstellung](../reports-aip.md) an Azure Information Protection gesendet werden, noch die Informationen, die in das lokale [Ereignisprotokoll](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) geschrieben werden.
+Durch diese erweiterte Clienteinstellung ändern sich weder die Informationen, die für die [zentrale Berichterstellung](../reports-aip.md) an Azure Information Protection gesendet werden, noch die Informationen, die in das lokale [Ereignisprotokoll](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client) geschrieben werden.
 
 ## <a name="integration-with-the-legacy-exchange-message-classification"></a>Integration in die Legacy Nachrichtenklassifizierung von Exchange
 
@@ -1009,11 +1009,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Regel für den Exchange-E-Mail-Verkehr. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Beispiel:
+     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Zum Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-EA17-4f DB-8F 01-93a3e71333b8_Enabled = true**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     

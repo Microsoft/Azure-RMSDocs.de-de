@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 11/18/2020
 ms.author: mbaldwin
 ms.custom: subject-security-benchmark
-ms.openlocfilehash: cddb3ad6bd23a58922a87d27dcd6a0a1e82bd312
-ms.sourcegitcommit: 173f46dd5f14c27911faec737be5986a33407477
+ms.openlocfilehash: 8cdeb7ec7bd30d6b15b832eeb080317d5b26ec08
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "95568546"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384620"
 ---
 # <a name="azure-security-baseline-for-azure-information-protection"></a>Azure-Sicherheitsbaseline für Azure Information Protection
 
@@ -50,11 +50,11 @@ Microsoft verwaltet die Adresspräfixe, die mit dem Diensttag abgedeckt werden, 
 
 Überprüfen Sie das sichere Ergebnis der Azure AD Identität, um Sie bei der Beurteilung Ihres Identitäts Sicherheitsstatus in Bezug auf die Empfehlungen von Microsoft zu unterstützen. Verwenden Sie die Bewertung, um zu beurteilen, wie gut Ihre Konfiguration den Empfehlungen zu bewährten Methoden entspricht, und um Ihren Sicherheitsstatus zu verbessern.
 
-Standardisieren Sie Azure AD, um die Identitäts-und Zugriffs Verwaltung Ihrer Organisation in zu steuern:
+Konfigurieren Sie Azure AD als Standardmethode für die Identitäts- und Zugriffsverwaltung Ihrer Organisation in folgenden Ressourcen:
 
 - Microsoft Cloud Ressourcen, wie z. b. die Azure-Portal, Azure Storage, Azure Virtual Machines (Linux und Windows), Azure Key Vault, Platform-as-a-Service (PAS) und Software-as-a-Service (SaaS)-Anwendungen
 
-- Die Ressourcen Ihrer Organisation, z. b. Anwendungen in Azure oder Ihre Unternehmensnetzwerk Ressourcen
+- Die Ressourcen Ihrer Organisation, z. B. Anwendungen in Azure oder Ihre Unternehmensnetzwerkressourcen
 
 Azure Ad unterstützt externe Identitäten, damit sich Benutzer ohne Microsoft-Konto bei Ihren Anwendungen und Ressourcen mit ihren nicht-Microsoft-Konten anmelden können.
 
@@ -64,7 +64,7 @@ Azure Ad unterstützt externe Identitäten, damit sich Benutzer ohne Microsoft-K
 
 - [Verwenden externer Identitätsanbieter für eine Anwendung](https://docs.microsoft.com/azure/active-directory/b2b/identity-providers)
 
-- [Was ist die sichere Bewertung der Identität in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
+- [Was ist der Identity Secure Score in Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/fundamentals/identity-secure-score)
 
 **Azure Security Center-Überwachung**: Nicht verfügbar
 
@@ -84,7 +84,7 @@ Azure Ad unterstützt externe Identitäten, damit sich Benutzer ohne Microsoft-K
 
 **Leitfaden**: Azure Information Protection ist in Azure Active Directory (Azure AD) integriert, bei dem es sich um den Standard Dienst für die Identitäts-und Zugriffs Verwaltung von Azure handelt. 
 
-Azure Information Protection Azure AD verwendet, um die Identitäts-und Zugriffs Verwaltung für Azure-Ressourcen, cloudanwendungen und lokale Anwendungen bereitzustellen. Dies umfasst auch Unternehmens Identitäten wie z. b. Mitarbeiter sowie externe Identitäten wie Partner, Lieferanten und Lieferanten. Dies ermöglicht Single Sign-on, den Zugriff auf die Daten und Ressourcen Ihrer Organisation lokal und in der Cloud zu verwalten und zu sichern. Verbinden Sie alle Benutzer, Anwendungen und Geräte mit dem Azure AD, um nahtlose, sichere Zugriffsrechte und bessere Transparenz und Kontrolle zu erhalten.
+Azure Information Protection Azure AD verwendet, um die Identitäts-und Zugriffs Verwaltung für Azure-Ressourcen, cloudanwendungen und lokale Anwendungen bereitzustellen. Dies umfasst sowohl Unternehmensidentitäten wie Mitarbeiter als auch externe Identitäten wie Partner, Anbieter und Zulieferer. Auf diese Weise kann der Zugriff auf die Daten und Ressourcen Ihrer Organisation lokal und in der Cloud über das Feature des einmaligen Anmeldens (Single Sign-On, SSO) verwaltet und geschützt werden. Verbinden Sie all Ihre Benutzer, Anwendungen und Geräte mit Azure AD, um einen nahtlosen, sicheren Zugriff sowie mehr Transparenz und Kontrolle zu ermöglichen.
 
 - [Anmelden bei Azure Information Protection mit Azure Active Directory](https://docs.microsoft.com/azure/information-protection/requirements)
 
@@ -116,13 +116,13 @@ Weitere Anleitungen zu Azure AD:
 
 - Anmeldung: der Anmelde Bericht enthält Informationen zur Verwendung verwalteter Anwendungen und Benutzer Anmelde Aktivitäten.
 - Überwachungsprotokolle: Ermöglichen die Nachverfolgung sämtlicher Änderungen, die von verschiedenen Features in Azure AD vorgenommen wurden. Beispiele für Überwachungs Protokolle sind Änderungen, die an Ressourcen innerhalb Azure AD vorgenommen werden, z. b. das Hinzufügen oder Entfernen von Benutzern, apps, Gruppen, Rollen und Richtlinien.
-- Riskante Anmeldung: eine riskante Anmeldung ist ein Indikator für einen Anmeldeversuch, der möglicherweise von einem Benutzer durchgeführt wurde, der nicht der legitime Besitzer eines Benutzerkontos ist.
+- Riskante Anmeldungen: Eine riskante Anmeldung ist ein Hinweis auf einen Anmeldeversuch einer Person, die nicht der rechtmäßige Besitzer eines Benutzerkontos ist.
 - Benutzer mit Risikomarkierung: Ein Benutzer mit Risikomarkierung ist ein Indikator für ein ggf. kompromittiertes Benutzerkonto.
-Diese Datenquellen können in Azure Monitor, Azure Sentinel oder Siem-Systeme von Drittanbietern integriert werden.
+Diese Datenquellen können mit Azure Monitor, Azure Sentinel oder SIEM-Systemen von Drittanbietern integriert werden.
 
 Azure Security Center können auch Warnungen für bestimmte verdächtige Aktivitäten, z. b. eine übermäßige Anzahl fehlgeschlagener Authentifizierungs Versuche, oder für veraltete Konten im Abonnement angeben.
 
-Bei Azure Advanced Threat Protection (ATP) handelt es sich um eine Sicherheitslösung, die Active Directory Signale zum erkennen, erkennen und untersuchen von erweiterten Bedrohungen, kompromittierten Identitäten und böswilligen Insider Aktionen verwenden kann.
+Azure Advanced Threat Protection (ATP) ist eine Sicherheitslösung, die Active Directory-Signale nutzen kann, um komplexe Bedrohungen, potenziell gefährdete Identitäten und schädliche Aktionen von Insidern zu identifizieren, zu erkennen und zu untersuchen.
 
 - [Berichte zu Überwachungsaktivitäten in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -196,13 +196,13 @@ Azure Information Protection enthält eine Rolle auf Administratorebene in Azure
 
 Verwenden Sie Azure AD, um Ressourcen zu verwalten, Benutzerkonten zu überprüfen und auf Zuweisungen regelmäßig zuzugreifen, um sicherzustellen, dass die Konten und deren Zugriff gültig sind. Führen Sie Azure AD Zugriffs Überprüfungen aus, um Gruppenmitgliedschaften, den Zugriff auf Unternehmensanwendungen und Rollenzuweisungen zu überprüfen. Ermitteln veralteter Konten mit Azure AD-Berichterstattung. Die Privileged Identity Management Features von Azure AD können zum Erstellen eines Zugriffs Überprüfungs Berichts Workflows verwendet werden, um den Überprüfungsprozess zu vereinfachen.
 
-Außerdem kann Azure Privileged Identity Management auch so konfiguriert werden, dass eine Warnung ausgegeben wird, wenn eine übermäßige Anzahl von Administrator Konten erstellt wird, und um Administrator Konten zu identifizieren, die veraltet oder nicht ordnungsgemäß konfiguriert sind. Beachten Sie, dass einige Azure-Dienste lokale Benutzer und Rollen unterstützen, die nicht über Azure AD verwaltet werden. Diese Benutzer müssen separat von Kunden verwaltet werden.
+Darüber hinaus kann Azure Privileged Identity Management auch so konfiguriert werden, dass eine Warnung gesendet wird, wenn übermäßig viele Administratorkonten erstellt werden, und veraltete oder falsch konfigurierte Administratorkonten ermittelt werden. Beachten Sie, dass einige Azure-Dienste lokale Benutzer und Rollen unterstützen, die nicht über Azure AD verwaltet werden. Kunden müssen diese Benutzer separat verwalten.
 
 - [Azure Information Protection Administrator Rolle](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator)
 
 - [Aktionen Azure Information Protection Administrator durchführen kann](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#azure-information-protection-administrator-permissions)
 
-- [Erstellen einer Zugriffs Überprüfung für Azure-Ressourcen Rollen in Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
+- [Erstellen einer Zugriffsüberprüfung für Azure-Ressourcenrollen in Privileged Identity Management (PIM)](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-resource-roles-start-access-review) 
 
 - [Was sind Azure AD-Zugriffsüberprüfungen?](https://docs.microsoft.com/azure/active-directory/governance/access-reviews-overvie)
 
@@ -332,7 +332,7 @@ Azure Information Protection ist eine cloudbasierte Lösung, mit der Organisatio
 
 ### <a name="am-1-ensure-security-team-has-visibility-into-risks-for-assets"></a>AM-1: Sicherstellen, dass das Sicherheitsteam Risiken für Ressourcen einsehen kann
 
-**Leitfaden**: Stellen Sie sicher, dass Sicherheitsteams Sicherheits Leseberechtigungen in Ihrem Azure-Mandanten und-Abonnements erteilt werden, damit Sie mit Azure Security Center Sicherheitsrisiken überwachen können. 
+**Leitfaden**: Stellen Sie sicher, dass Sicherheitsteams die Berechtigungen „Sicherheitsleseberechtigter“ in Ihrem Azure-Mandanten und Ihren Abonnements erhalten, damit sie mit Azure Security Center Sicherheitsrisiken überwachen können. 
 
 Abhängig davon, wie die Verantwortungsbereiche des Sicherheitsteams strukturiert sind, kann die Überwachung auf Sicherheitsrisiken unter die Verantwortung eines zentralen Sicherheitsteams oder eines lokalen Teams fallen. Aus diesem Grund müssen Sicherheitserkenntnisse und -risiken immer innerhalb einer Organisation zentral aggregiert werden. 
 
@@ -386,7 +386,7 @@ Azure Security Center können auch Warnungen für bestimmte verdächtige Aktivit
 
 - [Bedrohungsschutz in Azure Security Center](https://docs.microsoft.com/azure/security-center/threat-protection)
 
-**Azure Security Center-Überwachung**: Nicht verfügbar
+**Azure Security Center-Überwachung:** Nicht verfügbar
 
 **Verantwortlichkeit**: Kunde
 
@@ -472,11 +472,11 @@ Verwenden Sie das Feature Verwendungs-und geschätzte Kosten Azure Monitor Proto
 
 ### <a name="ir-3-detection-and-analysis--create-incidents-based-on-high-quality-alerts"></a>IR-3: Erkennung und Analyse – Erstellen von Vorfällen basierend auf Warnungen mit hoher Qualität
 
-**Leitfaden**: Stellen Sie sicher, dass Sie über einen Prozess zum Erstellen hochwertiger Warnungen und zur Messung der Qualität von Warnungen verfügen. Auf diese Weise können Sie Lehren aus vergangenen Vorfällen ziehen und Warnungen für Analysten priorisieren, damit diese keine Zeit mit falsch-positiven Ergebnissen verschwenden. 
+**Leitfaden**: Stellen Sie sicher, dass Sie über einen Prozess zum Erstellen hochwertiger Warnungen und zum Messen der Qualität von Warnungen verfügen. Auf diese Weise können Sie Lehren aus vergangenen Vorfällen ziehen und Warnungen für Analysten priorisieren, damit diese keine Zeit mit falsch-positiven Ergebnissen verschwenden. 
 
-Hochwertige Warnungen können auf der Grundlage von Erfahrungen aus früheren Vorfällen, überprüften communityquellen und Tools erstellt werden, die zum Generieren und Bereinigen von Warnungen durch das Zusammenführen und korrelieren verschiedener Signalquellen entwickelt wurden. 
+Qualitativ hochwertige Warnungen können auf der Grundlage von Erfahrungen aus früheren Vorfällen, validierten Communityquellen und Tools zur Generierung und Bereinigung von Warnmeldungen durch Verschmelzung und Korrelation verschiedener Signalquellen erstellt werden. 
 
-Azure Security Center bietet hochwertige Warnungen über viele Azure-Ressourcen hinweg. Sie können den ASC-Datenconnector verwenden, um die Warnungen an Azure Sentinel zu streamen. Mit Azure Sentinel können Sie erweiterte Warnregeln erstellen, um Vorfälle automatisch für eine Untersuchung zu generieren. 
+Azure Security Center bietet qualitativ hochwertige Warnungen für viele Azure-Ressourcen. Sie können den ASC-Datenconnector verwenden, um die Warnungen an Azure Sentinel zu streamen. Mit Azure Sentinel können Sie erweiterte Warnregeln erstellen, um Vorfälle automatisch für eine Untersuchung zu generieren. 
 
 Exportieren Sie Ihre Azure Security Center-Warnungen und -Empfehlungen über das Exportfeature, um Risiken für Azure-Ressourcen zu ermitteln. Exportieren Sie Warnungen und Empfehlungen entweder manuell oder fortlaufend, kontinuierlich.
 
@@ -500,7 +500,7 @@ Zu den zu untersuchenden Datenquellen gehören die zentralisierten Protokollieru
 
     - Verwenden Sie die Momentaufnahmenfunktion des virtuellen Azure-Computers, um eine Momentaufnahme der Festplatte des laufenden Systems zu erstellen. 
 
-    - Verwenden Sie die native Speicherabbildfunktion des Betriebssystems, um eine Momentaufnahme des Arbeitsspeichers des laufenden Systems zu erstellen.
+    - Verwenden Sie die integrierte Speicher Abbild Funktion des Betriebssystems, um eine Momentaufnahme des Arbeitsspeichers des laufenden Systems zu erstellen.
 
     - Verwenden Sie das Momentaufnahmenfeature der Azure-Dienste oder die Funktion Ihrer Software, um Momentaufnahmen der laufenden Systeme zu erstellen.
 
@@ -605,7 +605,7 @@ Befolgen Sie die Einsatzregeln für Penetrationstests für die Microsoft Cloud, 
 
 ## <a name="backup-and-recovery"></a>Sicherung und Wiederherstellung
 
-*Weitere Informationen finden Sie unter [Azure Security Benchmark: Sicherung und Wiederherstellung](/azure/security/benchmarks/security-controls-v2-backup-recovery).*
+*Weitere Informationen finden Sie unter [Azure-Sicherheitsvergleichstest: Sicherung und Wiederherstellung](/azure/security/benchmarks/security-controls-v2-backup-recovery).*
 
 ### <a name="br-4-mitigate-risk-of-lost-keys"></a>BR-4: Minimieren der Auswirkungen verlorener Schlüssel
 
@@ -638,7 +638,7 @@ Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für
 
 -   Erforderliche Zugriffssteuerungsstrategie in Übereinstimmung mit der Organisationsdatenklassifizierung
 
--   Verwendung von nativen Azure-und Datenschutzfunktionen von Drittanbietern
+-   Verwendung von integrierten Azure-Funktionen und Datenschutzfunktionen von Drittanbietern
 
 -   Datenverschlüsselungsanforderungen für Anwendungsfälle während der Übertragung und für ruhende Anwendungsfälle
 
@@ -765,7 +765,7 @@ Weitere Informationen finden Sie in den folgenden Referenzen:
 
 ### <a name="gs-7-define-logging-and-threat-response-strategy"></a>GS-7: Definieren einer Strategie für Protokollierung und Reaktion auf Bedrohungen
 
-**Leitfaden**: Richten Sie eine Strategie für Protokollierung und Reaktion auf Bedrohungen zur schnellen Erkennung und Behebung von Bedrohungen bei gleichzeitiger Erfüllung von Complianceanforderungen ein. Priorisieren Sie Analysten mit qualitativ hochwertigen Warnungen und nahtlosen Erfahrungen, damit Sie sich auf Bedrohungen und nicht auf die Integration und manuelle Schritte konzentrieren können. 
+**Leitfaden**: Richten Sie eine Strategie für Protokollierung und Reaktion auf Bedrohungen zur schnellen Erkennung und Behebung von Bedrohungen bei gleichzeitiger Erfüllung von Complianceanforderungen ein. Priorisieren Sie die Bereitstellung wertvoller Warnungen und nahtloser Funktionen für Analysten, damit sie sich auf Bedrohungen konzentrieren können, anstatt mit der Integration und der Ausführung manueller Schritte. 
 
 Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für die folgenden Elemente umfassen: 
 
@@ -775,11 +775,11 @@ Diese Strategie sollte dokumentierte Anleitungen, Richtlinien und Standards für
 
 -   Erfassung und Aufbewahrung von Protokollen zur Unterstützung von Bedrohungserkennung, Reaktion auf Vorfälle und Complianceanforderungen
 
--   Zentralisierte Sichtbarkeit von und Korrelationsinformationen zu Bedrohungen unter Verwendung von SIEM, nativen Azure-Funktionen und anderen Quellen 
+-   Zentralisierte Sichtbarkeit von und Korrelations Informationen zu Bedrohungen, Verwendung von Siem, integrierten Azure-Funktionen und anderen Quellen 
 
 -   Kommunikations- und Benachrichtigungsplan mit Ihren Kunden, Lieferanten und öffentlichen Interessengruppen
 
--   Verwendung von nativen Azure-Plattformen und Plattformen von Drittanbietern für die Behandlung von Vorfällen, wie z. B. Protokollierung und Bedrohungserkennung, Forensik sowie Reduzierung und Bekämpfung von Angriffen
+-   Verwendung von integrierten Azure-und Drittanbieter Plattformen für die Behandlung von Vorfällen, wie z. b. Protokollierung und Bedrohungserkennung, Forensik sowie Behebung und Beseitigung von Angriffen
 
 -   Prozesse für den Umgang mit Vorfällen und Aktivitäten nach Vorfällen, wie z. B. Erkenntnisse und Beweissicherung
 

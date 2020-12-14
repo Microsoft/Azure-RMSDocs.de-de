@@ -1,34 +1,34 @@
 ---
 title: Verwenden von PowerShell mit dem Azure Information Protection Unified Bezeichnung-Client
 description: Anweisungen und Informationen für Administratoren zum Verwalten des Azure Information Protection Unified Bezeichnung-Clients mithilfe von PowerShell.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2133259809b87a66fe5e63e10e1273a0412208b7
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 38e2156b0102c857d13b99233a5bad2331662606
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568054"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385487"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-powershell.md). *
 
 Wenn Sie den Azure Information Protection Unified Bezeichnung-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection** installiert, das über Cmdlets für die Bezeichnung verfügt. Beispiel:
+Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection** installiert, das über Cmdlets für die Bezeichnung verfügt. Zum Beispiel:
 
 |Cmdlet für die Bezeichnung|Beispielverwendung|
 |----------------|---------------|
@@ -36,6 +36,7 @@ Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection** insta
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Überprüfen Sie bei einem freigegebenen Ordner die Dateiinhalte, und versehen Sie Dateien ohne Bezeichnung automatisch gemäß den von Ihnen festgelegten Bedingungen mit Bezeichnungen.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Für einen freigegebenen Ordner wird eine bestimmte Bezeichnung auf alle Dateien ohne Bezeichnung angewendet.|
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
+| | |
 
 Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Protection** und fügt diesen Ordner der Systemvariablen **PSModulePath** hinzu. Die DLL-Datei für dieses Modul lautet **AIP.dll**.
 
@@ -54,13 +55,11 @@ Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Prot
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Voraussetzungen für die Verwendung des Moduls "azureinformationprotection"
 
-Zusätzlich zu den Voraussetzungen für die Installation des Moduls "azureinformationprotection" müssen bei der Verwendung der Bezeichnungs-Cmdlets für Azure Information Protection zusätzliche Voraussetzungen erfüllt werden:
+Zusätzlich zu den Voraussetzungen für die Installation des Moduls " **azureinformationprotection** " müssen bei der Verwendung der Bezeichnungs-Cmdlets für Azure Information Protection zusätzliche Voraussetzungen erfüllt werden:
 
 1. Der Azure Rights Management-Dienst muss aktiviert werden.
 
-2. So entfernen Sie den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos: 
-
-    - Die Administratorfunktion muss für Ihre Organisation aktiviert werden. Zudem muss Ihr Konto als Administrator für Azure Rights Management konfiguriert sein.
+2. Um den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos zu entfernen, muss die Administrator Funktion für Ihre Organisation aktiviert sein, und Ihr Konto muss als Administrator für Azure Rights Management konfiguriert werden.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert werden.
 
@@ -150,7 +149,7 @@ Set-AIPAuthentication eine APP-Registrierung für die Parameter " *AppID* " und 
     
     Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
 
-9. Wählen Sie in der Rand **Manage** Leiste  >  **API-Berechtigungen** verwalten aus.
+9. Wählen Sie in der Rand Leiste  >  **API-Berechtigungen** verwalten aus.
 
 10. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung hinzufügen** aus.
 
@@ -196,7 +195,7 @@ Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlo
 
     Sie werden zur Angabe des Kennworts für dieses Konto aufgefordert.
 
-2. Führen Sie das Set-AIPAuthentication-Cmdlet mit dem *onbehalfof* -Parameter aus, und geben Sie als Wert die soeben erstellte Variable als Wert an. Geben Sie außerdem Ihre APP-Registrierungs Werte, Ihre Mandanten-ID und den Namen des Delegierten Benutzerkontos in Azure AD an. Beispiel:
+2. Führen Sie das Set-AIPAuthentication-Cmdlet mit dem *onbehalfof* -Parameter aus, und geben Sie als Wert die soeben erstellte Variable als Wert an. Geben Sie außerdem Ihre APP-Registrierungs Werte, Ihre Mandanten-ID und den Namen des Delegierten Benutzerkontos in Azure AD an. Zum Beispiel:
     
     ```PowerShell
     Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
@@ -206,7 +205,7 @@ Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlo
 > Wenn der Computer nicht über Internet Zugriff verfügen kann, ist es nicht erforderlich, die app in Azure AD zu erstellen und Set-aipauthentication auszuführen. Befolgen Sie stattdessen die Anweisungen für nicht [verbundene Computer](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen, geben Sie ein `Get-Help <cmdlet name> -online` . Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen, geben Sie ein `Get-Help <cmdlet name> -online` . Zum Beispiel: 
 
 ```PowerShell
 Get-Help Set-AIPFileLabel -online

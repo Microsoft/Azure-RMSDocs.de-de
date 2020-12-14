@@ -1,11 +1,11 @@
 ---
 title: Azure RMS-Schutz mit Windows Server FCI – AIP
 description: Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit dem Azure Information Protection-Client, um den Ressourcen-Manager für Dateiserver und die Dateiklassifizierungsinfrastruktur zu konfigurieren.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 1/13/2020
-ms.topic: conceptual
+ms.date: 11/12/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
@@ -13,18 +13,21 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 127682099f082d81c93e5951b149033a96d9504b
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: e775464efbff26cf6f425bce9d395c5bffc0cce4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385198"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2 *
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischer Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Dieser Artikel enthält Anweisungen und ein Skript zur Verwendung mit dem Azure Information Protection-Client und PowerShell zum Konfigurieren des Ressourcen-Managers für Dateiserver und der Dateiklassifizierungsinfrastruktur (FCI).
 
@@ -38,6 +41,7 @@ Mit dieser Lösung können Sie automatisch alle Dateien in einem Ordner auf eine
 Die folgenden Anleitungen gelten für Windows Server 2012 R2 oder Windows Server 2012. Wenn Sie andere unterstützte Versionen von Windows ausführen, müssen Sie möglicherweise einige Schritte aufgrund der Unterschiede zwischen der Version Ihres Betriebssystems und der in diesem Artikel beschriebenen Version anpassen.
 
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Voraussetzungen für Azure Rights Management-Schutz mit Windows Server FCI
+
 Voraussetzungen für diese Anweisungen:
 
 - Auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen:
@@ -296,6 +300,7 @@ Wenn die Änderungen an der Vorlage wichtig genug sind, um die Dateien auf dem D
 Führen Sie diese Zeile auch im Skript aus, wenn Sie eine neue Vorlage veröffentlichen, die Sie für die Dateiklassifizierungsinfrastruktur verwenden möchten, und ändern Sie die Vorlagen-ID in der Argumentzeile für die benutzerdefinierte Dateiverwaltungsaufgabe.
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Ändern der Anweisungen zum selektiven Schutz von Dateien
+
 Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.
 
 Verwenden Sie zum Durchführen dieser Änderung eine der integrierten Klassifizierungseigenschaften (z.B. **personenbezogene Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung** und die **Daten mit persönlich identifizierbaren Informationen**-Eigenschaft mit dem Wert **Hoch** auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
@@ -304,4 +309,4 @@ Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleic
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
+Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).

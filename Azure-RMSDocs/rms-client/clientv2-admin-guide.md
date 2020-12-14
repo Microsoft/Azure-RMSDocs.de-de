@@ -11,24 +11,24 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2af1d3fad0e831032d8c7f6aa2a312cdfb7a9558
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 3514e97bb454c599fef40660d952f201e18323c2
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385453"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Anweisungen für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide.md). *
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified Bezeichnung-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie weitere technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzerhandbuch](clientv2-user-guide.md)zu finden. 
 
-Beispiel:
+Zum Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -50,7 +50,7 @@ Der Azure Information Protection Unified Bezeichnung-Client umfasst Folgendes:
 
 - Kontextmenüoptionen für den Windows-Datei-Explorer für Benutzer, um Klassifizierungsbezeichnungen und den entsprechenden Schutz auf Dateien anzuwenden.
 
-- Ein Viewer zum Anzeigen geschützter Dateien, wenn diese von einer systemeigenen Anwendung nicht geöffnet werden können.
+- Ein Viewer zum Anzeigen geschützter Dateien, wenn diese von einer integrierten Anwendung nicht geöffnet werden können.
 
 - Ein PowerShell-Modul zum Ermitteln sensibler Informationen in Dateien und zum Anwenden oder Entfernen von Klassifizierungs Bezeichnungen und des Schutzes von Dateien. 
     
@@ -75,7 +75,7 @@ Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn S
 
 - Sie möchten einen Dienst testen, der lokal gespeicherte Dateien entdeckt, klassifiziert (und optional schützt).
 
-- Sie möchten geschützte Dokumente anzeigen, wenn eine systemeigene Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
+- Sie möchten geschützte Dokumente anzeigen, wenn eine integrierte Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
 
 Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue **Vertraulichkeits** Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
 
@@ -114,29 +114,29 @@ Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die de
 
 - Sofern die Dateien nicht gesperrt sind, löscht diese Aktion alle Dateien in den folgenden Speicherorten. Diese Dateien umfassen Client Zertifikate, Schutz Vorlagen, Vertraulichkeits Bezeichnungen und Richtlinien aus Ihrem Bezeichnungs Verwaltungs Center und die zwischengespeicherten Benutzer Anmelde Informationen. Die Clientprotokolldateien werden nicht gelöscht.
     
-    - %LocalAppData%\Microsoft\DRM
+    - **%LocalAppData%\Microsoft\DRM**
     
-    - %LocalAppData%\Microsoft\MSIPC
+    - **Ordner%LocalAppData%\microsoft\msipc**
     
-    - %LocalAppData%\microsoft\msip\mip\\*\<ProcessName.exe\>*
+    - **%LocalAppData%\microsoft\msip\mip\\*\<ProcessName.exe\>***
     
-    - %LocalAppData%\microsoft\msip\appdetails
+    - **%LocalAppData%\microsoft\msip\appdetails**
     
-    - %LocalAppData%\Microsoft\MSIP\TokenCache
+    - **%LocalAppData%\Microsoft\MSIP\TokenCache**
 
 - Die folgenden Registrierungsschlüssel und -einstellungen werden gelöscht. Wenn die Einstellungen für einen dieser Registrierungsschlüssel benutzerdefinierte Werte aufweisen, müssen diese nach dem Zurücksetzen des Clients erneut konfiguriert werden.
     
     In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM**
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
+    - **HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC**
 
 - Der derzeit angemeldete Benutzer wird abgemeldet.
 
@@ -158,7 +158,7 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Ein auf ein Objekt angewendeter
 
 - Online Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung-Benutzerhandbuch](clientv2-user-guide.md)
 
@@ -170,20 +170,20 @@ Der Scanner für den Unified-Bezeichnungs Client ist allgemein verfügbar. Insta
 
 Wenn Sie den Scanner zum ersten Mal auf einem Computer installieren, müssen Sie diesen Client herunterladen und installieren, und befolgen Sie dann die Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md).
 
-Wenn Sie die Überprüfung vom Azure Information Protection Client (klassisch) oder einer früheren Version des Unified-Bezeichnungs Clients aktualisieren, finden Sie entsprechende Anweisungen im Abschnitt [Aktualisieren des Azure Information Protection Scanners](#upgrading-the-azure-information-protection-scanner) .
+Wenn Sie die Überprüfung vom Azure Information Protection klassischen Client oder einer früheren Version des Unified-Bezeichnungs Clients aktualisieren, finden Sie entsprechende Anweisungen im Abschnitt [Aktualisieren der Azure Information Protection Scanner](#upgrading-the-azure-information-protection-scanner) .
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Aktualisieren und warten des Azure Information Protection Unified-Bezeichnungs Clients
 
 > [!NOTE]
-> Der Azure Information Protection Unified Bezeichnung-Client unterstützt das Upgrade des Azure Information Protection-Clients (klassisch) sowie das Upgrade von früheren Versionen des Azure Information Protection Unified-Bezeichnungs Clients.
+> Der Azure Information Protection Unified-Bezeichnungs Client unterstützt das Aktualisieren des klassischen Azure Information Protection-Clients sowie das Upgrade von früheren Versionen des Azure Information Protection Unified Bezeichnung-Clients.
 
 Das Azure Information Protection-Team aktualisiert den Azure Information Protection Unified-Bezeichnungs Client regelmäßig auf neue Funktionen und Korrekturen. Ankündigungen werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) des Teams veröffentlicht.
 
 Wenn Sie Windows Update verwenden, aktualisiert der Azure Information Protection Unified Bezeichnung-Client automatisch die allgemeine Verfügbarkeits Version dieses Clients, unabhängig davon, wie der-Client installiert wurde. Neue Clientreleases werden wenige Wochen nach der Release im Katalog veröffentlicht.
 
-Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) herunterladen. Installieren Sie dann die neue Version, um ein Upgrade des Clients auszuführen. Sie müssen diese Methode verwenden, um die Vorschau Versionen zu aktualisieren, und wenn Sie ein Upgrade vom Azure Information Protection Client (klassisch) durchführen.
+Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Version aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) herunterladen. Installieren Sie dann die neue Version, um ein Upgrade des Clients auszuführen. Sie müssen diese Methode verwenden, um die Vorschau Versionen zu aktualisieren, und wenn Sie ein Upgrade vom Azure Information Protection klassischen Client durchführen.
 
-Wenn Sie ein Upgrade vom Azure Information Protection-Client (klassisch) unter Windows 7 ausführen, werden alle Office-Anwendungen während des Client Upgrades automatisch neu gestartet. Dieser automatische Neustart gilt nicht für spätere Betriebssysteme oder, wenn Sie ein Upgrade von einer älteren Version des Unified Bezeichnung-Clients durchführen.
+Wenn Sie ein Upgrade vom Azure Information Protection klassischen Client unter Windows 7 ausführen, werden alle Office-Anwendungen während des Client Upgrades automatisch neu gestartet. Dieser automatische Neustart gilt nicht für spätere Betriebssysteme oder, wenn Sie ein Upgrade von einer älteren Version des Unified Bezeichnung-Clients durchführen.
 
 Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Angenommen, Sie haben eine Vorschauversion zum Testen installiert und müssen nun zur aktuellen Version der allgemeinen Verfügbarkeit zurückkehren.
 
@@ -191,7 +191,7 @@ Verwenden Sie den [Versions releaseverlauf und die Unterstützungs Richtlinie](u
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Upgrade der Azure Information Protection-Überprüfung
 
-Anweisungen zum Aktualisieren des Scanners sind davon abhängig, ob Sie ein Upgrade von einer früheren Version des Scanners vom Azure Information Protection Unified-Bezeichnungs Client oder vom Azure Information Protection-Client (klassisch) durchführen.
+Anweisungen zum Aktualisieren des Scanners sind davon abhängig, ob Sie ein Upgrade von einer früheren Version des Scanners vom Azure Information Protection Unified-Bezeichnungs Client oder vom klassischen Azure Information Protection-Client durchführen.
 
 #### <a name="to-upgrade-the-scanner-from-an-earlier-version-of-the-unified-labeling-client"></a>So führen Sie ein Upgrade des Scanners von einer früheren Version des Unified-Bezeichnungs Clients durch
 
@@ -207,17 +207,17 @@ Sie können jetzt die restlichen Anweisungen unter Bereitstellen [des Azure Info
 
 #### <a name="to-upgrade-the-scanner-from-the-classic-client"></a>So führen Sie ein Upgrade des Scanners vom klassischen Client aus
 
-Wenn Sie derzeit den Azure Information Protection Scanner vom Azure Information Protection-Client (klassisch) verwenden, können Sie ihn aktualisieren, um vertrauliche Informationstypen und Vertraulichkeits Bezeichnungen zu verwenden, die aus dem Office 365 Security & Compliance Center (oder dem Microsoft 365 Security Center oder dem Microsoft 365 Compliance Center) veröffentlicht werden.
+Wenn Sie derzeit den Azure Information Protection Scanner vom klassischen Azure Information Protection-Client verwenden, können Sie ein Upgrade durchführen, um vertrauliche Informationstypen und Vertraulichkeits Bezeichnungen zu verwenden, die aus dem Office 365 Security & Compliance Center (oder dem Microsoft 365 Security Center oder dem Microsoft 365 Compliance Center) veröffentlicht werden.
 
 Das Upgrade des Scanners ist von der Version des klassischen Clients abhängig, den Sie zurzeit ausführen:
 
-- [Upgrade von Version 1.48.204.0 und höheren Versionen](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+- [Upgrade von Version 1.48.204.0 und höheren Versionen](#upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client)
 
-- [Upgrade von früheren Versionen als 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+- [Upgrade von früheren Versionen als 1.48.204.0](#upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040)
 
 Beim Upgrade wird eine neue Datenbank mit dem Namen " **AIPScannerUL_ \<profile_name>**" erstellt, und die vorherige Überprüfungs Datenbank wird für den Fall beibehalten, dass Sie für die vorherige Version benötigt wird. Wenn Sie sicher sind, dass Sie die vorherige Scanner-Datenbank nicht benötigen, können Sie Sie löschen. Da beim Upgrade eine neue Datenbank erstellt wird, werden bei der erstmaligen Ausführung der Überprüfung alle Dateien neu erstellt.
 
-##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Upgrade von der Azure Information Protection Client (klassisch) Version 1.48.204.0 und höheren Versionen dieses Clients
+##### <a name="upgrade-from-the-azure-information-protection-classic-client-version-1482040-and-later-versions-of-this-client"></a>Aktualisieren von der Azure Information Protection klassischen Client Version 1.48.204.0 und höheren Versionen dieses Clients
 
 Wenn Sie den Scanner mithilfe der Vorschauversion des Unified-Bezeichnungs Clients aktualisiert haben, müssen Sie diese Anweisungen nicht erneut ausführen.
 
@@ -233,7 +233,7 @@ Wenn Sie den Scanner mithilfe der Vorschauversion des Unified-Bezeichnungs Clien
 
 Sie können jetzt die restlichen Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md)verwenden, sodass Sie den Schritt zum Installieren des Scanners weglassen. Da der Scanner bereits installiert ist, gibt es keinen Grund, ihn erneut zu installieren.
 
-##### <a name="upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040"></a>Upgrade von den Azure Information Protection-Client Versionen (klassisch) vor 1.48.204.0
+##### <a name="upgrade-from-the-azure-information-protection-classic-client-versions-earlier-than-1482040"></a>Upgrade von der Azure Information Protection klassischen Client Versionen vor 1.48.204.0
 
 > [!IMPORTANT]
 > Installieren Sie bei einem Smooth-Upgradepfad nicht den Azure Information Protection Unified-Bezeichnungs Client auf dem Computer, auf dem die Überprüfung ausgeführt wird, als ersten Schritt zum Aktualisieren der Überprüfung. Verwenden Sie stattdessen die folgenden Upgradeanweisungen.

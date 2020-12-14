@@ -12,19 +12,21 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 450cf34997f676e1033856e14adfc3e792fb1e04
-ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "95568522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384195"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Bezeichnung, Klassifizierung und Schutz der Azure Information Protection (AIP)
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> ***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client und klassischer Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection (AIP) ist eine cloudbasierte Lösung, die Organisationen das Klassifizieren und Schützen von Dokumenten und E-Mails durch Anwendung von Bezeichnungen ermöglicht. 
 
@@ -42,17 +44,17 @@ Bezeichnungen können Ihre Dokumente [klassifizieren](#how-labels-apply-classifi
 Das bezeichnen ihres Inhalts mit AIP umfasst Folgendes:
 
 - Die **Klassifizierung**, die unabhängig davon erkannt werden kann, wo die Daten gespeichert oder von wem sie freigegeben werden
-- **Optische Kennzeichnungen**, zum Beispiel Kopfzeilen, Fußzeilen oder Wasserzeichen
-- **Metadaten**, die Dateien und E-Mail-Headern als Klartext hinzugefügt werden Dieser Klartextmetadaten stellen sicher, dass andere Dienste die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können.
+- **Visuelle Kennzeichnungen**, z. b. Kopfzeilen, Fußzeilen oder Wasserzeichen.
+- **Metadaten**, in Klartext zu Dateien und e-Mail-Headern hinzugefügt. Dieser Klartextmetadaten stellen sicher, dass andere Dienste die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können.
 
-Auf der folgenden Abbildung hat die Bezeichnung z. B. eine E-Mail-Nachricht als *Allgemein* klassifiziert, wobei der [Client für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) verwendet wurde:
+In der folgenden Abbildung hat die Bezeichnung z. b. eine e-Mail-Nachricht als *Allgemein* klassifiziert:
 
 :::image type="content" source="media/example-email-footerv2.png" alt-text="E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung":::
 
 In diesem Beispiel hat die Bezeichnung auch folgende Schritte durchgeführt:
 
-- **Eine Fußzeile *Vertraulichkeit: Allgemein* der E-Mail-Nachricht hinzugefügt** Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen.
-- **In E-Mail-Header eingebettete Metadaten.** Headerdaten ermöglichen es E-Mail-Diensten, die Bezeichnung zu überprüfen und theoretisch einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie außerhalb der Organisation versendet wird.
+- **Der e-Mail-Nachricht wurde eine Fußzeile mit *Sensitivität hinzugefügt: Allgemein***. Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen.
+- **Eingebettete Metadaten in den e-Mail-Headern**. Headerdaten ermöglichen es E-Mail-Diensten, die Bezeichnung zu überprüfen und theoretisch einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie außerhalb der Organisation versendet wird.
 
 Bezeichnungen können von Administratoren automatisch mithilfe von Regeln und Bedingungen, manuell von Benutzern oder mithilfe einer Kombination angewendet werden, in der Administratoren die Empfehlungen definieren, die Benutzern angezeigt werden.
 
@@ -66,8 +68,8 @@ Azure RMS verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien
 
 Für Schutzeinstellungen kann Folgendes gelten:
 
-- Sie können **Teil der Konfiguration Ihrer Bezeichnungen sein**, sodass Benutzer Dokumente und E-Mails ganz einfach durch Anwenden einer Bezeichnung klassifizieren und schützen können. 
-- Sie können von Anwendungen und Diensten **separat verwendet werden**, die zwar den Schutz unterstützen, aber keine Bezeichnungen. 
+- **Teil ihrer** Bezeichnungs Konfiguration, sodass Benutzer Dokumente und e-Mails einfach durch Anwenden einer Bezeichnung klassifizieren und schützen. 
+- Wird eigenständig von Anwendungen und Diensten **verwendet**, die den Schutz unterstützen, aber keine Bezeichnung. 
 
     Für Anwendungen und Dienste, die nur den Schutz unterstützen, werden die Schutzeinstellungen als [Rights Management-Vorlagen](#rights-management-templates) verwendet.
 
@@ -95,7 +97,7 @@ Weitere Informationen finden Sie unter [Was ist Azure Rights Management?](what-i
 
 Der AIP-Client installiert die Information Protection-Leiste in Office-Anwendungen und ermöglicht es Endbenutzern, AIP in ihre Dokumente und E-Mails zu integrieren.
 
-Verwenden Sie beispielsweise in Excel den [Client für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+Beispielsweise in Excel:
 
 ![Beispiel für die Azure Information Protection-Leiste in Excel](./media/excelproplus-infoprotect-bar.png)
 
@@ -120,7 +122,7 @@ Die Verwendung von AIP mit Exchange Online bietet den zusätzlichen Vorteil, das
 
 Das ist beispielsweise nützlich, wenn Sie vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden, oder wenn Benutzer kein Konto von Office 365 oder Azure AD besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
 
-Für dieses Szenario sind die [Funktionen der Office 365-Nachrichtenverschlüsselung](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) erforderlich. Wenn die Empfänger die geschützte E-Mail nicht in ihrem nativen E-Mail-Client öffnen können, können sie die vertraulichen Informationen mithilfe einer Einmalkennung in einem Browser lesen.
+Für dieses Szenario sind die [Funktionen der Office 365-Nachrichtenverschlüsselung](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) erforderlich. Wenn die Empfänger die geschützte e-Mail nicht in Ihrem integrierten e-Mail-Client öffnen können, können Sie eine einmalige Kennung verwenden, um die sensiblen Informationen in einem Browser zu lesen.
 
 Einem Gmail-Benutzer wird möglicherweise die folgende Aufforderung in einer empfangenen E-Mail angezeigt:
 
@@ -128,7 +130,7 @@ Einem Gmail-Benutzer wird möglicherweise die folgende Aufforderung in einer emp
 
 Für den Benutzer, der die E-Mail sendet, sind dieselben Aktionen wie für das Senden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation erforderlich. Klicken Sie dazu beispielsweise auf die Schaltfläche **Nicht weiterleiten**, die der AIP-Client dem Outlook-Menüband hinzufügen kann. 
 
-Alternativ kann die Funktion „Nicht weiterleiten“ in eine Bezeichnung integrieren werden, die Benutzer dann auswählen können, um sowohl die Klassifizierung als auch den Schutz auf diese E-Mail anzuwenden. Ein Beispiel ist der [Client für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients):
+Alternativ können Sie die Funktion **nicht weiterleiten** in eine Bezeichnung integrieren, die Benutzer auswählen können, um die Klassifizierung und den Schutz auf diese e-Mail anzuwenden. Beispiel:
 
 ![Auswählen einer Bezeichnung, für die die Option „Nicht weiterleiten“ konfiguriert ist](./media/recipients-only-label2.png)
 
@@ -153,6 +155,11 @@ Verwenden Sie eine der folgenden Methoden, um vorhandene Inhalte zu klassifizier
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Konfigurieren und testen Sie Azure Information Protection selbst mit den [Schnellstarts](quickstart-viewpolicy.md) und [Tutorials](infoprotect-quick-start-tutorial.md). 
+Mit unseren Schnellstart Anleitungen und Tutorials finden Sie Azure Information Protection für sich selbst.
+
+- [Schnellstart: Bereitstellen des Clients für einheitliche Bezeichnungen](quickstart-deploy-client.md)
+- [Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen](tutorial-install-scanner.md)
+- [Tutorial: Erkennen vertraulicher Inhalte mit dem Azure Information Protection-Scanner (AIP)](tutorial-scan-networks-and-content.md)
+- [Tutorial: Verhindern übermäßiger Freigaben in Outlook mit Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 
 Wenn Sie schon soweit sind, dass Sie diesen Dienst für Ihre Organisation bereitstellen möchten, wechseln Sie direkt zu den [Schrittanleitungen](how-to-guides.md).

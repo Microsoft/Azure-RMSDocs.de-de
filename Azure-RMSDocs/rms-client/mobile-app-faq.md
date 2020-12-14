@@ -5,23 +5,25 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 17f1efc5c5e0c01f33e638d1ef674a81b17494f8
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: bd7b94caba31ddbadf1d39754a6bb609c59aea60
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734963"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385164"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Was ist die Azure Information Protection-App für IOS oder Android?
 
-*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: Active Directory Rights Management Services [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Die Azure Information Protection-Mobile App für IOS und Android ist eine Viewer-APP, mit der Sie geschützte e-Mail-Nachrichten, PDF-Dateien, Bilder und Textdateien anzeigen können. Sie sind hilfreich, wenn ihre regulären Apps für diese Dateitypen keinen Schutz unterstützen. 
 
@@ -65,7 +67,7 @@ Nachdem Sie [das AIP-Mobile App installiert](#download-and-install-the-aip-app-f
 
     Wählen Sie **Datei freigeben über..** . aus, und wählen Sie dann **in AIP-Viewer kopieren aus.**
 
-    Beispiel:
+    Zum Beispiel:
 
     :::image type="content" source="../media/ios-share-to-aip-viewer.png" alt-text="Freigabe für AIP-Viewer in ios" border="false":::
 
@@ -89,11 +91,11 @@ Nachdem Sie [das AIP-Mobile App installiert](#download-and-install-the-aip-app-f
 
 Die mobilen AIP-Apps für IOS und Android unterstützen die folgenden Dateitypen und Umgebungen:
 
-|Anforderung  |BESCHREIBUNG  |
+|Anforderung  |Beschreibung  |
 |---------|---------|
-|**Unterstützte Betriebssystemversionen**     | Die Mindestanforderungen für mobile Betriebssysteme sind: </br>-IOS 11  </br>-Android 6,0 </br></br>**Hinweis:** Die mobilen AIP-apps werden auf Intel-CPUs nicht unterstützt.  |
-|**Unterstützte Anmelde Informationen**     | Melden Sie sich mit einer der folgenden Aktionen bei den mobilen AIP-apps an: </br></br>**Anmelde Informationen für Geschäfts-oder Schul Konto** Melden Sie sich mit den Anmelde Informationen Ihres Geschäfts-oder Schul Kontos an. Wenn Sie Fragen haben, wenden Sie sich an Ihren Administrator, um zu verstehen, ob Ihr Unternehmen lokal mit der Erweiterung für mobile Geräte AD RMS oder Azure Information Protection verwendet. </br></br>**Eine Microsoft-Konto**. Wenn Ihre persönliche e-Mail-Adresse zum Schutz der Datei verwendet wurde, melden Sie sich mit einem [Microsoft-Konto](https://signup.live.com)an. Wenn Sie sich für eine Microsoft-Konto bewerben müssen, können Sie dazu ihren eigenen Hotmail, Gmail oder jede andere e-Mail-Adresse verwenden. </br></br>**Hinweis:** Nicht alle Anwendungen können Inhalte öffnen, die mit einem Microsoft-Konto geschützt sind. Weitere Informationen finden Sie [unter Unterstützte Szenarien für das Öffnen geschützter Dokumente](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
-|**Unterstützte Dateitypen**     | Zu den unterstützten Dateitypen zählen geschützte e-Mail-Nachrichten, PDF-Dateien, Bilder und Textdateien. </br></br>Diese Dateien enthalten beispielsweise die folgenden Erweiterungen: **rpmsg,** **PDF,** **ppdf,** **pjpg,** **pjpeg,** **ptiff,** **ppng,** **ptxt,** **pxml** </br></br>Eine vollständige Liste der unterstützten Dateitypen finden Sie [im AIP-Client Administrator Handbuch](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
+|**Unterstützte Betriebssystemversionen**     | Die Mindestanforderungen für mobile Betriebssysteme sind: </br>-IOS 11  </br>-Android 6,0 </br></br>**Hinweis**: die mobilen AIP-apps werden auf Intel-CPUs nicht unterstützt.  |
+|**Unterstützte Anmelde Informationen**     | Melden Sie sich mit einer der folgenden Aktionen bei den mobilen AIP-apps an: </br></br>**Anmelde Informationen für Geschäfts-oder Schul Konto** Melden Sie sich mit den Anmelde Informationen Ihres Geschäfts-oder Schul Kontos an. Wenn Sie Fragen haben, wenden Sie sich an Ihren Administrator, um zu verstehen, ob Ihr Unternehmen lokal mit der Erweiterung für mobile Geräte AD RMS oder Azure Information Protection verwendet. </br></br>**Eine Microsoft-Konto.** Wenn Ihre persönliche e-Mail-Adresse zum Schutz der Datei verwendet wurde, melden Sie sich mit einem [Microsoft-Konto](https://signup.live.com)an. Wenn Sie sich für eine Microsoft-Konto bewerben müssen, können Sie dazu ihren eigenen Hotmail, Gmail oder jede andere e-Mail-Adresse verwenden. </br></br>**Hinweis**: nicht alle Anwendungen können Inhalte öffnen, die mit einem Microsoft-Konto geschützt sind. Weitere Informationen finden Sie [unter Unterstützte Szenarien für das Öffnen geschützter Dokumente](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
+|**Unterstützte Dateitypen**     | Zu den unterstützten Dateitypen zählen geschützte e-Mail-Nachrichten, PDF-Dateien, Bilder und Textdateien. </br></br>Diese Dateien enthalten beispielsweise die folgenden Erweiterungen: **rpmsg**, **PDF**, **ppdf**, **pjpg,** **pjpeg**, **ptiff**, **ppng**, **ptxt**, **pxml** </br></br>Eine vollständige Liste der unterstützten Dateitypen finden Sie [im AIP-Client Administrator Handbuch](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection).|
 | | |
 
 ## <a name="admins-testing-the-aip-mobile-apps"></a>Administratoren: Testen der mobilen AIP-apps
@@ -109,8 +111,8 @@ Wenn Sie ein Systemadministrator sind, der die mobilen AIP-Apps für Ihre Organi
     |Dateityp  |Instructions  |
     |---------|---------|
     |**E-Mail (. rpmsg)**     | Verwenden Sie ein anderes Gerät, z.b. Outlook, von einem Windows-Computer aus, um sich selbst eine durch Rechte geschützte e-Mail-Nachricht zu senden, auf die Sie über Ihr mobiles Gerät zugreifen können  |
-    |**PDF**     | 1. schützen Sie auf einem Windows-Computer eine PDF-Datei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung](clientv2-classify-protect.md) -Client. </br>2. senden Sie die geschützte PDF-Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie an Ihre eigene e-Mail-Adresse        |
-    |**Bild (ptxt-, pjpg-oder ppng-Datei)**     | 1. schützen Sie auf einem Windows-Computer eine Text-oder Bilddatei mit dem [klassischen](client-classify-protect.md) AIP-oder [Unified-Bezeichnung](clientv2-classify-protect.md) -Client. </br></br>2. senden Sie die geschützte Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie für Ihre eigene e-Mail-Adresse frei.   |
+    |**PDF**     | 1. schützen Sie auf einem Windows [-Computer eine PDF-](clientv2-classify-protect.md) Datei mit dem AIP-Client. </br>2. senden Sie die geschützte PDF-Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie an Ihre eigene e-Mail-Adresse        |
+    |**Bild (ptxt-, pjpg-oder ppng-Datei)**     | 1. schützen Sie auf einem Windows-Computer [eine Text-oder Bilddatei](clientv2-classify-protect.md) mit dem AIP-Client. </br></br>2. senden Sie die geschützte Datei, oder laden Sie Sie in eine geschützte SharePoint-Bibliothek hoch, und geben Sie Sie für Ihre eigene e-Mail-Adresse frei.   |
 | | |
 
 1. Öffnen Sie die geschützte Datei auf Ihrem mobilen Gerät mithilfe der e-Mail-Anlage oder des Links, die Sie an Sie gesendet haben.

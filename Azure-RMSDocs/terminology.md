@@ -4,7 +4,7 @@ description: Verwechselt durch ein Wort, einen Ausdruck oder ein Akronym, das si
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/04/2020
+ms.date: 11/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,19 +14,21 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f5b2dd317a6cdcf5d5d164f6431f8aa3163550da
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: af5c035a19847eca18a9686cc32895c363c0a926
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568573"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384555"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Information Protection unklar? Hier finden Sie die Definitionen für Begriffe und Abkürzungen, die entweder für Azure Information Protection spezifisch sind oder im Kontext dieses Diensts eine spezielle Bedeutung haben.
 
@@ -68,7 +70,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 
 |Begriff|Definition|
 |--------|--------------|
-|**Verzehr**|**Nur im Schutzkontext:** </br>Ein Dokument oder eine E-Mail zu lesen oder zu verwenden, wenn dieser Inhalt durch einen Rights Management-Dienst geschützt ist. </br>Bei einem Dokument umfasst das Nutzen die Bearbeitung und das Hinzufügen von neuem Inhalt zu einem geschützten Dokument. Bei einer E-Mail-Nachricht umfasst das Nutzen die Beantwortung einer geschützten Nachricht.<br /><br/>**Im Bezeichnungskontext (mit oder ohne Schutz):** </br>Um die Bezeichnungsinformationen zu lesen und ggf. darauf zu reagieren, die in den Metadaten der Dateien und E-Mails gespeichert sind.|
+|**Verzehr**|**Nur im Kontext des Schutzes**: </br>Ein Dokument oder eine E-Mail zu lesen oder zu verwenden, wenn dieser Inhalt durch einen Rights Management-Dienst geschützt ist. </br>Bei einem Dokument umfasst das Nutzen die Bearbeitung und das Hinzufügen von neuem Inhalt zu einem geschützten Dokument. Bei einer E-Mail-Nachricht umfasst das Nutzen die Beantwortung einer geschützten Nachricht.<br /><br/>**Im Kontext der Bezeichnung (mit oder ohne Schutz)**: </br>Um die Bezeichnungsinformationen zu lesen und ggf. darauf zu reagieren, die in den Metadaten der Dateien und E-Mails gespeichert sind.|
 |**Inhalts Schlüssel**|Ein eindeutiger Schlüssel, der von RMS-aktivierten Anwendungen für jedes Dokument oder jede E-Mail, das bzw. die von Rights Management geschützt wird, erstellt wird und hilft, die Gefahr der Veröffentlichung von Informationen zu beschränken.|
 | | |
 
@@ -151,7 +153,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 
 |Begriff|Definition|
 |--------|--------------|
-|**Office-Nachrichtenverschlüsselung**|Häufig als *OME* abgekürzt<br /><br />Die neuen Office 365-Funktionen für die Nachrichtenverschlüsselung sind nativ in Azure Rights Management integriert. So sind E-Mails von internen und externen Benutzern gleichermaßen geschützt, Vorlagen werden automatisch aktualisiert und das BYOK-Szenario wird unterstützt. </br></br>Die vorherige OME-Implementierung war nur für externe Empfänger gedacht, erforderte eine Regel für den E-Mail-Übertragung und bot keine BYOK-Unterstützung.|
+|**Office-Nachrichtenverschlüsselung**|Häufig als *OME* abgekürzt<br /><br />Die neuen Funktionen zur Verschlüsselung von Office 365-Nachrichten verfügen über eine integrierte Integration in den Azure Rights Management-Dienst, um den gleichen e-Mail-Schutz für interne und externe Benutzer, die automatische Aktualisierung von Vorlagen und die Unterstützung des Byok-Szenarios (Bring your own Key) bereitzustellen. </br></br>Die vorherige OME-Implementierung war nur für externe Empfänger gedacht, erforderte eine Regel für den E-Mail-Übertragung und bot keine BYOK-Unterstützung.|
 | | |
 
 ### <a name="p"></a>P
@@ -201,3 +203,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |**einheitliche Bezeichnung**| Auch bekannt als *einheitliche Vertraulichkeits Bezeichnung*.<br /><br /> Eine Bezeichnung, die von apps, Clients und Diensten, die das Microsoft Information Protection Framework unterstützen, angewendet werden kann, um Klassifizierung und optional Schutz anzuwenden. </br></br>In Office-Apps und-Diensten werden Unified Labels als Vertraulichkeits Bezeichnungen implementiert.|
 |**Schutz aufheben**|Entfernen Sie Schutzüberwachungen aus Dateien oder E-Mail-Nachrichten, in denen Verschlüsselungs-, Identitäts-, Nutzungsrechte- und Zugriffskontrollrichtlinien verwendet wurden, um Ihre Daten zu schützen.|
 |**Nutzungslizenz**|Ein dokumentspezifisches Zertifikat, das einem Benutzer gewährt wird, wenn er eine Datei oder E-Mail öffnet, die durch einen Rights Management-Dienst geschützt wurde. </br></br>Dieses Zertifikat enthält Benutzerrechte für die Datei oder E-Mail-Nachricht und den Verschlüsselungsschlüssel, der zum Verschlüsseln des Inhalts und zusätzliche Zugriffseinschränkungen, die in der Richtlinie für das Dokument definiert wurden.|
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Weitere Informationen zu AIP-Namen finden Sie unter [Azure Information Protection-auch bekannt als...](aka.md).

@@ -1,35 +1,34 @@
 ---
 title: Herunterladen & installieren des Azure Information Protection Unified Bezeichnung-Clients
 description: Anweisungen für Benutzer zum Installieren des Azure Information Protection Unified Bezeichnung-Clients für Windows, damit Sie Ihre Dokumente und e-Mails klassifizieren und schützen können.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 05/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: b2d3c262831c39f077de3f6e06b41c5adbd077bc
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: dcb0cf2946c59868eba0226850b5c8edb9a0f08f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385079"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Benutzerhandbuch](install-client-app.md). *
 
 Wenn Ihr Administrator den Azure Information Protection Unified-Bezeichnung-Client nicht für Sie installiert, können Sie dies selbst tun. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Zusätzlich:
-
-- Der Azure Information Protection-Client für einheitliche Bezeichnungen erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
-
+> [!NOTE]
+> Der Azure Information Protection Unified Bezeichnung-Client erfordert eine Mindestversion von Microsoft .NET Framework 4.6.2. Wenn dies fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
+>
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>So laden Sie den Azure Information Protection-Client für einheitliche Bezeichnungen herunter und installieren ihn
 
@@ -62,7 +61,7 @@ Gehen Sie wie folgt vor, nachdem Sie den Azure Information Protection-Client fü
 Die Installation ist nun abgeschlossen, und Sie können den Azure Information Protection-Client für einheitliche Bezeichnungen zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
 
 ## <a name="other-instructions"></a>Sonstige Anweisungen    
-Weitere Anleitungen finden Sie im Benutzerhandbuch für das Azure Information Protection Unified Bezeichnung-Client:
+Weitere Anleitungen finden Sie im Benutzerhandbuch für das Azure Information Protection Unified Bezeichnung-Client.
 
 - [Was möchten Sie tun?](clientv2-user-guide.md#what-do-you-want-to-do)
 

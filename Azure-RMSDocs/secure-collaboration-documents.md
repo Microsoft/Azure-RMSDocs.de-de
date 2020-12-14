@@ -4,8 +4,8 @@ description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mi
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/19/2020
-ms.topic: conceptual
+ms.date: 11/23/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
@@ -13,19 +13,22 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcdfc020061428959e2137a46347b49b150ad73a
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 117a943c410497cda1df9d0740ad9c91e2744e7f
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384841"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) . *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
 
 Mit Azure Information Protection können Sie Ihre Dokumente schützen, ohne Einbußen bei der Zusammenarbeit für autorisierte Benutzer hinnehmen zu müssen. Die meisten Dokumente, die ein Benutzer erstellt und dann für andere zur Ansicht und Bearbeitung freigibt, sind Office-Dokumente aus Word, Excel und PowerPoint. Diese Dokumente unterstützen nativen Schutz. Das bedeutet, dass zusätzlich zur Autorisierung und Verschlüsselung auch eingeschränkte Berechtigungen für eine präzisere Kontrolle unterstützt werden. 
 
@@ -61,9 +64,9 @@ Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es kei
     
    - Für alle Benutzer in der ersten externen Organisation: Klicken Sie auf **Geben Sie Details ein**, und geben Sie im Mandanten der Organisation den Namen einer Domain ein. Beispiel: fabrikam.com.
     
-   - Für die Gruppe in der zweiten externen Organisation: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispielsweise sales@contoso.com.
+   - Für die Gruppe in der zweiten externen Organisation: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispiel: sales@contoso.com.
     
-   - Für den Benutzer ohne Azure AD-Konto: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse des Benutzers ein. Beispielsweise bengi.turan@gmail.com. 
+   - Für den Benutzer ohne Azure AD-Konto: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse des Benutzers ein. Beispiel: bengi.turan@gmail.com. 
 
 4. Wenn Sie allen Benutzern dieselben Berechtigungen erteilen möchten: Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** die Berechtigung **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus.
     
@@ -99,7 +102,7 @@ Geben Sie das geschützte Dokument frei, indem Sie es an eine E-Mail anfügen, u
 
 ## <a name="opening-and-editing-the-protected-document"></a>Öffnen und Bearbeiten des geschützten Dokuments
 
-Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Beispiel:
+Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Zum Beispiel:
 
 ![Beispielbanner zu Azure Information Protection-Berechtigungen](./media/example-restricted-access-banner.png)
 

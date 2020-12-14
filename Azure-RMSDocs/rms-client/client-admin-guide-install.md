@@ -1,11 +1,11 @@
 ---
-title: Installieren des Azure Information Protection-Clients für Benutzer
-description: Eine Anleitung und Informationen für Administratoren zum Bereitstellen des Azure Information Protection-Clients für Windows in Unternehmensnetzwerken
+title: Installieren des Azure Information Protection des klassischen Clients für Benutzer
+description: Anweisungen und Informationen für Administratoren zum Bereitstellen des Azure Information Protection klassischen Clients für Windows in Unternehmensnetzwerken.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -13,23 +13,23 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d16d735f6119617eb12599f110f8c22682992d4
-ms.sourcegitcommit: 5b7235f7bb77cc88716f15dda0aa0d832e0f7063
+ms.openlocfilehash: 64735f0a4e9343ced3839f9dcdd9f56985c0b2fa
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734996"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386048"
 ---
-# <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
+# <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection des klassischen Clients für Benutzer
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischer Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE]
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
-> **Zum Bereitstellen des klassischen AIP-Clients** öffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.
+> **Um den klassischen AIP-Client** bereitzustellen, öffnen Sie ein Support Ticket, um den Download Zugriff zu erhalten.
 
 Überprüfen Sie vor der Installation des Azure Information Protection-Clients in Ihrem Unternehmensnetzwerk, ob die Computer über die erforderlichen Betriebssystemversionen und Anwendungen für Azure Information Protection verfügen. Weitere Informationen finden Sie auf der Seite zu den [Anforderungen für Azure Information Protection](../requirements.md).
 
@@ -88,10 +88,10 @@ ms.locfileid: "95734996"
 
 Verwenden Sie eine der folgenden Optionen zum Installieren des-Clients für Benutzer:
 
-|Option installieren  |BESCHREIBUNG  |
+|Option installieren  |Beschreibung  |
 |---------|---------|
 |**Ausführen der ausführbaren Client Datei (. exe)**  <br><br> [Anweisungen](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | Es wird empfohlen, die exe-Version des Clients auszuführen, um die Installation interaktiv oder im Hintergrund auszuführen.<br><br> Das Ausführen der exe-Datei bietet die größte Flexibilität und wird empfohlen, da Sie außerdem eine Reihe von Voraussetzungen prüft und auch fehlende fehlende Voraussetzungen installieren kann. |
-|**Bereitstellen des Windows Installer (. msi) des Clients** <br><br> [Anweisungen](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Der Azure Information Protection-Client Windows Installer wird nur für unbeaufsichtigte Installationen unterstützt, die einen zentralen Bereitstellungs Mechanismus verwenden.<br><br> Verwenden Sie z. b. die MSI-Datei, wenn Sie mit einer Gruppenrichtlinie, Configuration Manager und Microsoft InTune bereitstellen.<br><br> Sie müssen die tis-Methode für Windows 10-PCs verwenden, die von InTune und der Verwaltung mobiler Geräte (Mobile Device Management, MDM) verwaltet werden, da exe-Dateien für diese Computer nicht unterstützt werden.<br><br>**Hinweis:** Wenn Sie die MSI-Installation verwenden, müssen Sie manuell nach erforderlichen Komponenten suchen und abhängige Software installieren oder deinstallieren. |
+|**Bereitstellen des Windows Installer (. msi) des Clients** <br><br> [Anweisungen](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Der Azure Information Protection-Client Windows Installer wird nur für unbeaufsichtigte Installationen unterstützt, die einen zentralen Bereitstellungs Mechanismus verwenden.<br><br> Verwenden Sie z. b. die MSI-Datei, wenn Sie mit einer Gruppenrichtlinie, Configuration Manager und Microsoft InTune bereitstellen.<br><br> Sie müssen die tis-Methode für Windows 10-PCs verwenden, die von InTune und der Verwaltung mobiler Geräte (Mobile Device Management, MDM) verwaltet werden, da exe-Dateien für diese Computer nicht unterstützt werden.<br><br>**Hinweis**: Wenn Sie die MSI-Installation verwenden, müssen Sie manuell nach erforderlichen Komponenten suchen und abhängige Software installieren oder deinstallieren. |
 
 Führen Sie nach der Installation des-Clients Updates aus, indem Sie die gleiche Installationsmethode wiederholen, oder verwenden Sie Windows Update, um den Client automatisch zu aktualisieren. Vor der Installation einer neuen Version müssen ältere Versionen des Clients nicht deinstalliert werden.
 

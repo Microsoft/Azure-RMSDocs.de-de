@@ -1,8 +1,8 @@
 ---
 title: Entfernen von Bezeichnungen mit dem Azure Information Protection Unified Label-Client
 description: Anweisungen zum Entfernen von Vertraulichkeits Bezeichnungen und zum Schutz von Dateien und e-Mails mithilfe des Azure Information Protection Unified Label-Clients.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 09/03/2020
 ms.topic: how-to
@@ -12,22 +12,22 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4009de4e147bd5102602ef946f8b892ab478e542
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: fffc0099d1a018141c15feabb746e4795be18d5b
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567670"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385368"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Benutzerhandbuch: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Benutzerhandbuch](client-remove-label-protection.md). *
 
-Wenn die Azure Information Protection Unified Client [auf Ihrem Computer installiert](install-client-app.md)ist, können Sie Vertraulichkeits Bezeichnungen und den Schutz von Dateien und e-Mails entfernen.
+Wenn die Azure Information Protection Unified Client [auf Ihrem Computer installiert](install-unifiedlabelingclient-app.md)ist, können Sie Vertraulichkeits Bezeichnungen und den Schutz von Dateien und e-Mails entfernen.
 
 Wenn die Vertraulichkeits Bezeichnung, die Sie entfernen, zum Anwenden des Schutzes konfiguriert ist, wird durch diese Aktion auch der Schutz für die Datei entfernt. Sie werden möglicherweise zur Dokumentierung aufgefordert, warum Sie die Bezeichnung entfernen.
 
@@ -72,7 +72,7 @@ Wenn Sie den Datei-Explorer verwenden, können Sie die Bezeichnungen und den Sch
 ## <a name="other-instructions"></a>Sonstige Anweisungen
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
-- [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
+- [Was möchten Sie tun?](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 

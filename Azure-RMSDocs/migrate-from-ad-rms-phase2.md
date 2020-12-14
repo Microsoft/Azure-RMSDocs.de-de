@@ -1,11 +1,11 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection – Phase 2
 description: Phase 2 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 4 bis 6 der Migration von AD RMS zu Azure Information Protection ab.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
-ms.date: 04/02/2020
-ms.topic: conceptual
+ms.date: 11/11/2020
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
@@ -13,20 +13,22 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a354e9f787cf079e2c67a03fb58d330ab7785ce3
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: ad4fe6bd495bfe6a19ce897bf3ee5290c778a8ac
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567907"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386065"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die folgenden Informationen für Phase 2 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 4 bis 6 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
-## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Schritt 4: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection
+## <a name="step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection"></a>Schritt 4. Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection
 
 Dieser Schritt ist ein zweistufiger Vorgang:
 
@@ -88,6 +90,7 @@ Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migra
 |Kennwortschutz in der AD RMS-Datenbank|Kundenverwaltet (BYOK)|Weitere Informationen finden Sie im Verfahren Migration **Software geschützter Schlüssel zu HSM-geschützten Schlüsseln** nach dieser Tabelle.<br /><br />Dazu ist das Azure Key Vault-BYOK-Toolset erforderlich, und es müssen vier Verfahren ausgeführt werden, um erst den Softwareschlüssel zu extrahieren und in ein lokales HSM zu importieren, dann den Schlüssel aus Ihrem lokalen HSM an die Azure Information Protection-HSMs zu übertragen, die Key Vault-Daten an Azure Information Protection zu übertragen und schließlich Ihre Konfigurationsdaten an Azure Information Protection zu übertragen.|
 |HSM-Schutz mithilfe eines Hardware Sicherheits Moduls (HSM) von einem anderen Lieferanten als nchiffre |Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres HSM, um Anweisungen zur Übertragung Ihres Schlüssels aus diesem HSM in eine nCipher nShield Hardware Security Module (HSM) zu erhalten. Befolgen Sie dann die Anweisungen für das Verfahren Migration **HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** nach dieser Tabelle.|
 |Kennwortschutz mithilfe eines externen Kryptografieanbieters|Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres Kryptografieanbieters, um Anweisungen zur Übertragung Ihres Schlüssels in ein nCipher nShield-Hardware Sicherheitsmodul (HSM) zu erhalten. Befolgen Sie dann die Anweisungen für das Verfahren Migration **HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** nach dieser Tabelle.|
+| | |
 
 Wenn Sie einen HSM-geschützten Schlüssel haben, den Sie nicht exportieren können, können Sie immer noch zu Azure Information Protection migrieren, indem Sie Ihren AD RMS-Cluster für einen schreibgeschützten Modus konfigurieren. In diesem Modus kann zuvor geschützter Inhalt zwar geöffnet werden, jedoch verwendet neu geschützter Inhalt einen neuen Mandantenschlüssel, der von Ihnen (BYOK) oder von Microsoft verwaltet wird. Weitere Informationen finden Sie unter [An update is available for Office to support migrations from AD RMS to Azure RMS (Ein Update ist für Office verfügbar, um Migrationen von AD RMS auf Azure RMS zu unterstützen)](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to).
 
@@ -108,13 +111,13 @@ Um Schritt 4 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad
 
 1. Stellen Sie eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
 
-    ```ps
+    ```PowerShell
     Connect-AipService
     ```
 
 2. Aktivieren des Azure Rights Management-Diensts:
 
-    ```ps
+    ```PowerShell
     Enable-AipService
     ```
 
@@ -164,9 +167,9 @@ Weitere Informationen zu dieser Konfiguration finden Sie unter [Konfigurieren ei
 
 Dieser Abschnitt enthält das Beispielskript, mit dessen Hilfe Sie AD RMS-Vorlagen, in denen die Gruppe „Jeder“ definiert ist, wie im vorherigen Abschnitt beschrieben bestimmen können.
 
-**Haftungsausschluss**: Dieses Beispielskript wird unter keinem Microsoft-Standardsupportprogramm oder -dienst unterstützt. Es wird in der vorliegenden Form ohne jegliche Gewährleistung bereitgestellt.
+**Haftungsausschluss**: Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Es wird in der vorliegenden Form ohne jegliche Gewährleistung bereitgestellt.
 
-```ps
+```PowerShell
 import-module adrmsadmin
 
 New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost -Force

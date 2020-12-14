@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
@@ -14,14 +14,21 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: e8cd7846159e2299d33b8b6533813ac8502140d3
-ms.sourcegitcommit: 2a72516a1f380adddd6501984b1989e3fa051976
+ms.openlocfilehash: f6ebddb276cdf77c977acc516cf1b6c3d2bbc7b4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "95568426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385113"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Welche PDF-Reader werden für geschützte PDF-Funktionen unterstützt?
+
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Mit PDF-Lesern für klassifizierte und/oder geschützte PDF-Datei können Sie verschlüsselte PDF-Datei öffnen, die vertrauliche Informationen enthalten.
 
@@ -50,7 +57,11 @@ Anweisungen finden Sie in den folgenden Abschnitten:
 
 Mit den auf dieser Seite referenzierten PDF-Lesern können alle geschützten Dokumente geöffnet werden, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen. 
 
-Dieser Standard wird standardmäßig von den Clients AIP Classic und Unified Bezeichnung verwendet, es sei denn, er wurde [von einem Administrator deaktiviert](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+Dieser Standard wird standardmäßig vom AIP-Client verwendet.
+
+> [!NOTE]
+> **Nur klassischer Client**: Wenn Sie über den klassischen AIP-Client verfügen, wurde dieser möglicherweise [von einem Administrator deaktiviert](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
+> 
 
 ### <a name="viewing-protected-pdfs-in-adobe-acrobat-reader"></a>Anzeigen geschützter PDF-Funktionen in Adobe Acrobat Reader
 
@@ -66,23 +77,23 @@ Weitere Informationen finden Sie in den folgenden Blogbeiträgen:
 
 ## <a name="viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac"></a>Anzeigen geschützter PDF-Geräte in Microsoft Edge unter Windows oder Mac
 
-Microsoft Edge bietet native Unterstützung für die Anzeige von PDF-Dateien, die klassifiziert und geschützt sind. Durch die Verwendung von Microsoft Edge wird sichergestellt, dass Benutzer geschützte PDF-Dateien nahtlos öffnen können, ohne zusätzliche Einstellungen oder Software installieren oder konfigurieren zu müssen.
+Microsoft Edge bietet integrierte Unterstützung für die Anzeige von PDF-Dateien, die klassifiziert und geschützt sind. Durch die Verwendung von Microsoft Edge wird sichergestellt, dass Benutzer geschützte PDF-Dateien nahtlos öffnen können, ohne zusätzliche Einstellungen oder Software installieren oder konfigurieren zu müssen.
 
 Folgende Versionen werden unterstützt:
 
-- **Windows:** Windows 10 und frühere Versionen über Windows 8. 
+- **Windows**: Windows 10 und frühere Versionen über Windows 8. 
     
     Weitere Informationen zu früheren Versionen finden Sie [unter Unterstützung für vorherige Formate](#support-for-previous-formats).
 
-- **Mac:** macOS-Versionen 10,12 und höher 
+- **Mac**: macOS-Versionen 10,12 und höher 
 
 
-**Anweisungen** 
+**Anweisungen**: 
 
 1. Überprüfen Sie, welche [Microsoft Edge-Version](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have) auf Ihrem System installiert ist. 
 1. Wenn die Microsoft Edge-Version 83.0.478.37 oder höher ist, können Sie geschützte Dateien direkt im Edge-Browser öffnen. 
 
-1. Um PDF-Dateien in SharePoint zu öffnen **Open**, klicken Sie auf Öffnen  >  **in Browser** öffnen. 
+1. Um PDF-Dateien in SharePoint zu öffnen , klicken Sie auf Öffnen  >  **in Browser** öffnen. 
 
     :::image type="content" source="../media/edge_open_browser.png" alt-text="Öffnen einer geschützten PDF-Datei mithilfe von Microsoft Edge über den Browser mithilfe der Option in Browser öffnen":::
  
@@ -90,7 +101,7 @@ Folgende Versionen werden unterstützt:
 
 Zum Öffnen eines geschützten PDF-Dokuments auf dem Desktop Computer wird empfohlen, das relevante [Microsoft Information Protection (MIP)-Plug-in für Acrobat und Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) für Ihr Betriebssystem zu installieren.
 
-**Anweisungen**
+**Anweisungen**:
 
 1. Wenn Sie dies noch nicht getan haben, installieren Sie den Adobe Reader von der [Adobe-Website](https://www.adobe.com/).
 
@@ -102,15 +113,15 @@ Zum Öffnen eines geschützten PDF-Dokuments auf dem Desktop Computer wird empfo
 
     Folgende Versionen werden unterstützt:
 
-    - **Windows:** Windows 10 und frühere Versionen über Windows 8. 
+    - **Windows**: Windows 10 und frühere Versionen über Windows 8. 
     
         Weitere Informationen zu früheren Versionen finden Sie [unter Unterstützung für vorherige Formate](#support-for-previous-formats).
 
-    - **Mac:** macOS-Versionen 10,12-10,14 
+    - **Mac**: macOS-Versionen 10,12-10,14 
 
 1. Wenn Sie zur Administrator Genehmigung aufgefordert werden, bitten Sie den Administrator, das Plug-in zu autorisieren.
 
-    Beispiel:
+    Zum Beispiel:
     
     :::image type="content" source="../media/admin-approval-for-mip-in-adobe-reader.png" alt-text="Erforderliche Administrator Genehmigung zum Installieren des MIP-Plug-Ins für Acrobat-und Acrobat Reader":::
     

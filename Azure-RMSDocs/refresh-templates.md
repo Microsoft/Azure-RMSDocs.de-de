@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
@@ -13,19 +13,22 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6f095c7cfd7a41663da3fd4f19d47012fa2604b5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 44de4e40b64cb7d76c2e0b581fd4641f462b9cd4
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386286"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden [Sie unter Informationen zu Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Einschränken des Zugriffs auf Inhalte mithilfe von Verschlüsselung in sensiblen Bezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels) aus der Microsoft 365-Dokumentation. *
 
->[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
 
 Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection verwenden, werden Schutz Vorlagen automatisch auf Client Computer heruntergeladen, sodass Benutzer Sie aus Ihren Anwendungen auswählen können. Allerdings müssen Sie möglicherweise zusätzliche Schritte ausführen, wenn Sie Änderungen an der Vorlage vornehmen:
 
@@ -39,7 +42,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Lokales Exchange mit dem Rights Management-Connector<br /><br />Gilt für Transportregeln und Outlook Web App|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich. Outlook Web App speichert allerdings die UI für einen Tag zwischen.|
 |Office 2019 für Mac und Office 2016 für Mac|Wird automatisch aktualisiert, wenn Sie geschützte Inhalte öffnen. Informationen zum Erzwingen einer Aktualisierung finden Sie im folgenden Abschnitt [Office 2019 für Mac und Office 2016 für Mac: Erzwingen einer Aktualisierung für Vorlagen](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |Die RMS-Freigabeanwendung für Mac-Computer|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
-|Office 365 ProPlus mit [integrierter Bezeichnung](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Dieser integrierte Bezeichnungs Client lädt keine Vorlagen herunter, greift jedoch auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
+|Office 365 ProPlus mit [integrierter Bezeichnung](/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Diese integrierte Bezeichnungs Lösung lädt keine Vorlagen herunter, greift jedoch auf Sie online zu. es sind keine zusätzlichen Schritte erforderlich.|
 | | |
 
 Wenn Client Anwendungen Vorlagen herunterladen müssen (anfänglich oder aktualisiert für Änderungen), sollten Sie bis zu 30 Minuten warten, bis der Download abgeschlossen ist und die neuen oder aktualisierten Vorlagen voll funktionstüchtig sind. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Vorlagenkonfiguration und der Netzwerkkonnektivität ab. 
@@ -56,19 +59,19 @@ Durch Bearbeiten der Registrierung auf den Computern, auf denen Microsoft 365 ap
     
     - So legen Sie eine Aktualisierungshäufigkeit in Tagen fest (mindestens 1 Tag):  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequency** , und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Tagen angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
 
-        **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Registrierungs Pfad**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Typ:** REG_DWORD
 
-        **Wert:** TemplateUpdateFrequency
+        **Wert**: templateupdatefrequency
 
     - So legen Sie eine Aktualisierungshäufigkeit in Sekunden fest (mindestens 1 Sekunde):  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequencyInSeconds** , und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Sekunden angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
 
-        **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
+        **Registrierungs Pfad**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Typ:** REG_DWORD
 
-        **Wert**: TemplateUpdateFrequencyInSeconds
+        **Wert**: templateupdatefrequecyinseconds
 
     Sie dürfen nur einen der beiden Registrierungswerte erstellen und festlegen (nicht beide). Wenn beide vorhanden sind, wird **TemplateUpdateFrequency** ignoriert.
 
@@ -78,11 +81,11 @@ Durch Bearbeiten der Registrierung auf den Computern, auf denen Microsoft 365 ap
 
 1. Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime**. Die Daten könnten beispielsweise als **2015-04-20T15:52** angezeigt werden. Löschen Sie „2015-04-20T15:52“, sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
-   **Registrierungs Pfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> \TEMPLATE \\ < *user_alias*>
+   **Registrierungs Pfad**: HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\ < *MicrosoftRMS_FQDN*> \TEMPLATE \\ < *user_alias*>
 
-   **Typ:** REG_SZ
+   **Typ**: REG_SZ
 
-   **Wert:** LastUpdatedTime
+   **Wert**: LastUpdatedTime
 
    > [!TIP]
    > Im Registrierungspfad bezieht sich <*MicrosoftRMS_FQDN*> auf den FQDN Ihres Microsoft RMS-Diensts. Wenn Sie diesen Wert überprüfen möchten:
