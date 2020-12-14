@@ -5,25 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 09/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a1ed0a5b10db4ffd0a50b8738cb85cbff973eaa5
-ms.sourcegitcommit: d31cb53de64bafa2097e682550645cadc612ec3e
+ms.openlocfilehash: 5454713bc942daa48fc5c33dfdb66bd1bcdec2e0
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96316414"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97383243"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->[!NOTE]
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) . *
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
 
@@ -64,7 +67,7 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
     Eine Ausnahme stellt die Verwendung von [Autosave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) mit Office-Apps für Dateien dar, die in Microsoft SharePoint, onedrive for Work oder School oder onedrive for Home gespeichert sind: Wenn die automatische Speicherung aktiviert ist, werden visuelle Kennzeichnungen nicht angewendet, es sei denn, Sie konfigurieren die [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) , um die Klassifizierung so zu aktivieren, dass Sie fortlaufend im Hintergrund ausgeführt wird.
 
 > [!NOTE]
-> Weitere Informationen zur Unterstützung von visuellen Kennzeichnungen in den AIP-Clients und zur integrierten Bezeichnung für Office-Funktionen finden Sie unter [Vergleich der Bezeichnung "Clients für Windows-Computer](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)".
+> Weitere Informationen zur Unterstützung von visuellen Kennzeichnungen in den AIP-Clients und zur integrierten Bezeichnung für Office-Funktionen finden [Sie unter Auswählen der Windows-beschriftungslösung](rms-client/use-client.md#choose-your-windows-labeling-solution).
 > 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>So konfigurieren Sie visuelle Kennzeichnungen für eine Bezeichnung
@@ -107,7 +110,7 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 >Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet.
 
 >[!TIP]
-> Sie können auch einen [Feldcode verwenden, um den](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) Bezeichnungs Namen in ein Dokument oder eine Vorlage einzufügen.
+> Sie können auch einen [Feldcode verwenden, um den](faqs-classic.md#can-i-create-a-document-template-that-automatically-includes-the-classification) Bezeichnungs Namen in ein Dokument oder eine Vorlage einzufügen.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook
 
@@ -124,19 +127,19 @@ ${If.App.<application type>}<your visual markings text> ${If.End}
 
 Beispiele:
 
-- **Legen Sie Headertext nur für Word-Dokumente fest:**
+- **Header Text nur für Word-Dokumente festlegen**:
 
     `${If.App.Word}This Word document is sensitive ${If.End}`
 
     Die Bezeichnung legt nur in Headern von Word-Dokumenten den Headertext „This Word document is sensitive“ fest. Für andere Office-Anwendungen wird kein Headertext angewendet.
 
-- **Legen Sie einen Fußzeilentext für Word, Excel und Outlook und einen anderen Fußzeilentext für PowerPoint fest:**
+- **Legen Sie den Fußzeilen Text für Word, Excel und Outlook sowie einen anderen FooterText für PowerPoint fest**:
 
     `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
 
     In Word, Excel und Outlook wendet die Bezeichnung den Fußzeilentext „This content is confidential“ an. In PowerPoint wendet die Bezeichnung den Fußzeilentext „This presentation is confidential“ an.
 
-- **Legen Sie spezifischen Wasserzeichentext für Word und PowerPoint und Wasserzeichentext für Word, Excel und PowerPoint fest:**
+- **Legen Sie bestimmten Wasserzeichen Text für Word und PowerPoint fest, und klicken Sie dann auf Wasserzeichen Text für Word, Excel und PowerPoint**:
 
     `${If.App.WP}This content is ${If.End}Confidential`
 

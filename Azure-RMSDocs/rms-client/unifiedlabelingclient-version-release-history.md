@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection vereinheitlichte Bezeichnung für den Client Versionsverlauf & Unterstützungs Richtlinie
-description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
+description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeichnung-Client (Azure Information Protection) für Windows.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,20 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: af8998f4a96649c6a14522c5f5beb025527ec556
-ms.sourcegitcommit: d519d0326756a389d543b6cd0e607ef5d1d087b4
+ms.openlocfilehash: 8d116c08680372e6a63a93c3c179914f9fe0e464
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "96740621"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385028"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [nur AIP Unified Bezeichnung Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie [unter AIP Classic Client Version Release History und Support Policy](client-version-release-history.md). *
 
 Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen.
 
@@ -67,7 +67,7 @@ Die neueste Version von Azure Information Protection befindet sich derzeit in de
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Der Unified-Bezeichnungs Client ersetzt den Azure Information Protection klassischen Client. Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Beschriftungslösungen für Windows-Computer](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 ## <a name="version-291010-public-preview"></a>Version 2.9.101.0 (öffentliche Vorschau)
 
@@ -85,7 +85,7 @@ Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unte
 
 Zur Unterstützung von getrennten Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
 
-|Cmdlet  |BESCHREIBUNG  |
+|Cmdlet  |Beschreibung  |
 |---------|---------|
 |**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Fügt ihrem inhaltscanauftrag ein neues Repository hinzu.        |
 |**[Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Ruft Details zum inhaltscanauftrag ab.   |
@@ -118,7 +118,7 @@ Dienste für NFS müssen auf dem Überprüfungs Computer bereitgestellt werden, 
 Weitere Informationen finden Sie unter [Erstellen eines Inhalts Scan Auftrags](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
 ### <a name="added-support-for-sensitive-information-types"></a>Unterstützung für sensible Informationstypen hinzugefügt
-Wir haben Unterstützung für zusätzliche vertrauliche Informationstypen in Azure Information Protection hinzugefügt, wie z. b. die **Geschäftsnummer von Australien,** die **australische Firmennummer** oder die Personalausweisnummer **.** 
+Wir haben Unterstützung für zusätzliche vertrauliche Informationstypen in Azure Information Protection hinzugefügt, wie z. b. die **Geschäftsnummer von Australien**, die **australische Firmennummer** oder die **Personal** Ausweisnummer. 
 
 Weitere Informationen finden Sie in den [Entitäts Definitionen für sensible Informationen](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in der Microsoft 365-Dokumentation.
 ### <a name="fixes-and-improvements"></a>Korrekturen und Verbesserungen
@@ -133,7 +133,7 @@ Die folgenden Korrekturen wurden in Version 2.9.101.0 des [Azure Information Pro
 - Unterstützung für das [vermeiden eines Timeouts](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) beim Scannen eines SharePoint-Servers.
 
 ### <a name="known-issues"></a>Bekannte Probleme
-In dieser öffentlichen Vorschauversion wird das Anwenden von Bezeichnungen mit [DKE-Schutz](../plan-implement-tenant-key.md#double-key-encryption-dke-aip-unified-labeling-client-only) von der Überprüfung nicht unterstützt.
+In dieser öffentlichen Vorschauversion wird das Anwenden von Bezeichnungen mit [DKE-Schutz](../plan-implement-tenant-key.md#double-key-encryption-dke) von der Überprüfung nicht unterstützt.
 
 ## <a name="version-28850"></a>Version 2.8.85.0
 
@@ -186,13 +186,13 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 **So verwenden Sie den Netzwerk Ermittlungsdienst**
 
-1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie unter
+1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist.    Weitere Informationen finden Sie unter
     - [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Erstellen eines Scanner-Clusters](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster) 
     
 1. Stellen Sie sicher, dass Azure Information Protection Analytics aktiviert ist. 
 
-    Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau).** 
+    Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau)**. 
 
     Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](../reports-aip.md).
 
@@ -211,7 +211,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 
-|Cmdlet  |BESCHREIBUNG  |
+|Cmdlet  |Beschreibung  |
 |---------|---------|
 |[**Get-mipnetworkdiscoveryconfiguration**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Ruft die aktuelle Einstellung ab, ob der Netzwerk Ermittlungsdienst Netzwerk Scan Daten aus der Standard-, Online-oder Offline Datei abruft, die aus der Azure-Portal exportiert wurde.      |
 |[**Get-mipnetworkdiscoveryjobs**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Ruft eine Liste der derzeit konfigurierten Netzwerk Scanaufträge ab.     |
@@ -252,7 +252,7 @@ Weitere Informationen finden Sie unter [zugreifen](../audit-logs.md#access-audit
 
 Azure Information Protection unterstützt jetzt eine DKE-vorlagenbasierte (Double Key Encryption) vorlagenbasierte Bezeichnung in der Überprüfung sowie die Verwendung des Datei-Explorers und von PowerShell.
 
-Weitere Informationen finden Sie unter
+   Weitere Informationen finden Sie unter
 
 - [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-implement-tenant-key.md)
 - [Doppelte Schlüssel Verschlüsselung](/microsoft-365/compliance/double-key-encryption) in den Microsoft 365-Dokumentation
@@ -295,7 +295,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.101.0
 
 **Veröffentlicht** 08/23/2020
 
-**Zusetzen**
+**Behebung**:
 
 Das Problem für PPT-, Excel-und Word-Benutzer wurde behoben, das dazu geführt hat, dass Dateien eingefroren, abgestürzt sind oder dass die Speicherung wiederholt werden musste, die mit obligatorischen Bezeichnungen verknüpft war, die mit Schutz, Wasserzeichen und/oder Inhaltsmarkierung
 
@@ -305,7 +305,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.99.0
 
 **Veröffentlicht** 07/20/2020
 
-**Korrekturen und Verbesserungen:**
+**Korrekturen und Verbesserungen**:
 
 Behobene Probleme bei Datei Bezeichnungs Aktionen für **neue Beschriftungs** Überwachungs Protokolle.
 
@@ -317,7 +317,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 **Veröffentlicht** 06/29/2020
 
-**Neue Features für den Unified-Beschriftungs Scanner:**
+**Neue Features für den Unified-Beschriftungs Scanner**:
 
 - [Verwenden Sie Scanner, um Bezeichnungen auf der Grundlage der empfohlenen Bedingungen anzuwenden](../deploy-aip-scanner-prereqs.md). AIP-Kunden können nun festlegen, dass nur Dienst seitige Authentifizierung implementiert werden soll. Diese Funktion ermöglicht es AIP-Endbenutzern, immer Empfehlungen anstelle des vorherigen Szenarios zu befolgen, das nur die automatische Bezeichnung auf der Benutzerseite aktiviert hat.
 
@@ -331,7 +331,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 - Nun können Sie den Unified-Beschriftungs Scanner so konfigurieren, dass bestimmte Dateien abhängig von ihren Dateiattributen übersprungen werden. Hiermit wird die Liste der Dateiattribute definiert, durch die eine Datei mit der neuen **[scannerfsattributestoskip](clientv2-admin-guide-customizations.md#skip-or-ignore-files-during-scans-depending-on-file-attributes)** Advanced-Einstellung übersprungen wird.
 
-**Neue Features für den Unified-Bezeichnungs Client:**
+**Neue Features für den Unified**-Bezeichnungs Client:
 
 - [**Ausrichtungpopups**](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) werden jetzt für Änderungen angezeigt, die an Standard Bezeichnungen im Unified Label-Client vorgenommen werden.
     
@@ -349,7 +349,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie unter
+   Weitere Informationen finden Sie unter
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)
 
@@ -391,7 +391,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Firewalls und Netzw
 
 - Wenn mehrere Exchange-Konten konfiguriert sind und der Azure Information Protection Outlook-Client aktiviert ist, werden die e-Mails wie erwartet vom sekundären Konto gesendet. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified-Bezeichnung-Client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
-- Wenn ein Dokument mit einer höheren Vertraulichkeits Bezeichnung per Drag and Drop per Drag and Drop in eine e-Mail eingefügt wird, erhält die e-Mail nun automatisch die höhere Vertraulichkeits Bezeichnung wie erwartet. Weitere Informationen zum bezeichnen von Client Funktionen finden Sie in der [Bezeichnung Client Vergleichstabelle](use-client.md#compare-the-labeling-clients-for-windows-computers).
+- Wenn ein Dokument mit einer höheren Vertraulichkeits Bezeichnung per Drag and Drop per Drag and Drop in eine e-Mail eingefügt wird, erhält die e-Mail nun automatisch die höhere Vertraulichkeits Bezeichnung wie erwartet. Weitere Informationen zum bezeichnen von Client Funktionen finden Sie in der [Bezeichnung Client Vergleichstabelle](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
 - Benutzerdefinierte Berechtigungen werden jetzt erwartungsgemäß auf e-Mails angewendet, wenn e-Mail-Adressen sowohl einen Apostroph (') als auch einen Zeitraum (.) enthalten. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified-Bezeichnung-Client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
@@ -405,7 +405,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Firewalls und Netzw
 
 Unterstützt durch 12/29/2020
 
-**Neue Features:**
+**Neue Features**:
 
 - Allgemein verfügbare Version des [Scanners](../deploy-aip-scanner.md)zum Überprüfen und bezeichnen von Dokumenten in lokalen Daten speichern. 
 
@@ -427,7 +427,7 @@ Unterstützt durch 12/29/2020
 
 - Unterstützung für [Offline Beschriftungs Funktionen](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) mit Office-Apps im Unified-Bezeichnungs Client hinzugefügt.
 
-**Fehlerbehebungen:**
+**Fixes**:
 
 - In Fällen, in denen Benutzer erfolglos versuchten, geschützte TIFF-Dateien und TIFF-Dateien zu öffnen, die von RightFax erstellt wurden, werden die TIFF-Dateien nun geöffnet und bleiben erwartungsgemäß stabil.  
 - Vorherige Beschädigungen geschützter txt-und PDF-Dateien werden aufgelöst.
@@ -439,7 +439,7 @@ Unterstützt durch 12/29/2020
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie sind nicht sicher, ob Unified Bezeichnung der richtige Client für die Installation ist?  Weitere Informationen finden [Sie unter Auswählen des zu verwendenden Kunden für Windows-Computer](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
+Sie sind nicht sicher, ob Unified Bezeichnung der richtige Client für die Installation ist?  Weitere Informationen finden [Sie unter Auswählen der Windows-Bezeichnung](use-client.md#choose-your-windows-labeling-solution).
 
 Weitere Informationen zum Installieren und Verwenden des Unified-Beschriftungs Clients: 
 

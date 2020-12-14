@@ -12,23 +12,23 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c525903e8b9bca6679455ddc5767c53f28b6d69d
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 77d7ddb996a224e871a89227bd58872989bdc759
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "95568555"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382852"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Was ist der klassische Azure Information Protection-Scanner?
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
-
->[!NOTE]
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
-> Wenn Sie den Unified-Bezeichnungs Client verwenden, finden Sie weitere Informationen unter [Was ist der Azure Information Protection Unified-Beschriftungs Scanner?](deploy-aip-scanner.md).
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [Was ist der Azure Information Protection Unified-Beschriftungs Scanner?](deploy-aip-scanner.md). *
 
-Verwenden Sie die Informationen in diesem Abschnitt, um sich mit dem Azure Information Protection Scanner vertraut zu machen und dann zu installieren, zu konfigurieren, auszuführen und ggf. Probleme zu beheben.
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+
+Verwenden Sie die Informationen in diesem Abschnitt, um sich über den Azure Information Protection klassischen Client Scanner zu informieren und dann zu installieren, zu konfigurieren, auszuführen und ggf. Probleme zu beheben.
 
 Der AIP-Scanner wird als Dienst unter Windows Server ausgeführt und ermöglicht das ermitteln, klassifizieren und schützen von Dateien in den folgenden Daten speichern:
 
@@ -54,7 +54,7 @@ Der Scanner verwendet den Azure Information Protection Client und kann dieselben
 Führen Sie eine der folgenden Aktionen aus, um Ihre Scans nach Bedarf zu konfigurieren:
 
 - **Führen Sie die Überprüfung nur im Ermittlungs Modus aus** , um Berichte zu erstellen, mit denen Sie überprüfen, was geschieht, wenn Ihre Dateien beschriftet werden
-- **Führen Sie den Scanner aus, um Dateien mit sensiblen Informationen zu ermitteln,** ohne Bezeichnungen zu konfigurieren, die die automatische Klassifizierung anwenden.
+- **Führen Sie den Scanner aus, um Dateien mit sensiblen Informationen zu ermitteln**, ohne Bezeichnungen zu konfigurieren, die die automatische Klassifizierung anwenden.
 - **Führen Sie den Scanner automatisch** aus, um die Bezeichnungen wie konfiguriert anzuwenden.
 - **Definieren Sie eine Liste der Dateitypen** , um bestimmte Dateien anzugeben, die gescannt oder ausgeschlossen werden sollen.
 
@@ -80,7 +80,7 @@ Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschloss
 
 Der Scanner berücksichtigt auch alle Dateilisten, die explizit für die Überprüfung definiert oder von der Überprüfung ausgeschlossen werden sollen. Dateilisten gelten standardmäßig für alle Daten Depots und können auch nur für bestimmte Depots definiert werden.
 
-Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Beispiel:
+Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Zum Beispiel:
 
 ![Konfigurieren der zu überprüfenden Dateitypen für den Azure Information Protection-Scanner](./media/scanner-file-types.png)
 
@@ -112,7 +112,7 @@ Der AIP-Scanner kann die Dateien unter den folgenden Umständen nicht bezeichnen
 
     Andere Dateitypen können zum Schutz hinzugefügt werden, wenn Sie [die Typen der zu schützenden Dateien ändern](deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect).
 
-**Beispiel:** Nach dem Überprüfen von txt-Dateien kann die Überprüfung keine Bezeichnung anwenden, die nur für die Klassifizierung konfiguriert ist, da der txt-Dateityp nur Klassifizierung unterstützt.
+**Beispiel**: nach der Überprüfung von txt-Dateien kann der Scanner keine Bezeichnung anwenden, die nur für die Klassifizierung konfiguriert ist, da der Dateityp ". txt" nur die Klassifizierung unterstützt.
 
 Wenn die Bezeichnung jedoch für die Klassifizierung und den Schutz konfiguriert ist und der txt-Dateityp für die Überprüfung enthalten ist, kann der Scanner die Datei bezeichnen.
 
@@ -124,10 +124,10 @@ Weitere Informationen zum Bereitstellen des Scanners finden Sie in den folgenden
 - [Konfigurieren und Installieren des AIP-Scanners](deploy-aip-scanner-configure-install.md)
 - [Ausführen von Scans mit dem AIP-Scanner](deploy-aip-scanner-manage.md)
 
-**Weitere Informationen:**
+**Weitere Informationen**:
 
 - Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-- Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+- Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 - Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md).

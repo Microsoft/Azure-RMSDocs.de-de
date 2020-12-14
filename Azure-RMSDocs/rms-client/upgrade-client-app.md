@@ -1,11 +1,11 @@
 ---
 title: Mit der RMS-Freigabeanwendung ausgeführte Aufgaben – AIP
 description: Anweisungen für Benutzer, die ein Upgrade von der RMS-Freigabeanwendung auf den Azure Information Protection-Client durchgeführt haben.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/26/2019
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dcbd46699ba6c2da864ebb6463adce50872a8e90
-ms.sourcegitcommit: b763a7204421a4c5f946abb7c5cbc06e2883199c
+ms.openlocfilehash: bdaa80ba38a98a53dc4781bf7aadf15b23fbda3a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "95567718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384892"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Benutzerhandbuch: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>**Relevant für**: [Azure Information Protection klassischer Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Haben Sie kürzlich ein Upgrade von der Rights Management-Freigabeanwendung (auch einfach nur als „RMS-Freigabeanwendung“ bezeichnet) auf den Azure Information Protection-Client durchgeführt? 
 
@@ -43,10 +43,10 @@ Verwenden Sie die folgenden Informationen als Hilfestellung, um schnell einsatzb
 
 Wenn Sie nach einer bestimmten Option suchen, die Sie häufig für die RMS-Freigabeanwendung verwendet haben, überprüfen Sie die folgende Tabelle.
 
-|Option in der RMS-Freigabeanwendung|Information
+|Option in der RMS-Freigabeanwendung|Informationen
 |-----------|--------------------|
 |**Geschütztes Freigeben**|Diese Option ist im Office-Menüband nicht mehr verfügbar. Verwenden Sie anstelle der direkten Freigabe in der Office-Anwendung die Kontextmenüoption des Datei-Explorer, **Klassifizieren und schützen**, um eine Kopie des Dokuments mit benutzerdefinierten Berechtigungen zu schützen. Anschließend geben Sie die Datei mit dem gewünschten E-Mail-Client oder am gewünschten Freigabeort frei. <br /><br /> Sie können auch ein ungeschütztes Office-Dokument an eine zu schützende E-Mail anfügen. Das Dokument wird in diesem Fall automatisch mit denselben Einschränkungen geschützt. Sie können das Dokument jedoch nicht nachverfolgen und widerrufen.
-|**E-Mail an mich, wenn jemand versucht, diese Dokumente zu öffnen**|Verwenden Sie die Website zum Nachverfolgen von Dokumenten, um Ihre bevorzugte e-Mail-Benachrichtigungs Einstellung zu konfigurieren: Suchen Sie das geschützte Dokument, das Sie > **Einstellungen**  >  **Email notifications**
+|**E-Mail an mich, wenn jemand versucht, diese Dokumente zu öffnen**|Verwenden Sie die Website zum Nachverfolgen von Dokumenten, um Ihre bevorzugte e-Mail-Benachrichtigungs Einstellung zu konfigurieren: Suchen Sie das geschützte Dokument, das Sie > **Einstellungen**  >  
 |**Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**|Diese Option ist nicht mehr verfügbar. Verwenden Sie vom Administrator definierte Schutzeinstellungen, die keinen Offlinezugriff zulassen. Außerdem kann ein Administrator die Gültigkeitsdauer der Nutzungslizenz für Ihren Mandanten durch Ausführen von [Set-aipservicemaxuselicensevaliditytime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime)verringern.
 |**Verwendung nachverfolgen** in Outlook|Der Zugriff auf die Website zum Nachverfolgen von Dokumenten aus Outlook ist nicht mehr verfügbar. Verwenden Sie stattdessen in Word, PowerPoint, Excel oder dem Datei-Explorer die Option **Nachverfolgen und widerrufen**. Oder wechseln Sie in einem Browser direkt zur [Website zum Nachverfolgen von Dokumenten](https://go.microsoft.com/fwlink/?LinkId=529562).
 

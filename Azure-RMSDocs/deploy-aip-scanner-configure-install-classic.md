@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 06/29/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbfa9b0d7a4257f73071f2ff611a4c5fd2394bc0
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: ca7b5c157a2c6d6d1162963053828e895fba1fe8
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568231"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382818"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Konfigurieren und Installieren des Azure Information Protection klassischen Scanner
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
-
->[!NOTE]
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
-> Wenn Sie den Unified-Beschriftungs Scanner verwenden, finden Sie weitere Informationen unter [Installieren und Konfigurieren des Azure Information Protection Unified-Beschriftungs Scanner](deploy-aip-scanner-configure-install.md).
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [Installieren und Konfigurieren des AIP Unified-Beschriftungs Scanners](deploy-aip-scanner-configure-install.md). *
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Vergewissern Sie sich vor dem Konfigurieren und Installieren des Azure Information Protection Scanners, dass Ihr System die [erforderlichen Voraussetzungen](deploy-aip-scanner-prereqs.md)erfüllt.
 
@@ -79,7 +79,7 @@ So konfigurieren Sie Ihren Scanner:
 
     2. Optional können Sie eine Beschreibung für administrative Zwecke angeben, damit Sie den Cluster Namen des Scanners leichter identifizieren können.
 
-    3. Wählen Sie **Speichern**.
+    3. Klicken Sie auf **Speichern**.
 1. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Inhalts Scanaufträge** aus.
 1. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Hinzufügen** aus.
 
@@ -109,7 +109,7 @@ So konfigurieren Sie Ihren Scanner:
 
 1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
 
-    Beispiel: 
+    Zum Beispiel: 
 
     - Verwenden Sie für eine Netzwerkfreigabe `\\Server\Folder` . 
     - Verwenden Sie für eine SharePoint-Bibliothek `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
@@ -120,11 +120,11 @@ So konfigurieren Sie Ihren Scanner:
 
     Verwenden Sie die folgende Syntax, wenn Sie SharePoint-Pfade hinzufügen:
     
-    |Pfad  |Syntax  |
+    |`Path`  |Syntax  |
     |---------|---------|
     |**Stammpfad**     | `http://<SharePoint server name>` </br></br>Scannt alle Websites, einschließlich sämtlicher Site Sammlungen, die für den scannerbenutzer zulässig sind. </br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Stamm Inhalten        |
-    |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Eine der folgenden Möglichkeiten: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
-    |**Bestimmte SharePoint-Bibliothek**     | Eine der folgenden Möglichkeiten: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
+    |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<subsite name>` </br>- `http://SharePoint server name>/<site collection name>/<site name>` </br></br>Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
+    |**Bestimmte SharePoint-Bibliothek**     | Einer der folgenden: </br>- `http://<SharePoint server name>/<library name>` </br>- `http://SharePoint server name>/.../<library name>`       |
     |**Bestimmter SharePoint-Ordner**     | `http://<SharePoint server name>/.../<folder name>`        |
     | | |
 
@@ -153,7 +153,7 @@ Nachdem Sie [den Azure Information Protection Scanner im Azure-Portal konfigurie
 
 1. Führen Sie das Cmdlet [install-aipscanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus, und geben Sie dabei die SQL Server Instanz an, auf der eine Datenbank für den Azure Information Protection Scanner erstellt werden soll, und den Namen des scannerclusters, den Sie im vorherigen Abschnitt angegeben haben:
 
-    ```ps
+    ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Profile <cluster name>
     ```
 
@@ -167,7 +167,7 @@ Nachdem Sie [den Azure Information Protection Scanner im Azure-Portal konfigurie
 
     Wenn Sie dazu aufgefordert werden, geben Sie die Anmelde Informationen für das Überprüfungs Dienst Konto ( `\<domain\user name>` ) und das Kennwort an.
 
-1. Vergewissern Sie sich, dass der Dienst jetzt mithilfe der Dienste **Verwaltung** installiert ist  >  **Services**.
+1. Vergewissern Sie sich, dass der Dienst jetzt mithilfe der Dienste **Verwaltung** installiert ist  >  .
 
     Der installierte Dienst heißt **Azure Information Protection-Überprüfung** und ist für die Ausführung mithilfe des von Ihnen erstellten Überprüfungsdienstkontos konfiguriert.
 
@@ -187,15 +187,15 @@ So erhalten Sie ein Azure AD Token:
 
     Führen Sie [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) aus, und geben Sie die Werte an, die Sie aus dem vorherigen Schritt kopiert haben:
 
-    ```ps
+    ```PowerShell
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application> -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application>
     ```
 
     Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
 
-    Beispiel:
+    Zum Beispiel:
 
-    ```powershell
+    ```PowerShell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
     Acquired application access token on behalf of the user
     ```
@@ -234,7 +234,7 @@ Um diese Einstellungen zu ändern, bearbeiten Sie den Auftrag für die Inhalts �
 
     Alternativ können Sie den folgenden Befehl in der PowerShell-Sitzung ausführen:
 
-    ```ps
+    ```PowerShell
     Start-AIPScan
     ```
 
@@ -268,10 +268,10 @@ So richten Sie die unterstützten Dateitypen mit dem Client aus, wobei alle Date
     ![Bearbeiten der Registrierung für die Überprüfung zum Anwenden von Schutz](./media/editregistry-scanner.png)
 
     > [!NOTE]
-    > Als Bilddatei unterstützen TIFF-Dateien den systemeigenen Schutz und die resultierende Dateinamenerweiterung **. ptiff.**
+    > Als Bilddatei unterstützen TIFF-Dateien den systemeigenen Schutz und die resultierende Dateinamenerweiterung **. ptiff**.
     >
 
-    Geben Sie für Dateien, die den nativen Schutz nicht unterstützten, die Erweiterung als einen neuen Schlüssel und **PFILE** für den generischen Schutz an. Die resultierende Dateinamenerweiterung für die geschützte Datei lautet " **Pfile".**
+    Geben Sie für Dateien, die den nativen Schutz nicht unterstützten, die Erweiterung als einen neuen Schlüssel und **PFILE** für den generischen Schutz an. Die resultierende Dateinamenerweiterung für die geschützte Datei lautet " **Pfile**".
 
 Eine Liste mit Text-und Bild Dateitypen, die auf ähnliche Weise systemeigenen Schutz unterstützen, aber in der Registrierung angegeben werden müssen, finden Sie [unter Unterstützte Dateitypen für Klassifizierung und Schutz](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
@@ -294,7 +294,7 @@ Wenn Sie z. b. einen neuen Dateityp in mehreren SharePoint-Daten Depots haben, k
 
 So führen Sie Massen Änderungen in mehreren Depots durch:
 
-1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Beispiel:
+1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Zum Beispiel:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportieren der Datenrepositoryeinstellungen für den Scanner":::
 
@@ -317,8 +317,8 @@ In dieser Konfiguration werden alle nicht gekennzeichneten Dateien im Repository
 
 Konfigurieren Sie die folgenden Einstellungen:
 
-- Bezeichnungs **Dateien basierend auf dem Inhalt:** Auf **Off** festgelegt
-- **Standard Bezeichnung:** Legen Sie auf **Custom** fest, und wählen Sie die zu verwendende Bezeichnung aus.
+- Bezeichnungs **Dateien basierend auf dem Inhalt**: auf **Off** festgelegt
+- **Standard Bezeichnung**: Legen Sie auf **Custom** fest, und wählen Sie dann die zu verwendende Bezeichnung aus.
 
 ### <a name="identify-all-custom-conditions-and-known-sensitive-information-types"></a>Alle benutzerdefinierten Bedingungen und bekannten sensiblen Informationstypen identifizieren
 
@@ -338,14 +338,14 @@ Weitere Informationen [finden Sie unter Schnellstart: finden Sie heraus, welche 
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |BESCHREIBUNG  |
+|Option  |Beschreibung  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. </br></br>Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. </br></br>Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. </br></br>Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
 |**Installieren mehrerer Instanzen des Scanners** | Der Azure Information Protection Scanner unterstützt mehrere Konfigurations Datenbanken auf derselben SQL Server-Instanz, wenn Sie einen benutzerdefinierten Cluster Namen (Profil) für die Überprüfung angeben. |
 |**Erteilen spezifischer Rechte und Deaktivieren der Ebene mit niedriger Integrität**|Vergewissern Sie sich, dass das Dienst Konto, unter dem die Überprüfung ausgeführt wird, nur über die unter [Dienst Kontoanforderungen](deploy-aip-scanner-prereqs.md#service-account-requirements)dokumentierten Rechte verfügt </br></br>Konfigurieren Sie dann die [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) , um die Ebene mit niedriger Integrität für die Überprüfung zu deaktivieren.|
 |**Überprüfen Sie Ihre alternative Konfigurations Verwendung** |Die Überprüfung wird schneller ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der eine Standardbezeichnung auf alle Dateien angewendet wird, ohne dass die Dateiinhalte überprüft werden. <br/></br>Die Überprüfung wird langsamer ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der alle benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen identifiziert werden.|
-|**Überprüfungs Timeouts verringern** | Verringern Sie die Überprüfungs Timeouts mit [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). Reduzierte Überprüfungs Timeouts bieten bessere Scan Raten und einen geringeren Speicherverbrauch. </br></br>**Hinweis:** Das Verringern der Überprüfungs Timeouts bedeutet, dass einige Dateien möglicherweise ausgelassen werden.
+|**Überprüfungs Timeouts verringern** | Verringern Sie die Überprüfungs Timeouts mit [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner). Reduzierte Überprüfungs Timeouts bieten bessere Scan Raten und einen geringeren Speicherverbrauch. </br></br>**Hinweis**: das Verringern von Überprüfungs Timeouts bedeutet, dass einige Dateien möglicherweise ausgelassen werden.
 | | |
 
 
@@ -358,7 +358,7 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Lade-/Antwort-Zeiten**     |Die aktuellen Lade-und Antwortzeiten der Datenspeicher, die die zu überprüfenden Dateien enthalten, wirken sich auch auf die Leistung des Scanners aus.         |
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. </br></br>Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung Ihres Scanners kann beeinträchtigt werden, wenn Sie Änderungen an den Bedingungen in der Azure Information Protection Richtlinie vorgenommen haben. </br></br>Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. </br></br>Wenn Sie die Bedingungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Beispiel: </br>-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
+|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Zum Beispiel: </br>-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
 |**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. </br></br>-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. </br></br>-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
@@ -401,10 +401,10 @@ Nachdem Sie Ihren Scanner installiert und konfiguriert haben, können Sie mit [d
 
 Siehe auch: bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).
 
-**Weitere Informationen:**
+**Weitere Informationen**:
 
 Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Vielleicht Fragen Sie sich: [worin besteht der Unterschied zwischen der Windows Server-FCI und der Azure Information Protection Scanner?](faqs-classic.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md).

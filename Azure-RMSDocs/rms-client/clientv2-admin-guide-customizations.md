@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
@@ -13,20 +13,20 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 25dfd0eb9fe2708e90f04a3bc7203dc8ecde5bcc
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 2b4f7842ddc33ae170d756fa132883ac1fe8f07a
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97385640"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-customizations.md). *
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die für bestimmte Szenarien oder Benutzer erforderlich sind, wenn Sie den einheitlichen AIP-Beschriftungs Client verwalten.
 
@@ -524,7 +524,7 @@ Verwenden Sie eine zusätzliche erweiterte Client Einstellung mit dem Namen **po
 Wenn Sie benutzerdefinierte Layouts in PowerPoint konfiguriert haben, ist das Standardverhalten, dass die in benutzerdefinierten Layouts gefundenen Formen ignoriert werden. Um externe Inhalts Markierungen explizit aus den benutzerdefinierten Layouts zu entfernen, legen Sie die erweiterte **removeexternalmarkingfromcustomlayouts** -Eigenschaft auf **true fest.**
 
 > [!NOTE]
-> PowerPoint-Shape-Typen, die für die erweiterten Client Einstellungen unterstützt werden, die in diesem Abschnitt beschrieben werden, sind: **msotextbox,** **msotexteffect** und **msoplachalter** .
+> PowerPoint-Shape-Typen, die für die erweiterten Client Einstellungen unterstützt werden, die in diesem Abschnitt beschrieben werden, sind: **msotextbox**, **msotexteffect** und **msoplachalter** .
 >
 ##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Suchen Sie den Namen der Form, die Sie als Kopf-oder Fußzeile verwenden.
 
@@ -534,7 +534,7 @@ Wenn Sie benutzerdefinierte Layouts in PowerPoint konfiguriert haben, ist das St
 
 Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel **PowerPointShapeNameToRemove** anzugeben. 
 
-**Beispiel:** Der Name der Form ist **FC**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
+**Beispiel**: der Name der Form ist **FC**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
 
 - Key: **PowerPointShapeNameToRemove**
 
@@ -696,7 +696,7 @@ Wenn sich die Popup Meldungen für eine bestimmte Bezeichnung befinden, können 
 Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden Sie im Video [Azure Information Protection Outlook-Popup Konfiguration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 > [!TIP]
-> Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie),** konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
+> Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie)**, konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
 
@@ -773,7 +773,7 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
 
 Nehmen wir beispielsweise an, Sie haben die erweiterte Client Einstellung " **outlookblockuntreudkollaborationlabel** " für die Bezeichnung " **vertraulich\alle Mitarbeiter** " angegeben. 
 
-Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookblocktreuddomains** " mit **contoso.com an.** Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, `john@sales.contoso.com` Wenn er als **vertraulich \ alle Mitarbeiter** bezeichnet wird. es wird jedoch blockiert, eine e-Mail mit derselben Bezeichnung an ein Gmail-Konto zu senden.
+Nun geben Sie die zusätzliche erweiterte Client Einstellung " **outlookblocktreuddomains** " mit **contoso.com** an. Dies hat zur Folge, dass ein Benutzer eine e-Mail an senden kann, `john@sales.contoso.com` Wenn er als **vertraulich \ alle Mitarbeiter** bezeichnet wird. es wird jedoch blockiert, eine e-Mail mit derselben Bezeichnung an ein Gmail-Konto zu senden.
 
 PowerShell-Beispiel Befehle, deren Bezeichnung "Global" lautet:
 
@@ -1416,7 +1416,7 @@ AIP-Administratoren können die Popup Meldungen anpassen, die Endbenutzern in Ou
 > Es wird empfohlen, in der Produktionsumgebung Probleme zu vermeiden, indem Sie *entweder* die erweiterte Eigenschaft **OutlookUnlabeledCollaborationAction** verwenden, um Ihre Regeln zu definieren, *oder* komplexe Regeln mit einer JSON-Datei wie unten beschrieben definieren, aber nicht beides.
 >
 
-**So passen Sie Outlook-Popup Meldungen an:**
+So **passen Sie Outlook-Popup Meldungen an**:
 
 1. Erstellen Sie **JSON** -Dateien mit einer Regel, die konfiguriert, wie Outlook Popup Nachrichten für Ihre Benutzer anzeigt. Weitere Informationen finden Sie unter [Regel Wert. JSON-Syntax](#rule-value-json-syntax) und [Beispiel-Popup-Anpassungs Datei. JSON-Code](#sample-popup-customization-json-code).
 
@@ -1442,9 +1442,9 @@ AIP-Administratoren können die Popup Meldungen anpassen, die Endbenutzern in Ou
 
    
 > [!TIP]
-> Benennen Sie Ihre Datei für zusätzliche Organisationen mit der gleichen Zeichenfolge wie der Schlüssel, der in Ihrem PowerShell-Befehl verwendet wird. Benennen Sie z. b. die Datei **OutlookCollaborationRule_1.js,** und verwenden Sie **OutlookCollaborationRule_1** als Schlüssel.
+> Benennen Sie Ihre Datei für zusätzliche Organisationen mit der gleichen Zeichenfolge wie der Schlüssel, der in Ihrem PowerShell-Befehl verwendet wird. Benennen Sie z. b. die Datei **OutlookCollaborationRule_1.js**, und verwenden Sie **OutlookCollaborationRule_1** als Schlüssel.
 >
-> Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie),** konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
+> Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie)**, konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
 > 
 
 ### <a name="ordering-your-outlook-customization-rules"></a>Bestellen der Outlook-Anpassungsregeln
@@ -1453,7 +1453,7 @@ AIP verwendet die Seriennummer in dem eingegebenen Schlüssel, um die Reihenfolg
 
 Sobald eine bestimmte Regel Übereinstimmung gefunden wird, beendet AIP die Verarbeitung der Regeln und führt die der abgleichsregel zugeordnete Aktion aus. (**Erste Übereinstimmung >** Beendigungs Logik)
     
-**Beispiel:**
+**Beispiel**:
 
 Nehmen wir an, Sie möchten alle **internen** e-Mails mit einer bestimmten **Warn** Meldung konfigurieren, aber Sie sollten Sie nicht in der Regel blockieren. Allerdings möchten Sie, dass Benutzer Anlagen, die als **geheim** klassifiziert sind, auch als **interne** e-Mails blockieren. 
 
@@ -1485,11 +1485,11 @@ Zu den unterstützten Knoten Typen gehören:
 |---------|---------|
 | **Und**   | Führt *und* für alle untergeordneten Knoten aus.     |
 | **Oder**    |Führt *oder* für alle untergeordneten Knoten aus.       |
-| **Hätten**   | Führt *nicht* für das eigene untergeordnete Element aus.      |
+| **Not**   | Führt *nicht* für das eigene untergeordnete Element aus.      |
 | **Except**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
-| **SentTo,** gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br />-Wenn das übergeordnete Element **außer ist, überprüft,** ob sich **alle** Empfänger in einer der Domänen befinden.<br />-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
-| **EmailLabel,** gefolgt von Bezeichnung | Eine der folgenden Möglichkeiten:  <br />-Die Bezeichnungs-ID <br />-NULL, wenn keine Bezeichnung             |
-| **Attachmentlabel,** gefolgt von **Label** und **supportedextensions**    | Eine der folgenden Möglichkeiten:  <br /><br />**Fall** <br />-Wenn das übergeordnete Element **außer ist, überprüft,** ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br />-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br />-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br /><br /> **false:** Für alle anderen Fälle 
+| **SentTo**, gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br />-Wenn das übergeordnete Element **außer** ist, überprüft, ob sich **alle** Empfänger in einer der Domänen befinden.<br />-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
+| **EmailLabel**, gefolgt von Bezeichnung | Einer der folgenden:  <br />-Die Bezeichnungs-ID <br />-NULL, wenn keine Bezeichnung             |
+| **Attachmentlabel**, gefolgt von **Label** und **supportedextensions**    | Einer der folgenden:  <br /><br />**true**: <br />-Wenn das übergeordnete Element **außer** ist, überprüft, ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br />-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br />-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br /><br /> **false**: in allen anderen Fällen 
 | | |
 
 #### <a name="rule-action-syntax"></a>Syntax der Regel Aktion
@@ -1509,10 +1509,10 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |BESCHREIBUNG  |
+|Parameter  |Beschreibung  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
-| `${MatchedLabelName}`      | Die **Bezeichnung** "Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
+| `${MatchedLabelName}`      | Die **Bezeichnung**"Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
 | `${MatchedAttachmentName}` | Der Name der Anlage aus der letzten Entsprechung für die **attachmentlabel** -Bedingung. |
 | | |
 
@@ -1869,8 +1869,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookSkipSmimeOnReadingPa
 
 Nachdem Sie den Azure Information Protection Unified Bezeichnung-Client angepasst haben, finden Sie in den folgenden Ressourcen weitere Informationen, die Sie möglicherweise benötigen, um diesen Client zu unterstützen:
 
-- [Clientdateien und Nutzungsprotokollierung](client-admin-guide-files-and-logging.md)
+- [Clientdateien und Nutzungsprotokollierung](clientv2-admin-guide-files-and-logging.md)
 
-- [Unterstützte Dateitypen](client-admin-guide-file-types.md)
+- [Unterstützte Dateitypen](clientv2-admin-guide-file-types.md)
 
-- [PowerShell-Befehle](client-admin-guide-powershell.md)
+- [PowerShell-Befehle](clientv2-admin-guide-powershell.md)
