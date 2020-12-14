@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee493790e4997f8be11244490cf6014c17e6c6fd
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
+ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384229"
+ms.locfileid: "97388387"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -43,7 +43,7 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: vom Azure Inform
 
 ## <a name="known-issues-for-aip-and-exploit-protection"></a>Bekannte Probleme bei AIP und Exploit Protection
 
-Der Azure Information Protection-Client wird auf Computern mit .NET 2 oder 3 nicht unterstützt, auf denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, und führt zu einem Absturz von Office-Apps.
+Der Azure Information Protection-Client wird auf Computern mit .NET 2 oder 3 nicht unterstützt, auf denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, und bewirkt, dass Office-Apps unerwartet Verhalten.
 
 Wenn Sie zusätzlich zu einer .NET 4. x-Version, die für Ihr System erforderlich ist, über eine .NET-Version 2 oder 3 verfügen, sollten Sie den Exploit-Schutz vor der Installation von AIP deaktivieren. 
 
@@ -69,7 +69,7 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 
 ## <a name="aip-known-issues-in-office-applications"></a>In Office-Anwendungen bekannte AIP-Probleme
 
-|Komponente  |Bekannte Probleme  |
+|Funktion  |Bekannte Probleme  |
 |---------|---------|
 |**Mehrere Versionen von Office**    | Die Azure Information Protection-Clients (sowohl der klassische als auch der Client für einheitliche Bezeichnungen) unterstützen nicht mehrere Office-Versionen auf ein und demselben Computer. Auch der Wechsel von Benutzerkonten in Office wird nicht unterstützt.       |
 |**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist: <br><br>-Bei Ihren Office-Apps können Leistungsprobleme auftreten.<br>-Die Azure Information Protection Leiste kann in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt werden. <br><br>Um eine konsistente Leistung sicherzustellen und die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus, um das beste Aussehen** zu erzielen.    |
@@ -95,7 +95,7 @@ Das Veröffentlichen von Richtlinien kann bis zu 24 Stunden dauern.
     
     :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
     
-       Weitere Informationen finden Sie unter
+    Weitere Informationen finden Sie unter:
 
     - [**Einheitlicher** Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)
     - [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
