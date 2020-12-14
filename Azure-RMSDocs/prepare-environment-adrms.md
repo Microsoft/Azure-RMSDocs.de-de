@@ -1,8 +1,8 @@
 ---
 title: Vorbereiten der Umgebung für Azure RMS und AD RMS
 description: Leitfaden für Administratoren, wenn Sie Azure Rights Management mit AD RMS bereitgestellt haben.
-author: mlottner
-ms.author: mlottner
+author: batamig
+ms.author: bagol
 manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
@@ -13,23 +13,25 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f4bbef451f161f40d29a7a890161592db76373a5
-ms.sourcegitcommit: 24c97b58849af4322d3211b8d3165734d5ad6c88
+ms.openlocfilehash: 45423a4ac7fa81d5171e260d14170bae07428ad9
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "95567781"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386371"
 ---
-# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management bei AD RMS
+# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management, wenn Sie über AD RMS verfügen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client und klassischer Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!IMPORTANT]
 > Anleitung für die Verwendung der Active Directory Rights Management Services (AD RMS)
 
 Die Kombination aus Azure Rights Management-Dienst aktiviert und Azure Rights Management Services (AD RMS) ist nicht kompatibel. Ohne zusätzliche Schritte werden einige Computer eventuell automatisch mithilfe des Azure Rights Management-Diensts gestartet und mit Ihrem AD RMS-Cluster verbunden. Dieses Szenario wird nicht unterstützt und hat unzuverlässige Ergebnisse zur Folge. Es ist daher wichtig, dass Sie weitere Schritte ausführen. 
 
-**So prüfen Sie, ob Sie AD RMS bereitgestellt haben**:
+So **Überprüfen Sie, ob Sie AD RMS** bereitgestellt haben:
 
 1. Obwohl dies optional ist, veröffentlichen die meisten AD RMS-Bereitstellungen den Dienstverbindungspunkt in Active Directory, sodass Domänencomputer den AD RMS-Cluster erkennen können. 
     

@@ -13,19 +13,21 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24479014fcbd0bd93b65d6958d004deb9c7e0c95
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 35c898ded852970e380c8061ba8f97d040860017
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "95568102"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386388"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Der Azure Information Protection-Mandantenschlüssel ist ein Stammschlüssel für Ihre Organisation. Andere Schlüssel können von diesem Stamm Schlüssel abgeleitet werden, einschließlich Benutzer Schlüsseln, Computer Schlüsseln oder Dokument Verschlüsselungsschlüsseln. Wenn Azure Information Protection diese Schlüssel für Ihre Organisation verwendet, werden Sie kryptografisch mit Ihrem Azure Information Protection root-Mandanten Schlüssel verkettet.
 
@@ -38,15 +40,10 @@ Der Stamm Schlüssel Ihres Mandanten kann wie folgt lauten:
 - [Von Microsoft generiert](#tenant-root-keys-generated-by-microsoft)
 - Wird von Kunden mit [Bring your own Key-Schutz (Byok)](#bring-your-own-key-byok-protection) generiert.
 
-Lokale Schlüssel Verwaltungen unterscheiden sich für jeden AIP-Clienttyp. Wenn Sie über äußerst sensiblen Inhalt verfügen, der zusätzlichen lokalen Schutz erfordert, verwenden Sie eine der folgenden Methoden:
-
-- [Hold Your Own Key (Hyok)](#hold-your-own-key-hyok-aip-classic-client-only) (nur klassischer Client)
-- [Double Key Encryption (DKE)](#double-key-encryption-dke-aip-unified-labeling-client-only) (einheitlicher Bezeichnungs Client)
-
-Inhalt kann nur dann mit dem Hyok-Schutz verschlüsselt werden, wenn Sie über den klassischen Client verfügen. Wenn Sie jedoch Hyok-geschützte Inhalte haben, können Sie Sie sowohl im klassischen als auch im einheitlichen Bezeichnungs Client anzeigen. 
+Wenn Sie über äußerst sensiblen Inhalt verfügen, der zusätzlichen, lokalen Schutz erfordert, empfehlen wir die Verwendung von [Double Key Encryption (DKE)](#double-key-encryption-dke).
 
 > [!TIP]
-> Der Unterschied zwischen dem klassischen Client und dem Unified-Bezeichnungs Client ist nicht sicher? Weitere Informationen finden Sie in diesen [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients).
+> Wenn Sie den klassischen Client verwenden und zusätzlichen lokalen Schutz benötigen, verwenden Sie stattdessen [Hold Your Own Key (Hyok)](#hold-your-own-key-hyok) .
 >
 
 ## <a name="tenant-root-keys-generated-by-microsoft"></a>Von Microsoft generierte Mandanten Stamm Schlüssel
@@ -72,21 +69,9 @@ Weitere Informationen finden Sie unter [Konfigurieren des Byok-Schutzes](byok-pr
 
 Nachdem Sie die Konfiguration durchgeführt haben, fahren Sie [mit dem ersten Einstieg in ihren](get-started-tenant-root-keys.md) Mandanten Stamm Schlüssel fort, um weitere Informationen zum verwenden und Verwalten Ihres Schlüssels
 
-## <a name="hold-your-own-key-hyok-aip-classic-client-only"></a>Hold Your Own Key (Hyok) (nur AIP Classic Client)
+## <a name="double-key-encryption-dke"></a>Double Key Encryption (DKE)
 
-Hyok-Protection verwendet einen Schlüssel, der von Kunden erstellt und gespeichert wird, an einem Standort, der von der Cloud isoliert ist. Da Hyok-Protection nur den Zugriff auf Daten für lokale Anwendungen und Dienste ermöglicht, verfügen Kunden, die Hyok verwenden, auch über einen cloudbasierten Schlüssel für clouddokumente.
-
-Verwenden Sie Hyok für folgende Dokumente:
-
-- Auf nur wenige Personen beschränkt
-- Nicht freigegeben außerhalb der Organisation
-- Werden nur im internen Netzwerk verwendet.
-
-Diese Dokumente verfügen in der Regel über die höchste Klassifizierung in Ihrer Organisation, als "Oberstes Geheimnis".
-
-Weitere Informationen finden Sie unter [Hold Your Own Key (Hyok) Details](configure-adrms-restrictions.md).
-
-## <a name="double-key-encryption-dke-aip-unified-labeling-client-only"></a>Double Key Encryption (DKE) (nur AIP Unified Bezeichnung Client)
+**Relevant für**: nur AIP Unified Bezeichnung Client
 
 Der DKE-Schutz bietet zusätzliche Sicherheit für Ihre Inhalte, indem zwei Schlüssel verwendet werden: eine, die von Microsoft in Azure erstellt und gespeichert wird, und eine andere, die vom Kunden erstellt und gespeichert wird.
 
@@ -105,3 +90,22 @@ Verwenden Sie DKE, wenn Ihre Organisation:
 > Der DKE-Schutz erfordert sowohl den von Microsoft gehaltenen Schlüssel als auch den Kundenschlüssel, um geschützte Inhalte zu entschlüsseln.
 
 Weitere Informationen finden Sie unter [doppelte Schlüssel Verschlüsselung](/microsoft-365/compliance/double-key-encryption) in der Microsoft 365-Dokumentation.
+
+## <a name="hold-your-own-key-hyok"></a>Hold Your Own Key (Hyok)
+
+**Relevant für**: nur AIP Classic Client
+
+Hyok-Protection verwendet einen Schlüssel, der von Kunden erstellt und gespeichert wird, an einem Standort, der von der Cloud isoliert ist. Da Hyok-Protection nur den Zugriff auf Daten für lokale Anwendungen und Dienste ermöglicht, verfügen Kunden, die Hyok verwenden, auch über einen cloudbasierten Schlüssel für clouddokumente.
+
+Verwenden Sie Hyok für folgende Dokumente:
+
+- Auf nur wenige Personen beschränkt
+- Nicht freigegeben außerhalb der Organisation
+- Werden nur im internen Netzwerk verwendet.
+
+Diese Dokumente verfügen in der Regel über die höchste Klassifizierung in Ihrer Organisation, als "Oberstes Geheimnis".
+
+Inhalt kann nur dann mit dem Hyok-Schutz verschlüsselt werden, wenn Sie über den klassischen Client verfügen. Wenn Sie jedoch Hyok-geschützte Inhalte haben, können Sie Sie sowohl im klassischen als auch im einheitlichen Bezeichnungs Client anzeigen.  
+
+Weitere Informationen finden Sie unter [Hold Your Own Key (Hyok) Details](configure-adrms-restrictions.md).
+
