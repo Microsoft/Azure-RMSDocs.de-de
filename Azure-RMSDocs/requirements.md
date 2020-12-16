@@ -13,16 +13,18 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d750edb4aef5bf0b2c546598bb3007f609e50cf4
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849693"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386218"
 ---
 # <a name="azure-information-protection-requirements"></a>Anforderungen an Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>****Gilt für:** _[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)_
+>
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen AIP-Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Bevor Sie Azure Information Protection bereitstellen, stellen Sie sicher, dass Ihr System folgende Voraussetzungen erfüllt:
 
@@ -36,7 +38,7 @@ Bevor Sie Azure Information Protection bereitstellen, stellen Sie sicher, dass I
 
 Je nachdem, welche Azure Information Protection-Features Sie verwenden werden, benötigen Sie eins der folgenden Elemente:
 
-- **Einen [Azure Information Protection-Plan](https://azure.microsoft.com/pricing/details/information-protection/)** . Erforderlich für die Klassifizierung, Bezeichnung und den Schutz über den Azure Information Protection-Scanner oder -Client (klassische oder einheitliche Bezeichnungen)
+- **Einen [Azure Information Protection-Plan](https://azure.microsoft.com/pricing/details/information-protection/)** . Erforderlich für die Klassifizierung, Bezeichnung und den Schutz über den Azure Information Protection-Scanner oder -Client
 
 - **Einen [Office 365-Plan, der Azure Information Protection einschließt](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)** . Nur für den Schutz erforderlich.
 
@@ -85,7 +87,7 @@ Computer oder mobile Geräte von Benutzern müssen ein Betriebssystem ausführen
 
 ### <a name="supported-operating-systems-for-client-devices"></a>Unterstützte Betriebssysteme für Clientgeräte
 
-Die folgenden Betriebssysteme unterstützen sowohl den Azure Information Protection-Client für einheitliche Bezeichnungen als auch den Azure Information Protection-Client: 
+Die Azure Information Protection-Clients werden von den folgenden Windows-Betriebssystemen unterstützt:
 
 - **Windows 10** (x86, x64). Handschriftliche Einträge werden im Windows 10 RS4-Build und höher nicht unterstützt.
  
@@ -98,8 +100,6 @@ Die folgenden Betriebssysteme unterstützen sowohl den Azure Information Protect
 - **Windows Server 2016**
 
 - **Windows Server 2012 R2** und **Windows Server 2012**
-
-[Beide Clients](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients) ermöglichen Benutzern das Klassifizieren und Bezeichnen ihrer Dokumente und E-Mails.
 
 Weitere Informationen zur Unterstützung in früheren Windows-Versionen erhalten Sie von Ihrem Microsoft-Kontobeauftragten oder einem Microsoft-Supportmitarbeiter.
 
@@ -152,13 +152,13 @@ Die Azure Information Protection-Clients können Dokumente und E-Mails bezeichne
 
 Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Bei diesen Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt. Bezeichnungen, die Schutz anwenden, werden für Benutzer nicht angezeigt. 
 
-Andernfalls würden diese Bezeichnungen in der Azure Information Protection-Leiste oder im Client für einheitliche Bezeichnungen im Office-Menüband angezeigt (über die Schaltfläche **Schützen** im klassischen Client oder die Schaltfläche **Vertraulichkeit** im Client für einheitliche Bezeichnungen). 
+Bezeichnungen werden in einer Leiste oben im Office-Dokument angezeigt, auf die Sie über die Schaltfläche **Sensitivity** (Vertraulichkeit) im Client für einheitliche Bezeichnungen oder über die Schaltfläche **Protect** (Schutz) im klassischen Client zugreifen können.
 
 Weitere Informationen finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](requirements-applications.md).
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Nicht unterstützte Office-Features und -Funktionen
 
-- Die Azure Information Protection-Clients (sowohl der klassische als auch der Client für einheitliche Bezeichnungen) unterstützen nicht mehrere Office-Versionen auf ein und demselben Computer. Auch der Wechsel von Benutzerkonten in Office wird nicht unterstützt.
+- Die Azure Information Protection-Clients für Windows unterstützen nicht mehrere Office-Versionen auf demselben Computer. Auch der Wechsel von Benutzerkonten in Office wird nicht unterstützt.
 
 - Das Office-Feature [Seriendruck](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) wird mit keinem Azure Information Protection-Feature unterstützt.
 
@@ -176,7 +176,7 @@ Für Azure Information Protection gelten die folgenden zusätzlichen Voraussetzu
 
     - **Pfad**: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIP\`
     - **Schlüssel**: `UseDefaultCredentialsInProxy`
-    - **Typ**: `DWORD`
+    - **Typ:** `DWORD`
     - **Wert**: `1`
     
 - **TLS-Verbindungen zwischen Client und Dienst**. Beenden Sie keine TLS-Client-zu-Dienst-Verbindungen (z. B. zur Durchführung von Überprüfungen auf Paketebene) mit der URL **aadrm.com**. Ansonsten wird die Anheftung von Zertifikaten beendet, die von RMS-Clients für von Microsoft verwaltete Zertifizierungsstellen verwendet wird, um die Kommunikation mit dem Azure Rights Management-Dienst zu schützen.

@@ -8,16 +8,16 @@ metadata:
   ms.service: information-protection
   ms.topic: landing-page
   ms.collection: M365-security-compliance
-  author: mlottner
-  ms.author: mlottner
+  author: batamig
+  ms.author: bagol
   manager: rkarlin
-  ms.date: 04/02/2019
-  ms.openlocfilehash: a2f73c9aa0207af5b7ba77b3b53c271eb8722cb2
-  ms.sourcegitcommit: 1086cf04a29bb12cdb25c1fd8429f93d423bcc69
+  ms.date: 12/08/2020
+  ms.openlocfilehash: ef5cc6624b8d6e1af2750ebf1f4fbb5c54f72dd2
+  ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/09/2020
-  ms.locfileid: "94379162"
+  ms.lasthandoff: 12/14/2020
+  ms.locfileid: "97382138"
 landingContent:
 - title: Informationen zu Azure Information Protection
   linkLists:
@@ -27,12 +27,10 @@ landingContent:
       url: what-is-information-protection.md
     - text: Häufig gestellte Fragen
       url: faqs.md
-- title: Erste Schritte
-  linkLists:
-  - linkListType: overview
-    links:
     - text: Anforderungen
       url: requirements.md
+- title: Erste Schritte
+  linkLists:
   - linkListType: quickstart
     links:
     - text: Bereitstellen des Clients für einheitliche Bezeichnungen
@@ -45,28 +43,38 @@ landingContent:
       url: tutorial-scan-networks-and-content.md
     - text: Verhindern von übermäßiger Freigabe
       url: tutorial-preventing-oversharing.md
+  - linkListType: how-to-guide
+    links:
+    - text: Anzeigen geschützter Nicht-Office-Dateien
+      url: ./rms-client/clientv2-view-use-files.md
+    - text: Schrittanleitungen für gängige Szenarien
+      url: how-to-guides.md
 - title: Immer auf dem Laufenden bleiben
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Die Top 5 der empfohlenen Ignite-Sessions
-      url: what-is-information-protection.md#additional-resources
-    - text: Neueste Version des Clients für einheitliche Bezeichnungen
+    - text: Wichtigste empfohlene Ignite-Veranstaltungen
+      url: what-is-information-protection.md#top-ignite-sessions
+    - text: Neuerungen im AIP-Client für einheitliche Bezeichnungen
       url: ./rms-client/unifiedlabelingclient-version-release-history.md
 - title: Klassifizieren und Schützen von Daten in lokalen Datenspeichern
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Informationen zum lokalen AIP-Scanner
+      url: deploy-aip-scanner.md
   - linkListType: how-to-guide
     links:
-    - text: Bereitstellen des Scanners
-      url: deploy-aip-scanner.md
+    - text: Konfigurieren und Installieren des Scanners
+      url: deploy-aip-scanner-configure-install.md
+    - text: Ausführen des Scanners
+      url: deploy-aip-scanner-manage.md
 - title: Anpassen des Clients
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 'Client für einheitliche Bezeichnungen: Erweiterte Einstellungen'
+    - text: Erweiterte Einstellungen für den Client für einheitliche Bezeichnungen
       url: ./rms-client/clientv2-admin-guide-customizations.md
-    - text: 'Klassischer Client: Erweiterte Einstellungen'
-      url: ./rms-client/client-admin-guide-customizations.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -87,15 +95,21 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Auswählen des Clients für Bezeichnungen
-      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+    - text: Auswählen Ihrer Windows-Lösung für Bezeichnungen
+      url: ./rms-client/use-client.md#choose-your-windows-labeling-solution
+  - linkListType: tutorial
+    links:
+    - text: Migrieren zur Lösung für einheitliche Bezeichnungen
+      url: tutorial-migrating-to-ul.md
   - linkListType: how-to-guide
     links:
-    - text: Migrieren zum Client für einheitliche Bezeichnungen
-      url: tutorial-migrating-to-ul.md
+    - text: Migrieren von AIP-Bezeichnungen zu einheitlichen Vertraulichkeitsbezeichnungen
+      url: configure-policy-migrate-labels.md
 - title: Überwachen der Nutzung von Bezeichnungen und Ermitteln vertraulicher Informationen
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Zentrale Berichterstellung
       url: reports-aip.md
+    - text: Referenz zum Überwachungsprotokoll
+      url: audit-logs.md

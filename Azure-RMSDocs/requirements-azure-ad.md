@@ -12,16 +12,18 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 1dfb6879533e4bb567f97d56a88cd1df2915e338
-ms.sourcegitcommit: d01580c266de1019de5f895d65c4732f2c98456b
+ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92178177"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386235"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Zusätzliche Azure AD-Anforderungen für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen AIP-Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Ein [Azure AD-Verzeichnis ist eine Anforderung](requirements.md#azure-active-directory) für die Verwendung von Azure Information Protection. Verwenden Sie ein Konto aus einem Azure AD-Verzeichnis, um sich beim Azure-Portal anzumelden, wo Sie Azure Information Protection-Einstellungen konfigurieren können.
 
@@ -31,9 +33,16 @@ In den folgenden Abschnitten werden zusätzliche Azure Information Protection- u
 
 ## <a name="computers-running-office-2010"></a>Computer mit Office 2010
 
-Zusätzlich zu einem Azure AD-Konto sind für Computer, auf denen Microsoft Office 2010 ausgeführt wird, der [Azure Information Protection-Client für einheitliche Bezeichnungen](./rms-client/aip-clientv2.md) oder der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) für die Authentifizierung bei Azure Information Protection und beim zugehörigen Datenschutzdienst (Azure Rights Management) erforderlich.
+Neben einem Azure AD-Konto benötigen Computer mit Office 2010 den Azure Information Protection-Client für Windows, um sich bei Azure Information Protection sowie dessen Datenschutzdienst Azure Rights Management zu authentifizieren. 
 
 Wenn Ihre Benutzerkonten verbunden sind (wenn Sie z. B. AD FS verwenden), müssen diese Computer die integrierte Windows-Authentifizierung verwenden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
+
+Es wird empfohlen, den Azure Information Protection-Client für einheitliche Bezeichnungen bereitzustellen. Wenn Sie noch kein Upgrade durchgeführt haben, ist möglicherweise weiterhin der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) in Ihrem System bereitgestellt. Weitere Informationen finden Sie unter [Die Clientseite von Azure Information Protection](rms-client/use-client.md).
+
+> [!NOTE]
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. 
+>
+> In diesem Zeitraum haben alle aktuellen Azure Information Protection-Kunden die Möglichkeit, zur Microsoft Information Protection-Lösung für einheitliche Bezeichnungen zu wechseln. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>Unterstützung für die zertifikatbasierte Authentifizierung
 
@@ -45,7 +54,7 @@ Weitere Informationen finden Sie unter [Erste Schritte mit der zertifikatbasiert
 
 Damit Sie die mehrstufige Authentifizierung mit Azure Information Protection verwenden können, ist mindestens eine der folgenden Komponenten erforderlich:
 
-- **Microsoft Office,** Version 2013 oder höher
+- **Microsoft Office**, Version 2013 oder höher
 - **Ein Azure Information Protection-Client**. Es gibt keine Mindestversion. Die Azure Information Protection-Clients für Windows sowie die Viewer-Apps für IOS und Android unterstützen die mehrstufige Authentifizierung.
 - **Die Microsoft Rights Management-Freigabeanwendung für Mac-Computer**. Die Microsoft Rights Management-Freigabeanwendung unterstützt seit September 2015 die mehrstufige Authentifizierung.
 
@@ -92,7 +101,7 @@ Weitere Informationen finden Sie unter
 
 Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
 
-## <a name="authenticating-on-premises-using-adfs-or-another-authentication-provider"></a>Lokales Authentifizieren mithilfe von AD FS oder eines anderen Authentifizierungsanbieters
+## <a name="authenticating-on-premises-using-ad-fs-or-another-authentication-provider"></a>Lokales Authentifizieren mithilfe von AD FS oder eines anderen Authentifizierungsanbieters
 
 Wenn Sie ein mobiles Gerät oder einen Mac-Computer verwenden, der lokal mithilfe von AD FS oder einem vergleichbaren Authentifizierungsanbieter authentifiziert wird, müssen Sie AD FS mit einer der folgenden Konfigurationen verwenden:
 
