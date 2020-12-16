@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: abad66a1e62a4e70bc4d5a9452b47abd7dd23004
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f4ae6c5addbea7293192b085bade9f17b798c23c
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382002"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583590"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -55,7 +55,7 @@ Wenn Sie den klassischen Client verwenden, verwenden Sie den Azure-Portal. Weite
 >[!IMPORTANT]
 > Am Ende dieser Migration kann der AD RMS Cluster nicht mit Azure Information Protection und der Option hold your own Key ([Hyok](configure-adrms-restrictions.md)) verwendet werden. Wenn Sie den klassischen Client mit Hyok verwenden, muss der AD RMS Cluster, den Sie verwenden, aufgrund der nun vorhandenen Umleitungen über unterschiedliche Lizenzierungs-URLs für diejenigen in den Clustern verfügen, die Sie migriert haben.
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Zusätzliche Konfiguration für Computer, auf denen Office 2010 ausgeführt wird
+### <a name="additional-configuration-for-computers-that-run-office-2010"></a>Zusätzliche Konfiguration für Computer, auf denen Office 2010 ausgeführt wird
 
 Wenn migrierte Clients Office 2010 ausführen, kann es bei Benutzern zu Verzögerungen beim Öffnen geschützter Inhalte kommen, wenn die Bereitstellung der AD RMS Server aufgehoben wird. Oder Benutzer sehen möglicherweise Nachrichten, dass Sie nicht über Anmelde Informationen zum Öffnen geschützter Inhalte verfügen. Um diese Probleme zu beheben, erstellen Sie eine Netzwerk Umleitung für diese Computer, die den AD RMS URL-FQDN an die lokale IP-Adresse des Computers (127.0.0.1) umleitet. Hierzu können Sie die lokale Hosts-Datei auf jedem Computer oder mithilfe von DNS konfigurieren.
 
@@ -71,6 +71,7 @@ Umleitung über DNS:
 
 - Erstellen Sie einen neuen Host (a)-Datensatz für den AD RMS URL-voll qualifizierten Namen, der die IP-Adresse 127.0.0.1 aufweist.
 
+Weitere Informationen zu AIP und Office 2010 finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11 Durchführen der Clientmigrationstasks
 
 Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) erstellt haben.
@@ -124,7 +125,11 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
-Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diese Aufgabe unter folgendem Speicherort: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services Client**
+Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. 
+
+Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diese Aufgabe unter folgendem Speicherort: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services Client**. 
+
+Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12 Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 

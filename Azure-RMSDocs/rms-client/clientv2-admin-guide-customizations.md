@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/23/2020
+ms.date: 12/14/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b4f7842ddc33ae170d756fa132883ac1fe8f07a
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: cbaeca78592e0f5626b183d521644fea6d77084f
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385640"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583454"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -36,7 +36,7 @@ Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die f
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine **Erweiterte Einstellung für die erweiterte Einstellung * Bezeichnung** _.
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine _*_Erweiterte Einstellung_*_ für die Bezeichnung.
@@ -130,12 +130,14 @@ Mit einem der Admin Center, in dem Sie Ihre Vertraulichkeits Bezeichnungen verwa
 
 Wenn für einen Benutzer mehr als eine Bezeichnungs Richtlinie konfiguriert ist, von denen jede möglicherweise unterschiedliche Richtlinien Einstellungen hat, wird die letzte Richtlinien Einstellung gemäß der Reihenfolge der Richtlinien im Admin Center angewendet. Weitere Informationen finden Sie unter [Bezeichnung der Richtlinien Priorität (Reihenfolge wichtig)](/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters) .
 
-Erweiterte Einstellungen für Bezeichnungs Richtlinien werden mithilfe der gleichen Logik angewendet, und zwar mithilfe der letzten Richtlinien Einstellung. 
+Erweiterte Einstellungen für Bezeichnungs Richtlinien werden mithilfe der gleichen Logik angewendet, und zwar mithilfe der letzten Richtlinien Einstellung.
 
 > [!NOTE]
-> Für die Richtlinien Einstellung "Erweiterte Bezeichnung für [outlookdefaultlabel](#set-a-different-default-label-for-outlook) " ist zurzeit eine Ausnahme vorhanden, die es Ihnen ermöglicht, eine andere Standard Bezeichnung für Outlook festzulegen.
+> In der aktuellen GA-Version gibt es eine Ausnahme für die Richtlinien Einstellung " [outlookdefaultlabel](#set-a-different-default-label-for-outlook) Advanced Label", die es Ihnen ermöglicht, eine andere Standard Bezeichnung für Outlook festzulegen.
 > 
-> Wenn Sie Konflikte bei der Einstellung outlookdefaultlabel haben, wird die Konfiguration gemäß der Richtlinien Reihenfolge im Admin Center von der *ersten* Richtlinien Einstellung übernommen.
+> Wenn Sie Konflikte bei der Einstellung [outlookdefaultlabel](#set-a-different-default-label-for-outlook) haben, wird die Konfiguration gemäß der Richtlinien Reihenfolge im Admin Center von der ersten Richtlinien Einstellung übernommen. 
+>
+> Diese Ausnahme wurde als Teil der öffentlichen Vorschau von [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) entfernt.
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Verfügbare erweiterte Einstellungen für Bezeichnungs Richtlinien
 
@@ -153,6 +155,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](/powershel
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |Enablelabelbymailheader|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |Enablelabelbysharepointproperties|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+| Enableoutlookdistributionlistweiterung | [Implementieren von Block Nachrichten für Empfänger in einer Outlook-Verteilerliste](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |Hidebarbydefault|[Information Protection-Leiste in Office-Apps anzeigen](#display-the-information-protection-bar-in-office-apps)|
 |Recht cationtextforusertext | [Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen](#customize-justification-prompt-texts-for-modified-labels) |
 |LogMatchedContent|[Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
@@ -160,6 +163,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](/powershel
 |OutlookBlockUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |Outlookcollaborationrule| [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
+|Outlookgetemailadressssestimeoutmsproperty | [Ändern des Timeouts für das Erweitern einer Verteilerliste in Outlook beim Implementieren von Block Nachrichten für Empfänger in Verteilerlisten](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) |
 |Outlookjustifytreuhänddomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
@@ -170,8 +174,10 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](/powershel
 |OutlookWarnUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |Pfilesupportedextensions|[Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
+| Powerpointremuveallshapesbyshapename|[Entfernen Sie alle Formen eines bestimmten Shape-namens aus den Kopf-und Fußzeilen, anstatt Formen nach Text innerhalb der Form zu entfernen.](#remove-all-shapes-of-a-specific-shape-name) |
+|PowerPointShapeNameToRemove |[Vermeiden Sie das Entfernen von Formen aus PowerPoint, die den angegebenen Text enthalten, und keine Kopf-und Fußzeilen.](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) |
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
-|Removeexternalmarkingfromcustomlayouts | [Entfernen externer Inhalts Markierungen aus benutzerdefinierten Layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)|
+|Removeexternalmarkingfromcustomlayouts|[Entfernen Sie externe Inhalts Markierungen explizit aus Ihren benutzerdefinierten PowerPoint-Layouts.](#extend-external-marking-removal-to-custom-layouts) |
 |ReportAnIssueLink|[Add "Report an Issue" for users ("Problem melden" für Benutzer hinzufügen)](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
@@ -179,6 +185,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](/powershel
 |Sharepointwebrequesttimeout| [Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)|
 |Sharepointfilewebrequesttimeout |[Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)|
 |Usecopyandkonservientschsowner | [Beibehalten von NTFS-Besitzern während der Bezeichnung](#preserve-ntfs-owners-during-labeling-public-preview)
+| | |
 
 PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Richtlinien Einstellungen für eine Bezeichnungs Richtlinie mit dem Namen "Global":
 
@@ -409,7 +416,7 @@ Um diese erweiterte Eigenschaft verwenden zu können, müssen Sie den Namen der 
 
 Vermeiden Sie das Entfernen von Formen, die den zu ignorierenden Text enthalten, indem Sie den Namen aller zu entfernenden Formen definieren und das Überprüfen des Texts in allen Formen vermeiden, bei dem es sich um einen ressourcenintensiven Prozess handelt.
 
-Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wortformen angeben und Word im Schlüsselwert **removeexternalcontentmarkinginapp** enthalten ist, werden alle Formen auf den Text überprüft, den Sie im Wert von **externalcontentmarkingtoremove** angeben. 
+Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wortformen angeben und Word im Schlüsselwert **removeexternalcontentmarkinginapp** enthalten ist, werden alle Formen auf den Text überprüft, den Sie im Wert von [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) angeben. 
 
 So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen:
 
@@ -459,7 +466,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 ```
 
-Sie benötigen dann mindestens eine weitere erweiterte Clienteinstellung, **ExternalContentMarkingToRemove**, um die Inhalte der Kopf- oder Fußzeile anzugeben und diese zu entfernen oder zu ersetzen.
+Sie benötigen dann mindestens eine weitere erweiterte Clienteinstellung, [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove), um die Inhalte der Kopf- oder Fußzeile anzugeben und diese zu entfernen oder zu ersetzen.
 
 ### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Konfigurieren von ExternalContentMarkingToRemove
 
@@ -513,19 +520,66 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRem
 
 #### <a name="optimization-for-powerpoint"></a>Optimierung für PowerPoint
 
-Kopf-und Fußzeilen in PowerPoint werden als Formen implementiert. 
+Kopf-und Fußzeilen in PowerPoint werden als Formen implementiert. Die folgenden erweiterten Einstellungen bieten für die Shape-Typen **msotextbox**, **msotexteffect**, **msoplachalter** und **MsoAutoShape** weitere Optimierungen:
 
-Verwenden Sie eine zusätzliche erweiterte Client Einstellung mit dem Namen **powerpointshapenametoremove**, um das Entfernen von Formen zu vermeiden, die den von Ihnen angegebenen Text enthalten, aber *keine* Kopf-oder Fußzeilen sind. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
+- [PowerPointShapeNameToRemove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)
+- [Removeexternalmarkingfromcustomlayouts](#extend-external-marking-removal-to-custom-layouts)
 
-- Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
+Darüber hinaus kann der [powerpointremuveallshapesbyshapename](#remove-all-shapes-of-a-specific-shape-name) beliebige Form Typen basierend auf dem Shape-Namen entfernen.
 
-- Wenn dieser Wert angegeben wird, werden nur die Formen, die den Form Namen Kriterien entsprechen, sowie Text, der mit der mit **externalcontentmarkingtoremove** bereitgestellten Zeichenfolge übereinstimmt, entfernt.
+Weitere Informationen [finden Sie untersuchen des Namens der Form, die Sie als Kopf-oder Fußzeile verwenden](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer).
 
-Wenn Sie benutzerdefinierte Layouts in PowerPoint konfiguriert haben, ist das Standardverhalten, dass die in benutzerdefinierten Layouts gefundenen Formen ignoriert werden. Um externe Inhalts Markierungen explizit aus den benutzerdefinierten Layouts zu entfernen, legen Sie die erweiterte **removeexternalmarkingfromcustomlayouts** -Eigenschaft auf **true fest.**
+##### <a name="avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers"></a>Vermeiden Sie das Entfernen von Formen aus PowerPoint, die den angegebenen Text enthalten, und keine Kopf-und Fußzeilen.
+
+Verwenden Sie eine zusätzliche erweiterte Client Einstellung mit dem Namen **powerpointshapenametoremove** , um das Entfernen von Formen zu vermeiden, die den von Ihnen angegebenen Text enthalten, aber keine Kopf-oder Fußzeilen sind. 
+
+Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv. 
+
+- Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert [RemoveExternalContentMarkingInApp](#remove-headers-and-footers-from-other-labeling-solutions) eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert [ExternalContentMarkingToRemove](#how-to-configure-externalcontentmarkingtoremove) angeben. 
+
+- Wenn dieser Wert angegeben wird, werden nur die Formen, die den Form Namen Kriterien entsprechen, sowie Text, der mit der mit [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) bereitgestellten Zeichenfolge übereinstimmt, entfernt.
+
+Beispiel:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
+```
+
+##### <a name="extend-external-marking-removal-to-custom-layouts"></a>Erweitern der Entfernung externer Markierungen auf benutzerdefinierte Layouts
+
+Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Standardmäßig werden durch die Logik zum Entfernen externer Inhalts Markierungen benutzerdefinierte, in PowerPoint konfigurierte Layouts ignoriert. Um diese Logik auf benutzerdefinierte Layouts auszuweiten, legen Sie die erweiterte **removeexternalmarkingfromcustomlayouts** -Eigenschaft auf **true** fest.
+
+- Schlüssel: **removeexternalmarkingfromcustomlayouts**
+
+- Wert: **true**
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
+```
+
+##### <a name="remove-all-shapes-of-a-specific-shape-name"></a>Alle Formen eines bestimmten Shape-namens entfernen
+
+Wenn Sie benutzerdefinierte PowerPoint-Layouts verwenden und alle Formen eines bestimmten Shape-namens aus den Kopf-und Fußzeilen entfernen möchten, verwenden Sie die erweiterte Einstellung **powerpointremuveallshapesbyshapename** mit dem Namen der Form, die Sie entfernen möchten.
+
+Wenn Sie die Einstellung " **powerpointremuveallshapesbyshapename** " verwenden, wird der Text in den Formen ignoriert, und stattdessen werden die Formen, die Sie entfernen möchten, mithilfe des Shape-Namens identifiziert.
+
+Beispiel:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
+```
 
 > [!NOTE]
-> PowerPoint-Shape-Typen, die für die erweiterten Client Einstellungen unterstützt werden, die in diesem Abschnitt beschrieben werden, sind: **msotextbox**, **msotexteffect** und **msoplachalter** .
+> Zum Definieren der Einstellung " **powerpointremoveallshapesbyshapename** " müssen Sie derzeit auch die Einstellung " [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) " definieren, auch wenn Sie die von **externalcontentmarkingtoremove** bereitgestellte Funktionalität nicht benötigen.
 >
+> Wenn Sie **powerpointremoveallshapesbyshapename** definieren möchten, definieren Sie sowohl [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) als auch [powerpointshapenametoremove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) , um zu vermeiden, dass mehr Formen als beabsichtigt entfernt werden.
+>
+
+
 ##### <a name="find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer"></a>Suchen Sie den Namen der Form, die Sie als Kopf-oder Fußzeile verwenden.
 
 1. Zeigen Sie in PowerPoint den Bereich **Auswahl** an: **Format** > **Anordnen** > **Auswahlbereich**.
@@ -560,21 +614,6 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 ```
 
-##### <a name="remove-external-content-marking-from-custom-layouts-in-powerpoint"></a>Entfernen externer Inhalts Markierungen aus benutzerdefinierten Layouts in PowerPoint
-
-Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
-
-Standardmäßig werden durch die Logik zum Entfernen externer Inhalts Markierungen benutzerdefinierte, in PowerPoint konfigurierte Layouts ignoriert. Um diese Logik auf benutzerdefinierte Layouts auszuweiten, legen Sie die erweiterte **removeexternalmarkingfromcustomlayouts** -Eigenschaft auf **true** fest.
-
-- Schlüssel: **removeexternalmarkingfromcustomlayouts**
-
-- Wert: **true**
-
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
-
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCustomLayouts="True"}
-```
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer
 
@@ -743,6 +782,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyUntrustedColl
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 ```
 
+> [!NOTE]
+> Um sicherzustellen, dass Ihre Block Meldungen bei Bedarf angezeigt werden, auch für einen Empfänger, der sich in einer Outlook-Verteilerliste befindet, müssen Sie die erweiterte Einstellung [enableoutlookdistributionlistweiterung](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) hinzufügen.
+>
+
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>So nehmen Sie Domänen Namen für Popup Nachrichten aus, die für bestimmte Bezeichnungen konfiguriert sind
 
 Für die Bezeichnungen, die Sie mit diesen Popup Nachrichten angegeben haben, können Sie bestimmte Domänen Namen ausnehmen, damit Benutzer die Nachrichten für Empfänger, die diesen Domänen Namen enthalten, nicht in Ihrer e-Mail-Adresse sehen. In diesem Fall werden die E-Mails problemlos gesendet. Wenn Sie mehrere Domänen angeben möchten, fügen Sie sie kommagetrennt als einzelne Zeichenfolge hinzu.
@@ -782,6 +825,10 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains=
 
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 ```
+
+> [!NOTE]
+> Um sicherzustellen, dass Ihre Block Meldungen bei Bedarf angezeigt werden, auch für einen Empfänger, der sich in einer Outlook-Verteilerliste befindet, müssen Sie die erweiterte Einstellung [enableoutlookdistributionlistweiterung](#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) hinzufügen.
+>
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren von E-Mails oder Anhängen implementiert, die keine Bezeichnung haben:
 
@@ -876,6 +923,28 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
+```
+
+### <a name="to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview"></a>So implementieren Sie Block Nachrichten für Empfänger in einer Outlook-Verteilerliste (öffentliche Vorschau)
+
+Standardmäßig gelten die erweiterten Einstellungen [outlookblocktreuhänddomains](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) und [outlookblockuntreudkollaborationlabel](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) nur für e-Mail außerhalb einer Verteilerliste. 
+
+Um die Unterstützung für diese Block Nachrichten auf Empfänger in Outlook-Verteilerlisten zu erweitern, legen Sie die erweiterte Einstellung **enableoutlookdistributionlistweiterung** auf **true** fest:
+
+- Schlüssel: **enableoutlookdistributionlistweiterung**
+- Wert: **true**
+
+Diese erweiterte Eigenschaft ermöglicht Outlook, die Verteilerliste zu erweitern, um sicherzustellen, dass bei Bedarf eine Sperrmeldung angezeigt wird. Das Standard Timeout für das Erweitern der Verteilerliste beträgt **2000** Sekunden.
+
+Um dieses Timeout zu ändern, erstellen Sie die folgende erweiterte Einstellung für die ausgewählte Richtlinie:
+
+- Schlüssel: **outlookgetemailadressssestimeoutmsproperty**
+- Wert: *Integer, in Sekunden*
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableOutlookDistributionListExpansion="true"} @{OutlookGetEmailAddressesTimeOutMSProperty="3000"}
 ```
 
 ## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Deaktivieren des Sendens von Überwachungsdaten an Azure Information Protection Analytics
@@ -1094,7 +1163,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1206,7 +1275,8 @@ Wenn Sie diese Einstellung konfigurieren, wird das Standardverhalten geändert, 
 Für Word, Excel und PowerPoint wird die automatische Klassifizierung für Dokumente ständig im Hintergrund ausgeführt.
 
 Das Verhalten für Outlook ändert sich nicht.
-Wenn der Azure Information Protection Unified-Bezeichnungs Client regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungs Regeln prüft, ermöglicht dieses Verhalten die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint gespeichert werden. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden.
+
+Wenn der Azure Information Protection Unified Bezeichnung-Client in regelmäßigen Abständen Dokumente für die von Ihnen angegebenen Bedingungs Regeln prüft, ermöglicht dieses Verhalten die automatische und empfohlene Klassifizierung und den Schutz für Office-Dokumente, die in SharePoint oder onedrive gespeichert sind, solange die automatische Speicherung aktiviert ist. Große Dateien werden auch schneller gespeichert, da die Bedingungs Regeln bereits ausgeführt wurden.
 
 Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird.
 
@@ -1345,7 +1415,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Lese-oder archivierte Dateien überspringen**
 
-Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1395,7 +1465,7 @@ Beispielsweise können Sie als Administrator Ihre Benutzer daran erinnern, keine
 
 Um den standardmäßigen **anderen** Text zu ändern, der angezeigt wird, verwenden Sie die erweiterte Eigenschaft "Recht **cationtextforusertext** " mit dem [Set-labelpolicy](/powershell/module/exchange/set-labelpolicy) -Cmdlet. Legen Sie den Wert auf den Text fest, den Sie stattdessen verwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 ``` PowerShell
 
@@ -1470,7 +1540,7 @@ Definieren Sie die JSON-Syntax Ihrer Regel wie folgt:
 "nodes" : []
 ```
 
-Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt.    Weitere Informationen finden Sie unter
+Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter
 
 - [Syntax der Regel Bedingung](#rule-condition-syntax)
 - [Syntax der Regel Aktion](#rule-action-syntax)
@@ -1487,9 +1557,9 @@ Zu den unterstützten Knoten Typen gehören:
 | **Oder**    |Führt *oder* für alle untergeordneten Knoten aus.       |
 | **Not**   | Führt *nicht* für das eigene untergeordnete Element aus.      |
 | **Except**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
-| **SentTo**, gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br />-Wenn das übergeordnete Element **außer** ist, überprüft, ob sich **alle** Empfänger in einer der Domänen befinden.<br />-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
-| **EmailLabel**, gefolgt von Bezeichnung | Einer der folgenden:  <br />-Die Bezeichnungs-ID <br />-NULL, wenn keine Bezeichnung             |
-| **Attachmentlabel**, gefolgt von **Label** und **supportedextensions**    | Einer der folgenden:  <br /><br />**true**: <br />-Wenn das übergeordnete Element **außer** ist, überprüft, ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br />-Wenn das übergeordnete Element etwas anderes ist **, aber außer, prüft,** ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br />-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br /><br /> **false**: in allen anderen Fällen 
+| **SentTo**, gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob sich **alle** Empfänger in einer der Domänen befinden.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
+| **EmailLabel**, gefolgt von Bezeichnung | Einer der folgenden:  <br>-Die Bezeichnungs-ID <br>-NULL, wenn keine Bezeichnung             |
+| **Attachmentlabel**, gefolgt von der **Bezeichnung** und den unterstützten **Erweiterungen**   | Einer der folgenden:  <br><br>**Fall** <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br>-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br><br> **false:** Für alle anderen Fälle <br><br>**Hinweis**: Wenn die **extensioneigenschaft leer** ist oder nicht vorhanden ist, sind alle unterstützten Dateitypen (Erweiterungen) in der Regel enthalten.
 | | |
 
 #### <a name="rule-action-syntax"></a>Syntax der Regel Aktion
@@ -1509,7 +1579,7 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |Beschreibung  |
+|Parameter  |BESCHREIBUNG  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
 | `${MatchedLabelName}`      | Die **Bezeichnung**"Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
@@ -1540,7 +1610,9 @@ Der folgende **JSON** -Code verhindert, dass e-Mails oder Anhänge, die als **in
 
 In diesem Beispiel ist **89a453df-5df4-4976-8191-259d0cf9560a** die ID der **internen** Bezeichnung, und interne Domänen enthalten **contoso.com** und **Microsoft.com**.
 
-```powershell
+Da keine bestimmten Erweiterungen angegeben werden, werden alle unterstützten Dateitypen eingeschlossen.
+
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1590,7 +1662,7 @@ Mit dem folgenden **JSON** -Code wird verhindert, dass nicht klassifizierte Offi
 
 Im folgenden Beispiel ist die Anlagen Liste, die eine Bezeichnung erfordert,: **. doc,. DOCM,. docx,. dot,. dotm,. DOTX,. POTM,. POTX,. PPS,. ppsm,. ppsx,. ppt,. pptm,. pptx,. VDW,. vsd,. vsdm,. vsdx,. VSS,. VSSM,. VST,. VSTM,. vssx,. vstx,. xls,. xlsb,. xlt,. xlsm,. xlsx,. xltm,. xltx**
 
-```powershell
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1674,7 +1746,9 @@ Im folgenden Beispiel wird in Outlook eine Meldung angezeigt, in der der Benutze
 
 Diese Art von Warnmeldung wird technisch gesehen als eine Begründung betrachtet, da der Benutzer **Ich akzeptiere** auswählen muss.
 
-``` powershell
+Da keine bestimmten Erweiterungen angegeben werden, werden alle unterstützten Dateitypen eingeschlossen.
+
+``` PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1729,11 +1803,11 @@ Diese Art von Warnmeldung wird technisch gesehen als eine Begründung betrachtet
 
 Der folgende **JSON-Code** bewirkt, dass Outlook den Benutzer warnt, wenn er eine interne e-Mail sendet, die keine Bezeichnung hat und eine Anlage mit einer bestimmten Bezeichnung aufweist. 
 
-In diesem Beispiel ist **bcbef25a-c4db-446b-9496-1b558d9edd0e** die ID der Bezeichnung der Anlage.
+In diesem Beispiel ist **bcbef25a-c4db-446b-9496-1b558d9edd0e** die ID der Bezeichnung der Anlage, und die Regel bezieht sich auf die Dateien docx, XLSX und PPTX.
 
 Standardmäßig erhalten e-Mails mit der Bezeichnung Anhänge nicht automatisch dieselbe Bezeichnung.
 
-```powershell
+```PowerShell
 {   
     "type" : "And",     
     "nodes" : [         
@@ -1766,6 +1840,8 @@ Standardmäßig erhalten e-Mails mit der Bezeichnung Anhänge nicht automatisch 
 #### <a name="example-5-prompt-for-a-justification-with-two-predefined-options-and-an-extra-free-text-option"></a>Beispiel 5: Aufforderung zur Eingabe einer Begründung, mit zwei vordefinierten Optionen und einer zusätzlichen Free-Text-Option
 
 Der folgende **JSON** -Code bewirkt, dass Outlook den Benutzer zur Eingabe einer Begründung für seine Aktion auffordert. Der Text für die Begründung enthält zwei vordefinierte Optionen sowie eine dritte, freie Text Option.
+
+Da keine bestimmten Erweiterungen angegeben werden, werden alle unterstützten Dateitypen eingeschlossen.
 
 ```PowerShell
 {   
@@ -1843,7 +1919,7 @@ Dieser Wert wird in der **HttpRuntimeSection** -Klasse der `ASP.NET` Konfigurati
 
 1. Sichern Sie Ihre **web.config** Konfiguration. 
 
-1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Zum Beispiel:
+1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Beispiel:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

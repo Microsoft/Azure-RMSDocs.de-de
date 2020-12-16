@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6846829cec153eb02bb1ad3e6900537f3d0024e2
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: a3c174a8afba4571df1546ebeeebc790bd4cdc99
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381866"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583573"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -76,9 +76,11 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
 
     Siehe [Anforderungen für Azure Information Protection](./requirements.md).
 
-    Beachten Sie Folgendes: Wenn Sie über Computer verfügen, auf denen Office 2010 ausgeführt wird, müssen Sie den [Azure Information Protection Client](rms-client/use-client.md) installieren, um die Authentifizierung von Benutzern bei Clouddiensten zu ermöglichen. 
+    **Wenn Sie über Computer verfügen, auf denen Office 2010 ausgeführt** wird, müssen Sie den [Azure Information Protection-Client](rms-client/use-client.md) installieren, um die Authentifizierung von Benutzern bei Clouddiensten zu ermöglichen. Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
-    Für spätere Versionen von Office sind diese Clients für die Klassifizierung und Bezeichnung erforderlich, und der Azure Information Protection Client ist optional, wird jedoch empfohlen, wenn Sie nur Daten schützen möchten. Weitere Informationen finden Sie in den Administrator Handbüchern für den [Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide.md).
+    **Für spätere Versionen von Office** ist der Azure Information Protection Client für die Klassifizierung und Bezeichnung *erforderlich* und *optional, wird jedoch empfohlen,* Wenn Sie nur Daten schützen möchten. 
+
+    Weitere Informationen finden Sie in den Administrator Handbüchern für den [Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide.md).
 
     Obwohl Sie ein Azure Information Protection-Abonnement benötigen, bevor Sie von AD RMS aus migrieren können, empfehlen wir, den Rights Management-Dienst für Ihren Mandanten nicht vor dem Start der Migration zu aktivieren. Sie führen diesen Aktivierungsschritt während der Migration aus, nachdem Sie die Schlüssel und Vorlagen aus AD RMS exportiert und in Ihren Azure Information Protection-Mandanten importiert haben. Wenn der Rights Management-Dienst jedoch schon aktiviert wurde, können Sie immer noch von AD RMS migrieren. Dafür sind zusätzliche Schritte notwendig.
 
@@ -217,7 +219,7 @@ Wenn Sie die [Erweiterungen für mobile Geräte](/previous-versions/windows/it-p
     
 Die Onboarding-Steuerelemente, die Sie während der Vorbereitungsphase konfiguriert haben, werden nicht länger benötigt. Wenn Sie allerdings keine Onboarding-Steuerelemente verwendet haben, weil Sie sich dafür entschieden haben, alles gleichzeitig zu migrieren, anstatt die Migration in Phasen abzuwickeln, können Sie die Anweisungen zum Entfernen von Onboarding-Steuerelementen überspringen.
     
-Wenn Office 2010 auf Ihren Windows-Computern ausgeführt wird, überprüfen Sie, ob Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** deaktivieren müssen.
+Wenn Office 2010 auf Ihren Windows-Computern ausgeführt wird, überprüfen Sie, ob Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** deaktivieren müssen. Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 **Schritt 12: neuschlüssel Ihres Azure Information Protection Mandanten Schlüssels**
 

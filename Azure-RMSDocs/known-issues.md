@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 26e354c883fd2e8ef5244b77635cb3e63ba9bc8e
-ms.sourcegitcommit: d578b609ddefc2580548cdb0a54a8af0ba69fbf4
+ms.openlocfilehash: e18c18322783a4f953c898cb96232ab35b642dca
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97388387"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583624"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "97388387"
 >***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die Listen und Tabellen unten, um Details zu bekannten Problemen und Einschränkungen im Zusammenhang mit Azure Information Protection Funktionen zu finden.
 
@@ -87,19 +87,55 @@ Das Veröffentlichen von Richtlinien kann bis zu 24 Stunden dauern.
 
 ## <a name="known-issues-in-the-aip-client"></a>Bekannte Probleme im AIP-Client
 
-- **Maximale Dateigröße.** von mehr als 2 GB werden für den Schutz unterstützt, aber nicht für die Entschlüsselung.
+- [Maximale Dateigröße](#maximum-file-sizes)
+- [AIP-Viewer](#aip-viewer)
+- [Nachverfolgen und widerrufen des Zugriffs auf Dokumente](#tracking-and-revoking-document-access-public-preview)
 
-- **AIP-Viewer.** Der AIP-Viewer zeigt Bilder im Hochformat an, und einige große, quer Ansichts Bilder können scheinbar gestreckt werden.
+### <a name="maximum-file-sizes"></a>Maximale Dateigröße
 
-    Beispielsweise wird ein ursprüngliches Bild unten auf der linken Seite mit einer gestreckten Hochformat Version im AIP-Viewer auf der rechten Seite angezeigt. 
+Dateien mit mehr als 2 GB werden für den Schutz unterstützt, aber nicht für die Entschlüsselung.
+
+### <a name="aip-viewer"></a>AIP-Viewer
+
+Der AIP-Viewer zeigt Bilder im Hochformat an, und einige große, quer Ansichts Bilder können scheinbar gestreckt werden.
+
+Beispielsweise wird ein ursprüngliches Bild unten auf der linken Seite mit einer gestreckten Hochformat Version im AIP-Viewer auf der rechten Seite angezeigt. 
     
-    :::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
     
-    Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
-    - [**Einheitlicher** Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)
-    - [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
+- [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
+- [**Einheitlicher** Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)
 
+### <a name="tracking-and-revoking-document-access-public-preview"></a>Nachverfolgen und widerrufen des Zugriffs auf Dokumente (öffentliche Vorschau)
+
+Das Nachverfolgen und widerrufen des Dokument Zugriffs mithilfe des Unified-bezeichungsclients hat die folgenden bekannten Probleme:
+
+- [Mehrere Anlagen in einer geschützten e-Mail](#multiple-attachments-in-a-protected-email)
+- [Dokumente, die über SharePoint aufgerufen werden](#documents-accessed-via-sharepoint)
+
+Weitere Informationen finden Sie unter [Administrator Handbuch: nachverfolgen und widerrufen des Dokument Zugriffs mit Azure Information Protection](rms-client/track-and-revoke-admin.md) und [Benutzerhandbuch: widerrufen des Zugriffs auf Dokumente mit Azure Information Protection](rms-client/revoke-access-user.md).
+
+#### <a name="multiple-attachments-in-a-protected-email"></a>Mehrere Anlagen in einer geschützten e-Mail
+
+Wenn Sie mehrere Dokumente an eine e-Mail anfügen und dann die e-Mail schützen und senden, erhält jede der Anlagen denselben Wert für "contentid". 
+
+Dieser contentid-Wert wird nur mit der ersten geöffneten Datei zurückgegeben. Beim Suchen nach den anderen Anlagen wird nicht der für die Erfassung von Überwachungsdaten erforderliche contentid-Wert zurückgegeben.      
+
+Außerdem wird durch das Aufheben des Zugriffs für eine der Anhänge der Zugriff für die anderen Anlagen in derselben geschützten e-Mail aufgehoben.
+
+#### <a name="documents-accessed-via-sharepoint"></a>Dokumente, die über SharePoint aufgerufen werden
+    
+- Geschützte Dokumente, die in SharePoint hochgeladen werden, verlieren ihren contentid-Wert. 
+
+    Dies bedeutet, dass die Daten nicht nachverfolgt werden und jegliche Zugriffs Sperrung nicht für die in SharePoint gespeicherte Datei gilt.
+
+- Wenn ein Benutzer die Datei von SharePoint herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue contentid auf das Dokument angewendet, wenn Sie Sie lokal öffnen. 
+    
+    Die Verwendung des ursprünglichen contentid-Werts zum Nachverfolgen von Daten umfasst keinen Zugriff auf die heruntergeladene Datei des Benutzers. Außerdem wird durch das Aufheben des Zugriffs auf Grundlage des ursprünglichen contentid-Werts der Zugriff für die heruntergeladenen Dateien nicht widerrufen.
+
+    In solchen Fällen können Administratoren die heruntergeladenen Dateien mithilfe von PowerShell ausfindig machen, um die neuen contentid-Werte zum Nachverfolgen oder widerrufen des Zugriffs zu finden.
 
 ## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP für Windows und Office-Versionen in erweiterter Unterstützung
 

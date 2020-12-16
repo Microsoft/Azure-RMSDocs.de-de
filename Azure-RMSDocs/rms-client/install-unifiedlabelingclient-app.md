@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dcb0cf2946c59868eba0226850b5c8edb9a0f08f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 8d4e19358fd9286eda3c7dcd1f65606d761c068b
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385079"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583403"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client
 
@@ -44,9 +44,9 @@ Vergewissern Sie sich vor der Installation des Azure Information Protection Unif
 
 6. Klicken Sie auf **Schließen**. Gehen Sie wie folgt vor, bevor Sie den Azure Information Protection-Client für einheitliche Bezeichnungen verwenden:
 
-    - Wenn Ihr Computer mit Office 2010 ausgeführt wird, starten Sie den Computer neu, und fahren Sie mit dem letzten Schritt im nächsten Abschnitt fort.    
+    - **Wenn auf Ihrem Computer Office 2010** ausgeführt wird, starten Sie den Computer neu, und fahren Sie dann mit dem nächsten Abschnitt fort.    
         
-    - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
+    - **Für andere Versionen von Office** starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
 
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen mit Office 2010
 
@@ -59,6 +59,8 @@ Gehen Sie wie folgt vor, nachdem Sie den Azure Information Protection-Client fü
 3. Wenn das Dialogfeld **Benutzerzugriffssteuerung** angezeigt wird, klicken Sie auf **Ja**, damit der Azure Information Protection-Client die Registrierung aktualisieren kann.
 
 Die Installation ist nun abgeschlossen, und Sie können den Azure Information Protection-Client für einheitliche Bezeichnungen zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
+
+Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="other-instructions"></a>Sonstige Anweisungen    
 Weitere Anleitungen finden Sie im Benutzerhandbuch für das Azure Information Protection Unified Bezeichnung-Client.

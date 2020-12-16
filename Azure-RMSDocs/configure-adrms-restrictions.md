@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: c02e7195d9edf93401b601e4d7ca243e6a14b702
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383819"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583607"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Hold Your Own Key (Hyok)-Details für Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "97383819"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [doppelte Schlüssel Verschlüsselung](plan-implement-tenant-key.md#double-key-encryption-dke). *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Mithilfe von Hold Your Own Key (Hyok)-Konfigurationen können AIP-Kunden mit dem klassischen Client äußerst sensiblen Inhalt schützen und gleichzeitig die vollständige Kontrolle über den Schlüssel behalten. Hyok verwendet einen zusätzlichen, vom Kunden gehaltenen Schlüssel, der lokal für hochsensible Inhalte gespeichert ist, sowie den standardmäßigen cloudbasierten Schutz, der für andere Inhalte verwendet wird. 
 
@@ -152,12 +152,12 @@ Wenn Sie bereit sind, fahren Sie mit dem [Konfigurieren einer Bezeichnung für R
 
 Eine AD RMS Bereitstellung muss die folgenden Anforderungen erfüllen, um den Hyok-Schutz für Azure Information Protection Bezeichnungen zu gewährleisten:
 
-|Anforderung  |Beschreibung  |
+|Anforderung  |BESCHREIBUNG  |
 |---------|---------|
 |**AD RMS Konfiguration**     |Das AD RMS System muss auf spezielle Weise konfiguriert werden, um Hyok zu unterstützen. Weitere Informationen finden Sie weiter [unten](#ad-rms-configuration-requirements).          |
 |**Verzeichnissynchronisierung**     |Die Verzeichnis Synchronisierung muss zwischen dem lokalen Active Directory und dem Azure Active Directory konfiguriert werden. </br></br>Benutzer, die Hyok-Schutz Bezeichnungen verwenden, müssen für einmaliges Anmelden konfiguriert werden.         |
 |**Konfiguration für explizit definierte Vertrauens Stellungen**     |Wenn Sie Hyok-geschützte Inhalte für andere Personen außerhalb Ihrer Organisation freigeben, müssen AD RMS für explizit definierte Vertrauens Stellungen in einer direkten Punkt-zu-Punkt-Beziehung mit den anderen Organisationen konfiguriert werden. </br></br>Verwenden Sie hierfür vertrauenswürdige Benutzer Domänen (Trusted User Domains, TUDs) oder Verbund Vertrauensstellungen, die mit Active Directory-Verbunddienste (AD FS) (AD FS) erstellt werden.         |
-|**Unterstützte Version Microsoft Office**     | Benutzer, die Hyok-geschützte Inhalte schützen oder nutzen, müssen über Folgendes verfügen: </br></br>-Eine Version von Office, die Information Rights Management (unm) unterstützt </br>-Microsoft Office Professional Plus Version 2013 oder höher mit Service Pack 1, die unter Windows 7 Service Pack 1 oder höher ausgeführt wird. </br>-Für die Microsoft Installer (MSI)-basierte Edition von Office 2016 müssen Sie [über das Update 4018295 für Microsoft Office 2016 verfügen, das am 6. März 2018 veröffentlicht wurde](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Hinweis**: Office 2010 und Office 2007 werden nicht unterstützt.        |
+|**Unterstützte Version Microsoft Office**     | Benutzer, die Hyok-geschützte Inhalte schützen oder nutzen, müssen über Folgendes verfügen: </br></br>-Eine Version von Office, die Information Rights Management (unm) unterstützt </br>-Microsoft Office Professional Plus Version 2013 oder höher mit Service Pack 1, die unter Windows 7 Service Pack 1 oder höher ausgeführt wird. </br>-Für die Microsoft Installer (MSI)-basierte Edition von Office 2016 müssen Sie [über das Update 4018295 für Microsoft Office 2016 verfügen, das am 6. März 2018 veröffentlicht wurde](https://support.microsoft.com/help/4018295/march-6-2018-update-for-office-2016-kb4018295). </br></br>**Hinweis**: Office 2010 und Office 2007 werden nicht unterstützt.  Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).      |
 
 > [!IMPORTANT]
 > Um die hohe Sicherheit zu erfüllen, die Hyok-Schutz bietet, empfehlen wir Folgendes:
@@ -172,7 +172,7 @@ Eine AD RMS Bereitstellung muss die folgenden Anforderungen erfüllen, um den Hy
 
 Um Hyok zu unterstützen, stellen Sie sicher, dass das AD RMS System über die folgenden Konfigurationen verfügt:
 
-|Anforderung  |Beschreibung  |
+|Anforderung  |BESCHREIBUNG  |
 |---------|---------|
 |**Windows-Version**     |Mindestens eine der folgenden Windows-Versionen: </br></br>**Produktionsumgebungen**: Windows Server 2012 R2</br>**Test-/Auswertungs Umgebungen**: Windows Server 2008 R2 mit Service Pack 1        |
 |**Topologie**     |Hyok erfordert eine der folgenden Topologien: </br>-Eine einzelne Gesamtstruktur mit einem einzelnen AD RMS Cluster </br>: Mehrere Gesamtstrukturen mit AD RMS Cluster. </br></br>**Lizenzierung für mehrere Gesamtstrukturen**</br> Wenn Sie über mehrere Gesamtstrukturen verfügen, gibt jeder AD RMS Cluster eine Lizenzierungs-URL frei, die auf denselben AD RMS Cluster zeigt. </br>Importieren Sie auf diesem AD RMS Cluster alle Zertifikate der vertrauenswürdigen Benutzer Domäne (TUD) aus allen anderen AD RMS Clustern. </br>Weitere Informationen zu dieser Topologie finden Sie unter [Trusted User Domain (Vertrauenswürdige Benutzerdomäne)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd983944(v=ws.10)). </br></br>**Globale Richtlinien Bezeichnungen für mehrere Gesamtstrukturen**</br>Wenn Sie über mehrere AD RMS-Cluster in separaten Gesamtstrukturen verfügen, löschen Sie Bezeichnungen in der globalen Richtlinie, die HYOK-Schutz (AD RMS) anwenden, und konfigurieren Sie eine [bereichsbezogene Richtlinie](configure-policy-scope.md) für jeden Cluster. <br>Weisen Sie die Benutzer für jeden Cluster ihrer Bereichs bezogenen Richtlinie zu, und stellen Sie sicher, dass Sie keine Gruppen verwenden, die dazu führen würden, dass ein Benutzer mehr als einer Bereichs bezogenen Richtlinie zugewiesen wird.</br>Jeder Benutzer sollte letztendlich Bezeichnungen für nur einen AD RMS-Cluster besitzen.          |
@@ -195,7 +195,7 @@ Um Hyok zu unterstützen, stellen Sie sicher, dass das AD RMS System über die f
 
     Geben Sie für das \<string value> eine der folgenden Zeichen folgen an:
 
-    |Umgebung  |Zeichenfolgenwert  |
+    |Environment  |Zeichenfolgenwert  |
     |---------|---------|
     |**Produktion** </br>(AD RMS Cluster mit SSL/TLS)     | `https://<cluster_name>/_wmcs/certification/certification.asmx`        |
     |**Testen/evaluieren** </br>(kein SSL/TLS)     |`http://<cluster_name>/_wmcs/certification/certification.asmx`         |
@@ -234,4 +234,4 @@ Beispiel: **https://rmscluster.contoso.com**
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie das System für die Unterstützung von Hyok konfiguriert haben, fahren Sie mit dem Konfigurieren von Bezeichnungen für den Hyok-Schutz fort. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management Schutz](configure-policy-protection.md).
+Wenn Sie das System für die Unterstützung von Hyok konfiguriert haben, fahren Sie mit dem Konfigurieren von Bezeichnungen für den Hyok-Schutz fort. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).

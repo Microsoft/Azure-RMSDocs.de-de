@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dbbf7c0644285c56ea34b57eb0b6b6a7894bc17f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e17e42850904590df6a0c223032fd07306e0815b
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382869"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583709"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -116,7 +116,7 @@ Ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.m
     
 1. Legen Sie auf der Seite **neuen Netzwerk Scanauftrag hinzufügen** die folgenden Einstellungen fest:
         
-    |Einstellung  |Beschreibung  |
+    |Einstellung  |BESCHREIBUNG  |
     |---------|---------|
     |**Name des Netzwerk Scan Auftrags**     |Geben Sie einen aussagekräftigen Namen für diesen Auftrag ein.  Dieses Feld ist erforderlich.       |
     |**Beschreibung**     |   Geben Sie eine aussagekräftige Beschreibung ein.      |
@@ -153,7 +153,7 @@ Wenn Sie [einen Netzwerk Scanauftrag definiert](#create-a-network-scan-job-publi
 
 1. Führen Sie einen der folgenden Schritte aus:
     
-    |Option  |Beschreibung  |
+    |Option  |BESCHREIBUNG  |
     |---------|---------|
     |![Symbol "Spalten"](media/i-columns.png "Symbol "Spalten"")    | Wählen Sie **Spalten** aus, um die angezeigten Tabellen Spalten zu ändern.        |
     |![Symbol "Aktualisieren"](media/i-refresh.png "Symbol "Aktualisieren"")   | Wenn Ihr Scanner vor kurzem Netzwerk Scanergebnisse ausgeführt hat, wählen Sie **Aktualisieren** aus, um die Seite zu aktualisieren.      |
@@ -166,25 +166,27 @@ Wenn Sie [einen Netzwerk Scanauftrag definiert](#create-a-network-scan-job-publi
 
 In den Depots, in denen der **öffentliche Zugriff** über **Lese** **-oder Lese-/Schreibfunktionen** verfügt, können vertrauliche Inhalte vorhanden sein, die geschützt werden müssen. Wenn der **öffentliche Zugriff** auf false gilt, ist das Repository überhaupt nicht zugänglich.
 
-Der öffentliche Zugriff auf ein Repository wird nur gemeldet, wenn Sie ein schwaches Konto im **standarddomainsuseraccount** -Parameter des Cmdlets [**install-mipnetworkdiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) festgelegt haben.
+Der öffentliche Zugriff auf ein Repository wird nur gemeldet, wenn Sie ein schwaches Konto im **standarddomainsuseraccount** -Parameter der Cmdlets [**install-mipnetworkdiscovery**](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery) oder [**Set-mipnetworkdiscoveryconfiguration**](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration) festgelegt haben.
 
 - Die in diesen Parametern definierten Konten werden verwendet, um den Zugriff eines schwachen Benutzers auf das Repository zu simulieren. Wenn der schwache Benutzer, der dort definiert ist, auf das Repository zugreifen kann, bedeutet dies, dass auf das Repository öffentlich zugegriffen werden kann. 
 
 - Stellen Sie sicher, dass der in diesen Parametern angegebene Benutzer nur Mitglied der Gruppe " **Domänen Benutzer** " ist, um sicherzustellen, dass der öffentliche Zugriff ordnungsgemäß gemeldet wird.
-       
+
 ### <a name="create-a-content-scan-job"></a>Erstellen eines Inhalts Scan Auftrags
 
 Ausführliche Informationen zu ihren Inhalten, um bestimmte Depots auf sensiblen Inhalt zu überprüfen. 
 
 Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags zum Analysieren der Depots in Ihrem Netzwerk möglich. Sie können jedoch auch ihre Depots selbst definieren.
- 
+
+**So erstellen Sie einen inhaltscanauftrag auf der Azure-Portal:**
+
 1. Wählen Sie im Menü **Scanner** auf der linken Seite die Option **Inhalts Scanaufträge** aus. 
    
 1. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option Add- ![Symbol](media/i-add.png "Symbol "Speichern"")hinzu **fügen** aus.
  
 1. Konfigurieren Sie für diese Erstkonfiguration die folgenden Einstellungen, und wählen Sie dann **Speichern** aus, aber schließen Sie den Bereich nicht.
     
-    |Einstellung  |Beschreibung  |
+    |Einstellung  |BESCHREIBUNG  |
     |---------|---------|
     |**Einstellungen für den Content Scan-Auftrag**     |    - **Zeitplan**: behalten Sie den Standardwert **manuell** bei. <br />- **Zu ermittelnde Informationstypen**: **nur in Richtlinie** ändern <br />- **Repository konfigurieren**: Konfigurieren Sie zu diesem Zeitpunkt nicht, da der Inhalts Überprüfungs Auftrag zuerst gespeichert werden muss.         |
     |**Richtlinienerzwingung**     | - **Erzwingen**: SELECT **Off** <br />- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . <br />- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten <br />- **Dateien** neu bezeichnen: Standardwert " **aus** " beibehalten        |
@@ -231,7 +233,7 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
 
     Verwenden Sie die folgende Syntax, wenn Sie SharePoint-Pfade hinzufügen:
     
-    |`Path`  |Syntax  |
+    |Pfad  |Syntax  |
     |---------|---------|
     |**Stammpfad**     | `http://<SharePoint server name>` <br /><br />Scannt alle Websites, einschließlich sämtlicher Site Sammlungen, die für den scannerbenutzer zulässig sind. <br />Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Stamm Inhalten        |
     |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Einer der folgenden: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
@@ -255,18 +257,20 @@ Nachdem Sie [den Azure Information Protection Scanner im Azure-Portal konfigurie
 1. Melden Sie sich bei dem Windows Server-Computer an, auf dem die Überprüfung ausgeführt werden soll. Verwenden Sie ein Konto mit lokalen Administratorrechten und den Berechtigungen zum Schreiben in die SQL Server-Masterdatenbank.
 
     > [!IMPORTANT]
+    > Vor der Installation des Scanners muss der AIP Unified Bezeichnung-Client auf Ihrem Computer installiert sein. 
+    >
     > Weitere Informationen finden Sie unter [Voraussetzungen für die Installation und Bereitstellung der Azure Information Protection Scanner](deploy-aip-scanner-prereqs.md).
     >
  
 1. Starten Sie eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen**.
 
-1. Führen Sie das Cmdlet [install-aipscanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus, und geben Sie dabei die SQL Server Instanz an, auf der eine Datenbank für den Azure Information Protection Scanner erstellt werden soll, und den Namen des scannerclusters, den Sie im vorherigen Abschnitt angegeben haben: 
+1. Führen Sie das Cmdlet [install-aipscanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus, und geben Sie dabei die SQL Server Instanz an, auf der eine Datenbank für den Azure Information Protection Scanner erstellt werden soll, und den Namen des scannerclusters, den Sie [im vorherigen Abschnitt angegeben](#create-a-scanner-cluster)haben: 
     
     ```PowerShell
     Install-AIPScanner -SqlServerInstance <name> -Cluster <cluster name>
     ```
     
-    Beispiele, in denen der Profilname **Europa** verwendet wird:
+    Beispiele für die Verwendung des scannerclusternamens **Europa**:
     
     - Für eine Standardinstanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster Europe`
     
@@ -274,7 +278,9 @@ Nachdem Sie [den Azure Information Protection Scanner im Azure-Portal konfigurie
     
     - Für SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster Europe`
     
-    Wenn Sie dazu aufgefordert werden, geben Sie die Anmelde Informationen für das Überprüfungs Dienst Konto ( \<domain\user name> ) und das Kennwort an.
+    Wenn Sie dazu aufgefordert werden, geben Sie die Active Directory Anmelde Informationen für das Überprüfungs Dienst Konto an.
+
+    Verwenden Sie die folgende Syntax: `\<domain\user name>` . Beispiel: `contoso\scanneraccount`
 
 1. Vergewissern Sie sich, dass der Dienst jetzt mithilfe der Dienste **Verwaltung** installiert ist  >  . 
     
@@ -300,7 +306,7 @@ So erhalten Sie ein Azure AD Token:
     Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
     ```
         
-    Zum Beispiel:
+    Beispiel:
 
     ```PowerShell
     $pscreds = Get-Credential CONTOSO\scanner
@@ -387,7 +393,7 @@ Wenn Sie z. b. einen neuen Dateityp in mehreren SharePoint-Daten Depots haben, k
 
 So führen Sie Massen Änderungen in mehreren Depots durch:
 
-1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Zum Beispiel:
+1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Beispiel:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportieren von Datenrepository-Einstellungen für den Azure Information Protection Scanner":::
 
@@ -404,13 +410,14 @@ In den folgenden Szenarien kann der Azure Information Protection Scanner auch Ih
 - [Anwenden einer Standard Bezeichnung auf alle Dateien in einem Datenrepository](#apply-a-default-label-to-all-files-in-a-data-repository)
 - [Vorhandene Bezeichnungen aus allen Dateien in einem Datenrepository entfernen](#remove-existing-labels-from-all-files-in-a-data-repository)
 - [Alle benutzerdefinierten Bedingungen und bekannten sensiblen Informationstypen identifizieren](#identify-all-custom-conditions-and-known-sensitive-information-types)
+
 ### <a name="apply-a-default-label-to-all-files-in-a-data-repository"></a>Anwenden einer Standard Bezeichnung auf alle Dateien in einem Datenrepository
 
 In dieser Konfiguration werden alle nicht gekennzeichneten Dateien im Repository mit der Standard Bezeichnung gekennzeichnet, die für das Repository oder den Inhaltsüberprüfungs Auftrag angegeben ist. Dateien werden ohne Untersuchung bezeichnet. 
 
 Konfigurieren Sie die folgenden Einstellungen: 
 
-|Einstellung  |Beschreibung  |
+|Einstellung  |BESCHREIBUNG  |
 |---------|---------|
 |**Bezeichnungs Dateien basierend auf dem Inhalt**    |Auf **Off** festgelegt         |
 |**Standard Bezeichnung**     | Legen Sie auf **Custom** fest, und wählen Sie die zu verwendende Bezeichnung aus.       |
@@ -423,7 +430,7 @@ In dieser Konfiguration werden alle vorhandenen Bezeichnungen entfernt, einschli
 
 Konfigurieren Sie die folgenden Einstellungen: 
 
-|Einstellung  |Beschreibung  |
+|Einstellung  |BESCHREIBUNG  |
 |---------|---------|
 |**Bezeichnungs Dateien basierend auf dem Inhalt**    |Auf **Off** festgelegt         |
 |**Standard Bezeichnung**     | Auf " **None** " festlegen  |
@@ -446,7 +453,7 @@ Zum Identifizieren von Bedingungen und Informationstypen für die Bezeichnung ve
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. <br /><br />Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. <br /><br />Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. <br /><br />Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
@@ -464,7 +471,7 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Lade-/Antwort-Zeiten**     |Die aktuellen Lade-und Antwortzeiten der Datenspeicher, die die zu überprüfenden Dateien enthalten, wirken sich auch auf die Leistung des Scanners aus.         |
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. <br /><br />Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung der Überprüfung kann beeinträchtigt werden, wenn Sie Änderungen an der Auto Layout-Richtlinie vorgenommen haben. <br /><br />Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. <br /><br />Wenn Sie die Bedingungen oder die Authentifizierungs Einstellungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage.md#rescanning-files).|
-|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. <br /><br /> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. <br /><br />Zum Beispiel: <br />-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
+|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. <br /><br /> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. <br /><br />Beispiel: <br />-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
 |**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.<br /><br />- **Off** führt zu einer optimalen Leistung. <br />- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. <br /><br />Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. <br /><br />-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. <br /><br />-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
@@ -493,6 +500,10 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 
 - [Get-mipnetworkdiscoverystatus](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryStatus)
 
+- [Get-mipscannercontentscanjob](/powershell/module/azureinformationprotection/get-mipscannercontentscanjob)
+
+- [Get-mipscannerrepository](/powershell/module/azureinformationprotection/get-mipscannerrepository)
+
 - [Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Set-mipnetworkdiscovery](/powershell/module/azureinformationprotection/set-mipnetworkdiscovery)
@@ -503,6 +514,10 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 
 - [Install-mipnetworkdiscovery](/powershell/module/azureinformationprotection/Install-MIPNetworkDiscovery)
 
+- [Remove-mipscannercontentscanjob](/powershell/module/azureinformationprotection/remove-mipscannercontentscanjob)
+
+- [Remove-mipscannerrepository](/powershell/module/azureinformationprotection/remove-mipscannerrepository)
+
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
@@ -512,6 +527,10 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/set-aipscannerrepository)
 
 - [Set-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/Set-MIPNetworkDiscoveryConfiguration)
+
+- [Set-mipscannercontentscanjob](/powershell/module/azureinformationprotection/set-mipscannercontentscanjob)
+
+- [Set-mipscannerrepository](/powershell/module/azureinformationprotection/set-mipscannerrepository)
 
 - [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
 
@@ -530,6 +549,7 @@ Zu den unterstützten Cmdlets für den Scanner gehören:
 - [Deinstallation von mipnetworkdiscovery](/powershell/module/azureinformationprotection/Uninstall-MIPNetworkDiscovery)
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 

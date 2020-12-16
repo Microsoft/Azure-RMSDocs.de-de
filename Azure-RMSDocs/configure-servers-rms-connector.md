@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f1dd3d2c832cebfe8cb8a994570d81e7544d8cf
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 43e9731197231c8bccf2c5d00aec81b20ab3c889
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383005"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583556"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
@@ -37,7 +37,7 @@ Nachdem Sie den RMS-Verbindungs Dienst installiert und konfiguriert haben, könn
 
 Dies bedeutet, dass die folgenden Server zu konfigurieren sind:
 
-|Umgebung  |Zu konfigurier gende Server  |
+|Environment  |Zu konfigurier gende Server  |
 |---------|---------|
 |**Exchange 2016 und Exchange 2013**     |  Clientzugriffsserver und Postfachserver       |
 |**Exchange 2019**     |   Clientzugriffsserver und Hub-Transport-Server      |
@@ -97,7 +97,7 @@ Zu den **Nachteile gehören**:
 
 3.  Entscheiden Sie, wie das Tool ausgeführt werden soll:
     
-    |Methode  |Beschreibung  |
+    |Methode  |BESCHREIBUNG  |
     |---------|---------|
     |**Zutaten**     |  Führen Sie das Tool interaktiv von dem Server aus, der für die Kommunikation mit dem RMS-Connector konfiguriert werden soll. <br><br>**Tipp**: Dies ist nützlich für eine einmalige Konfiguration, z. b. eine Testumgebung.       |
     |**Softwarebereitstellung**     |  Führen Sie das Tool aus, um Registrierungsdateien zu entwickeln, die Sie dann auf einem oder mehreren relevanten Servern bereitstellen. <br><br>Stellen Sie die Registrierungsdateien mithilfe einer Systems Management-Anwendung bereit, die Software Bereitstellung unterstützt, z. b. System Center Configuration Manager       |
@@ -134,10 +134,13 @@ In den folgenden Abschnitten finden Sie spezifische Informationen für jeden Die
 
 Nachdem diese Server zur Verwendung des Verbindungsdiensts konfiguriert sind, funktionieren Anwendungen, die lokal auf diesen Servern installiert sind, möglicherweise nicht mit RMS. Wenn dies eintritt, liegt das daran, dass die Anwendungen versuchen, den Verbindungsdienst zu verwenden, statt RMS direkt zu verwenden – dies wird aber nicht unterstützt.
 
-Wenn Office 2010 lokal auf einem Exchange-Server installiert ist, können die unm-Features der Client-App außerdem von diesem Computer aus funktionieren, nachdem der Server für die Verwendung des Verbindungs Diensts konfiguriert wurde. Dies wird jedoch nicht unterstützt.
+Wenn Office 2010 lokal auf einem Exchange-Server installiert ist, können die unm-Features der Client-App außerdem von diesem Computer aus funktionieren, nachdem der Server für die Verwendung des Verbindungs Diensts konfiguriert wurde. Dies wird jedoch nicht unterstützt. 
 
 In beiden Szenarios müssen Sie die Clientanwendungen auf getrennten Computern installieren, die nicht für die Verwendung des Verbindungsdiensts konfiguriert sind. Sie verwenden dann korrekt RMS direkt.
 
+> [!NOTE]
+> Weitere Informationen zu AIP und Office 2010 finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Konfigurieren eines Exchange-Servers für die Verwendung des Verbindungsdiensts
 Die folgenden Exchange-Rollen kommunizieren mit dem RMS-Verbindungsdienst:
 
