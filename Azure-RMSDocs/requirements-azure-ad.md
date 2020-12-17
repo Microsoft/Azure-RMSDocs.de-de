@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 43aaafadaabbf26309c4a40926b970d90aeadc47
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386235"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583352"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Zusätzliche Azure AD-Anforderungen für Azure Information Protection
 
@@ -37,7 +37,9 @@ Neben einem Azure AD-Konto benötigen Computer mit Office 2010 den Azure Inform
 
 Wenn Ihre Benutzerkonten verbunden sind (wenn Sie z. B. AD FS verwenden), müssen diese Computer die integrierte Windows-Authentifizierung verwenden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
 
-Es wird empfohlen, den Azure Information Protection-Client für einheitliche Bezeichnungen bereitzustellen. Wenn Sie noch kein Upgrade durchgeführt haben, ist möglicherweise weiterhin der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) in Ihrem System bereitgestellt. Weitere Informationen finden Sie unter [Die Clientseite von Azure Information Protection](rms-client/use-client.md).
+Es wird empfohlen, den Azure Information Protection-Client für einheitliche Bezeichnungen bereitzustellen. Wenn Sie noch kein Upgrade durchgeführt haben, ist möglicherweise weiterhin der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) in Ihrem System bereitgestellt. 
+
+Weitere Informationen finden Sie unter [Die Clientseite von Azure Information Protection](rms-client/use-client.md) und [AIP für Windows- und Office-Versionen in erweiterter Unterstützung](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 > [!NOTE]
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. 

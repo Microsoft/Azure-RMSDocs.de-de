@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2b621f78610d411a7ab980429fcb1dd960cbebff
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: b5e64f9537ee9c8f7f684e708c5de35ec28f3400
+ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386218"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97583369"
 ---
 # <a name="azure-information-protection-requirements"></a>Anforderungen an Azure Information Protection
 
@@ -69,10 +69,11 @@ Zur Unterstützung der Authentifizierung und Autorisierung für Azure Informatio
 
 Bedingter Zugriff wird in der Vorschauversion für Dokumente unterstützt, die mithilfe von Azure Information Protection geschützt sind. Weitere Informationen finden Sie in folgenden Quellen: [Azure Information Protection wird als verfügbare Cloud App für den bedingten Zugriff genannt. Wie funktioniert das?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
-Für bestimmte Szenarien gelten weitere Voraussetzungen, beispielsweise für die Verwendung von Office 2010, für die zertifikatbasierte oder mehrstufige Authentifizierung oder wenn UPN-Werte nicht mit E-Mail-Adressen von Benutzern übereinstimmen. Weitere Informationen finden Sie unter [Weitere Azure AD-Anforderungen für Azure Information Protection](requirements-azure-ad.md).
+Für bestimmte Szenarios gelten weitere Voraussetzungen, beispielsweise für die zertifikatbasierte oder mehrstufige Authentifizierung, wenn UPN-Werte nicht mit E-Mail-Adressen von Benutzern übereinstimmen oder bei der Verwendung von [Office 2010](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 Weitere Informationen finden Sie unter
 
+- [Zusätzliche Azure AD-Anforderungen für Azure Information Protection](requirements-azure-ad.md).
 - [Was ist ein Azure AD-Verzeichnis?](/azure/active-directory/fundamentals/active-directory-whatis)
 - [Integrieren lokaler Active Directory-Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
@@ -154,7 +155,7 @@ Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights M
 
 Bezeichnungen werden in einer Leiste oben im Office-Dokument angezeigt, auf die Sie über die Schaltfläche **Sensitivity** (Vertraulichkeit) im Client für einheitliche Bezeichnungen oder über die Schaltfläche **Protect** (Schutz) im klassischen Client zugreifen können.
 
-Weitere Informationen finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](requirements-applications.md).
+Weitere Informationen finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](requirements-applications.md) und [AIP für Windows- und Office-Versionen in erweiterter Unterstützung](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ### <a name="office-features-and-capabilities-not-supported"></a>Nicht unterstützte Office-Features und -Funktionen
 
