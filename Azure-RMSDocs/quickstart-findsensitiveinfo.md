@@ -4,32 +4,35 @@ description: Verwenden Sie den Azure Information Protection-Scanner, um nach ver
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/19/2020
+ms.date: 11/10/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 0ab3f66437882f6c458b3e4793be935d5f14686d
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 2b5bc28e18778a3ad7d4304632611df102577f92
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503654"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386405"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Clients für Windows – klassischer Client oder Client für einheitliche Bezeichnungen](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+>[!NOTE]
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 In dieser Schnellstartanleitung erteilen Sie SharePoint die Berechtigung, Überprüfungen zu erlauben, und Sie installieren und konfigurieren den Azure Information Protection-Scanner, um nach vertraulichen Daten zu suchen, die sich in einem lokalen Datenspeicher befinden.
 
-**Benötigte Zeit:** Für diese Konfiguration benötigen Sie maximal 15 Minuten.
+**Benötigte Zeit**: Für diese Konfiguration benötigen Sie maximal 15 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für die Durchführung dieses Schnellstarts benötigen Sie Folgendes:
+Voraussetzungen für diesen Schnellstart:
 
 |Anforderung  |Beschreibung  |
 |---------|---------|
@@ -191,10 +194,7 @@ Starten Sie den Computer neu.
 
 Mit diesem Befehl werden die folgenden Elemente nicht entfernt, weshalb Sie sie manuell entfernen müssen, wenn Sie sie nach Abschluss dieser Schnellstartanleitung nicht mehr benötigen:
 
-- Die SQL Server-Datenbank, die bei der Installation des Azure Information Protection-Scanners mit dem Cmdlet „Install-AIPScanner“ erstellt wurde:
-
-    - Für den klassischen Client: **AIPScanner_\<profile>**
-    - Für den Client für einheitliche Bezeichnungen: **AIPScannerUL_\<profile_name>**
+- Die SQL Server-Datenbank, die bei der Installation des Azure Information Protection-Scanners mit dem Cmdlet „Install-AIPScanner“ erstellt wurde: **AIPScanner_\<profile>**
 
 - Die Scannerberichte unter **%*localappdata*%\Microsoft\MSIP\Scanner\Reports**.
 
@@ -206,12 +206,5 @@ In dieser Schnellstartanleitung wird die Mindestkonfiguration beschrieben, sodas
 
 Wenn Sie die Dateien klassifizieren und schützen möchten, die vertrauliche Informationen enthalten, müssen Sie Bezeichnungen für die automatische Klassifizierung und den automatischen Schutz konfigurieren:
 
-**Für den klassischen Client**:
-
 - [Gewusst wie: Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
 - [How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](configure-policy-protection.md)
-
-**Für den Client für einheitliche Bezeichnungen**:
-
-- [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](/microsoft-365/compliance/apply-sensitivity-label-automatically)
-- [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels)

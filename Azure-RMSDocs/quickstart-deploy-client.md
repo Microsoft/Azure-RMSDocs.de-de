@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 210e556a2ecaab2dec7eb46b4b3b9b3c2c968ea4
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: fa795fa29e39bc9fe5abc9a68febcd168a5bb502
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503399"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386337"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Der Azure Information Protection-Client (AIP) für einheitliche Bezeichnungen gehört zur [Microsoft Information Protection](https://aka.ms/MIPdocs)-Lösung und erweitert die von Microsoft 365 bereitgestellten integrierten Funktionen für die Vertraulichkeitsbezeichnung. 
 

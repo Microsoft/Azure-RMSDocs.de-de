@@ -9,19 +9,21 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: 7ee4c5c26792a56c2637d62a67e2921df8c99a61
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: aa41b20152df55f7153f4c8cedd013041460b596
+ms.sourcegitcommit: ad2b3e0b6f438f9ffc0bca975653bd13f1b7d131
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924950"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514925"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Azure Information Protection (AIP) ist eine cloudbasierte Lösung, die Organisationen das Erkennen, Klassifizieren und Schützen von Dokumenten und E-Mails durch Anwendung von Bezeichnungen auf Inhalte ermöglicht.
 
@@ -65,19 +67,19 @@ Laden Sie die Scannerinstallationsdatei zusammen mit dem Client von der [Microso
 
 ## <a name="microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK
 
-Das Microsoft Information Protection-SDK erweitert Vertraulichkeitsbezeichnungen auf Anwendungen und Dienste von Drittanbietern. Entwickler können das SDK verwenden, um native Unterstützung für das Anwenden von Bezeichnungen und Schutz auf Dateien zu erstellen.
+Das Microsoft Information Protection-SDK erweitert Vertraulichkeitsbezeichnungen auf Anwendungen und Dienste von Drittanbietern. Entwickler können das SDK verwenden, um integrierte Unterstützung für das Anwenden von Bezeichnungen und Schutz auf Dateien zu erstellen.
 
 Sie können beispielsweise das MIP-SDK für Folgendes verwenden:
 
 - Eine Branchenanwendung, die Klassifizierungsbezeichnungen beim Exportieren auf Dateien anwendet.
-- Eine CAD-/CAM-Entwurfsanwendung stellt native Unterstützung für Bezeichnungen von Microsoft Information Protection bereit.
+- Eine CAD-/CAM-Entwurfsanwendung stellt integrierte Unterstützung für Bezeichnungen von Microsoft Information Protection bereit.
 - Ein Sicherheitsbroker für Cloudzugriff oder eine Lösung für das Verhindern von Datenverlust argumentiert über Daten hinweg, die mit Azure Information Protection verschlüsselt wurden.
 
 Weitere Informationen finden Sie in der [Übersicht zum Microsoft Information Protection-SDK](/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-**Für die ersten Schritte mit AIP** laden Sie den Client und den Scanner für einheitliche Bezeichnungen herunter und installieren diese.
+**Für die ersten Schritte mit AIP** laden Sie den Client für einheitliche Bezeichnungen und den Scanner herunter und installieren diese.
 
 - [Registrieren für eine kostenlose Testversion](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)  (Enterprise Mobility + Security E5)
 - [Herunterladen des Clients](https://www.microsoft.com/download/details.aspx?id=53018)
@@ -101,10 +103,20 @@ Weitere Informationen finden Sie in der [Übersicht zum Microsoft Information Pr
 |**Häufig gestellte Fragen und bekannte Probleme**     | [Häufig gestellte Fragen zu Azure Information Protection](faqs.md) </br> [Bekannte Probleme: Azure Information Protection](known-issues.md)       |
 |**Supportoptionen**     | [Supportoptionen für Azure Information Protection](information-support.md)        |
 |**Yammer**     |  [Azure Information Protection](https://www.yammer.com/AskIPTeam)       |
-|**Ignite 2020**     |  - [Übergreifender Informationsschutz und Governance in der Cloud, lokal, über Endpunkte und Remotearbeitsumgebungen](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)</br>- [Mit intelligenten Datenschutz- und Compliancelösungen zum Helden des Risikomanagements](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)</br>- [Datenkenntnis, Schützen Ihrer Daten und Verhindern von Datenschutz mit Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)</br>- [Fragen Sie den Experten: Fragen zur Microsoft-Compliance: Information Protection und Governance, Insiderrisiken, Complianceverwaltung und viel mehr](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)       |
 |**Neuigkeiten**     | Achten Sie auf neue Features für AIP im Microsoft 365 und SharePoint Admin Center:   </br>- [Neuerungen in Microsoft 365 Admin Center](/microsoft-365/admin/whats-new-in-preview) </br>- [Neuerungen in SharePoint Admin Center](/sharepoint/what-s-new-in-admin-center)     |
 |     |         |
 
+#### <a name="top-ignite-sessions"></a>Top-Ignite-Sitzungen
+
+Sehen Sie sich die folgenden aufgezeichneten Sitzungen von Ignite 2020 an:
+
+- [Übergreifender Informationsschutz und Governance in der Cloud, lokal, über Endpunkte und Remotearbeitsumgebungen](https://myignite.microsoft.com/sessions/ceba117f-9bc7-4426-9ebc-753d94c6a476)
+
+- [Mit intelligenten Datenschutz- und Compliancelösungen zum Helden des Risikomanagements](https://myignite.microsoft.com/sessions/9a1e2716-55f5-4c3e-8626-0cb77e60eb87)
+
+- [Datenkenntnis, Schützen Ihrer Daten und Verhindern von Datenschutz mit Microsoft Information Protection](https://myignite.microsoft.com/sessions/46ff69cf-2c8f-4e61-a923-f72f5740f02f)
+
+- [Fragen Sie den Experten: Fragen zur Microsoft-Compliance: Information Protection und Governance, Insiderrisiken, Complianceverwaltung und viel mehr](https://myignite.microsoft.com/sessions/5ce48b36-9827-4d60-8540-90546333063d)
 ## <a name="aips-classic-client"></a>Der klassische AIP-Client
 
 Mit dem klassischen Azure Information Protection-Client, der früheren Version von AIP, können Administratoren Klassifizierungsbezeichnungen direkt im Azure-Portal verwalten.
@@ -114,6 +126,6 @@ Im Azure-Portal verwaltete AIP-Bezeichnungen werden *nicht* von der Plattform f�
 Die Migration auf einheitliche Bezeichnungen wird empfohlen, um diese Features sowie SharePoint, Microsoft 365-Apps, Outlook für das Web und mobile Geräte, PowerBI-Datenschutz und mehr zu unterstützen. Weitere Informationen finden Sie unter [Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zum Client für einheitliche Bezeichnungen](tutorial-migrating-to-ul.md).
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. 
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. 
 >
 > Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Lösung für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).

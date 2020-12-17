@@ -10,21 +10,21 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e21a19d44c287de326c7bcd2425b94bba9b984ef
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: 7a0c53a2801b16b35a97b569753341012b854891
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849809"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386320"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE]
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 In dieser Schnellstartanleitung konfigurieren Sie eine vorhandene Azure Information Protection-Bezeichnung zum automatischen Anwenden der Schutzeinstellung **Nicht weiterleiten**.
 
@@ -36,7 +36,7 @@ Die aktuelle Azure Information Protection-Richtlinie enthält bereits zwei Bezei
 
 Wenn Ihre Richtlinie jedoch älter ist oder die Schutzrichtlinie nicht aktiviert war, als die Richtlinie Ihrer Organisation erstellt wurde, sind diese Bezeichnungen nicht für Sie verfügbar.
 
-**Benötigte Zeit:** Für diese Konfiguration benötigen Sie 5 Minuten.
+**Benötigte Zeit**: Für diese Konfiguration benötigen Sie 5 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -48,7 +48,7 @@ Voraussetzungen für diesen Schnellstart:
 |**AIP zum Azure-Portal hinzugefügt**    |  Sie haben den Azure Information Protection-Bereich zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist. <br><br>Weitere Informationen finden Sie unter [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md).       |
 |**Eine vorhandene Azure Information Protection-Bezeichnung, die konfiguriert werden soll**     | Verwenden Sie eine der Standardbezeichnungen oder eine von Ihnen erstellte Bezeichnung. Weitere Informationen finden Sie unter [Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer](quickstart-label-specificusers.md). |
 |**Klassischer Client installiert**    |   Damit Sie die neue Bezeichnung testen können, muss der klassische Client auf Ihrem Computer installiert sein. <br><br>Der klassische Azure Information Protection-Client gilt ab März 2021 als veraltet. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.  |
-|**Ein Windows-Computer, der bei Office-Apps angemeldet ist** |Um die neue Bezeichnung testen zu können, benötigen Sie einen Computer, auf dem Windows ausgeführt wird (mindestens Windows 7 mit Service Pack 1). <br><br>Melden Sie sich auf diesem Computer bei einer der folgenden Office-App-Versionen an: <br><br>- **Office-Apps** für die in der [Tabelle der unterstützten Versionen für Microsoft 365-Apps nach Updatekanal](/officeupdates/update-history-microsoft365-apps-by-date) aufgeführten Versionen von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde. <br>- **Microsoft 365 Apps for Enterprise.** <br>- **Office Professional Plus 2019.** <br>- **Office Professional Plus 2016**.<br>- **Office Professional Plus 2013 mit Service Pack 1**. <br>- **Office Professional Plus 2010 mit Service Pack 2**.|
+|**Ein Windows-Computer, der bei Office-Apps angemeldet ist** |Um die neue Bezeichnung testen zu können, benötigen Sie einen Computer, auf dem Windows ausgeführt wird (mindestens Windows 7 mit Service Pack 1). <br><br>Melden Sie sich auf diesem Computer bei einer der folgenden Office-App-Versionen an: <br><br>- **Office-Apps** für die in der [Tabelle der unterstützten Versionen für Microsoft 365-Apps nach Updatekanal](/officeupdates/update-history-microsoft365-apps-by-date) aufgeführten Versionen von Microsoft 365 Apps for Business oder Microsoft 365 Business Premium, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Microsoft 365 auch „Azure Information Protection“ genannt) zugewiesen wurde. <br>- **Microsoft 365 Apps for Enterprise** <br>- **Office Professional Plus 2019** <br>- **Office Professional Plus 2016**<br>- **Office Professional Plus 2013 mit Service Pack 1**<br>- **Office Professional Plus 2010 mit Service Pack 2**|
 | | |
 
 Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).

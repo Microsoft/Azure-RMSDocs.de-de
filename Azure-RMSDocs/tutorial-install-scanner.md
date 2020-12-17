@@ -10,22 +10,22 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: a645e8e6cbda725a167f789481579be070e3c99c
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 73bcb5e636b8a5e4456ad80f8435a27dfc898339
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503688"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384773"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für den [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 In diesem Tutorial wird beschrieben, wie Sie den lokalen Azure Information Protection-Scanner (AIP) installieren. Mit dem Scanner können AIP-Administratoren ihre Netzwerke und Inhaltsfreigaben auf vertrauliche Daten überprüfen und Klassifizierungs- und Schutzbezeichnungen anwenden, wie Sie in der Richtlinie ihrer Organisation konfiguriert sind.
 
-**Benötigte Zeit:** Sie können dieses Tutorial innerhalb von 30 Minuten abschließen.
+**Benötigte Zeit**: Sie können dieses Tutorial innerhalb von 30 Minuten abschließen.
 
 ## <a name="tutorial-prerequisites"></a>Voraussetzungen für das Lernprogramm
 
@@ -111,7 +111,7 @@ Bereiten Sie vor der Installation des Scanners auf Ihrem Computer die anfänglic
 
 1. Schließen Sie den Detailbereich für Ihren Auftrag zur Inhaltsüberprüfung, und kehren Sie zum Raster :::image type="icon" source="media/i-content-scan-jobs.png" border="false"::: **Aufträge zur Inhaltsüberprüfung** zurück. 
 
-    Wählen Sie in der neuen Zeile, die für Ihren Auftrag zur Inhaltsüberprüfung angezeigt wird, in der Spalte **Clustername** die Option **+Cluster zuweisen** aus. Anschließend wählen Sie im rechts angezeigten Bereich **Cluster zuweisen** Ihren Cluster aus. 
+    Wählen Sie in der neuen Zeile, die für Ihren Auftrag zur Inhaltsüberprüfung angezeigt wird, in der Spalte **Clustername** die Option **+ Dem Cluster zuweisen** aus. Anschließend wählen Sie im rechts angezeigten Bereich **Cluster zuweisen** Ihren Cluster aus. 
 
     :::image type="content" source="media/qs-tutor/assign-cluster-all.png" alt-text="Cluster zuweisen":::
 
@@ -154,7 +154,7 @@ Dies ist nicht erforderlich, wenn Sie nur offline arbeiten.
 
 Weitere Informationen finden Sie unter [Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection](rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
-**So rufen Sie ein Azure AD-Token für den Scanner ab:**
+**So rufen Sie ein Azure AD-Token für den Scanner ab**:
 
 1. Erstellen Sie im Azure-Portal eine Azure AD-Anwendung, um ein Zugriffstokens für die Authentifizierung anzugeben.
 
@@ -193,7 +193,7 @@ Wenn z. B. festgestellt wird, dass der öffentliche Zugriff auf ein Repository 
 > [!NOTE]
 > Dieses Feature befindet sich derzeit in der VORSCHAU. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
 
-**So installieren Sie den Netzwerkerkennungsdienst:**
+**So installieren Sie den Netzwerkerkennungsdienst**:
 
 1. Starten Sie auf dem Scannercomputer als Administrator eine PowerShell-Sitzung.
 
@@ -247,7 +247,7 @@ Weitere Informationen finden Sie unter [Tutorial: Erkennen vertraulicher Inhalte
 >Um Ihre riskanten Repositorys auf vertrauliche Daten zu überprüfen und diese Daten dann zu klassifizieren und vor externen Benutzern zu schützen, aktualisieren Sie Ihren Auftrag zur Inhaltsüberprüfung mit den Details der gefundenen Repositorys.
 >
 
-**Weitere Informationen:**
+**Siehe auch**:
 
 - [Was ist der Azure Information Protection-Scanner für einheitliche Bezeichnungen?](deploy-aip-scanner.md)
 - [Voraussetzungen für das Installieren und Bereitstellen des Azure Information Protection-Scanners für einheitliche Bezeichnungen](deploy-aip-scanner-prereqs.md)

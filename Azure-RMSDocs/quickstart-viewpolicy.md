@@ -10,22 +10,25 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: b0128abb8d75418596459ac142a49dbbfa06b646
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: b9d9e559a3d007bb0242525fa93bb5b62338b467
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97386082"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azure-Portal hinzu, bestätigen die Aktivierung des Schutzdiensts, erstellen Standardbezeichnungen (falls noch keine Bezeichnungen vorhanden sind) und zeigen die Richtlinieneinstellungen für den Azure Information Protection-Client (klassisch) an.
+>[!NOTE]
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-**Benötigte Zeit:** Für diese Schnellstartanleitung benötigen Sie maximal 10 Minuten.
+In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azure-Portal hinzu, bestätigen die Aktivierung des Schutzdiensts, erstellen Standardbezeichnungen (falls noch keine Bezeichnungen vorhanden sind) und zeigen die Richtlinieneinstellungen für den klassischen Azure Information Protection-Client an.
+
+**Benötigte Zeit**: Für diese Schnellstartanleitung benötigen Sie maximal 10 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

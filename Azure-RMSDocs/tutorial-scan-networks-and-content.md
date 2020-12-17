@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 432004443bf684967849b5b91acd9052cbf07eec
-ms.sourcegitcommit: 72694afc0e74fd51662e40db2844cdb322632428
+ms.openlocfilehash: 17ee31a93e21314d9881af14feafc81ddb550092
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94924974"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384637"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Tutorial: Erkennen vertraulicher Inhalte mit dem Azure Information Protection-Scanner (AIP)
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Der Azure Information Protection-Client bietet einen lokalen Scanner, mit dem Administratoren lokale Dateirepositorys auf vertrauliche Inhalte überprüfen können. 
 
@@ -38,7 +38,7 @@ In diesem Tutorial lernen Sie Folgendes:
 > Wenn Sie diese Version des Clients und Scanners nicht installiert haben, lesen Sie die [Voraussetzungen für das Tutorial](#tutorial-prerequisites) und wechseln Sie dann direkt zu [Definieren und Ausführen Ihres Auftrags zur Inhaltsüberprüfung](#define-and-run-your-content-scan-job).
 
 
-**Benötigte Zeit:** Für diese Konfiguration benötigen Sie 15 Minuten.
+**Benötigte Zeit**: Für diese Konfiguration benötigen Sie 15 Minuten.
 
 ## <a name="tutorial-prerequisites"></a>Voraussetzungen für das Lernprogramm
 
@@ -64,7 +64,7 @@ Erstellen Sie einen Auftrag zur Netzwerküberprüfung, um eine bestimmte IP-Adre
 > Dieses Feature ist nur ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) verfügbar und befindet sich derzeit in der VORSCHAU. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
 > 
 
-**So erstellen Sie einen Auftrag zur Netzwerküberprüfung:**
+**So erstellen Sie einen Auftrag zur Netzwerküberprüfung**:
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) als [unterstützter Administrator](#tutorial-prerequisites) an, und navigieren Sie zum Bereich **Azure Information Protection**.
         
@@ -177,7 +177,7 @@ Beispiel:
 > [!TIP]
 > Wenn keine Ergebnisse vorhanden sind und Sie eine aussagekräftige Überprüfung durchführen möchten, erstellen Sie eine Datei mit dem Namen **Zahlungsinfo** in einem der Repositorys, die in Ihrem Auftrag zur Inhaltsüberprüfung enthalten sind. Speichern Sie die Datei mit folgendem Inhalt:
 > 
-> **Kreditkarte:** 2384 2328 5436 3489
+> **Kreditkarte**: 2384 2328 5436 3489
 >
 > Führen Sie die Überprüfung erneut aus, um den Unterschied in den Ergebnissen anzuzeigen.
 > 
@@ -191,7 +191,7 @@ Protokolle werden auch lokal im **Verzeichnis „%localappdata%\Microsoft\MSIP\S
 |Typ  |BESCHREIBUNG  |
 |---------|---------|
 |**TXT-Zusammenfassungsdateien**     |  Enthalten die zum Überprüfen benötigte Zeit, die Anzahl der überprüften Dateien sowie die Anzahl der Dateien mit übereinstimmenden Informationstypen.       |
-|**CSV-Detaildateien.**     | Enthalten ausführliche Beschreibungen für jede überprüfte Datei. Das Verzeichnis kann bis zu 60 Berichte für jeden Überprüfungszyklus enthalten.         |
+|**CSV-Detaildateien**     | Enthalten ausführliche Beschreibungen für jede überprüfte Datei. Das Verzeichnis kann bis zu 60 Berichte für jeden Überprüfungszyklus enthalten.         |
 |     |         |
 
 ## <a name="next-steps"></a>Nächste Schritte
@@ -201,7 +201,7 @@ Weitere Tutorials finden Sie unter:
 - [Tutorial: Verhindern übermäßiger Freigaben mit Azure Information Protection (AIP)](tutorial-preventing-oversharing.md)
 - [Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zum Client für einheitliche Bezeichnungen](tutorial-migrating-to-ul.md)
 
-**Weitere Informationen:**
+**Siehe auch**:
 
 - [Was ist der Azure Information Protection-Scanner für einheitliche Bezeichnungen?](deploy-aip-scanner.md)
 - [Voraussetzungen für das Installieren und Bereitstellen des Azure Information Protection-Scanners für einheitliche Bezeichnungen](deploy-aip-scanner-prereqs.md)

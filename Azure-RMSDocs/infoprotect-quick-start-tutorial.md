@@ -10,21 +10,21 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 37638bfbc47a4a4d075114540ec65ea5d6372a30
-ms.sourcegitcommit: 13dac930fabafeb05d71d7ae8acf5c0a78c12397
+ms.openlocfilehash: a2617dfa156ed9b67034a63646f09b5bd6e67b0c
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96849826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97382308"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 > **Zum Bereitstellen des klassischen AIP-Clients** öffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.
 
@@ -56,7 +56,7 @@ Voraussetzungen für dieses Tutorial:
     
     Diese Schritte werden hier beschrieben: [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
-3. Der auf Ihrem Windows-Computer installierte Azure Information Protection-Client (klassisch); mindestens Windows 7 mit Service Pack 1. 
+3. Der auf Ihrem Windows-Computer installierte klassische Azure Information Protection-Client; mindestens Windows 7 mit Service Pack 1. 
 
 4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
@@ -284,5 +284,5 @@ Starten Sie Word, um diese Änderungen herunterzuladen.
 
 Weitere Informationen zum Bearbeiten der Azure Information Protection-Richtlinie finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
 
-Weitere Informationen zum Speicherort, an dem die Bezeichnungsaktivität protokolliert wird, finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
+Weitere Informationen zum Speicherort, an dem die Bezeichnungsaktivität protokolliert wird, finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-classic-client).
 

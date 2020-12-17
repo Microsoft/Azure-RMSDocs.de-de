@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zum Client für einheitliche Bezeichnungen'
+title: 'Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zur Lösung für einheitliche Bezeichnungen'
 description: Ein Tutorial, in dem Schritt für Schritt das Migrieren vom klassischen Azure Information Protection-Client (AIP) zum Client für einheitliche Bezeichnungen beschrieben wird.
 author: batamig
 ms.author: bagol
@@ -10,18 +10,18 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f988ba63671164463a4ad1b566daab7df123e057
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 649983dd43145b5752ed4d65f257e3def4278533
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503637"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384654"
 ---
-# <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-the-unified-labeling-client"></a>Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zum Client für einheitliche Bezeichnungen
+# <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-unified-labeling-solution"></a>Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zur Lösung für einheitliche Bezeichnungen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > [!NOTE]
 > Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden der klassische Azure Information Protection-Client und die Bezeichnungsverwaltung im Azure-Portal zum 31. März 2021 eingestellt.
@@ -29,9 +29,9 @@ ms.locfileid: "94503637"
 > Dieser Zeitrahmen ermöglicht allen derzeitigen Benutzern des klassischen Azure Information Protection-Clients den Umstieg auf den AIP-Client für einheitliche Bezeichnungen, der die Microsoft Information Protection-Lösung für einheitliche Bezeichnungen nutzt. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 
-In diesem Tutorial wird beschrieben, wie Sie die Azure Information Protection-Bereitstellung Ihrer Organisation vom klassischen Client zum Client für einheitliche Bezeichnungen migrieren.
+In diesem Tutorial wird beschrieben, wie Sie die Azure Information Protection-Bereitstellung Ihrer Organisation aus dem klassischen Client und die Verwaltung von Bezeichnungen/Bezeichnungsrichtlinien im Azure-Portal zur Lösung für einheitliche Bezeichnungen und [Microsoft 365-Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) migrieren.
 
-**Benötigte Zeit:** Die zum Durchführen einer Migration erforderliche Zeit hängt von der Komplexität Ihrer Richtlinien und den von Ihnen verwendeten AIP-Features ab. Sie können weiterhin mit dem klassischen Client arbeiten, während Sie die Migration im Hintergrund durchführen.
+**Benötigte Zeit**: Die zum Durchführen einer Migration erforderliche Zeit hängt von der Komplexität Ihrer Richtlinien und den von Ihnen verwendeten AIP-Features ab. Sie können weiterhin mit dem klassischen Client arbeiten, während Sie die Migration im Hintergrund durchführen.
 
 Dieses Tutorial bietet eine detaillierte Beschreibung der einzelnen Schritte sowie Verweise auf die entsprechenden Abschnitte an anderer Stelle der Microsoft-Dokumentation für weitere Einzelheiten.
 
@@ -43,9 +43,9 @@ In diesem Tutorial gehen Sie wie folgt vor:
 > * Kopieren Ihrer Richtlinien zur Plattform für einheitliche Bezeichnungen
 > * Bereitstellen des Clients für einheitliche Bezeichnungen
 
-## <a name="why-migrate-to-the-unified-labeling-platform"></a>Gründe für die Migration zum Client für einheitliche Bezeichnungen
+## <a name="why-migrate-to-the-unified-labeling-solution"></a>Warum zur Lösung für einheitliche Bezeichnungen migrieren?
 
-Zusätzlich zur [geplanten Einstellung des klassischen Clients](https://aka.ms/aipclassicsunset) gibt es auch weitere Gründe, die für eine Migration auf den Client für einheitliche Bezeichnungen sprechen, wie ein effektiver Schutz vertraulicher Daten in Ihrem gesamten digitalen Bestand. Nach der Migration verwenden Sie Microsoft Information Protection (MIP) z. B. in Microsoft 365-Clouddiensten, lokalen Anwendungen oder SaaS-Drittanbieteranwendungen.
+Die [geplante Einstellung des klassischen Clients](https://aka.ms/aipclassicsunset) ist nicht der einzige Grund für die Migration zur Lösung für einheitliche Bezeichnungen, sondern sie ermöglicht Ihnen auch, vertrauliche Daten in Ihrer gesamten digitalen Umgebung effektiv zu schützen. Nach der Migration verwenden Sie Microsoft Information Protection (MIP) z. B. in Microsoft 365-Clouddiensten, lokalen Anwendungen oder SaaS-Drittanbieteranwendungen.
 
 MIP unterstützt integrierte Bezeichnungsdienste für viele grundlegende Datenschutzfunktionen, sodass Sie den Client ausschließlich für zusätzliche Features einsetzen können, die von den integrierten Bezeichnungsdiensten nicht unterstützt werden.
 
@@ -64,7 +64,7 @@ Die meisten Funktionen, die für den klassischen AIP-Client verfügbar sind, ste
 Lesen Sie die folgenden Artikel, um zu verstehen, wie sich die von Ihnen verwendeten Datenschutzfunktionen bei der Verwendung des Clients für einheitliche Bezeichnungen unterscheiden können:
 
 - [Erfahren Sie mehr über integrierte Funktionen für Bezeichnungen in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
-- [Vergleichen der Unterstützung zwischen dem klassischen Client und dem Client für einheitliche Bezeichnungen](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Vergleichen der Bezeichnungslösungen für Windows-Computer](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Erfahren Sie, wie Sie Bezeichnungseinstellungen verwalten, die in den Admin Centers für einheitliche Bezeichnungen standardmäßig nicht unterstützt werden.](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
 > [!TIP]
@@ -107,7 +107,7 @@ Sobald Sie Ihre Bezeichnungen in Ihr Admin Center für Bezeichnungen migriert ha
 
 Änderungen, die Sie an migrierten Bezeichnungen im Admin Center vornehmen, werden jedoch *nicht* mit dem Azure-Portal synchronisiert. Wenn Sie Änderungen im Admin Center vornehmen und diese im Azure-Portal aktualisiert werden müssen, kehren Sie zum Portal zurück, um das Update zu veröffentlichen.
 
-**So veröffentlichen Sie eine aktualisierte Bezeichnung im Azure-Portal:**
+**So veröffentlichen Sie eine aktualisierte Bezeichnung im Azure-Portal**:
 
 1. Wählen Sie im Bereich „Azure Information Protection“ links unter **Verwalten** die Option **Einheitliche Bezeichnungen** aus.
 
@@ -147,7 +147,7 @@ Dieses Feature befindet sich derzeit in der VORSCHAU. In den [zusätzlichen Nutz
     |Aspekt  |Beschreibung  |
     |---------|---------|
     |**Beim Kopieren von Richtlinien werden *alle* Ihre Richtlinien kopiert**     |     Es ist nicht möglich, nur bestimmte Richtlinien zu kopieren. Sie können alle Ihre Richtlinien kopieren oder keine davon.   |
-    |**Beim Kopieren werden Ihre Richtlinien automatisch veröffentlicht**     |  Beim Kopieren Ihrer Richtlinien auf den Client für einheitliche Bezeichnungen werden diese automatisch auf allen unterstützten Clients für einheitliche Bezeichnungen veröffentlicht. <br /><br />   **Wichtig:** Kopieren Sie Ihre Richtlinien nicht, wenn Sie diese nicht veröffentlichen möchten.     |
+    |**Beim Kopieren werden Ihre Richtlinien automatisch veröffentlicht**     |  Beim Kopieren Ihrer Richtlinien auf den Client für einheitliche Bezeichnungen werden diese automatisch auf allen unterstützten Clients für einheitliche Bezeichnungen veröffentlicht. <br /><br />   **Wichtig**: Kopieren Sie Ihre Richtlinien nicht, wenn Sie diese nicht veröffentlichen möchten.     |
     |**Beim Kopieren werden vorhandene Richtlinien mit demselben Namen überschrieben**     |   Wenn Sie bereits über eine Richtlinie mit demselben Namen im Admin Center verfügen, werden beim Kopieren Ihrer Richtlinien alle in dieser Richtlinie definierten Einstellungen überschrieben.   <br /><br />Alle aus der Azure-Portal kopierten Richtlinien werden entsprechend der folgenden Syntax benannt: `AIP_<policy name>`.    |
     |**Einige Clienteinstellungen werden nicht kopiert**     | Einige Clienteinstellungen werden nicht auf die Plattform für einheitliche Bezeichnungen kopiert und müssen nach der Migration manuell konfiguriert werden. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren von erweiterten Einstellungen für Bezeichnungen](#configuring-advanced-labeling-settings).|
     | | |
@@ -261,7 +261,7 @@ Verwenden Sie für Windows-Computer mit Microsoft 365 Apps for Enterprise die in
 
 Weitere Informationen finden Sie in folgenden Quellen: 
 
-- [Vergleichen der Bezeichnungsclients für Windows-Computer](rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers)
+- [Vergleichen der Bezeichnungslösungen für Windows-Computer](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen](quickstart-deploy-client.md)
 
 Der Azure Information Protection-Client für einheitliche Bezeichnungen kann aus dem [Microsoft Download Center](https://aka.ms/aipclient) heruntergeladen werden. 

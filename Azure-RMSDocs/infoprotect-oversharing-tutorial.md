@@ -10,21 +10,21 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6bb35700a025105b584b93b5a38219b567dbe99c
-ms.sourcegitcommit: 325bb21a2210069f6d838ca7a875d7082c5e02a6
+ms.openlocfilehash: ff00e9731041344aac8a11b990f990efb113074e
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88264428"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97381815"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [nur klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 > **Zum Bereitstellen des klassischen AIP-Clients** öffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.
 
@@ -55,7 +55,7 @@ Voraussetzungen für dieses Tutorial:
 
 1. Einen Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie sich bei Outlook anmelden können. Sie werden Outlook während dieses Tutorials mehrere Male schließen und öffnen müssen.
 
-1. Der auf Ihrem Windows-Computer installierte Azure Information Protection-Client (klassisch); mindestens Windows 7 mit Service Pack 1. 
+1. Der auf Ihrem Windows-Computer installierte klassische Azure Information Protection-Client; mindestens Windows 7 mit Service Pack 1. 
 
 > [!TIP]
 > Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
@@ -440,4 +440,4 @@ Starten Sie Outlook neu, damit die für dieses Tutorial konfigurierten Einstellu
 
 In diesem Tutorial wurde eine E-Mail-Nachricht ohne Anhang an einen einzelnen Empfänger verwendet, um schneller testen zu können. Sie können sowohl die gleiche Methode mit mehreren Empfängern und mehren Bezeichnungen anwenden, als auch die gleiche Logik zum Senden von E-Mail-Anhängen, deren Bezeichnungsstatus für Benutzer oft nicht klar hervorgeht. Die E-Mail-Nachricht selbst weist z. B. die Bezeichnung „Öffentlich“ auf, die angehängte PowerPoint-Präsentation die Bezeichnung „Allgemein“. Weitere Informationen zu den Konfigurationsoptionen finden Sie im folgenden Abschnitt des Administratorhandbuchs: [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
-Das Administratorhandbuch enthält auch Informationen über erweiterte Clienteinstellungen, die Sie verwenden können, um das Verhalten des Client anzupassen. Eine vollständige Liste der Einstellungen finden Sie unter [Verfügbare erweiterte Clienteinstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
+Das Administratorhandbuch enthält auch Informationen über erweiterte Clienteinstellungen, die Sie verwenden können, um das Verhalten des Client anzupassen. Eine vollständige Liste der Einstellungen finden Sie unter [Verfügbare erweiterte Clienteinstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-classic-client-settings).

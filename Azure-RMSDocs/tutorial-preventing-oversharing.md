@@ -10,22 +10,22 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 851bc48926c6634fc7d5a529aa2910e11974f3a7
-ms.sourcegitcommit: df6ee1aca02e089e3a72006ecf0747f14213979c
+ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
+ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94503416"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97384535"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Tutorial: Verhindern übermäßiger Freigaben in Outlook mit Azure Information Protection (AIP)
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>**Gilt für*: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->*Anweisungen für: [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> ***Relevant für:** [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Als Systemadministrator müssen Sie sicherstellen, dass die Daten Ihrer Organisation geschützt sind und nur für vertrauenswürdige Benutzer freigegeben werden. Am häufigsten werden Inhalte von Benutzern unzulässigerweise per E-Mail ausgetauscht. Konfigurieren Sie Ihre Richtlinie, um eine übermäßige Freigabe über Outlook zu verhindern, z. B. das Einschränken des Zugriffs auf bestimmte Benutzer oder das Freigeben von Inhalten nur für vertrauenswürdige externe Benutzer.
 
-**Benötigte Zeit:** Sie können dieses Tutorial innerhalb von 30 Minuten abschließen.
+**Benötigte Zeit**: Sie können dieses Tutorial innerhalb von 30 Minuten abschließen.
 
 In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
@@ -223,7 +223,7 @@ In diesem Verfahren wird beschrieben, wie Sie die Meldung anpassen, die einem Be
 > Es wird empfohlen, in der Produktionsumgebung Probleme zu vermeiden, indem Sie *entweder* die erweiterte Eigenschaft **OutlookUnlabeledCollaborationAction** verwenden, um Ihre Regeln zu definieren, *oder* komplexe Regeln mit einer JSON-Datei wie unten beschrieben definieren, aber nicht beides.
 >
 
-**So definieren Sie eine Regel mithilfe einer JSON-Datei:**
+**So definieren Sie eine Regel mithilfe einer JSON-Datei**:
 
 1. Erstellen Sie eine **JSON**-Datei mit dem Namen **OutlookCollaborationRule_1.json** und dem folgenden Code:
 
@@ -310,15 +310,15 @@ In diesem Tutorial haben Sie gelernt, wie Sie das Verhalten von AIP in Outlook a
 
 Nun können Sie die Windows-Ereignisanzeige starten, um die Protokolle für die aufgetretenen Ereignisse einzusehen.
 
-**So überprüfen Sie die Ereignisanzeige für AIP-Protokollierungsereignisse:**
+**So überprüfen Sie die Ereignisanzeige für AIP-Protokollierungsereignisse**:
 
 Öffnen Sie auf Ihrem Clientcomputer die Windows-Ereignisanzeige, und navigieren Sie zu **Anwendungs- und Dienstprotokolle** > **Azure Information Protection**.
 
 Sie sehen, dass für jeden ausgeführten Test ein Informationsereignis mit Details zur Meldung und Benutzerantwort protokolliert wurde:
 
-- **Warnungsmeldungen:** Informations-ID 301
-- **Legitimationsmeldungen:** Informations-ID 302
-- **Blockiermeldungen:** Informations-ID 303
+- **Warnungsmeldungen**: Informations-ID 301
+- **Legitimationsmeldungen**: Informations-ID 302
+- **Blockiermeldungen**: Informations-ID 303
 
 Beispiel:
 
