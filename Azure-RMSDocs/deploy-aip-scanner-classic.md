@@ -8,16 +8,17 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77d7ddb996a224e871a89227bd58872989bdc759
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 20eeef7115e4426f08b2cdb62a5086c140add6a5
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382852"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806276"
 ---
 # <a name="what-is-the-azure-information-protection-classic-scanner"></a>Was ist der klassische Azure Information Protection-Scanner?
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382852"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [Was ist der Azure Information Protection Unified-Beschriftungs Scanner?](deploy-aip-scanner.md). *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die Informationen in diesem Abschnitt, um sich über den Azure Information Protection klassischen Client Scanner zu informieren und dann zu installieren, zu konfigurieren, auszuführen und ggf. Probleme zu beheben.
 
@@ -80,7 +81,7 @@ Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschloss
 
 Der Scanner berücksichtigt auch alle Dateilisten, die explizit für die Überprüfung definiert oder von der Überprüfung ausgeschlossen werden sollen. Dateilisten gelten standardmäßig für alle Daten Depots und können auch nur für bestimmte Depots definiert werden.
 
-Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Zum Beispiel:
+Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Beispiel:
 
 ![Konfigurieren der zu überprüfenden Dateitypen für den Azure Information Protection-Scanner](./media/scanner-file-types.png)
 

@@ -9,25 +9,26 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 117a943c410497cda1df9d0740ad9c91e2744e7f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 2224aa0ff69eeb29da0accb6bded70dbe94c60db
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384841"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806973"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
->***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Sensitivitäts Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) . *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 
 Mit Azure Information Protection können Sie Ihre Dokumente schützen, ohne Einbußen bei der Zusammenarbeit für autorisierte Benutzer hinnehmen zu müssen. Die meisten Dokumente, die ein Benutzer erstellt und dann für andere zur Ansicht und Bearbeitung freigibt, sind Office-Dokumente aus Word, Excel und PowerPoint. Diese Dokumente unterstützen nativen Schutz. Das bedeutet, dass zusätzlich zur Autorisierung und Verschlüsselung auch eingeschränkte Berechtigungen für eine präzisere Kontrolle unterstützt werden. 
@@ -102,7 +103,7 @@ Geben Sie das geschützte Dokument frei, indem Sie es an eine E-Mail anfügen, u
 
 ## <a name="opening-and-editing-the-protected-document"></a>Öffnen und Bearbeiten des geschützten Dokuments
 
-Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Zum Beispiel:
+Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Beispiel:
 
 ![Beispielbanner zu Azure Information Protection-Berechtigungen](./media/example-restricted-access-banner.png)
 

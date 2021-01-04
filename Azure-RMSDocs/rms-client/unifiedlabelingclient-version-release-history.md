@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeic
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/15/2020
+ms.date: 12/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7da6699fb2640791f78972f4271a6d846405731a
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583675"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805953"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -45,6 +45,7 @@ Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phas
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|2.6.111.0 | 03/09/2020|
 |2.5.33.0 |23.10.2019|
 |2.2.21.0|09/03/2019|
 |2.2.19.0|08/06/2019|
@@ -131,7 +132,7 @@ Weitere Informationen finden Sie unter [Erstellen eines Inhalts Scan Auftrags](.
 
 ### <a name="added-support-for-additional-sensitive-information-types"></a>Unterstützung für zusätzliche Typen sensibler Informationen hinzugefügt
 
-Wir haben Unterstützung für zusätzliche vertrauliche Informationstypen in Azure Information Protection hinzugefügt, wie z **.** b. die **Geschäftsnummer von Australien**, die **australische Firmennummer** oder die Personalausweisnummer.
+Wir haben Unterstützung für zusätzliche vertrauliche Informationstypen in Azure Information Protection hinzugefügt, wie z. b. die **Geschäftsnummer von Australien**, die **australische Firmennummer** oder die **Personal** Ausweisnummer.
 
 Weitere Informationen finden Sie in den [Entitäts Definitionen für sensible Informationen](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in der Microsoft 365-Dokumentation.
 
@@ -147,7 +148,15 @@ Weitere Informationen finden Sie unter
 
 - [Administrator Handbuch: nachverfolgen und widerrufen des Dokumenten Zugriffs mit Azure Information Protection](track-and-revoke-admin.md)
 - [Benutzerhandbuch: widerrufen des Dokument Zugriffs mit Azure Information Protection](revoke-access-user.md)
-- [Bekannte Probleme beim Nachverfolgen und widerrufen des Zugriffs auf Dokumente](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Bekannte Probleme beim Nachverfolgen und widerrufen des Zugriffs auf Dokumente](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
+
+Wenn Sie über Datenschutzanforderungen in Ihrer Organisation oder Region verfügen, in denen Sie die Funktionen zur dokumentenverfolgung deaktivieren müssen, finden Sie weitere Informationen unter nach [verfolgen und widerrufen von Administrator Verfahren](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant).
+
+**Upgrades vom klassischen Client**
+
+Der klassische AIP-Client unterstützt das verfolgen und widerrufen von Features mithilfe des [Microsoft-Überwachungs Portals](client-track-revoke.md#using-a-web-browser-to-track-and-revoke-documents-that-you-have-registered). Dieses Überwachungs Portal ist bei der Arbeit mit dem Unified-Bezeichnungs Client nicht relevant.
+ 
+Verwenden Sie die PowerShell-Befehle, um nach Verfolgungs Daten mit dem Unified-Bezeichnungs Client anzuzeigen, wie im [Administrator Handbuch](track-and-revoke-admin.md)beschrieben.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner
 
@@ -171,11 +180,11 @@ Die folgenden Korrekturen wurden in Version 2.9.109.0 des [Azure Information Pro
 
 - Der Outlook-Vorschaumodus generiert nun Überwachungs [Protokolle für Ermittlungs Ereignisse](../audit-logs.md#discover-audit-logs) .
 
-- [Empfohlene Bezeichnungen](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) und [Wasserzeichen](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) werden in Outlook erwartungsgemäß angewendet. 
+- [Empfohlene Bezeichnungen](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) und [visuelle Kennzeichnung](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) werden in Outlook erwartungsgemäß angewendet. 
 
-- Unterstützung für die Einstellungen " [outlookblocktreuhänder ddomains](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) " und " [outlookblockuntreudkollaborationlabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) " für Kontakte in Verteilerlisten wurde hinzugefügt.
+- Unterstützung für das [Auffinden von Empfängern in Outlook-Verteilerlisten](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview)hinzugefügt, z. b. wenn die Einstellungen [outlookblocktreuhänder](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) und [outlookblockuntreudkollaborationlabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) konfiguriert sind.
 
-    Um dies zu konfigurieren, legen Sie den Wert [enableoutlookdistributionlistweiterung](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) auf **true** fest. Möglicherweise möchten Sie auch den Standard Timeout Wert festlegen, wie in der [outlookgetemailadressssestimeoutmsproperty](clientv2-admin-guide-customizations.md#to-implement-block-messages-for-recipients-inside-an-outlook-distribution-list-public-preview) -Einstellung definiert.
+    Wenn Sie diese Funktion aktivieren, wird empfohlen, dass Sie auch den Standard Timeout Wert erhöhen, wie in der [outlookgetemailadressssestimeoutmsproperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) -Einstellung definiert.
 
 - Aktualisierungen der Rangfolge, die verwendet wird, wenn mehrere [Bezeichnungs](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) Richtlinien für einen Benutzer konfiguriert sind, die jeweils in Konflikt stehende Erweiterte Einstellungen haben.
 
@@ -251,7 +260,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 1. Stellen Sie sicher, dass Azure Information Protection Analytics aktiviert ist.
 
-    Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau).**
+    Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau)**.
 
     Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](../reports-aip.md).
 
@@ -379,7 +388,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 - [Berichte aus der Überprüfung bei Fehlern zum Anwenden von Aktions Ereignissen erhalten](../reports-aip.md#friendly-schema-reference-for-event-functions). Verwenden Sie Berichte, um mehr über fehlgeschlagene Aktions Ereignisse und Möglichkeiten zu erfahren, wie Sie zukünftige vorkommen vermeiden.
 
-- Einführung des AIP Scanner Diagnostics Analyzer Tool zur Erkennung und Analyse allgemeiner Scanner-Fehler. Um mit der Verwendung der AIP-Scanner-Diagnose zu beginnen, [führen Sie das neue Cmdlet **Start-aipscannerdiagnostics**](../deploy-aip-scanner-manage.md#troubleshooting-using-the-scanner-diagnostic-tool)aus.
+- Einführung des AIP Scanner Diagnostics Analyzer Tool zur Erkennung und Analyse allgemeiner Scanner-Fehler. Um mit der Verwendung der AIP-Scanner-Diagnose zu beginnen, [führen Sie das Cmdlet **Start-aipscannerdiagnostics**](../deploy-aip-scanner-tsg.md#troubleshooting-using-the-scanner-diagnostic-tool)aus.
 
 - Sie können nun die maximale CPU-Auslastung auf dem Überprüfungs Computer verwalten und begrenzen. Erfahren Sie, wie Sie die CPU-Auslastung von 100% verhindern und die CPU-Auslastung mithilfe der [beiden neuen erweiterten Einstellungen **scannermaxcpu** und **scannermincpu**](./clientv2-admin-guide-customizations.md#limit-cpu-consumption)verwalten.
 
@@ -444,53 +453,16 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Firewalls und Netzw
 
 - Das Problem, dass nur die erste Seite des Inhalts einer PDF-Datei zum Anwenden von Regeln für die automatische Klassifizierung verwendet wurde, ist jetzt aufgelöst, und die automatische Klassifizierung basierend auf dem gesamten Inhalt in der PDF-Datei wird jetzt erwartungsgemäß fortgesetzt. Weitere Informationen zur Klassifizierung und Bezeichnung finden Sie in den häufig gestellten Fragen zur [Klassifizierung und Bezeichnung](../faqs-infoprotect.md).
 
-- Wenn mehrere Exchange-Konten konfiguriert sind und der Azure Information Protection Outlook-Client aktiviert ist, werden die e-Mails wie erwartet vom sekundären Konto gesendet. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified-Bezeichnung-Client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+- Wenn mehrere Exchange-Konten konfiguriert sind und der Azure Information Protection Outlook-Client aktiviert ist, werden die e-Mails wie erwartet vom sekundären Konto gesendet. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden [Sie unter Konfigurieren der Gruppenrichtlinie, um die Deaktivierung von AIP zu verhindern](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
 
 - Wenn ein Dokument mit einer höheren Vertraulichkeits Bezeichnung per Drag and Drop per Drag and Drop in eine e-Mail eingefügt wird, erhält die e-Mail nun automatisch die höhere Vertraulichkeits Bezeichnung wie erwartet. Weitere Informationen zum bezeichnen von Client Funktionen finden Sie in der [Bezeichnung Client Vergleichstabelle](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-- Benutzerdefinierte Berechtigungen werden jetzt erwartungsgemäß auf e-Mails angewendet, wenn e-Mail-Adressen sowohl einen Apostroph (') als auch einen Zeitraum (.) enthalten. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified-Bezeichnung-Client](clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
+- Benutzerdefinierte Berechtigungen werden jetzt erwartungsgemäß auf e-Mails angewendet, wenn e-Mail-Adressen sowohl einen Apostroph (') als auch einen Zeitraum (.) enthalten. Weitere Informationen zum Konfigurieren des Unified-Bezeichnungs Clients mit Outlook finden [Sie unter Konfigurieren der Gruppenrichtlinie, um die Deaktivierung von AIP zu verhindern](reqs-ul-client.md#configure-your-group-policy-to-prevent-disabling-aip).
+
 
 - Standardmäßig geht der NTFS-Besitzer einer Datei verloren, wenn die Datei durch die vereinheitlichte Bezeichnung Scanner, PowerShell oder die Datei-Explorer-Erweiterung gekennzeichnet wird. Nun können Sie das System so konfigurieren, dass der NTFS-Besitzer der Datei beibehalten wird, indem Sie die neue **[usecopyandshandentfsowner](clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview)** Advanced-Einstellung auf " **true**" festlegen.
 
     Die erweiterte Einstellung **usecopyandkonservierungs entbersowner** erfordert eine geringe Latenz, eine zuverlässige Netzwerkverbindung zwischen dem Scanner und dem gescannten Repository.
-
-## <a name="version-261110"></a>Version 2.6.111.0
-
-**Veröffentlicht** 03/09/2020
-
-Unterstützt durch 12/29/2020
-
-### <a name="new-features-version-261110"></a>Neue Features, Version 2.6.111.0
-
-- Allgemein verfügbare Version des [Scanners](../deploy-aip-scanner.md)zum Überprüfen und bezeichnen von Dokumenten in lokalen Daten speichern.
-
-- [Scanner](../deploy-aip-scanner.md) -bezogen:
-    - [Einfachere lokale und untergeordnete SharePoint-](../quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories)Ermittlung. Das Festlegen der einzelnen Standorte ist nicht mehr erforderlich.
-    - Erweiterte Eigenschaft für die SQL-Segment [Größen](../deploy-aip-scanner-prereqs.md#storage-requirements-and-capacity-planning-for-sql-server) Änderung hinzugefügt.
-    - Administratoren haben jetzt die Möglichkeit, [vorhandene Scans anzuhalten und eine erneute Überprüfung durchzuführen](../deploy-aip-scanner-manage.md#stopping-a-scan) , wenn die Standard Bezeichnung geändert wurde.
-    - Standardmäßig legt Scanner jetzt minimale Telemetrie für schnellere Scans und eine reduzierte Protokoll Größe fest, und Informationstypen werden nun in der Datenbank zwischengespeichert. Erfahren Sie mehr über die [Scanner-Optimierung](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
-    - Scanner unterstützt jetzt separate bereit Stellungen für die Datenbank und den Dienst, während **sysadmin** -Rechte nur für die Daten Bank Bereitstellung erforderlich sind.
-    - Verbesserungen an der Leistung des Scanners.
-
-- Änderung des [PowerShell](./clientv2-admin-guide-powershell.md) -Cmdlets **Set-aipfilelabel** , um das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien zu ermöglichen. Diese Funktion ist standardmäßig deaktiviert und muss mithilfe des [Set-labelpolicy](./clientv2-admin-guide-customizations.md) -Cmdlets aktiviert werden, wie [hier](./clientv2-admin-guide-customizations.md#enable-removal-of-protection-from-compressed-files)beschrieben.  
-
-- Die Möglichkeit, Azure Information Protection Administratoren zu steuern, wann die Pfile-Erweiterungen für Dateien verwendet werden. Erfahren Sie mehr über das [ändern geschützter Dateitypen](./clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
-
-- Unterstützung für dynamisches visuelles Element für Anwendungen und Variablen hinzugefügt. Weitere Informationen zum Konfigurieren von [Bezeichnungen für visuelle Kennzeichnungen](../configure-policy-markings.md).
-
-- Verbesserungen an [anpassbaren Richtlinien Tipps für automatische und empfohlene Bezeichnungen](use-client.md).
-
-- Unterstützung für [Offline Beschriftungs Funktionen](./clientv2-admin-guide-customizations.md#support-for-disconnected-computers) mit Office-Apps im Unified-Bezeichnungs Client hinzugefügt.
-
-### <a name="fixes-and-improvements-version-261110"></a>Korrekturen und Verbesserungen, Version 2.6.111.0
-
-- In Fällen, in denen Benutzer erfolglos versuchten, geschützte TIFF-Dateien und TIFF-Dateien zu öffnen, die von RightFax erstellt wurden, werden die TIFF-Dateien nun geöffnet und bleiben erwartungsgemäß stabil.  
-- Vorherige Beschädigungen geschützter txt-und PDF-Dateien werden aufgelöst.
-- In Log Analytics wurde eine inkonsistente Bezeichnung zwischen **automatischen** und **manuellen** Bezeichnungen korrigiert.
-- Unerwartete Vererbungs Probleme, die zwischen neuen e-Mails und der zuletzt geöffneten e-Mail eines Benutzers erkannt wurden, sind nun behoben.  
-- Der Schutz von **. msg** -Dateien als **. msg. pfiles** funktioniert jetzt erwartungsgemäß.
-- Die von den benutzerdefinierten Office-Einstellungen hinzugefügten Berechtigungen für Mitbesitzer werden nun wie erwartet angewendet.
-- Wenn Sie die Berechtigungs Herabstufung eingeben, kann Text nicht mehr eingegeben werden, wenn bereits andere Optionen ausgewählt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -4,7 +4,7 @@ description: Listet die Voraussetzungen für die Installation und Bereitstellung
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/03/2020
+ms.date: 12/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49c614e4d124e7001a446c784a816b42ec91e111
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
+ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382580"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97705716"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Anforderungen für die Installation und Bereitstellung des Azure Information Protection Unified-Beschriftungs Scanners
 
@@ -154,7 +154,7 @@ Das *Scanner-Konto* ist das Konto, das Sie im **delegateduser** -Parameter des C
 
 Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sehen Sie sich die [Anweisungen für alternative Konfigurationen unten an](#restriction-your-labels-do-not-have-auto-labeling-conditions) .
 
-   Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter
 
 - [Informationen zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels)
 - [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](/microsoft-365/compliance/apply-sensitivity-label-automatically)
@@ -165,7 +165,7 @@ Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sehen Sie s
 
 Stellen Sie sicher, dass Ihr SharePoint-Server die folgenden Anforderungen erfüllt, um SharePoint-Dokument Bibliotheken und-Ordner zu überprüfen:
 
-|Anforderung  |Beschreibung  |
+|Anforderung  |BESCHREIBUNG  |
 |---------|---------|
 |**Unterstützte Versionen** | Folgende Versionen werden unterstützt: SharePoint 2019, SharePoint 2016 und SharePoint 2013. <br> Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.     |
 |**Versionsverwaltung**     |  Wenn Sie die [Versions](/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. <br><br>Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein.       |
@@ -188,7 +188,7 @@ Zum Scannen von Dateien müssen standardmäßig die Dateipfade maximal 260 Zeich
 
 Zum Überprüfen von Dateien mit Dateipfaden mit mehr als 260 Zeichen installieren Sie die Überprüfung auf einem Computer mit einer der folgenden Windows-Versionen, und konfigurieren Sie den Computer nach Bedarf:
 
-|Windows-Version  |Beschreibung  |
+|Windows-Version  |BESCHREIBUNG  |
 |---------|---------|
 |**Windows 2016 oder höher**     |   Konfigurieren des Computers zur Unterstützung von langen Pfaden      |
 |**Windows 10 oder Windows Server 2016**     | Definieren Sie die folgende [Gruppenrichtlinien Einstellung](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **lokale Computer Richtlinie**  >  **Computerkonfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **aktivieren Win32 Long-Pfade**.    </br></br>Weitere Informationen zur Unterstützung von langen Dateipfaden in diesen Versionen finden Sie im Abschnitt [Maximale Pfadlängen Beschränkung](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Windows 10-Entwicklerdokumentation.    |
@@ -318,62 +318,80 @@ Führen Sie die folgenden Schritte aus, um einen nicht verbundenen Computer nur 
 
 ### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Einschränkung: Die Sysadmin-Rolle kann nicht gewährt werden oder Datenbanken müssen manuell erstellt und konfiguriert werden.
 
+Verwenden Sie die folgenden Verfahren, um bei Bedarf manuell Datenbanken zu erstellen und die **db_owner** Rolle zu erteilen.
+
+- [Verfahren für die Scanner-Datenbank](#manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights)
+- [Verfahren für die Netzwerk Ermittlungs Datenbank](#manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights)
+
 Wenn Sie die sysadmin-Rolle *vorübergehend* zur Installation der Überprüfung erhalten können, können Sie diese Rolle entfernen, wenn die Überprüfung des Scanners beendet ist.
 
 Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Schritte aus:
 
-- **Die sysadmin-Rolle kann vorübergehend vorhanden sein.** Wenn Sie vorübergehend über die sysadmin-Rolle verfügen, wird die Datenbank automatisch für Sie erstellt, und dem Dienst Konto für den Scanner werden automatisch die erforderlichen Berechtigungen erteilt.
+|Einschränkung  |BESCHREIBUNG  |
+|---------|---------|
+|**Die sysadmin-Rolle kann vorübergehend vorhanden sein.**     |  Wenn Sie vorübergehend über die sysadmin-Rolle verfügen, wird die Datenbank automatisch für Sie erstellt, und dem Dienst Konto für den Scanner werden automatisch die erforderlichen Berechtigungen erteilt. <br><br>Das Benutzerkonto, das die Überprüfung konfiguriert, erfordert jedoch weiterhin die **db_owner** Rolle für die scannerkonfigurationsdatenbank. Wenn Sie nur über die sysadmin-Rolle verfügen, bis die Überprüfung des Scanners fertiggestellt ist, erteilen Sie dem Benutzerkonto die **db_owner** Rolle manuell.       |
+|**Sie können nicht über die sysadmin-Rolle verfügen.**     |  Wenn Sie die sysadmin-Rolle nicht auch vorübergehend erhalten können, müssen Sie einen Benutzer mit sysadmin-Berechtigung bitten, vor der Installation des Scanners manuell eine Datenbank zu erstellen. <br><br>Für diese Konfiguration muss die **db_owner** Rolle den folgenden Konten zugewiesen werden: <br>-Dienst Konto für den Scanner<br>-Benutzerkonto für die Scannerinstallation<br>-Benutzerkonto für Scannerkonfiguration <br><br>In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie unterschiedliche Konten verwenden, benötigen beide die **db_owner** Rolle für die scannerkonfigurationsdatenbank. Erstellen Sie diesen Benutzer und die Rechte bei Bedarf. Wenn Sie einen eigenen Cluster Namen angeben, wird die Konfigurations Datenbank **AIPScannerUL_<cluster_name>** benannt.  |
+| | |
 
-    Das Benutzerkonto, das die Überprüfung konfiguriert, erfordert jedoch weiterhin die **db_owner** Rolle für die scannerkonfigurationsdatenbank. Wenn Sie nur über die sysadmin-Rolle verfügen, bis die Überprüfung des Scanners fertiggestellt ist, erteilen Sie dem [Benutzerkonto die db_owner Rolle manuell](#create-a-user-and-grant-db_owner-rights-manually).
-
-- **Sie können nicht über die sysadmin-Rolle verfügen**. Wenn Sie die sysadmin-Rolle nicht auch vorübergehend erhalten können, müssen Sie einen Benutzer mit sysadmin-Berechtigung bitten, vor der Installation des Scanners manuell eine Datenbank zu erstellen.
-
-    Für diese Konfiguration muss die **db_owner** Rolle den folgenden Konten zugewiesen werden:
-
-    - Dienstkonto für die Überprüfung
-    - Benutzerkonto für die Scannerinstallation
-    - Benutzerkonto für die Konfiguration der Überprüfung
-
-    In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie unterschiedliche Konten verwenden, benötigen beide die db_owner Rolle für die scannerkonfigurationsdatenbank. Erstellen Sie diesen Benutzer und die Rechte bei Bedarf. Wenn Sie einen eigenen Cluster Namen angeben, wird die Konfigurations Datenbank **AIPScannerUL_<cluster_name>** benannt.
-
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
 
-    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
-    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server`
 
 Wenn nach dem Konfigurieren dieser Berechtigungen ein Fehler angezeigt wird, wenn Sie den Scanner installieren, kann der Fehler ignoriert werden, und Sie können den Überprüfungs Dienst manuell starten.
 
-#### <a name="create-a-user-and-grant-db_owner-rights-manually"></a>Erstellen Sie einen Benutzer, und erteilen Sie db_owner Rechte manuell.
+#### <a name="manually-create-a-database-and-user-for-the-scanner-and-grant-db_owner-rights"></a>Manuelles Erstellen einer Datenbank und eines Benutzers für die Überprüfung und erteilen db_owner Rechte
 
-Um einen Benutzer zu erstellen und db_owner Berechtigungen für diese Datenbank zu erteilen, bitten Sie den sysadmin, die folgenden Schritte auszuführen:
+Wenn Sie Ihre Scanner-Datenbank manuell erstellen und/oder einen Benutzer erstellen und **db_owner** Rechte für die Datenbank erteilen müssen, bitten Sie den sysadmin, die folgenden Schritte auszuführen:
 
 1. Erstellen Sie eine Datenbank für Scanner:
 
-    ```cli
+    ```sql
     **CREATE DATABASE AIPScannerUL_[clustername]**
 
     **ALTER DATABASE AIPScannerUL_[clustername] SET TRUSTWORTHY ON**
     ```
 
-2. Erteilen Sie dem Benutzer, der den Installations Befehl ausführt, Rechte, und wird zum Ausführen von Überprüfungs Verwaltungs Befehlen verwendet.
-
-    SQL-Skript:
+2. Erteilen Sie dem Benutzer, der den Installations Befehl ausführt, Rechte, und wird zum Ausführen von Überprüfungs Verwaltungs Befehlen verwendet. Führen Sie das folgende Skript aus:
 
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
     ```
 
-3. Erteilen Sie die Rechte für das Scanner-Dienst Konto.
+3. Erteilen Sie die Rechte für das Scanner-Dienst Konto. Führen Sie das folgende Skript aus:
 
-    SQL-Skript:
     ```sql
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     ```
 
+#### <a name="manually-create-a-database-and-user-for-the-network-discovery-service-and-grant-db_owner-rights"></a>Manuelles Erstellen einer Datenbank und eines Benutzers für den Netzwerk Ermittlungsdienst und erteilen db_owner Rechte
+
+Wenn Sie die Datenbank für die [Netzwerk](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview) Ermittlung manuell erstellen und/oder einen Benutzer erstellen und **db_owner** Rechte für die Datenbank erteilen müssen, bitten Sie den sysadmin, die folgenden Schritte auszuführen:
+
+1. Erstellen Sie eine Datenbank für den Netzwerk Ermittlungsdienst:
+
+    ```sql
+    **CREATE DATABASE AIPNetworkDiscovery_[clustername]**
+
+    **ALTER DATABASE AIPNetworkDiscovery_[clustername] SET TRUSTWORTHY ON**
+    ```
+
+2. Erteilen Sie dem Benutzer, der den Installations Befehl ausführt, Rechte, und wird zum Ausführen von Überprüfungs Verwaltungs Befehlen verwendet. Führen Sie das folgende Skript aus:
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+    ```
+
+3. Erteilen Sie dem Überprüfungs Dienst Konto Rechte. Führen Sie das folgende Skript aus:
+
+    ```sql
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    ```
 ### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Einschränkung: Die Berechtigung zur **lokalen Anmeldung** kann nicht für das Dienstkonto gewährt werden.
 
 Wenn Ihre Organisations Richtlinien das **lokale anmelden** für Dienst Konten verbieten, verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication".
@@ -392,7 +410,7 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 
 Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sollten Sie beim Konfigurieren Ihres Scanners eine der folgenden Optionen verwenden:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
 |**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle** fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
 |**Empfohlene Bezeichnung verwenden**     |  Legen Sie im [Inhalts Überprüfungs Auftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option **Empfohlene Bezeichnung als automatisch behandeln** auf ein **fest.**</br></br> Mit dieser Einstellung wird der Scanner so konfiguriert, dass alle empfohlenen Bezeichnungen automatisch auf ihren Inhalt angewendet werden.      |

@@ -4,7 +4,7 @@ description: Beschreibt, wie Administratoren den Dokument Zugriff für geschütz
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/08/2020
+ms.date: 12/24/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: ac4e506d3c3a6f582975a435a7e9f1e327068ac2
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 6c83aa89c06dbf7c6cab5ac014db72eed5e91f06
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97592747"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764134"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Administrator Handbuch: nachverfolgen und widerrufen des Zugriffs auf Dokumente mit Azure Information Protection (öffentliche Vorschau)
 
@@ -28,13 +28,13 @@ ms.locfileid: "97592747"
 
 Wenn Sie ein Upgrade auf [Version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) oder höher durchgeführt haben, werden alle geschützten Dokumente, die noch nicht für die Nachverfolgung registriert sind, automatisch registriert, wenn Sie das nächste Mal über den einheitlichen AIP-Beschriftungs Client geöffnet werden.
 
-Wenn Sie ein Dokument für die Nachverfolgung registrieren, können globale Administratoren von AIP Zugriffs Details verfolgen, einschließlich erfolgreicher Zugriffsereignisse und verweigerter Versuche, und den Zugriff bei Bedarf widerrufen. 
+Wenn Sie ein Dokument für die Nachverfolgung registrieren, können [Microsoft 365 globalen Administratoren](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) Zugriffs Details verfolgen, einschließlich erfolgreicher Zugriffsereignisse und abgelehnter Versuche, und den Zugriff bei Bedarf widerrufen. 
 
 Nachverfolgen und widerrufen von Features für den Unified-Bezeichnungs Client befinden sich derzeit in der Vorschau In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 
 ## <a name="track-document-access"></a>Dokument Zugriff überprüfen
 
-Administratoren können den Zugriff auf geschützte Dokumente über PowerShell mithilfe der für das geschützte Dokument bei der Registrierung generierten contentid nachverfolgen.
+Globale Administratoren können den Zugriff auf geschützte Dokumente über PowerShell mithilfe der für das geschützte Dokument bei der Registrierung generierten **contentid** nachverfolgen.
 
 So zeigen **Sie Details zum Dokument Zugriff an**:
 
@@ -47,7 +47,7 @@ Verwenden Sie die folgenden Cmdlets, um nach Details für das Dokument zu suchen
     Beispiel:
         
     ```PowerShell
-    PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+    Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
  
     Dieser Befehl gibt die **contentid** für alle übereinstimmenden, geschützten Dokumente zurück, die für die Nachverfolgung registriert sind.
@@ -60,31 +60,31 @@ Verwenden Sie die folgenden Cmdlets, um nach Details für das Dokument zu suchen
     Beispiel:
     
     ```PowerShell
-    PS C:\>Get-Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
+    Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
     ```
 
     Es werden nach Verfolgungs Daten zurückgegeben, einschließlich e-Mail-Nachrichten, die versuchen, auf zuzugreifen, ob der Zugriff gewährt oder verweigert wurde, Uhrzeit und Datum des Versuchs sowie Domäne und Speicherort, aus denen der Zugriffs Versuch stammt.
 
 ## <a name="revoke-document-access-from-powershell"></a>Aufheben des Zugriffs auf Dokumente von PowerShell aus
 
-Administratoren können den Zugriff für alle geschützten Dokumente, die in Ihren lokalen Inhalts Freigaben gespeichert sind, mithilfe des Cmdlets [Set-aipservicedocumentrevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) widerrufen. 
+Globale Administratoren können den Zugriff für jedes geschützte Dokument, das in Ihren lokalen Inhalts Freigaben gespeichert ist, mithilfe des Cmdlets [Set-aipservicedocumentrevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) widerrufen.
 
-1. Suchen Sie den Wert contentid für das Dokument, für das Sie den Zugriff widerrufen möchten.
+1. Suchen Sie den Wert **contentid** für das Dokument, für das Sie den Zugriff widerrufen möchten.
     
     Verwenden Sie das [Get-aipservicedocumentlog](/powershell/module/aipservice/get-aipservicedocumentlog) , um mithilfe des Datei namens und/oder der e-Mail-Adresse des Benutzers, der den Schutz angewendet hat, nach einem Dokument zu suchen.
     
     Beispiel:
         
     ```PowerShell
-    PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+    Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
     ```
 
     Die zurückgegebenen Daten enthalten den Wert "contentid" für Ihr Dokument.
 
     > [!TIP]
-    > Nur Dokumente, die für die Nachverfolgung geschützt und registriert wurden, haben einen contentid-Wert. 
+    > Nur Dokumente, die für die Nachverfolgung geschützt und registriert wurden, haben einen **contentid** -Wert. 
     >
-    > Wenn Ihr Dokument keine contentid hat, öffnen Sie es auf einem Computer mit installiertem Unified-Bezeichnung-Client, um die Datei für die Nachverfolgung zu registrieren.
+    > Wenn Ihr Dokument keine **contentid** hat, öffnen Sie es auf einem Computer mit installiertem Unified-Bezeichnung-Client, um die Datei für die Nachverfolgung zu registrieren.
 
 1. Verwenden Sie [Set-aipservicedocumentrevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) mit der contentid Ihres Dokuments, um den Zugriff zu widerrufen.
 
@@ -94,6 +94,10 @@ Administratoren können den Zugriff für alle geschützten Dokumente, die in Ihr
     Set-AipServiceDocumentRevoked -ContentId 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
     ```
 
+> [!NOTE]
+> Wenn der [Offline Zugriff](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) zulässig ist, können Benutzer weiterhin auf die Dokumente zugreifen, die widerrufen wurden, bis der Offline Richtlinien Zeitraum abläuft. 
+> 
+
 > [!TIP]
 > Benutzer können auch den Zugriff für alle Dokumente widerrufen, in denen Sie den Schutz direkt über das **Vertraulichkeits** Menü in Ihren Office-Apps angewendet haben. Weitere Informationen finden Sie [im Benutzerhandbuch: widerrufen des Zugriffs auf Dokumente mit Azure Information Protection](revoke-access-user.md)
 
@@ -101,7 +105,7 @@ Administratoren können den Zugriff für alle geschützten Dokumente, die in Ihr
 
 Wenn Sie den Zugriff auf ein bestimmtes Dokument versehentlich widerrufen haben, verwenden Sie den gleichen **contentid** -Wert mit dem Cmdlet " [Clear-aipservicedocumentrevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) ", um die Sperrung des Zugriffs aufzuheben. 
 
-Beispiel: 
+Beispiel:
 
 ```PowerShell
 Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
@@ -109,10 +113,27 @@ Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 
 Der Benutzer, den Sie im **IssuerName** -Parameter definiert haben, wird der Zugriff auf Dokumente gewährt.
 
+## <a name="turn-off-track-and-revoke-features-for-your-tenant"></a>Deaktivieren der Nachverfolgung und widerrufen von Features für Ihren Mandanten
+
+Wenn Sie die Funktionen zum Nachverfolgen und widerrufen für Ihren Mandanten deaktivieren müssen, z. b. für Datenschutzanforderungen in Ihrer Organisation oder Region, führen Sie die beiden folgenden Schritte aus:
+
+1. Führen Sie das Cmdlet " [Deaktivieren-aipservicedocumenttrackingfeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) " aus.
+
+1. Legen Sie die erweiterte Client Einstellung [enabletrackandrevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) auf **false** fest. 
+
+Die dokumentenverfolgung und die Optionen zum Widerrufen des Zugriffs werden für Ihren Mandanten deaktiviert:
+
+- Durch das Öffnen geschützter Dokumente mit dem AIP Unified Bezeichnung-Client werden die Dokumente nicht mehr für die Nachverfolgung und den Widerruf registriert.
+- Zugriffsprotokolle werden nicht gespeichert, wenn geschützte Dokumente, die bereits registriert sind, geöffnet werden. Zugriffsprotokolle, die gespeichert wurden, bevor Sie diese Features ausschalten, sind weiterhin verfügbar. 
+- Administratoren können den Zugriff über PowerShell nicht nachverfolgen oder widerrufen, und Endbenutzern wird die Menüoption " [**widerrufen**](revoke-access-user.md#revoke-access-from-microsoft-office-apps) " in Ihren Office-Apps nicht mehr angezeigt.
+
+> [!NOTE]
+> Legen Sie zum Aktivieren und widerrufen von " [enabletrackandrevoke](clientv2-admin-guide-customizations.md#turn-off-document-tracking-features-public-preview) " den Wert " **true**" fest, und führen Sie auch das Cmdlet " [enable-aipservicedocumenttrackingfeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) " aus.
+>
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen finden Sie unter
 
 - [AIP Unified Bezeichnung Client-Benutzerhandbuch](clientv2-user-guide.md)
 - [AIP Unified Bezeichnung Client-Administrator Handbuch](clientv2-admin-guide.md)
-- [Bekannte Probleme beim Nachverfolgen und widerrufen des Zugriffs auf Dokumente](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Bekannte Probleme beim Nachverfolgen und widerrufen von Features](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)

@@ -8,16 +8,17 @@ ms.date: 08/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 71dd1d8119af741bbafb8173c63622f4e99146d4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382631"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806174"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Voraussetzungen für die Installation und Bereitstellung des Azure Information Protection klassischen Scanners
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382631"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum vereinheitlichten Bezeichnungs Scanner finden Sie unter [Voraussetzungen für die vereinheitlichte Bezeichnung](deploy-aip-scanner-prereqs.md) .*
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Stellen Sie vor der Installation des Azure Information Protection lokalen Scanners sicher, dass Ihr System die grundlegenden [Azure Information Protection Anforderungen](requirements.md)erfüllt und die folgenden Anforderungen für die Überprüfung erfüllt sind:
 
@@ -136,7 +137,7 @@ Sie müssen Bezeichnungen konfiguriert haben, die automatisch Klassifizierung un
 
 Wenn Sie diese Bezeichnungen nicht konfiguriert haben, finden Sie weitere Informationen unter Bereitstellen [des Scanners mit alternativen Konfigurationen](#deploying-the-scanner-with-alternative-configurations).
 
-   Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter
 
 - [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
 - [How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](configure-policy-protection.md)
@@ -241,7 +242,7 @@ Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Sch
 
     Wenn Sie keinen eigenen Cluster Namen (Profilnamen) für die Überprüfung angeben, wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ \<computer_name>** benannt. </br>Setzen Sie [die Erstellung eines Benutzers fort, und erteilen Sie db_owner Rechte für die Datenbank](#create-a-user-and-grant-db_owner-rights-manually). 
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
@@ -304,7 +305,7 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 
 Wenn Ihre Bezeichnungen keine automatischen Bezeichnungen aufweisen, sollten Sie beim Konfigurieren Ihres Scanners eine der folgenden Optionen verwenden:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
 |**Alle Informationstypen ermitteln**     |  Legen Sie in Ihrem [inhaltscanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)die Option zu **ermittelnde Informationstypen** auf **alle** fest. </br></br>Mit dieser Option wird der Inhalts Überprüfungs Auftrag so festgelegt, dass der Inhalt auf alle sensiblen Informationstypen überprüft wird.      |
 |**Definieren einer Standard Bezeichnung**     |   Definieren Sie eine Standard Bezeichnung in der [Richtlinie](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do), im [Inhalts Scanauftrag](deploy-aip-scanner-configure-install.md#create-a-content-scan-job)oder im [Repository](deploy-aip-scanner-configure-install.md#apply-a-default-label-to-all-files-in-a-data-repository). </br></br>In diesem Fall wendet der Scanner die Standard Bezeichnung auf alle gefundenen Dateien an.       |

@@ -8,16 +8,17 @@ ms.date: 06/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d8ea8fdccbfc92e954ba1c2f656b498fc0f8f4ee
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: c23eb1770063bd0df18582125855580aa762b750
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382784"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806259"
 ---
 # <a name="running-the-azure-information-protection-classic-scanner"></a>Ausführen des Azure Information Protection klassischen Scanner
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382784"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [Ausführen des Azure Information Protection Scanners](deploy-aip-scanner-manage.md)*.
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Nachdem Sie die [Systemanforderungen](deploy-aip-scanner-prereqs-classic.md) bestätigt und [Ihren Scanner konfiguriert und installiert](deploy-aip-scanner-configure-install-classic.md)haben, [führen Sie einen Ermittlungs Scan](#run-a-discovery-cycle-and-view-reports-for-the-scanner) aus, um zu beginnen.
 

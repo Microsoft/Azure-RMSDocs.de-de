@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a24332d284c8f1884d357765f4a30c07fb992df0
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 344a2c8ed5f4912a96af2031accb9476358a2930
+ms.sourcegitcommit: c6aa8f8ecec8950ac6104fc6f47a102e54804a95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382767"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97706102"
 ---
 # <a name="running-the-azure-information-protection-scanner"></a>Ausführen des Azure Information Protection-Scanners
 
@@ -31,8 +31,6 @@ Verwenden Sie die unten aufgeführten Schritte, um Ihre Scans zu verwalten.
 
 - [Einen Scanvorgang abbrechen](#stopping-a-scan)
 - [Dateien werden neu berechnet](#rescanning-files)
-- [Problembehandlung bei einem beendeten Scan](#troubleshooting-a-stopped-scan)
-- [Problembehandlung mithilfe des Scanner-Diagnosetools](#troubleshooting-using-the-scanner-diagnostic-tool)
 
 Weitere Informationen finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).
 
@@ -136,50 +134,6 @@ Wenn Sie auch die Schutzeinstellungen für ihre Bezeichnungen geändert haben, w
 >
 > Wenn Sie beispielsweise die Einstellungen für die **Richtlinien** Erzwingung von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
 > 
-
-## <a name="troubleshooting-a-stopped-scan"></a>Problembehandlung bei einem beendeten Scan
-
-Wenn der Scanner unerwartet in der Mitte angehalten wird und das Scannen einer großen Anzahl von Dateien in einem Repository nicht durchführt, müssen Sie möglicherweise eine der folgenden Einstellungen ändern:
-
-- **Anzahl der dynamischen Ports**. Möglicherweise müssen Sie die Anzahl der dynamischen Ports für das Betriebssystem erhöhen, das die Dateien gehostet. Ein Grund dafür, warum der Scanner die Anzahl an zulässigen Netzwerkverbindungen überschreitet und daher angehalten wird, ist die Serverhärtung für SharePoint.
-
-    Um zu überprüfen, ob dies die Ursache für die Beendigung des Scanners ist, sollten Sie überprüfen, ob die folgende Fehlermeldung für den Scanner in der Datei **% *LocalAppData*% \ microsoft\msip\logs\msipscanner.iplog** protokolliert wird.
-
-    **Es kann keine Verbindung mit dem Remote Server hergestellt werden,---> System .net. Sockets. SocketException: Es ist normalerweise nur eine Verwendung der einzelnen Socketadressen (Protokoll/Netzwerkadresse/Port) zulässig. IP: Port**
-
-    > [!NOTE]
-    > Diese Datei wird gezippt, wenn mehrere Protokolle vorhanden sind.
-
-    Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
-
-- **Schwellenwert für Listenansicht.** Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert für die Listenansicht erhöhen. Standardmäßig ist der Schwellenwert für die Listenansicht auf 5.000 festgelegt.
-
-    Weitere Informationen finden Sie unter [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
-
-## <a name="troubleshooting-using-the-scanner-diagnostic-tool"></a>Problembehandlung mithilfe des Scanner-Diagnosetools
-
-Wenn Sie Probleme mit dem Azure Information Scanner haben, überprüfen Sie mit dem folgenden PowerShell-Befehl, ob die Bereitstellung fehlerfrei ist:
-
-```PowerShell
-Start-AIPScannerDiagnostics
-```
-
-Das Diagnosetool überprüft die folgenden Details und exportiert dann eine Protokolldatei mit den Ergebnissen:
-
-- Gibt an, ob die Datenbank aktuell ist.
-- Ob Netzwerk-URLs zugänglich sind
-- Gibt an, ob ein gültiges Authentifizierungs Token vorhanden ist, und die Richtlinie kann abgerufen werden.
-- Gibt an, ob das Profil in der Azure-Portal definiert ist.
-- Gibt an, ob die Offline-/Online Konfiguration vorhanden und abgerufen werden kann
-- Ob die konfigurierten Regeln gültig sind
-
-> [!TIP]
-> Wenn Sie den Befehl unter einem Benutzer ausführen, der nicht der Überprüfungs Benutzer ist, stellen Sie sicher, dass Sie den Parameter " **-Ondo** " hinzufügen. 
->
-
-> [!NOTE]
-> Das Tool **Start-aipscannerdiagnostics** führt keine vollständige Voraussetzungs Prüfung aus. Wenn bei der Überprüfung Probleme auftreten, stellen Sie auch sicher, dass Ihr System den Überprüfungs [Anforderungen](deploy-aip-scanner-prereqs.md)entspricht und dass die Überprüfungs [Konfiguration und-Installation](deploy-aip-scanner-configure-install.md) fertiggestellt sind.
->
 
 ## <a name="next-steps"></a>Nächste Schritte
 

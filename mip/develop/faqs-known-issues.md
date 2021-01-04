@@ -6,18 +6,24 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9b0f9e3fa619762e08d32fb17da576d58f92071d
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: 0fbb704024a87cbee30016a2f5130d788609cea3
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567832"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701559"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK: Häufig gestellte Fragen und Probleme
 
 Dieser Artikel enthält Antworten auf häufig gestellte Fragen (FAQs) und Anleitungen zur Fehlerbehandlung für bekannte Probleme und häufige Fehler.
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen 
+
+### <a name="file-parsing"></a>Dateiverarbeitung
+
+**Frage**: kann ich in dieselbe Datei schreiben, die zurzeit mit dem Datei-SDK gelesen wird?
+
+Das MIP SDK unterstützt das gleichzeitige lesen und Schreiben derselben Datei nicht. Alle gekennzeichneten Dateien führen zu einer *Kopie* der Eingabedatei, auf die die Bezeichnungs Aktionen angewendet werden. Die Anwendung muss den ursprünglichen durch die bezeichnete Datei ersetzen. 
 
 ### <a name="sdk-string-handling"></a>SDK-Zeichen folgen Behandlung
 
@@ -72,9 +78,3 @@ Die Anwendung verfügt nicht über die erforderliche Laufzeit oder wurde nicht a
 > "Proxyauthentieronerror: die Proxy Authentifizierung wird nicht unterstützt."
 
 Das MIP SDK unterstützt nicht die Verwendung von authentifizierten Proxys. Um diese Meldung zu beheben, sollten Proxy Administratoren die Microsoft Information Protection-Dienst Endpunkte festlegen, um den Proxy zu umgehen. Eine Liste mit diesen Endpunkten finden Sie auf der Seite [URLs und IP-Adressbereiche von Office 365](/office365/enterprise/urls-and-ip-address-ranges) . Das MIP SDK erfordert, dass `*.protection.outlook.com` (Zeile 9) und die Azure Information Protection Dienst Endpunkte (Zeile 73) die Proxy Authentifizierung umgehen.
-
-### <a name="issues-in-net-core"></a>Probleme in .net Core
-
-**Frage**: funktioniert das nuget-Paket in .net Core? 
-
-Das nuget-Paket wird in einem .net Core-Projekt installiert, kann jedoch nicht ausgeführt werden. Wir arbeiten daran, dies für Windows zu beheben, verfügen aber zurzeit nicht über eine Zeitachse zur Unterstützung anderer Plattformen.

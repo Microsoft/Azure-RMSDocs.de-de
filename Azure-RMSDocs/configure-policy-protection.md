@@ -9,14 +9,15 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
+ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 17c60e535e41f5678ca94d3744b487c566a3247d
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 85932860538bbdbc073c49aa12e241b6adad3c09
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383107"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806650"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>So konfigurieren Sie eine Bezeichnung für den Rights Management-Schutz
 
@@ -25,7 +26,7 @@ ms.locfileid: "97383107"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden [Sie unter Informationen zu Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Einschränken des Zugriffs auf Inhalte mithilfe von Verschlüsselung in sensiblen Bezeichnungen](/microsoft-365/compliance/encryption-sensitivity-labels) aus der Microsoft 365-Dokumentation. *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 
 Sie können Ihre hochsensiblen Dokumente und E-Mails schützen, indem Sie einen Rights Management-Dienst verwenden. Dieser Dienst verwendet Verschlüsselung, Identität und Autorisierungsrichtlinien, um Datenverluste zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die für die Verwendung des Rights Management-Schutzes für Dokumente und E-Mails konfiguriert ist. Benutzer können auch die Schaltfläche **Nicht weiterleiten** in Outlook verwenden.

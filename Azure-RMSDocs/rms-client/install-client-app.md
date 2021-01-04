@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 1749ccdacaa19279ccf8ddafcf817bb28d50edcf
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: fa5b1bb2d88691e7862de0c678c746ff327ad820
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583658"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805970"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-classic-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection des klassischen Clients
 
@@ -31,7 +32,7 @@ ms.locfileid: "97583658"
 
 Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Berücksichtigen Sie zudem Folgendes:
+Zusätzlich:
 
 - Der Azure Information Protection-Client erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 

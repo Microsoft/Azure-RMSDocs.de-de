@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: abb96719d51658226211653b4ab4d171fcaa6b2e
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
+ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97592744"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764100"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>Benutzerhandbuch: widerrufen des Dokument Zugriffs mit Azure Information Protection (öffentliche Vorschau)
 
@@ -51,7 +51,7 @@ So widerrufen Sie den Zugriff aus Word, Excel oder PowerPoint:
  
 1. Klicken Sie in der angezeigten Bestätigungsmeldung auf **Ja** , um den Vorgang fortzusetzen.
 
-Der Zugriff wird widerrufen, und andere Benutzer können nicht mehr auf das Dokument zugreifen.
+Der Zugriff wird widerrufen, und andere Benutzer können nicht mehr auf das Dokument zugreifen. Wenn der [Offline Zugriff](/microsoft-365/compliance/encryption-sensitivity-labels#assign-permissions-now) zulässig ist, können Benutzer weiterhin auf die Dokumente zugreifen, die widerrufen wurden, bis der Offline Richtlinien Zeitraum abläuft. 
 
 ### <a name="dont-see-the-revoke-access-option"></a>Wird die Option "Zugriff widerrufen" nicht angezeigt?
 
@@ -64,6 +64,8 @@ Wenn die Option zum **widerrufen des Zugriffs** im Menü **Sensitivität** nicht
 - Möglicherweise ist die neueste Version von AIP Unified Bezeichnung-Client nicht installiert, oder Sie müssen Ihre Office-Apps oder den Computer nach der Installation neu starten. 
 
     Weitere Informationen finden [Sie im Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection Clients](install-client-app.md).
+
+- Ihr Administrator hat die [Überwachungsfunktionen](track-and-revoke-admin.md#turn-off-track-and-revoke-features-for-your-tenant) in Ihrer Organisation möglicherweise ausgeschaltet.
 
 ## <a name="revoking-access-where-the-document-protection-has-been-changed-on-a-copy"></a>Aufheben des Zugriffs, bei dem der Dokument Schutz für eine Kopie geändert wurde
 
@@ -80,4 +82,4 @@ Weitere Informationen finden Sie unter
 
 - [AIP Unified Bezeichnung Client-Benutzerhandbuch](clientv2-user-guide.md)
 - [AIP Unified Bezeichnung Client-Administrator Handbuch](clientv2-admin-guide.md)
-- [Bekannte Probleme beim Nachverfolgen und widerrufen des Zugriffs auf Dokumente](../known-issues.md#tracking-and-revoking-document-access-public-preview)
+- [Bekannte Probleme beim Nachverfolgen und widerrufen von Features](../known-issues.md#known-issues-for-track-and-revoke-features-public-preview)
