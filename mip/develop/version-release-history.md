@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 3e58c7efe669aa6c3405a5fd1c2056e96a933ff6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.openlocfilehash: fe246ceb2f54d24318373b95c36733a977b560dc
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566634"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701729"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Support Richtlinie für Microsoft Information Protection (MIP) Software Development Kit (SDK)
 
 ## <a name="servicing"></a>Wird gewartet
 
-Jede allgemein verfügbare Version (General Availability, GA) wird sechs Monate lang unterstützt, nachdem die nächste GA-Version veröffentlicht wurde. In der Dokumentation sind möglicherweise keine Informationen zu nicht unterstützten Versionen enthalten. Korrekturen und neue Funktionen werden nur auf die neueste Version der allgemeinen Verfügbarkeit angewendet.
+Jede allgemein verfügbare Version (General Availability, GA) wird ein Jahr lang unterstützt, nachdem die nächste GA-Version veröffentlicht wurde. In der Dokumentation sind möglicherweise keine Informationen zu nicht unterstützten Versionen enthalten. Korrekturen und neue Funktionen werden nur auf die neueste Version der allgemeinen Verfügbarkeit angewendet.
 
 Vorschau Versionen sollten nicht in der Produktionsumgebung bereitgestellt werden. Verwenden Sie stattdessen die neueste Vorschauversion, um neue Funktionen oder Korrekturen zu testen, die in der nächsten GA-Version verfügbar sind. Nur die aktuelle Vorschauversion wird unterstützt.
 
@@ -27,9 +27,25 @@ Vorschau Versionen sollten nicht in der Produktionsumgebung bereitgestellt werde
 Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstützte Version neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt.
 
 > [!NOTE]
-> Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem SDK haben, sollten Sie überprüfen, ob es mit der neuesten Version der allgemeinen Verfügbarkeit behoben ist. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
+> Kleinere Fehlerbehebungen sind nicht aufgeführt. Wenn Sie ein Problem mit dem SDK haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
 >  
 > Technische Unterstützung finden Sie im [Stack Overflow Microsoft Information Protection-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## <a name="version-17147"></a>Version 1.7.147
+
+### <a name="file-sdk"></a>Datei-SDK
+
+- Kleinere Fehlerbehebung für das pbix-Dateiformat.
+
+## <a name="version-17145"></a>Version 1.7.145
+
+**Veröffentlichungsdatum:** 13. November 2020
+
+### <a name="general-changes"></a>Allgemeine Änderungen
+
+- Das nuget-Paket wurde aktualisiert, um Abhängigkeiten nur beim Update und nicht immer zu kopieren.
+- Die Debugkonfiguration unter .NET verwendet die Releaseversion nativer Bibliotheken. Wir haben festgestellt, dass Kunden, die .net-Lösungen im Debugmodus für Remote Server bereitstellen, die VC + + Debug-Laufzeit installieren müssen, was nicht trivial ist. Wenn Sie in systemeigene Bibliotheken Debuggen müssen, kopieren Sie die DLLs aus dem verteilbaren SDK in den Projektordner (https://ala.ms/mipsdkbins)
+- Es wurde ein Fehler behoben, der Warnungen für .net Core-Projekte generierte.
 
 ## <a name="version-17133"></a>Version 1.7.133
 
@@ -83,7 +99,7 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 - `MIP_CC_PolicyEngineSettings_SetLabelFilter` ist veraltet, verwenden Sie `MIP_CC_PolicyEngineSettings_ConfigureFunctionality` .
 - `MIP_CC_CreatePolicyProfileSettings` die Signatur wurde geändert.
 
-### <a name="breaking-changes"></a>Aktuelle Änderungen
+### <a name="breaking-changes"></a>Breaking Changes
 
 #### <a name="common"></a>Allgemein
 
@@ -187,7 +203,7 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
   - MIP::P olicyhandler:: isbezeichnung ()
   - Geringes Risiko von falsch positiven Ergebnissen (z. b. wenn Inhalt Zombie-Bezeichnungs Metadaten enthält)
 - Gültigkeitsdauer Cache-TTL
-  - Standardwert: 30 Tage
+  - Standard: 30 Tage
   - Konfigurierbar über MIP::P olicyprofile:: setcustomsettings ()
 - **Wichtige Änderung**
   - "Policyengine. Settings. labelfilter" wurde aus der Liste der Enumerationen in das Bitfeld "Werte zulässt" aktualisiert.

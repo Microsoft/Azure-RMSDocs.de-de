@@ -8,16 +8,17 @@ ms.date: 06/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca7b5c157a2c6d6d1162963053828e895fba1fe8
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 9a139aaa4e36a45d23821ae71b27262c5b8c3f89
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382818"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806293"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Konfigurieren und Installieren des Azure Information Protection klassischen Scanner
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382818"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [Installieren und Konfigurieren des AIP Unified-Beschriftungs Scanners](deploy-aip-scanner-configure-install.md). *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Vergewissern Sie sich vor dem Konfigurieren und Installieren des Azure Information Protection Scanners, dass Ihr System die [erforderlichen Voraussetzungen](deploy-aip-scanner-prereqs.md)erfüllt.
 
@@ -79,7 +80,7 @@ So konfigurieren Sie Ihren Scanner:
 
     2. Optional können Sie eine Beschreibung für administrative Zwecke angeben, damit Sie den Cluster Namen des Scanners leichter identifizieren können.
 
-    3. Klicken Sie auf **Speichern**.
+    3. Wählen Sie **Speichern** aus.
 1. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Inhalts Scanaufträge** aus.
 1. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Hinzufügen** aus.
 
@@ -109,7 +110,7 @@ So konfigurieren Sie Ihren Scanner:
 
 1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
 
-    Zum Beispiel: 
+    Beispiel: 
 
     - Verwenden Sie für eine Netzwerkfreigabe `\\Server\Folder` . 
     - Verwenden Sie für eine SharePoint-Bibliothek `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
@@ -193,7 +194,7 @@ So erhalten Sie ein Azure AD Token:
 
     Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
 
-    Zum Beispiel:
+    Beispiel:
 
     ```PowerShell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
@@ -294,7 +295,7 @@ Wenn Sie z. b. einen neuen Dateityp in mehreren SharePoint-Daten Depots haben, k
 
 So führen Sie Massen Änderungen in mehreren Depots durch:
 
-1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Zum Beispiel:
+1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Beispiel:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportieren der Datenrepositoryeinstellungen für den Scanner":::
 
@@ -338,7 +339,7 @@ Weitere Informationen [finden Sie unter Schnellstart: finden Sie heraus, welche 
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. </br></br>Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. </br></br>Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. </br></br>Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
@@ -358,8 +359,8 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Lade-/Antwort-Zeiten**     |Die aktuellen Lade-und Antwortzeiten der Datenspeicher, die die zu überprüfenden Dateien enthalten, wirken sich auch auf die Leistung des Scanners aus.         |
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. </br></br>Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung Ihres Scanners kann beeinträchtigt werden, wenn Sie Änderungen an den Bedingungen in der Azure Information Protection Richtlinie vorgenommen haben. </br></br>Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. </br></br>Wenn Sie die Bedingungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Zum Beispiel: </br>-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
-|**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Beispiel: </br>-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
+|**Log level**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. </br></br>-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. </br></br>-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
 

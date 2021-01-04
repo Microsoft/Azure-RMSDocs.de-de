@@ -6,16 +6,16 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e4f734560c4d3942995f7547f41648bd765bb1b1
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 9cc8d3b874e4971907770ee18508f331acf1ea2d
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555839"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701627"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK: Authentifizierungskonzepte
 
-Die Authentifizierung im MIP SDK erfolgt durch Erweiterung der `mip::AuthDelegate`-Klasse, um die von Ihnen bevorzugte Authentifizierungsmethode zu implementieren. `mip::AuthDelegate` enthält Folgendes:
+Die Authentifizierung im MIP SDK erfolgt durch Erweiterung der `mip::AuthDelegate`-Klasse, um die von Ihnen bevorzugte Authentifizierungsmethode zu implementieren. `mip::AuthDelegate` enthält:
 
 - `mip::AuthDelegate::OAuth2Challenge`: Eine Klasse, die die Informationen der OAuth2-Autorität verwaltet und für die Clientanwendung bereitstellt.
 - `mip::AuthDelegate::OAuth2Token`: Eine Klasse, die den Abruf von OAuth2-Zugriffstoken (aus der Clientanwendung) und die Tokenspeicherung verwaltet.
@@ -24,12 +24,12 @@ Die Authentifizierung im MIP SDK erfolgt durch Erweiterung der `mip::AuthDelegat
 `mip::AuthDelegate::AcquireOAuth2Token` nimmt die folgenden Parameter an und gibt einen booleschen Wert zurück, der angibt, ob der Tokenabruf erfolgreich war:
 
 - `mip::Identity`: Die Identität des zu authentifizierenden Benutzers oder Diensts, sofern bekannt.
-- `mip::AuthDelegate::OAuth2Challenge`: akzeptiert vier Parameter, **Autorität**, **Ressource**, **Ansprüche**und **Bereiche**. **Authority** ist der Dienst, für den das Token generiert wird. **Resource** ist der Dienst, auf den wir zugreifen möchten. Das SDK verarbeitet beim Aufruf die Übergabe dieser Parameter an den Delegaten. **Ansprüche** sind die Bezeichnungs spezifischen Ansprüche, die für den Schutzdienst erforderlich sind. **Bereiche** sind die Azure AD Berechtigungs Bereiche, die für den Zugriff auf die Ressource erforderlich sind. 
+- `mip::AuthDelegate::OAuth2Challenge`: Akzeptiert vier Parameter, **Autorität**, **Ressource**, **Ansprüche** und **Bereiche**. **Authority** ist der Dienst, für den das Token generiert wird. **Resource** ist der Dienst, auf den wir zugreifen möchten. Das SDK verarbeitet beim Aufruf die Übergabe dieser Parameter an den Delegaten. **Ansprüche** sind die Bezeichnungs spezifischen Ansprüche, die für den Schutzdienst erforderlich sind. **Bereiche** sind die Azure AD Berechtigungs Bereiche, die für den Zugriff auf die Ressource erforderlich sind. 
 - `mip::AuthDelegate::OAuth2Token`: Das Tokenergebnis wird in dieses Objekt geschrieben. Es wird durch das SDK genutzt, wenn die Engine geladen wird. Außerhalb unserer Authentifizierungsimplementierung sollte das Abrufen oder Festlegen dieses Werts nirgendwo erforderlich sein.
 
 **Wichtig:** Anwendungen rufen `AcquireOAuth2Token` nicht direkt auf. Das SDK ruft diese Funktion bei Bedarf auf.
 
-## <a name="consent"></a>Consent
+## <a name="consent"></a>Zustimmung
 
 Azure AD verlangt, dass einer Anwendung Zustimmung erteilt wird, bevor ihr die Erlaubnis zum Zugriff auf gesicherte Ressourcen/APIs unter der Identität eines Kontos erteilt wird. Die Zustimmung wird als dauerhafte Bestätigung der Berechtigung im Mandanten des Kontos, für das jeweilige Konto (Benutzer Zustimmung) oder für alle Konten (Administrator Zustimmung) aufgezeichnet. Zustimmung tritt in verschiedenen Szenarien basierend auf der API auf, auf die zugegriffen wird, den Berechtigungen, nach denen die Anwendung sucht, und dem Konto, das für die Anmeldung verwendet wird: 
 
@@ -101,7 +101,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-Zu Test-und Entwicklungszwecken kann eine einfache `ConsentDelegate` implementiert werden, die wie folgt aussieht:
+Zu Test-und Entwicklungszwecken kann ein einfaches `ConsentDelegate` implementiert werden, das wie folgt aussieht:
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -115,5 +115,4 @@ Im Produktionscode ist es jedoch möglicherweise erforderlich, dass der Benutzer
 
 Der Einfachheit halber werden Beispiele, die den Delegaten zeigen, den Tokenabruf durch Aufrufen eines externen Skripts implementieren. Dieses Skript kann durch einen anderen Typ von Skript, eine Open-Source-OAuth2-Bibliothek oder eine benutzerdefinierte OAuth2-Bibliothek ersetzt werden.
 
-- [Abrufen eines Zugriffstokens mithilfe von PowerShell](concept-authentication-acquire-token-ps.md)
 - [Abrufen eines Zugriffstokens mithilfe von Python](concept-authentication-acquire-token-py.md)

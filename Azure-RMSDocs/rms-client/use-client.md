@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 536811aa07df108a0c5cbb44bad5ba5ff2e6f292
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 37d626fc3cf907191aed9760d1452082d732044f
+ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384875"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97747136"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -25,10 +25,10 @@ ms.locfileid: "97384875"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 
 Der Azure Information Protection Unified-Bezeichnungs Client stellt eine Client/Server-Lösung bereit, die den Schutz der Dokumente und e-Mails einer Organisation unterstützt, und stellt eine Alternative zur [integrierten Bezeichnungs Lösung für Microsoft Office](/microsoft-365/compliance/sensitivity-labels)dar. 
@@ -42,7 +42,7 @@ Der Dienst befindet sich in der Cloud oder lokal:
 - Der clouddienst ist **Azure Information Protection** und verwendet den Azure Rights Management-Dienst für den Schutz von Daten.
 - Der lokale Dienst wird **Active Directory Rights Management Services** (AD RMS).
 
-## <a name="choose-your-windows-labeling-solution"></a>Auswählen der Windows-beschriftungslösung
+## <a name="choose-your-windows-labeling-solution"></a>Auswählen Ihrer Windows-Lösung für Bezeichnungen
 
 Bezeichnungen erleichtern Ihren Benutzern die Anwendung von Schutz und sorgen auch für die Klassifizierung, sodass Sie Ihre Daten nachverfolgen und verwalten können. 
 
@@ -70,7 +70,7 @@ Anhand der folgenden Abschnitte können Sie bestimmen, welcher Client für Ihre 
 
 - [Integrierte Office-beschriftungslösung](#built-in-office-labeling-solution)
 - [Azure Information Protection-Client für einheitliche Bezeichnungen](#azure-information-protection-unified-labeling-client)
-- [Azure Information Protection des klassischen Clients](#azure-information-protection-classic-client)
+- [Klassischer Azure Information Protection-Client](#azure-information-protection-classic-client)
 - [Verwenden mehrerer Clients in derselben Umgebung](#using-multiple-clients-in-the-same-environment)
 
 Weitere Informationen finden Sie unter: [ausführliche Vergleiche der AIP-Clients](#detailed-comparisons-for-the-azure-information-protection-clients) und [Features, die für den Unified-Bezeichnungs Client nicht geplant](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)sind.
@@ -100,7 +100,7 @@ Der Unified Label-Client erfordert einen Windows-Computer und ermöglicht das Fr
 
 **Verwenden** Sie den Unified Label-Client nicht, wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](../configure-policy-migrate-labels.md)haben.
 
-### <a name="azure-information-protection-classic-client"></a>Azure Information Protection des klassischen Clients
+### <a name="azure-information-protection-classic-client"></a>Klassischer Azure Information Protection-Client
 
 Der klassische Client ist der AIP-Legacy Client, unterstützt ähnliche Features wie der Unified-Bezeichnungs Client und muss auch separat für Office-Apps installiert werden. 
 
@@ -138,7 +138,7 @@ Der RMS-Client bietet nur Schutz und wird automatisch mit einigen Anwendungen in
 
 Sie können [den RMS-Client auch selbst installieren](https://www.microsoft.com/download/details.aspx?id=38396), um die [Synchronisierung von Dateien aus mit unm geschützten Bibliotheken und onedrive](/onedrive/deploy-on-windows)zu unterstützen, sowie für Entwickler, die den Rights Management-Schutz in Branchen Anwendungen integrieren möchten.
 
-## <a name="compare-the-labeling-solutions-for-windows-computers"></a>Vergleichen der Beschriftungslösungen für Windows-Computer
+## <a name="compare-the-labeling-solutions-for-windows-computers"></a>Vergleichen der Bezeichnungslösungen für Windows-Computer
 
 Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den drei Bezeichnungs Lösungen für Windows-Computer unterstützt werden.
 
@@ -148,7 +148,7 @@ Weitere Informationen finden Sie auch unter:
 - [Ausführliche Vergleiche der Azure Information Protection Clients](#detailed-comparisons-for-the-azure-information-protection-clients)
 - [Features, die im Azure Information Protection Unified-Bezeichnungs Client nicht geplant sind](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
 
-|Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierte Office-beschriftungslösung|
+|Funktion|Klassischer Client|Client für einheitliche Bezeichnungen|Integrierte Office-beschriftungslösung|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**Manuelle Bezeichnung**| ![ja](../media/yes-icon.png)   | ![ja](../media/yes-icon.png)   |![ja](../media/yes-icon.png) |
 |**Standard Bezeichnung**| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)|
@@ -176,8 +176,8 @@ Weitere Informationen finden Sie auch unter:
 |**Hyok-Unterstützung**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
 |**Verwendungs Protokollierung in Ereignisanzeige**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)| ![nein](../media/no-icon.png)|
 |**Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
-|**Nachverfolgen geschützter dokumentiert**| ![ja](../media/yes-icon.png) | ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![nein](../media/no-icon.png)|
-|**Geschützte Dokumente widerrufen**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
+|**Geschützte Dokumente nachverfolgen**| ![Ja ](../media/yes-icon.png) <sup>5</sup> | ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![nein](../media/no-icon.png)|
+|**Geschützte Dokumente widerrufen**| ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![Ja ](../media/yes-icon.png) <sup>5</sup>|  ![nein](../media/no-icon.png)|
 |**Nur Schutzmodus** (keine Bezeichnungen)| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
 |**Unterstützung für Kontowechsel**|  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)| ![ja](../media/yes-icon.png) |
 |**Unterstützung für Remotedesktopdienste**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |
@@ -191,13 +191,13 @@ Weitere Informationen finden Sie auch unter:
 
 <sup>1</sup> diese Einstellungen und viele weitere werden als [Erweiterte Client Einstellungen unterstützt, die Sie im Azure-Portal konfigurieren](client-admin-guide-customizations.md#how-to-configure-advanced-classic-client-configuration-settings-in-the-portal).
 
-<sup>2</sup> diese Einstellungen und viele weitere werden als erweiterte Einstellungen unterstützt, [die Sie mit PowerShell konfigurieren](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+<sup>2</sup> diese Einstellungen und viele weitere werden als erweiterte Einstellungen unterstützt, [die Sie mit PowerShell konfigurieren](clientv2-admin-guide-customizations.md#configuring-advanced-settings-for-the-client-via-powershell).
 
 <sup>3</sup> wird vom Datei-Explorer und PowerShell unterstützt. In Office-Apps können Benutzer **Dateiinformationen**  >  **Schutz Dokument**  >  **einschränken Zugriff** auswählen.
 
 <sup>4</sup> für den Datei-Explorer und PowerShell-Befehlen muss der Benutzer mit dem Internet verbunden sein, um Dateien zu schützen.
 
-<sup>5</sup> die Website zum Nachverfolgen von Dokumenten, die vom klassischen Client unterstützt wird, wird vom Unified-Bezeichnungs Client nicht unterstützt. Allerdings können Administratoren die [zentrale Bericht](../reports-aip.md) Erstellung verwenden, um zu ermitteln, ob der Zugriff auf geschützte Dokumente von Windows-Computern aus erfolgt und ob der Zugriff gewährt oder verweigert wurde, ohne dass Sie zuerst das Dokument für die Nachverfolgung registrieren müssen. 
+<sup>5</sup> Weitere Informationen finden Sie unter: **Unified Bezeichnung Client**: [Admin Guide (Public Preview)](track-and-revoke-admin.md)  |   [User Guide (Public Preview)](revoke-access-user.md). Die Nachverfolgung wird nur für globale Administratoren unterstützt. **Klassischer Client**: [](client-admin-guide-document-tracking.md)  |  [Benutzerhandbuch](client-track-revoke.md)zum Administrator Handbuch. Administratoren können mit der [zentralen Berichterstattung](../reports-aip.md) auch ermitteln, ob auf geschützte Dokumente von Windows-Computern zugegriffen wird und ob der Zugriff gewährt oder verweigert wurde.
 
 <sup>6</sup> Bezeichnungs-und Schutz Aktionen werden nicht unterstützt. Allerdings kann der Viewer bei einer AD RMS Bereitstellung geschützte Dokumente öffnen, wenn Sie die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))verwenden.
 
@@ -210,7 +210,7 @@ Weitere Informationen finden Sie auch unter:
 Wenn die Azure Information Protection des klassischen Clients und der Azure Information Protection Unified-Bezeichnung-Client dieselbe Funktion unterstützen, verwenden Sie die folgenden Listen, um einige funktionale Unterschiede zwischen den beiden Clients zu identifizieren:
 
 
-|Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Funktionalität |Klassischer Client|Client für einheitliche Bezeichnungen|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |**Einrichtung**| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |**Auswahl und Anzeige von Bezeichnungen in Office-Apps**|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|

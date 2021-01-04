@@ -8,16 +8,17 @@ ms.date: 03/16/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ROBOTS: NOINDEX
 ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 085fac334348e0d13381571c9622b64a2b20e172
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 514eaf2f935d4ec454b57dbaf2ce1c97c029c4b8
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382733"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806242"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-classic-client-scanner"></a>Bereitstellen früherer Versionen der Azure Information Protection klassischen Client Scanner
 
@@ -26,7 +27,7 @@ ms.locfileid: "97382733"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zur Überprüfung des Clients für die nicht komprimierte Bezeichnung finden Sie unter [Was ist der AIP Unified-Beschriftungs Scanner?](deploy-aip-scanner.md). *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 > Dieser Artikel ist für Versionen der Azure Information Protection Scanner vorgesehen, die älter als die Version **1.48.204.0** sind, aber noch unterstützt werden. Informationen zum Aktualisieren früherer Versionen auf die aktuelle Version finden Sie unter [Aktualisieren der Azure Information Protection Scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
@@ -114,7 +115,7 @@ if not exists(select * from master.sys.server_principals where sid = SUSER_SID('
 USE AzInfoProtectionScanner IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 ```
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
@@ -148,7 +149,7 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
     Install-AIPScanner -SqlServerInstance <name>
     ```
 
-    Zum Beispiel:
+    Beispiel:
 
     - Für eine Standardinstanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
 
@@ -425,7 +426,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
 
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
 
     - Vermeiden Sie [gierige Quantifizierer](/dotnet/standard/base-types/quantifiers-in-regular-expressions)
 
@@ -443,7 +444,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
     - Das Überprüfen großer Dateien beansprucht naturgemäß mehr Zeit als das Überprüfen kleiner Dateien.
 
-- Darüber hinaus gilt:
+- Außerdem zu beachten:
 
     - Vergewissern Sie sich, dass das Dienst Konto, unter dem die Überprüfung ausgeführt wird, nur über die im Abschnitt Überprüfungs [Voraussetzungen](#prerequisites-for-the-azure-information-protection-scanner) beschriebenen Rechte verfügt, und konfigurieren Sie dann die Einstellung erweiterter [Client](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) , um die Ebene mit niedriger Integrität für den Scanner zu deaktivieren
 

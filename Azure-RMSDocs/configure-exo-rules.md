@@ -9,26 +9,27 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
+ROBOTS: NOINDEX
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cbb6b583c45ac735f99e4cc51ac91e0401612f88
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: ca365962d470d009411e4e02de885acd2e7fb043
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383617"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97806922"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
->***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified Label-Client finden Sie in der Microsoft 365-Dokumentation unter Informationen [zu Empfindlichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [DLP-Bezeichnungen](/microsoft-365/compliance/dlp-sensitivity-label-as-condition) . *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Zum Beispiel:
+Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Beispiel:
 
 - Die Standardbezeichnung **Allgemein** bietet keinen Schutz. Für E-Mails mit dieser Bezeichnung, die extern versendet werden, wenden Sie die zusätzliche Schutzaktion „Nicht weiterleiten“ an.
 
@@ -90,7 +91,7 @@ In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Stand
     
     Die Regel Konfiguration sollte nun in etwa wie folgt aussehen:  ![ Exchange Online-e-Mail-Fluss Regel konfiguriert für eine Azure Information Protection Bezeichnung-Beispiel 1](./media/aip-exo-rule-ex1.png)
 
-7. Klicken Sie auf **Speichern**. 
+7. Wählen Sie **Speichern** aus. 
 
 Weitere Informationen zur „Nicht weiterleiten“-Option finden Sie unter [Option „Nicht weiterleiten“ für E-Mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
@@ -120,7 +121,7 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
     
     Die Regel Konfiguration sollte nun in etwa wie folgt aussehen:  ![ Exchange Online-e-Mail-Fluss Regel ist für eine Azure Information Protection Bezeichnung konfiguriert-Beispiel 2](./media/aip-exo-rule-ex2.png)
 
-6. Klicken Sie auf **Speichern**. 
+6. Wählen Sie **Speichern** aus. 
 
 Weitere Informationen zur Verschlüsselungsoption finden Sie unter [Option „Encrypt Only“ (Nur verschlüsseln) für E-Mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 

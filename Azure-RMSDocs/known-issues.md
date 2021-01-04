@@ -4,25 +4,25 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/15/2020
+ms.date: 12/29/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e18c18322783a4f953c898cb96232ab35b642dca
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 1ee51978452a4f420478f2938020578166f49335
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583624"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805987"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
@@ -45,15 +45,15 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: vom Azure Inform
 
 Der Azure Information Protection-Client wird auf Computern mit .NET 2 oder 3 nicht unterstützt, auf denen der [Exploit-Schutz](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) aktiviert ist, und bewirkt, dass Office-Apps unerwartet Verhalten.
 
-Wenn Sie zusätzlich zu einer .NET 4. x-Version, die für Ihr System erforderlich ist, über eine .NET-Version 2 oder 3 verfügen, sollten Sie den Exploit-Schutz vor der Installation von AIP deaktivieren. 
+In solchen Fällen empfiehlt es sich, die .NET-Version zu aktualisieren. Weitere Informationen finden Sie unter [Microsoft .NET Framework-Anforderungen](rms-client/reqs-ul-client.md#microsoft-net-framework-requirements).
+
+Wenn Sie die .NET-Version 2 oder 3 beibehalten müssen, stellen Sie sicher, dass Sie den Exploit-Schutz vor der Installation von AIP deaktivieren. 
 
 Führen Sie Folgendes aus, um den Exploit-Schutz über PowerShell zu deaktivieren:
 
 ```PowerShell
 Set-ProcessMitigation -Name "OUTLOOK.EXE" -Disable EnableExportAddressFilterPlus, EnableExportAddressFilter, EnableImportAddressFilter
 ```
-
-Weitere Informationen finden Sie unter [zusätzliche Voraussetzungen für den Azure Information Protection Unified Bezeichnung-Client](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).
 
 ## <a name="powershell-support-for-the-azure-information-protection-client"></a>PowerShell-Unterstützung für den Azure Information Protection-Client
 
@@ -85,17 +85,11 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 
 Das Veröffentlichen von Richtlinien kann bis zu 24 Stunden dauern.
 
-## <a name="known-issues-in-the-aip-client"></a>Bekannte Probleme im AIP-Client
-
-- [Maximale Dateigröße](#maximum-file-sizes)
-- [AIP-Viewer](#aip-viewer)
-- [Nachverfolgen und widerrufen des Zugriffs auf Dokumente](#tracking-and-revoking-document-access-public-preview)
-
-### <a name="maximum-file-sizes"></a>Maximale Dateigröße
+## <a name="maximum-file-sizes"></a>Maximale Dateigröße
 
 Dateien mit mehr als 2 GB werden für den Schutz unterstützt, aber nicht für die Entschlüsselung.
 
-### <a name="aip-viewer"></a>AIP-Viewer
+## <a name="known-issues-for-the-aip-viewer"></a>Bekannte Probleme für den AIP-Viewer
 
 Der AIP-Viewer zeigt Bilder im Hochformat an, und einige große, quer Ansichts Bilder können scheinbar gestreckt werden.
 
@@ -108,7 +102,7 @@ Weitere Informationen finden Sie unter
 - [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
 - [**Einheitlicher** Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)
 
-### <a name="tracking-and-revoking-document-access-public-preview"></a>Nachverfolgen und widerrufen des Zugriffs auf Dokumente (öffentliche Vorschau)
+## <a name="known-issues-for-track-and-revoke-features-public-preview"></a>Bekannte Probleme beim Nachverfolgen und widerrufen von Features (öffentliche Vorschau)
 
 Das Nachverfolgen und widerrufen des Dokument Zugriffs mithilfe des Unified-bezeichungsclients hat die folgenden bekannten Probleme:
 
@@ -127,30 +121,35 @@ Außerdem wird durch das Aufheben des Zugriffs für eine der Anhänge der Zugrif
 
 #### <a name="documents-accessed-via-sharepoint"></a>Dokumente, die über SharePoint aufgerufen werden
     
-- Geschützte Dokumente, die in SharePoint hochgeladen werden, verlieren ihren contentid-Wert. 
+- Geschützte Dokumente, die in SharePoint hochgeladen werden, verlieren ihren **contentid** -Wert, und der Zugriff kann nicht nachverfolgt oder widerrufen werden.
 
-    Dies bedeutet, dass die Daten nicht nachverfolgt werden und jegliche Zugriffs Sperrung nicht für die in SharePoint gespeicherte Datei gilt.
-
-- Wenn ein Benutzer die Datei von SharePoint herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue contentid auf das Dokument angewendet, wenn Sie Sie lokal öffnen. 
+- Wenn ein Benutzer die Datei von SharePoint herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue **contentid** auf das Dokument angewendet, wenn Sie Sie lokal öffnen. 
     
-    Die Verwendung des ursprünglichen contentid-Werts zum Nachverfolgen von Daten umfasst keinen Zugriff auf die heruntergeladene Datei des Benutzers. Außerdem wird durch das Aufheben des Zugriffs auf Grundlage des ursprünglichen contentid-Werts der Zugriff für die heruntergeladenen Dateien nicht widerrufen.
+    Die Verwendung des ursprünglichen **contentid** -Werts zum Nachverfolgen von Daten umfasst keinen Zugriff auf die heruntergeladene Datei des Benutzers. Außerdem wird durch das Aufheben des Zugriffs auf Grundlage des ursprünglichen **contentid** -Werts der Zugriff für die heruntergeladenen Dateien nicht widerrufen.
 
-    In solchen Fällen können Administratoren die heruntergeladenen Dateien mithilfe von PowerShell ausfindig machen, um die neuen contentid-Werte zum Nachverfolgen oder widerrufen des Zugriffs zu finden.
+    In solchen Fällen können Administratoren die heruntergeladenen Dateien mithilfe von PowerShell ausfindig machen, um die neuen **contentid** -Werte zum Nachverfolgen oder widerrufen des Zugriffs zu finden.
 
+### <a name="knowns-issues-for-the-aip-client-and-onedrive"></a>Probleme mit dem AIP-Client und onedrive
+
+Wenn Sie Dokumente, die in onedrive gespeichert sind und eine Vertraulichkeits Bezeichnung angewendet haben, und ein Administrator die Bezeichnung in der Beschriftungs Richtlinie so ändert, dass Schutz hinzugefügt wird, wird der neu angewendete Schutz nicht automatisch auf das bezeichnete Dokument angewendet. 
+
+In solchen Fällen müssen Sie das Dokument manuell neu bezeichnen, um den Schutz nach Bedarf anzuwenden.
 ## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP für Windows und Office-Versionen in erweiterter Unterstützung
 
 - Die [**Erweiterte Unterstützung von Windows 7 endete am 14. Januar 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 
-    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Windows 10 durchzuführen. Wenn Sie jedoch über erweiterte Sicherheits Updates (ESU) und einen Supportvertrag verfügen, steht die AIP-Unterstützung zur Verfügung, um Ihre Windows 7-Systeme weiterhin sicher zu halten.
+    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Windows 10 durchzuführen. 
+
+    Wenn Sie jedoch über erweiterte Sicherheits Updates (ESU) und einen Supportvertrag verfügen, steht die AIP-Unterstützung zur Verfügung, um Ihre Windows 7-Systeme weiterhin sicher zu halten.
 
     Weitere Informationen erhalten Sie von Ihrem Support Kontakt.
 
-- [**Office 2010 befindet sich derzeit im erweiterten Support**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Der erweiterte Support von Office 2010 endete am 13. Oktober 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
 
-    Diese Unterstützung endet am 13. Oktober, 2020 und wird nicht verlängert. Außerdem wird ESU nicht für Office 2010 angeboten, und wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Office 365 durchzuführen. 
+    Diese Unterstützung wird nicht verlängert, und ESU wird nicht für Office 2010 angeboten. 
+
+    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Office 365 durchzuführen. 
     
-    Für Kunden, die derzeit Office 2010 im erweiterten Support ausführen, ist der AIP-Support bis zum 13. Oktober 2020 verfügbar. 
-
     Weitere Informationen erhalten Sie von Ihrem Support Kontakt.
 
 ## <a name="aip-based-conditional-access-policies"></a>Richtlinien für den AIP-basierten bedingten Zugriff

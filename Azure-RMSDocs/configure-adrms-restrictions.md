@@ -9,14 +9,15 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
+ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 2e82b7c4cd99b5e880cc59db77a5a844d0e28030
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583607"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97805834"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Hold Your Own Key (Hyok)-Details für Azure Information Protection
 
@@ -106,7 +107,7 @@ In den folgenden Tabellen sind die unterstützten Szenarien für den Schutz und 
 |---------|---------|---------|
 |Azure Information Protection Clients mit Microsoft 365 apps, Office 2019, Office 2016 und Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![ja](media/yes-icon.png)        | ![ja](media/yes-icon.png)        |
 |Azure Information Protection-Client mit Datei-Explorer     | ![ja](media/yes-icon.png)        | ![ja](media/yes-icon.png) |
-|Azure Information Protection-Viewer     |   Nicht zutreffend      |  ![ja](media/yes-icon.png)       |
+|Azure Information Protection-Viewer     |   Nicht verfügbar      |  ![ja](media/yes-icon.png)       |
 |Azure Information Protection-Client PowerShell-Cmdlets für die Bezeichnung     | ![ja](media/yes-icon.png)        | ![ja](media/yes-icon.png)        |
 |Azure Information Protection-Überprüfung     |![ja](media/yes-icon.png)       |   ![ja](media/yes-icon.png)      |
 | | | |
@@ -124,7 +125,7 @@ In den folgenden Tabellen sind die unterstützten Szenarien für den Schutz und 
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word, Excel, PowerPoint|![nein](media/no-icon.png)| ![ja](media/yes-icon.png)|
 |Office Mobile: </br>Nur Outlook|![nein](media/no-icon.png)|![nein](media/no-icon.png)|
-|Azure Information Protection-Viewer|Nicht zutreffend|![ja](media/yes-icon.png)|
+|Azure Information Protection-Viewer|Nicht verfügbar|![ja](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>Android-Anwendungsunterstützung für Hyok
 
@@ -132,7 +133,7 @@ In den folgenden Tabellen sind die unterstützten Szenarien für den Schutz und 
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word, Excel, PowerPoint|![nein](media/no-icon.png)| ![ja](media/yes-icon.png)|
 |Office Mobile: </br>Nur Outlook|![nein](media/no-icon.png)|![nein](media/no-icon.png)|
-|Azure Information Protection-Viewer|Nicht zutreffend| ![ja](media/yes-icon.png)|
+|Azure Information Protection-Viewer|Nicht verfügbar| ![ja](media/yes-icon.png)|
 
 
 ## <a name="implementing-hyok"></a>Implementieren von HYOK
@@ -195,7 +196,7 @@ Um Hyok zu unterstützen, stellen Sie sicher, dass das AD RMS System über die f
 
     Geben Sie für das \<string value> eine der folgenden Zeichen folgen an:
 
-    |Environment  |Zeichenfolgenwert  |
+    |Umgebung  |Zeichenfolgenwert  |
     |---------|---------|
     |**Produktion** </br>(AD RMS Cluster mit SSL/TLS)     | `https://<cluster_name>/_wmcs/certification/certification.asmx`        |
     |**Testen/evaluieren** </br>(kein SSL/TLS)     |`http://<cluster_name>/_wmcs/certification/certification.asmx`         |

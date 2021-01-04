@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: cc8b2f4d969e24451110a6838ce10c8eea39abd9
-ms.sourcegitcommit: 54e742defb0b8dca35047b34498ec66e61602fa6
+ms.openlocfilehash: 688fe04d993ae1d286458fa9d41b0915838e6406
+ms.sourcegitcommit: 437057990372948c9435b620052a7398360264b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96577047"
+ms.lasthandoff: 12/20/2020
+ms.locfileid: "97701678"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++) 
 
@@ -350,13 +350,6 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
 
 4. Nun können Sie die Anwendung endgültig fertigstellen und etwaige Fehler beheben. Ihr Code müsste erfolgreich erstellt werden, wird jedoch erst dann ordnungsgemäß ausgeführt, wenn Sie den nächsten Schnellstart abgeschlossen haben. Bei der Ausführung der Anwendung wird Ihnen eine Ausgabe wie die folgende angezeigt. Sie können erst dann ein Zugriffstoken bereitstellen, wenn Sie den nächsten Schnellstart abgeschlossen haben.
 
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account:
-   Enter access token:
-   ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 

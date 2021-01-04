@@ -9,16 +9,17 @@ ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
+ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 994b4ae32424fe4994cbb8e7b77ed4acc5867bdb
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3c7105d93f396380c47711611b83d24909431cbc
+ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386201"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97807483"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-classic-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection klassischen Client
 
@@ -27,7 +28,7 @@ ms.locfileid: "97386201"
 >***Relevant für**: [Azure Information Protection klassischen Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie im Unified-Bezeichnungs [Client-Administrator Handbuch](clientv2-admin-guide-customizations.md). *
 
 > [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
@@ -111,7 +112,7 @@ So melden Sie sich als ein anderer Benutzer an:
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Wenn der Azure Information Protection-Client nach Abschluss dieser Schritte noch mit dem alten Konto angemeldet ist, löschen Sie im Internet Explorer alle Cookies, und wiederholen Sie dann die Schritte 1 und 2.
 
@@ -607,7 +608,7 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiel:
     
     ```ps
     Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
@@ -621,13 +622,13 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Entscheiden Sie, ob Sie den Benutzer fortsetzen oder den Benutzer (der Wert, der für den **rmsissuer** angezeigt wird) zum Entfernen der Bezeichnung und zum erneuten Anwenden der Bezeichnung sowie ihrer ursprünglichen benutzerdefinierten Berechtigungen auffordern.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Zum Beispiel: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
 
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
     ```
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiel:
     
     ```ps    
     Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
@@ -886,7 +887,7 @@ Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet,
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden, die Informationen sind jedoch auf die Bezeichnungs Aktivität beschränkt.
 
-Zum Beispiel:
+Beispiel:
 
 - Mit dieser Einstellung können Sie feststellen, dass ein Benutzer auf Financial.docx mit der Bezeichnung **vertraulich \ Sales** zugegriffen hat.
 
@@ -1009,11 +1010,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Regel für den Exchange-E-Mail-Verkehr. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Zum Beispiel:
+     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-EA17-4f DB-8F 01-93a3e71333b8_Enabled = true**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     
