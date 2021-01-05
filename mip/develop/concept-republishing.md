@@ -1,17 +1,17 @@
 ---
 title: Wieder veröffentlichen im MIP SDK
-description: In diesem Artikel erfahren Sie, wie Sie das Szenario für die Wiederverwendung des Schutz Handlers für das erneute Veröffentlichen von Szenarien verstehen.
-author: Pathak-Aniket
+description: In diesem Artikel erfahren Sie, wie Sie den Schutzhandler zum erneuten Veröffentlichen wiederverwenden.
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: 499e4881175920fdf3127856fa9056b10ae22b79
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: 79fd94614fd19a3cc93c59736931495c9019e2d8
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405211"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864973"
 ---
 # <a name="republishing-c"></a>Wiederveröffentlichung (C++)
 
@@ -54,11 +54,11 @@ Das Szenario verwendet auch `mip::ProtectionHandler` , das die Funktionen zum Ve
 
 ## <a name="create-a-protection-handler-from-the-file-and-decrypt-the-file"></a>Erstellen Sie einen Schutz Handler aus der Datei, und entschlüsseln Sie die Datei.
 
-`mip::ProtectionHandler`macht die Funktionen zum Verschlüsseln und entschlüsseln geschützter Streams und Puffer, zum Durchführen von Zugriffs Überprüfungen, zum Abrufen der Veröffentlichungs Lizenz und zum Abrufen von Attributen aus den geschützten Informationen verfügbar. `mip::ProtectionHandler`Objekte werden erstellt, indem entweder ein Schutz Deskriptor oder eine serialisierte Veröffentlichungs Lizenz bereitgestellt wird. In diesem Anwendungsfall wird die Veröffentlichungs Lizenz implizit verwendet, wenn die Veröffentlichungs Lizenz beim Entschlüsseln von bereits geschütztem Inhalt oder beim Schutz von Inhalten verwendet wird, in denen die Lizenz bereits erstellt wurde.
+`mip::ProtectionHandler` macht die Funktionen zum Verschlüsseln und entschlüsseln geschützter Streams und Puffer, zum Durchführen von Zugriffs Überprüfungen, zum Abrufen der Veröffentlichungs Lizenz und zum Abrufen von Attributen aus den geschützten Informationen verfügbar. `mip::ProtectionHandler` Objekte werden erstellt, indem entweder ein Schutz Deskriptor oder eine serialisierte Veröffentlichungs Lizenz bereitgestellt wird. In diesem Anwendungsfall wird die Veröffentlichungs Lizenz implizit verwendet, wenn die Veröffentlichungs Lizenz beim Entschlüsseln von bereits geschütztem Inhalt oder beim Schutz von Inhalten verwendet wird, in denen die Lizenz bereits erstellt wurde.
 
-`mip::FileHandler`macht eine Methode mit dem Namen verfügbar `GetProtection()` , die `mip::ProtectionHandler` aus der Datei abruft, die dem zugeordnet ist `mip::FileHandler` . Nachdem das `mip::ProtectionHandler` Objekt abgerufen wurde, kann das gleiche verwendet werden, um die Zugriffsebenen des Benutzers zu überprüfen, die Datei zu entschlüsseln und die Datei später zu verschlüsseln, nachdem Sie bearbeitet wurde.
+`mip::FileHandler` macht eine Methode mit dem Namen verfügbar `GetProtection()` , die `mip::ProtectionHandler` aus der Datei abruft, die dem zugeordnet ist `mip::FileHandler` . Nachdem das `mip::ProtectionHandler` Objekt abgerufen wurde, kann das gleiche verwendet werden, um die Zugriffsebenen des Benutzers zu überprüfen, die Datei zu entschlüsseln und die Datei später zu verschlüsseln, nachdem Sie bearbeitet wurde.
 
-`mip::ProtectionHandler``AccessCheck()`wird verwendet, um zu überprüfen, ob der Benutzer über ein bestimmtes Recht auf die Datei verfügt, und gibt abhängig vom Ergebnis eine boolesche Antwort zurück. Um beispielsweise zu überprüfen, ob der Benutzer über die Berechtigung zum Bearbeiten verfügt, müssen Sie die-Methode mit dem Wert "Edit" (Bearbeiten) abrufen. Wenn das Ergebnis *true*ist, können Sie es dem Benutzer ermöglichen, die Datei zu bearbeiten. Nachdem das **Bearbeitungs** Recht überprüft wurde, verwenden `mip::FileHandler` `GetDecryptedTemporaryFileAsync()` Sie, um die temporäre entschlüsselte Datei abzurufen.
+`mip::ProtectionHandler``AccessCheck()`wird verwendet, um zu überprüfen, ob der Benutzer über ein bestimmtes Recht auf die Datei verfügt, und gibt abhängig vom Ergebnis eine boolesche Antwort zurück. Um beispielsweise zu überprüfen, ob der Benutzer über die Berechtigung zum Bearbeiten verfügt, müssen Sie die-Methode mit dem Wert "Edit" (Bearbeiten) abrufen. Wenn das Ergebnis *true* ist, können Sie es dem Benutzer ermöglichen, die Datei zu bearbeiten. Nachdem das **Bearbeitungs** Recht überprüft wurde, verwenden `mip::FileHandler` `GetDecryptedTemporaryFileAsync()` Sie, um die temporäre entschlüsselte Datei abzurufen.
 
 Weitere Informationen zu den verschiedenen Benutzerrechten finden Sie unter [Benutzerrechte für Azure Information Protection](/azure/information-protection/configure-usage-rights).
 

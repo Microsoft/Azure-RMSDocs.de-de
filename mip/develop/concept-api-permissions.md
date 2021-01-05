@@ -1,17 +1,17 @@
 ---
 title: 'Erforderliche API-Berechtigungen: Microsoft Information Protection SDK'
 description: Technische Details zu API-Berechtigungen, die für Microsoft Information Protection Software Development Kit-Vorgänge erforderlich sind.
-author: Pathak-Aniket
-ms.author: v-anikep
+author: msmbaldwin
+ms.author: mbaldwin
 ms.date: 08/20/2020
 ms.topic: conceptual
 ms.service: information-protection
-ms.openlocfilehash: ce44c0d8b65f477fdd7b08f34cfe2aacc890d259
-ms.sourcegitcommit: 6b159e050176a2cc1b308b1e4f19f52bb4ab1340
+ms.openlocfilehash: d1d7e026ffb3b35d2d26f40c6b48baa9a0991a8d
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "95567925"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864871"
 ---
 # <a name="api-permissions-for-the-microsoft-information-protection-sdk"></a>API-Berechtigungen für das Microsoft Information Protection SDK
 
@@ -28,7 +28,7 @@ Die Mandanten weite Zustimmung des Administrators sollte für Anwendungs Berecht
 
 Anwendungs Berechtigungen ermöglichen, dass eine Anwendung in Azure Active Directory als eigene Entität agiert und nicht im Auftrag eines bestimmten Benutzers.
 
-| Dienst                         | Berechtigungsname           | BESCHREIBUNG                                  | Zustimmung des Administrators erforderlich |
+| Dienst                         | Berechtigungsname           | Beschreibung                                  | Zustimmung des Administrators erforderlich |
 | ------------------------------- | ------------------------- | -------------------------------------------- | ---------------------- |
 | Azure Rights Management-Dienst | Content. Superuser         | Alle geschützten Inhalte für diesen Mandanten lesen   | Ja                    |
 | Azure Rights Management-Dienst | Content. delegatedreader   | Lesen geschützter Inhalte im Namen eines Benutzers   | Ja                    |
@@ -60,7 +60,7 @@ Diese Berechtigung ist erforderlich, wenn eine Anwendung berechtigt ist, einheit
 
 Delegierte Berechtigungen ermöglichen einer Anwendung in Azure Active Directory das Ausführen von Aktionen im Auftrag eines bestimmten Benutzers.
 
-| Dienst                         | Berechtigungsname         | BESCHREIBUNG                                      | Zustimmung des Administrators erforderlich |
+| Dienst                         | Berechtigungsname         | Beschreibung                                      | Zustimmung des Administrators erforderlich |
 | ------------------------------- | ----------------------- | ------------------------------------------------ | ---------------------- |
 | Azure Rights Management-Dienst | user_impersonation      | Erstellen und Zugreifen auf geschützte Inhalte für den Benutzer | Nein                     |
 | MIP-Synchronisierungs Dienst                | Unifedpolicy. User. Read | Alle vereinheitlichten Richtlinien lesen, auf die ein Benutzer Zugriff hat   | Nein                     |

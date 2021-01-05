@@ -1,17 +1,17 @@
 ---
 title: Verarbeiten von e-Mail-Nachrichten mithilfe des MIP SDK
 description: In diesem Artikel erfahren Sie, wie Sie mithilfe der MIP SDK-Datei-API. msg-und rpmsg-Dateien verarbeiten.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.date: 04/08/2020
-ms.author: v-anikep
-ms.openlocfilehash: 074a0f6868796c68cf02a5a6cf4e105f9afeff19
-ms.sourcegitcommit: 36413b0451ae28045193c04cbe2d3fb2270e9773
+ms.author: mbaldwin
+ms.openlocfilehash: 52526409b6d08efde1064063b9f36564baa6a378
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405214"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864769"
 ---
 # <a name="file-api-email-message-file-processing"></a>Dateiverarbeitung der Datei-API-e-Mail
 
@@ -31,7 +31,7 @@ Die Datei-API unterstützt Schutz Vorgänge für MSG-Dateien und identisch mit e
 > [!IMPORTANT]
 > Bezeichnungs Vorgänge für. msg-Dateien werden zurzeit nicht unterstützt.
 
-Wie bereits erläutert, erfordert die Instanziierung von `mip::FileEngine` ein Einstellungsobjekt, `mip::FileEngineSettings`. `mip::FileEngineSettings`kann verwendet werden, um Parameter für benutzerdefinierte Einstellungen zu übergeben, die von der Anwendung für eine bestimmte Instanz festgelegt werden müssen. Die CustomSettings-Eigenschaft von fileenginesettings wird verwendet, um das-Flag für festzulegen `enable_msg_file_type` , um die Verarbeitung von msg-Dateien zu ermöglichen.
+Wie bereits erläutert, erfordert die Instanziierung von `mip::FileEngine` ein Einstellungsobjekt, `mip::FileEngineSettings`. `mip::FileEngineSettings` kann verwendet werden, um Parameter für benutzerdefinierte Einstellungen zu übergeben, die von der Anwendung für eine bestimmte Instanz festgelegt werden müssen. Die CustomSettings-Eigenschaft von fileenginesettings wird verwendet, um das-Flag für festzulegen `enable_msg_file_type` , um die Verarbeitung von msg-Dateien zu ermöglichen.
 
 Der Datei Schutz für die Datei Schutz Vorgänge ". msg" könnte wie folgt aussehen:
 
@@ -50,9 +50,9 @@ Im allgemeinen verarbeiten e-Mail-Gateways und DLP-Dienste (Data Loss Prevention
 
 In den meisten Fällen muss der DLP-Partner in der Lage sein, die Anhänge und Klartext-Bytes aus der Nachricht abzurufen, um DLP-Richtlinien zu überprüfen und zu evaluieren. Die Überprüfungs-API nimmt die Nachricht. rpmsg als Eingabe an und gibt Bytestreams als Ausgabe zurück. Diese Bytestreams enthalten sowohl die nur-Text-Bytes der Nachricht als auch die Anhänge. Es ist für den Anwendungsentwickler von Vorteil, diese Streams zu verarbeiten und etwas Nützliches zu tun (überprüfen, rekursiv entschlüsseln usw.).
 
-Die- `Inspect` API wird über eine-Klasse implementiert `mip::FileInspector` , die Vorgänge für die Überprüfung unterstützter Dateitypen verfügbar macht. `mip::MsgInspector`die erweitert `mip::FileInspector` , macht Entschlüsselungs Vorgänge verfügbar, die für das rpmsg-Dateiformat spezifisch sind. MIP SDK unterstützt keine Veröffentlichungs Szenarien für *Message. rpmsg* -Dateien.
+Die- `Inspect` API wird über eine-Klasse implementiert `mip::FileInspector` , die Vorgänge für die Überprüfung unterstützter Dateitypen verfügbar macht. `mip::MsgInspector` die erweitert `mip::FileInspector` , macht Entschlüsselungs Vorgänge verfügbar, die für das rpmsg-Dateiformat spezifisch sind. MIP SDK unterstützt keine Veröffentlichungs Szenarien für *Message. rpmsg* -Dateien.
 
-`mip::MsgInspector`die Klasse macht die folgenden Member verfügbar:
+`mip::MsgInspector` die Klasse macht die folgenden Member verfügbar:
 
 ```cpp
 public const std::vector<uint8_t>& GetBody()
