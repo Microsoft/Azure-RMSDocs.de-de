@@ -17,6 +17,8 @@
           href: requirements-applications.md
         - name: Unterstützte Dateitypen
           href: ./rms-client/clientv2-admin-guide-file-types.md
+        - name: Anforderungen für den Client für einheitliche Bezeichnungen
+          href: ./rms-client/reqs-ul-client.md
         - name: Anforderungen für den lokalen Scanner
           href: deploy-aip-scanner-prereqs.md
     - name: AIP ist wird auch bezeichnet als...
@@ -139,6 +141,8 @@
               href: deploy-aip-scanner-configure-install.md
             - name: Ausführen des Scanners für einheitliche Bezeichnungen
               href: deploy-aip-scanner-manage.md
+            - name: Problembehandlung Ihres Scanners
+              href: deploy-aip-scanner-tsg.md
         - name: Bereitstellen des RMS-Verbindungsdiensts
           items:
             - name: Übersicht

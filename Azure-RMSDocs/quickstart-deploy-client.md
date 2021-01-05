@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fa795fa29e39bc9fe5abc9a68febcd168a5bb502
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 468cbe031b22ba07127b75295da98ee9a081048a
+ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386337"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762331"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen
 
@@ -33,23 +33,23 @@ Für Organisationen ohne Informationsschutzplattform bietet der Client einen Vie
 
 Lesen Sie die unten verknüpften Artikel, um mehr über die Voraussetzungen für die Bereitstellung des Azure Information Protection-Clients für einheitliche Bezeichnungen in Ihrer Organisation zu erfahren:
 
-- **[Anforderungen an Azure Information Protection](requirements.md).** Beschreibt die detaillierten Systemanforderungen für die Bereitstellung des AIP-Clients in Ihrer Organisation, wie ein Azure Information Protection-Abonnement und Azure Active Directory. Außerdem werden die unterstützten Clientgeräte und Anwendungen aufgeführt.
+- **[Anforderungen an Azure Information Protection](requirements.md)** . Beschreibt die detaillierten Systemanforderungen für die Bereitstellung des AIP-Clients in Ihrer Organisation, wie ein Azure Information Protection-Abonnement und Azure Active Directory. Außerdem werden die unterstützten Clientgeräte und Anwendungen aufgeführt.
 
-- **[Voraussetzungen für den Client für einheitliche Bezeichnungen](rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client).** Listet die Systemanforderungen für jeden Computer auf, auf dem der AIP-Client installiert ist.
+- **[Anforderungen für den Client für einheitliche Bezeichnungen](./rms-client/reqs-ul-client.md)** . Listet die Systemanforderungen für jeden Computer auf, auf dem der AIP-Client installiert ist.
 
 ## <a name="install-the-aip-client"></a>Installieren des AIP-Clients
 
 AIP bietet folgende Clientinstallationsoptionen:
 
-- **[Herunterladen und Ausführen der EXE-Datei](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).** Für die meisten Anwendungsfälle wird diese Installation empfohlen. Die Installation kann interaktiv oder im Hintergrund ausgeführt werden.
+- **[Herunterladen und Ausführen der EXE-Datei](rms-client/clientv2-admin-guide-install.md#install-the-aip-unified-labeling-client-using-the-executable-installer).** Für die meisten Anwendungsfälle wird diese Installation empfohlen. Die Installation kann interaktiv oder im Hintergrund ausgeführt werden.
 
     Wenn die Installation beendet ist, werden Sie möglicherweise aufgefordert, den Computer oder die Office-Software neu zu starten. Starten Sie bei Bedarf neu, um fortzufahren.
 
-- **[Herunterladen und Ausführen der MSI-Datei](rms-client/clientv2-admin-guide-install.md#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer).** Wird für Installationen im Hintergrund unterstützt, die einen zentralen Bereitstellungsmechanismus verwenden, z. B. Gruppenrichtlinien, Configuration Manager oder Microsoft Intune.
+- **[Herunterladen und Ausführen der MSI-Datei](rms-client/clientv2-admin-guide-install.md#install-the-unified-labeling-client-using-the-msi-installer).** Wird für Installationen im Hintergrund unterstützt, die einen zentralen Bereitstellungsmechanismus verwenden, z. B. Gruppenrichtlinien, Configuration Manager oder Microsoft Intune.
 
 Die AIP-Clientinstallationsdateien sind auf der [Microsoft-Downloadwebsite](https://www.microsoft.com/download/details.aspx?id=53018) verfügbar. 
 
-Weitere Informationen finden Sie unter [Optionen zum Installieren des AIP-Clients](rms-client/clientv2-admin-guide-install.md#options-to-install-the-azure-information-protection-unified-labeling-client-for-users).
+Weitere Informationen finden Sie im [Administratorhandbuch: Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen für Benutzer](rms-client/clientv2-admin-guide-install.md).
 
 > [!TIP]
 > Um die neuesten Features für den AIP-Client zu testen, stellen Sie die öffentliche Vorschauversion auf einem Testsystem bereit. Weitere Informationen finden Sie in den [Informationen zum Versionsverlauf](rms-client/unifiedlabelingclient-version-release-history.md) zum AIP-Client für einheitliche Bezeichnungen.
