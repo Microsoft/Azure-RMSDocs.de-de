@@ -1,18 +1,18 @@
 ---
 title: 'Schnellstart: Auflisten der Vertraulichkeitsbezeichnungen in einem MIP-Mandanten (Microsoft Information Protection) mithilfe des C++-MIP SDKs'
-description: In diesen Schnellstart wird veranschaulicht, wie Sie das Microsoft Information Protection SDK mit C++ nutzen, um die Vertraulichkeitsbezeichnungen in Ihrem Mandanten aufzulisten (C++).
+description: In diesen Schnellstart wird veranschaulicht, wie Sie das Microsoft Information Protection SDK mit C++ nutzen, um die Vertraulichkeitsbezeichnungen in Ihrem Mandanten aufzulisten.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: d13ddcfd2a01501a8c2428ea6cf4c3cf9e575a09
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 14b36ecee7fc49c5b50d627e6ef1ab95d436d7ee
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536044"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865262"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)
 
@@ -83,21 +83,11 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 1. Verwenden Sie F6 (**Projektmappe erstellen**) zum Erstellen der Clientanwendung. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
-2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Sie können ein zuvor generiertes Token erneut verwenden, wenn Sie mehrmals dazu aufgefordert werden und die Werte gleich sind:
-
-   ```console
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token:
-   ```
+2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Sie können ein zuvor generiertes Token erneut verwenden, wenn Sie mehrmals dazu aufgefordert werden und die Werte gleich sind.
 
 3. Sie können ein Zugriffstoken für die Aufforderung erstellen, indem Sie wieder zu Ihrem PowerShell-Skript wechseln und Folgendes durchführen:
 
    - Aktualisieren Sie die Variablen `$authority` und `$resourceUrl`. Sie müssen den Werten entsprechen, die in der Konsolenausgabe von Schritt 2 angegeben wurden. Diese Werte werden von dem MIP SDK im `challenge`-Parameter von `AcquireOAuth2Token()` bereitgestellt:
-     - `$authority` sollte `https://login.windows.net/common/oauth2/authorize` entsprechen
-     - `$resourceUrl` sollte `https://syncservice.o365syncservice.com/` oder `https://aadrm.com` entsprechen
    - Führen Sie das PowerShell-Skript aus. Das Cmdlet `Get-ADALToken` löst eine Eingabeaufforderung für die Azure AD-Authentifizierung ähnlich dem folgenden Beispiel aus. Geben Sie das gleiche Konto an, das in der Konsolenausgabe von Schritt 2 angegeben wurde. Nachdem Sie sich erfolgreich angemeldet haben, wird das Zugriffstoken in der Zwischenablage gespeichert.
 
      [![Anmeldung in Visual Studio zum Erhalten des Tokens](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
@@ -122,15 +112,6 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
    > Kopieren und speichern Sie die ID von mindestens einer Vertraulichkeitsbezeichnung (z.B. `f42a3342-8706-4288-bd31-ebb85995028z`), da Sie diese im nächsten Schnellstart benötigen.
 
 ## <a name="troubleshooting"></a>Problembehandlung
-
-### <a name="problems-during-execution-of-powershell-script"></a>Probleme bei der Ausführung des PowerShell-Skripts
-
-| Zusammenfassung | Fehlermeldung | Lösung |
-|---------|---------------|----------|
-| Falscher Umleitungs-URI in der Anwendungsregistrierung oder im PowerShell-Skript (AADSTS50011) |*AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* (AADSTS50011: Die in der Anforderung angegebene Antwort-URL entspricht nicht den für die Anwendung konfigurierten Antwort-URLs: „ac6348d6-0d2f-4786-af33-07ad46e69bfc“.) | Überprüfen Sie den verwendeten Umleitungs-URI, indem Sie einen der folgenden Schritte ausführen:<br><br><li>Aktualisieren Sie den Umleitungs-URI in der Azure AD-Anwendungskonfiguration, sodass er mit Ihrem PowerShell-Skript übereinstimmt. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie den Umleitungs-URI ordnungsgemäß konfiguriert haben.<br><li>Aktualisieren Sie die `redirectUri`-Variable in Ihrem PowerShell-Skript entsprechend Ihrer Anwendungsregistrierung. |
-| Falsches Anmeldekonto (AADSTS50020) | *AADSTS50020: User account 'user@domain.com' from identity provider 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' does not exist in tenant 'Organization name' and cannot access the application '0edbblll-8773-44de-b87c-b8c6276d41eb' in that tenant.* (Das Benutzerkonto „user@domain.com“ vom Identitätsanbieter „https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/“ ist im Mandanten „Name der Organisation“ nicht vorhanden und kann in diesem Mandanten nicht auf die Anwendung „0edbblll-8773-44de-b87c-b8c6276d41eb“ zugreifen.) | Führen Sie einen der folgenden Schritte aus:<br><br><li>Führen Sie das PowerShell-Skript erneut aus, aber achten Sie darauf, ein Konto vom gleichen Mandanten zu verwenden, bei dem Ihre Azure AD-Anwendung registriert ist.<br><li>Wenn Ihr Anmeldekonto richtig war, ist Ihre PowerShell-Hostsitzung möglicherweise unter einem anderen Konto authentifiziert. Beenden Sie in diesem Fall den Skripthost, und öffnen Sie ihn erneut. Versuchen Sie dann erneut, das Skript auszuführen.<br><li>Wenn Sie diesen Schnellstart mit einer Web-App (anstelle einer nativen App) durchführen und sich mit einem Konto von einem anderen Mandanten anmelden müssen, stellen Sie sicher, dass Ihre Azure AD-Anwendungsregistrierung für die Verwendung mehrerer Mandanten aktiviert ist. Dies können Sie überprüfen, indem Sie das Feature „Manifest bearbeiten“ in der Anwendungsregistrierung verwenden und sicherstellen, dass `"availableToOtherTenants": true,` angegeben wird. |
-| Falsche Berechtigungen in der Anwendungsregistrierung (AADSTS65005) | *AADSTS65005: Invalid resource. The client has requested access to a resource, which is not listed in the requested permissions in the client's application registration. Client app ID: 0edbblll-8773-44de-b87c-b8c6276d41eb. Resource value from request: https://syncservice.o365syncservice.com/. Resource app ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000.* (Ungültige Ressource. Der Client hat den Zugriff auf eine Ressource angefordert, die in den angeforderten Berechtigungen in der Anwendungsregistrierung des Clients nicht aufgeführt ist. Client-App-ID: „0edbblll-8773-44de-b87c-b8c6276d41eb“. Ressourcenwert aus der Anforderung: „https://syncservice.o365syncservice.com/“. Ressourcen-App-ID: „870c4f2e-85b6-4d43-bdda-6ed9a579b725.“. Liste der gültigen Ressourcen aus der Anwendungsregistrierung: „00000002-0000-0000-c000-000000000000“.) | Aktualisieren Sie die Berechtigungsanforderungen in der Azure AD-Anwendungskonfiguration. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie die Berechtigungsanforderungen in Ihrer Anwendungsregistrierung ordnungsgemäß konfiguriert haben. |
-
 ### <a name="problems-during-execution-of-c-application"></a>Probleme bei der Ausführung der C++-Anwendung
 
 | Zusammenfassung | Fehlermeldung | Lösung |
