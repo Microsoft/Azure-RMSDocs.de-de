@@ -1,17 +1,17 @@
 ---
 title: Herabstufen oder Entfernen einer Bezeichnung mit erforderlicher Begründung (C#)
 description: In diesem Artikel erfahren Sie, wie Sie eine Bezeichnung herabstufen oder entfernen, für die eine Begründung erforderlich ist (C#).
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 05/01/2020
-ms.author: v-anikep
-ms.openlocfilehash: 9543934addfbd7d2b897f420e9178513ffc0c639
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: 4574075ffb2ea6f643fc3e8366c014193d89a12d
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535976"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865245"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Azure Information Protection: Datei-API – Aktionsbegründung zum Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C#)
 

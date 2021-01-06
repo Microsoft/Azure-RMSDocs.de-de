@@ -1,17 +1,17 @@
 ---
 title: 'Schnellstart: Initialisierung der Clientanwendung – Schutz-API (C#)'
 description: Schnellstart zum Schreiben der Initialisierungslogik für Clientanwendungen mit Schutz-API des Microsoft Information Protection (MIP) SDK für C#.
-author: Pathak-Aniket
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 03/30/2020
-ms.author: v-anikep
-ms.openlocfilehash: 0f8ed60420b5a0c4fcc0f8264d54f696f5c439a2
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: bfa1866618e65f1f9f215cb70fd76254623777d0
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535891"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865177"
 ---
 # <a name="quickstart-client-application-initialization-for-protection-apis-c"></a>Schnellstart: Initialisierung der Clientanwendung für Schutz-APIs (C#)
 

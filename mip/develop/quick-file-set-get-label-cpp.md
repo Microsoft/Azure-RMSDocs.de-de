@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
+ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "75556026"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865160"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C++)
 
@@ -138,7 +138,7 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    {
         cout << "An exception occurred... did you specify a valid label ID?\n\n" << e.what() << "'\n";
         system("pause");
-        return 1;
+        return 1; 
    }
 
    // Commit changes, save as a different/output file
@@ -220,7 +220,7 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    | Platzhalter | Wert |
    |:----------- |:----- |
    | \<input-file-path\> | Der vollständige Pfad zu einer Testeingabedatei. Beispiel: `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Ein lesbarer Inhaltsbezeichner. Beispiele: <ul><li>Verwenden Sie für eine Datei das Format Pfad\Dateiname: `"c:\Test\Test.docx"`.</li><li>Verwenden Sie für eine E-Mail das Format Betreff:Absender: `"RE: Audit design:user1@contoso.com"`.</li></ul> |
+   | \<content-identifier\> | Ein lesbarer Inhaltsbezeichner. Zum Beispiel: <ul><li>Verwenden Sie für eine Datei das Format Pfad\Dateiname: `"c:\Test\Test.docx"`.</li><li>Verwenden Sie für eine E-Mail das Format Betreff:Absender: `"RE: Audit design:user1@contoso.com"`.</li></ul> |
    | \<label-id\> | Eine Vertraulichkeitsbezeichnungs-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wird. Beispiel: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Der vollständige Pfad zur Ausgabedatei, die eine bezeichnete Kopie der Eingabedatei ist. Beispiel: `"c:\\Test\\Test_labeled.docx"`. |
 
@@ -234,11 +234,6 @@ Erstellen und testen Sie die Clientanwendung.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
 
    Sensitivity labels for your organization:
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -251,21 +246,7 @@ Erstellen und testen Sie die Clientanwendung.
    Applying Label ID 074e457c-5848-4542-9a6f-34a182080e7z to c:\Test\Test.docx
    Committing changes
 
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/common/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
-   Press any key to continue . . .
-
    Label committed to file: c:\Test\Test_labeled.docx
-   Press any key to continue . . .
-
-   Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-   Set $authority to: https://login.windows.net/94f69844-8d34-4794-bde4-3ac89ad2b664/oauth2/authorize
-   Set $resourceUrl to: https://aadrm.com
-   Sign in with user account: user1@tenant.onmicrosoft.com
-   Enter access token: <paste-access-token-here>
    Press any key to continue . . .
 
    Getting the label committed to file: c:\Test\Test_labeled.docx

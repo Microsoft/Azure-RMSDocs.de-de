@@ -1,17 +1,17 @@
 ---
 title: Herabstufen oder Entfernen einer Bezeichnung mit erforderlicher Begründung (C++)
-description: In diesem Artikel erfahren Sie, wie Sie eine Bezeichnung herabstufen oder entfernen, für die eine Begründung erforderlich ist (C++).
-author: Pathak-Aniket
+description: In diesem Artikel erfahren Sie, wie Sie eine Bezeichnung herabstufen oder entfernen, für die eine Begründung erforderlich ist.
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/14/2020
-ms.author: v-anikep
-ms.openlocfilehash: dd02fe709c0fc946ba7bb5d0c5fec82a0688540c
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.author: mbaldwin
+ms.openlocfilehash: d6ffccc19a5d2343fdb175b3c59ec52be5c7ad0f
+ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536019"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865279"
 ---
 # <a name="microsoft-information-protection-sdk-file-api---action-justification-for-lowering-a-sensitivity-label-on-a-file-c"></a>Microsoft Azure Information Protection: Datei-API – Aktionsbegründung zum Herabstufen einer Vertraulichkeitsbezeichnung in einer Datei (C++)
 
@@ -164,16 +164,9 @@ Erstellen und testen Sie die Clientanwendung.
 
 1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
-2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Führen Sie das PowerShell-Skript wie zuvor im Schnellstart „Festlegen und Abrufen von Vertraulichkeitsbezeichnungen“ aus, um jedes Mal das Token anhand der angegebenen Werte für $authority und $resourceUrl abzurufen.
+2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. 
 
-  ```console
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
-
+  ```console   
     Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
     Public : 83867195-f2b8-2ac2-b0b6-6bb73cb33afz
     General : f42a3342-8706-4288-bd31-ebb85995028z
@@ -184,12 +177,6 @@ Erstellen und testen Sie die Clientanwendung.
     Applying Label ID f55c2dea-db0f-47cd-8520-a52e1590fb6z to c:\Test\Test.docx
     Committing changes
 
-    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
-    Set $authority to: https://login.windows.net/common
-    Set $resourceUrl to: https://aadrm.com
-    Sign in with user account: user1@tenant.onmicrosoft.com
-    Enter access token: <paste-access-token-here>
-    Press any key to continue . . .
 
     Label committed to file: c:\Test\Test.docx
     Press any key to continue . . .
@@ -204,7 +191,7 @@ Erstellen und testen Sie die Clientanwendung.
     Getting the label committed to file: c:\Test\Test_labeled.docx
     Name: Highly Confidential
     Id: f55c2dea-db0f-47cd-8520-a52e1590fb6z
-    Press any key to continue . . .
+    Press any key to continue . . . 
 
     Applying new Label ID f42a3342-8706-4288-bd31-ebb85995028z to c:\Test\Test_labeled.docx
     Please provide justification for downgrading a label:
