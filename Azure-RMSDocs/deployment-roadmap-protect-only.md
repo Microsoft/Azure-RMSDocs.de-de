@@ -13,18 +13,18 @@ ROBOTS: NOINDEX
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 873d000a7ce6ce67588f82b98f2ed570d55805ad
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 293ed29ba70ae5f4adff5530d782ecb661a6f9dd
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806004"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164112"
 ---
 # <a name="azure-information-protection-deployment-roadmap-for-protection-only"></a>Azure Information Protection bereitstellungsroadmap nur für den Schutz
 
 >***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie unter [AIP Deployment Roadmap für Klassifizierung, Bezeichnung und Schutz](deployment-roadmap-classify-label-protect.md). *
 
 > [!NOTE] 
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).

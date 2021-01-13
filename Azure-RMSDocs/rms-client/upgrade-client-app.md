@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: bdaa80ba38a98a53dc4781bf7aadf15b23fbda3a
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: becf3190cd919e90fe6428660953ded586e7d9e7
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384892"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163721"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Benutzerhandbuch: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 
 >***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->**Relevant für**: [Azure Information Protection klassischer Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Haben Sie kürzlich ein Upgrade von der Rights Management-Freigabeanwendung (auch einfach nur als „RMS-Freigabeanwendung“ bezeichnet) auf den Azure Information Protection-Client durchgeführt? 
 
@@ -43,7 +43,7 @@ Verwenden Sie die folgenden Informationen als Hilfestellung, um schnell einsatzb
 
 Wenn Sie nach einer bestimmten Option suchen, die Sie häufig für die RMS-Freigabeanwendung verwendet haben, überprüfen Sie die folgende Tabelle.
 
-|Option in der RMS-Freigabeanwendung|Informationen
+|Option in der RMS-Freigabeanwendung|Information
 |-----------|--------------------|
 |**Geschütztes Freigeben**|Diese Option ist im Office-Menüband nicht mehr verfügbar. Verwenden Sie anstelle der direkten Freigabe in der Office-Anwendung die Kontextmenüoption des Datei-Explorer, **Klassifizieren und schützen**, um eine Kopie des Dokuments mit benutzerdefinierten Berechtigungen zu schützen. Anschließend geben Sie die Datei mit dem gewünschten E-Mail-Client oder am gewünschten Freigabeort frei. <br /><br /> Sie können auch ein ungeschütztes Office-Dokument an eine zu schützende E-Mail anfügen. Das Dokument wird in diesem Fall automatisch mit denselben Einschränkungen geschützt. Sie können das Dokument jedoch nicht nachverfolgen und widerrufen.
 |**E-Mail an mich, wenn jemand versucht, diese Dokumente zu öffnen**|Verwenden Sie die Website zum Nachverfolgen von Dokumenten, um Ihre bevorzugte e-Mail-Benachrichtigungs Einstellung zu konfigurieren: Suchen Sie das geschützte Dokument, das Sie > **Einstellungen**  >  

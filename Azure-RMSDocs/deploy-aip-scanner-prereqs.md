@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3b4f110b1958ec055720da218c52cce4c3fc0f4
-ms.sourcegitcommit: f944025b6c026906f0010c9e7f9d8d54f20a6be7
+ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2020
-ms.locfileid: "97705716"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164180"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Anforderungen für die Installation und Bereitstellung des Azure Information Protection Unified-Beschriftungs Scanners
 
@@ -32,7 +32,7 @@ Außerdem gelten die folgenden Anforderungen speziell für den Scanner:
 - [Windows Server-Anforderungen](#windows-server-requirements)
 - [Dienstkontenanforderungen](#service-account-requirements)
 - [SQL Server-Anforderungen](#sql-server-requirements)
-- [Azure Information Protection Client Anforderungen](#azure-information-protection-client-requirements)
+- [Zusätzliche Voraussetzungen für den Azure Information Protection-Client](#azure-information-protection-client-requirements)
 - [Bezeichnungs Konfigurations Anforderungen](#label-configuration-requirements)
 - [SharePoint-Anforderungen](#sharepoint-requirements)
 - [Microsoft Office Anforderungen](#microsoft-office-requirements)
@@ -134,7 +134,7 @@ Für mehrere Scanner:
     - 8-Kern-Prozesse
     - 16 GB RAM empfohlen
 
-## <a name="azure-information-protection-client-requirements"></a>Azure Information Protection Client Anforderungen
+## <a name="azure-information-protection-client-requirements"></a>Zusätzliche Voraussetzungen für den Azure Information Protection-Client
 
 Auf dem Windows Server-Computer muss entweder die [aktuelle Version der allgemeinen Verfügbarkeit](./rms-client/unifiedlabelingclient-version-release-history.md) des Azure Information Protection-Clients installiert sein.
 
@@ -287,7 +287,11 @@ Führen Sie die folgenden Schritte aus, um einen vom Azure-Portal getrennten Com
 
 #### <a name="use-powershell-with-a-disconnected-computer"></a>Verwenden von PowerShell mit einem getrennten Computer
 
-Führen Sie die folgenden Schritte aus, um einen nicht verbundenen Computer nur mithilfe von PowerShell zu unterstützen:
+Führen Sie das folgende Verfahren aus, um einen nicht verbundenen Computer nur mit PowerShell zu unterstützen.
+
+> [!IMPORTANT]
+> Administratoren von [Azure China 21ViaNet-Überprüfungs Servern](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs) *müssen* dieses Verfahren verwenden, um Ihre Inhalts Scanaufträge zu verwalten.
+> 
 
 **Verwalten Sie Ihre Inhalts Scanaufträge nur mit PowerShell**:
 

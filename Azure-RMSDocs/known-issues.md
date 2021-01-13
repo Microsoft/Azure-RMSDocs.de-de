@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/12/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ee51978452a4f420478f2938020578166f49335
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805987"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164350"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -74,6 +74,7 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 |**Mehrere Versionen von Office**    | Die Azure Information Protection-Clients (sowohl der klassische als auch der Client für einheitliche Bezeichnungen) unterstützen nicht mehrere Office-Versionen auf ein und demselben Computer. Auch der Wechsel von Benutzerkonten in Office wird nicht unterstützt.       |
 |**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist: <br><br>-Bei Ihren Office-Apps können Leistungsprobleme auftreten.<br>-Die Azure Information Protection Leiste kann in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt werden. <br><br>Um eine konsistente Leistung sicherzustellen und die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus, um das beste Aussehen** zu erzielen.    |
 |**Unterstützung von "unm" in Office 2016**| Die [drmencryptproperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) -Registrierungs Einstellung, die die metadatenverschlüsselung in Office 2016 steuert, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
+|**Zugriff auf das Outlook-Objektmodell** | -Die " [prompyomaddressbookaccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) "-Registrierungs Einstellung, die die Eingabe Aufforderungen steuert, die beim Zugriff auf Adressbücher über das Outlook-Objektmodell angezeigt werden, wird mit Azure Information Protection Bezeichnungen nicht unterstützt. <br><br>-Die [promptomaddressinformationaccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) -Registrierungs Einstellung, die die Eingabe Aufforderungen steuert, die angezeigt werden, wenn ein Programm Adressinformationen liest, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
 |**Inhalts Markierungen in Word**    | AIP- [Inhalts Markierungen](configure-policy-markings.md) in den Kopf-oder Fußzeilen von Microsoft Word können Offset oder fehlerhaft sein oder vollständig ausgeblendet werden, wenn dieselbe Kopfzeile oder Fußzeile auch eine Tabelle enthält.<br><br>Weitere Informationen finden Sie unter [Wenn visuelle Kennzeichnungen angewendet werden](configure-policy-markings.md#when-visual-markings-are-applied). |
 |**An e-Mails angefügte Dateien** |Aufgrund einer Einschränkung in den jüngsten Windows-Updates, wenn [Microsoft Outlook durch Azure Rights Management geschützt ist](office-apps-services-support.md), können Dateien, die an e-Mails angefügt sind, nach dem Öffnen der Datei gesperrt werden. |
 |**Nachrichten Zusammenführung**    |  Das Office-Feature [Seriendruck](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) wird mit keinem Azure Information Protection-Feature unterstützt.       |

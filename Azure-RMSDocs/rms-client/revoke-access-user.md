@@ -4,7 +4,7 @@ description: Beschreibt, wie Endbenutzer den AIP-Client verwenden können, um de
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 10/21/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f834aa10a522336067cc68ce9edd20284488b888
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 294d93666eed55616bbe033215abef0e9dcf62b7
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764100"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163772"
 ---
 # <a name="user-guide-revoke-document-access-with-azure-information-protection-public-preview"></a>Benutzerhandbuch: widerrufen des Dokument Zugriffs mit Azure Information Protection (öffentliche Vorschau)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764100"
 >
 >***Relevant für**: [nur AIP Unified Bezeichnung Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden [Sie im Benutzerhandbuch: nachverfolgen und widerrufen Ihrer Dokumente bei Verwendung des klassischen AIP-Clients](client-track-revoke.md). *
 
-In diesem Artikel wird beschrieben, wie Sie den Zugriff für Dokumente widerrufen, die Sie vor Microsoft Office geschützt haben.
+In diesem Artikel wird beschrieben, wie Sie den Zugriff für Dokumente widerrufen, die Sie vor Microsoft Office geschützt haben. Geschützte Dokumente werden zum Nachverfolgen und widerrufen unterstützt, auch wenn Sie nicht als bezeichnet werden.
 
 Durch das Aufheben des Zugriffs auf ein geschütztes Dokument wird verhindert, dass andere Benutzer auf das Dokument zugreifen, auch wenn Sie Ihnen zuvor Zugriff erteilt haben. Weitere Informationen finden Sie unter [User Guide: klassifizieren und schützen mit dem Azure Information Protection Unified Bezeichnung-Client](clientv2-classify-protect.md).
 

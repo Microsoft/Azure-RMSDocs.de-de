@@ -4,19 +4,19 @@ description: Informationen für Administratoren, die die zusätzlichen Systemanf
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c93b0a338f25b058e517c4c2bb746ccaa6e41a69
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: dbd9d86e1ce2103f144e51314950cf67be31eef6
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792312"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164384"
 ---
 # <a name="additional-requirements-for-installing-the-unified-labeling-client-on-enterprise-networks"></a>Zusätzliche Anforderungen für die Installation des Unified-Bezeichnungs Clients in Unternehmensnetzwerken
 
@@ -24,7 +24,7 @@ ms.locfileid: "97792312"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Anweisungen für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-install.md). *
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-install.md). *
 
 Überprüfen Sie vor der Installation des Azure Information Protection Unified Bezeichnung-Clients in Ihrem Unternehmensnetzwerk, ob die Computer über die erforderlichen Betriebssystemversionen und Anwendungen für Azure Information Protection verfügen: [Anforderungen für Azure Information Protection](../requirements.md). 
 
@@ -100,7 +100,6 @@ Geben Sie die folgenden programmgesteuerten Bezeichner (ProgID) für AIP an, und
 |PowerPoint     |   `MSIP.PowerPointAddin`      |
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
-    
 
 ## <a name="next-steps"></a>Nächste Schritte
 

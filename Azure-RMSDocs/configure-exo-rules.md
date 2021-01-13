@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca365962d470d009411e4e02de885acd2e7fb043
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 7c76e7e79acb0cd12bfcbe2d71a1fee3ce78b1ba
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806922"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164282"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
@@ -33,9 +33,9 @@ Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenflu
 
 - Die Standardbezeichnung **Allgemein** bietet keinen Schutz. Für E-Mails mit dieser Bezeichnung, die extern versendet werden, wenden Sie die zusätzliche Schutzaktion „Nicht weiterleiten“ an.
 
-- Wenn ein Anhang mit der Bezeichnung **Vertraulich\Partner** an Personen außerhalb des Unternehmens gesendet wird und die E-Mail nicht geschützt ist, wenden Sie die zusätzliche Schutzaktion „Nur verschlüsseln“ an.
+- Wenn eine Anlage mit der Bezeichnung " **Confidential \ Partner** " per e-Mail an Personen außerhalb der Organisation gesendet wird und die e-Mail nicht geschützt ist, wenden Sie die zusätzliche Schutz Aktion "nur verschlüsseln" an.
 
-Regeln für den Nachrichtenfluss, die eine Aktion zum Schutz anwenden, werden ignoriert, wenn die E-Mail bereits geschützt ist. Beispielsweise kann eine E-Mail-Nachricht, die durch „Nicht weiterleiten“ geschützt wurde, nicht durch eine Exchange-Regel für den Nachrichtenfluss auf die Option „Nur verschlüsseln“ geändert werden.  
+Regeln für den Nachrichtenfluss, die eine Aktion zum Schutz anwenden, werden ignoriert, wenn die E-Mail bereits geschützt ist. Beispielsweise kann eine e-Mail-Nachricht, die durch nicht weiterleiten geschützt wurde, von einer Exchange-e-Mail-Fluss Regel nicht geändert werden, um die Option nur verschlüsseln zu verwenden.  
 
 Sie können diese Beispiele erweitern und auch ändern. Fügen Sie beispielsweise weitere Bedingungen hinzu. Weitere Informationen zur Konfiguration von Regeln für den Nachrichtenfluss finden Sie in der Dokumentation zu Exchange Online unter [Mail flow rules (transport rules) in Exchange Online (Regeln für den Nachrichtenfluss (Transportregeln) in Exchange Online)](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).
 
@@ -95,7 +95,7 @@ In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Stand
 
 Weitere Informationen zur „Nicht weiterleiten“-Option finden Sie unter [Option „Nicht weiterleiten“ für E-Mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Beispiel 2: Regel, die die Option „Nur verschlüsseln“ auf E-Mails anwendet, wenn sie Anlagen mit der Bezeichnung **Vertraulich\ Partner** haben und außerhalb der Organisation versendet werden.
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Beispiel 2: Regel, die die Option "nur verschlüsseln" auf e-Mails anwendet, wenn Sie über Anlagen mit der Bezeichnung " **vertraulich \ Partner** " verfügen und diese e-Mails außerhalb der Organisation gesendet werden
 
 In diesem Beispiel weist die Bezeichnung **Confidential \ Partners** die GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 auf. Ersetzen Sie Ihre eigene Bezeichnungs- oder Unterbezeichnungs-GUID, die Sie mit dieser Regel verwenden möchten. 
 
@@ -123,7 +123,7 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
 
 6. Wählen Sie **Speichern** aus. 
 
-Weitere Informationen zur Verschlüsselungsoption finden Sie unter [Option „Encrypt Only“ (Nur verschlüsseln) für E-Mails](configure-usage-rights.md#encrypt-only-option-for-emails).
+Weitere Informationen zur Option Verschlüsseln finden Sie unter [nur verschlüsseln für e-Mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

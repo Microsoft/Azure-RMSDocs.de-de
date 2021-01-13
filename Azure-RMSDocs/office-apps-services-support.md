@@ -12,21 +12,21 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37d6eae1559f34bcbc84edecd3cc42926b4888c4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 758fb47d41a4ca15e202fb5f18e3b94706bbb493
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381594"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164605"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
->***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant für**: [AIP Unified Bezeichnung Client und Classic Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). *
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Endbenutzer-Office-Anwendungen und Office-Dienste können den Azure Rights Management-Dienst aus Azure Information Protection zum Schutz der Daten Ihrer Organisation verwenden. Diese Office-Anwendungen sind Word, Excel, PowerPoint und Outlook. Die Office-Dienste sind Exchange und Microsoft SharePoint. Die Office-Konfigurationen, die den Azure Rights Management-Dienst unterstützen, verwenden oft den Begriff **Information Rights Management (IRM)**.
 
@@ -56,7 +56,7 @@ Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Optionen f�
 
 Wenn Sie Exchange lokal verwenden, können Sie IRM-Funktionen mit dem Azure Rights Management-Dienst verwenden, indem Sie den Azure Rights Management-Connector bereitstellen. Dieser Connector fungiert als Relay zwischen den lokalen Servern und dem Azure Rights Management-Dienst.
 
-Weitere Informationen zu den E-Mail-Optionen, die Sie zum Schützen von E-Mails verwenden können, finden Sie unter [Option „Nicht weiterleiten“ für E-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) und [Option „Encrypt Only“ (Nur verschlüsseln) für E-Mails](configure-usage-rights.md#encrypt-only-option-for-emails).
+Weitere Informationen zu den e-Mail-Optionen, die Sie zum Schützen von e-Mails verwenden können, finden Sie unter Option "nicht [weiterleiten" für e-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) und [Option "nur verschlüsseln" für e-Mails](configure-usage-rights.md#encrypt-only-option-for-emails).
 
 Wenn Sie bereit sind, Exchange zum Schützen von E-Mails zu konfigurieren, dann sehen Sie sich folgende Seiten an:
 
@@ -64,7 +64,7 @@ Wenn Sie bereit sind, Exchange zum Schützen von E-Mails zu konfigurieren, dann 
 
 - Informationen zu Exchange lokal finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
-   Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter
 
 - **Client für einheitliche Bezeichnungen**: Konfigurieren Sie Vertraulichkeits Bezeichnungen und Beschriftungs Richtlinien in Ihrem Beschriftungs-Admin Center, einschließlich der Microsoft 365 Security Center, Microsoft 365 Compliance Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels).
 

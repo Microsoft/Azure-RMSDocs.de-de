@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c4b88b2c0e2bbdff7f77d4eb36256a771dc9f5b6
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 03a1f0d7d28db24614bb92fa78de41fdd11a12f9
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806327"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163687"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -42,7 +42,7 @@ Schutzvorlagen, auch als Rights Management-Vorlagen bekannt, sind eine Reihe von
 - Vorlagen für Ihren Mandanten werden im Bereich " **Schutz Vorlagen** " im Bereich " **Azure Information Protection-Bezeichnungen** " angezeigt. Um zu diesem Bereich zu navigieren, wählen Sie die Menüoption **Klassifizierungen**  >  **Bezeichnungen** aus. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Diese Einstellungen haben jedoch entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
 
 >[!NOTE]
->In einigen Anwendungen und Diensten wird möglicherweise die Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails) und [Nur verschlüsseln](configure-usage-rights.md#encrypt-only-option-for-emails) (oder **Verschlüsseln**) als Vorlage angezeigt. Dabei handelt es sich nicht um Vorlagen, die Sie bearbeiten oder löschen können, sondern vielmehr um Optionen, die standardmäßig mit dem Exchange-Dienst geliefert werden.
+>In einigen Anwendungen und Diensten werden möglicherweise [nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails) und [nur verschlüsseln](configure-usage-rights.md#encrypt-only-option-for-emails) (**verschlüsseln**) als Vorlage angezeigt. Dabei handelt es sich nicht um Vorlagen, die Sie bearbeiten oder löschen können, sondern vielmehr um Optionen, die standardmäßig mit dem Exchange-Dienst geliefert werden.
 
 ## <a name="default-templates"></a>Standardvorlagen
 

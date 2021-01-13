@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 3718c6b93fba7abb08dcbe08675f361b0b666c0d
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f5096aa3eaf9b51bd929b25bdf69d42dbcaea50c
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385402"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164486"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Benutzerhandbuch: klassifizieren einer Datei oder e-Mail mit dem Azure Information Protection Unified Bezeichnung-Client für Windows
 
@@ -24,7 +24,7 @@ ms.locfileid: "97385402"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Anweisungen für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Benutzerhandbuch](client-classify.md). *
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Benutzerhandbuch](client-classify.md). *
 
 > [!NOTE]
 > Mithilfe dieser Anleitung können Sie Ihre Dokumente und E-Mails klassifizieren, jedoch nicht schützen. Wenn Sie Ihre Dokumente und E-Mails auch schützen möchten, lesen Sie die [Anleitung zum Klassifizieren und Schützen](clientv2-classify-protect.md). Wenn Sie nicht sicher sind, welche Anleitung Sie verwenden sollen, wenden Sie sich an Ihren Systemadministrator oder den Helpdesk.
@@ -35,11 +35,11 @@ Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren.
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren Ihrer Dokumente und E-Mails
 
-Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Zum Beispiel:
+Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Beispiel:
 
 ![Beispiel für sensible Schaltfläche](../media/sensitivity-not-set-callout.png)
 
-Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Zum Beispiel:
+Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Beispiel:
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
@@ -88,7 +88,7 @@ Das Administratorhandbuch enthält eine vollständige Liste der Dateitypen, die 
 
 2. Verwenden Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Bezeichnungen wie in einer Office-Anwendung, wodurch die Klassifizierung gemäß der Definition Ihres Administrators festgelegt wird. 
     
-    Wenn keine der Bezeichnungen ausgewählt werden kann, weil sie abgeblendet angezeigt werden: Die ausgewählte Datei unterstützt die Klassifizierung nicht. Zum Beispiel:
+    Wenn keine der Bezeichnungen ausgewählt werden kann, weil sie abgeblendet angezeigt werden: Die ausgewählte Datei unterstützt die Klassifizierung nicht. Beispiel:
     
     ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“** verfügbar](../media/v2info-protect-dialog-labels-dimmed.png)
 

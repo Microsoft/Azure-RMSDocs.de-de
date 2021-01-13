@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3deab3f361667a79905ab91842361d270b4323d7
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: ccedda605f736647766a0a5b2465e9ef90f2dbcc
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764168"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164146"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -159,13 +159,6 @@ Wenn für einen Benutzer mehr als eine Bezeichnungs Richtlinie konfiguriert ist,
 
 Erweiterte Einstellungen für Bezeichnungs Richtlinien werden mithilfe der gleichen Logik angewendet, und zwar mithilfe der letzten Richtlinien Einstellung.
 
-> [!NOTE]
-> In der aktuellen GA-Version gibt es eine Ausnahme für die Richtlinien Einstellung " [outlookdefaultlabel](#set-a-different-default-label-for-outlook) Advanced Label", die es Ihnen ermöglicht, eine andere Standard Bezeichnung für Outlook festzulegen.
-> 
-> Wenn Sie Konflikte bei der Einstellung [outlookdefaultlabel](#set-a-different-default-label-for-outlook) haben, wird die Konfiguration gemäß der Richtlinien Reihenfolge im Admin Center von der ersten Richtlinien Einstellung übernommen. 
->
-> Diese Ausnahme wurde als Teil der öffentlichen Vorschau von [2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) entfernt.
-
 ## <a name="advanced-setting-references"></a>Erweiterte Einstellungs Verweise
 
 In den folgenden Abschnitten werden die verfügbaren erweiterten Einstellungen für Bezeichnungs Richtlinien und Bezeichnungen aufgeführt:
@@ -179,7 +172,7 @@ In den folgenden Abschnitten werden die erweiterten Einstellungen aufgelistet, d
 
 |Funktion  |Erweiterte Einstellungen  |
 |---------|---------|
-|**Outlook und e-Mail-Einstellungen**     | - [Konfigurieren einer Bezeichnung zum Anwenden des S/MIME-Schutzes in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages) <br>- [Aktivieren der empfohlenen Klassifizierung in Outlook](#enable-recommended-classification-in-outlook)<br> - [Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Wenden Sie für e-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht.](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) <br>- [Implementieren von Popup Nachrichten in Outlook, die gesendete e-Mails warnen, begründen oder blockieren](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Festlegen einer anderen Standard Bezeichnung für Outlook](#set-a-different-default-label-for-outlook) |
+|**Outlook und e-Mail-Einstellungen**     | - [Konfigurieren einer Bezeichnung zum Anwenden des S/MIME-Schutzes in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages) <br>- [Aktivieren der empfohlenen Klassifizierung in Outlook](#enable-recommended-classification-in-outlook)<br> - [Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Wenden Sie für e-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht.](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implementieren von Popup Nachrichten in Outlook, die gesendete e-Mails warnen, begründen oder blockieren](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Festlegen einer anderen Standard Bezeichnung für Outlook](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint-Einstellungen** | - [Vermeiden Sie das Entfernen von Formen aus PowerPoint, die den angegebenen Text enthalten, und keine Kopf-und Fußzeilen.](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Entfernen Sie externe Inhalts Markierungen explizit aus Ihren benutzerdefinierten PowerPoint-Layouts.](#extend-external-marking-removal-to-custom-layouts)<br>- [Entfernen Sie alle Formen eines bestimmten Shape-namens aus den Kopf-und Fußzeilen, anstatt Formen nach Text innerhalb der Form zu entfernen.](#remove-all-shapes-of-a-specific-shape-name)  |
 |**Datei-Explorer-Einstellungen**     | - [Benutzerdefinierte Berechtigungen für Benutzer immer im Datei-Explorer anzeigen](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](#disable-custom-permissions-in-file-explorer)      |
 |**Einstellungen für die Leistungsverbesserung**     | - [Begrenzen der CPU-Auslastung](#limit-cpu-consumption) <br>- [Beschränken Sie die Anzahl der Threads, die vom Scanner verwendet werden.](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)        |
@@ -205,7 +198,7 @@ Verwenden Sie den Parameter *advancedsettings* mit [New-labelpolicy](/powershell
 |**EnableCustomPermissionsForCustomProtectedFiles**|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**Enablelabelbymailheader**|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |**Enablelabelbysharepointproperties**|[Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-| **Enableoutlookdistributionlistweiterung** | [Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) |
+| **Enableoutlookdistributionlistweiterung** | [Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern](#expand-outlook-distribution-lists-when-searching-for-email-recipients) |
 | **Enabletrackandrevoke** | [Deaktivieren der Funktionen zum Nachverfolgen von Dokumenten (öffentliche Vorschau)](#turn-off-document-tracking-features-public-preview) |
 |**Hidebarbydefault**|[Information Protection-Leiste in Office-Apps anzeigen](#display-the-information-protection-bar-in-office-apps)|
 |**Recht cationtextforusertext** | [Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen](#customize-justification-prompt-texts-for-modified-labels) |
@@ -214,7 +207,7 @@ Verwenden Sie den Parameter *advancedsettings* mit [New-labelpolicy](/powershell
 |**OutlookBlockUntrustedCollaborationLabel**|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**Outlookcollaborationrule**| [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages)|
 |**OutlookDefaultLabel**|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
-|**Outlookgetemailadressssestimeoutmsproperty** | [Ändern des Timeouts für das Erweitern einer Verteilerliste in Outlook beim Implementieren von Block Nachrichten für Empfänger in Verteilerlisten](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) ) |
+|**Outlookgetemailadressssestimeoutmsproperty** | [Ändern des Timeouts für das Erweitern einer Verteilerliste in Outlook beim Implementieren von Block Nachrichten für Empfänger in Verteilerlisten](#expand-outlook-distribution-lists-when-searching-for-email-recipients) ) |
 |**Outlookjustifytreuhänddomains**|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookJustifyUntrustedCollaborationLabel**|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookRecommendationEnabled**|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
@@ -874,7 +867,7 @@ Zur weiteren Anpassung können Sie auch [Domänen Namen für Popup Nachrichten a
 >Weitere Informationen finden Sie unter [Anpassen von Outlook-Popup Nachrichten](#customize-outlook-popup-messages).
 > 
 > [!TIP]
-> Um sicherzustellen, dass Ihre Block Meldungen bei Bedarf angezeigt werden, auch für einen Empfänger, der sich in einer Outlook-Verteilerliste befindet, müssen Sie die erweiterte Einstellung [enableoutlookdistributionlistweiterung](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) hinzufügen.
+> Um sicherzustellen, dass Ihre Block Meldungen bei Bedarf angezeigt werden, auch für einen Empfänger, der sich in einer Outlook-Verteilerliste befindet, müssen Sie die erweiterte Einstellung [enableoutlookdistributionlistweiterung](#expand-outlook-distribution-lists-when-searching-for-email-recipients) hinzufügen.
 >
 
 #### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>So nehmen Sie Domänen Namen für Popup Nachrichten aus, die für bestimmte Bezeichnungen konfiguriert sind
@@ -908,7 +901,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomain
 ```
 
 > [!NOTE]
-> Um sicherzustellen, dass Ihre Block Meldungen bei Bedarf angezeigt werden, auch für einen Empfänger, der sich in einer Outlook-Verteilerliste befindet, müssen Sie die erweiterte Einstellung [enableoutlookdistributionlistweiterung](#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) hinzufügen.
+> Um sicherzustellen, dass Ihre Block Meldungen bei Bedarf angezeigt werden, auch für einen Empfänger, der sich in einer Outlook-Verteilerliste befindet, müssen Sie die erweiterte Einstellung [enableoutlookdistributionlistweiterung](#expand-outlook-distribution-lists-when-searching-for-email-recipients) hinzufügen.
 >
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>So implementieren Sie Popup Meldungen für e-Mail-Nachrichten oder Anhänge, die keine Bezeichnung aufweisen
@@ -984,7 +977,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 ```
 
-## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview"></a>Erweitern von Outlook-Verteilerlisten bei der Suche nach e-Mail-Empfängern (öffentliche Vorschau)
+## <a name="expand-outlook-distribution-lists-when-searching-for-email-recipients"></a>Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#configuring-advanced-settings-for-the-client-via-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
@@ -1650,7 +1643,7 @@ Zu den unterstützten Knoten Typen gehören:
 
 Regel Aktionen können eines der folgenden sein:
 
-|Aktion  |Syntax  |Beispielnachricht  |
+|Action  |Syntax  |Beispielnachricht  |
 |---------|---------|---------|
 |**Blockieren**     |    `Block (List<language, [title, body]>)`     |    **_E-Mail blockiert_* _<br /><br />  _You sind im Begriff, Inhalte zu senden, die als **geheimer** Schlüssel an einen oder mehrere nicht vertrauenswürdige Empfänger klassifiziert sind: *<br />* `rsinclair@contoso.com` *<br /><br />* Ihre Organisations Richtlinie lässt diese Aktion nicht zu. Entfernen Sie diese Empfänger, oder ersetzen Sie den Inhalt. *|
 |**Warnen**     | `Warn (List<language,[title,body]>)`        |  **_Bestätigung erforderlich_* _<br /><br />_You sind im Begriff, Inhalte zu senden, die als **Allgemein** an einen oder mehrere nicht vertrauenswürdige Empfänger klassifiziert sind: *<br />* `rsinclair@contoso.com` *<br /><br />* Ihre Organisations Richtlinie erfordert eine Bestätigung, dass Sie diesen Inhalt senden können. *       |

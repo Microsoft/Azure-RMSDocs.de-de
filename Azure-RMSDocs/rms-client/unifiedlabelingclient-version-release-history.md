@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeic
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/29/2020
+ms.date: 01/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e4193a0345708d4c90e3469df8b1102d45a85af7
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805953"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164401"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -69,33 +69,33 @@ Die neueste Version von Azure Information Protection befindet sich derzeit in de
 
 Der Unified-Bezeichnungs Client ersetzt den Azure Information Protection klassischen Client. Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Beschriftungslösungen für Windows-Computer](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
-## <a name="version-291090-public-preview"></a>Version 2.9.109.0 (öffentliche Vorschau)
+## <a name="version-291110"></a>Version 2.9.111.0
 
-Unified-Beschriftungs Scanner und Client Version 2.9.109.0
+Unified-Beschriftungs Scanner und Client Version 2.9.111.0
 
-**Release** 12/16/2020
+**Release** 1/13/2021
 
 Diese Version enthält die folgenden neuen Features, Fehlerbehebungen und Verbesserungen für den Unified-Beschriftungs Scanner und-Client:
 
 - **Neue Features für den Scanner**:
 
     - [PowerShell-Unterstützung für nicht verbundene Scanner-Server](#powershell-support-for-disconnected-scanner-servers)
-    - [Unterstützung für NFS-Depots in Inhalts Scan Aufträgen](#support-for-nfs-repositories-in-content-scan-jobs)
+    - [Unterstützung für NFS-Depots in Inhalts Scan Aufträgen](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
     - [Unterstützung für zusätzliche Typen sensibler Informationen hinzugefügt](#added-support-for-additional-sensitive-information-types)
 
 - **Neue Features für den-Client**:
 
-    - [Überprüfen des Dokument Zugriffs und widerrufen des Zugriffs](#track-document-access-and-revoke-access)
+    - [Überprüfen des Dokument Zugriffs und widerrufen des Zugriffs](#track-document-access-and-revoke-access-public-preview)
     - [Unterstützung für zusätzliche Typen sensibler Informationen hinzugefügt](#added-support-for-additional-sensitive-information-types)
 
-- **Korrekturen und Verbesserungen:**
+- **Korrekturen und Verbesserungen**:
 
     - [Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Korrekturen und Verbesserungen für den Unified-Bezeichnungs Client](#fixes-and-improvements-for-the-unified-labeling-client)
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>PowerShell-Unterstützung für nicht verbundene Scanner-Server
 
-Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unterstützt jetzt die Verwaltung von Inhalts Überprüfungs Aufträgen für Scanner-Server, die keine Verbindung mit dem Internet herstellen können, über PowerShell.
+Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unterstützt jetzt die Verwaltung von Inhalts Überprüfungs Aufträgen über PowerShell für Scanner-Server, die keine Verbindung mit dem Internet herstellen können, z. b. mit einem [Azure China 21ViaNet Scanner-Server](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
 Zur Unterstützung von getrennten Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
 
@@ -114,7 +114,7 @@ Das Cmdlet " [**Set-mipnetworkdiscovery**](/powershell/module/azureinformationpr
 
 Weitere Informationen finden Sie unter [Wenn der Überprüfungs Server keine Internet Konnektivität haben kann](../deploy-aip-scanner-prereqs.md#restriction-the-scanner-server-cannot-have-internet-connectivity) und [den Scanner konfigurieren](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal).
 
-### <a name="support-for-nfs-repositories-in-content-scan-jobs"></a>Unterstützung für NFS-Depots in Inhalts Scan Aufträgen
+### <a name="support-for-nfs-repositories-in-content-scan-jobs-public-preview"></a>Unterstützung für NFS-Depots in Inhalts Scan Aufträgen (Public Preview)
 
 Nun können Sie Ihren Inhalts Überprüfungs Aufträgen zusätzlich zu SMB-Dateifreigaben und SharePoint-Depots NFS-Repository hinzufügen.
 
@@ -136,9 +136,9 @@ Wir haben Unterstützung für zusätzliche vertrauliche Informationstypen in Azu
 
 Weitere Informationen finden Sie in den [Entitäts Definitionen für sensible Informationen](/microsoft-365/compliance/sensitive-information-type-entity-definitions) in der Microsoft 365-Dokumentation.
 
-### <a name="track-document-access-and-revoke-access"></a>Überprüfen des Dokument Zugriffs und widerrufen des Zugriffs
+### <a name="track-document-access-and-revoke-access-public-preview"></a>Überprüfen des Dokument Zugriffs und widerrufen des Zugriffs (öffentliche Vorschau)
 
-Nachdem Sie ein Upgrade auf Version 2.9.109.0 durchgeführt haben, werden alle noch nicht für die Nachverfolgung registrierten Dokumente registriert, wenn Sie das nächste Mal auf einem Computer mit installiertem AIP Unified-Bezeichnung-Client geöffnet werden.
+Nachdem Sie ein Upgrade auf Version 2.9.111.0 durchgeführt haben, werden alle geschützten Dokumente, die noch nicht für die Nachverfolgung registriert sind, beim nächsten Öffnen auf einem Computer registriert, auf dem der AIP Unified-Bezeichnungs Client installiert ist. Geschützte Dokumente werden zum Nachverfolgen und widerrufen unterstützt, auch wenn Sie nicht als bezeichnet werden.
 
 Wenn Sie Ihre Dokumente für die Überwachung registriert haben, können Administratoren PowerShell verwenden, um den Zugriff auf Dokumente zu verfolgen und bei Bedarf den Zugriff aufzuheben.
 
@@ -160,14 +160,13 @@ Verwenden Sie die PowerShell-Befehle, um nach Verfolgungs Daten mit dem Unified-
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-scanner"></a>Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner
 
-Die folgenden Korrekturen wurden in Version 2.9.109.0 des [Azure Information Protection Unified-Beschriftungs Scanners](../deploy-aip-scanner.md)übermittelt:
+Die folgenden Korrekturen wurden in Version 2.9.111.0 des [Azure Information Protection Unified-Beschriftungs Scanners](../deploy-aip-scanner.md)übermittelt:
 
 - Unterstützung für Bindestriche ( **-** ) in [Scanner-Datenbanknamen](../deploy-aip-scanner-prereqs.md) hinzugefügt
 - Updates in Berichten für den Fall, dass die Option " **[auf Inhalt basierende](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** Bezeichnungs Dateien" auf **Off** festgelegt ist
 - [Verbesserter Arbeitsspeicher Verbrauch](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) für eine große Anzahl von Informationstyp Übereinstimmungen
 - Unterstützung für [lokale SharePoint-](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) Pfade, die mit einem Schrägstrich ( **/** ) enden
 - Erweiterte SharePoint-Scan [Geschwindigkeit](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
-
 - Unterstützung für das [vermeiden eines Timeouts](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) beim Scannen eines SharePoint-Servers.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>Korrekturen und Verbesserungen für den Unified-Bezeichnungs Client
@@ -182,9 +181,9 @@ Die folgenden Korrekturen wurden in Version 2.9.109.0 des [Azure Information Pro
 
 - [Empfohlene Bezeichnungen](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) und [visuelle Kennzeichnung](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do) werden in Outlook erwartungsgemäß angewendet. 
 
-- Unterstützung für das [Auffinden von Empfängern in Outlook-Verteilerlisten](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview)hinzugefügt, z. b. wenn die Einstellungen [outlookblocktreuhänder](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) und [outlookblockuntreudkollaborationlabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) konfiguriert sind.
+- Unterstützung für das [Auffinden von Empfängern in Outlook-Verteilerlisten](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients)hinzugefügt, z. b. wenn die Einstellungen [outlookblocktreuhänder](clientv2-admin-guide-customizations.md#to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels) und [outlookblockuntreudkollaborationlabel](clientv2-admin-guide-customizations.md#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels) konfiguriert sind.
 
-    Wenn Sie diese Funktion aktivieren, wird empfohlen, dass Sie auch den Standard Timeout Wert erhöhen, wie in der [outlookgetemailadressssestimeoutmsproperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients-public-preview) -Einstellung definiert.
+    Wenn Sie diese Funktion aktivieren, wird empfohlen, dass Sie auch den Standard Timeout Wert erhöhen, wie in der [outlookgetemailadressssestimeoutmsproperty](clientv2-admin-guide-customizations.md#expand-outlook-distribution-lists-when-searching-for-email-recipients) -Einstellung definiert.
 
 - Aktualisierungen der Rangfolge, die verwendet wird, wenn mehrere [Bezeichnungs](clientv2-admin-guide-customizations.md#order-of-precedence---how-conflicting-settings-are-resolved) Richtlinien für einen Benutzer konfiguriert sind, die jeweils in Konflikt stehende Erweiterte Einstellungen haben.
 

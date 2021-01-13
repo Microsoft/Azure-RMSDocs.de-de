@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3514e97bb454c599fef40660d952f201e18323c2
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 4f09b4cc9df3b50468d6de05ca283c99ea2e9df0
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385453"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164418"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
@@ -24,11 +24,11 @@ ms.locfileid: "97385453"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Anweisungen für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide.md). *
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide.md). *
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified Bezeichnung-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie weitere technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzerhandbuch](clientv2-user-guide.md)zu finden. 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -158,7 +158,7 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Ein auf ein Objekt angewendeter
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
 
 - Online Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung-Benutzerhandbuch](clientv2-user-guide.md)
 

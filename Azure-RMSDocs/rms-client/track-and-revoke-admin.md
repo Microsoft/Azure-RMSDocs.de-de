@@ -4,7 +4,7 @@ description: Beschreibt, wie Administratoren den Dokument Zugriff für geschütz
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/24/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6c83aa89c06dbf7c6cab5ac014db72eed5e91f06
-ms.sourcegitcommit: b9d7986590382750e63d9059206a40d28fc63eef
+ms.openlocfilehash: 7b60438ad3d1e8a971c58a7f29b2f8b41dd84c91
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764134"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98163738"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Administrator Handbuch: nachverfolgen und widerrufen des Zugriffs auf Dokumente mit Azure Information Protection (öffentliche Vorschau)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97764134"
 >
 >***Relevant für**: [nur AIP Unified Bezeichnung Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden [Sie unter Administrator Handbuch: Konfigurieren und Verwenden der dokumentenverfolgung für AIP mit dem klassischen Client](client-admin-guide-document-tracking.md). *
 
-Wenn Sie ein Upgrade auf [Version 2.9.109.0](unifiedlabelingclient-version-release-history.md#version-291090-public-preview) oder höher durchgeführt haben, werden alle geschützten Dokumente, die noch nicht für die Nachverfolgung registriert sind, automatisch registriert, wenn Sie das nächste Mal über den einheitlichen AIP-Beschriftungs Client geöffnet werden.
+Wenn Sie ein Upgrade auf [Version 2.9.111.0](unifiedlabelingclient-version-release-history.md#version-291110) oder höher durchgeführt haben, werden alle geschützten Dokumente, die noch nicht für die Nachverfolgung registriert sind, automatisch registriert, wenn Sie das nächste Mal über den einheitlichen AIP-Beschriftungs Client geöffnet werden. Geschützte Dokumente werden zum Nachverfolgen und widerrufen unterstützt, auch wenn Sie nicht als bezeichnet werden.
 
 Wenn Sie ein Dokument für die Nachverfolgung registrieren, können [Microsoft 365 globalen Administratoren](/microsoft-365/admin/add-users/about-admin-roles#commonly-used-microsoft-365-admin-center-roles) Zugriffs Details verfolgen, einschließlich erfolgreicher Zugriffsereignisse und abgelehnter Versuche, und den Zugriff bei Bedarf widerrufen. 
 

@@ -12,12 +12,12 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 85932860538bbdbc073c49aa12e241b6adad3c09
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: fc02a679cfbc389cb4f09e72018f0b96a30a8b0a
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806650"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164317"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>So konfigurieren Sie eine Bezeichnung für den Rights Management-Schutz
 
@@ -275,7 +275,7 @@ Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, gilt Folgendes
 
 
 > [!NOTE]
-> In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar. Wenn Sie die Empfänger jedoch kennen, können Sie mit diesem Beispiel eine Bezeichnung mit denselben Nutzungsrechten konfigurieren. 
+> In Exchange Online wird eine neue Option ( [nur verschlüsseln](configure-usage-rights.md#encrypt-only-option-for-emails)) zur Anwendung gebracht. Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar. Wenn Sie die Empfänger jedoch kennen, können Sie mit diesem Beispiel eine Bezeichnung mit denselben Nutzungsrechten konfigurieren. 
 
 Wenn Ihre Benutzer die E-Mail-Adressen im Feld **An** angeben, müssen die Adressen zu den Benutzern gehören, die Sie für diese Bezeichnungskonfiguration angegeben haben. Da Benutzer zu Gruppen gehören und über mehrere E-Mail-Adressen verfügen können, muss die E-Mail-Adresse, die sie verwenden, nicht mit der E-Mail-Adresse übereinstimmen, die Sie für die Berechtigungen angegeben haben. Die Angabe derselben E-Mail-Adresse ist jedoch die einfachste Möglichkeit, um sicherzustellen, dass der Empfänger erfolgreich autorisiert wird. Weitere Informationen dazu, wie Benutzer für Berechtigungen autorisiert werden, finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). 
 
@@ -291,7 +291,7 @@ Wenn Ihre Benutzer die E-Mail-Adressen im Feld **An** angeben, müssen die Adres
     
     Hinweis: Wählen Sie für E-Mails nicht **Viewer** aus, und wenn Sie **Benutzerdefiniert** auswählen, stellen Sie sicher, dass Sie die Berechtigung **Bearbeiten und speichern** einschließen.
     
-    Um dieselben Berechtigungen wie bei der neuen Exchange Online-Option **Nur verschlüsseln** zu haben, wählen Sie **Benutzerdefiniert** aus. Gewähren Sie dann alle Berechtigungen außer **Speichern unter, Exportieren (EXPORT)** und **Vollzugriff (OWNER)**.
+    Wählen Sie **Benutzer** definiert aus, um dieselben Berechtigungen auszuwählen, die mit der Option **verschlüsseln** von Exchange Online übereinstimmen, die Verschlüsselung ohne zusätzliche Einschränkungen anwendet. Gewähren Sie dann alle Berechtigungen außer **Speichern unter, Exportieren (EXPORT)** und **Vollzugriff (OWNER)**.
 
 5. Um weitere Benutzer anzugeben, die über unterschiedliche Berechtigungen verfügen sollen, wiederholen Sie die Schritte 3 und 4.
 

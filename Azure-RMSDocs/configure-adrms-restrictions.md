@@ -12,12 +12,12 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ROBOTS: NOINDEX
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 4f96e1f19d38df201aab9b05cd046e8f49a16c2e
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 9b608b8f38c157320558cf5ae5011ef601773b2e
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805834"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164231"
 ---
 # <a name="hold-your-own-key-hyok-details-for-azure-information-protection"></a>Hold Your Own Key (Hyok)-Details für Azure Information Protection
 
@@ -81,7 +81,7 @@ Um sicherzustellen, dass nur Benutzer, die Hyok-Schutz anwenden müssen, die in 
 
 Microsoft 365 Dienste und andere Onlinedienste können durch Hyok geschützte Inhalte nicht entschlüsseln.
 
-Bei e-Mails umfasst dieser Funktionsverlust z. b. Malware Scanner, Encrypt-Only Schutz, DLP-Lösungen (Data Loss Prevention, Verhinderung von Datenverlust), Regeln für den e-Mail-Routing, Journal Funktionen, eDiscovery, Archivierungslösungen und Exchange ActiveSync
+Bei e-Mails umfasst dieser Funktionsverlust z. b. schadsoftwarescanner, verschlüsselungsgeschützter Schutz, DLP-Lösungen (Data Loss Prevention, Verhinderung von Datenverlust), e-Mail-Routing Regeln, Journal Funktionen, eDiscovery, Archivierungslösungen und Exchange ActiveSyn
 
 Benutzer werden möglicherweise nicht verstehen, warum einige Geräte keine Hyok-geschützten e-Mails öffnen können. Dies führt zu weiteren aufrufen Ihres Helpdesks. Beachten Sie diese strengen Einschränkungen beim Konfigurieren des Hyok-Schutzes mit e-Mails.
 
@@ -107,7 +107,7 @@ In den folgenden Tabellen sind die unterstützten Szenarien für den Schutz und 
 |---------|---------|---------|
 |Azure Information Protection Clients mit Microsoft 365 apps, Office 2019, Office 2016 und Office 2013:</br>Word, Excel, PowerPoint, Outlook     | ![ja](media/yes-icon.png)        | ![ja](media/yes-icon.png)        |
 |Azure Information Protection-Client mit Datei-Explorer     | ![ja](media/yes-icon.png)        | ![ja](media/yes-icon.png) |
-|Azure Information Protection-Viewer     |   Nicht verfügbar      |  ![ja](media/yes-icon.png)       |
+|Azure Information Protection-Viewer     |   Nicht zutreffend      |  ![ja](media/yes-icon.png)       |
 |Azure Information Protection-Client PowerShell-Cmdlets für die Bezeichnung     | ![ja](media/yes-icon.png)        | ![ja](media/yes-icon.png)        |
 |Azure Information Protection-Überprüfung     |![ja](media/yes-icon.png)       |   ![ja](media/yes-icon.png)      |
 | | | |
@@ -125,7 +125,7 @@ In den folgenden Tabellen sind die unterstützten Szenarien für den Schutz und 
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word, Excel, PowerPoint|![nein](media/no-icon.png)| ![ja](media/yes-icon.png)|
 |Office Mobile: </br>Nur Outlook|![nein](media/no-icon.png)|![nein](media/no-icon.png)|
-|Azure Information Protection-Viewer|Nicht verfügbar|![ja](media/yes-icon.png)|
+|Azure Information Protection-Viewer|Nicht zutreffend|![ja](media/yes-icon.png)|
 
 ### <a name="android-application-support-for-hyok"></a>Android-Anwendungsunterstützung für Hyok
 
@@ -133,7 +133,7 @@ In den folgenden Tabellen sind die unterstützten Szenarien für den Schutz und 
 |----------------------|----------|-----------|
 |Office Mobile: </br>Word, Excel, PowerPoint|![nein](media/no-icon.png)| ![ja](media/yes-icon.png)|
 |Office Mobile: </br>Nur Outlook|![nein](media/no-icon.png)|![nein](media/no-icon.png)|
-|Azure Information Protection-Viewer|Nicht verfügbar| ![ja](media/yes-icon.png)|
+|Azure Information Protection-Viewer|Nicht zutreffend| ![ja](media/yes-icon.png)|
 
 
 ## <a name="implementing-hyok"></a>Implementieren von HYOK

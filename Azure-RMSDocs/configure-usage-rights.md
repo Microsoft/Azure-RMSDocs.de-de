@@ -13,21 +13,21 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 42921437537d7daa93ceda374aa247a8601707d8
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 39fedde68cfe771d29e9fda1be4a9f2883cf1ede
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382886"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164248"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
->***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 > 
 > Aus Gründen der Vollständigkeit enthält der Artikel Werte aus dem klassischen Azure-Portal, das am 8. Januar 2018 außer Kraft gesetzt wurde.
 
@@ -71,7 +71,7 @@ Einige Anwendungen gruppieren Nutzungsrechte in Berechtigungsstufen, um die Ausw
 
 In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und eine vollständige Liste der Nutzungsrechte, die sie enthalten. Die Nutzungsrechte sind nach ihren [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
 
-|Berechtigungsstufe|Anwendungen|Enthaltene Nutzungsrechte|
+|Berechtigungsstufe|Applications|Enthaltene Nutzungsrechte|
 |---------------------|----------------|---------------------------------|
 |Viewer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails „Prüfer“ statt dieser Berechtigungsstufe, um sicherzustellen, dass eine E-Mail-Antwort als E-Mail-Nachricht und nicht als Anlage empfangen wird. „Prüfer“ ist auch erforderlich, wenn Sie eine E-Mail an eine andere Organisation senden, die den Outlook-Client oder die Outlook-Web-App verwendet. Es ist ebenfalls für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts ausgenommen sind, weil Sie [Onboardingsteuerelemente](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) implementiert haben.|
 |Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
@@ -117,9 +117,9 @@ Ein Benutzer möchte per E-Mail einige Informationen an bestimmte Personen in de
 > [!NOTE] 
 > Verwenden Sie **Nicht weiterleiten**, wenn es wichtig ist, dass nur die vom Absender ausgewählten Empfänger die Informationen in der E-Mail einsehen. Verwenden Sie eine Vorlage für E-Mails, um die Rechte auf eine Gruppe von Personen zu beschränken, die der Administrator unabhängig von der Empfängerauswahl des Absenders im Voraus festlegt.
 
-## <a name="encrypt-only-option-for-emails"></a>Option „Encrypt Only“ (Nur verschlüsseln) für E-Mails
+## <a name="encrypt-only-option-for-emails"></a>Option "nur verschlüsseln" für e-Mails
 
-Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, wird die E-Mail-Option **Encrypt Only** (Nur verschlüsseln) verfügbar.
+Wenn Exchange Online die neuen Funktionen für die Nachrichten Verschlüsselung in Office 365 verwendet, wird eine neue Option zum **verschlüsseln** von e-Mails zur Verfügung gestellt, mit der die Daten ohne zusätzliche Einschränkungen verschlüsselt werden.
 
 Diese Option ist für Mandanten verfügbar, die Exchange Online verwenden und wie folgt ausgewählt werden können:
 
@@ -128,7 +128,7 @@ Diese Option ist für Mandanten verfügbar, die Exchange Online verwenden und wi
 - **Als Office 365 DLP-Aktion**
 - In **Outlook** für die Versionen, die in der [Tabelle der unterstützten Versionen für Microsoft 365-apps nach Aktualisierungs Kanal](/officeupdates/update-history-microsoft365-apps-by-date)aufgeführt sind, wenn Sie über [Microsoft 365 apps verfügen, die Azure RMS unterstützen](requirements-applications.md#windows-computers-for-information-rights-management-irm). 
 
-Weitere Informationen zur Encrypt-Only-Option finden Sie in der folgenden Blogbeitrag-Ankündigung des Office-Teams: Verschlüsseln der Verschlüsselung [nur bei der Office 365-Nachrichten Verschlüsselung](https://aka.ms/omefeb2018).
+Weitere Informationen zur Option nur verschlüsseln finden Sie in der folgenden Blogbeitrag-Ankündigung des Office-Teams: [Verschlüsseln der Verschlüsselung nur bei der Office 365-Nachrichten Verschlüsselung](https://aka.ms/omefeb2018).
 
 Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer **Speichern unter, Exportieren** und **Vollzugriff**. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Sie können eine E-Mail aber kopieren, ausdrucken und weiterleiten. 
 
@@ -158,7 +158,7 @@ Dem Rights Management-Aussteller wird immer das Nutzungsrecht „Vollzugriff“ 
 
 - Der Rights Management-Aussteller kann ein Dokument immer noch öffnen, nachdem es widerrufen wurde. 
 
-Standardmäßig ist dieses Konto auch der **Rights Management-Besitzer** dieses Inhalts, was der Fall ist, wenn ein Benutzer, der das Dokument oder die E-Mail erstellt hat, den Schutz initiiert. Aber es gibt einige Szenarien, in denen ein Administrator oder Dienst Inhalte im Auftrag von Benutzern schützen kann. Zum Beispiel:
+Standardmäßig ist dieses Konto auch der **Rights Management-Besitzer** dieses Inhalts, was der Fall ist, wenn ein Benutzer, der das Dokument oder die E-Mail erstellt hat, den Schutz initiiert. Aber es gibt einige Szenarien, in denen ein Administrator oder Dienst Inhalte im Auftrag von Benutzern schützen kann. Beispiel:
 
 - Ein Administrator schützt viele Dateien auf einer Dateifreigabe auf einmal: Das Administratorkonto in Azure AD schützt die Dokumente für die Benutzer.
 

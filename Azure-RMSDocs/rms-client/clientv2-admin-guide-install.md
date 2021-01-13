@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 016dfba5d945c0411b3c6858922a2e919282e94e
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762348"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164503"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -24,7 +24,7 @@ ms.locfileid: "97762348"
 >
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
 >
->***Anweisungen für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-install.md). *
+>***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-install.md). *
 
 Überprüfen Sie vor der Installation des Azure Information Protection Unified Bezeichnung-Clients in Ihrem Unternehmensnetzwerk, ob die Computer über die erforderlichen Betriebssystemversionen und Anwendungen für Azure Information Protection verfügen: [Anforderungen für Azure Information Protection](../requirements.md) und [zusätzliche Anforderungen für die Installation des Unified-Bezeichnungs Clients in Unternehmensnetzwerken](reqs-ul-client.md).
 
@@ -167,7 +167,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
     Verpacken Sie diese z **. b.** mit der MSI-Version des Clients, oder stellen Sie Sie nur auf Computern bereit, die diese Abhängigkeiten erfüllen:
     
-    |Office-Version|Betriebssystem|Software|Aktion|
+    |Office-Version|Betriebssystem|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |**Alle Versionen akzeptieren Office 365, Version 1902 und höher**|Nur Windows 10 Version 1809 mit Betriebssystembuilds, die älter als 17763.348 sind|[4482887 KB](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installieren|
     |**Office 2016**|Alle unterstützten Versionen|64-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Installieren|

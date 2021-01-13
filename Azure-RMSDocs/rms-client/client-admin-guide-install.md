@@ -14,18 +14,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a4545fdf75cdf6a9516887210f75e36ca8255f36
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 2efab361e4ea1b74fdedf6cc6cc9735338d3633b
+ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807313"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98164095"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection des klassischen Clients für Benutzer
 
 >***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->***Relevant für:** [Klassischer Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für**: [Azure Information Protection klassischen Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum Unified-Bezeichnungs Client finden Sie im Unified-Bezeichnungs [Client-Administrator Handbuch](clientv2-admin-guide-install.md). *
 
 > [!NOTE] 
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
@@ -205,7 +205,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
 1. Für jeden Computer, auf dem die **MSI** -Datei ausgeführt wird, müssen Sie sicherstellen, dass die folgenden Software Abhängigkeiten vorhanden sind. Verpacken Sie diese z **. b.** mit der MSI-Version des Clients, oder stellen Sie Sie nur auf Computern bereit, die diese Abhängigkeiten erfüllen:
     
-    |Office-Version|Betriebssystem|Software|Aktion|
+    |Office-Version|Betriebssystem|Software|Action|
     |--------------------|--------------|----------------|---------------------|
     |**Alle Versionen akzeptieren Office 365, Version 1902 und höher**|Nur Windows 10 Version 1809 mit Betriebssystembuilds, die älter als 17763.348 sind|[4482887 KB](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installieren|
     |**Office 2013**|Alle unterstützten Versionen|64-Bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54992)<br /><br /> 32-Bit: [KB3172523](https://www.microsoft.com/download/details.aspx?id=54979) <br /><br />Version: 1.0|Installieren|
