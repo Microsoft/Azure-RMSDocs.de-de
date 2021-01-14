@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ce99003d95edd8202a1fddb2bb5eae2559100055
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 3e5a34268b2b0144c49c7ce6150d725b642184e5
+ms.sourcegitcommit: d68537b88ac6b43846d574359938fb45277cb850
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164401"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195414"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -80,12 +80,12 @@ Diese Version enthält die folgenden neuen Features, Fehlerbehebungen und Verbes
 - **Neue Features für den Scanner**:
 
     - [PowerShell-Unterstützung für nicht verbundene Scanner-Server](#powershell-support-for-disconnected-scanner-servers)
-    - [Unterstützung für NFS-Depots in Inhalts Scan Aufträgen](#support-for-nfs-repositories-in-content-scan-jobs-public-preview)
+    - [Unterstützung für NFS-Depots in Inhalts Scan Aufträgen](#support-for-nfs-repositories-in-content-scan-jobs-public-preview) (Public Preview)
     - [Unterstützung für zusätzliche Typen sensibler Informationen hinzugefügt](#added-support-for-additional-sensitive-information-types)
 
 - **Neue Features für den-Client**:
 
-    - [Überprüfen des Dokument Zugriffs und widerrufen des Zugriffs](#track-document-access-and-revoke-access-public-preview)
+    - Überprüfen des [Dokument Zugriffs und widerrufen des Zugriffs](#track-document-access-and-revoke-access-public-preview) (öffentliche Vorschau)
     - [Unterstützung für zusätzliche Typen sensibler Informationen hinzugefügt](#added-support-for-additional-sensitive-information-types)
 
 - **Korrekturen und Verbesserungen**:
@@ -95,9 +95,9 @@ Diese Version enthält die folgenden neuen Features, Fehlerbehebungen und Verbes
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>PowerShell-Unterstützung für nicht verbundene Scanner-Server
 
-Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unterstützt jetzt die Verwaltung von Inhalts Überprüfungs Aufträgen über PowerShell für Scanner-Server, die keine Verbindung mit dem Internet herstellen können, z. b. mit einem [Azure China 21ViaNet Scanner-Server](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
+Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unterstützt jetzt die Verwaltung von Inhalts Überprüfungs Aufträgen über PowerShell, für Scanner-Server, die keine Verbindung mit dem Internet herstellen können, oder für Scanner in einer [Azure China 21ViaNet-Umgebung (China Sovereign Cloud)](/microsoft-365/admin/services-in-china/parity-between-azure-information-protection#manage-azure-information-protection-content-scan-jobs).
 
-Zur Unterstützung von getrennten Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
+Zur Unterstützung von getrennten oder Azure China 21ViaNet-Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
 
 |Cmdlet  |BESCHREIBUNG  |
 |---------|---------|
@@ -198,6 +198,8 @@ Die folgenden Korrekturen wurden in Version 2.9.111.0 des [Azure Information Pro
 Unified-Beschriftungs Scanner und Client Version 2.8.85.0
 
 **Veröffentlicht** 09/22/2020
+
+**Unterstützt durch** 7/13/2021
 
 Diese Version enthält die folgenden neuen Features, Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner und-Client:
 
@@ -352,6 +354,8 @@ Unified-Beschriftungs Scanner und Client Version 2.7.101.0
 
 **Veröffentlicht** 08/23/2020
 
+**Unterstützt durch** 3/22/2021
+
 **Behebung**:
 
 Das Problem für PPT-, Excel-und Word-Benutzer wurde behoben, das dazu geführt hat, dass Dateien eingefroren, abgestürzt sind oder dass die Speicherung wiederholt werden musste, die mit obligatorischen Bezeichnungen verknüpft war, die mit Schutz, Wasserzeichen und/oder Inhaltsmarkierung
@@ -361,6 +365,8 @@ Das Problem für PPT-, Excel-und Word-Benutzer wurde behoben, das dazu geführt 
 Unified-Beschriftungs Scanner und Client Version 2.7.99.0
 
 **Veröffentlicht** 07/20/2020
+
+**Unterstützt durch** 2/23/2021
 
 **Korrekturen und Verbesserungen**:
 
@@ -373,6 +379,8 @@ Weitere Informationen finden Sie unter [Version 2.7.96.0](#version-27960) und [A
 Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 **Veröffentlicht** 06/29/2020
+
+**Unterstützt durch** 1/20/2021
 
 - [Neue Features für den Unified-Bezeichnungs Client, Version 2.7.96.0](#new-features-for-the-unified-labeling-client-version-27960)
 - [Neue Features für den Unified-Bezeichnungs Scanner, Version 2.7.96.0](#new-features-for-the-unified-labeling-scanner-version-27960)
