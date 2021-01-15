@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 71f07f5ffb9167ab61653cef10c610968ff74786
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3465bdb2eaf1efce3524d2f28332b094ba31db5d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384195"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240851"
 ---
 # <a name="azure-information-protection-aip-labeling-classification-and-protection"></a>Bezeichnung, Klassifizierung und Schutz der Azure Information Protection (AIP)
 
@@ -26,7 +26,7 @@ ms.locfileid: "97384195"
 > ***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client und klassischer Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection (AIP) ist eine cloudbasierte Lösung, die Organisationen das Klassifizieren und Schützen von Dokumenten und E-Mails durch Anwendung von Bezeichnungen ermöglicht. 
 
@@ -110,7 +110,7 @@ Außerdem ermöglicht der AIP-Client Benutzern das gleichzeitige Klassifizieren 
 Die Menüoption **Klassifizieren und schützen** funktioniert ähnlich wie die Information Protection-Leiste in Office-Anwendungen, wodurch Benutzer eine Bezeichnung auswählen oder benutzerdefinierte Berechtigungen festlegen können.
 
 > [!TIP]
-> Hauptbenutzer (oder Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. [Relevante PowerShell-Befehle](https://docs.microsoft.com/powershell/module/azureinformationprotection) sind im Client enthalten und können auch separat installiert werden.
+> Hauptbenutzer (oder Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. [Relevante PowerShell-Befehle](/powershell/module/azureinformationprotection) sind im Client enthalten und können auch separat installiert werden.
 
 Benutzer und Administratoren können die Website zur Dokumentenverfolgung verwenden, um geschützte Dokumente zu überwachen, zu überwachen, wer auf sie zugreift und wann auf diese zugegriffen wird. Wenn sie einen Missbrauch vermuten, können sie auch den Zugriff auf diese Dokumente entziehen. Beispiel:
 
@@ -150,7 +150,7 @@ Verwenden Sie eine der folgenden Methoden, um vorhandene Inhalte zu klassifizier
 
     Verwenden Sie die Überprüfung alternativ, um Standardbezeichnung auf alle Dokumente in einem Datenrepository anzuwenden, ohne den Inhalt der Datei zu überprüfen. Zudem haben Sie die Möglichkeit, die Überprüfung auch nur im Berichterstellungsmodus zu verwenden, um vertrauliche Daten zu finden, von denen Sie vielleicht nicht wissen, dass sie vorhanden sind.
 
-- **Clouddatenspeicher:** Verwenden Sie [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/azip-integration), um Ihre Bezeichnungen für Dokumente in Box, SharePoint und OneDrive anzuwenden. Ein zugehöriges Tutorial finden Sie unter [Automatisches Anwenden von Azure Information Protection-Klassifizierungsbezeichnungen](https://docs.microsoft.com/cloud-app-security/use-case-information-protection). 
+- **Clouddatenspeicher:** Verwenden Sie [Microsoft Cloud App Security](/cloud-app-security/azip-integration), um Ihre Bezeichnungen für Dokumente in Box, SharePoint und OneDrive anzuwenden. Ein zugehöriges Tutorial finden Sie unter [Automatisches Anwenden von Azure Information Protection-Klassifizierungsbezeichnungen](/cloud-app-security/use-case-information-protection). 
 
 
 ## <a name="next-steps"></a>Nächste Schritte
