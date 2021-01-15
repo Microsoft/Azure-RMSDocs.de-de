@@ -1,24 +1,24 @@
 ---
 title: 'Class schutzengine:: Observer'
 description: 'Dokumentiert die schutzengine:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 7a576882376caa8cc5f9c5c1b3d3036ee7e57b21
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: b9243a1b7d9addaceaec907a368f7e651c99fbd5
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567148"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214625"
 ---
 # <a name="class-protectionengineobserver"></a>Class schutzengine:: Observer 
 Schnittstelle, die Benachrichtigungen im Zusammenhang mit ProtectionEngine empfängt
 Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual void ongettemplatessuccess (Konstante Std:: Vector \<std::shared_ptr\<TemplateDescriptor\> \>& templatedescriptors, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
@@ -30,8 +30,10 @@ public virtual void onloadusercertfailure (konstant Std:: exception_ptr& Fehler,
 public virtual void onregistercontentfortrackingandrevocationfailure (Konstante Std:: exception_ptr& Error, Konstante Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn die Registrierung von Inhalten für die Nachverfolgung & Sperrung fehlschlägt
 öffentliches virtuelles void-onrevokecontentsuccess (Konstante Std:: shared_ptr \<void\>&-Kontext)  |  Wird aufgerufen, wenn die Sperrung von erfolgreich war.
 public virtual void onrevokecontentfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn der Widerruf von Inhalten fehlschlägt.
+public virtual void onkreatedelegatedlicensessuccess (Std:: Vector \<std::shared_ptr\<DelegationLicense\> \> delegatedlicenses, Konst Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn die CREATE Delegierte License erfolgreich ist.
+public virtual void onkreatedelegatedlicensesfailure (konstant Std:: exception_ptr& Error, Konstante Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn die CREATE Delegierte License fehlschlägt.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="ongettemplatessuccess-function"></a>Ongettemplatessuccess-Funktion
 Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
@@ -143,3 +145,24 @@ Parameter:
 
 
 Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: revokecontentasync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onrevokecontentsuccess oder schutzengine:: Observer:: onrevokecontentfailure weitergeleitet.
+  
+### <a name="oncreatedelegatedlicensessuccess-function"></a>Onkreatedelegatedlicensessuccess-Funktion
+Wird aufgerufen, wenn die CREATE Delegierte License erfolgreich ist.
+
+Parameter:  
+* **context**: derselbe Kontext, der an "Schutz Modul:: deatedelegationlicensesasync" übergeben wurde.
+
+
+Eine Anwendung kann beliebige Kontext Typen übergeben (z. b. Std::p romise, Std:: function) zu schutzengine:: builddelegationlicensesasync, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onkreatedelegatedlicensessuccess oder schutzengine:: Observer:: onkreatedelegatedlicensesfailure weitergeleitet.
+  
+### <a name="oncreatedelegatedlicensesfailure-function"></a>Onkreatedelegatedlicensesfailure-Funktion
+Wird aufgerufen, wenn die CREATE Delegierte License fehlschlägt.
+
+Parameter:  
+* **Fehler**: aufgetretene Fehler 
+
+
+* **Kontext**: derselbe Kontext, der an "Schutz Modul:: deatedelegationlicensesasync" übergeben wurde.
+
+
+Eine Anwendung kann beliebige Kontext Typen übergeben (z. b. Std::p romise, Std:: function) zu schutzengine:: builddelegationlicensesasync, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onkreatedelegatedlicensessuccess oder schutzengine:: Observer:: onkreatedelegatedlicensesfailure weitergeleitet.

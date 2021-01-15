@@ -1,24 +1,24 @@
 ---
 title: 'Class Protection profile:: Observer'
 description: 'Dokumentiert die Schutzprofile:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d72a5a7d5818ee4482b2f25f8df45f6a2152f898
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 38f578991ed9409aed6ea87622d8db79dcd78b06
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567103"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214438"
 ---
 # <a name="class-protectionprofileobserver"></a>Class Protection profile:: Observer 
 Schnittstelle, die Benachrichtigungen im Zusammenhang mit ProtectionProfile empfängt.
 Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual void OnLoadSuccess(const std::shared_ptr\<ProtectionProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
 public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
@@ -29,7 +29,7 @@ public virtual void OnAddEngineFailure(const std::exception_ptr& error, const st
 public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Löschen einer Engine zu einem Fehler geführt hat.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="onloadsuccess-function"></a>Onloadsuccess-Funktion
 Wird aufgerufen, wenn das Profil erfolgreich geladen wurde

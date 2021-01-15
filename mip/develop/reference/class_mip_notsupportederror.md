@@ -1,24 +1,24 @@
 ---
 title: Klasse notsupportederror
 description: 'Dokumentiert die notsupportederror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 7bea25ef1a9cccf4b6567ca5cb3eda85db0e970b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 42ca95c80162bdc61a5b1d1b5ed0576e618fc159
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566688"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213554"
 ---
 # <a name="class-notsupportederror"></a>Klasse notsupportederror 
 Der von der Anwendung angeforderte Vorgang wird vom SDK nicht unterstützt.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
-Noch nicht dokumentiert.
+## <a name="members"></a>Member
+_Noch nicht dokumentiert._

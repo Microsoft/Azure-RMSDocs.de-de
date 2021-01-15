@@ -1,22 +1,22 @@
 ---
 title: Klasse contentmarkingaktiondata
 description: 'Dokumentiert die contentmarkingaktiondata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 165fbaae25b57e2963b55105b2f42de99f71b900
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 44f9adcf94230e7e652b51cad40de7b89b3aaa48
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567190"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215373"
 ---
 # <a name="class-contentmarkingactiondata"></a>Klasse contentmarkingaktiondata 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetText() const  | _Noch nicht dokumentiert._
 public const std::string& GetFontName() const  | _Noch nicht dokumentiert._
@@ -27,35 +27,35 @@ public int GetMargin() const  | _Noch nicht dokumentiert._
 Public contentmarkplacement getcontentmarkplacement () konstant  | _Noch nicht dokumentiert._
 public virtual ~ contentmarkingaktiondata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="gettext-function"></a>Gettext-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getfontname-function"></a>Getfontname-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getfontcolor-function"></a>Getfontcolor-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getcontentmarkalignment-function"></a>Getcontentmarkalignment-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getfontsize-function"></a>GetFontSize-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getcontentmarkplacement-function"></a>Getcontentmarkplacement-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="contentmarkingactiondata-function"></a>~ Contentmarkingaktiondata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

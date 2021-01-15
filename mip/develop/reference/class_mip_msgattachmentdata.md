@@ -1,22 +1,22 @@
 ---
 title: Klasse msgattachmentdata
 description: 'Dokumentiert die msgattachmentdata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: c729b2907878aa383b058689c55072e53541a595
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6082b96649e32e282c544ac5ec46773e7b4be901
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566754"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213622"
 ---
 # <a name="class-msgattachmentdata"></a>Klasse msgattachmentdata 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: Vector \<uint8_t\>& GetBytes ()  |  Anlage als binären Byte Vektor erhalten.
 Public Std:: shared_ptr \<Stream\> GetStream () Konstanten  |  Anlage als binären Stream erhalten.
@@ -25,7 +25,7 @@ Public Konstanten Std:: String& getlongname () Konstanten  |  Langen Namen der A
 public const std::string& GetPath() const  |  Der Name des Pfads wird als Zeichenfolge angezeigt. Wenn der Pfad nicht leer ist, wird auf Anhang verwiesen.
 Public Konstanten Std:: String& getlongpath () Konstanten  |  Fügen Sie den langen Pfadnamen der Anlage als Zeichenfolge ab. Wenn der Pfad nicht leer ist, wird auf Anhang verwiesen.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getbytes-function"></a>GetBytes-Funktion
 Anlage als binären Byte Vektor erhalten.

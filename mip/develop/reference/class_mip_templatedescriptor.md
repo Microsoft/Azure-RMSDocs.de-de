@@ -1,28 +1,28 @@
 ---
 title: Klasse templateDescriptor
 description: 'Dokumentiert die templateDescriptor:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 4da253f92ea4f2abc9c1d5d6a85792d9a6aff433
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: a133d154c1e0129443058c4b3c0a90a33204887b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567397"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214166"
 ---
 # <a name="class-templatedescriptor"></a>Klasse templateDescriptor 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  ID der Vorlage erhalten.
 public std::string GetName() const  |  Holen Sie sich den Vorlagen Namen.
 public std::string GetDescription() const  |  Vorlagen Beschreibung erhalten.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
 ID der Vorlage erhalten.

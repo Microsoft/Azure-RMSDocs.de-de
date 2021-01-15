@@ -1,27 +1,27 @@
 ---
 title: Klasse protectdonotforwarddkaction
 description: 'Dokumentiert die protectdonotforwarddkaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 9702c9c783466298a43661a8382ebec21d598101
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: e69a7606850d93bb2be21b8b10e58bdaf56cdb69
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567175"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214829"
 ---
 # <a name="class-protectdonotforwarddkaction"></a>Klasse protectdonotforwarddkaction 
 Eine Aktionsklasse, die angibt, dass kein doppelter Schlüsselschutz für das Dokument hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: String& getdoublekeyverschlüsseltionurl () Konstanten  |  Holen Sie sich die Verschlüsselungs-URL für den doppelten Schlüssel.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getdoublekeyencryptionurl-function"></a>Getdoublekeyverschlüsseltionurl-Funktion
 Holen Sie sich die Verschlüsselungs-URL für den doppelten Schlüssel.

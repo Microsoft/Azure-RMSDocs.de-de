@@ -1,31 +1,31 @@
 ---
 title: Class policypackagedata
 description: 'Dokumentiert die policypackagedata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: cf86fbe72c9854e518fd3d78bc7771eb377dbfd5
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: ac9e1234196d77dabc2f47149e2ac41605cccb26
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566617"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215084"
 ---
 # <a name="class-policypackagedata"></a>Class policypackagedata 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: Vector \<std::unique_ptr\<RulePackageData\> \>& getrules () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ policypackagedata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getrules-function"></a>Getrules-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="policypackagedata-function"></a>~ Policypackagedata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

@@ -1,30 +1,30 @@
 ---
 title: Klasse httpdelegat
 description: 'Dokumentiert die httpdeleg:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d52752538aae982f8f5b0138aaf26deefa0d98a3
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 9240f0ed4eca43d7a6dcd5045c80f9724dc2a11b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566887"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215254"
 ---
 # <a name="class-httpdelegate"></a>Klasse httpdelegat 
 Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<HttpOperation\> Send(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context)  |  Sendet die HTTP-Anforderung.
 Public Std:: shared_ptr \<HttpOperation\> SendAsync (Konstante Std:: shared_ptr \<HttpRequest\>& Request, Konst Std:: shared_ptr \<void\>& context, Konstante Std:: Function \<void(std::shared_ptr\<HttpOperation\> )  |  HTTP-Anforderung asynchron senden.
 öffentliches void CancelOperation (Konstante Std:: String& RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
 öffentliches void cancelalloperations ()  |  Abbrechen fortlaufender HTTP-Anforderungen.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="send-function"></a>Send-Funktion
 Sendet die HTTP-Anforderung.

@@ -1,28 +1,28 @@
 ---
 title: Class nopermissionserror
 description: 'Dokumentiert die nopermissionserror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: aaa26e640c59ffaf80bec182042b86a7b8e90d3f
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 0e9c13e1609b6ea5fa2033d5d27c47d76a1acb43
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566707"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213571"
 ---
 # <a name="class-nopermissionserror"></a>Class nopermissionserror 
 Der Benutzer konnte nicht auf den Inhalt zugreifen. Das ist ggf. darauf zurückzuführen, dass ihm Berechtigungen fehlen oder Inhalte widerrufen wurden.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string GetReferrer() const  |  Ruft den Kontakt im Falle fehlender Rechte für das Dokument ab.
 public std::string GetOwner() const  |  Ruft den Besitzer des Dokuments ab.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getreferrer-function"></a>Getreferrer-Funktion
 Ruft den Kontakt im Falle fehlender Rechte für das Dokument ab.

@@ -1,23 +1,23 @@
 ---
 title: Klassenbezeichnung
 description: 'Dokumentiert die Bezeichnung:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 6a0bd370dd8a0f08156861995c498f4f3710e9e2
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 726c61d1b73389bfdc10afb961177659e5a137d4
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566855"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213894"
 ---
 # <a name="class-label"></a>Klassenbezeichnung 
 Eine Abstraktion für eine einzelne Microsoft Information Protection-Bezeichnung
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ruft die Bezeichnungs-ID ab
 public const std::string& GetName() const  |  Ruft den Bezeichnungsnamen ab
@@ -31,8 +31,9 @@ public std::weak_ptr\<Label\> GetParent() const  |  Ruft die übergeordnete Beze
 Public Konstanten Std:: Vector \<std::shared_ptr\<Label\> \>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
 Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
 public ActionSource GetActionSource() const  |  Ruft die Aktions Quelle der Bezeichnung ab.
+Public Konstanten Std:: Vector \<std::string\>& getcontentformats () Konstanten  |  Ruft die Inhaltstypen ab.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
 Ruft die Bezeichnungs-ID ab
@@ -106,3 +107,9 @@ Ruft die Aktions Quelle der Bezeichnung ab.
 
   
 **Returns**: Aktions Quelle
+  
+### <a name="getcontentformats-function"></a>Getcontentformats-Funktion
+Ruft die Inhaltstypen ab.
+
+  
+<Returns>

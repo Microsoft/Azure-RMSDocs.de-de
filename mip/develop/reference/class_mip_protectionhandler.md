@@ -1,23 +1,23 @@
 ---
 title: Klassen Schutz Handler
 description: 'Dokumentiert die schutzhandler:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: e38aaf0e4dfee1d10f67f175eb50119fe3aa484d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d70e32793ede4a1184672f3f8755112766ba571b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567130"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214608"
 ---
 # <a name="class-protectionhandler"></a>Klassen Schutz Handler 
 Verwaltet schutzbezogene Aktionen für eine bestimmte Schutzkonfiguration.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::shared_ptr\<Stream\> CreateProtectedStream(const std::shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Verschlüsselt einen Puffer.
@@ -38,7 +38,7 @@ Public Konstanten Std:: Vector \<uint8_t\>& getserializedprelicense (prelicenzfo
 öffentlicher chiffrimode getciphermode () konstant  |  Ruft den Verschlüsselungs Modus des Schutz Handlers ab.
 Enumeration prelicenenformat  |  Prälizenzierungs Format.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="createprotectedstream-function"></a>Funktion "deateprotectedstream"
 Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
@@ -213,9 +213,9 @@ Ruft den Verschlüsselungs Modus des Schutz Handlers ab.
   
 ### <a name="prelicenseformat-enum"></a>Prelicenenformat-Enumeration
 
+Prälizenzierungs Format.
+
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Xml            | Von msipc verwendetes XML/SOAP-Legacy Format
 Json            | Vom MIP SDK und RMS SDK verwendetes JSON/Rest-Format
-
-Prälizenzierungs Format.

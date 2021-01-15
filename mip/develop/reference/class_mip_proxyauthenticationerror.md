@@ -1,29 +1,29 @@
 ---
 title: Klasse proxyauthenticationerror
 description: 'Dokumentiert die proxyauthenticationerror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d4468fe243f7120630d0a34d453ff4e9a5bf6527
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 04915e74cc09f271a2ca3bb256b906bc442bb3fd
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567079"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214302"
 ---
 # <a name="class-proxyauthenticationerror"></a>Klasse proxyauthenticationerror 
 Fehler bei der Proxy Authentifizierung.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Kategorie getCategory () konstant  |  Ruft die Kategorie des Netzwerk Fehlers ab.
 öffentliches int32_t getresponsestatus Code () Konstanten  |  Ruft den Statuscode der HTTP-Antwort ab.
 Enumeration-Kategorie  |  Kategorie des Netzwerk Fehlers.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getcategory-function"></a>GetCategory-Funktion
 Ruft die Kategorie des Netzwerk Fehlers ab.
@@ -39,6 +39,8 @@ Ruft den Statuscode der HTTP-Antwort ab.
   
 ### <a name="category-enum"></a>Kategorieenum
 
+Kategorie des Netzwerk Fehlers.
+
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Unbekannt            | Unbekannter Netzwerkfehler.
@@ -52,5 +54,3 @@ Timeout            | Timeout bei Verbindung
 Offline            | Der Vorgang erfordert eine Netzwerk Konnektivität.
 Gedrosselt            | Fehler beim http-Vorgang aufgrund von Serverdaten Verkehrs Drosselung.
 Abgebrochen            | Der http-Vorgang wurde von der Anwendung abgebrochen.
-
-Kategorie des Netzwerk Fehlers.

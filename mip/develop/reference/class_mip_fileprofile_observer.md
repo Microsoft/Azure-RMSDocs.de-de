@@ -1,24 +1,24 @@
 ---
 title: 'class file profile:: Observer'
 description: 'Dokumentiert die File profile:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 62e578f8f3527a4749fedfc88a2b32de5c6e95db
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 56bad4dfc1fde5f6cfe2d390fef1555ba0afe6d7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566935"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215271"
 ---
 # <a name="class-fileprofileobserver"></a>class file profile:: Observer 
 Observer-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für profilbezogene Ereignisse.
 Alle Fehler erben von mip::Error. Der Client sollte die Engine nicht in dem Thread aufrufen, der den Beobachter aufruft.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual ~Observer()  | _Noch nicht dokumentiert._
 public virtual void OnLoadSuccess(const std::shared_ptr\<mip::FileProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
@@ -35,10 +35,10 @@ public virtual void OnPolicyChanged(const std::string& engineId)  |  Wird aufger
 public virtual void onaddpolicyenginestarting (bool requirespolicyfetch)  |  Wird vor der Erstellung der Engine aufgerufen, um zu beschreiben, ob die Richtlinien Daten der Richtlinien-Engine vom Server abgerufen werden müssen oder ob Sie aus lokal zwischengespeicherten Daten erstellt werden können.
 geschützte Observer()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="observer-function"></a>~ Observer-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="onloadsuccess-function"></a>Onloadsuccess-Funktion
@@ -84,4 +84,4 @@ Parameter:
 Dieser optionale Rückruf kann von einer Anwendung verwendet werden, um darüber informiert zu werden, ob ein addengineasync-Vorgang einen HTTP-Vorgang (mit der zugehörigen Verzögerung) erfordert.
   
 ### <a name="observer-function"></a>Observer-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

@@ -1,26 +1,27 @@
 ---
 title: Klasse labelgroupdata
 description: 'Dokumentiert die labelgroupdata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: a145de51c4a4eb443fdb4102ed1d551a3f8e3c3f
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 812163c2f000f0bfa62427eb5bf9cc8750737a0c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566807"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213809"
 ---
 # <a name="class-labelgroupdata"></a>Klasse labelgroupdata 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetLabelId() const  | _Noch nicht dokumentiert._
 Public Konstanten Std:: Vector \<std::unique_ptr\<LabelGroupData\> \>& getlabelgroupdata () konstant  | _Noch nicht dokumentiert._
 public int getor der () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector \<std::string\>& getcontentformats () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std::p Air \<std::string, std::string\>& GetColor () Konstanten  | _Noch nicht dokumentiert._
 Public konstant Std::p Air \<std::string, std::string\>& GetName () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std::p Air \<std::string, std::string\>& GetDescription () Konstanten  | _Noch nicht dokumentiert._
@@ -30,13 +31,18 @@ Public-Konstante Std::p Air \<std::string, std::string\>& GetToolTip () konstant
 Public-Konstante Std::p Air \<std::string, std::string\>& getautotooltip () konstant  | _Noch nicht dokumentiert._
 public bool isaktivierte () Konstante  | _Noch nicht dokumentiert._
 public bool isdowngraderecht cationrequired () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector \<std::string\>& getsupportedcontentformats () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getdefaultlabelid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstante Std:: String& getdefaultlabelid (Konstanten Std:: String& contentformat) konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: map \<std::string, mip::DefaultLabelInfo\>& getdefaultlabelinfopercontentformat () Konstanten  | _Noch nicht dokumentiert._
 Public Konstante Std::p Air \<std::string, std::string\>& getmoreinfourl () konstant  | _Noch nicht dokumentiert._
 public bool ismandatory () konstant  | _Noch nicht dokumentiert._
+public bool isobligatorisch (Konstante Std:: String& contentformat) konstant  | _Noch nicht dokumentiert._
 Public Konstanten Std:: Vector \<std::shared_ptr\<ProtectionActionData\> \>& getschutzaktiondata () konstant  | _Noch nicht dokumentiert._
 public bool isauditenabled () konstant  | _Noch nicht dokumentiert._
 public bool iscoauthaktivierte () Konstante  | _Noch nicht dokumentiert._
 public bool isenhancedclassificationaktivierte () Konstante  | _Noch nicht dokumentiert._
+public bool issublabelpriorityorderaktivierte () Konstante  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getauditworkspaceid () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: Vector \<std::string\>& getlabelbycustomproperties () Konstanten  | _Noch nicht dokumentiert._
@@ -45,107 +51,131 @@ Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getpr
 Public Konstanten Std:: Vector \<std::tuple\<std::string, std::string, std::string\> \>& getlabelbycustompropertiessettings () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ labelgroupdata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getlabelid-function"></a>Getlabelid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getlabelgroupdata-function"></a>Getlabelgroupdata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getorder-function"></a>GetOrder-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
+
+  
+### <a name="getcontentformats-function"></a>Getcontentformats-Funktion
+_Noch nicht dokumentiert._
 
   
 ### <a name="getcolor-function"></a>GetColor-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getname-function"></a>GetName-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getdescription-function"></a>GetDescription-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="gettemplateid-function"></a>Gettemplateid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getinvariantname-function"></a>Getinvariantname-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="gettooltip-function"></a>GetToolTip-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getautotooltip-function"></a>Getautotooltip-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="isenabled-function"></a>Isaktivierte Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="isdowngradejustificationrequired-function"></a>Isdowngraderechtcationrequired-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
+
+  
+### <a name="getsupportedcontentformats-function"></a>Getsupportedcontentformats-Funktion
+_Noch nicht dokumentiert._
 
   
 ### <a name="getdefaultlabelid-function"></a>Getdefaultlabelid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
+
+  
+### <a name="getdefaultlabelid-function"></a>Getdefaultlabelid-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getdefaultlabelinfopercontentformat-function"></a>Getdefaultlabelinfopercontentformat-Funktion
+_Noch nicht dokumentiert._
 
   
 ### <a name="getmoreinfourl-function"></a>Getmoreingefourl-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="ismandatory-function"></a>Isobligatorische-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
+
+  
+### <a name="ismandatory-function"></a>Isobligatorische-Funktion
+_Noch nicht dokumentiert._
 
   
 ### <a name="getprotectionactiondata-function"></a>Getschutzaktiondata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="isauditenabled-function"></a>Isauditenabled-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="iscoauthenabled-function"></a>Iscoauthaktivierte Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="isenhancedclassificationenabled-function"></a>Isenhancedclassificationaktivierte Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
+
+  
+### <a name="issublabelpriorityorderenabled-function"></a>Issublabelpriorityorderaktivierte Funktion
+_Noch nicht dokumentiert._
 
   
 ### <a name="getauditworkspaceid-function"></a>Getauditworkspaceid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getcustomsettings-function"></a>Getcustomsettings-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getlabelbycustomproperties-function"></a>Getlabelbycustomproperties-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getcustompropertiesbylabel-function"></a>Getcustompropertiesbylabel-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getparsedcustompropertiesbylabel-function"></a>Getparamesedcustompropertiesbylabel-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getlabelbycustompropertiessettings-function"></a>Getlabelbycustompropertiessettings-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="labelgroupdata-function"></a>~ Labelgroupdata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

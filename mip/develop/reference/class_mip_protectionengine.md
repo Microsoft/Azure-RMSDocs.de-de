@@ -1,23 +1,23 @@
 ---
 title: Class Protection Engine
 description: 'Dokumentiert die Schutz-Engine:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f87b65f85693850ea3344aa2b1340f9fc4de4e73
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6df50823102c7cf897dceb2d6d576384431ccfc6
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567151"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214676"
 ---
 # <a name="class-protectionengine"></a>Class Protection Engine 
 Verwaltet schutzbezogene Aktionen, die sich auf eine bestimmte Identität beziehen.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die Engine-Einstellungen ab.
 Public Std:: shared_ptr \<AsyncControl\> gettemplatesasync (Konst Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstante Std:: shared_ptr \<void\>& context)  |  Ruft die Sammlung von Vorlagen ab, die einem Benutzer zur Verfügung stehen.
@@ -35,8 +35,10 @@ Public Std:: shared_ptr \<AsyncControl\> loadusercertasync (Konstante Std:: shar
 Public Std:: shared_ptr \<AsyncControl\> registercontentfortrackingandrevocationasync (Konst Std:: Vector \<uint8_t\>& serializedpublishinglicense, Konstanten Std:: String& ContentName, bool isownernotificationaktivierte, Konstante Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstante Std:: shared_ptr \<void\>& context)  |  Registrieren Sie die Veröffentlichungs Lizenz (PL) für die Dokument Nachverfolgung & Sperrung.
 öffentliches void revokecontent (Konstante Std:: Vector \<uint8_t\>& serializedpublishinglicense, Konst Std:: shared_ptr \<void\>& context)  |  Führt eine Sperrung für den Inhalt durch.
 Public Std:: shared_ptr \<AsyncControl\> revokecontentasync (Konstanten Std:: Vector \<uint8_t\>& serializedpublishinglicense, Konstante Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstanten Std:: shared_ptr \<void\>& Kontext)  |  Führt eine Sperrung für den Inhalt durch.
+Public Std:: Vector \<std::shared_ptr\<DelegationLicense\> \> kreatedelegationlicenses (Konstante delegationlicensesettings& Settings, Konstante Std:: shared_ptr \<void\>& context)  |  Erstellt eine delegierte Lizenz.
+Public Std:: shared_ptr \<AsyncControl\> kreatedelegationlicensesasync (Konstante delegationlicensesettings& Settings, Konstanten Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstanten Std:: shared_ptr \<void\>& Kontext)  |  Erstellt eine delegierte Lizenz.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
 Ruft die Engine-Einstellungen ab.
@@ -280,3 +282,35 @@ Parameter:
 
   
 **Gibt Folgendes zurück**: Async-Steuerelement Objekt.
+  
+### <a name="createdelegationlicenses-function"></a>Funktion "kreatedelegationlicenses"
+Erstellt eine delegierte Lizenz.
+
+Parameter:  
+* **Einstellungen**: die Delegierungs Einstellungen 
+
+
+* **Kontext**: Client Kontext, der an Beobachter und optional httpdelegat weitergeleitet wird.
+
+
+
+  
+**Returns**: ein Vektor der Delegierungs Lizenzen verwendet diese Methode, um Lizenzen für eine Liste von Benutzern zu erstellen.
+  
+### <a name="createdelegationlicensesasync-function"></a>Funktion "-Funktion"
+Erstellt eine delegierte Lizenz.
+
+Parameter:  
+* **Einstellungen**: die Delegierungs Einstellungen 
+
+
+* **observer**: eine Klasse, die die ProtectionHandler::Observer-Schnittstelle implementiert 
+
+
+* **Kontext**: Client Kontext, der an Beobachter und optional httpdelegat weitergeleitet wird.
+
+
+
+  
+**Gibt Folgendes zurück**: Async-Steuerelement Objekt.
+Verwenden Sie diese Methode, um Lizenzen für eine Liste von Benutzern zu erstellen. Empfangen des delegatlicense-Vektors in Rückruf-onkreatedelegatedlicensessuccess-Fehler werden in onupatedelegatedlicensesfailure gesendet

@@ -1,24 +1,24 @@
 ---
 title: 'Class policyprofile:: Observer'
 description: 'Dokumentiert die policyprofile:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 35768afacc22202721fb093c91e4a28a02a99d65
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 978597bcc90386a53ca35271cb862b9f0f0465a7
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567373"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215067"
 ---
 # <a name="class-policyprofileobserver"></a>Class policyprofile:: Observer 
 Observer-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für profilbezogene Ereignisse.
 Alle Fehler erben von mip::Error. Der Client sollte die Engine nicht in dem Thread aufrufen, der den Beobachter aufruft.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual void OnLoadSuccess(const std::shared_ptr\<PolicyProfile\>& profile, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
 public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
@@ -33,7 +33,7 @@ public virtual void OnDeleteEngineSuccess(const std::shared_ptr\<void\>& context
 public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Löschen einer Engine einen Fehler verursacht hat.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Wird aufgerufen, wenn sich die Richtlinie für die Engine mit der angegebenen ID geändert hat oder wenn die geladenen benutzerdefinierten Empfindlichkeits Typen geändert wurden.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="onloadsuccess-function"></a>Onloadsuccess-Funktion
 Wird aufgerufen, wenn das Profil erfolgreich geladen wurde

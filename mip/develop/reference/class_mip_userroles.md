@@ -1,29 +1,29 @@
 ---
 title: Klassen Benutzer Rollen
 description: 'Dokumentiert die userrollen:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: fc6e5f77c68ecde2582cfd622624c0c6b986500b
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: ef881f184fd370665006c8fb4d73138b7c5e2f3c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566622"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214132"
 ---
 # <a name="class-userroles"></a>Klassen Benutzer Rollen 
 Eine Gruppe von Benutzern und die ihnen zugeordneten Rollen.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Benutzer Rollen (konstant Std:: Vector \<std::string\>& users, Konstante Std:: Vector \<std::string\>& Rollen)  |  UserRoles-Konstruktor
 Public Konstanten Std:: Vector \<std::string\>& users () konstant  |  Ruft Benutzer ab, denen Rollen zugeordnet sind
 Public Konstanten Std:: Vector \<std::string\>& Rollen () konstant  |  Ruft die Rollen ab, die einer Gruppe von Benutzern zugeordnet sind
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="userroles-function"></a>Userrollen-Funktion
 UserRoles-Konstruktor

@@ -1,23 +1,23 @@
 ---
 title: 'Class Protection Handler:: consumptionsettings'
 description: 'Dokumentiert die schutzhandler:: consumptionsettings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 627845405fc0d4fc2523e958e2226d343d0013cc
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 8ac0e4d3067528d6e860244abca2d70f0cf6a530
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566575"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214591"
 ---
 # <a name="class-protectionhandlerconsumptionsettings"></a>Class Protection Handler:: consumptionsettings 
 Einstellungen zum Erstellen eines Schutz Handlers, um vorhandenen Inhalt zu nutzen.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public consumptionsettings (Konstante Std:: Vector \<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public consumptionsettings (Konstanten Std:: Vector \<uint8_t\>& serializedprelicense, Konstanten Std:: Vector \<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
@@ -30,7 +30,7 @@ public bool getisofflineonly () const  |  Ruft ab, ob die erstellungshandlererst
 Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
 Public Konstanten Std:: String& getcontentname () Konstanten  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="consumptionsettings-function"></a>Consumptionsettings-Funktion
 Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
@@ -91,7 +91,7 @@ Parameter:
 Ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert.
   
 ### <a name="setcontentname-function"></a>Setcontentname-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getdelegateduseremail-function"></a>Getdelegateduseremail-Funktion
@@ -101,4 +101,4 @@ Ruft den Delegierten Benutzer ab.
 **Returns**: Delegierter Benutzer ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert.
   
 ### <a name="getcontentname-function"></a>Getcontentname-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

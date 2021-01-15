@@ -1,41 +1,41 @@
 ---
 title: syncfilesensitivitydata der Klasse
 description: 'Dokumentiert die syncfilesensitivitydata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 694153a348d8c342c679b8229937c3ad3cce6f9c
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 4b973bc418c5a412d58af1cb0cdd940e54b8eedc
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567044"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214234"
 ---
 # <a name="class-syncfilesensitivitydata"></a>syncfilesensitivitydata der Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: Vector \<std::shared_ptr\<SensitivityTypesRulePackage\> \>& getsensitivitytypesrulepackages () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ syncfilesensitivitydata ()  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getfleid () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& gettenantid () Konstanten  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getsensitivitytypesrulepackages-function"></a>Getsensitivitytypesrulepackages-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="syncfilesensitivitydata-function"></a>~ Syncfilesensitivitydata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getfileid-function"></a>Getfleid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="gettenantid-function"></a>Gettenantid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

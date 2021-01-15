@@ -1,23 +1,23 @@
 ---
 title: 'Class Protection profile:: Settings'
 description: 'Dokumentiert die Schutzprofile:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 8808aeeea19c854ef72a9e6f91dd496906c2e2db
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 0521d1c14081527f760a24e773edad0a07685fac
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567095"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214370"
 ---
 # <a name="class-protectionprofilesettings"></a>Class Protection profile:: Settings 
 Einstellungen, die während der Erstellung und Lebensdauer von ProtectionProfile verwendet werden.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Einstellungen (Konstante Std:: shared_ptr \<MipContext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std:: shared_ptr& genehmidelegaten \<ConsentDelegate\> , Konstanten Std:: shared_ptr \<ProtectionProfile::Observer\>& Observer)  |  Der ProtectionProfile::Settings-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
 öffentliche Einstellungen (Konstante Std:: shared_ptr \<MipContext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std:: shared_ptr& genehmigende Delegaten \<ConsentDelegate\> )  |  Der ProtectionProfile::Settings-Konstruktor, der für synchrone Vorgänge verwendet wird
@@ -36,7 +36,7 @@ public bool abgebrochen () konstant  |  Ruft ab, ob Endbenutzer Lizenzen (Euls) 
 öffentliches void setcustomsettings (Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
 Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
 Der ProtectionProfile::Settings-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
@@ -48,7 +48,7 @@ Parameter:
 * **cachestoragetype**: speichert jeden zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger. 
 
 
-* **consentDelegate** genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
+* genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
 
 
 * **Observer**: Observer-Instanz, die Benachrichtigungen über Ereignisse im Zusammenhang mit Schutzprofile empfängt
@@ -68,7 +68,7 @@ Parameter:
 * **cachestoragetype**: speichert jeden zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger. 
 
 
-* **consentDelegate** genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
+* genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
 
 
 * **applicationInfo**: Informationen zur Anwendung, die das Protection SDK nutzt

@@ -1,23 +1,23 @@
 ---
 title: Class Protection Handler::P ublishingsettings
 description: Dokumentiert die Schutz Handler::p ublishingsettings-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: c5edcb9eca5e14d0f0f611f32e2f91d9ed2fcb25
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: bbefbe143d434669692b6e60734698d7bd4b575f
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567116"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214523"
 ---
 # <a name="class-protectionhandlerpublishingsettings"></a>Class Protection Handler::P ublishingsettings 
 Einstellungen zum Erstellen eines Schutz Handlers zum Schutz neuer Inhalte.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public publishingsettings (Konstante Std:: shared_ptr \<ProtectionDescriptor\>& schutzdescriptor)  |  Schutzhandler:: Settings-Konstruktor zum Erstellen einer neuen Engine.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  | _Noch nicht dokumentiert._
@@ -32,7 +32,7 @@ public bool ispublishingformatjson () konstant  |  Ruft ab, ob die zurückgegebe
 öffentliches void setprelicenseuseremail (Konstanten Std:: String& prelicenseuseremail)  |  Legt den Benutzer vor der Lizenz fest.
 Public Konstanten Std:: String& getprelicenseuseremail () Konstanten  |  Ruft den Benutzer vor der Lizenzierung ab.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="publishingsettings-function"></a>Publishingsettings-Funktion
 Schutzhandler:: Settings-Konstruktor zum Erstellen einer neuen Engine.
@@ -43,7 +43,7 @@ Parameter:
 
   
 ### <a name="getprotectiondescriptor-function"></a>Getschutzdescriptor-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getisauditedextractionallowed-function"></a>Getisauditedextractionallowed-Funktion

@@ -1,23 +1,23 @@
 ---
 title: Class schutzdescriptorbuilder
 description: 'Dokumentiert die schutzdescriptorbuilder:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2e5573a896ef0935c33e85a2ed7f73451ced8e7c
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 388e8b46aa125e3de2429098ec6a59b0ddb9fffc
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567154"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98214710"
 ---
 # <a name="class-protectiondescriptorbuilder"></a>Class schutzdescriptorbuilder 
 Erstellt eine ProtectionDescriptor-Instanz, die den Schutz für ein Inhaltsobjekt beschreibt.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public MIP_API std::shared_ptr\<ProtectionDescriptor\> Build()  |  Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.
 public void SetName(const std::string& value)  |  Legt den Namen für eine Schutzrichtlinie fest.
@@ -29,7 +29,7 @@ public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der
 öffentliches void setsignetdappdata (Konstanten Std:: map \<std::string, std::string\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
 öffentliches void setdoublekeyurl (Konstante Std:: String& doublekeyurl)  |  Legt die doppelte Schlüssel-URL fest, die für den benutzerdefinierten Schutz verwendet werden soll.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="build-function"></a>Build-Funktion
 Erstellt einen ProtectionDescriptor, dessen Zugriffsberechtigungen von dieser ProtectionDescriptorBuilder-Instanz definiert werden.

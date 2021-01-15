@@ -1,24 +1,24 @@
 ---
 title: 'Class fileHandler:: Observer'
 description: 'Dokumentiert die fileHandler:: Observer-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: d469271718d422216f6eaad905e60cd82e7f1244
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 7cc73d0a81d6a620a411035bb0aae4258794e978
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566951"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215288"
 ---
 # <a name="class-filehandlerobserver"></a>Class fileHandler:: Observer 
 Observer-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für verknüpfte Ereignisse, die im Zusammenhang mit dem Dateihandler stehen.
 Alle Fehler erben von mip::Error. Der Client sollte die Engine nicht in dem Thread aufrufen, der den Beobachter aufruft.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr\<FileHandler\>& fileHandler, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn der Handler erfolgreich erstellt wurde.
 public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn der Handler einen Fehler ausgelöst hat
@@ -33,7 +33,7 @@ public virtual void OnCommitFailure(const std::exception_ptr& error, const std::
 public virtual void oninspectsuccess (konstant Std:: shared_ptr \<FileInspector\>& fileinspector, Konstanten Std:: shared_ptr \<void\>& Kontext)  |  Wird aufgerufen, wenn Erfolg überprüfen.
 public virtual void oninspectfailure (Konstante Std:: exception_ptr& Error, Konstanten Std:: shared_ptr \<void\>& context)  |  Wird aufgerufen, wenn bei der Überprüfung
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="oncreatefilehandlersuccess-function"></a>Onkreatefilehandlersuccess-Funktion
 Wird aufgerufen, wenn der Handler erfolgreich erstellt wurde.
