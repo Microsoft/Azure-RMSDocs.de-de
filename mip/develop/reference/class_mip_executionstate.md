@@ -1,24 +1,24 @@
 ---
 title: Klasse executionstate
 description: 'Dokumentiert die executionstate:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f73c3e366f1be0647d2c9a7de78f37b6a9a95549
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 543b46f8ceb731e7ea7c4e513f1a42c25a080521
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566991"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215458"
 ---
 # <a name="class-executionstate"></a>Klasse executionstate 
 Eine Schnittstelle für sämtliche Status, die für die Ausführung der Engine erforderlich sind.
 Clients sollten die Methoden nur aufrufen, um den erforderlichen Status abzurufen. Daher sollten Clients diese Schnittstelle aus Effizienzgründen implementieren, damit der entsprechende Status dynamisch und nicht im Voraus berechnet wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: shared_ptr \<Label\> getnewlabel () Konstanten  |  Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
 public std::string GetContentIdentifier() const  |  Ruft die Inhaltsbeschreibung ab, die das Dokument beschreibt. Beispiel für eine Datei: [Pfad\Dateiname] Beispiel für eine e-Mail: [Subject: Sender].
@@ -28,13 +28,13 @@ public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ruft die Zuweisu
 public virtual Std:: Vector \<std::pair\<std::string, std::string\> \> getnewlabelextendedproperties () Konstanten  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
 Public Std:: Vector \<MetadataEntry\> getcontentmetadata (Konst Std:: Vector \<std::string\>& Names, Konstanten Std:: Vector \<std::string\>& nameprefixes) Konstanten  |  Ruft die Metadatenelemente aus dem Inhalt ab.
 public std::shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor() const  |  Ruft den Deskriptor für den Schutz ab
-public ContentFormat GetContentFormat() const  |  Ruft das Inhaltsformat ab.
+Public Std:: String getcontentformat () Konstanten  |  Ruft das Inhaltsformat ab.
 public virtual MetadataVersion GetContentMetadataVersion () konstant  |  Ruft die höchste Metadatenversion ab, die von der Anwendung für den Mandanten unterstützt wird.
 public ActionType GetSupportedActions() const  |  Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
 public virtual Std:: shared_ptr \<ClassificationResults\> getclassificationresults (Konstanten Std:: Vector \<std::shared_ptr\<ClassificationRequest\> \> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
 public virtual Std:: map \<std::string, std::string\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getnewlabel-function"></a>Getnewlabel-Funktion
 Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
@@ -93,9 +93,7 @@ Ruft den Deskriptor für den Schutz ab
 Ruft das Inhaltsformat ab.
 
   
-**Rückgabe**: DEFAULT, EMAIL 
-  
-**Weitere Informationen finden Sie unter:** mip::ContentFormat
+**Gibt Folgendes zurück**: Inhalts Format
   
 ### <a name="getcontentmetadataversion-function"></a>GetContentMetadataVersion-Funktion
 Ruft die höchste Metadatenversion ab, die von der Anwendung für den Mandanten unterstützt wird.

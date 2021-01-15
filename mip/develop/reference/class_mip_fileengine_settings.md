@@ -1,22 +1,22 @@
 ---
 title: 'Class fileengine:: Settings'
 description: 'Dokumentiert die fileengine:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 05fb06ec06943b39209c980236643e50d873d451
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 56b4bf62af04b3b84c5ed291ce9ccb0fa0d3ee28
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566975"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215424"
 ---
 # <a name="class-fileenginesettings"></a>Class fileengine:: Settings 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Einstellungen (Konstante Std:: String& EngineID, Konst Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
 öffentliche Einstellungen (Konstante Identität& Identität, Konst Std:: shared_ptr \<AuthDelegate\>& authdelegat, Konstanten Std:: String& clientData, Konstante Std:: String& locale, bool loadsensitivitytypes)  |  Der FileProfile::Settings-Konstruktor für die Erstellung einer neuen Engine
@@ -45,14 +45,12 @@ Public Konstanten bool ispfileaktivierte ()  |  Rufen Sie das Flag ab, das angib
 Public Konstanten Std:: String& getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
 öffentliches void setlabelfilter (Konstante Std:: Vector \<LabelFilterType\>& depreseedlabelfilters)  |  Legt den Bezeichnungs Filter fest.
 Public Konstanten Std:: Vector \<LabelFilterType\>& getlabelfilter () Konstanten  |  Ruft die Beschriftungs Filter ab, die über die veraltete Funktion setlabelfilter festgelegt wurden.
-öffentliches void konfigurierte Funktionen (labelfiltertype labelfiltertype, bool aktiviert)  |  Aktiviert oder deaktiviert die-Funktionalität.
-Public Konstanten Std:: map \<LabelFilterType, bool\>& GetConfig redfunktion() Konstanten  |  Ruft die konfigurierte Funktionalität ab.
-öffentliches void setclassifieraktivierte (Classifier classifiertype, bool aktiviert)  |  Aktiviert oder deaktiviert die Unterstützung für Klassifizierungs Typen.
-Public konstant Std:: map \<Classifier, bool\>& getkonfiguriredclassifiersupport () Konstanten  |  Ruft die unterstützten Klassifizierungs Überschreibungen ab.
+öffentliches void konfigurierte Funktionen (functionalityfiltertype functionalityfiltertype, bool aktiviert)  |  Aktiviert oder deaktiviert die-Funktionalität.
+Public Konstanten Std:: map \<FunctionalityFilterType, bool\>& GetConfig redfunktion() Konstanten  |  Ruft die konfigurierte Funktionalität ab.
 öffentliches void setauthdelegat (Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat)  |  Legen Sie den Autorisierungs Delegaten für die Engine fest.
 public std::shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Holen Sie sich den Authentifizierungs Delegaten für die Engine.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
 Der FileEngine::Settings-Konstruktor zum Laden einer vorhandenen Engine
@@ -229,7 +227,7 @@ Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermö
 Aktiviert oder deaktiviert die-Funktionalität.
 
 Parameter:  
-* **labelfiltertype**: der Funktionstyp. 
+* **functionalityfiltertype: der Funktionstyp**. 
 
 
 * **aktiviert**: true zum Aktivieren, false zum Deaktivieren
@@ -242,24 +240,6 @@ Ruft die konfigurierte Funktionalität ab.
 
   
 **Gibt Folgendes zurück**: eine Zuordnung der Typen zu einem booleschen Wert, der angibt, ob er aktiviert ist.
-  
-### <a name="setclassifierenabled-function"></a>Setclassifieraktivierte Funktion
-Aktiviert oder deaktiviert die Unterstützung für Klassifizierungs Typen.
-
-Parameter:  
-* **classifiertype**: der Klassifizierungstyp. 
-
-
-* **aktiviert**: true zum Aktivieren, false zum Deaktivieren
-
-
-Nur "sensitiveinformation classifers" ist standardmäßig aktiviert.
-  
-### <a name="getconfiguredclassifiersupport-function"></a>Getkonfiguriredclassifiersupport-Funktion
-Ruft die unterstützten Klassifizierungs Überschreibungen ab.
-
-  
-**Gibt Folgendes zurück**: eine Zuordnung der Typen zu einem booleschen Wert, der angibt, ob Sie mit Unterstützung überschrieben wurden.
   
 ### <a name="setauthdelegate-function"></a>Setauthdelegatfunktion
 Legen Sie den Autorisierungs Delegaten für die Engine fest.
