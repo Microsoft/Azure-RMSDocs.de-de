@@ -1,28 +1,28 @@
 ---
 title: klassenauthdelegat
 description: 'Dokumentiert die authdelegat:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 9a971a7d0e8cf78baa5231225da620c9e1c8fa47
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: afe0dd79217942a767211f7959c898e098bd8f38
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567268"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212160"
 ---
 # <a name="class-authdelegate"></a>klassenauthdelegat 
 Delegat für Vorgänge im Zusammenhang mit der Authentifizierung.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual bool AcquireOAuth2Token (Konstante Identität& Identität, konstant OAuth2Challenge& Challenge, OAuth2Token& Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
 public virtual bool AcquireOAuth2Token (Konstante Identität& Identität, konstant OAuth2Challenge& Challenge, Konstante Std:: shared_ptr \<void\>& context, OAuth2Token& Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token-Funktion
 Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.

@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 1e211cf19c5d90f4c1e6e60c808bb38d701720bf
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555686"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212636"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-Metadaten
 
@@ -33,34 +33,34 @@ Die GUID ist ein eindeutiger Bezeichner für jede Bezeichnung in einer Organisat
 
 Das MIP SDK wendet den folgenden Satz von Metadaten an.
 
-| Attribut | Typ oder Wert                 | Description                                                                                                                                                                                                                                        | Verbindlich |
-|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Enabled**   | „true“ oder „false“.                 | Dieses Attribut gibt an, ob die Klassifizierung, die durch diesen Satz von Schlüssel-Wert-Paaren dargestellt wird, für das Datenelement aktiviert ist. DLP-Produkte überprüfen in der Regel, ob dieser Schlüssel vorhanden ist, um die Klassifizierungs Bezeichnung zu identifizieren. | Yes       |
-| **SiteId**    | GUID                          | Azure Active Directory Mandanten-ID                                                                                                                                                                                                                   | Yes       |
-| **ActionId**  | GUID                          | Die Aktions-ID wird jedes Mal geändert, wenn eine Bezeichnung festgelegt wird. Überwachungs Protokolle enthalten sowohl alte als auch neue Aktions-IDs, um das Verketten von Bezeichnungs Aktivitäten mit dem Datenelement zuzulassen.                                                                                 | Yes       |
-| **Methode**    | Standard oder privilegiert        | Wird über [MIP:: zutragmethode](reference/mip-enums-and-structs.md#assignmentmethod-enum)festgelegt. Standard impliziert, dass die Bezeichnung standardmäßig oder automatisch angewendet wird. Privilegiert impliziert, dass die Bezeichnung manuell ausgewählt wurde.                                                                                                                                                                                                                 | Nein        |
-| **SetDate**   | Erweitertes ISO 8601-Datums Format | Der Zeitstempel, zu dem die Bezeichnung festgelegt wurde.                                                                                                                                                                                                              | Nein        |
-| **Name**      | string                        | Bezeichnungs eindeutiger Name innerhalb des Mandanten. Sie entspricht nicht notwendigerweise dem anzeigen Amen.                                                                                                                                                              | Nein      |
-| **Contentbits** | integer | Bitmaske, die die Typen von Inhalts Markierungen beschreibt, die auf eine Datei angewendet werden sollen. CONTENT_HEADER = 0x1, CONTENT_FOOTER = 0x2, Wasserzeichen = 0x4, verschlüsseln = 0x8
- | Nein |
+| Attribut                                       | Typ oder Wert                 | BESCHREIBUNG                                                                                                                                                                                                                  | Obligatorisch. |
+| ----------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| **Enabled**                                     | „true“ oder „false“                 | Dieses Attribut gibt an, ob die Klassifizierung, die durch diesen Satz von Schlüssel-Wert-Paaren dargestellt wird, für das Datenelement aktiviert ist. DLP-Produkte überprüfen in der Regel, ob dieser Schlüssel vorhanden ist, um die Klassifizierungs Bezeichnung zu identifizieren. | Yes       |
+| **SiteId**                                      | GUID                          | Azure Active Directory Mandanten-ID                                                                                                                                                                                             | Yes       |
+| **Aktions-ID** (entfernt in MIP SDK 1,8 und höher) | GUID                          | Die Aktions-ID wird jedes Mal geändert, wenn eine Bezeichnung festgelegt wird. Überwachungs Protokolle enthalten sowohl alte als auch neue Aktions-IDs, um das Verketten von Bezeichnungs Aktivitäten mit dem Datenelement zuzulassen.                                                                     | Yes       |
+| **Methode**                                      | Standard oder privilegiert        | Wird über [MIP:: zutragmethode](reference/mip-enums-and-structs.md#assignmentmethod-enum)festgelegt. Standard impliziert, dass die Bezeichnung standardmäßig oder automatisch angewendet wird. Privilegiert impliziert, dass die Bezeichnung manuell ausgewählt wurde.  | Nein        |
+| **SetDate**                                     | Erweitertes ISO 8601-Datums Format | Der Zeitstempel, zu dem die Bezeichnung festgelegt wurde.                                                                                                                                                                                        | Nein        |
+| **Name**                                        | Zeichenfolge                        | Bezeichnungs eindeutiger Name innerhalb des Mandanten. Sie entspricht nicht notwendigerweise dem anzeigen Amen.                                                                                                                                      | Nein        |
+| **Contentbits**                                 | integer                       | Bitmaske, die die Typen von Inhalts Markierungen beschreibt, die auf eine Datei angewendet werden sollen. CONTENT_HEADER = 0x1, CONTENT_FOOTER = 0x2, Wasserzeichen = 0x4, verschlüsseln = 0x8                                                             |
+| Nein                                              |
 
 Das Ergebnis ähnelt der folgenden Tabelle, wenn es auf eine Datei angewendet wird.
 
-| Schlüssel                                                         | Value                                |
-|-------------------------------------------------------------|--------------------------------------|
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | wahr                                 |
+| Schlüssel                                                         | Wert                                |
+| ----------------------------------------------------------- | ------------------------------------ |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08t21:13:16-0800             |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Privilegiert                           |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Confidential (Vertraulich)                         |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Vertraulich                         |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
 ## <a name="extending-metadata-with-custom-attributes"></a>Erweitern von Metadaten mit benutzerdefinierten Attributen
 
-Benutzerdefinierte Metadaten können über die Datei-und Richtlinien-API angehängt werden. Benutzerdefinierte Attribute müssen das Basis `MSIP_Label_GUID` Präfix beibehalten. 
+Benutzerdefinierte Metadaten können über die Datei-und Richtlinien-API angehängt werden. Benutzerdefinierte Attribute müssen das Basis `MSIP_Label_GUID` Präfix beibehalten.
 
-Beispielsweise muss eine von contso Corporation geschriebene Anwendung Metadaten anwenden, die angeben, welches System eine bezeichnete Datei generiert hat. Die Anwendung kann eine neue Bezeichnung mit dem Präfix `MSIP_Label_GUID`erstellen. Der Softwarehersteller Name und das benutzerdefinierte Attribut werden an das Präfix angehängt, um die benutzerdefinierten Metadaten zu generieren.
+Beispielsweise muss eine von contso Corporation geschriebene Anwendung Metadaten anwenden, die angeben, welches System eine bezeichnete Datei generiert hat. Die Anwendung kann eine neue Bezeichnung mit dem Präfix erstellen `MSIP_Label_GUID` . Der Softwarehersteller Name und das benutzerdefinierte Attribut werden an das Präfix angehängt, um die benutzerdefinierten Metadaten zu generieren.
 
 ```
 MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRReportingSystem
@@ -79,7 +79,7 @@ Wenn Sie ein Attribut durch eine neuere Version ersetzen, sollte dem Attribut ei
 
 ## <a name="email"></a>E-Mail
 
-Auf e-Mail angewendete Metadaten behalten ein Schlüssel-Wert-Paar-Format bei, das dem von Dokumenten ähnelt. Der Hauptunterschied besteht darin, dass alle Attribute in einen einzelnen e-Mail-Header mit dem Namen **MSIP_Labels**serialisiert werden. Die Schlüssel-Wert-Paare werden durch ein Semikolon und ein Leerzeichen getrennt und in den neuen Header eingefügt.
+Auf e-Mail angewendete Metadaten behalten ein Schlüssel-Wert-Paar-Format bei, das dem von Dokumenten ähnelt. Der Hauptunterschied besteht darin, dass alle Attribute in einen einzelnen e-Mail-Header mit dem Namen **MSIP_Labels** serialisiert werden. Die Schlüssel-Wert-Paare werden durch ein Semikolon und ein Leerzeichen getrennt und in den neuen Header eingefügt.
 
 Verwenden der obigen Beispiel Metadaten:
 

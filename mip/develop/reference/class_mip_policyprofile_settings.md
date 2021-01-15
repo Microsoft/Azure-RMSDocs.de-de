@@ -1,23 +1,23 @@
 ---
 title: 'Class policyprofile:: Settings'
 description: 'Dokumentiert die policyprofile:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2ec38a34f2522448704f1be91d03c62761cafdf6
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 49cff6afb3f42b427e656f886eef82fff6bde51e
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566659"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213350"
 ---
 # <a name="class-policyprofilesettings"></a>Class policyprofile:: Settings 
 Einstellungen, die während der Erstellung und Lebensdauer von PolicyProfile verwendet werden
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Einstellungen (Konstante Std:: shared_ptr \<MipContext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std:: shared_ptr \<PolicyProfile::Observer\>& Observer)  |  Eine Schnittstelle für die Konfiguration des Profils
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
@@ -33,7 +33,7 @@ public const std::string& GetSessionId() const  | _Noch nicht dokumentiert._
 Public Konstanten Std:: Vector \<std::pair\<std::string, std::string\> \>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
 public ~Settings()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
 Eine Schnittstelle für die Konfiguration des Profils
@@ -97,11 +97,11 @@ Parameter:
 Tasks können auf Profil Objekte verweisen, die ihre Zerstörung verhindern, weil taskdispatcher-Warteschlangen nicht freigegeben werden sollten.
   
 ### <a name="setsessionid-function"></a>Funktion "-essionid"
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getsessionid-function"></a>Geungessionid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="setcustomsettings-function"></a>Setcustomsettings-Funktion
@@ -119,4 +119,4 @@ Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Fea
 **Rückgabe**: Liste von Name-Wert-Paaren
   
 ### <a name="settings-function"></a>~ Settings-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

@@ -1,23 +1,23 @@
 ---
 title: Class classificationresult
 description: 'Dokumentiert die classificationresult:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 4e64abc1cca11f11b19238282c9061dc26b29290
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: c1f4154bbc12613726aac8f56a322cb6cd4d5a53
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567229"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211871"
 ---
 # <a name="class-classificationresult"></a>Class classificationresult 
 Klasse, die das Ergebnis eines Klassifizierungsaufrufs im Ausführungsstatus enthält
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  Ruft die ID der Klassifizierungsrichtlinie ab.
 public std::string GetName() const  |  Den Namen der Klassifizierungs Richtlinie erhalten.
@@ -26,7 +26,7 @@ public int GetConfidenceLevel() const  |  Ruft die Zuverlässigkeit des Ergebnis
 Public Std:: String getsensitiveinformationerkenctions () Konstanten  |  Die Erkennungen für sensible Informationen erhalten.
 public virtual Std:: Vector \<std::shared_ptr\<mip::DetailedClassificationResult\> \> getdetailedclassificationattributs () konstant  |  Dient zum Ermitteln der spezifischen Erkennungs Bänder, wenn die klassifizierte Klassifizierung aktiviert ist.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
 Ruft die ID der Klassifizierungsrichtlinie ab.

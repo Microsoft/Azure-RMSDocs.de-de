@@ -1,29 +1,29 @@
 ---
 title: Klassen-Datei Handler
 description: 'Dokumentiert die fileHandler:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: bf3866fb1ec06156ebf40b2efed8c44f8af4a4ce
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 77b94fdd79334b842cc2ad1f19cf9a17ddc04439
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566959"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211497"
 ---
 # <a name="class-filehandler"></a>Klassen-Datei Handler 
 Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: shared_ptr \<ContentLabel\> GetLabel ()  |  Startet das Abrufen der Vertraulichkeitsbezeichnung der Datei.
 Public Std:: Vector \<std::pair\<std::string, std::string\> \> GetProperties (uint32_t Version)  |  Ruft die Dateieigenschaften gemäß Version ab.
 Public Std:: shared_ptr \<ProtectionHandler\> getprotection ()  |  Startet das Abrufen der Schutzrichtlinie der Datei.
-Public Std:: shared_ptr \<AsyncControl\> registercontentfortrackingandrevocationasync (bool isownernotificationaktivierte, Konstante Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konst Std:: shared_ptr \<void\>& context)  |  # # # #-Parameter
-Public Std:: shared_ptr \<AsyncControl\> revokecontentasync (Konst Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstante Std:: shared_ptr \<void\>& context)  |  Führen Sie eine Sperre für den Inhalt aus.
+öffentliches void registercontentfortrackingandrevocationasync (bool isownernotificationaktivierte, Konstante Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstanten Std:: shared_ptr \<void\>& context)  |  # # # #-Parameter
+öffentliches void revokecontentasync (Konst Std:: shared_ptr \<ProtectionEngine::Observer\>& Observer, Konstante Std:: shared_ptr \<void\>& context)  |  Führen Sie eine Sperre für den Inhalt aus.
 öffentliches void classifyasync (Konst Std:: shared_ptr \<void\>& Kontext)  |  Führt die Regeln im-Handler aus und gibt die Liste der auszuführenden Aktionen zurück.
 public void inspectasync (Konst Std:: shared_ptr \<void\>& context)  |  Erstellen Sie ein Datei Inspektor-Objekt, das zum Abrufen von Dateiinhalten aus kompatiblen Dateiformaten verwendet wird.
 öffentliches void setlabel (Konstante Std:: shared_ptr \<Label\>& Bezeichnung, Konstanten labelingoptions& labelingoptions, Konstante Schutzeinstellungen& Schutzeinstellungen)  |  Legt die Vertraulichkeitsbezeichnung für die Datei fest.
@@ -39,7 +39,7 @@ public bool IsModified ()  |  Überprüft, ob Änderungen an der Datei vorgenomm
 öffentliches void notifycommiterfolgreich (Konstante Std:: String& actualfilepath)  |  Soll aufgerufen werden, wenn die Änderungen auf den Datenträger committet wurden.
 public std::string GetOutputFileName()  |  Berechnet den Namen und die Erweiterung der Ausgabedatei auf Basis des ursprünglichen Dateinamens und der angefallenen Änderungen.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getlabel-function"></a>GetLabel-Funktion
 Startet das Abrufen der Vertraulichkeitsbezeichnung der Datei.

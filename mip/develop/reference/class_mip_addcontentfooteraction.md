@@ -1,23 +1,23 @@
 ---
 title: addcontentfooteraction-Klasse
 description: 'Dokumentiert die addcontentfooteraction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 58f4e72361f9dfbe1e13b1d636f5cb6acd287784
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 1ecebda7a6df2fcba2bca531b7cc6e28eefdde99
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567328"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212483"
 ---
 # <a name="class-addcontentfooteraction"></a>addcontentfooteraction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Fußzeileninhalt hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  Eine API, mit der das Element des Fußzeileninhalts markiert wird.
 public const std::string& GetText() const  |  Ruft den Text ab, der im Fußzeileninhalt enthalten sein soll.
@@ -27,7 +27,7 @@ public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in 
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung der Fußzeile ab.
 public int GetMargin() const  |  Ruft den Rand der Fußzeile im unteren Bereich ab
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getuielementname-function"></a>Getuielementname-Funktion
 Eine API, mit der das Element des Fußzeileninhalts markiert wird.

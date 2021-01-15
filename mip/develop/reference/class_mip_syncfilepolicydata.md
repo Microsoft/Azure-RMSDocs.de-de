@@ -1,51 +1,51 @@
 ---
 title: syncfilepolicydata-Klasse
 description: 'Dokumentiert die syncfilepolicydata:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 4da84cb31db961f81fe287d31cf98d84a4ff4c08
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 0073ea8549b7aed065f5fbd0b7d961aa35212474
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566557"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212891"
 ---
 # <a name="class-syncfilepolicydata"></a>syncfilepolicydata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten labelgroupdata * getlabelgroupdata () konstant  | _Noch nicht dokumentiert._
 Public Konstanten Std:: Vector \<std::unique_ptr\<PolicyPackageData\> \>& getpoliciespackagedata () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getupn () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: shared_ptr \<ClassifierUniqueIds\>& getclassificationlist () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: shared_ptr \<ClassifierUniqueIdsAndContentFormats\>& getclassificationlist () Konstanten  | _Noch nicht dokumentiert._
 Public Konstanten Std:: String& getuserobjectid () Konstanten  | _Noch nicht dokumentiert._
 public virtual ~ syncfilepolicydata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getlabelgroupdata-function"></a>Getlabelgroupdata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getpoliciespackagedata-function"></a>Getpoliciespackagedata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getupn-function"></a>Getupn-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getclassificationlist-function"></a>Getclassificationlist-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="getuserobjectid-function"></a>Getuserobjectid-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="syncfilepolicydata-function"></a>~ Syncfilepolicydata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

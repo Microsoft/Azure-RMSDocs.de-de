@@ -1,28 +1,28 @@
 ---
 title: Class RecommendLabelAction
 description: 'Dokumentiert die recommendlabelaction:: undefinierte-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 2a0318c0da7bfc3a2be72c1139754da1f7142d71
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: d86f9a77a7e198ed47b633bd74da49db41edda15
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566569"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213265"
 ---
 # <a name="class-recommendlabelaction"></a>Class RecommendLabelAction 
 Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag für eine Bezeichnung. Die Unterdrückung dieses Aufrufs, nachdem ein Benutzer die empfohlene Bezeichnung ignoriert hat, sollte durch die unterstützten Aktionen im Ausführungsstatus erfolgen.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: shared_ptr \<Label\>& GetLabel ()-Konstanten  |  Holen Sie sich die vorgeschlagene Bezeichnung.
 Public Konstanten Std:: Vector \<std::string\>& getclassificationids () Konstanten  |  Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getlabel-function"></a>GetLabel-Funktion
 Holen Sie sich die vorgeschlagene Bezeichnung.

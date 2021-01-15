@@ -1,22 +1,22 @@
 ---
 title: applicationaktionstate-Klasse
 description: 'Dokumentiert die applicationaktionstate:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 936f64f24211f000dc26153f17bd094f4d7d3c8d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: ef62674d4586b967a822ccfb25612a491d157bf4
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567289"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212279"
 ---
 # <a name="class-applicationactionstate"></a>applicationaktionstate-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliches labelstate getnewlabelstate () Konstanten  |  Ruft den neuen Bezeichnungs Zustand ab.
 Public Std:: shared_ptr \<Label\> getnewlabel () Konstanten  |  Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
@@ -26,7 +26,7 @@ public virtual Std:: Vector \<std::pair\<std::string, std::string\> \> getnewlab
 public ActionType GetSupportedActions() const  |  Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
 public bool IsRecommendationEnabled () konstant  |  Gibt einen booleschen Wert zurück, der die empfohlene Aktion zurückgibt. Standardmäßig sollte true lauten, sofern der Benutzer nicht else angibt.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getnewlabelstate-function"></a>Getnewlabelstate-Funktion
 Ruft den neuen Bezeichnungs Zustand ab.

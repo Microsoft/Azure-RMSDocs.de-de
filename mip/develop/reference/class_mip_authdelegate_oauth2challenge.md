@@ -1,23 +1,23 @@
 ---
 title: 'Class authdelegat:: OAuth2Challenge'
 description: 'Dokumentiert die authdelegat:: oauth2challenge-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: f422b99674213904316eab622bfc915f128228ec
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 3062130037142ebe3b5c227da0dd12a8f38065c1
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567271"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212075"
 ---
 # <a name="class-authdelegateoauth2challenge"></a>Class authdelegat:: OAuth2Challenge 
 eine Klasse, die alle Informationen enthält, die von der aufrufenden Anwendung benötigt werden, um ein oauth2-Token zu generieren.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public OAuth2Challenge (Konstante Std:: String& Authority, Konstanten Std:: String& Resource, Konstanten Std:: String& Scope, Konstante Std:: String& Claims)  |  Erstellen Sie ein neues OAuth2Challenge-Objekt.
 Public Konstanten Std:: String& getauthority () Konstanten  |  Die Autoritäts Zeichenfolge erhalten.
@@ -25,7 +25,7 @@ Public Konstanten Std:: String& getResource () Konstanten  |  Die Ressourcen Zei
 Public Konstanten Std:: String& GetScope () Konstanten  |  Die Bereichs Zeichenfolge erhalten.
 Public Konstanten Std:: String& getclaims () Konstanten  |  Die Anspruchs Zeichenfolge erhalten.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="oauth2challenge-function"></a>OAuth2Challenge-Funktion
 Erstellen Sie ein neues OAuth2Challenge-Objekt.

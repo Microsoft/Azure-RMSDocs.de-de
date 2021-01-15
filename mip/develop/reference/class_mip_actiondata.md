@@ -1,26 +1,26 @@
 ---
 title: Klasse "Aktions Daten"
 description: 'Dokumentiert die "aktiondata:: nicht definierte"-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 434f710e9fabfff994f69bf4b586936d5c2490b5
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6966d61821c84df6944c1c33dc70fcd6cbd0775b
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567331"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212517"
 ---
 # <a name="class-actiondata"></a>Klasse "Aktions Daten" 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual ~ aktiondata ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="actiondata-function"></a>~ Aktiondata-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

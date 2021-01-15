@@ -1,31 +1,31 @@
 ---
 title: Class computeenginecontext
 description: 'Dokumentiert die computeenginecontext:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0f53fb786ce231ab6b0c7b3180f16a0532f3e807
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 94adb1fc22abd38376352f5a1a135e6f28f82a9c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567214"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211820"
 ---
 # <a name="class-computeenginecontext"></a>Class computeenginecontext 
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual ~ computeenginecontext ()  | _Noch nicht dokumentiert._
 geschützter computeenginecontext ()  | _Noch nicht dokumentiert._
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="computeenginecontext-function"></a>~ Computeenginecontext-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="computeenginecontext-function"></a>Computeenginecontext-Funktion
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._

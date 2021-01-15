@@ -1,29 +1,29 @@
 ---
 title: httpoperation-Klasse
 description: 'Dokumentiert die httpoperation:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: ece0d76577747170e4328bc1d9bdabb0678e65a5
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 7ceb76ff61ce13fd47b764fa336ffcf5e167608e
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566879"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211514"
 ---
 # <a name="class-httpoperation"></a>httpoperation-Klasse 
 Schnittstelle, die einen einzelnen http-Vorgang beschreibt, der von der Client-App beim Überschreiben von httpdelegaten
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ruft die Vorgangs-ID ab.
 Public Std:: shared_ptr \<HttpResponse\> GetResponse ()  |  Get-Antwort, falls vorhanden.
 public bool isabgeb Rochen ()  |  Gibt den Abbruch Status des Vorgangs an.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
 Ruft die Vorgangs-ID ab.

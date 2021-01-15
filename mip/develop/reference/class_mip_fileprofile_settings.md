@@ -1,23 +1,23 @@
 ---
 title: 'class file profile:: Settings'
 description: 'Dokumentiert die File profile:: Settings-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 5ab95e72c1b6198b8619f1fe6b0f850562ff00df
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 052aef83e44fa1f804464feee968d80c84221a24
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95566911"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98211430"
 ---
 # <a name="class-fileprofilesettings"></a>class file profile:: Settings 
 Einstellungen, die während der Erstellung und Lebensdauer von FileProfile verwendet werden
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliche Einstellungen (Konstante Std:: shared_ptr \<MipContext\>& mipcontext, cachestoragetype cachestoragetype, Std:: shared_ptr genehmidelegat \<ConsentDelegate\> , Std:: shared_ptr \<Observer\> Observer)  |  FileProfile::Settings-Konstruktor
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
@@ -33,7 +33,7 @@ public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab.
 öffentliches void setcancachelicenses (bool-abfrageelicenses)  |  Konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 public bool abgebrochen () konstant  |  Ruft ab, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
 FileProfile::Settings-Konstruktor
@@ -45,7 +45,7 @@ Parameter:
 * **cachestoragetype**: speichert jeden zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger. 
 
 
-* **consentDelegate** genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
+* genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
 
 
 * **Observer**: Observer-Instanz, die Benachrichtigungen über Ereignisse im Zusammenhang mit File profile empfängt

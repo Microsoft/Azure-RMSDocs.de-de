@@ -1,23 +1,23 @@
 ---
 title: Klasse templatenumotfounderror
 description: 'Dokumentiert die templatenumotfounderror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0ba4eae1c1c3d846c5e696a55a8a089b18a583ed
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 48182ae5d821aeed65e8c28b086dce0349b9af03
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567394"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212857"
 ---
 # <a name="class-templatenotfounderror"></a>Klasse templatenumotfounderror 
 Die Vorlagen-ID wird vom RMS-Dienst nicht erkannt.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: String mmess Age  | _Noch nicht dokumentiert._
 Public Std:: map \<std::string, std::string\> mdebuginfo  | _Noch nicht dokumentiert._
@@ -33,18 +33,18 @@ Public Konstanten Std:: String& getMessage () Konstanten  |  Ruft die Fehlermeld
 Public Konstanten Std:: map \<std::string, std::string\>& GetDebugInfo () Konstanten  |  Debuginformationen erhalten.
 ErrorCode-Aufzählung  |  ErrorCode des ungültigen Eingabe Fehlers.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="mmessage"></a>mmess Age
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="mdebuginfo"></a>mdebuginfo
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="mname"></a>mname
-Noch nicht dokumentiert.
+_Noch nicht dokumentiert._
 
   
 ### <a name="geterrorcode-function"></a>GetErrorCode-Funktion
@@ -110,9 +110,9 @@ Debuginformationen erhalten.
   
 ### <a name="errorcode-enum"></a>ErrorCode-Aufzählung
 
+ErrorCode des ungültigen Eingabe Fehlers.
+
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Allgemein            | Allgemeiner Fehler bei ungültiger Eingabe.
 "Fleistoolargeforprotection"            | Die Datei ist zu groß für den Schutz.
-
-ErrorCode des ungültigen Eingabe Fehlers.

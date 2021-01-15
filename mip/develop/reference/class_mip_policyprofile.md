@@ -1,23 +1,23 @@
 ---
 title: Class policyprofile
 description: 'Dokumentiert die policyprofile:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 0cd8c300aa2c6edb0e06c6cd8306c48d2cb8dafa
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 89bac003d9a4924d5b854826b53eaa787f770a7c
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567376"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98213367"
 ---
 # <a name="class-policyprofile"></a>Class policyprofile 
 Die PolicyProfile-Klasse ist die Stammklasse zum Verwenden von Microsoft Information Protection-Vorgängen. Eine gewöhnliche Anwendung benötigt nur eine PolicyProfile-Klasse, kann bei Bedarf aber mehrere erstellen.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die auf dem Profil festgelegten Einstellungen ab.
 Public Std:: shared_ptr \<AsyncControl\> listenginesasync (Konst Std:: shared_ptr \<void\>& context)  |  Startet den Vorgang zum Auflisten von Engines
@@ -30,7 +30,7 @@ Public Std:: shared_ptr \<AsyncControl\> deleteengineasync (Konstante Std:: Stri
 public void DeleteEngine(const std::string& engineId)  |  Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die angegebene Engine werden gelöscht.
 öffentliches void acquireauthtoken (Cloud Cloud, Konstanten Std:: shared_ptr \<AuthDelegate\>& authdelegat) konstant  |  Löst einen Authentifizierungs Rückruf aus.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
 Ruft die auf dem Profil festgelegten Einstellungen ab.

@@ -7,12 +7,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: c3973488cb8c3ec109a5a11dea1e540f09db92d4
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 732ca5e87b83f578dad3b40f842e31ea29e95c08
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555703"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212721"
 ---
 # <a name="implement-executionstate"></a>Implementieren von ExecutionState
 
@@ -27,7 +27,7 @@ Die Übergabe von Informationen an das MIP SDK zum Berechnen einer Aktion, die b
 
 `ExecutionState` macht die folgenden virtuellen Member verfügbar. Jedes stellt einen Kontext für die Richtlinien-Engine bereit, um Informationen darüber zurückzugeben, welche Aktionen von der Anwendung ausgeführt werden sollten. Darüber hinaus können diese Informationen verwendet werden, um Überwachungsinformationen für die Berichterstellungsfunktion von Azure Information Protection Reporting bereitzustellen.
 
-| Mitglied                                                                             | Rückgabe                                                                                                              |
+| Member                                                                             | Rückgabe                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Gibt die Bezeichnung zurück, die auf das-Objekt angewendet werden soll.                                                                       |
 | `mip::DataState GetDataState()`                                                    | Gibt den MIP::D atastate des-Objekts zurück.                                                                            |
@@ -38,7 +38,7 @@ Die Übergabe von Informationen an das MIP SDK zum Berechnen einer Aktion, die b
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Gibt ein „std::vector“-Element von „std::pairs“ von Zeichenfolgen zurück, die benutzerdefinierte Metadaten enthalten, die auf das Dokument angewendet werden. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Gibt ein „std::vector“-Element von „std::pairs“ einer Zeichenfolge zurück, die die aktuellen Inhaltsmetadaten enthält.                               |
 | `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | Gibt einen Zeiger auf ein „mip::ProtectionDescriptor“-Element zurück.                                                                     |
-| `mip::ContentFormat GetContentFormat()`                                            | Gibt ein „mip::ContentFormat“-Element zurück.                                                                                           |
+| `std::string GetContentFormat()`                                            | Gibt Zeichenfolge zurück                                                                                           |
 | `mip::ActionType GetSupportedActions()`                                            | Gibt ein „mip::ActionTypes“-Element für die Bezeichnung zurück.                                                                              |
 | `std::shared_ptr<mip::ClassificationResults>`                                      | Gibt eine Liste der Klassifizierungs Ergebnisse zurück, wenn diese implementiert ist.                                                            |
 
@@ -57,7 +57,7 @@ struct ExecutionStateOptions {
     bool isDowngradeJustified = false;
     std::string downgradeJustification;
     std::string templateId;
-    mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    std::string contentFormat = mip::GetFileContentFormat();
     mip::ActionType supportedActions;
     bool generateAuditEvent;
 };

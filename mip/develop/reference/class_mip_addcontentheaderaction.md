@@ -1,23 +1,23 @@
 ---
 title: addcontenderaderaction-Klasse
 description: 'Dokumentiert die addcontenderaderaction:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: 090bf4e1ad70238d6023a914fba4786a97a25a0d
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: e5a2993af705855dde94f5be37e22f1e9ab87c99
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567325"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212450"
 ---
 # <a name="class-addcontentheaderaction"></a>addcontenderaderaction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Inhaltsheader hinzugefügt wird.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  Eine API, mit der das Inhaltsheaderelement markiert wird
 public const std::string& GetText() const  |  Ruft den Text ab, der im Inhaltsheader enthalten sein soll.
@@ -27,7 +27,7 @@ public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in 
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung des Headers ab.
 public int GetMargin() const  |  Ruft den Rand des Headers im unteren Bereich ab
   
-## <a name="members"></a>Members
+## <a name="members"></a>Member
   
 ### <a name="getuielementname-function"></a>Getuielementname-Funktion
 Eine API, mit der das Inhaltsheaderelement markiert wird

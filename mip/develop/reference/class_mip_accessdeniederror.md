@@ -1,24 +1,24 @@
 ---
 title: Class accessdeniederror
 description: 'Dokumentiert die accessdeniederror:: nicht definierte Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 09/21/2020
-ms.openlocfilehash: b66c97367f332669de4619e2c1096ac128bde5d8
-ms.sourcegitcommit: 3f5f9f7695b9ed3c45e9230cd8b8cb39a1c5a5ed
+ms.author: bryanla
+ms.date: 01/13/2021
+ms.openlocfilehash: 6d33d8d24e6bc21033ac1651d9ebc0ed76b34a52
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "95567337"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98212585"
 ---
 # <a name="class-accessdeniederror"></a>Class accessdeniederror 
 Der Benutzer konnte nicht auf den Inhalt zugreifen. Das ist ggf. darauf zurückzuführen, dass ihm Berechtigungen fehlen oder Inhalte widerrufen wurden.
   
 ## <a name="summary"></a>Zusammenfassung
- Members                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
-Noch nicht dokumentiert.
+## <a name="members"></a>Member
+_Noch nicht dokumentiert._
