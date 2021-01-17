@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 69cf01252a95476a41ac5f82f7d0546afe285041
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8c2441a9272e62577fcaf88c14fb7e6bb6cdbdde
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164503"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540170"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -89,7 +89,6 @@ So installieren Sie den Unified-Bezeichnungs **Client mithilfe der exe-Datei**:
     |---------|---------|
     |**Allowtelemetry = 0**     |    Verwenden Sie diesen Parameter, um die Installationsoption **Senden Sie Nutzungsstatistiken an Microsoft, und helfen Sie so mit, Azure Information Protection zu verbessern** zu deaktivieren.     |
     |**ServiceLocation**     |  Verwenden Sie diesen Parameter, wenn Sie den Client auf Computern installieren, die Office 2010 ausführen und Ihre Benutzer keine lokalen Administratoren auf ihren Computern sind, oder wenn Sie keine Eingabeaufforderung für die Benutzer anzeigen lassen möchten. <br><br>Weitere Informationen finden Sie unter <br>- [Weitere Informationen zum **servicelokation** -Installationsparameter](#more-information-about-the-servicelocation-installation-parameter) <br> - [AIP für Windows und Office-Versionen in erweiterter Unterstützung](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support)      |
-
     | | |
 
 1. So schließen Sie die Installation ab: 
@@ -167,7 +166,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
     Verpacken Sie diese z **. b.** mit der MSI-Version des Clients, oder stellen Sie Sie nur auf Computern bereit, die diese Abhängigkeiten erfüllen:
     
-    |Office-Version|Betriebssystem|Software|Action|
+    |Office-Version|Betriebssystem|Software|Aktion|
     |--------------------|--------------|----------------|---------------------|
     |**Alle Versionen akzeptieren Office 365, Version 1902 und höher**|Nur Windows 10 Version 1809 mit Betriebssystembuilds, die älter als 17763.348 sind|[4482887 KB](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installieren|
     |**Office 2016**|Alle unterstützten Versionen|64-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=55007)<br /><br />32-Bit: [KB3178666](https://www.microsoft.com/download/details.aspx?id=54999)<br /><br /> Version: 1.0|Installieren|

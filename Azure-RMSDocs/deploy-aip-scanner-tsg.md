@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d9eadd907059bd128ac08c761128e0f1926c9f81
-ms.sourcegitcommit: 0ac52ea741f205692406f0f82c74c65c23ee3467
+ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
+ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/27/2020
-ms.locfileid: "97792295"
+ms.lasthandoff: 01/17/2021
+ms.locfileid: "98540108"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Problembehandlung bei der Bereitstellung der lokalen Bereitstellung mit Unified-Bezeichnung
 
@@ -90,7 +90,7 @@ Verwenden Sie die folgenden Abschnitte, um bestimmte Fehlermeldungen zu verstehe
 
 Wenn der Befehl " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " fehlgeschlagen ist, stellen Sie sicher, dass Sie die Berechtigungen im Azure-Portal ordnungsgemäß definieren.
 
-Weitere Informationen finden Sie unter [Erstellen und Konfigurieren der Azure AD Anwendungen für "Set-aipauthentication](rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication)".
+Weitere Informationen finden Sie unter [Erstellen und Konfigurieren von Azure AD Anwendungen für "Set-aipauthentication](rms-client/clientv2-admin-guide-powershell.md#create-and-configure-azure-ad-applications-for-set-aipauthentication)".
 
 ### <a name="authentication-token-missing"></a>Authentifizierungs Token fehlt.
 
