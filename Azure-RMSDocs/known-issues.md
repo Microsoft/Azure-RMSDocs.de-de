@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5a512bd03a627fb80503f07b98e4340d8ea9fce4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164350"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559641"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -135,7 +135,7 @@ Außerdem wird durch das Aufheben des Zugriffs für eine der Anhänge der Zugrif
 Wenn Sie Dokumente, die in onedrive gespeichert sind und eine Vertraulichkeits Bezeichnung angewendet haben, und ein Administrator die Bezeichnung in der Beschriftungs Richtlinie so ändert, dass Schutz hinzugefügt wird, wird der neu angewendete Schutz nicht automatisch auf das bezeichnete Dokument angewendet. 
 
 In solchen Fällen müssen Sie das Dokument manuell neu bezeichnen, um den Schutz nach Bedarf anzuwenden.
-## <a name="aip-for-windows-and-office-versions-in-extended-support"></a>AIP für Windows und Office-Versionen in erweiterter Unterstützung
+## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP und ältere Windows-und Office-Versionen
 
 - Die [**Erweiterte Unterstützung von Windows 7 endete am 14. Januar 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
 

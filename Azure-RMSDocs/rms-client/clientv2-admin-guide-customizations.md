@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ccedda605f736647766a0a5b2465e9ef90f2dbcc
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 9f4cc024066769c750f2fef946d9c5581cb99314
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164146"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560338"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -30,7 +30,7 @@ FUTURE task - reorganize this topic by feature type so that admins can read rela
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-customizations.md). *
 
@@ -605,7 +605,7 @@ Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, d
 
 - Wenn dieser Wert angegeben wird, werden nur die Formen, die den Form Namen Kriterien entsprechen, sowie Text, der mit der mit [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) bereitgestellten Zeichenfolge übereinstimmt, entfernt.
 
-Beispiel:
+Zum Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
@@ -633,7 +633,7 @@ Wenn Sie benutzerdefinierte PowerPoint-Layouts verwenden und alle Formen eines b
 
 Wenn Sie die Einstellung " **powerpointremuveallshapesbyshapename** " verwenden, wird der Text in den Formen ignoriert, und stattdessen werden die Formen, die Sie entfernen möchten, mithilfe des Shape-Namens identifiziert.
 
-Beispiel:
+Zum Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
@@ -1238,7 +1238,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#configuring-advance
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Beispiel:
+Zum Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1266,7 +1266,7 @@ Diese Konfiguration erfordert, dass Sie für jede Vertraulichkeits Bezeichnung, 
 > [!IMPORTANT]
 > Durch die Verwendung von Leerzeichen in der Zeichenfolge wird die Anwendung der Bezeichnungen verhindert.
 
-Beispiel:
+Zum Beispiel:
 
 - [Beispiel 1: Hinzufügen einer einzelnen benutzerdefinierten Eigenschaft für eine Bezeichnung](#example-1-add-a-single-custom-property-for-a-label)
 - [Beispiel 2: Hinzufügen mehrerer benutzerdefinierter Eigenschaften für eine Bezeichnung](#example-2-add-multiple-custom-properties-for-a-label)
@@ -1492,7 +1492,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Lese-oder archivierte Dateien überspringen**
 
-Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Beispiel:
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1643,7 +1643,7 @@ Zu den unterstützten Knoten Typen gehören:
 
 Regel Aktionen können eines der folgenden sein:
 
-|Action  |Syntax  |Beispielnachricht  |
+|Aktion  |Syntax  |Beispielnachricht  |
 |---------|---------|---------|
 |**Blockieren**     |    `Block (List<language, [title, body]>)`     |    **_E-Mail blockiert_* _<br /><br />  _You sind im Begriff, Inhalte zu senden, die als **geheimer** Schlüssel an einen oder mehrere nicht vertrauenswürdige Empfänger klassifiziert sind: *<br />* `rsinclair@contoso.com` *<br /><br />* Ihre Organisations Richtlinie lässt diese Aktion nicht zu. Entfernen Sie diese Empfänger, oder ersetzen Sie den Inhalt. *|
 |**Warnen**     | `Warn (List<language,[title,body]>)`        |  **_Bestätigung erforderlich_* _<br /><br />_You sind im Begriff, Inhalte zu senden, die als **Allgemein** an einen oder mehrere nicht vertrauenswürdige Empfänger klassifiziert sind: *<br />* `rsinclair@contoso.com` *<br /><br />* Ihre Organisations Richtlinie erfordert eine Bestätigung, dass Sie diesen Inhalt senden können. *       |
@@ -1998,7 +1998,7 @@ So **Aktualisieren Sie die HttpRuntimeSection** -Klasse: * *
 
 1. Sichern Sie Ihre **web.config** Konfiguration. 
 
-1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Beispiel:
+1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Zum Beispiel:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />

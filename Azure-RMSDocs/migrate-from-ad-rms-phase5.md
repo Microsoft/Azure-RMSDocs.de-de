@@ -13,18 +13,18 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: f4ae6c5addbea7293192b085bade9f17b798c23c
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: fd030502c6d6583e72be63fa424ff8186ebaadc7
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583590"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560304"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
 >***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die folgenden Informationen für Phase 5 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 10 bis 12 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
@@ -53,25 +53,26 @@ Verwenden Sie für Vertraulichkeits Bezeichnungen und den Unified Label-Client i
 Wenn Sie den klassischen Client verwenden, verwenden Sie den Azure-Portal. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](./configure-policy-templates.md).
 
 >[!IMPORTANT]
-> Am Ende dieser Migration kann der AD RMS Cluster nicht mit Azure Information Protection und der Option hold your own Key ([Hyok](configure-adrms-restrictions.md)) verwendet werden. Wenn Sie den klassischen Client mit Hyok verwenden, muss der AD RMS Cluster, den Sie verwenden, aufgrund der nun vorhandenen Umleitungen über unterschiedliche Lizenzierungs-URLs für diejenigen in den Clustern verfügen, die Sie migriert haben.
-
+> Am Ende dieser Migration kann der AD RMS Cluster nicht mit Azure Information Protection und der Option hold your own Key ([Hyok](configure-adrms-restrictions.md)) verwendet werden. 
+>
+> Wenn Sie den klassischen Client mit Hyok verwenden, muss der AD RMS Cluster, den Sie verwenden, aufgrund der nun vorhandenen Umleitungen über unterschiedliche Lizenzierungs-URLs für diejenigen in den Clustern verfügen, die Sie migriert haben.
+>
 ### <a name="additional-configuration-for-computers-that-run-office-2010"></a>Zusätzliche Konfiguration für Computer, auf denen Office 2010 ausgeführt wird
+
+> [!IMPORTANT]
+> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
 
 Wenn migrierte Clients Office 2010 ausführen, kann es bei Benutzern zu Verzögerungen beim Öffnen geschützter Inhalte kommen, wenn die Bereitstellung der AD RMS Server aufgehoben wird. Oder Benutzer sehen möglicherweise Nachrichten, dass Sie nicht über Anmelde Informationen zum Öffnen geschützter Inhalte verfügen. Um diese Probleme zu beheben, erstellen Sie eine Netzwerk Umleitung für diese Computer, die den AD RMS URL-FQDN an die lokale IP-Adresse des Computers (127.0.0.1) umleitet. Hierzu können Sie die lokale Hosts-Datei auf jedem Computer oder mithilfe von DNS konfigurieren.
 
-Umleitung über lokale Hostdatei:
-
-- Fügen Sie die folgende Zeile in die Datei "local Hosts" ein, und ersetzen Sie dabei `<AD RMS URL FQDN>` durch den Wert für Ihren AD RMS-Cluster ohne Präfixe oder Webseiten:
+- **Umleitung über lokale Hostdatei**: Fügen Sie die folgende Zeile in der Datei "local Hosts" ein, und ersetzen Sie dabei `<AD RMS URL FQDN>` durch den Wert für den AD RMS Cluster ohne Präfixe oder Webseiten:
 
     ```sh
     127.0.0.1 <AD RMS URL FQDN>
     ```
 
-Umleitung über DNS:
+- **Umleitung über DNS**: Erstellen Sie einen neuen Host (a)-Datensatz für den AD RMS URL-voll qualifizierten Namen, der die IP-Adresse 127.0.0.1 aufweist.
 
-- Erstellen Sie einen neuen Host (a)-Datensatz für den AD RMS URL-voll qualifizierten Namen, der die IP-Adresse 127.0.0.1 aufweist.
-
-Weitere Informationen zu AIP und Office 2010 finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11 Durchführen der Clientmigrationstasks
 
 Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)) erstellt haben.
@@ -129,7 +130,8 @@ Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlage
 
 Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diese Aufgabe unter folgendem Speicherort: **Microsoft**  >  **Windows**  >  **Active Directory Rights Management Services Client**. 
 
-Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> [!IMPORTANT]
+> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12 Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 

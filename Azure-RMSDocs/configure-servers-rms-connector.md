@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43e9731197231c8bccf2c5d00aec81b20ab3c889
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 3a616092ac1b74c2ae530898c69a61f071e93ea1
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583556"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559794"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 der Bereitstellung [des Azure Rights Management-Verbindungs-Connector](deploy-rms-connector.md).
 
@@ -37,7 +37,7 @@ Nachdem Sie den RMS-Verbindungs Dienst installiert und konfiguriert haben, könn
 
 Dies bedeutet, dass die folgenden Server zu konfigurieren sind:
 
-|Environment  |Zu konfigurier gende Server  |
+|Umgebung  |Zu konfigurier gende Server  |
 |---------|---------|
 |**Exchange 2016 und Exchange 2013**     |  Clientzugriffsserver und Postfachserver       |
 |**Exchange 2019**     |   Clientzugriffsserver und Hub-Transport-Server      |
@@ -115,7 +115,7 @@ Zu den **Nachteile gehören**:
 
 Zum Ausführen des Skripts müssen Sie die URL des RMS-Connectors für Ihre Organisation eingeben. 
 
-Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Beispiel: `https:\//connector.contoso.com`. 
+Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Beispielsweise `https:\//connector.contoso.com`. 
 
 Das Tool verwendet dann diese URL, um sich mit den Servern zu verbinden, auf denen der RMS-Verbindungsdienst ausgeführt wird, und um weitere Parameter abzurufen, die zum Erstellen der erforderlichen Konfigurationen verwendet werden.
 
@@ -138,8 +138,8 @@ Wenn Office 2010 lokal auf einem Exchange-Server installiert ist, können die un
 
 In beiden Szenarios müssen Sie die Clientanwendungen auf getrennten Computern installieren, die nicht für die Verwendung des Verbindungsdiensts konfiguriert sind. Sie verwenden dann korrekt RMS direkt.
 
-> [!NOTE]
-> Weitere Informationen zu AIP und Office 2010 finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
+> [!IMPORTANT]
+> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](known-issues.md#aip-and-legacy-windows-and-office-versions).
 > 
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Konfigurieren eines Exchange-Servers für die Verwendung des Verbindungsdiensts
 Die folgenden Exchange-Rollen kommunizieren mit dem RMS-Verbindungsdienst:

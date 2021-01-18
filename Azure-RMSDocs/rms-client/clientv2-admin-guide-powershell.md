@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a0fe31a92d97ebacf8ab0fed45198086079051fa
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: 60f9493601d40b17c42354dae2d3978b8cb5972b
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540182"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560066"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-powershell.md). *
 
@@ -30,7 +30,7 @@ Wenn Sie den Azure Information Protection Unified Bezeichnung-Client installiere
 
 Mit dem **azureinformationprotection** -Modul können Sie den-Client verwalten, indem Sie Befehle für Automatisierungs Skripts ausführen.
 
-Beispiel:
+Zum Beispiel:
 
 - [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus): Ruft die Azure Information Protection Bezeichnung und die Schutz Informationen für eine angegebene Datei oder Dateien ab.
 - [Set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification): scannt eine Datei, um automatisch eine Azure Information Protection Bezeichnung für eine Datei festzulegen, gemäß den Bedingungen, die in der Richtlinie konfiguriert sind.
@@ -112,7 +112,7 @@ Wenn Sie Azure Information Protection Bezeichnungs-Cmdlets unbeaufsichtigt ausf�
 
     Für das Delegierte Benutzerkonto:
 
-    |Anforderungen  |Details  |
+    |Anforderung  |Details  |
     |---------|---------|
     |**Bezeichnungs Richtlinie**     |  Stellen Sie sicher, dass Sie über eine Bezeichnungs Richtlinie verfügen, die diesem Konto zugewiesen ist, und dass die Richtlinie die veröffentlichten Bezeichnungen enthält, die Sie verwenden möchten.   <br><br>Wenn Sie für verschiedene Benutzer Bezeichnung-Richtlinien verwenden, müssen Sie möglicherweise eine neue Bezeichnungs Richtlinie erstellen, die alle ihre Bezeichnungen veröffentlicht und die Richtlinie nur für dieses Delegierte Benutzerkonto veröffentlicht.    |
     |**Entschlüsseln von Inhalten**     |    Wenn dieses Konto Inhalt entschlüsseln muss, z. b. um Dateien erneut zu schützen und von anderen geschützte Dateien zu überprüfen, sollten Sie ihn als [Administrator für Azure Information Protection](../configure-super-users.md) festlegen und sicherstellen, dass die Administrator Funktion aktiviert ist.     |

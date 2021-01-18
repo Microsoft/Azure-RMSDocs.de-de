@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: fa5b1bb2d88691e7862de0c678c746ff327ad820
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: df5328b94112342276028e2a74da02de14170418
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805970"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560237"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-classic-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection des klassischen Clients
 
@@ -52,13 +52,19 @@ Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, u
 
 1. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.    
 
-1. Klicken Sie auf **Schließen**. Bevor Sie den Azure Information Protection-Client verwenden:    
+1. Klicken Sie auf **Schließen**. 
 
-    - **Wenn auf Ihrem Computer Office 2010** ausgeführt wird, starten Sie den Computer neu, und fahren Sie dann mit dem [nächsten Abschnitt](#installing-the-azure-information-protection-client-with-office-2010) fort.  
-        
-    - **Für andere Versionen von Office** starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.    
+    Starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu, bevor Sie mit der Verwendung des Azure Information Protection-Clients beginnen. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
 
-### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Installieren des Azure Information Protection-Clients mit Office 2010    
+    > [!NOTE]
+    > Wenn auf Ihrem Computer Office 2010 ausgeführt wird, starten Sie den Computer neu, und fahren Sie dann mit dem [nächsten Abschnitt](#installing-the-azure-information-protection-client-with-office-2010) fort.  
+
+### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Installieren des Azure Information Protection-Clients mit Office 2010
+
+> [!IMPORTANT]
+> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
+
 Nachdem Sie den Azure Information Protection-Client mithilfe der vorherigen Anweisungen installiert haben:    
 
 1. Öffnen Sie Microsoft Word. Wenn Sie zum ersten Mal eine Office 2010-Anwendung ausführen, nachdem Sie den Azure Information Protection-Client installiert haben, sehen Sie das Dialogfeld **Microsoft Azure Information Protection**. Dieses Dialogfeld zeigt Ihnen, dass Administratoranmeldeinformationen erforderlich sind, um den Anmeldeprozess abzuschließen.
@@ -68,8 +74,6 @@ Nachdem Sie den Azure Information Protection-Client mithilfe der vorherigen Anwe
 3. Wenn das Dialogfeld **Benutzerzugriffssteuerung** angezeigt wird, klicken Sie auf **Ja**, damit der Azure Information Protection-Client die Registrierung aktualisieren kann.
 
 Die Installation ist nun abgeschlossen, und Sie können Azure Information Protection zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
-
-Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
 
 ## <a name="other-instructions"></a>Sonstige Anweisungen    
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:

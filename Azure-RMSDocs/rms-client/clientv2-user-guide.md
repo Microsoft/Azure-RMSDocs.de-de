@@ -12,20 +12,20 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 836a14070d53164502f69194ee9e40379270cd6c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 4343148fe6b7b2540fcbd7af3bcbeb1f4e01bf08
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97385249"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559964"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch) 
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8 *
 >
->*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
->***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Der Azure Information Protection Unified Bezeichnung-Client für Windows hilft Ihnen dabei, wichtige Dokumente und e-Mails vor Personen zu schützen, die Sie nicht sehen dürfen, auch wenn Ihre e-Mail weitergeleitet wird oder Ihr Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 

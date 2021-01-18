@@ -14,12 +14,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c96fa834e53c044c88393fc9ba2000be89c6a112
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 35968d8e7c22fa4ad0bb232dae9d2b6dd8362286
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807415"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560250"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -39,7 +39,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |**Klassischer Azure Information Protection-Client**|Automatische Aktualisierung, wenn die Azure Information Protection-Richtlinie auf dem Client aktualisiert wird:<br /><br /> – Öffnen einer Office-Anwendung, die die Azure Information Protection-Leiste unterstützt. <br /><br /> – Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen. <br /><br /> – Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).<br /><br /> – Wenn der Microsoft Azure Information Protection-Überprüfungsdienst gestartet wird und die lokale Richtlinie älter als eine Stunde ist. Zusätzlich sucht der Überprüfungsdienst einmal pro Stunde nach Veränderungen und verwendet diese Änderungen beim nächsten Überprüfungszyklus.<br /><br /> – Alle 24 Stunden.<br /><br /> Da dieser Client in Office eng integriert ist, werden auch alle aktualisierten Vorlagen für Microsoft 365-apps, Office 2019, Office 2016 oder Office 2013 ebenfalls für den Azure Information Protection Client aktualisiert.|
 |**Azure Information Protection-Client für einheitliche Bezeichnungen**|Bei Office-Apps werden die Vorlagen automatisch aktualisiert, wenn die APP geöffnet wird.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Microsoft 365-apps, Office 2019, Office 2016 oder Office 2013 ebenfalls für den Azure Information Protection Unified-Bezeichnungs Client aktualisiert.<br /><br /> Für den Datei-Explorer, PowerShell und den Scanner lädt der Client keine Vorlagen herunter, sondern greift auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
 |**Microsoft 365 apps, Office 2019, Office 2016 und Office 2013**|Automatische Aktualisierung nach einem Zeitplan:<br /><br />– Für diese neueren Office-Versionen: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />Informationen zum Erzwingen einer Aktualisierung vor dem Zeitplan finden Sie im folgenden Abschnitt [Microsoft 365 apps, Office 2019, Office 2016 und Office 2013: Erzwingen einer Aktualisierung für Vorlagen](#microsoft-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
-|**Office 2010**|Automatische Aktualisierung, wenn Benutzer sich von Windows ab- und wieder anmelden und bis zu einer Stunde warten. <br><br>Weitere Informationen finden Sie unter [AIP für Windows und Office-Versionen im erweiterten Support](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).|
+|**Office 2010**|Automatische Aktualisierung, wenn Benutzer sich von Windows ab- und wieder anmelden und bis zu einer Stunde warten. <br><br>**Wichtig**: der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](known-issues.md#aip-and-legacy-windows-and-office-versions).|
 |**Lokales Exchange mit dem Rights Management-Connector**<br /><br />Gilt für Transportregeln und Outlook Web App|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich. Outlook Web App speichert allerdings die UI für einen Tag zwischen.|
 |**Office 2019 für Mac und Office 2016 für Mac**|Wird automatisch aktualisiert, wenn Sie geschützte Inhalte öffnen. Informationen zum Erzwingen einer Aktualisierung finden Sie im folgenden Abschnitt [Office 2019 für Mac und Office 2016 für Mac: Erzwingen einer Aktualisierung für Vorlagen](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |**Die RMS-Freigabeanwendung für Mac-Computer**|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|

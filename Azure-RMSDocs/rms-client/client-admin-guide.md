@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: adfc8fcb0ce9ea8c227aad74e7d686a96d081b8c
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 49f80d17e62bbe7e520696460ec39df396e439e4
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807347"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560355"
 ---
 # <a name="azure-information-protection-classic-client-administrator-guide"></a>Azure Information Protection klassisches Client Administrator Handbuch
 
@@ -34,7 +34,7 @@ ms.locfileid: "97807347"
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen erhalten möchten als im [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md) vorhanden sind. 
 
-Beispiel:
+Zum Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -93,8 +93,10 @@ Stellen Sie den Azure Information Protection Client bereit, wenn Sie in Microsof
 
 - Sie möchten die Verschlüsselung von Dateien und Containern für Datenwiederherstellungszwecke in Massen entfernen (Schutz aufheben).
 
-- Sie führen [Office 2010](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support) aus und möchten Dokumente und e-Mail-Nachrichten mithilfe des Azure-Rights Management Dienstanbieter schützen. 
+- Sie führen Office 2010 aus und möchten Dokumente und E-Mails-mithilfe des Azure Rights Management-Diensts schützen. 
 
+    Beachten Sie, dass der erweiterte Support von Office 2010 am 13. Oktober 2020 beendet wurde. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    
 Beispiel zur Veranschaulichung des Azure Information Protection-Client-Add-Ins für eine Office-Anwendung, in dem die Klassifizierungsbezeichnungen für Ihre Organisation und die neue Schaltfläche **Schützen** im Menüband angezeigt wird:
 
 ![Azure Information Protection-Leiste mit Standardrichtlinie](../media/word2016-calloutsv2.png)
@@ -178,7 +180,7 @@ Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch n
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Beispiel:
+Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Zum Beispiel:
 
 - Anweisungen für Onlinebenutzer: [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md)
 

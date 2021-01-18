@@ -12,18 +12,18 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 37d626fc3cf907191aed9760d1452082d732044f
-ms.sourcegitcommit: 0f76655985b49b4b8868d5f8893e20978f4dc4da
+ms.openlocfilehash: 0019699301b68df2d6ee4fd05d29a0e64734fc6e
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97747136"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98559862"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
 >***Gilt für**: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection),[Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen [unter AIP für Windows und Office-Versionen unter Erweiterter Support](../known-issues.md#aip-for-windows-and-office-versions-in-extended-support).*
+>*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
@@ -148,7 +148,7 @@ Weitere Informationen finden Sie auch unter:
 - [Ausführliche Vergleiche der Azure Information Protection Clients](#detailed-comparisons-for-the-azure-information-protection-clients)
 - [Features, die im Azure Information Protection Unified-Bezeichnungs Client nicht geplant sind](#features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client)
 
-|Funktion|Klassischer Client|Client für einheitliche Bezeichnungen|Integrierte Office-beschriftungslösung|
+|Funktion|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierte Office-beschriftungslösung|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |**Manuelle Bezeichnung**| ![ja](../media/yes-icon.png)   | ![ja](../media/yes-icon.png)   |![ja](../media/yes-icon.png) |
 |**Standard Bezeichnung**| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)|
@@ -210,7 +210,7 @@ Weitere Informationen finden Sie auch unter:
 Wenn die Azure Information Protection des klassischen Clients und der Azure Information Protection Unified-Bezeichnung-Client dieselbe Funktion unterstützen, verwenden Sie die folgenden Listen, um einige funktionale Unterschiede zwischen den beiden Clients zu identifizieren:
 
 
-|Funktionalität |Klassischer Client|Client für einheitliche Bezeichnungen|
+|Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |**Einrichtung**| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |**Auswahl und Anzeige von Bezeichnungen in Office-Apps**|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
