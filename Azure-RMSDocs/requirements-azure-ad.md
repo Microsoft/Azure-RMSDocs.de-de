@@ -1,6 +1,6 @@
 ---
 title: Zusätzliche Voraussetzungen für Azure AD und Azure Information Protection
-description: Informieren Sie sich über zusätzliche Azure AD-Voraussetzungen für Azure Information Protection in bestimmten Szenarios, z. B. bei mehrstufiger oder zertifikatbasierter Authentifizierung oder bei Computern mit Office 2010.
+description: Informieren Sie sich über zusätzliche Azure AD-Voraussetzungen für Azure Information Protection in bestimmten Szenarios, z. B. bei mehrstufiger oder zertifikatbasierter Authentifizierung.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin, has-adal-ref
-ms.openlocfilehash: 7ac67d72d329f9782a80c434f936cadad3e13882
-ms.sourcegitcommit: efeb486e49c3e370d7fd8244687cd3de77cd8462
+ms.openlocfilehash: 7ba843beac002261cd1ada865767b414e22560ae
+ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97583352"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98560389"
 ---
 # <a name="additional-azure-ad-requirements-for-azure-information-protection"></a>Zusätzliche Azure AD-Anforderungen für Azure Information Protection
 
@@ -25,26 +25,16 @@ ms.locfileid: "97583352"
 >
 >***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen AIP-Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
+> [!NOTE]
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. 
+>
+> In diesem Zeitraum haben alle aktuellen Azure Information Protection-Kunden die Möglichkeit, zur Microsoft Information Protection-Lösung für einheitliche Bezeichnungen zu wechseln. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+
 Ein [Azure AD-Verzeichnis ist eine Anforderung](requirements.md#azure-active-directory) für die Verwendung von Azure Information Protection. Verwenden Sie ein Konto aus einem Azure AD-Verzeichnis, um sich beim Azure-Portal anzumelden, wo Sie Azure Information Protection-Einstellungen konfigurieren können.
 
 Wenn Sie ein Abonnement mit Azure Information Protection oder Azure Rights Management besitzen, wird Ihr Azure AD-Verzeichnis bei Bedarf automatisch für Sie erstellt.
 
 In den folgenden Abschnitten werden zusätzliche Azure Information Protection- und Azure AD-Anforderungen für bestimmte Szenarios aufgelistet. 
-
-## <a name="computers-running-office-2010"></a>Computer mit Office 2010
-
-Neben einem Azure AD-Konto benötigen Computer mit Office 2010 den Azure Information Protection-Client für Windows, um sich bei Azure Information Protection sowie dessen Datenschutzdienst Azure Rights Management zu authentifizieren. 
-
-Wenn Ihre Benutzerkonten verbunden sind (wenn Sie z. B. AD FS verwenden), müssen diese Computer die integrierte Windows-Authentifizierung verwenden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
-
-Es wird empfohlen, den Azure Information Protection-Client für einheitliche Bezeichnungen bereitzustellen. Wenn Sie noch kein Upgrade durchgeführt haben, ist möglicherweise weiterhin der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) in Ihrem System bereitgestellt. 
-
-Weitere Informationen finden Sie unter [Die Clientseite von Azure Information Protection](rms-client/use-client.md) und [AIP für Windows- und Office-Versionen in erweiterter Unterstützung](known-issues.md#aip-for-windows-and-office-versions-in-extended-support).
-
-> [!NOTE]
-> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. 
->
-> In diesem Zeitraum haben alle aktuellen Azure Information Protection-Kunden die Möglichkeit, zur Microsoft Information Protection-Lösung für einheitliche Bezeichnungen zu wechseln. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 ## <a name="support-for-certificate-based-authentication-cba"></a>Unterstützung für die zertifikatbasierte Authentifizierung
 
@@ -110,5 +100,18 @@ Wenn Sie ein mobiles Gerät oder einen Mac-Computer verwenden, der lokal mithilf
 - Mindestens **Windows Server 2012 R2**
 - Mit einem alternativen Authentifizierungsanbieter, der das OAuth 2.0-Protokoll unterstützt
 
+## <a name="computers-running-office-2010"></a>Computer mit Office 2010
+
+> [!IMPORTANT]
+> Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](known-issues.md#aip-and-legacy-windows-and-office-versions).
+> 
+
+Neben einem Azure AD-Konto benötigen Computer mit Office 2010 den Azure Information Protection-Client für Windows, um sich bei Azure Information Protection sowie dessen Datenschutzdienst Azure Rights Management zu authentifizieren. 
+
+Wenn Ihre Benutzerkonten verbunden sind (wenn Sie z. B. AD FS verwenden), müssen diese Computer die integrierte Windows-Authentifizierung verwenden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
+
+Es wird empfohlen, den Azure Information Protection-Client für einheitliche Bezeichnungen bereitzustellen. Wenn Sie noch kein Upgrade durchgeführt haben, ist möglicherweise weiterhin der [klassische Azure Information Protection-Client](./rms-client/aip-client.md) in Ihrem System bereitgestellt. 
+
+Weitere Informationen finden Sie unter [Die Clientseite von Azure Information Protection](rms-client/use-client.md).
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
