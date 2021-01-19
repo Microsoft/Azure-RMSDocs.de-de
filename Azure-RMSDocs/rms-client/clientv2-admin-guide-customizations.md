@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/23/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9f4cc024066769c750f2fef946d9c5581cb99314
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 553646119c5e83bbc475d77ab35a83ce5866e858
+ms.sourcegitcommit: d2fdba748daf47ee9aeadbdf3ce154ef399eadaf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560338"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98569094"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -40,6 +40,8 @@ Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die f
 > Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweiterte Einstellungen angeben. Die erweiterten Einstellungen verwenden [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell).
 > 
 
+
+
 ## <a name="configuring-advanced-settings-for-the-client-via-powershell"></a>Konfigurieren von erweiterten Einstellungen für den Client über PowerShell
 
 Verwenden Sie das Microsoft 365 Security & Compliance Center PowerShell, um erweiterte Einstellungen für die Anpassung von Bezeichnungs Richtlinien und-Bezeichnungen zu konfigurieren. 
@@ -53,13 +55,14 @@ Um eine erweiterte Einstellung zu entfernen, verwenden Sie dieselbe **advancedse
 
 Weitere Informationen finden Sie unter
 
-- [Syntax der erweiterten Einstellungen der Bezeichnungs Richtlinie](#label-policy-advanced-settings)
-- [Syntax der Bezeichnung "Erweiterte Einstellungen"](#label-advanced-settings)
+- [Syntax der erweiterten Einstellungen der Bezeichnungs Richtlinie](#label-policy-advanced-settings-syntax)
+- [Syntax der Bezeichnung "Erweiterte Einstellungen"](#label-advanced-settings-syntax)
+- [Überprüfen der aktuellen erweiterten Einstellungen](#checking-your-current-advanced-settings)
 - [Beispiele für das Festlegen von erweiterten Einstellungen](#examples-for-setting-advanced-settings)
 - [Angeben der Bezeichnungs Richtlinie oder der Bezeichnungs Identität](#specifying-the-label-policy-or-label-identity)
 - [Rangfolge: so werden widersprüchliche Einstellungen aufgelöst](#order-of-precedence---how-conflicting-settings-are-resolved)
 - [Erweiterte Einstellungs Verweise](#advanced-setting-references)
-### <a name="label-policy-advanced-settings"></a>Erweiterte Einstellungen der Bezeichnungs Richtlinie
+### <a name="label-policy-advanced-settings-syntax"></a>Syntax der erweiterten Einstellungen der Bezeichnungs Richtlinie
 
 Ein Beispiel für eine erweiterte Einstellung der Bezeichnung "Bezeichnung" ist die Einstellung, mit der die Information Protection Leiste in Office-Apps angezeigt wird.
 
@@ -75,7 +78,7 @@ Verwenden Sie **für einen mehrfachen Zeichen folgen Wert für denselben Schlüs
 Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
-### <a name="label-advanced-settings"></a>Erweiterte Einstellungen für Bezeichnung
+### <a name="label-advanced-settings-syntax"></a>Syntax der Bezeichnung "Erweiterte Einstellungen"
 
 Ein Beispiel für eine erweiterte Einstellung für die Bezeichnung ist die Einstellung, mit der eine Bezeichnungs Farbe angegeben wird.
 
@@ -91,27 +94,49 @@ Verwenden Sie **für einen mehrfachen Zeichen folgen Wert für denselben Schlüs
 Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 ```
 
+
+
+### <a name="checking-your-current-advanced-settings"></a>Überprüfen der aktuellen erweiterten Einstellungen
+
+Um die aktuellen Einstellungen für erweiterte Einstellungen zu überprüfen, führen Sie die folgenden Befehle aus:
+
+Verwenden Sie die folgende Syntax, **um die erweiterten Einstellungen für die Bezeichnungs *Richtlinie* zu überprüfen**:
+
+Für eine Bezeichnungs Richtlinie mit dem Namen **Global**:
+
+```PowerShell
+(Get-LabelPolicy -Identity Global).settings
+```
+
+Verwenden Sie die folgende Syntax, **um die erweiterten Einstellungen der *Bezeichnung* zu überprüfen**:
+
+Für eine Bezeichnung mit dem Namen **Public**:
+
+```powershell
+(Get-Label -Identity Public).settings
+```
+
 ### <a name="examples-for-setting-advanced-settings"></a>Beispiele für das Festlegen von erweiterten Einstellungen
 
-**Beispiel 1:** Legen Sie für einen einzelnen Zeichen folgen Wert eine erweiterte Einstellung für die Bezeichnungs Richtlinie fest:
+**Beispiel 1**: Festlegen der erweiterten Einstellung für die Bezeichnung "Bezeichnung" für einen einzelnen Zeichen folgen Wert:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 ```
 
-**Beispiel 2:** Legen Sie die Einstellung für die erweiterte Bezeichnung für einen einzelnen Zeichen folgen Wert fest:
+**Beispiel 2**: Festlegen der erweiterten Einstellung für die Bezeichnung für einen einzelnen Zeichen folgen Wert:
 
 ```PowerShell
 Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 ```
 
-**Beispiel 3:** Legen Sie für mehrere Zeichen folgen Werte eine Einstellung für die erweiterte Bezeichnung fest:
+**Beispiel 3**: Festlegen der erweiterten Einstellung für die Bezeichnung für mehrere Zeichen folgen Werte:
 
 ```PowerShell
 Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 ```
 
-**Beispiel 4:** Entfernen Sie eine erweiterte Einstellung für eine Bezeichnungs Richtlinie durch Angabe eines NULL-Zeichen folgen Werts:
+**Beispiel 4**: Entfernen einer erweiterten Einstellung für eine Bezeichnungs Richtlinie durch Angeben eines NULL-Zeichen folgen Werts:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
@@ -233,12 +258,6 @@ Verwenden Sie den Parameter *advancedsettings* mit [New-labelpolicy](/powershell
 |**Usecopyandkonservientschsowner** | [Beibehalten von NTFS-Besitzern während der Bezeichnung](#preserve-ntfs-owners-during-labeling-public-preview)
 | | |
 
-#### <a name="check-label-policy-settings"></a>Richtlinien Einstellungen für Bezeichnung überprüfen
-PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Richtlinien Einstellungen für eine Bezeichnungs Richtlinie mit dem Namen "Global":
-
-```PowerShell
-(Get-LabelPolicy -Identity Global).settings
-```
 
 ### <a name="label-advanced-setting-reference"></a>Referenz für die erweiterte Einstellung der Bezeichnung
 
@@ -253,13 +272,6 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-Label](/powershell/modu
 |**Smimeverschlüsseln**|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |**Smimesign**|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-#### <a name="check-label-settings"></a>Beschriftungs Einstellungen überprüfen
-
-PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Einstellungen für eine Bezeichnung mit dem Namen "Public":
-
-```PowerShell
-(Get-Label -Identity Public).settings
-```
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Information Protection-Leiste in Office-Apps anzeigen
 
@@ -371,13 +383,13 @@ Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu id
 |ConvertTo-JSON (". jpg", ". png")|Zusätzlich zu den Office-Dateitypen und PDF-Dateien, wenden Sie den Schutz auf die angegebenen Dateinamen Erweiterungen an. | Zusätzlich zu den Office-Dateitypen und PDF-Dateien, wenden Sie den Schutz auf die angegebenen Dateinamen Erweiterungen an.
 | | | |
 
-**Beispiel 1:**  PowerShell-Befehl für die Überprüfung, um alle Dateitypen zu schützen, deren Bezeichnung "Scanner" lautet:
+**Beispiel 1**: PowerShell-Befehl für die Überprüfung, um alle Dateitypen zu schützen, deren Bezeichnung "Scanner" lautet:
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 ```
 
-**Beispiel 2:** PowerShell-Befehl für die Überprüfung, um TXT-Dateien und CSV-Dateien zusätzlich zu Office-Dateien und PDF-Dateien zu schützen, wobei die Bezeichnung "Scanner" lautet:
+**Beispiel 2**: PowerShell-Befehl für die Überprüfung, um TXT-Dateien und CSV-Dateien zusätzlich zu Office-Dateien und PDF-Dateien zu schützen, wobei die Bezeichnung "Scanner" lautet:
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
@@ -401,23 +413,23 @@ Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu id
 |\<null value>| Der Standardwert verhält sich wie der Standardschutz Wert.|
 |ConvertTo-JSON (". DWG", ". zip")|Zusätzlich zur vorherigen Liste werden ". DWG" und ". zip" zu "P".\<EXT>| 
 
-Mit dieser Einstellung werden die folgenden Erweiterungen immer **P \<EXT> :** "". txt ",". xml ",". bmp ",". JT ",". jpg ",". JPEG ",". jpe ",". jif ",". JFI ",". JFI ",". png ",". TIF ",". TIFF ",". gif "). Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
+Mit dieser Einstellung werden die folgenden Erweiterungen immer **P \<EXT>**: "". txt ",". xml ",". bmp ",". JT ",". jpg ",". JPEG ",". jpe ",". jif ",". JFI ",". JFI ",". png ",". TIF ",". TIFF ",". gif "). Der bedeutende Ausschluss besteht darin, dass "ptxt" nicht "txt. Pfile" wird. 
 
 **Additionalpprefixextensions** funktioniert nur, wenn der Schutz von pfiles mit der erweiterten Eigenschaft " [**pfilesupportedextension**](#pfilesupportedextension) " aktiviert ist. 
 
-**Beispiel 1:** Der PowerShell-Befehl verhält sich wie das Standardverhalten, bei dem der Schutz von ". DWG" zu ". dwg. Pfile" wird:
+**Beispiel 1**: PowerShell-Befehl verhält sich wie das Standardverhalten, bei dem der Schutz von ". DWG" zu ". dwg. Pfile" wird:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Beispiel 2:**  PowerShell-Befehl zum Ändern aller Pfile-Erweiterungen vom generischen Schutz (DWG. Pfile) in den nativen Schutz (. pdwg), wenn die Dateien geschützt werden:
+**Beispiel 2**: PowerShell-Befehl zum Ändern aller Pfile-Erweiterungen vom generischen Schutz (DWG. Pfile) in den nativen Schutz (. pdwg), wenn die Dateien geschützt werden:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**Beispiel 3:** PowerShell-Befehl zum Ändern von ". DWG" in ". pdwg" Wenn Sie diesen Dienst verwenden, schützen Sie diese Datei:
+**Beispiel 3**: PowerShell-Befehl zum Ändern von ". DWG" in ". pdwg" Wenn Sie diesen Dienst verwenden, schützen Sie diese Datei:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -458,7 +470,7 @@ Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#configurin
 
 Es gibt zwei Methoden zum Entfernen von Klassifizierungen aus anderen Bezeichnungs Lösungen:
 
-|Einstellung  |BESCHREIBUNG  |
+|Einstellung  |Beschreibung  |
 |---------|---------|
 |**Wordshapenametoremove**     |  Entfernt alle Formen aus Word-Dokumenten, wobei der Name der Form mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove** definiert ist.  <br><br>Weitere Informationen finden Sie unter [Verwenden der erweiterten wordshapenametoremove-Eigenschaft](#use-the-wordshapenametoremove-advanced-property).     |
 |**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Ermöglicht das Entfernen oder Ersetzen von textbasierten Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten. <br><br>Weitere Informationen finden Sie unter <br>- [Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [Konfigurieren von externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove).    |
@@ -478,7 +490,7 @@ Vermeiden Sie das Entfernen von Formen, die den zu ignorierenden Text enthalten,
 > Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wortformen angeben und Word im Schlüsselwert **removeexternalcontentmarkinginapp** enthalten ist, werden alle Formen auf den Text überprüft, den Sie im Wert von [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) angeben. 
 >
 
-**So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen:**
+**So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen**:
 
 1. Zeigen Sie in Word den **Auswahl** Bereich an: Registerkarte " **Home** " > **Bearbeitungs** Gruppe > **Wählen Sie** die Option > **Auswahl** Bereich aus.
 
@@ -605,7 +617,7 @@ Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, d
 
 - Wenn dieser Wert angegeben wird, werden nur die Formen, die den Form Namen Kriterien entsprechen, sowie Text, der mit der mit [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) bereitgestellten Zeichenfolge übereinstimmt, entfernt.
 
-Zum Beispiel:
+Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
@@ -633,7 +645,7 @@ Wenn Sie benutzerdefinierte PowerPoint-Layouts verwenden und alle Formen eines b
 
 Wenn Sie die Einstellung " **powerpointremuveallshapesbyshapename** " verwenden, wird der Text in den Formen ignoriert, und stattdessen werden die Formen, die Sie entfernen möchten, mithilfe des Shape-Namens identifiziert.
 
-Zum Beispiel:
+Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesByShapeName="Arrow: Right"}
@@ -809,7 +821,7 @@ Wenn Sie die folgenden erweiterten Clienteinstellungen erstellen und konfigurier
 
 Wenn diese Bedingungen erfüllt sind, wird dem Benutzer eine Popup Meldung mit einer der folgenden Aktionen angezeigt:
 
-|type  |BESCHREIBUNG  |
+|type  |Beschreibung  |
 |---------|---------|
 |**Warnen**     | Der Benutzer kann bestätigen und senden, oder abbrechen.        |
 |**Fertigte**     |  Der Benutzer wird zur Begründung aufgefordert (vordefinierte Optionen oder Freiform), und der Benutzer kann dann die e-Mail senden oder Abbrechen. <br>Der anrichtungstext wird in den x-Header der e-Mail-Nachricht geschrieben, sodass er von anderen Systemen gelesen werden kann, wie z. b. DLP-Dienste (Data Loss Prevention).       |
@@ -1098,11 +1110,11 @@ Bei Office-Dokumenten, die von Secure Islands bezeichnet werden, können Sie die
 
 Als Ergebnis dieser Konfigurationsoption wird die neue Vertraulichkeits Bezeichnung vom Azure Information Protection Unified Label-Client wie folgt angewendet:
 
-- **Für Office-Dokumente:** Wenn das Dokument in der Desktop-App geöffnet wird, wird die neue Vertraulichkeits Bezeichnung als festgelegt angezeigt und beim Speichern des Dokuments angewendet.
+- **Für Office-Dokumente**: Wenn das Dokument in der Desktop-App geöffnet wird, wird die neue Vertraulichkeits Bezeichnung als festgelegt angezeigt und beim Speichern des Dokuments angewendet.
 
-- **Für PowerShell:** " [Set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel) " und " [Set-aipfileclassificiations](/powershell/module/azureinformationprotection/set-aipfileclassification) " können die neue Vertraulichkeits Bezeichnung anwenden.
+- **Für PowerShell**: " [Set-aipfilelabel](/powershell/module/azureinformationprotection/set-aipfilelabel) " und " [Set-aipfileclassificiations](/powershell/module/azureinformationprotection/set-aipfileclassification) " können die neue Vertraulichkeits Bezeichnung anwenden.
 
-- Im **Datei-Explorer:** Im Dialogfeld Azure Information Protection wird die neue Vertraulichkeits Bezeichnung angezeigt, aber nicht festgelegt.
+- Im **Datei-Explorer**: im Dialogfeld Azure Information Protection wird die neue Vertraulichkeits Bezeichnung angezeigt, aber nicht festgelegt.
 
 Diese Konfiguration erfordert, dass Sie für jede Vertraulichkeits Bezeichnung, die Sie der alten Bezeichnung zuordnen möchten, eine erweiterte Einstellung mit dem Namen " **labelbycustomproperties** " angeben. Geben Sie dann für jeden Eintrag mithilfe der folgenden Syntax den Wert an:
 
@@ -1238,7 +1250,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#configuring-advance
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1266,7 +1278,7 @@ Diese Konfiguration erfordert, dass Sie für jede Vertraulichkeits Bezeichnung, 
 > [!IMPORTANT]
 > Durch die Verwendung von Leerzeichen in der Zeichenfolge wird die Anwendung der Bezeichnungen verhindert.
 
-Zum Beispiel:
+Beispiel:
 
 - [Beispiel 1: Hinzufügen einer einzelnen benutzerdefinierten Eigenschaft für eine Bezeichnung](#example-1-add-a-single-custom-property-for-a-label)
 - [Beispiel 2: Hinzufügen mehrerer benutzerdefinierter Eigenschaften für eine Bezeichnung](#example-2-add-multiple-custom-properties-for-a-label)
@@ -1407,7 +1419,7 @@ Mit dem Dialogfeld **Microsoft Azure Information Protection** können Sie überp
 
 Außerdem zu beachten:
 
-|Szenario  |BESCHREIBUNG  |
+|Szenario  |Beschreibung  |
 |---------|---------|
 |**Weiterhin beim alten Konto angemeldet**     |  Wenn der Azure Information Protection Unified Bezeichnung-Client nach dem Ausführen dieser Schritte weiterhin mit dem alten Konto angemeldet ist, löschen Sie alle Cookies aus Internet Explorer, und wiederholen Sie dann die Schritte 1 und 2.       |
 |**Verwenden von Single Sign-on**    |    Wenn Sie einmaliges Anmelden nutzen, müssen Sie sich bei Windows abmelden und mit einem anderen Benutzerkonto erneut anmelden, nachdem Sie die Tokendatei gelöscht haben. <br><br>Der Azure Information Protection Unified Bezeichnung-Client wird dann automatisch mithilfe Ihres aktuell angemeldeten Benutzerkontos authentifiziert.     |
@@ -1424,7 +1436,7 @@ Standardmäßig versucht der Azure Information Protection Unified Label-Client a
 
 Wenn Sie über Computer verfügen, die für einen bestimmten Zeitraum keine Verbindung mit dem Internet herstellen können, können Sie Dateien exportieren und kopieren, die die Richtlinie für den Unified-Bezeichnungs Client manuell verwalten.
 
-**So unterstützen Sie nicht verbundene Computer mit dem Unified-Bezeichnung-Client:**
+So **unterstützen Sie nicht verbundene Computer mit dem Unified-Bezeichnung-Client**:
 
 1. Wählen Sie ein Benutzerkonto in Azure AD aus, das Sie zum Herunterladen von Bezeichnungen und Richtlinien Einstellungen verwenden, die Sie auf dem nicht verbundenen Computer verwenden möchten, oder erstellen Sie ein Benutzerkonto.
 
@@ -1492,7 +1504,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 **Lese-oder archivierte Dateien überspringen**
 
-Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Zum Beispiel:
+Wenn Sie eine-oder-Logik verwenden möchten, führen Sie die gleiche Eigenschaft mehrmals aus. Beispiel:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY"}
@@ -1636,7 +1648,7 @@ Zu den unterstützten Knoten Typen gehören:
 | **Except**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
 | **SentTo**, gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob sich **alle** Empfänger in einer der Domänen befinden.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
 | **EmailLabel**, gefolgt von Bezeichnung | Einer der folgenden:  <br>-Die Bezeichnungs-ID <br>-NULL, wenn keine Bezeichnung             |
-| **Attachmentlabel**, gefolgt von der **Bezeichnung** und den unterstützten **Erweiterungen**   | Einer der folgenden:  <br><br>**Fall** <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br>-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br><br> **false:** Für alle anderen Fälle <br><br>**Hinweis**: Wenn die **extensioneigenschaft leer** ist oder nicht vorhanden ist, sind alle unterstützten Dateitypen (Erweiterungen) in der Regel enthalten.
+| **Attachmentlabel**, gefolgt von der **Bezeichnung** und den unterstützten **Erweiterungen**   | Einer der folgenden:  <br><br>**true**: <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br>-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br><br> **false**: in allen anderen Fällen <br><br>**Hinweis**: Wenn die **extensioneigenschaft leer** ist oder nicht vorhanden ist, sind alle unterstützten Dateitypen (Erweiterungen) in der Regel enthalten.
 | | |
 
 #### <a name="rule-action-syntax"></a>Syntax der Regel Aktion
@@ -1656,7 +1668,7 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |BESCHREIBUNG  |
+|Parameter  |Beschreibung  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
 | `${MatchedLabelName}`      | Die **Bezeichnung**"Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
@@ -1994,11 +2006,11 @@ Wenn Sie über lange Dateipfade in SharePoint-Version 2013 oder höher verfügen
 
 Dieser Wert wird in der **HttpRuntimeSection** -Klasse der `ASP.NET` Konfiguration definiert. 
 
-So **Aktualisieren Sie die HttpRuntimeSection** -Klasse: * *
+So **Aktualisieren Sie die HttpRuntimeSection-Klasse**:
 
 1. Sichern Sie Ihre **web.config** Konfiguration. 
 
-1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Zum Beispiel:
+1. Aktualisieren Sie den **maxurllength** -Wert nach Bedarf. Beispiel:
 
     ```c#
     <httpRuntime maxRequestLength="51200" requestValidationMode="2.0" maxUrlLength="5000"  />
