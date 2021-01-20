@@ -4,7 +4,7 @@ description: Beschreibt, wie Administratoren den Dokument Zugriff für geschütz
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/07/2021
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7b60438ad3d1e8a971c58a7f29b2f8b41dd84c91
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 935e6a3439a06887a91981cb8ed69a342172b686
+ms.sourcegitcommit: 99a58f50b08abc546073657c66247553faeecf8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98163738"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608620"
 ---
 # <a name="administrator-guide-track-and-revoke-document-access-with-azure-information-protection-public-preview"></a>Administrator Handbuch: nachverfolgen und widerrufen des Zugriffs auf Dokumente mit Azure Information Protection (öffentliche Vorschau)
 
@@ -57,7 +57,7 @@ Verwenden Sie die folgenden Cmdlets, um nach Details für das Dokument zu suchen
 
 1. Verwenden Sie das Cmdlet [Get-aipservicetrackinglog](/powershell/module/aipservice/get-aipservicetrackinglog) mit der **contentid** Ihres Dokuments, um die Verfolgungs Daten zurückzugeben.
 
-    Beispiel:
+    Beispiele:
     
     ```PowerShell
     Get-AipServiceTrackingLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
@@ -73,7 +73,7 @@ Globale Administratoren können den Zugriff für jedes geschützte Dokument, das
     
     Verwenden Sie das [Get-aipservicedocumentlog](/powershell/module/aipservice/get-aipservicedocumentlog) , um mithilfe des Datei namens und/oder der e-Mail-Adresse des Benutzers, der den Schutz angewendet hat, nach einem Dokument zu suchen.
     
-    Beispiel:
+    Beispiele:
         
     ```PowerShell
     Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@contoso.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
@@ -88,7 +88,7 @@ Globale Administratoren können den Zugriff für jedes geschützte Dokument, das
 
 1. Verwenden Sie [Set-aipservicedocumentrevoked](/powershell/module/aipservice/set-aipservicedocumentrevoked) mit der contentid Ihres Dokuments, um den Zugriff zu widerrufen.
 
-    Beispiel:
+    Beispiele:
 
     ```PowerShell
     Set-AipServiceDocumentRevoked -ContentId 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
@@ -103,12 +103,12 @@ Globale Administratoren können den Zugriff für jedes geschützte Dokument, das
 
 ### <a name="un-revoke-access"></a>Aufheben der Sperrung des Zugriffs
 
-Wenn Sie den Zugriff auf ein bestimmtes Dokument versehentlich widerrufen haben, verwenden Sie den gleichen **contentid** -Wert mit dem Cmdlet " [Clear-aipservicedocumentrevoke](/powershell/module/aipservice/clear-aipservicedocumentrevoke) ", um die Sperrung des Zugriffs aufzuheben. 
+Wenn Sie den Zugriff auf ein bestimmtes Dokument versehentlich widerrufen haben, verwenden Sie den gleichen **contentid** -Wert mit dem Cmdlet " [Clear-aipservicedocumentrevoked](/powershell/module/aipservice/clear-aipservicedocumentrevoked) ", um den Zugriff aufzuheben. 
 
-Beispiel:
+Beispiele:
 
 ```PowerShell
-Clear-AipServiceDocumentRevoke -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
+Clear-AipServiceDocumentRevoked -ContentId   0e421e6d-ea17-4fdb-8f01-93a3e71333b8 -IssuerName testIssuer
 ```
 
 Der Benutzer, den Sie im **IssuerName** -Parameter definiert haben, wird der Zugriff auf Dokumente gewährt.
