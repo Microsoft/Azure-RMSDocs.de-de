@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 468cbe031b22ba07127b75295da98ee9a081048a
-ms.sourcegitcommit: 73befea74644d272e2d8d1d4b95df55c7741ccbe
+ms.openlocfilehash: 74999f960b13c64cd16891060f373d669ac90bab
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762331"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240799"
 ---
 # <a name="quickstart-deploying-the-azure-information-protection-aip-unified-labeling-client"></a>Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen
 
@@ -23,7 +23,7 @@ ms.locfileid: "97762331"
 >
 > ***Relevant für:** [Azure Information Protection-Client für einheitliche Bezeichnungen für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
-Der Azure Information Protection-Client (AIP) für einheitliche Bezeichnungen gehört zur [Microsoft Information Protection](https://aka.ms/MIPdocs)-Lösung und erweitert die von Microsoft 365 bereitgestellten integrierten Funktionen für die Vertraulichkeitsbezeichnung. 
+Der Azure Information Protection-Client (AIP) für einheitliche Bezeichnungen gehört zur [Microsoft Information Protection](/microsoft-365/compliance/information-protection)-Lösung und erweitert die von Microsoft 365 bereitgestellten integrierten Funktionen für die Vertraulichkeitsbezeichnung. 
 
 Der Client bietet Endbenutzerunterstützung für Bezeichnung und Schutz in Office-Anwendungen sowie im Datei-Explorer und in PowerShell. Der mit dem Client für einheitliche Bezeichnungen bereitgestellte Scanner ermöglicht Administratoren die Überprüfung von Netzwerken und Freigaben auf vertrauliche Inhalte. 
 
@@ -69,4 +69,3 @@ Weitere Informationen zu den ersten Schritten mit dem Azure Information-Client f
 - [Bekannte Probleme: Azure Information Protection](known-issues.md) 
 - [Häufig gestellte Fragen zu Azure Information Protection](faqs.md) 
 - [Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen](rms-client/clientv2-admin-guide-customizations.md)        
-    

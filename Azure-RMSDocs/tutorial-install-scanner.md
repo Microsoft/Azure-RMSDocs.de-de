@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 73bcb5e636b8a5e4456ad80f8435a27dfc898339
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 54bb64810e2dc71f6356dfe60c0443dccfb87315
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384773"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240868"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen
 
@@ -38,7 +38,7 @@ Zum Installieren des Scanners für einheitliche Bezeichnungen und zum Durchführ
 |**Client installiert**    |   Installieren Sie den AIP-Client für einheitliche Bezeichnungen auf Ihrem Computer, um auf die Scannerinstallation zuzugreifen. <br /><br />Laden Sie die Datei **AzInfoProtection_UL.exe** aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018) herunter, und führen Sie sie aus. <br /><br />Wenn die Installation beendet ist, werden Sie möglicherweise aufgefordert, den Computer oder die Office-Software neu zu starten. Starten Sie bei Bedarf neu, um fortzufahren. <br /><br />Weitere Informationen finden Sie unter [Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen](quickstart-deploy-client.md).|
 |**SQL Server**     | Damit der Scanner ausgeführt werden kann, muss SQL Server auf dem Scannercomputer installiert sein. <br /><br /> Wechseln Sie zur Installation zur [Downloadseite für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads), und wählen Sie unter der Option, die Sie installieren möchten, **Jetzt herunterladen** aus. Wählen Sie im Installationsprogramm den Installationstyp **Standard** aus. <br /><br />**Hinweis**: Für Produktionsumgebungen wird die Installation von SQL Server Enterprise und für Testumgebungen nur Express empfohlen.       |
 |**Azure Active Directory-Konto**     |  Wenn Sie mit einer standardmäßigen, mit der Cloud verbundenen Umgebung arbeiten, muss Ihr Domänendienstkonto, dass Sie für den Scanner verwenden möchten, mit [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) synchronisiert werden. Dies ist nicht erforderlich, wenn Sie offline arbeiten. <br /><br />Wenn Sie sich bezüglich des Kontos nicht sicher sind, wenden Sie sich an einen Ihrer Systemadministratoren, um den Synchronisierungsstatus zu überprüfen.   |
-|**Vertraulichkeitsbezeichnungen und eine veröffentlichte Richtlinie** |Sie müssen Vertraulichkeitsbezeichnungen erstellt und eine Richtlinie mit mindestens einer Bezeichnung für das Scannerdienstkonto im Admin Center für die Bezeichnungen veröffentlicht haben. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). |
+|**Vertraulichkeitsbezeichnungen und eine veröffentlichte Richtlinie** |Sie müssen Vertraulichkeitsbezeichnungen erstellt und eine Richtlinie mit mindestens einer Bezeichnung für das Scannerdienstkonto im Admin Center für die Bezeichnungen veröffentlicht haben. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/create-sensitivity-labels). |
 | | |
 
 Nachdem Sie die Voraussetzungen überprüft haben, [konfigurieren Sie Azure Information Protection im Azure-Portal](#configure-azure-information-protection-in-the-azure-portal).

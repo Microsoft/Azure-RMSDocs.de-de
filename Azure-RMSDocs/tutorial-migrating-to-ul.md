@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 746e1a8763c94a3193b7719d5af9326c2d274347
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 177c877cc1963d40be336bf8ec979a03b7e890c1
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97805919"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240834"
 ---
 # <a name="tutorial-migrating-from-the-azure-information-protection-aip-classic-client-to-unified-labeling-solution"></a>Tutorial: Migrieren vom klassischen Azure Information Protection-Client (AIP) zur Lösung für einheitliche Bezeichnungen
 
@@ -29,7 +29,7 @@ ms.locfileid: "97805919"
 > Dieser Zeitrahmen ermöglicht allen derzeitigen Benutzern des klassischen Azure Information Protection-Clients den Umstieg auf den AIP-Client für einheitliche Bezeichnungen, der die Microsoft Information Protection-Lösung für einheitliche Bezeichnungen nutzt. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 >
 
-In diesem Tutorial wird beschrieben, wie Sie die Azure Information Protection-Bereitstellung Ihrer Organisation aus dem klassischen Client und die Verwaltung von Bezeichnungen/Bezeichnungsrichtlinien im Azure-Portal zur Lösung für einheitliche Bezeichnungen und [Microsoft 365-Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) migrieren.
+In diesem Tutorial wird beschrieben, wie Sie die Azure Information Protection-Bereitstellung Ihrer Organisation aus dem klassischen Client und die Verwaltung von Bezeichnungen/Bezeichnungsrichtlinien im Azure-Portal zur Lösung für einheitliche Bezeichnungen und [Microsoft 365-Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels) migrieren.
 
 **Benötigte Zeit**: Die zum Durchführen einer Migration erforderliche Zeit hängt von der Komplexität Ihrer Richtlinien und den von Ihnen verwendeten AIP-Features ab. Sie können weiterhin mit dem klassischen Client arbeiten, während Sie die Migration im Hintergrund durchführen.
 
@@ -63,7 +63,7 @@ Die meisten Funktionen, die für den klassischen AIP-Client verfügbar sind, ste
 
 Lesen Sie die folgenden Artikel, um zu verstehen, wie sich die von Ihnen verwendeten Datenschutzfunktionen bei der Verwendung des Clients für einheitliche Bezeichnungen unterscheiden können:
 
-- [Erfahren Sie mehr über integrierte Funktionen für Bezeichnungen in Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Erfahren Sie mehr über integrierte Funktionen für Bezeichnungen in Microsoft 365](/microsoft-365/compliance/sensitivity-labels-office-apps)
 - [Vergleichen der Bezeichnungslösungen für Windows-Computer](rms-client/use-client.md#compare-the-labeling-solutions-for-windows-computers)
 - [Erfahren Sie, wie Sie Bezeichnungseinstellungen verwalten, die in den Admin Centers für einheitliche Bezeichnungen standardmäßig nicht unterstützt werden.](configure-policy-migrate-labels.md#label-settings-that-are-not-supported-in-the-admin-centers)
 
@@ -137,7 +137,7 @@ Kopieren Sie alle Richtlinien, die Sie im Azure-Portal gespeichert haben und in 
 Dieses Feature befindet sich derzeit in der VORSCHAU. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
 
 > [!NOTE]
-> Beim Kopieren von Richtlinien gibt es bestimmte Einschränkungen. Sie können auch von Grund auf neu beginnen und die Richtlinien manuell in Ihrem Admin Center für Bezeichnungen erstellen. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+> Beim Kopieren von Richtlinien gibt es bestimmte Einschränkungen. Sie können auch von Grund auf neu beginnen und die Richtlinien manuell in Ihrem Admin Center für Bezeichnungen erstellen. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 > 
 
 **So kopieren Sie Ihre Richtlinien:** 
@@ -184,7 +184,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
 
 ### <a name="configure-advanced-labeling-settings-in-powershell"></a>Konfigurieren von erweiterten Einstellungen für Bezeichnungen in PowerShell
 
-1. Stellen Sie eine Verbindung mit dem PowerShell-Modul Office 365 Security & Compliance Center her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell).
+1. Stellen Sie eine Verbindung mit dem PowerShell-Modul Office 365 Security & Compliance Center her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 1. Um eine erweiterte Einstellung für Bezeichnungen zu definieren, verwenden Sie das Cmdlet **Set-Label**, wobei Sie den Parameter **AdvancedSettings**, die Bezeichnung, auf die Sie die Einstellung anwenden möchten, sowie Schlüssel-Wert-Paare zum Definieren Ihrer Einstellung angeben.
     
@@ -205,7 +205,7 @@ Weitere Informationen finden Sie in folgenden Quellen:
     - [Festlegen einer standardmäßigen untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](rms-client/clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](rms-client/clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
     - [Definieren von Bezeichnungen mit benutzerdefinierten Eigenschaften](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions) 
-    - [Definieren von Bezeichnungsübersetzungen](https://docs.microsoft.com/powershell/module/exchange/set-label) 
+    - [Definieren von Bezeichnungsübersetzungen](/powershell/module/exchange/set-label) 
 
     Weitere Informationen zu den verfügbaren erweiterten Konfigurationseinstellungen finden Sie im [Admin Guide: Custom configurations for the Azure Information Protection unified labeling client](rms-client/clientv2-admin-guide-customizations.md) (Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen).
 
@@ -225,10 +225,10 @@ Wenn Sie die Bedingungsfeatures für einheitliche Bezeichnungen nutzen möchten,
 - Microsoft 365 Security Center
 - Microsoft 365 Security & Compliance Center
 
-Weitere Informationen finden Sie in der Dokumentation zu Microsoft 365 im Artikel [Informationen zu Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
+Weitere Informationen finden Sie in der Dokumentation zu Microsoft 365 im Artikel [Informationen zu Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels#what-sensitivity-labels-can-do).
 
 > [!TIP]
-> Wenn Sie über benutzerdefinierte vertrauliche Datentypen verfügen, die für die Verwendung mit Office 365 DLP oder Microsoft Cloud App Security erstellt wurden, wenden Sie diese unverändert auf die einheitlichen Bezeichnungen an. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically).
+> Wenn Sie über benutzerdefinierte vertrauliche Datentypen verfügen, die für die Verwendung mit Office 365 DLP oder Microsoft Cloud App Security erstellt wurden, wenden Sie diese unverändert auf die einheitlichen Bezeichnungen an. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 >  
 
 ## <a name="deploy-a-unified-labeling-client"></a>Bereitstellen eines Clients für einheitliche Bezeichnungen
@@ -294,7 +294,7 @@ Beispiel:
  
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie Ihre Bezeichnungen, Richtlinien und bereitgestellten Clients nach Bedarf migriert haben, verwalten Sie die Bezeichnungen und Bezeichnungsrichtlinien weiterhin [ ausschließlich in Ihrem Admin Center für Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels), z. B. im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center.
+Nachdem Sie Ihre Bezeichnungen, Richtlinien und bereitgestellten Clients nach Bedarf migriert haben, verwalten Sie die Bezeichnungen und Bezeichnungsrichtlinien weiterhin [ ausschließlich in Ihrem Admin Center für Bezeichnungen](/microsoft-365/compliance/create-sensitivity-labels), z. B. im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center.
 
 Bei Verwendung der Plattform für einheitliche Bezeichnungen müssen Sie zurück zum Bereich „Azure Information Protection“ im Azure-Portal kehren, um Folgendes auszuführen:
 

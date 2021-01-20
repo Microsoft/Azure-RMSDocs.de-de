@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 10f142fb09d8ad65b773f5e02f03233b454da240
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 6936402c9b58bf46b94e71ab597ce04c0391f59d
+ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384535"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240817"
 ---
 # <a name="tutorial-preventing-oversharing-in-outlook-using-azure-information-protection-aip"></a>Tutorial: Verhindern übermäßiger Freigaben in Outlook mit Azure Information Protection (AIP)
 
@@ -41,7 +41,7 @@ Stellen Sie sicher, dass die folgenden Systemanforderungen erfüllt sind, bevor 
 |---------|---------|
 |**Computeranforderungen**     | Stellen Sie sicher, dass Sie: <br /><br />- Über einen Windows-Computer mit einem installierten Azure Information Protection-Client für einheitliche Bezeichnungen verfügen. Weitere Informationen finden Sie unter [Schnellstart: Bereitstellen des Azure Information Protection-Clients (AIP) für einheitliche Bezeichnungen](quickstart-deploy-client.md). <br /><br />- PowerShell installiert haben und dies als Administrator ausführen können. <br /><br />- Sich bei Outlook anmelden können. Sie werden Outlook während dieses Tutorials mehrere Male schließen und öffnen müssen.     |
 |**Azure Information Protection-Abonnement**     |   Sie benötigen ein Azure-Abonnement, das [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) umfasst. <br /><br />Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.       |
-|**Vertraulichkeitsbezeichnungen und eine Testrichtlinie**     |  Eine **allgemeine** Vertraulichkeitsbezeichnung, die in Ihrer Richtlinie konfiguriert ist. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Es wird empfohlen, eine Testrichtlinie für dieses Tutorial zu verwenden, damit Sie nicht Ihre Liverichtlinie beeinträchtigen. <br />Stellen Sie sicher, dass Sie den Namen Ihrer Richtlinie und die GUID für Ihre Bezeichnung **Allgemein** zur Hand haben.   |
+|**Vertraulichkeitsbezeichnungen und eine Testrichtlinie**     |  Eine **allgemeine** Vertraulichkeitsbezeichnung, die in Ihrer Richtlinie konfiguriert ist. <br /><br />Konfigurieren Sie Vertraulichkeitsbezeichnungen in ihrem Admin Center für Bezeichnungen, zum Beispiel im Microsoft 365 Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/create-sensitivity-labels). <br /><br />Es wird empfohlen, eine Testrichtlinie für dieses Tutorial zu verwenden, damit Sie nicht Ihre Liverichtlinie beeinträchtigen. <br />Stellen Sie sicher, dass Sie den Namen Ihrer Richtlinie und die GUID für Ihre Bezeichnung **Allgemein** zur Hand haben.   |
 | | |
 
 Fangen wir also an. 
@@ -399,7 +399,7 @@ Nach Abschluss dieses Tutorials können Sie die Testrichtlinien zur weiteren Ver
 
 Wenn Sie die Richtlinie löschen möchten, nutzen Sie hierzu das Admin Center, in dem sie erstellt wurde, d. h. entweder das Microsoft 365 Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Security & Compliance Center.
 
-Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
+Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy).
 
 Starten Sie Outlook nach dem Löschen auf dem Clientcomputer neu, sodass es nicht mehr mit den in diesem Tutorial definierten Einstellungen konfiguriert ist.
 
