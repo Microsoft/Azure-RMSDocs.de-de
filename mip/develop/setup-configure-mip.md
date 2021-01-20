@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.date: 06/13/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: 44636616cf410f0976a51afa4bd110e0531de85c
-ms.sourcegitcommit: 6322f840388067edbe3642661e313ff225be5563
+ms.openlocfilehash: 5daada951fb888fc7aa01071236af751ec38e002
+ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535551"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215526"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK: Setup und Konfiguration
 
@@ -102,7 +102,7 @@ Führen Sie nun die folgenden Schritte aus, um sicherzustellen, dass Ihr Clientc
 
    **TAR.GZ- bzw. ZIP-Downloads**
 
-   TAR.GZ- und ZIP-Downloads enthalten eine zusätzliche komprimierte Datei für jede API. Die komprimierten Dateien sind wie folgt benannt. Dabei entspricht \<API\> = `file`, `protection` oder `upe` und \<OS\> der Plattform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Beispielsweise wäre `mip_sdk_protection_debian9_1.0.0.0.tar.gz` die Datei für die Binärdateien und Header der Schutz-API unter Debian. Jede enthaltene TAR.GZ- oder ZIP-Datei ist in drei Verzeichnisse aufgeteilt:
+   TAR.GZ- und ZIP-Downloads enthalten für jede API eine komprimierte Datei. Die komprimierten Dateien sind wie folgt benannt. Dabei entspricht \<API\> = `file`, `protection` oder `upe` und \<OS\> der Plattform: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Beispielsweise wäre `mip_sdk_protection_debian9_1.0.0.0.tar.gz` die Datei für die Binärdateien und Header der Schutz-API unter Debian. Jede enthaltene TAR.GZ- oder ZIP-Datei ist in drei Verzeichnisse aufgeteilt:
 
    - **Bins:** Die kompilierten Binärdateien für jede Plattformarchitektur (sofern zutreffend)
    - **Include:** Headerdateien (C++)
@@ -155,7 +155,7 @@ So registrieren Sie ein Anwendungskonto in Azure AD für die Verwendung mit den 
 
 1. Befolgen Sie die Schritte im Abschnitt [Registrieren einer neuen Anwendung mit dem Azure-Portal](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). Verwenden Sie zu Testzwecken die folgenden Werte für die angegebenen Eigenschaften, wenn Sie die Schritte der Anleitung durchlaufen:
     - **Unterstützte Kontotypen**: Wählen Sie „Nur Konten in diesem Organisationsverzeichnis“ aus.
-    - **Weiterleitungs-URI**: Legen Sie den Typ des Weiterleitungs-URIs auf „Öffentlicher Client (mobil und Desktop)“ fest. Da das SDK einfache Konsolenclientanwendungen verwendet, verwenden Sie einen URI im Format `<app-name>://authorize`.
+    - **Weiterleitungs-URI**: Legen Sie den Typ des Weiterleitungs-URIs auf „Öffentlicher Client (mobil und Desktop)“ fest. Wenn Ihre Anwendung die Microsoft Authentication Library (MSAL) verwendet, verwenden Sie `http://localhost`. Verwenden Sie andernfalls etwas im Format `<app-name>://authorize`.
 
 2. Wenn Sie fertig sind, gelangen Sie zurück auf die Seite **Registrierte App** für Ihre neue Anwendungsregistrierung. Kopieren Sie die GUID, und speichern Sie sie im Feld **Anwendungs-ID (Client)** , da Sie sie für die Schnellstarts benötigen.
 
@@ -164,7 +164,7 @@ So registrieren Sie ein Anwendungskonto in Azure AD für die Verwendung mit den 
 4. Fügen Sie nun die MIP-APIs und Berechtigungen hinzu, die die Anwendung zur Laufzeit benötigt:
    - Klicken Sie auf der Seite **API auswählen** auf **Azure Rights Management Services**.
    - Klicken Sie auf der API-Seite **Azure Rights Management Services** auf **Delegierte Berechtigungen**.
-   - Aktivieren Sie im Abschnitt **Berechtigungen auswählen** die Berechtigung **user_impersonation**. Dadurch kann die Anwendung im Namen eines Benutzers geschützte Inhalte erstellen und darauf zugreifen.
+   - Aktivieren Sie im Abschnitt **Berechtigungen auswählen** die Berechtigung **user_impersonation**. Dieses Recht ermöglicht der Anwendung, im Namen eines Benutzers geschützte Inhalte zu erstellen und darauf zuzugreifen.
    - Klicken Sie zum Speichern auf **Berechtigungen hinzufügen**.
 
 5. Wiederholen Sie Schritt Nr. 4. Wenn Sie auf die Seite **Auswählen einer API** gelangen, müssen Sie dieses Mal jedoch nach der API suchen.
@@ -177,7 +177,7 @@ So registrieren Sie ein Anwendungskonto in Azure AD für die Verwendung mit den 
 
 Wenn Sie fertig sind, sollten die Anwendungsregistrierung und die API-Berechtigungen ähnlich wie im folgenden Beispiel aussehen:
 
-   [![Azure AD-App-Registrierung](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD-App-Berechtigungen](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
+   [![Azure AD-App-Registrierung](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Azure AD-App-Registrierung](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 Weitere Informationen zum Hinzufügen von APIs und Berechtigungen zu einer Registrierung finden Sie unter [Konfigurieren einer Clientanwendung für den Zugriff auf Web-APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Hier finden Sie Informationen zum Hinzufügen von APIs und Berechtigungen, die von einer Clientanwendung benötigt werden.
 
