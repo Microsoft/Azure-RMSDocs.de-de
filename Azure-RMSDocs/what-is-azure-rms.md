@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: de6aa96fefb8dbd2fd10c8ea265e509f20aef2d4
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f23d9da0aae7d3cae681c829187f8371c84ca167
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384450"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659084"
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
 
@@ -93,7 +93,7 @@ Azure RMS unterstützt viele unterschiedliche Plattformen und Anwendungen wie di
 |---------|---------|
 |**Häufig verwendete Geräte** </br>nicht nur Windows-Computer     | Zu den [Clientgeräten](requirements.md#client-devices) gehören: </br></br>- Windows-Computer und -Telefone </br>- Mac-Computer </br>- iOS-Tablets und -Telefone </br>- Android-Tablets und -Telefone        |
 |**Lokale Dienste**     | Azure RMS arbeitet [nahtlos mit Office 365](office-apps-services-support.md) zusammen. Außerdem lässt sich Azure Rights Management mit den folgenden lokalen Diensten verwenden, wenn Sie den [RMS-Connector](deploy-rms-connector.md) bereitstellen: </br></br>- Exchange Server </br>- SharePoint Server </br>- Windows Server mit Dateiklassifizierungsinfrastruktur        |
-|**Anwendungserweiterbarkeit**     |Azure Rights Management ist eng auf Microsoft Office-Anwendungen und -Dienste abgestimmt und ermöglicht durch Verwenden des [Azure Information Protection-Clients](./rms-client/use-client.md ) erweiterte Unterstützung für andere Anwendungen. </br></br>Mit den [Azure Information Protection SDKs](./develop/developers-guide.md) erhalten Ihre internen Entwickler sowie Softwarehersteller APIs, mit denen sie angepasste Anwendungen schreiben können, die Azure Information Protection unterstützen. </br></br>Weitere Informationen finden Sie unter [Sonstige Anwendungen, die die Rights Management-APIs unterstützen](api-support.md).         |
+|**Anwendungserweiterbarkeit**     |Azure Rights Management ist eng auf Microsoft Office-Anwendungen und -Dienste abgestimmt und ermöglicht durch Verwenden des [Azure Information Protection-Clients](./rms-client/use-client.md ) erweiterte Unterstützung für andere Anwendungen. </br></br>Mit dem [Microsoft Information Protection SDK](/information-protection/develop/) erhalten Ihre internen Entwickler sowie Softwarehersteller APIs, mit denen sie angepasste Anwendungen schreiben können, die Azure Information Protection unterstützen. </br></br>Weitere Informationen finden Sie unter [Sonstige Anwendungen, die die Rights Management-APIs unterstützen](api-support.md).         |
 | | |
 
 ### <a name="infrastructure-features"></a>Infrastrukturfunktionen
