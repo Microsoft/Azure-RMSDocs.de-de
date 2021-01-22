@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen, die Sie beim Überwachen des Connect
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 01/20/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a440f075e8bbcd4d8c2d8ee8050ef0ab1d203b54
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 49b74533f745906ee919173884c8bc4bafdb52fa
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97381832"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659101"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 *
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Nach der Installation und Konfiguration des RMS-Connectors können Sie die folgenden Methoden und Informationen verwenden, um den Connector und die Nutzung des Azure Rights Management-Diensts von Azure Information Protection in Ihrer Organisation zu überwachen.
 
@@ -179,21 +179,25 @@ Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und 
 
 Weitere Informationen zur Verwendungs Protokollierung finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](log-analyze-usage.md).
 
-Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, können Sie [Debugview](/sysinternals/downloads/debugview) von Windows Sysinternals verwenden. Aktivieren Sie die Ablaufverfolgung für den RMS-Connector, indem Sie die Datei „Web.config“ für die Standardwebsite in IIS ändern:
+Wenn Sie eine ausführlichere Protokollierung zu Diagnose Zwecken benötigen, verwenden Sie [DebugView](/sysinternals/downloads/debugview) von Windows Sysinternals, um die Protokolle an eine debugpipe auszugeben. 
 
-1. Wechseln Sie unter **%programfiles%\Microsoft Rights Management connector\Web Service** zur Datei „web.config“.
+1. Starten Sie DebugView als Administrator, und wählen Sie **Erfassung**  >  **Global Win32** erfassen aus.
 
-1. Suchen Sie die folgende Zeile:
+1. Aktivieren Sie die Ablauf Verfolgung für den RMS-Connector, indem Sie die **web.config** Datei für die Standard Website in IIS ändern:
 
-    ```sh
-    <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Suchen Sie die Datei **web.config** im Ordner **%ProgramFiles%\Microsoft Rights Management connector\webdienst** .
 
-1. Ersetzen Sie diese Zeile durch folgenden Text:
-    ```sh
-    <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
-    ```
+    1. Suchen Sie die folgende Zeile:
+
+        ```sh
+        <trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
+
+    1. Ersetzen Sie diese Zeile durch folgenden Text:
+        ```sh
+        <trace enabled="true" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+        ```
 
 1.  Halten Sie IIS an, und starten Sie die Dienste neu, um die Ablaufverfolgung zu aktivieren. 
 
-1.  Nachdem Sie die benötigten Ablaufverfolgungen erfasst haben, stellen Sie die Zeile in Schritt 3 wieder her. Anschließend halten Sie IIS erneut an und starten die Dienste neu.
+1.  Wenn Sie die von Ihnen benötigten Ablauf Verfolgungen in der gewünschten debuview aufgezeichnet haben, setzen Sie die Zeile in Schritt 3 zurück, und starten Sie IIS erneut.
