@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fcd21a58dabe65f1de88694f97dc57975bc19450
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: e715ca9f5131095e38e0fb9589494924ae36210f
+ms.sourcegitcommit: b82640b2af14b383a3d4d73692f3da907dc0f191
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659067"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711868"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -153,37 +153,37 @@ Weitere Informationen finden Sie auch unter:
 |**Manuelle Bezeichnung**| ![ja](../media/yes-icon.png)   | ![ja](../media/yes-icon.png)   |![ja](../media/yes-icon.png) |
 |**Standard Bezeichnung**| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)|
 |**Empfohlene oder automatische Bezeichnung** <br />Für Word, Excel, PowerPoint, Outlook|![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |
-|**Obligatorische Bezeichnung**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|
+|**Obligatorische Bezeichnung**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![ja](../media/yes-icon.png)|
 |**Benutzerdefinierte Berechtigungen für eine Bezeichnung**: <br />Nicht weiterleiten für e-Mails| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |
 |**Benutzerdefinierte Berechtigungen für eine Bezeichnung**: <br />Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |
 |**Unterstützung mehrerer Sprachen für Bezeichnungen**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |![ja](../media/yes-icon.png) |
-|**Vererbung von e-Mail-Anhängen**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)  | ![nein](../media/no-icon.png)|
-|**Anpassungen, die Folgendes umfassen**:<br />– Standardbezeichnung für E-Mails<br />: Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| ![Ja ](../media/yes-icon.png) <sup>1</sup> | ![Ja ](../media/yes-icon.png) <sup>2</sup> |  ![nein](../media/no-icon.png)|
-|**Scanner für lokale Datenspeicher**| ![ja](../media/yes-icon.png) |  ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|
-|**Zentrale Berichterstellung (Analytics)**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|
-|**Benutzerdefinierte Berechtigungen, die unabhängig von einer Bezeichnung festgelegt wurden**| ![ja](../media/yes-icon.png) | ![Ja ](../media/yes-icon.png) <sup>3</sup>|  ![nein](../media/no-icon.png)|
-|**Information Protection Leiste in Office-Apps**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)|  ![nein](../media/no-icon.png)|
+|**Vererbung von e-Mail-Anhängen**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)  | ![Nein](../media/no-icon.png)|
+|**Anpassungen, die Folgendes umfassen**:<br />– Standardbezeichnung für E-Mails<br />: Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| ![Ja ](../media/yes-icon.png) <sup>1</sup> | ![Ja ](../media/yes-icon.png) <sup>2</sup> |  ![Nein](../media/no-icon.png)|
+|**Scanner für lokale Datenspeicher**| ![ja](../media/yes-icon.png) |  ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|
+|**Zentrale Berichterstellung (Analytics)**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|
+|**Benutzerdefinierte Berechtigungen, die unabhängig von einer Bezeichnung festgelegt wurden**| ![ja](../media/yes-icon.png) | ![Ja ](../media/yes-icon.png) <sup>3</sup>|  ![Nein](../media/no-icon.png)|
+|**Information Protection Leiste in Office-Apps**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)|  ![Nein](../media/no-icon.png)|
 |**Visuelle Kennzeichnungen als Bezeichnungs Aktion**<br> (Kopfzeile, Fußzeile, Wasserzeichen)| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)|
 |**Visuelle Kennzeichnungen pro App**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![Ja ](../media/yes-icon.png) <sup>9</sup>|
 |**Dynamische visuelle Kennzeichnungen mit Variablen**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![Ja ](../media/yes-icon.png) <sup>9</sup>|
-|**Externe Inhalts Markierung in App entfernen**| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)| ![nein](../media/no-icon.png)|
-|**Bezeichnung mit dem Datei-Explorer**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|
-|**Ein Viewer für geschützte Dateien** <br> (Text, Bilder, PDF, Pfile-Datei)| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![nein](../media/no-icon.png)|
-|**Ppdf-Unterstützung für das Anwenden von Bezeichnungen**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
-|**Cmdlets für die PowerShell-Bezeichnung**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)  |  ![nein](../media/no-icon.png)|
+|**Externe Inhalts Markierung in App entfernen**| ![ja](../media/yes-icon.png)| ![ja](../media/yes-icon.png)| ![Nein](../media/no-icon.png)|
+|**Bezeichnung mit dem Datei-Explorer**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|
+|**Ein Viewer für geschützte Dateien** <br> (Text, Bilder, PDF, Pfile-Datei)| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![Nein](../media/no-icon.png)|
+|**Ppdf-Unterstützung für das Anwenden von Bezeichnungen**| ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|  ![Nein](../media/no-icon.png)|
+|**Cmdlets für die PowerShell-Bezeichnung**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)  |  ![Nein](../media/no-icon.png)|
 |**Offline Unterstützung für Schutz Aktionen**| ![ja](../media/yes-icon.png) | ![Ja ](../media/yes-icon.png) <sup>4</sup> | ![ja](../media/yes-icon.png) |
-|**Manuelle Richtlinien Dateiverwaltung für nicht verbundene Computer**| ![ja](../media/yes-icon.png) |![ja](../media/yes-icon.png)|  ![nein](../media/no-icon.png)|
-|**Hyok-Unterstützung**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
-|**Verwendungs Protokollierung in Ereignisanzeige**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)| ![nein](../media/no-icon.png)|
-|**Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen**| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
-|**Geschützte Dokumente nachverfolgen**| ![Ja ](../media/yes-icon.png) <sup>5</sup> | ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![nein](../media/no-icon.png)|
-|**Geschützte Dokumente widerrufen**| ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![Ja ](../media/yes-icon.png) <sup>5</sup>|  ![nein](../media/no-icon.png)|
-|**Nur Schutzmodus** (keine Bezeichnungen)| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)|
-|**Unterstützung für Kontowechsel**|  ![nein](../media/no-icon.png)|  ![nein](../media/no-icon.png)| ![ja](../media/yes-icon.png) |
+|**Manuelle Richtlinien Dateiverwaltung für nicht verbundene Computer**| ![ja](../media/yes-icon.png) |![ja](../media/yes-icon.png)|  ![Nein](../media/no-icon.png)|
+|**Hyok-Unterstützung**| ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|  ![Nein](../media/no-icon.png)|
+|**Verwendungs Protokollierung in Ereignisanzeige**| ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)| ![Nein](../media/no-icon.png)|
+|**Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen**| ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|  ![Nein](../media/no-icon.png)|
+|**Geschützte Dokumente nachverfolgen**| ![Ja ](../media/yes-icon.png) <sup>5</sup> | ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![Nein](../media/no-icon.png)|
+|**Geschützte Dokumente widerrufen**| ![Ja ](../media/yes-icon.png) <sup>5</sup> |  ![Ja ](../media/yes-icon.png) <sup>5</sup>|  ![Nein](../media/no-icon.png)|
+|**Nur Schutzmodus** (keine Bezeichnungen)| ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|  ![Nein](../media/no-icon.png)|
+|**Unterstützung für Kontowechsel**|  ![Nein](../media/no-icon.png)|  ![Nein](../media/no-icon.png)| ![ja](../media/yes-icon.png) |
 |**Unterstützung für Remotedesktopdienste**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |
-|**Unterstützung für AD RMS**| ![ja](../media/yes-icon.png) |  ![Nein ](../media/no-icon.png) <sup>6</sup> |  ![nein](../media/no-icon.png)|
+|**Unterstützung für AD RMS**| ![ja](../media/yes-icon.png) |  ![Nein ](../media/no-icon.png) <sup>6</sup> |  ![Nein](../media/no-icon.png)|
 |**Unterstützung für Microsoft Office 97-2003-Formate**| ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) |  ![Nein ](../media/no-icon.png) <sup>8</sup>|
-|**Doppelte Schlüssel Verschlüsselung**|  ![nein](../media/no-icon.png)| ![ja](../media/yes-icon.png) |  ![nein](../media/no-icon.png)|
+|**Doppelte Schlüssel Verschlüsselung**|  ![Nein](../media/no-icon.png)| ![ja](../media/yes-icon.png) |  ![Nein](../media/no-icon.png)|
 |**Government-Community-Cloud** | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png) | ![ja](../media/yes-icon.png)|
 | | | | |
 
