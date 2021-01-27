@@ -1,18 +1,18 @@
 ---
 title: 'Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung für eine Datei mit dem C++ MIP SDK'
-description: In diesem Schnellstart wird veranschaulicht, wie Sie mit dem Microsoft Information Protection C++ SDK eine Vertraulichkeitsbezeichnung für eine Datei festlegen und abrufen können.
+description: In diesem Schnellstart wird veranschaulicht, wie Sie mit dem Microsoft Information Protection C++ SDK eine Vertraulichkeitsbezeichnung für eine Datei festlegen und abrufen können (C++).
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 41c91ed1453b0819be727d333e15987ee9b3da3a
-ms.sourcegitcommit: 8e48016754e6bc6d051138b3e3e3e3edbff56ba5
+ms.openlocfilehash: 101e99790c09acb52841d81e139802b039adb710
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865160"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659169"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C++)
 
@@ -220,7 +220,7 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    | Platzhalter | Wert |
    |:----------- |:----- |
    | \<input-file-path\> | Der vollständige Pfad zu einer Testeingabedatei. Beispiel: `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Ein lesbarer Inhaltsbezeichner. Zum Beispiel: <ul><li>Verwenden Sie für eine Datei das Format Pfad\Dateiname: `"c:\Test\Test.docx"`.</li><li>Verwenden Sie für eine E-Mail das Format Betreff:Absender: `"RE: Audit design:user1@contoso.com"`.</li></ul> |
+   | \<content-identifier\> | Ein lesbarer Inhaltsbezeichner. Beispiel: <ul><li>Verwenden Sie für eine Datei das Format Pfad\Dateiname: `"c:\Test\Test.docx"`.</li><li>Verwenden Sie für eine E-Mail das Format Betreff:Absender: `"RE: Audit design:user1@contoso.com"`.</li></ul> |
    | \<label-id\> | Eine Vertraulichkeitsbezeichnungs-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wird. Beispiel: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Der vollständige Pfad zur Ausgabedatei, die eine bezeichnete Kopie der Eingabedatei ist. Beispiel: `"c:\\Test\\Test_labeled.docx"`. |
 

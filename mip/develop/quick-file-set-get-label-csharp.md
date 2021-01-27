@@ -1,6 +1,6 @@
 ---
 title: 'Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung für eine Datei mit dem MSIP SDK für C#'
-description: In diesem Schnellstart wird veranschaulicht, wie Sie mit dem .NET-Wrapper für das Microsoft Information Protection SDK eine Vertraulichkeitsbezeichnung für eine Datei festlegen und abrufen können.
+description: In diesem Schnellstart wird veranschaulicht, wie Sie mit dem .NET-Wrapper für das Microsoft Information Protection SDK eine Vertraulichkeitsbezeichnung für eine Datei festlegen und abrufen können (C#).
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.custom: has-adal-ref
-ms.openlocfilehash: dc26f9c1f75157d81b160790e53bc27fd2c2b059
-ms.sourcegitcommit: 298843953f9792c5879e199fd1695abf3d25aa70
+ms.openlocfilehash: aaa7857146bc2dbc806e20097657831445e48949
+ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82972168"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98659033"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C#)
 
