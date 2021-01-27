@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/24/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4b936baf799808fadbdaaefc0ae1fd55a6853fb2
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 94fc34bc7e1ec5c1802c78f3bf4347bfac75371f
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164447"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809900"
 ---
 # <a name="what-is-the-azure-information-protection-app-for-ios-or-android"></a>Was ist die Azure Information Protection-App für IOS oder Android?
 
@@ -84,7 +84,7 @@ Nachdem Sie [das AIP-Mobile App installiert](#download-and-install-the-aip-app-f
 
 Die mobilen AIP-Apps für IOS und Android unterstützen die folgenden Dateitypen und Umgebungen:
 
-|Anforderung  |BESCHREIBUNG  |
+|Anforderung  |Beschreibung  |
 |---------|---------|
 |**Unterstützte Betriebssystemversionen**     | Die Mindestanforderungen für mobile Betriebssysteme sind: </br>-IOS 11  </br>-Android 6,0 </br></br>**Hinweis**: die mobilen AIP-apps werden auf Intel-CPUs nicht unterstützt.  |
 |**Unterstützte Anmelde Informationen**     | Melden Sie sich mit einer der folgenden Aktionen bei den mobilen AIP-apps an: </br></br>**Anmelde Informationen für Geschäfts-oder Schul Konto** Melden Sie sich mit den Anmelde Informationen Ihres Geschäfts-oder Schul Kontos an. Wenn Sie Fragen haben, wenden Sie sich an Ihren Administrator, um zu verstehen, ob Ihr Unternehmen lokal mit der Erweiterung für mobile Geräte AD RMS oder Azure Information Protection verwendet. </br></br>**Eine Microsoft-Konto.** Wenn Ihre persönliche e-Mail-Adresse zum Schutz der Datei verwendet wurde, melden Sie sich mit einem [Microsoft-Konto](https://signup.live.com)an. Wenn Sie sich für eine Microsoft-Konto bewerben müssen, können Sie dazu ihren eigenen Hotmail, Gmail oder jede andere e-Mail-Adresse verwenden. </br></br>**Hinweis**: nicht alle Anwendungen können Inhalte öffnen, die mit einem Microsoft-Konto geschützt sind. Weitere Informationen finden Sie [unter Unterstützte Szenarien für das Öffnen geschützter Dokumente](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|

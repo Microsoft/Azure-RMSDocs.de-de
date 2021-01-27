@@ -5,28 +5,28 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 10/04/2019
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 128989642e78ab0d7d45f53e5fc72a2c85bbf28f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 985f567189cbc65920b53af3f797d5c62d2671c5
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384263"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809459"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Wenn Sie Azure Information Protection konfigurieren und verwenden, werden E-Mail-Adressen und IP-Adressen von Azure Information Protection gespeichert und verwendet. Diese personenbezogenen Daten können Sie den folgenden Ressourcen entnehmen:
 
@@ -73,7 +73,7 @@ Führen Sie das Cmdlet [Get-aipservicesuperuser](/powershell/module/aipservice/g
 
 Führen Sie das Cmdlet [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog) aus, um ein Protokoll der Administrator Aktionen für den Schutzdienst (Azure Rights Management) von Azure Information Protection zu erhalten. Dieses Protokoll enthält personenbezogene Daten in der Form von E-Mail-Adressen und IP-Adressen. Das Protokoll ist im Klartextformat. Nachdem es heruntergeladen wurde, können die genauen Angaben eines bestimmten Administrators offline gesucht werden.
 
-Zum Beispiel:
+Beispiel:
 ```PowerShell
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -82,7 +82,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>Verwendungs Protokolle für den Schutzdienst
 Führen Sie das Cmdlet [Get-aipserviceuserlog](/powershell/module/aipservice/get-aipserviceuserlog) aus, um ein Protokoll mit Endbenutzer Aktionen abzurufen, die den Schutzdienst von Azure Information Protection verwenden. Dieses Protokoll enthält möglicherweise personenbezogene Daten in der Form von E-Mail-Adressen und IP-Adressen. Das Protokoll ist im Klartextformat. Nachdem es heruntergeladen wurde, können die genauen Angaben eines bestimmten Administrators offline gesucht werden.
 
-Zum Beispiel:
+Beispiel:
 ```PowerShell
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -170,7 +170,7 @@ LabelId                 :
 
 Führen Sie das Cmdlet [Get-aipservicedocumentlog](/powershell/module/aipservice/get-aipservicedocumentlog) aus, um Informationen über einen bestimmten Benutzer von der Website für die Dokument Nachverfolgung abzurufen. Verwenden Sie das Cmdlet [Get-aipservicetrackinglog](/powershell/module/aipservice/get-aipservicetrackinglog) , um die mit den Dokument Protokollen verknüpften Überwachungsinformationen zu erhalten.
 
-Zum Beispiel:
+Beispiel:
 ```PowerShell
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -241,7 +241,7 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
 
 - **Globaler Administrator**
 
-- **Globaler Reader**
+- **Globaler Leser**
 
 Personenbezogene Daten, die Sie mit dem aipservice-Modul (oder dem älteren Modul, aadrm) anzeigen und angeben, können nur für Benutzer zugänglich gemacht werden, denen die Rollen **Azure Information Protection Administrator**, **Compliance-Administrator**, Kompatibilitäts **Daten Administrator** oder **globaler Administrator** von Azure Active Directory oder der Rolle globaler Administrator für den Schutzdienst zugewiesen wurden.
 

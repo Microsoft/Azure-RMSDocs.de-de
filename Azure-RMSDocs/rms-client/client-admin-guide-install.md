@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/15/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5eab2eee3fb0117bc3efd21c2605fc8d0293178d
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: c744d29bb687ec16683e6a94c557698cb1448e4e
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560372"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808656"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-classic-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection des klassischen Clients für Benutzer
 
@@ -63,7 +63,7 @@ ms.locfileid: "98560372"
     Wenn Sie eine höhere Version des Anmeldeassistenten besitzen, deinstallieren Sie sie vor der Installation des Azure Information Protection-Clients. Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmelde Assistenten mithilfe der **System Steuerungs** Option  >  **Programm und Features**  >  **deinstallieren oder ändern Sie ein Programm**.
 
     > [!IMPORTANT]
-    > Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 - **4482887 KB**
@@ -97,7 +97,7 @@ ms.locfileid: "98560372"
 
 Verwenden Sie eine der folgenden Optionen zum Installieren des-Clients für Benutzer:
 
-|Option installieren  |BESCHREIBUNG  |
+|Option installieren  |Beschreibung  |
 |---------|---------|
 |**Ausführen der ausführbaren Client Datei (. exe)**  <br><br> [Anweisungen](#to-install-the-azure-information-protection-client-by-using-the-executable-installer)      | Es wird empfohlen, die exe-Version des Clients auszuführen, um die Installation interaktiv oder im Hintergrund auszuführen.<br><br> Das Ausführen der exe-Datei bietet die größte Flexibilität und wird empfohlen, da Sie außerdem eine Reihe von Voraussetzungen prüft und auch fehlende fehlende Voraussetzungen installieren kann. |
 |**Bereitstellen des Windows Installer (. msi) des Clients** <br><br> [Anweisungen](#to-install-the-azure-information-protection-client-by-using-the-msi-installer)    | Der Azure Information Protection-Client Windows Installer wird nur für unbeaufsichtigte Installationen unterstützt, die einen zentralen Bereitstellungs Mechanismus verwenden.<br><br> Verwenden Sie z. b. die MSI-Datei, wenn Sie mit einer Gruppenrichtlinie, Configuration Manager und Microsoft InTune bereitstellen.<br><br> Sie müssen diese Methode für Windows 10-PCs verwenden, die von InTune und der Verwaltung mobiler Geräte (Mobile Device Management, MDM) verwaltet werden, da exe-Dateien für diese Computer nicht unterstützt werden.<br><br>**Hinweis**: Wenn Sie die MSI-Installation verwenden, müssen Sie manuell nach erforderlichen Komponenten suchen und abhängige Software installieren oder deinstallieren. |
@@ -130,7 +130,7 @@ Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Si
     - **ServiceLocation**: Verwenden Sie diesen Parameter, wenn Sie den Client auf Computern installieren, die Office 2010 ausführen, und Ihre Benutzer keine lokalen Administratoren auf ihren Computern sind, oder wenn Sie keine Eingabeaufforderung für die Benutzer anzeigen lassen möchten.  Weitere Informationen finden Sie unter [Weitere Informationen zum servicelokation-Installationsparameter](#more-information-about-the-servicelocation-installation-parameter). 
     
         > [!IMPORTANT]
-        > Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+        > Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
         >
 
 1. Wenn Sie interaktiv installieren, wählen Sie die Option zum Installieren einer **Demo Richtlinie** aus, wenn Sie keine Verbindung mit Microsoft 365 oder Azure Active Directory herstellen können, aber die Clientseite von Azure Information Protection anzeigen und anzeigen möchten, indem Sie eine lokale Richtlinie zu Demonstrationszwecken verwenden. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.
@@ -154,7 +154,7 @@ Wenn Sie den-Client für Benutzer installieren, die über Office 2010 verfügen 
 
     
 > [!IMPORTANT]
-> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
 Dieser Parameter und Wert erstellt die folgenden Registrierungsschlüssel und legt sie fest:
@@ -219,7 +219,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     | | | | |
     
     > [!IMPORTANT]
-    > Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 1. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection.msi /quiet`. Allerdings müssen möglicherweise weitere Installationsparameter angegeben werden, die in den [Anweisungen zum ausführbaren Installationsprogramm](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) dokumentiert sind.

@@ -5,18 +5,18 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 01/14/2021
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60f9493601d40b17c42354dae2d3978b8cb5972b
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 2a4bd98e22789e71cf090efb4c83a2a1ba000df2
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560066"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809919"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
@@ -30,7 +30,7 @@ Wenn Sie den Azure Information Protection Unified Bezeichnung-Client installiere
 
 Mit dem **azureinformationprotection** -Modul können Sie den-Client verwalten, indem Sie Befehle für Automatisierungs Skripts ausführen.
 
-Zum Beispiel:
+Beispiel:
 
 - [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus): Ruft die Azure Information Protection Bezeichnung und die Schutz Informationen für eine angegebene Datei oder Dateien ab.
 - [Set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification): scannt eine Datei, um automatisch eine Azure Information Protection Bezeichnung für eine Datei festzulegen, gemäß den Bedingungen, die in der Richtlinie konfiguriert sind.

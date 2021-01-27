@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9e72c64fe59626f5f670712a2503308047e1aff8
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 1751368b74d6ed2800bfd2e7432a4ce4a5844f0a
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164299"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809763"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -55,7 +55,7 @@ Wenn Sie diesen Benutzern nicht über eine dieser Konfigurationen Zugriff auf di
 
 Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Bezeichnungen weiterhin Bezeichnungen und Richtlinien sowohl im Azure-Portal als auch in den Admin-Centers verwalten.
 
-## <a name="before-you-begin"></a>Vorbereitungen
+## <a name="before-you-begin"></a>Voraussetzungen
 
 Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig. Stellen Sie vor der Migration sicher, dass Sie die folgenden Änderungen und Überlegungen beachten:
 
@@ -141,7 +141,7 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 
 |Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für die Admin-Centers|
 |-------------------|---------------------------------------------|-------------------------|
-|**Statusangabe „Aktiviert“/„Deaktiviert“**<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht zutreffend|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
+|**Statusangabe „Aktiviert“/„Deaktiviert“**<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
 |**Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben** |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungs Farben im Azure-Portal konfigurieren oder [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)verwenden.|
 |**Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage** |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
 |**Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint** |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
@@ -150,7 +150,7 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 |**Variablen in visuellen Markierungen** (Kopfzeile, Fußzeile) |Ja|Diese Bezeichnung wird von den AIP-Clients und der integrierten Office-Bezeichnung für ausgewählte Apps unterstützt. <br /><br />Wenn Sie mit einer integrierten Bezeichnung arbeiten, die eine APP verwendet, die diese Konfiguration nicht unterstützt, und diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen als Text auf Clients angezeigt, anstatt den dynamischen Wert anzuzeigen.<br /><br />Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels-office-apps#dynamic-markings-with-variables). |
 |**Visuelle Kennzeichnungen pro App**|Ja|Diese Bezeichnung wird nur von den AIP-Clients und nicht von der integrierten Office-Bezeichnung unterstützt. <br /><br />Wenn Sie mit integrierter Bezeichnung arbeiten und diese Bezeichnung ohne Änderungen veröffentlichen, wird die Konfiguration der visuellen Markierung als Variablen Text anstelle der visuellen Kennzeichnungen angezeigt, die Sie für die Anzeige in den einzelnen apps konfiguriert haben.  |
 |**"Nur für mich" Schutz**|Ja|Die Admin Center erlauben Ihnen nicht, die von Ihnen geltenden Verschlüsselungseinstellungen zu speichern, ohne Benutzer anzugeben. Im Azure-Portal führt diese Konfiguration zu einer Bezeichnung, die den [Schutz "nur für mich](configure-policy-protection.md#example-6-label-that-applies-just-for-me-protection)" betrifft. <br /><br /> Erstellen Sie alternativ eine Bezeichnung, die die Verschlüsselung anwendet und einen Benutzer mit beliebigen Berechtigungen angibt, und bearbeiten Sie dann die zugehörige Schutz Vorlage mithilfe von PowerShell. Verwenden Sie zunächst das Cmdlet [New-aipservicerighundefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) (siehe Beispiel 3), und legen Sie dann [-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) mit dem Parameter *rightiondefinitions* fest.|
-|**Bedingungen und entsprechende Einstellungen** <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht zutreffend|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
+|**Bedingungen und entsprechende Einstellungen** <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 | | | |
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung

@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 03/16/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ROBOTS: NOINDEX
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: fc02a679cfbc389cb4f09e72018f0b96a30a8b0a
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 4687241aa49bd760b3d246300f2e5004fe756591
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164317"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809724"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>So konfigurieren Sie eine Bezeichnung für den Rights Management-Schutz
 
@@ -101,7 +101,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     In den meisten Fällen werden Sie **Azure (Cloudschlüssel)** für Ihre Berechtigungseinstellungen auswählen. Wählen Sie **HYOK (AD RMS)** nur dann aus, wenn Sie die Voraussetzungen und Einschränkungen gelesen haben und genau kennen, die mit dieser *Hold Your Own Key*-Konfiguration (lokal gehosteter Schlüssel) einhergehen. Weitere Informationen finden Sie unter [Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz](configure-adrms-restrictions.md). Um die Konfiguration für HYOK (AD RMS) fortzufahren, gehen Sie zu Schritt 9.
     
-6. Wählen Sie eine der folgenden Optionen aus:
+6. Wählen Sie einen der folgenden Optionen aus:
     
    - **Berechtigungen festlegen**: Hiermit definieren Sie neue Schutzeinstellungen in diesem Portal.
     

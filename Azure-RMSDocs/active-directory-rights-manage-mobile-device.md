@@ -5,24 +5,24 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 07/28/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 874a73480e8d15380d9e69a532a1b8ff39d38eb7
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: 3fca14f82db5cd78727b14cc417517921baa0f7b
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384161"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98808585"
 ---
 # <a name="active-directory-rights-management-services-mobile-device-extension"></a>Active Directory Rights Management Services-Mobilgeräteerweiterung
 
 >***Gilt für**: Windows Server 2019, 2016, 2012 R2 und 2012 *
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Sie können die Erweiterung für mobile Geräte für Active Directory Rights Management Services (AD RMS) aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=43738) herunterladen und diese Erweiterung zusätzlich zu einer vorhandenen AD RMS Bereitstellung installieren. Dadurch können Benutzer sensible Daten schützen und nutzen, wenn Ihr Gerät die neuesten API-aktivierten Apps unterstützt. Beispielsweise können Benutzer folgende Aktionen ausführen:
 - Verwenden Sie die Azure Information Protection-APP, um geschützte Textdateien in verschiedenen Formaten (einschließlich txt, CSV und XML) zu verwenden.
@@ -226,7 +226,7 @@ Wenn Sie die DNS-Server Rolle unter Windows Server verwenden, verwenden Sie die 
 |Domain|_tcp....
 |Dienst|_rmsdisco
 |Protocol|_http
-|Priority|0
+|Priorität|0
 |Weight|0
 |Portnummer|443
 |Host, der diesen Dienst anbietet|_rmsserver....
@@ -236,7 +236,7 @@ Wenn Sie die DNS-Server Rolle unter Windows Server verwenden, verwenden Sie die 
 |Domain|_tcp. fabrikam. com
 |Dienst|_rmsdisco
 |Protocol|_http
-|Priority|0
+|Priorität|0
 |Weight|0
 |Portnummer|443
 |Host, der diesen Dienst anbietet|_rmsserver....|
@@ -253,7 +253,7 @@ Wenn Sie die DNS-Server Rolle unter Windows Server verwenden, verwenden Sie die 
 |Domain|_tcp....
 |Dienst|_rmsdisco
 |Protocol|_http
-|Priority|0
+|Priorität|0
 |Weight|0
 |Portnummer|443
 |Host, der diesen Dienst anbietet|_rmsserver....|

@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
@@ -13,18 +13,18 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 53c5edea2593a653eec82ec5a61efed58ae76c1f
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: bc9da85af00c0f183d79347b0b723da8e090aaa4
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97383923"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809813"
 ---
 # <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Byok-Details (Bring your own Key) für Azure Information Protection
 
->***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 Organisationen mit einem Azure Information Protection Abonnement können Ihren Mandanten anstelle eines von Microsoft generierten Standard Schlüssels mit einem eigenen Schlüssel konfigurieren. Diese Konfiguration wird häufig als Bring your own Key (Byok) bezeichnet.
 
@@ -159,7 +159,7 @@ Die Byok-Voraussetzungen variieren abhängig von der Systemkonfiguration. Stelle
 |**Aipservice-PowerShell-Modul für Azure Information Protection**|Für alle Konfigurationen erforderlich. <br />Weitere Informationen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](./install-powershell.md).|
 |**Azure Key Vault Voraussetzungen für Byok** | Wenn Sie einen HSM-geschützten Schlüssel verwenden, der lokal erstellt wurde, stellen Sie sicher, dass Sie auch die [Voraussetzungen für Byok](/azure/key-vault/keys/hsm-protected-keys-byok#prerequisites) erfüllen, die in der Azure Key Vault-Dokumentation aufgeführt sind.         |
 |**Thales-Firmwareversion 11,62**    |Sie müssen über eine Thales-Firmwareversion von 11,62 verfügen, wenn Sie von AD RMS zu Azure Information Protection migrieren, indem Sie den Software Schlüssel zum Hardwareschlüssel verwenden und Thales Firmware für Ihr HSM verwenden.
-|**Umgehung der Firewall für vertrauenswürdige Microsoft-Dienste** |Wenn der Schlüssel Tresor, der ihren Mandanten Schlüssel enthält, Virtual Network Dienst Endpunkte für Azure Key Vault verwendet, müssen Sie vertrauenswürdigen Microsoft-Diensten gestatten, diese Firewall zu umgehen. <br />Weitere Informationen finden Sie im Blog [Virtual Network Service Endpoints for Azure Key Vault (Virtual Network-Dienstendpunkte für Azure Key Vault)](/azure/key-vault/general/overview-vnet-service-endpoints).       |
+|**Umgehung der Firewall für vertrauenswürdige Microsoft-Dienste** |Wenn der Schlüssel Tresor, der ihren Mandanten Schlüssel enthält, Virtual Network Dienst Endpunkte für Azure Key Vault verwendet, müssen Sie vertrauenswürdigen Microsoft-Diensten gestatten, diese Firewall zu umgehen. <br />Weitere Informationen finden Sie unter [Virtual Network Dienst Endpunkte für Azure Key Vault](/azure/key-vault/general/overview-vnet-service-endpoints).       |
 | | |
 
 #### <a name="verifying-that-you-have-a-byok-compatible-azure-subscription"></a>Überprüfen, ob Sie über ein Byok-kompatibles Azure-Abonnement verfügen
@@ -196,7 +196,7 @@ Treffen Sie Ihre Entscheidung vorrangig anhand von Konformitätsgründen. Die Mi
 
 - Alle kryptografischen Aufrufe der Schutzkette an Ihren Azure Information Protection Schlüssel. Daher empfiehlt es sich, die Netzwerk Latenz zu minimieren, die für diese Aufrufe erforderlich ist, indem Sie Ihren Schlüssel Tresor in derselben Azure-Region oder-Instanz wie Ihre Azure Information Protection Mandanten erstellen.
 
-Um den Speicherort Ihres Azure Information Protection Mandanten zu identifizieren, verwenden Sie das PowerShell-Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) , und identifizieren Sie die Region aus den URLs. Zum Beispiel:
+Um den Speicherort Ihres Azure Information Protection Mandanten zu identifizieren, verwenden Sie das PowerShell-Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) , und identifizieren Sie die Region aus den URLs. Beispiel:
 
 ```PowerShell
 LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
@@ -268,7 +268,7 @@ Fügen Sie bei Bedarf zugelassene Vorgänge hinzu, indem Sie " [Update-azkeyvaul
 
 Die im Azure Key Vault gespeicherten Schlüssel verfügen jeweils über eine Schlüssel-ID.
 
-Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüssel Tresors, den Schlüssel Container, den Namen des Schlüssels und die Schlüssel Version enthält. Zum Beispiel:
+Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüssel Tresors, den Schlüssel Container, den Namen des Schlüssels und die Schlüssel Version enthält. Beispiel:
 
 **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**.
 
@@ -293,7 +293,7 @@ Der Azure Rights Management-Dienst muss für die Verwendung Ihres Schlüssels au
 
 Führen Sie das Key Vault PowerShell-Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)aus, und erteilen Sie dem Azure Rights Management-Dienst Prinzipal mithilfe der GUID **00000012-0000-0000-C000-000000000000** Berechtigungen.
 
-Zum Beispiel:
+Beispiel:
 
 ```PowerShell
 Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
@@ -329,7 +329,7 @@ Führen Sie mit Azure RMS Cmdlets die folgenden Befehle aus:
     Connect-AipService
     ```
 
-1. Führen Sie das [Cmdlet use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey)aus, und geben Sie dabei die Schlüssel-URL an. Zum Beispiel:
+1. Führen Sie das [Cmdlet use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey)aus, und geben Sie dabei die Schlüssel-URL an. Beispiel:
 
     ```PowerShell
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/<key-version>"

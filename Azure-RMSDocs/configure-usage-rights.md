@@ -5,7 +5,7 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 08/04/2020
-ms.topic: how-to
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 39fedde68cfe771d29e9fda1be4a9f2883cf1ede
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 16cc8ae0424f307ae7f0ed864ca36f1a91230977
+ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164248"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98809647"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
@@ -71,7 +71,7 @@ Einige Anwendungen gruppieren Nutzungsrechte in Berechtigungsstufen, um die Ausw
 
 In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und eine vollständige Liste der Nutzungsrechte, die sie enthalten. Die Nutzungsrechte sind nach ihren [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
 
-|Berechtigungsstufe|Applications|Enthaltene Nutzungsrechte|
+|Berechtigungsstufe|Anwendungen|Enthaltene Nutzungsrechte|
 |---------------------|----------------|---------------------------------|
 |Viewer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails „Prüfer“ statt dieser Berechtigungsstufe, um sicherzustellen, dass eine E-Mail-Antwort als E-Mail-Nachricht und nicht als Anlage empfangen wird. „Prüfer“ ist auch erforderlich, wenn Sie eine E-Mail an eine andere Organisation senden, die den Outlook-Client oder die Outlook-Web-App verwendet. Es ist ebenfalls für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts ausgenommen sind, weil Sie [Onboardingsteuerelemente](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) implementiert haben.|
 |Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
