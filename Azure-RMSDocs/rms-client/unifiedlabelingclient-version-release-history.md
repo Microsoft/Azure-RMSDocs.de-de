@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeic
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/07/2021
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 91f8975ddd3fe262a1ca7a0df1a7392fbda59a6a
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 30ed80c43494db6b9ad8c33827d138d3c7ae2065
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559777"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958141"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -45,6 +45,7 @@ Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phas
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+| 2.7.96  |01/20/2021 |
 |2.6.111.0 | 03/09/2020|
 |2.5.33.0 |23.10.2019|
 |2.2.21.0|09/03/2019|

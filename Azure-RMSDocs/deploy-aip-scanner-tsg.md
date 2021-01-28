@@ -4,7 +4,7 @@ description: Anleitung für die Problembehandlung bei der Bereitstellung von lok
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/27/2020
+ms.date: 01/26/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16a8eb244cf920c9ebd9b2ee0a6a023b7782c25a
-ms.sourcegitcommit: 5e5631e03959034f37705b4f61aead3d35e8cd8c
+ms.openlocfilehash: 46a994c5191e82d68f318e4900e0a5d45c1e176b
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2021
-ms.locfileid: "98540108"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958073"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Problembehandlung bei der Bereitstellung der lokalen Bereitstellung mit Unified-Bezeichnung
 
@@ -74,7 +74,7 @@ Verwenden Sie die folgenden Abschnitte, um bestimmte Fehlermeldungen zu verstehe
 |**Authentifizierungsfehler**     |  - [Das Authentifizierungs Token wurde nicht akzeptiert.](#authentication-token-not-accepted) <br>  - [Authentifizierungs Token fehlt.](#authentication-token-missing)|
 |**Richtlinienfehler**     |  - [Fehlende Richtlinie](#policy-missing) <br>- [Die Richtlinie enthält keine automatische Bezeichnungs Bedingung.](#policy-doesnt-include-any-automatic-labeling-condition)      |
 |**DB/Schema-Fehler**     |  - [Datenbankfehler](#database-errors) <br> - [Nicht übereinstimmendes oder veraltetes Schema](#mismatched-or-outdated-schema)  |
-|**Sonstige Fehler**     |  - [Hält Scanner-Prozesse](#stuck-scanner-processes) <br>- [Es kann keine Verbindung mit dem Remote Server hergestellt werden](#unable-to-connect-to-remote-server) <br>- [Fehler beim Senden der Anforderung.](#error-occurred-while-sending-the-request) <br>- [Fehlender inhaltscanauftrag oder Profil](#missing-content-scan-job-or-profile) <br>- [Keine Depots konfiguriert](#no-repositories-configured) <br>- [Kein Cluster gefunden.](#no-cluster-found)   |
+|**Sonstige Fehler**     |  - [Die zugrunde liegende Verbindung wurde geschlossen.](#underlying-connection-was-closed) <br> - [Hält Scanner-Prozesse](#stuck-scanner-processes) <br>- [Es kann keine Verbindung mit dem Remote Server hergestellt werden](#unable-to-connect-to-remote-server) <br>- [Fehler beim Senden der Anforderung.](#error-occurred-while-sending-the-request) <br>- [Fehlender inhaltscanauftrag oder Profil](#missing-content-scan-job-or-profile) <br>- [Keine Depots konfiguriert](#no-repositories-configured) <br>- [Kein Cluster gefunden.](#no-cluster-found)   |
 |     |         |
 
 
@@ -193,6 +193,20 @@ Führen Sie den Befehl [Update-aipscanner](/powershell/module/azureinformationpr
 
 
 <!--Other errors-->
+
+### <a name="underlying-connection-was-closed"></a>Die zugrunde liegende Verbindung wurde geschlossen
+
+**Fehlermeldung**
+
+`System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Authentication failed because the remote party has closed the transport stream.`
+
+**Lösung**
+
+Dieser Fehler bedeutet in der Regel, dass TLS 1,2 nicht aktiviert ist.
+
+Weitere Informationen finden Sie unter [Firewalls und Netzwerkinfrastruktur](requirements.md#firewalls-and-network-infrastructure). 
+
+Informationen zum Aktivieren von TLS 1,2 finden Sie unter [Aktivieren von TLS 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in der Enterprise Mobility + Security-Dokumentation.
 
 ### <a name="stuck-scanner-processes"></a>Hält Scanner-Prozesse
 

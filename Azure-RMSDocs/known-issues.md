@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8064138db9d3d8356c9b12eef769bebabfd5a556
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98559641"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958124"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -107,11 +107,15 @@ Weitere Informationen finden Sie unter
 
 Das Nachverfolgen und widerrufen des Dokument Zugriffs mithilfe des Unified-bezeichungsclients hat die folgenden bekannten Probleme:
 
+- [Kenn Wort geschützte Dokumente](#password-protected-documents)
 - [Mehrere Anlagen in einer geschützten e-Mail](#multiple-attachments-in-a-protected-email)
 - [Dokumente, die über SharePoint aufgerufen werden](#documents-accessed-via-sharepoint)
 
-Weitere Informationen finden Sie unter [Administrator Handbuch: nachverfolgen und widerrufen des Dokument Zugriffs mit Azure Information Protection](rms-client/track-and-revoke-admin.md) und [Benutzerhandbuch: widerrufen des Zugriffs auf Dokumente mit Azure Information Protection](rms-client/revoke-access-user.md).
+Weitere Informationen finden Sie im [Administrator Handbuch](rms-client/track-and-revoke-admin.md) und in den [Benutzerhandbuch](rms-client/revoke-access-user.md) -Prozeduren.
 
+#### <a name="password-protected-documents"></a>Kenn Wort geschützte Dokumente
+
+Kenn Wort geschützte Dokumente werden von den Funktionen zum Nachverfolgen und widerrufen nicht unterstützt.
 #### <a name="multiple-attachments-in-a-protected-email"></a>Mehrere Anlagen in einer geschützten e-Mail
 
 Wenn Sie mehrere Dokumente an eine e-Mail anfügen und dann die e-Mail schützen und senden, erhält jede der Anlagen denselben Wert für "contentid". 
@@ -130,7 +134,7 @@ Außerdem wird durch das Aufheben des Zugriffs für eine der Anhänge der Zugrif
 
     In solchen Fällen können Administratoren die heruntergeladenen Dateien mithilfe von PowerShell ausfindig machen, um die neuen **contentid** -Werte zum Nachverfolgen oder widerrufen des Zugriffs zu finden.
 
-### <a name="knowns-issues-for-the-aip-client-and-onedrive"></a>Probleme mit dem AIP-Client und onedrive
+### <a name="known-issues-for-the-aip-client-and-onedrive"></a>Bekannte Probleme beim AIP-Client und onedrive
 
 Wenn Sie Dokumente, die in onedrive gespeichert sind und eine Vertraulichkeits Bezeichnung angewendet haben, und ein Administrator die Bezeichnung in der Beschriftungs Richtlinie so ändert, dass Schutz hinzugefügt wird, wird der neu angewendete Schutz nicht automatisch auf das bezeichnete Dokument angewendet. 
 

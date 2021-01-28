@@ -4,7 +4,7 @@ description: Listet die Voraussetzungen für die Installation und Bereitstellung
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/17/2020
+ms.date: 01/27/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3f0093e2877ffe15232ed5704dcf2567b8ed99c4
-ms.sourcegitcommit: 78c7ab80be7c292ea4bc62954a4e29c449e97439
+ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
+ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98164180"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98958090"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Anforderungen für die Installation und Bereitstellung des Azure Information Protection Unified-Beschriftungs Scanners
 
@@ -37,7 +37,6 @@ Außerdem gelten die folgenden Anforderungen speziell für den Scanner:
 - [SharePoint-Anforderungen](#sharepoint-requirements)
 - [Microsoft Office Anforderungen](#microsoft-office-requirements)
 - [Dateipfad-Anforderungen](#file-path-requirements)
-- [Anforderungen an die Nutzungsstatistik](#usage-statistics-requirements)
 
 Wenn Sie nicht alle Anforderungen erfüllen, die für den Scanner aufgeführt sind, weil Sie von ihren Organisations Richtlinien nicht zugelassen werden, lesen Sie den Abschnitt [Alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -195,13 +194,6 @@ Zum Überprüfen von Dateien mit Dateipfaden mit mehr als 260 Zeichen installier
 |**Windows 10, Version 1607 oder höher**     |  Entscheiden Sie sich für die aktualisierten **MAX_PATH** Funktionen. Weitere Informationen finden Sie unter [Aktivieren von langen Pfaden in Windows 10, Version 1607 und](/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later)höher.      |
 | | |
 
-## <a name="usage-statistics-requirements"></a>Anforderungen an die Nutzungsstatistik
-
-Deaktivieren Sie Verwendungs Statistiken mithilfe einer der folgenden Methoden:
-
-- Festlegen des [allowtelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) -Parameters auf 0
-
-- Stellen Sie sicher, dass die Option zur **Verbesserung der Azure Information Protection durch das Senden von Nutzungsstatistiken an Microsoft** während der Überprüfung der Installation nicht ausgewählt ist.
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>Bereitstellen der Überprüfung mit alternativen Konfigurationen
 
@@ -337,7 +329,7 @@ Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Sch
 |**Sie können nicht über die sysadmin-Rolle verfügen.**     |  Wenn Sie die sysadmin-Rolle nicht auch vorübergehend erhalten können, müssen Sie einen Benutzer mit sysadmin-Berechtigung bitten, vor der Installation des Scanners manuell eine Datenbank zu erstellen. <br><br>Für diese Konfiguration muss die **db_owner** Rolle den folgenden Konten zugewiesen werden: <br>-Dienst Konto für den Scanner<br>-Benutzerkonto für die Scannerinstallation<br>-Benutzerkonto für Scannerkonfiguration <br><br>In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie unterschiedliche Konten verwenden, benötigen beide die **db_owner** Rolle für die scannerkonfigurationsdatenbank. Erstellen Sie diesen Benutzer und die Rechte bei Bedarf. Wenn Sie einen eigenen Cluster Namen angeben, wird die Konfigurations Datenbank **AIPScannerUL_<cluster_name>** benannt.  |
 | | |
 
-Außerdem zu beachten:
+Darüber hinaus gilt:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
