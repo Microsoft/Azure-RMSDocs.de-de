@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeic
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/27/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 30ed80c43494db6b9ad8c33827d138d3c7ae2065
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958141"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473020"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -93,6 +93,14 @@ Diese Version enthält die folgenden neuen Features, Fehlerbehebungen und Verbes
 
     - [Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Korrekturen und Verbesserungen für den Unified-Bezeichnungs Client](#fixes-and-improvements-for-the-unified-labeling-client)
+
+- **Bekanntes Problem**: in der neuesten GA-Version (2.9.111) wurde ein Problem identifiziert, bei dem einige Benutzer geschützte Dateien in den folgenden Szenarien nicht anzeigen können:
+    
+    - Wenn geschützte Dateien für Benutzer freigegeben werden, die nicht über eine konfigurierte AIP-Richtlinie verfügen, z. b. externe Benutzer. Dieses Problem tritt nur bei der [AIP Viewer-App](clientv2-view-use-files.md)auf.
+
+    - Wenn Inhalte mit einer Bereichs bezogenen Bezeichnung für Benutzer oder Gruppen freigegeben werden, die nicht im Bereich der Bezeichnung enthalten sind. Dieses Problem tritt sowohl bei der [AIP Viewer-App](clientv2-view-use-files.md) als auch beim Anzeigen oder klassifiziert des freigegebenen Inhalts über den [Datei-Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files)auf.
+    
+    Wir arbeiten aktiv an diesem Problem und einem aktualisierten Bereitstellungs Plan für die Lösung.
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>PowerShell-Unterstützung für nicht verbundene Scanner-Server
 
@@ -208,7 +216,7 @@ Diese Version enthält die folgenden neuen Features, Korrekturen und Verbesserun
 
     - [Optionale vollständige neuänderungen für erkannte Änderungen](#optional-full-rescans-for-changes-detected)
     - [Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)
-    - [Unterstützung der Netzwerk Ermittlung](#network-discovery-support)
+    - [Unterstützung der Netzwerk](#network-discovery-support-public-preview) Ermittlung (Public Preview)
 
 - **Neue Features für den-Client**:
 
@@ -245,14 +253,14 @@ AIP-Administratoren können jetzt auch SharePoint-Timeouts für alle Webanforder
 
 Weitere Informationen finden Sie unter [Konfigurieren von SharePoint-Timeouts](clientv2-admin-guide-customizations.md#configure-sharepoint-timeouts).
 
-### <a name="network-discovery-support"></a>Unterstützung der Netzwerk Ermittlung
+### <a name="network-discovery-support-public-preview"></a>Unterstützung der Netzwerk Ermittlung (Public Preview)
 
 Der Unified-Beschriftungs Scanner enthält jetzt einen neuen **Netzwerk** Ermittlungsdienst, mit dem Sie die angegebenen IP-Adressen oder Bereiche für Netzwerkdatei Freigaben überprüfen können, die möglicherweise sensible Inhalte aufweisen.
 
 Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit einer Liste von Freigabe Standorten, die möglicherweise gefährdet sind, basierend auf den ermittelten Berechtigungen und Zugriffsrechten. Überprüfen Sie die aktualisierten **Repository** -Berichte, um sicherzustellen, dass Ihre Inhalts Überprüfungs Aufträge alle zu scannenden Depots enthalten.
 
 > [!TIP]
-> Weitere Informationen finden Sie unter [Network Discovery-Cmdlets](#network-discovery-cmdlets).
+> Weitere Informationen finden Sie unter [Network Discovery-Cmdlets](#network-discovery-cmdlets-public-preview).
 
 **So verwenden Sie den Netzwerk Ermittlungsdienst**
 
@@ -277,7 +285,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 1. Verwenden Sie die generierten Berichte im Bereich "neue [**Depots**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) ", um nach zusätzlichen Netzwerkdatei Freigaben zu suchen, die möglicherweise gefährdet sind. Fügen Sie Ihren [Inhalts Überprüfungs Aufträgen](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) riskante Dateifreigaben hinzu, um die hinzugefügten Depots auf vertrauliche Inhalte zu scannen.
 
-#### <a name="network-discovery-cmdlets"></a>Cmdlets für die Netzwerk Ermittlung
+#### <a name="network-discovery-cmdlets-public-preview"></a>Cmdlets für die Netzwerk Ermittlung (öffentliche Vorschau)
 
 Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 

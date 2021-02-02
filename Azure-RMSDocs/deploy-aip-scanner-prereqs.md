@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1ef4eb6a25a61f385b1f02b6a32925f6c83c6224
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958090"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473003"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Anforderungen für die Installation und Bereitstellung des Azure Information Protection Unified-Beschriftungs Scanners
 
@@ -267,7 +267,7 @@ Führen Sie die folgenden Schritte aus, um einen vom Azure-Portal getrennten Com
     
     **Offline Verwaltung von Netzwerk Scan Aufträgen aktivieren**:
 
-    1. Legen Sie mithilfe des Cmdlets [Set-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) den Netzwerk Ermittlungsdienst für die Funktion im Offline Modus fest.
+    1. Legen Sie mithilfe des Cmdlets [Set-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) den Netzwerk Ermittlungsdienst (Public Preview) für die Funktion im Offline Modus fest.
 
     1. Konfigurieren Sie den Netzwerk Scanauftrag in der Azure-Portal. Weitere Informationen finden Sie unter [Erstellen eines Netzwerk Scan Auftrags](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
     
