@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 54bb64810e2dc71f6356dfe60c0443dccfb87315
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
+ms.openlocfilehash: e9c6769781c81e03c6ed47f12b62eb3afefb40a7
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240868"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473054"
 ---
 # <a name="tutorial-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Tutorial: Installieren des Azure Information Protection-Scanners (AIP) für einheitliche Bezeichnungen
 
@@ -180,9 +180,9 @@ Weitere Informationen finden Sie unter [Unbeaufsichtigtes Bezeichnen von Dateien
 
 Der Scanner verfügt jetzt über ein Token zum Authentifizieren bei Azure AD. Dieses Token ist solange gültig, wie Sie in Azure Active Directory festgelegt haben. Wenn das Token abgelaufen ist, müssen Sie den Vorgang wiederholen.
 
-Fahren Sie mit [Installieren des Netzwerkerkennungsdiensts](#install-the-network-discovery-service) fort, damit Sie Ihre Netzwerkrepositorys nach möglicherweise riskanten Inhalten durchsuchen und diese Repositorys dann zu einem Auftrag zur Inhaltsüberprüfung hinzufügen können.
+Fahren Sie mit [Installieren des Netzwerkerkennungsdiensts](#install-the-network-discovery-service-public-preview) fort, damit Sie Ihre Netzwerkrepositorys nach möglicherweise riskanten Inhalten durchsuchen und diese Repositorys dann zu einem Auftrag zur Inhaltsüberprüfung hinzufügen können.
 
-## <a name="install-the-network-discovery-service"></a>Installieren des Netzwerkerkennungsdiensts
+## <a name="install-the-network-discovery-service-public-preview"></a>Installieren des Netzwerkerkennungsdiensts (Public Preview)
 
 Ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850) des AIP-Clients für einheitliche Bezeichnungen können Administratoren mithilfe des AIP-Scanners ihre Netzwerkrepositorys überprüfen und anschließend alle Repositorys, die möglicherweise riskant sind, zu einem Auftrag zur Inhaltsüberprüfung hinzufügen.
 

@@ -4,7 +4,7 @@ description: Listet die Voraussetzungen für die Installation und Bereitstellung
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 08/27/2020
+ms.date: 02/03/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e68879b51d53862744cdeebbae587c5db7b74daa
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: fb1d7a7ce57eb6ae8659b7e268726143d4ca4028
+ms.sourcegitcommit: 1aba7f2d5c15f2657d1db293118f6670bf99323d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806174"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505270"
 ---
 # <a name="prerequisites-for-installing-and-deploying-the-azure-information-protection-classic-scanner"></a>Voraussetzungen für die Installation und Bereitstellung des Azure Information Protection klassischen Scanners
 
@@ -34,12 +34,11 @@ Stellen Sie vor der Installation des Azure Information Protection lokalen Scanne
 - [Windows Server-Anforderungen](#windows-server-requirements)
 - [Dienstkontenanforderungen](#service-account-requirements)
 - [SQL Server-Anforderungen](#sql-server-requirements)
-- [Azure Information Protection Client Anforderungen](#azure-information-protection-client-requirements)
+- [Zusätzliche Voraussetzungen für den Azure Information Protection-Client](#azure-information-protection-client-requirements)
 - [Bezeichnungs Konfigurations Anforderungen](#label-configuration-requirements)
 - [SharePoint-Anforderungen](#sharepoint-requirements)
 - [Microsoft Office Anforderungen](#microsoft-office-requirements)
 - [Dateipfad-Anforderungen](#file-path-requirements)
-- [Anforderungen an die Nutzungsstatistik](#usage-statistics-requirements)
 
 Wenn Sie nicht alle Anforderungen in der Tabelle erfüllen können, weil Sie von ihren Organisations Richtlinien nicht zugelassen werden, lesen Sie den Abschnitt [Alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -121,7 +120,7 @@ Verwenden Sie für jeden Scanner Folgendes:
 - 4-Kern Prozessoren
 - 8 GB RAM (mindestens 4 GB)
 
-## <a name="azure-information-protection-client-requirements"></a>Azure Information Protection Client Anforderungen
+## <a name="azure-information-protection-client-requirements"></a>Zusätzliche Voraussetzungen für den Azure Information Protection-Client
 
 Der Azure Information Protection-Client muss auf dem Windows Server-Computer installiert sein.
 
@@ -174,15 +173,6 @@ Um Dateien zu überprüfen, dürfen die Dateipfade maximal 260 Zeichen lang sein
 Windows 10-und Windows Server 2016-Support Pfadlängen von mehr als 260 Zeichen mit der folgenden [Gruppenrichtlinien Einstellung](/archive/blogs/jeremykuhne/net-4-6-2-and-long-paths-on-windows-10): **lokale Computer Richtlinie**  >  **Computer Konfiguration**  >  **Administrative Vorlagen**  >  **alle Einstellungen**  >  **Aktivieren von Win32 Long-Pfaden**
 
 Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
-
-## <a name="usage-statistics-requirements"></a>Anforderungen an die Nutzungsstatistik
-
-Deaktivieren Sie Verwendungs Statistiken mithilfe einer der folgenden Methoden:
-
-- Festlegen des [allowtelemetry](./rms-client/client-admin-guide-install.md#to-install-the-azure-information-protection-client-by-using-the-executable-installer) -Parameters auf 0
-
-- Stellen Sie sicher, dass die Option zur **Verbesserung der Azure Information Protection durch das Senden von Nutzungsstatistiken an Microsoft** während der Überprüfung der Installation nicht ausgewählt ist.
-
 
 ## <a name="deploying-the-scanner-with-alternative-configurations"></a>Bereitstellen der Überprüfung mit alternativen Konfigurationen
 
@@ -242,7 +232,7 @@ Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Sch
 
     Wenn Sie keinen eigenen Cluster Namen (Profilnamen) für die Überprüfung angeben, wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ \<computer_name>** benannt. </br>Setzen Sie [die Erstellung eines Benutzers fort, und erteilen Sie db_owner Rechte für die Datenbank](#create-a-user-and-grant-db_owner-rights-manually). 
 
-Außerdem zu beachten:
+Darüber hinaus gilt:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:

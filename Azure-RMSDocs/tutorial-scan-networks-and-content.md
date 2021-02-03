@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: e3b8c14c63c3ac6300c84349212db0e177a0dd7d
-ms.sourcegitcommit: e8e4ca39278f1557e14cc8586fe357d8ebce2072
+ms.openlocfilehash: db57d4cdcf0d9153af2c6c1310019e8d1700e96c
+ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240885"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99473071"
 ---
 # <a name="tutorial-discovering-your-sensitive-content-with-the-azure-information-protection-aip-scanner"></a>Tutorial: Erkennen vertraulicher Inhalte mit dem Azure Information Protection-Scanner (AIP)
 
@@ -94,7 +94,7 @@ Die Rasterdaten werden aktualisiert, wenn die Überprüfung abgeschlossen ist. B
 :::image type="content" source="media/qs-tutor/scanned-network.png" alt-text="Aktualisierte Aufträge zur Netzwerküberprüfung":::
 
 > [!TIP]
-> Wenn Ihr Auftrag zur Netzwerküberprüfung nicht ausgeführt wird, stellen Sie sicher, dass der [Netzwerkerkennungsdienst auf dem Scannercomputer korrekt installiert ist](tutorial-install-scanner.md#install-the-network-discovery-service).
+> Wenn Ihr Auftrag zur Netzwerküberprüfung nicht ausgeführt wird, stellen Sie sicher, dass der [Netzwerkerkennungsdienst auf dem Scannercomputer korrekt installiert ist](tutorial-install-scanner.md#install-the-network-discovery-service-public-preview).
 
 Fahren Sie mit [Hinzufügen der riskanten Repositorys zu einem Auftrag zur Inhaltsüberprüfung](#add-risky-repositories-to-a-content-scan-job) fort.
 
