@@ -123,6 +123,8 @@
           href: concept-classification-labels.md
         - name: Bezeichnungen und Schutzverhalten
           href: concept-labeling-and-protection.md
+        - name: Benutzerdefinierte Berechtigungen
+          href: concept-user-defined-permissions.md
     - name: Metadaten
       href: concept-mip-metadata.md
     - name: Observer-Klassen für async (C++)
