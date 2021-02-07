@@ -4,7 +4,7 @@ description: Anleitung für die Problembehandlung bei der Bereitstellung von lok
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/26/2021
+ms.date: 02/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 46a994c5191e82d68f318e4900e0a5d45c1e176b
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 84b2434004149c03888d15fdec34d2910b45ae9d
+ms.sourcegitcommit: 7aa72a673a97d84a7aac36d912b118d68b4a5228
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958073"
+ms.lasthandoff: 02/07/2021
+ms.locfileid: "99804418"
 ---
 # <a name="troubleshooting-your-unified-labeling-on-premises-scanner-deployment"></a>Problembehandlung bei der Bereitstellung der lokalen Bereitstellung mit Unified-Bezeichnung
 
@@ -80,7 +80,7 @@ Verwenden Sie die folgenden Abschnitte, um bestimmte Fehlermeldungen zu verstehe
 
 <!--Authentication errors-->
 
-### <a name="authentication-token-not-accepted"></a>Das Authentifizierungs Token wurde nicht akzeptiert.
+### <a name="authentication-token-not-accepted"></a>Authentifizierungstoken nicht akzeptiert
 
 **Fehlermeldung**
 
@@ -92,7 +92,7 @@ Wenn der Befehl " [Set-aipauthentication](/powershell/module/azureinformationpro
 
 Weitere Informationen finden Sie unter [Erstellen und Konfigurieren von Azure AD Anwendungen für "Set-aipauthentication](rms-client/clientv2-admin-guide-powershell.md#create-and-configure-azure-ad-applications-for-set-aipauthentication)".
 
-### <a name="authentication-token-missing"></a>Authentifizierungs Token fehlt.
+### <a name="authentication-token-missing"></a>Fehlendes Authentifizierungstoken
 
 **Fehlermeldung**
 
@@ -140,7 +140,7 @@ Um zu überprüfen, ob die Richtlinien Datei erwartungsgemäß vorhanden ist, ch
 
 Weitere Informationen zu MIP-Bezeichnungen und Bezeichnungs Richtlinien finden Sie unter [Erstellen und Konfigurieren von Vertraulichkeits Bezeichnungen und deren Richtlinien](/microsoft-365/compliance/create-sensitivity-labels) in der Microsoft 365-Dokumentation.
 
-### <a name="policy-doesnt-include-any-automatic-labeling-condition"></a>Die Richtlinie enthält keine automatische Bezeichnungs Bedingung.
+### <a name="policy-doesnt-include-any-automatic-labeling-condition"></a>Richtlinie enthält keine automatische Bezeichnungsbedingung
 
 **Fehler**
 
@@ -204,11 +204,13 @@ Führen Sie den Befehl [Update-aipscanner](/powershell/module/azureinformationpr
 
 Dieser Fehler bedeutet in der Regel, dass TLS 1,2 nicht aktiviert ist.
 
-Weitere Informationen finden Sie unter [Firewalls und Netzwerkinfrastruktur](requirements.md#firewalls-and-network-infrastructure). 
+Weitere Informationen finden Sie unter
 
-Informationen zum Aktivieren von TLS 1,2 finden Sie unter [Aktivieren von TLS 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in der Enterprise Mobility + Security-Dokumentation.
+- [Firewalls und Anforderungen an die Netzwerkinfrastruktur](requirements.md#firewalls-and-network-infrastructure)
+- [Aktivieren von TLS 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 
+- [Aktivieren von TLS 1,1-und TLS 1,2-Unterstützung in Office Online Server](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
 
-### <a name="stuck-scanner-processes"></a>Hält Scanner-Prozesse
+### <a name="stuck-scanner-processes"></a>Keine Reaktion bei Scanner-Prozessen
 
 **Fehlermeldung**
 
@@ -237,7 +239,7 @@ Wenn die Datei jedoch nicht mehr wächst, gehen Sie folgendermaßen vor:
 
 Weitere Informationen finden Sie unter [Problembehandlung für einen Scan, bei dem ein Timeout](#troubleshooting-a-scan-that-timed-out)aufgetreten ist. 
 
-### <a name="unable-to-connect-to-remote-server"></a>Es kann keine Verbindung mit dem Remote Server hergestellt werden
+### <a name="unable-to-connect-to-remote-server"></a>Verbindung mit Remoteserver kann nicht hergestellt werden
 
 **Fehler**
 
@@ -258,7 +260,7 @@ Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergr
 
 
 Siehe auch: [Problembehandlung bei einem Scan, bei dem ein Timeout](#troubleshooting-a-scan-that-timed-out)aufgetreten ist
-### <a name="error-occurred-while-sending-the-request"></a>Fehler beim Senden der Anforderung.
+### <a name="error-occurred-while-sending-the-request"></a>Fehler beim Senden der Anforderung
 
 **Fehlermeldung**
 
@@ -268,12 +270,14 @@ Siehe auch: [Problembehandlung bei einem Scan, bei dem ein Timeout](#troubleshoo
 
 Dieser Fehler bedeutet in der Regel, dass TLS 1,2 nicht aktiviert ist.
 
-Weitere Informationen finden Sie unter [Firewalls und Netzwerkinfrastruktur](requirements.md#firewalls-and-network-infrastructure). 
+Weitere Informationen finden Sie unter
 
-Informationen zum Aktivieren von TLS 1,2 finden Sie unter [Aktivieren von TLS 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) in der Enterprise Mobility + Security-Dokumentation.
+- [Firewalls und Anforderungen an die Netzwerkinfrastruktur](requirements.md#firewalls-and-network-infrastructure)
+- [Aktivieren von TLS 1,2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) 
+- [Aktivieren von TLS 1,1-und TLS 1,2-Unterstützung in Office Online Server](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
 
 
-### <a name="missing-content-scan-job-or-profile"></a>Fehlender inhaltscanauftrag oder Profil
+### <a name="missing-content-scan-job-or-profile"></a>Fehlende Daten für den Scanauftrag oder das Profil
 
 **Fehler**
 
@@ -290,7 +294,7 @@ Weitere Informationen finden Sie unter [Konfigurieren und Installieren des Azure
 > [!NOTE]
 > Bei einem *Profil* handelt es sich um einen Legacy Scanner-Begriff, der in neueren Versionen des Scanners durch den scannercluster und den Inhalts Scanauftrag ersetzt wurde.
 > 
-### <a name="no-repositories-configured"></a>Keine Depots konfiguriert
+### <a name="no-repositories-configured"></a>Keine Repositorys konfiguriert
 
 **Fehlermeldung**
 
@@ -306,7 +310,7 @@ Möglicherweise verfügen Sie über einen inhaltscanauftrag ohne konfigurierte D
 
 Weitere Informationen finden Sie unter [Erstellen eines Inhalts Scan Auftrags](deploy-aip-scanner-configure-install.md#create-a-content-scan-job).
 
-### <a name="no-cluster-found"></a>Kein Cluster gefunden.
+### <a name="no-cluster-found"></a>Cluster nicht gefunden
 
 **Fehlermeldung**
 
