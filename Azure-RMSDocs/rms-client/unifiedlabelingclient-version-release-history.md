@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeic
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/02/2021
+ms.date: 02/08/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 065007e14f96c0d4cfddf4ea93a680c5e6bdf138
-ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.openlocfilehash: 3bfd20785f1af97352a6e8094f224a3647474ba6
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99473020"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817804"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -65,16 +65,31 @@ Die neueste Version von Azure Information Protection befindet sich derzeit in de
 
 > [!NOTE]
 > Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
->  
+>
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
 Der Unified-Bezeichnungs Client ersetzt den Azure Information Protection klassischen Client. Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Beschriftungslösungen für Windows-Computer](use-client.md#compare-the-labeling-solutions-for-windows-computers).
 
+## <a name="version-29116"></a>Version 2.9.116 
+
+Unified-Beschriftungs Scanner und Client Version 2.9.116 
+
+**Veröffentlicht** 02/08/2021
+
+**Behobene Probleme** Benutzer können nun geschützte Dateien wie erwartet in den folgenden Szenarios anzeigen:
+
+- Wenn geschützte Dateien für Benutzer freigegeben werden, die nicht über eine konfigurierte AIP-Richtlinie verfügen, z. b. externe Benutzer. Dieses Problem trat nur bei der [AIP Viewer-App](clientv2-view-use-files.md)auf.
+
+- Wenn Inhalte mit einer Bereichs bezogenen Bezeichnung für Benutzer oder Gruppen freigegeben werden, die nicht im Bereich der Bezeichnung enthalten sind. Dieses Problem trat sowohl bei der [AIP Viewer-App](clientv2-view-use-files.md) als auch beim Anzeigen oder Klassifizierern des freigegebenen Inhalts über den [Datei-Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files)auf.
+
+Weitere Informationen finden Sie im [Benutzerhandbuch zum AIP Unified Bezeichnung-Client](clientv2-user-guide.md).
 ## <a name="version-291110"></a>Version 2.9.111.0
 
 Unified-Beschriftungs Scanner und Client Version 2.9.111.0
 
-**Release** 1/13/2021
+**Veröffentlicht** 01/13/2021
+
+**Unterstützt durch** 08/08/2021
 
 Diese Version enthält die folgenden neuen Features, Fehlerbehebungen und Verbesserungen für den Unified-Beschriftungs Scanner und-Client:
 
@@ -94,13 +109,11 @@ Diese Version enthält die folgenden neuen Features, Fehlerbehebungen und Verbes
     - [Korrekturen und Verbesserungen für den Unified-Beschriftungs Scanner](#fixes-and-improvements-for-the-unified-labeling-scanner)
     - [Korrekturen und Verbesserungen für den Unified-Bezeichnungs Client](#fixes-and-improvements-for-the-unified-labeling-client)
 
-- **Bekanntes Problem**: in der neuesten GA-Version (2.9.111) wurde ein Problem identifiziert, bei dem einige Benutzer geschützte Dateien in den folgenden Szenarien nicht anzeigen können:
-    
+- **Bekanntes Problem**: in der neuesten GA-Version (2.9.111) wurde ein Problem identifiziert, bei dem einige Benutzer geschützte Dateien in den folgenden Szenarien nicht anzeigen konnten:
+
     - Wenn geschützte Dateien für Benutzer freigegeben werden, die nicht über eine konfigurierte AIP-Richtlinie verfügen, z. b. externe Benutzer. Dieses Problem tritt nur bei der [AIP Viewer-App](clientv2-view-use-files.md)auf.
 
     - Wenn Inhalte mit einer Bereichs bezogenen Bezeichnung für Benutzer oder Gruppen freigegeben werden, die nicht im Bereich der Bezeichnung enthalten sind. Dieses Problem tritt sowohl bei der [AIP Viewer-App](clientv2-view-use-files.md) als auch beim Anzeigen oder klassifiziert des freigegebenen Inhalts über den [Datei-Explorer](clientv2-classify-protect.md#using-file-explorer-to-classify-and-protect-files)auf.
-    
-    Wir arbeiten aktiv an diesem Problem und einem aktualisierten Bereitstellungs Plan für die Lösung.
 
 ### <a name="powershell-support-for-disconnected-scanner-servers"></a>PowerShell-Unterstützung für nicht verbundene Scanner-Server
 
@@ -108,7 +121,7 @@ Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unte
 
 Zur Unterstützung von getrennten oder Azure China 21ViaNet-Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
 
-|Cmdlet  |BESCHREIBUNG  |
+|Cmdlet  |Beschreibung  |
 |---------|---------|
 |**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Fügt ihrem inhaltscanauftrag ein neues Repository hinzu.        |
 |**[Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Ruft Details zum inhaltscanauftrag ab.   |
@@ -289,7 +302,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 
-|Cmdlet  |BESCHREIBUNG  |
+|Cmdlet  |Beschreibung  |
 |---------|---------|
 |[**Get-mipnetworkdiscoveryconfiguration**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Ruft die aktuelle Einstellung ab, ob der Netzwerk Ermittlungsdienst Netzwerk Scan Daten aus der Standard-, Online-oder Offline Datei abruft, die aus der Azure-Portal exportiert wurde.      |
 |[**Get-mipnetworkdiscoveryjobs**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Ruft eine Liste der derzeit konfigurierten Netzwerk Scanaufträge ab.     |

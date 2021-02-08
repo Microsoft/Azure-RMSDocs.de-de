@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/12/2021
+ms.date: 02/08/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 675f0a3f9a8ef3c3614bb1c59e0508ee028cbae8
-ms.sourcegitcommit: 3136ce04e185b93503585466b7ab4b5bb1df6827
+ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
+ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98958124"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99817821"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -109,7 +109,7 @@ Das Nachverfolgen und widerrufen des Dokument Zugriffs mithilfe des Unified-beze
 
 - [Kenn Wort geschützte Dokumente](#password-protected-documents)
 - [Mehrere Anlagen in einer geschützten e-Mail](#multiple-attachments-in-a-protected-email)
-- [Dokumente, die über SharePoint aufgerufen werden](#documents-accessed-via-sharepoint)
+- [Dokumente, die über SharePoint oder onedrive aufgerufen werden](#documents-accessed-via-sharepoint-or-onedrive)
 
 Weitere Informationen finden Sie im [Administrator Handbuch](rms-client/track-and-revoke-admin.md) und in den [Benutzerhandbuch](rms-client/revoke-access-user.md) -Prozeduren.
 
@@ -124,11 +124,11 @@ Dieser contentid-Wert wird nur mit der ersten geöffneten Datei zurückgegeben. 
 
 Außerdem wird durch das Aufheben des Zugriffs für eine der Anhänge der Zugriff für die anderen Anlagen in derselben geschützten e-Mail aufgehoben.
 
-#### <a name="documents-accessed-via-sharepoint"></a>Dokumente, die über SharePoint aufgerufen werden
+#### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>Dokumente, die über SharePoint oder onedrive aufgerufen werden
     
-- Geschützte Dokumente, die in SharePoint hochgeladen werden, verlieren ihren **contentid** -Wert, und der Zugriff kann nicht nachverfolgt oder widerrufen werden.
+- Geschützte Dokumente, die in SharePoint oder onedrive hochgeladen werden, verlieren ihren **contentid** -Wert, und der Zugriff kann nicht nachverfolgt oder widerrufen werden.
 
-- Wenn ein Benutzer die Datei von SharePoint herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue **contentid** auf das Dokument angewendet, wenn Sie Sie lokal öffnen. 
+- Wenn ein Benutzer die Datei von SharePoint oder onedrive herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue **contentid** auf das Dokument angewendet, wenn Sie Sie lokal öffnen. 
     
     Die Verwendung des ursprünglichen **contentid** -Werts zum Nachverfolgen von Daten umfasst keinen Zugriff auf die heruntergeladene Datei des Benutzers. Außerdem wird durch das Aufheben des Zugriffs auf Grundlage des ursprünglichen **contentid** -Werts der Zugriff für die heruntergeladenen Dateien nicht widerrufen.
 
