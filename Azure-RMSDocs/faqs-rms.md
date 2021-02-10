@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen zum Datenschutzdienst Azure Rights 
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 12/02/2020
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 31202876b035f7b5266abd006cfcd943e8eb6690
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: 31da35a9dc1f726cba86897e45f3ee6537efa0fa
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659016"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105282"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -162,7 +162,7 @@ Verwenden Sie das [Feature Administrator (super user)](configure-super-users.md)
 Wenn Ihre Inhalte in SharePoint oder onedrive gespeichert sind, können Administratoren das [Unlock-sensitivitylabelverschlüsseltedfile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedfile) -Cmdlet ausführen, um die Vertraulichkeits Bezeichnung und die Verschlüsselung zu entfernen. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files#remove-encryption-for-a-labeled-document).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Kann Rights Management Bildschirmaufnahmen verhindern?
-Wenn Sie das [Nutzungsrecht](configure-usage-rights.md)" **Kopieren** " nicht gewähren, können Rights Management Bildschirmaufnahmen von vielen der häufig verwendeten Bildschirm Erfassungs Tools auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) und Android verhindern. iOS- und Mac-Geräte erlauben Apps jedoch das Verhindern von Bildschirmaufnahmen nicht. Ferner können Browser auf Geräten, gleich welchen, keine Bildschirmaufnahmen verhindern. Die Browser Verwendung umfasst Outlook im Web und Office für das Web.
+Wenn Sie das [Nutzungsrecht](configure-usage-rights.md)" **Kopieren** " nicht gewähren, können Rights Management Bildschirmaufnahmen von vielen der häufig verwendeten Bildschirm Erfassungs Tools auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10 und Windows 10 Mobile) verhindern. IOS-, Mac-und Android-Geräte erlauben jedoch keiner APP, Bildschirmaufnahmen zu verhindern. Ferner können Browser auf Geräten, gleich welchen, keine Bildschirmaufnahmen verhindern. Die Browser Verwendung umfasst Outlook im Web und Office für das Web.
 
 Das Verhindern von Bildschirmaufnahmen kann helfen, eine versehentliche oder fahrlässige Offenlegung vertraulicher oder sensibler Informationen zu vermeiden. Es gibt jedoch viele Möglichkeiten, wie ein Benutzerdaten freigeben kann, die auf einem Bildschirm angezeigt werden, und ein Screenshot ist nur eine Methode. Beispielsweise kann ein Benutzer, der beabsichtigt, angezeigte Informationen zu teilen, mit seiner Smartphonekamera ein Foto davon machen, die Daten erneut eingeben oder sie einfach mündlich an eine andere Person weitergeben.
 

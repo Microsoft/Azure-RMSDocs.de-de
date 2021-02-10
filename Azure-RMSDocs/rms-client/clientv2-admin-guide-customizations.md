@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 01/18/2021
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 925ef5dda1f470dbba6f173df427d4672b853167
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: dec2d96f05f419c0a0f13f50210ed59d0bf67213
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809934"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105299"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -195,7 +195,7 @@ In den folgenden Abschnitten werden die verfügbaren erweiterten Einstellungen f
 
 In den folgenden Abschnitten werden die erweiterten Einstellungen aufgelistet, die auf dieser Seite durch die Integration von Produkten und Features beschrieben werden:
 
-|Funktion  |Erweiterte Einstellungen  |
+|Komponente  |Erweiterte Einstellungen  |
 |---------|---------|
 |**Outlook und e-Mail-Einstellungen**     | - [Konfigurieren einer Bezeichnung zum Anwenden des S/MIME-Schutzes in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages) <br>- [Aktivieren der empfohlenen Klassifizierung in Outlook](#enable-recommended-classification-in-outlook)<br> - [Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Wenden Sie für e-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht.](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implementieren von Popup Nachrichten in Outlook, die gesendete e-Mails warnen, begründen oder blockieren](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Festlegen einer anderen Standard Bezeichnung für Outlook](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint-Einstellungen** | - [Vermeiden Sie das Entfernen von Formen aus PowerPoint, die den angegebenen Text enthalten, und keine Kopf-und Fußzeilen.](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Entfernen Sie externe Inhalts Markierungen explizit aus Ihren benutzerdefinierten PowerPoint-Layouts.](#extend-external-marking-removal-to-custom-layouts)<br>- [Entfernen Sie alle Formen eines bestimmten Shape-namens aus den Kopf-und Fußzeilen, anstatt Formen nach Text innerhalb der Form zu entfernen.](#remove-all-shapes-of-a-specific-shape-name)  |
@@ -203,9 +203,8 @@ In den folgenden Abschnitten werden die erweiterten Einstellungen aufgelistet, d
 |**Einstellungen für die Leistungsverbesserung**     | - [Begrenzen der CPU-Auslastung](#limit-cpu-consumption) <br>- [Beschränken Sie die Anzahl der Threads, die vom Scanner verwendet werden.](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Einstellungen für Integrationen mit anderen Bezeichnungs Lösungen**     | - [Migrieren von Bezeichnungen aus sicheren Inseln und anderen Bezeichnungs Lösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Entfernen von Kopf-und Fußzeilen aus anderen Bezeichnungs Lösungen](#remove-headers-and-footers-from-other-labeling-solutions)    |
 |**AIP-Analyse Einstellungen**     |   - [Deaktivieren des Sendens von Überwachungsdaten an Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) <br>- [Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
-|**Allgemeine Einstellungen**     | - ["Problem melden" für Benutzer hinzufügen](#add-report-an-issue-for-users) <br>- [Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Ändern des lokalen Protokolliergrads](#change-the-local-logging-level) <br>- [Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect)<br>- [Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)<br>- [Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Anzeigen der Information Protection Leiste in Office-Apps](#display-the-information-protection-bar-in-office-apps) <br>- [Entfernen des Schutzes von komprimierten Dateien aktivieren](#enable-removal-of-protection-from-compressed-files) <br>-  [Beibehalten von NTFS-Besitzern während der Bezeichnung (öffentliche Vorschau)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  ["Not Now" für Dokumente entfernen, wenn Sie eine obligatorische Bezeichnung verwenden](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Dateien während Scans in Abhängigkeit von Dateiattributen überspringen oder ignorieren](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Farbe für die Bezeichnung angeben](#specify-a-color-for-the-label)<br>-  [Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Unterstützung für das Ändern von \<EXT> . Pfile in P\<EXT>](#additionalpprefixextensions)  <br>-  [Unterstützung für nicht verbundene Computer](#support-for-disconnected-computers)     <br>-  [Klassifizierung so aktivieren, dass Sie fortlaufend im Hintergrund ausgeführt wird](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Deaktivieren der Funktionen zum Nachverfolgen von Dokumenten (öffentliche Vorschau)](#turn-off-document-tracking-features-public-preview)   |
+|**Allgemeine Einstellungen**     | - ["Problem melden" für Benutzer hinzufügen](#add-report-an-issue-for-users) <br>- [Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Ändern des lokalen Protokolliergrads](#change-the-local-logging-level) <br>- [Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect)<br>- [Konfigurieren des Authentifizierungs Timeouts für Office-Dateien](#configure-the-autolabeling-timeout-on-office-files) <br>- [Konfigurieren von SharePoint-Timeouts](#configure-sharepoint-timeouts)<br>- [Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Anzeigen der Information Protection Leiste in Office-Apps](#display-the-information-protection-bar-in-office-apps) <br>- [Entfernen des Schutzes von komprimierten Dateien aktivieren](#enable-removal-of-protection-from-compressed-files) <br>-  [Beibehalten von NTFS-Besitzern während der Bezeichnung (öffentliche Vorschau)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  ["Not Now" für Dokumente entfernen, wenn Sie eine obligatorische Bezeichnung verwenden](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Dateien während Scans in Abhängigkeit von Dateiattributen überspringen oder ignorieren](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Farbe für die Bezeichnung angeben](#specify-a-color-for-the-label)<br>-  [Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](#specify-a-default-sublabel-for-a-parent-label)<br>-  [Unterstützung für das Ändern von \<EXT> . Pfile in P\<EXT>](#additionalpprefixextensions)  <br>-  [Unterstützung für nicht verbundene Computer](#support-for-disconnected-computers)     <br>-  [Klassifizierung so aktivieren, dass Sie fortlaufend im Hintergrund ausgeführt wird](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Deaktivieren der Funktionen zum Nachverfolgen von Dokumenten (öffentliche Vorschau)](#turn-off-document-tracking-features-public-preview)   |
 |     |         |
-
 
 ### <a name="label-policy-advanced-setting-reference"></a>Referenz zur erweiterten Einstellung der Bezeichnungs Richtlinie
 
@@ -215,7 +214,7 @@ Verwenden Sie den Parameter *advancedsettings* mit [New-labelpolicy](/powershell
 |----------------|---------------|
 |**Additionalpprefixextensions**|[Unterstützung für das Ändern von \<EXT> . Pfile in P mit \<EXT> dieser erweiterten Eigenschaft](#additionalpprefixextensions)
 |**Attachmentaction**|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-|**Attachmentaktiontip**|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|**Attachmentaktiontip**|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**Disablemandatoryinoutlook**|[Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling)
 |**EnableAudit**|[Deaktivieren des Sendens von Überwachungsdaten an Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |**Enablecontainersupport**|[Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien aktivieren](#enable-removal-of-protection-from-compressed-files)
@@ -228,6 +227,7 @@ Verwenden Sie den Parameter *advancedsettings* mit [New-labelpolicy](/powershell
 |**Hidebarbydefault**|[Information Protection-Leiste in Office-Apps anzeigen](#display-the-information-protection-bar-in-office-apps)|
 |**Recht cationtextforusertext** | [Anpassen von Bezeichnungs Text-Eingabeaufforderung für geänderte Bezeichnungen](#customize-justification-prompt-texts-for-modified-labels) |
 |**LogMatchedContent**|[Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
+|**Officecontentextractiontimeout** | [Konfigurieren des Authentifizierungs Timeouts für Office-Dateien](#configure-the-autolabeling-timeout-on-office-files) |
 |**Outlookblocktreuhänddomains**|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookBlockUntrustedCollaborationLabel**|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**Outlookcollaborationrule**| [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages)|
@@ -470,7 +470,7 @@ Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#configurin
 
 Es gibt zwei Methoden zum Entfernen von Klassifizierungen aus anderen Bezeichnungs Lösungen:
 
-|Einstellung  |Beschreibung  |
+|Einstellung  |BESCHREIBUNG  |
 |---------|---------|
 |**Wordshapenametoremove**     |  Entfernt alle Formen aus Word-Dokumenten, wobei der Name der Form mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove** definiert ist.  <br><br>Weitere Informationen finden Sie unter [Verwenden der erweiterten wordshapenametoremove-Eigenschaft](#use-the-wordshapenametoremove-advanced-property).     |
 |**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Ermöglicht das Entfernen oder Ersetzen von textbasierten Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten. <br><br>Weitere Informationen finden Sie unter <br>- [Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [Konfigurieren von externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove).    |
@@ -576,25 +576,45 @@ Weitere Informationen finden Sie unter
 
 #### <a name="multiline-headers-or-footers"></a>Mehrzeilige Kopf- oder Fußzeilen
 
-Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstellen Sie einen Schlüssel und einen Wert für jede Zeile. Wenn Sie z. b. die folgende Fußzeile mit zwei Zeilen haben:
+Wenn der Kopf-oder Fußzeilen Text mehr als eine einzelne Zeile enthält, hängt der Befehl davon ab, welche Teile aus dem Header entfernt werden sollen. In diesem Abschnitt verwenden wir das folgende Beispiel für eine mehrzeilige Fußzeile:
 
-**The file is classified as Confidential**
+*The file is classified as Confidential*
 
-**Label applied manually**
+*Label applied manually*
 
-Um diese mehrzeilige Fußzeile zu entfernen, erstellen Sie die folgenden zwei Einträge für die gleiche Bezeichnungs Richtlinie:
+*Mit Vorsicht freigeben*
 
-- Key: **ExternalContentMarkingToRemove**
+Verwenden Sie eine der folgenden Methoden, je nachdem, welcher Teil der Fußzeile entfernt werden soll:
 
-- Schlüsselwert 1: **\* vertraulich***
+- **Wenn Sie den gesamten Fußzeile entfernen möchten**, benötigen Sie nur einen Schlüsselwert mit Sternchen vor und nach einem beliebigen Wort aus der Fußzeile. 
 
-- Schlüsselwert 2: **\* Bezeichnung angewendet*** 
+    Erstellen Sie z. b. den folgenden Eintrag in der Bezeichnung-Richtlinie:
 
-PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+    - Key: **ExternalContentMarkingToRemove**
 
-```PowerShell
-Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-```
+    - Schlüsselwert 1: **\* vertraulich***
+    
+    PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*"}
+    ```
+
+- **Wenn Sie nur eine bestimmte Zeile entfernen möchten**, benötigen Sie einen Schlüsselwert für jede bestimmte Zeile, die Sie entfernen möchten. Jeder Schlüsselwert muss genau den Text enthalten, den Sie entfernen möchten.
+
+    Erstellen Sie z. b. den folgenden Eintrag in der Bezeichnung-Richtlinie:
+
+    - Key: **ExternalContentMarkingToRemove**
+
+    - Schlüsselwert 1: **Bezeichnung manuell angewendet**
+
+    - Schlüsselwert 2: **Freigabe mit Vorsicht**
+
+    PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    ```PowerShell
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="Label applied manually,Share with caution"}
+    ```
 
 #### <a name="optimization-for-powerpoint"></a>Optimierung für PowerPoint
 
@@ -821,7 +841,7 @@ Wenn Sie die folgenden erweiterten Clienteinstellungen erstellen und konfigurier
 
 Wenn diese Bedingungen erfüllt sind, wird dem Benutzer eine Popup Meldung mit einer der folgenden Aktionen angezeigt:
 
-|type  |Beschreibung  |
+|type  |BESCHREIBUNG  |
 |---------|---------|
 |**Warnen**     | Der Benutzer kann bestätigen und senden, oder abbrechen.        |
 |**Fertigte**     |  Der Benutzer wird zur Begründung aufgefordert (vordefinierte Optionen oder Freiform), und der Benutzer kann dann die e-Mail senden oder Abbrechen. <br>Der anrichtungstext wird in den x-Header der e-Mail-Nachricht geschrieben, sodass er von anderen Systemen gelesen werden kann, wie z. b. DLP-Dienste (Data Loss Prevention).       |
@@ -1417,9 +1437,9 @@ Mit dem Dialogfeld **Microsoft Azure Information Protection** können Sie überp
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und wählen Sie im Abschnitt aktualisierter **Client Status** die Option **Anmelden** aus.
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
-|Szenario  |Beschreibung  |
+|Szenario  |BESCHREIBUNG  |
 |---------|---------|
 |**Weiterhin beim alten Konto angemeldet**     |  Wenn der Azure Information Protection Unified Bezeichnung-Client nach dem Ausführen dieser Schritte weiterhin mit dem alten Konto angemeldet ist, löschen Sie alle Cookies aus Internet Explorer, und wiederholen Sie dann die Schritte 1 und 2.       |
 |**Verwenden von Single Sign-on**    |    Wenn Sie einmaliges Anmelden nutzen, müssen Sie sich bei Windows abmelden und mit einem anderen Benutzerkonto erneut anmelden, nachdem Sie die Tokendatei gelöscht haben. <br><br>Der Azure Information Protection Unified Bezeichnung-Client wird dann automatisch mithilfe Ihres aktuell angemeldeten Benutzerkontos authentifiziert.     |
@@ -1645,7 +1665,7 @@ Zu den unterstützten Knoten Typen gehören:
 | **Und**   | Führt *und* für alle untergeordneten Knoten aus.     |
 | **Oder**    |Führt *oder* für alle untergeordneten Knoten aus.       |
 | **Not**   | Führt *nicht* für das eigene untergeordnete Element aus.      |
-| **Except**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
+| **Davon**    | Gibt *nicht* für das eigene untergeordnete Element zurück und bewirkt, dass es sich als **all** verhält.        |
 | **SentTo**, gefolgt von **Domänen: ListofDomains**    |Überprüft eine der folgenden Aktionen: <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob sich **alle** Empfänger in einer der Domänen befinden.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob einer der Empfänger in einer der Domänen **vorhanden** ist.   |
 | **EmailLabel**, gefolgt von Bezeichnung | Einer der folgenden:  <br>-Die Bezeichnungs-ID <br>-NULL, wenn keine Bezeichnung             |
 | **Attachmentlabel**, gefolgt von der **Bezeichnung** und den unterstützten **Erweiterungen**   | Einer der folgenden:  <br><br>**true**: <br>-Wenn das übergeordnete Element **außer** ist, überprüft, ob **alle** Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden sind.<br>-Wenn das übergeordnete Element etwas anderes ist, aber **außer**, prüft, ob **eine** der Anlagen mit einer unterstützten Erweiterung innerhalb der Bezeichnung vorhanden ist. <br>-Wenn nicht bezeichnet, und **Bezeichnung = NULL** <br><br> **false**: in allen anderen Fällen <br><br>**Hinweis**: Wenn die **extensioneigenschaft leer** ist oder nicht vorhanden ist, sind alle unterstützten Dateitypen (Erweiterungen) in der Regel enthalten.
@@ -1668,7 +1688,7 @@ Wenn für eine Aktion keine Parameter bereitgestellt werden, verfügen die Popup
 
 Alle Texte unterstützen die folgenden dynamischen Parameter: 
 
-|Parameter  |Beschreibung  |
+|Parameter  |BESCHREIBUNG  |
 |---------|---------|
 | `${MatchedRecipientsList}`  | Die letzte Entsprechung für die **SentTo** -Bedingungen.       |
 | `${MatchedLabelName}`      | Die **Bezeichnung**"Mail/Anlage" mit dem lokalisierten Namen aus der Richtlinie               |
@@ -2062,6 +2082,29 @@ Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#configu
 > [!NOTE]
 > Legen Sie zum Aktivieren und widerrufen von " **enabletrackandrevoke** " den Wert " **true**" fest, und führen Sie auch das Cmdlet " [enable-aipservicedocumenttrackingfeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) " aus.
 >
+
+## <a name="configure-the-autolabeling-timeout-on-office-files"></a>Konfigurieren des Authentifizierungs Timeouts für Office-Dateien
+
+Standardmäßig beträgt das autolabeling-Timeout des Scanners für Office-Dateien 3 Sekunden.
+
+Wenn Sie über eine komplexe Excel-Datei mit vielen Blättern oder Zeilen verfügen, reichen möglicherweise 3 Sekunden nicht aus, um Bezeichnungen automatisch anzuwenden. Geben Sie die folgenden Zeichen folgen an, um das Timeout für die ausgewählte Bezeichnungs Richtlinie zu erhöhen:
+
+- Schlüssel: **officecontentextractiontimeout**
+
+- Wert: Sekunden im folgenden Format: `hh:mm:ss` . 
+
+> [!IMPORTANT]
+> Es wird empfohlen, diesen Timeout nicht auf mehr als 15 Sekunden zu erhöhen.
+> 
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OfficeContentExtractionTimeout="00:00:15"}
+```
+
+Das aktualisierte Timeout gilt für "autolabeling" für alle Office-Dateien.
+
 ## <a name="next-steps"></a>Nächste Schritte
 
 Nachdem Sie den Azure Information Protection Unified Bezeichnung-Client angepasst haben, finden Sie in den folgenden Ressourcen weitere Informationen, die Sie möglicherweise benötigen, um diesen Client zu unterstützen:

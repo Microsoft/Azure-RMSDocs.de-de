@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 87ed3e51e063baa864d0e58f391777aa9b4426ee
-ms.sourcegitcommit: 34b029c05998681ff4af845cc51ee13cf3f2b58b
+ms.openlocfilehash: 1b90b0df202719f6cadab0671db9f118be58ad72
+ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99817821"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100105248"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -69,7 +69,7 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 
 ## <a name="aip-known-issues-in-office-applications"></a>In Office-Anwendungen bekannte AIP-Probleme
 
-|Funktion  |Bekannte Probleme  |
+|Komponente  |Bekannte Probleme  |
 |---------|---------|
 |**Mehrere Versionen von Office**    | Die Azure Information Protection-Clients (sowohl der klassische als auch der Client für einheitliche Bezeichnungen) unterstützen nicht mehrere Office-Versionen auf ein und demselben Computer. Auch der Wechsel von Benutzerkonten in Office wird nicht unterstützt.       |
 |**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist: <br><br>-Bei Ihren Office-Apps können Leistungsprobleme auftreten.<br>-Die Azure Information Protection Leiste kann in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt werden. <br><br>Um eine konsistente Leistung sicherzustellen und die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus, um das beste Aussehen** zu erzielen.    |
@@ -92,16 +92,27 @@ Dateien mit mehr als 2 GB werden für den Schutz unterstützt, aber nicht für d
 
 ## <a name="known-issues-for-the-aip-viewer"></a>Bekannte Probleme für den AIP-Viewer
 
+- [Quer Ansichten](#landscape-views-in-the-aip-viewer)
+- [Externe Benutzer](#external-users-and-the-aip-viewer)
+
+Weitere Informationen finden Sie unter [ **Unified Bezeichnung Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/clientv2-view-use-files.md).
+### <a name="landscape-views-in-the-aip-viewer"></a>Quer Ansichten im AIP-Viewer
+
 Der AIP-Viewer zeigt Bilder im Hochformat an, und einige große, quer Ansichts Bilder können scheinbar gestreckt werden.
 
 Beispielsweise wird ein ursprüngliches Bild unten auf der linken Seite mit einer gestreckten Hochformat Version im AIP-Viewer auf der rechten Seite angezeigt. 
-    
-:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
-    
-Weitere Informationen finden Sie unter
 
-- [**Klassischer Client**: Anzeigen geschützter Dateien mit dem Azure Information Protection Viewer](rms-client/client-view-use-files.md)
-- [**Einheitlicher** Bezeichnungs Client: geschützte Dateien mit dem Azure Information Protection Viewer anzeigen](rms-client/clientv2-view-use-files.md)
+:::image type="content" source="media/client-viewer-stretched-images.PNG" alt-text="Bild im Client-Viewer gestreckten":::
+
+### <a name="external-users-and-the-aip-viewer"></a>Externe Benutzer und der AIP-Viewer 
+
+Wenn ein externer Benutzer bereits über ein Gastkonto in Azure AD verfügt, zeigt der AIP-Viewer möglicherweise einen Fehler an, wenn der Benutzer ein geschütztes Dokument öffnet, und teilt ihm mit, dass er sich nicht mit einem persönlichen Konto anmelden kann.
+
+Wenn ein solcher Fehler auftritt, muss der Benutzer [Adobe Acrobat DC mit der MIP-Erweiterung](https://helpx.adobe.com/il_en/acrobat/kb/mip-plugin-download.html) installieren, um das geschützte Dokument zu öffnen.
+
+Wenn Sie das geschützte Dokument nach der Installation von Adobe Acrobat DC mit der MIP-Erweiterung öffnen, wird dem Benutzer möglicherweise weiterhin ein Fehler angezeigt, der anzeigt, dass das ausgewählte Benutzerkonto nicht im Mandanten vorhanden ist, und Sie werden aufgefordert, ein Konto auszuwählen. 
+
+Dies ist ein erwarteter Fehler. Wählen Sie im Eingabe Aufforderungs Fenster **zurück** aus, um das geschützte Dokument zu öffnen.
 
 ## <a name="known-issues-for-track-and-revoke-features-public-preview"></a>Bekannte Probleme beim Nachverfolgen und widerrufen von Features (öffentliche Vorschau)
 
