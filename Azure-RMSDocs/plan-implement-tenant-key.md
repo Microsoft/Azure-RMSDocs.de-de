@@ -4,7 +4,7 @@ description: Anstatt Microsoft den Stamm Schlüssel für Azure Information Prote
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 07/14/2020
+ms.date: 02/14/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,25 +13,26 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 35c898ded852970e380c8061ba8f97d040860017
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: cf9c6dd8cfee0c800289fddf6cbb46c909d23a6d
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97386388"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521292"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 >[!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection klassische Client** -und Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021** eingestellt. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
+> Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Der Azure Information Protection-Mandantenschlüssel ist ein Stammschlüssel für Ihre Organisation. Andere Schlüssel können von diesem Stamm Schlüssel abgeleitet werden, einschließlich Benutzer Schlüsseln, Computer Schlüsseln oder Dokument Verschlüsselungsschlüsseln. Wenn Azure Information Protection diese Schlüssel für Ihre Organisation verwendet, werden Sie kryptografisch mit Ihrem Azure Information Protection root-Mandanten Schlüssel verkettet.
 
 Zusätzlich zum Mandanten Stamm Schlüssel benötigt Ihre Organisation möglicherweise lokale Sicherheit für bestimmte Dokumente. Der lokale Schlüsselschutz wird in der Regel nur für eine kleine Menge an Inhalten benötigt und daher mit einem Mandanten Stamm Schlüssel konfiguriert.
+
 
 ## <a name="azure-information-protection-key-types"></a>Azure Information Protection Schlüsseltypen
 
@@ -109,3 +110,14 @@ Inhalt kann nur dann mit dem Hyok-Schutz verschlüsselt werden, wenn Sie über d
 
 Weitere Informationen finden Sie unter [Hold Your Own Key (Hyok) Details](configure-adrms-restrictions.md).
 
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Weitere Informationen zu bestimmten Schlüsseltypen finden Sie in den folgenden Artikeln:
+
+- [Ersten Schritte mit Mandanten Stamm Schlüsseln](get-started-tenant-root-keys.md)
+- [Byok-Details (Bring your own Key) für Azure Information Protection](byok-price-restrictions.md)
+- [Doppelte Schlüssel Verschlüsselung für Microsoft 365](/microsoft-365/compliance/double-key-encryption)
+
+
+Bei der Migration zwischen Mandanten, z. b. nach einer Zusammenführung eines Unternehmens, empfiehlt es sich, unseren [Blogbeitrag zu Fusionen und Spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) zu lesen, um weitere Informationen zu erhalten.

@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dec2d96f05f419c0a0f13f50210ed59d0bf67213
-ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
+ms.openlocfilehash: dc8d5d5eb1bb69287439e541f1f03327394b4861
+ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100105299"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100521326"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client für einheitliche Bezeichnungen
 
@@ -53,7 +53,7 @@ Um eine erweiterte Einstellung zu entfernen, verwenden Sie dieselbe **advancedse
 > [!IMPORTANT]
 > Verwenden Sie keine Leerzeichen in den Zeichen folgen Werten. Weiße Zeichen folgen in diesen Zeichen folgen Werten verhindern, dass ihre Bezeichnungen angewendet werden.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Syntax der erweiterten Einstellungen der Bezeichnungs Richtlinie](#label-policy-advanced-settings-syntax)
 - [Syntax der Bezeichnung "Erweiterte Einstellungen"](#label-advanced-settings-syntax)
@@ -195,7 +195,7 @@ In den folgenden Abschnitten werden die verfügbaren erweiterten Einstellungen f
 
 In den folgenden Abschnitten werden die erweiterten Einstellungen aufgelistet, die auf dieser Seite durch die Integration von Produkten und Features beschrieben werden:
 
-|Komponente  |Erweiterte Einstellungen  |
+|Funktion  |Erweiterte Einstellungen  |
 |---------|---------|
 |**Outlook und e-Mail-Einstellungen**     | - [Konfigurieren einer Bezeichnung zum Anwenden des S/MIME-Schutzes in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook) <br> - [Anpassen von Outlook-Popup Meldungen](#customize-outlook-popup-messages) <br>- [Aktivieren der empfohlenen Klassifizierung in Outlook](#enable-recommended-classification-in-outlook)<br> - [Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling) <br>- [Wenden Sie für e-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht.](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)<br>- [Erweitern von Outlook-Verteilerlisten beim Suchen nach e-Mail-Empfängern](#expand-outlook-distribution-lists-when-searching-for-email-recipients) <br>- [Implementieren von Popup Nachrichten in Outlook, die gesendete e-Mails warnen, begründen oder blockieren](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent) <br>- [Vermeiden von Outlook-Leistungsproblemen mit S/MIME-e-Mails](#prevent-outlook-performance-issues-with-smime-emails)   <br>- [Festlegen einer anderen Standard Bezeichnung für Outlook](#set-a-different-default-label-for-outlook)     |
 |**PowerPoint-Einstellungen** | - [Vermeiden Sie das Entfernen von Formen aus PowerPoint, die den angegebenen Text enthalten, und keine Kopf-und Fußzeilen.](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers)<br>- [Entfernen Sie externe Inhalts Markierungen explizit aus Ihren benutzerdefinierten PowerPoint-Layouts.](#extend-external-marking-removal-to-custom-layouts)<br>- [Entfernen Sie alle Formen eines bestimmten Shape-namens aus den Kopf-und Fußzeilen, anstatt Formen nach Text innerhalb der Form zu entfernen.](#remove-all-shapes-of-a-specific-shape-name)  |
@@ -473,7 +473,7 @@ Es gibt zwei Methoden zum Entfernen von Klassifizierungen aus anderen Bezeichnun
 |Einstellung  |BESCHREIBUNG  |
 |---------|---------|
 |**Wordshapenametoremove**     |  Entfernt alle Formen aus Word-Dokumenten, wobei der Name der Form mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove** definiert ist.  <br><br>Weitere Informationen finden Sie unter [Verwenden der erweiterten wordshapenametoremove-Eigenschaft](#use-the-wordshapenametoremove-advanced-property).     |
-|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Ermöglicht das Entfernen oder Ersetzen von textbasierten Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten. <br><br>Weitere Informationen finden Sie unter <br>- [Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [Konfigurieren von externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove).    |
+|**RemoveExternalContentMarkingInApp** <br><br>**ExternalContentMarkingToRemove**   |    Ermöglicht das Entfernen oder Ersetzen von textbasierten Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten. <br><br>Weitere Informationen finden Sie in folgenden Quellen: <br>- [Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft](#use-the-removeexternalcontentmarkinginapp-advanced-property)<br>- [Konfigurieren von externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove).    |
 |     |         |
 
 ### <a name="use-the-wordshapenametoremove-advanced-property"></a>Verwenden der erweiterten Eigenschaft wordshapenametoremove
@@ -569,7 +569,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 ```
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Mehrzeilige Kopf- oder Fußzeilen](#multiline-headers-or-footers)
 - [Optimierung für PowerPoint](#optimization-for-powerpoint)
@@ -677,7 +677,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointRemoveAllShapesBy
 > Wenn Sie **powerpointremoveallshapesbyshapename** definieren möchten, definieren Sie sowohl [externalcontentmarkingtoremove](#how-to-configure-externalcontentmarkingtoremove) als auch [powerpointshapenametoremove](#avoid-removing-shapes-from-powerpoint-that-contain-specified-text-and-are-not-headers--footers) , um zu vermeiden, dass mehr Formen als beabsichtigt entfernt werden.
 >
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Suchen Sie den Namen der Form, die Sie als Kopf-oder Fußzeile verwenden.](#find-the-name-of-the-shape-that-youre-using-as-a-header-or-footer)
 - [Entfernen externer Inhalts Markierungen aus benutzerdefinierten Layouts in PowerPoint](#remove-external-content-marking-from-custom-layouts-in-powerpoint)
@@ -855,7 +855,7 @@ Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden 
 > [!TIP]
 > Um sicherzustellen, dass Popups auch dann angezeigt werden, wenn Dokumente von außerhalb von Outlook freigegeben werden **(Datei > Freigabe > Anfügen einer Kopie)**, konfigurieren Sie auch die erweiterte Einstellung " [Verschiebungen andatorybeforesave](#remove-not-now-for-documents-when-you-use-mandatory-labeling) ".
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie in folgenden Quellen:
 
 - [So implementieren Sie Popup Meldungen für bestimmte Bezeichnungen in Warn-, rechtfertigen oder blockieren](#to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels)
 - [So implementieren Sie Popup Meldungen für e-Mail-Nachrichten oder Anhänge, die keine Bezeichnung aufweisen](#to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label)
@@ -1157,6 +1157,10 @@ Weitere Anpassungen finden Sie unter:
 
 - [Erweitern Sie Ihre Regeln für die Bezeichnung der Migration auf e-Mails.](#extend-your-label-migration-rules-to-emails)
 - [Erweitern der Regeln für die Bezeichnung der Migration auf SharePoint-Eigenschaften](#extend-your-label-migration-rules-to-sharepoint-properties)
+
+> [!NOTE]
+> Wenn Sie von ihren Bezeichnungen über Mandanten hinweg migrieren, z. b. nach einer Zusammenführung eines Unternehmens, empfiehlt es sich, dass Sie unseren [Blogbeitrag zu Fusionen und Spinoffs](https://techcommunity.microsoft.com/t5/microsoft-security-and/mergers-and-spinoffs/ba-p/910455) lesen, um weitere Informationen zu erhalten.
+>
 
 #### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Beispiel 1: Eine 1:1-Zuordnung des gleichen Bezeichnungsnamens
 
@@ -1649,7 +1653,7 @@ Definieren Sie die JSON-Syntax Ihrer Regel wie folgt:
 "nodes" : []
 ```
 
-Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie unter
+Sie müssen über mindestens zwei Knoten verfügen, der erste, der die Bedingung Ihrer Regel darstellt, und der letzte, der die Aktion der Regel darstellt. Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Syntax der Regel Bedingung](#rule-condition-syntax)
 - [Syntax der Regel Aktion](#rule-action-syntax)
