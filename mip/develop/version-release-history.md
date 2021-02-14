@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 3e3d32dd5e66ee6948567bc43ebd5ecfa16154b6
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: 52e43c9c0960ca5dadcd581db53bad2be2323b25
+ms.sourcegitcommit: 0f694bf6c7ea9c7709954bfb5dbd1c5f009b85a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98215509"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100360346"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Support Richtlinie für Microsoft Information Protection (MIP) Software Development Kit (SDK)
 
@@ -29,6 +29,15 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 > Kleinere Fehlerbehebungen sind nicht aufgeführt. Wenn Sie ein Problem mit dem SDK haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
 >  
 > Technische Unterstützung finden Sie im [Stack Overflow Microsoft Information Protection-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
+
+## <a name="version-1894"></a>Version 1.8.94
+
+**Veröffentlichungsdatum:** 8. Februar 2021
+
+- Fehler im nuget-Paket behoben, bei dem die Debugkonfiguration für C++-Projekte Versions Binärdateien bereitgestellt hat 
+- Es wurde ein Fehler behoben, bei dem das Richtlinien Modul zum Entfernen des Schutzes erforderlich war. 
+  - Wenn die Richtlinien-Engine nicht geladen werden kann und Bezeichnungs Metadaten vorhanden sind, werden Sie verworfen, wenn der Schutz entfernt wird. 
+- Es wurde ein Fehler behoben, bei dem leere `labelInfo.xml` generiert wurde, wenn die Datei in eine andere geschützte Bezeichnung geändert wurde. 
 
 ## <a name="version-1886"></a>Version 1.8.86
 
