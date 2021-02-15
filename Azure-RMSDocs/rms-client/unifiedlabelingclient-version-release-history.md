@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbb3d8789ddd94ee1cb9e7eb948475b559d632fc
-ms.sourcegitcommit: d9a096b021fd972324a71fa2614f8bd9893ae03e
+ms.openlocfilehash: afe860e878df27b7081c4f12a9b4612cab845db9
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100521309"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524794"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -121,7 +121,7 @@ Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unte
 
 Zur Unterstützung von getrennten oder Azure China 21ViaNet-Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
 
-|Cmdlet  |BESCHREIBUNG  |
+|Cmdlet  |Beschreibung  |
 |---------|---------|
 |**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Fügt ihrem inhaltscanauftrag ein neues Repository hinzu.        |
 |**[Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Ruft Details zum inhaltscanauftrag ab.   |
@@ -255,7 +255,7 @@ Beispielsweise können Sie Änderungen vorgenommen haben, die sich nur auf den E
 > [!IMPORTANT]
 > Administratoren, die Änderungen an Ihren Richtlinien und Inhalts Scan Aufträgen vornehmen, müssen nun die Auswirkungen dieser Änderungen auf den Inhalt verstehen und ermitteln, ob eine vollständige erneute Überprüfung erforderlich ist.
 >
-> Wenn Sie beispielsweise die Einstellungen für die **Richtlinien** Erzwingung von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
+> Wenn Sie z. b. die **Vertraulichkeitsrichtlinien** Einstellungen von **erzwingen = aus** in **erzwingen = on** geändert haben, stellen Sie sicher, dass Sie eine vollständige erneute Überprüfung ausführen, um ihre Bezeichnungen auf Ihre Inhalte anzuwenden.
 >
 
 ### <a name="configure-sharepoint-timeouts"></a>Konfigurieren von SharePoint-Timeouts
@@ -302,7 +302,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 
-|Cmdlet  |BESCHREIBUNG  |
+|Cmdlet  |Beschreibung  |
 |---------|---------|
 |[**Get-mipnetworkdiscoveryconfiguration**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Ruft die aktuelle Einstellung ab, ob der Netzwerk Ermittlungsdienst Netzwerk Scan Daten aus der Standard-, Online-oder Offline Datei abruft, die aus der Azure-Portal exportiert wurde.      |
 |[**Get-mipnetworkdiscoveryjobs**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Ruft eine Liste der derzeit konfigurierten Netzwerk Scanaufträge ab.     |
@@ -335,6 +335,7 @@ Informationstypen werden nicht mehr von Überwachungs [Protokollen für Zugriffs
 
 Weitere Informationen finden Sie unter [zugreifen](../audit-logs.md#access-audit-logs)auf Überwachungs Protokolle.
 
+Weitere Informationen finden Sie unter [Azure Information Protection Audit Log Reference](../audit-logs.md).
 ### <a name="dke-template-based-labeling-updates"></a>Auf Vorlagen basierende DKE-Beschriftungs Updates
 
 Azure Information Protection unterstützt jetzt eine DKE-vorlagenbasierte (Double Key Encryption) vorlagenbasierte Bezeichnung in der Überprüfung sowie die Verwendung des Datei-Explorers und von PowerShell.

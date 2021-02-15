@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8c0d8ae4989a31029979c819ac6c59c390a8f3c
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: f674cd162131b0a45dbefbe70e617296695d6126
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97382546"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524743"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Was ist der Azure Information Protection-Scanner für einheitliche Bezeichnungen?
 
@@ -84,7 +84,7 @@ Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschloss
 
 Der Scanner berücksichtigt auch alle Dateilisten, die explizit für die Überprüfung definiert oder von der Überprüfung ausgeschlossen werden sollen. Dateilisten gelten standardmäßig für alle Daten Depots und können auch nur für bestimmte Depots definiert werden.
 
-Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Zum Beispiel:
+Zum Definieren von Dateilisten für das Scannen oder ausschließen verwenden Sie die Einstellung **Dateitypen** für die Überprüfung im Inhalts Überprüfungs Auftrag. Beispiel:
 
 ![Konfigurieren der zu überprüfenden Dateitypen für den Azure Information Protection-Scanner](./media/scanner-file-types.png)
 
@@ -146,6 +146,8 @@ Weitere Informationen zum Bereitstellen des Scanners finden Sie in den folgenden
 - [Ausführen von Scans mit dem AIP-Scanner](deploy-aip-scanner-manage.md)
 
 **Weitere Informationen**:
+
+- [Sehen Sie sich unsere Bereitstellung an.](https://techcommunity.microsoft.com/t5/microsoft-security-and/mip-scanner-deployment-watch-our-video/ba-p/2023277) Sehen Sie sich eine Schritt-für-Schritt-Anleitung zum Installieren und Konfigurieren des lokalen Scanners mit einheitlicher Bezeichnung an.
 
 - Weitere Informationen finden Sie in unserem Blog zu bewährten Methoden für die einheitliche Bezeichnung Scanner: [bewährte Methoden für die Bereitstellung und Verwendung des AIP-UL-Scanners](https://aka.ms/AIPScannerBestPractices) .
 

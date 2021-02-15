@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren und Konfigurieren des Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/29/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ba1c39f50e6861b134d09b3ba0ec2de870437962
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 0c3aa35877ed657f81c955af0d674bde3d22a079
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809611"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524828"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -97,7 +97,7 @@ Ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.m
 - [Erstellen eines Netzwerk Scan Auftrags](#creating-a-network-scan-job)
 
 > [!NOTE]
-> Die Azure Information Protection Network Discovery-Funktion befindet sich derzeit in der Vorschau Phase. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+> Die Azure Information Protection Network Discovery-Funktion befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 > 
 
 #### <a name="network-discovery-prerequisites"></a>Voraussetzungen der Netzwerk Ermittlung
@@ -141,7 +141,7 @@ Durch einen Netzwerk Scanauftrag, einen Inhalts Überprüfungs Auftrag oder durc
 Wenn Sie [einen Netzwerk Scanauftrag definiert](#create-a-network-scan-job-public-preview) haben und ihn so festgelegt haben, dass er zu einem bestimmten Zeitpunkt ausgeführt wird, warten Sie, bis die Ausführung abgeschlossen ist, um die Ergebnisse zu überprüfen. Sie können hier auch nach dem Ausführen eines [Inhalts Scan Auftrags](#create-a-content-scan-job) zurückkehren, um aktualisierte Daten anzuzeigen.
 
 > [!NOTE]
-> Die Azure Information Protection- **Repository** -Funktion befindet sich derzeit in der Vorschau Phase. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+> Die Azure Information Protection- **Repository** -Funktion befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 > 
 
 1. Wählen Sie im Menü **Scanner** auf der linken Seite die Option **Repository** - ![Repository-Symbol](media/i-repositories.png "Repository (Symbol)")aus.
@@ -189,7 +189,7 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
     |Einstellung  |Beschreibung  |
     |---------|---------|
     |**Einstellungen für den Content Scan-Auftrag**     |    - **Zeitplan**: behalten Sie den Standardwert **manuell** bei. <br />- **Zu ermittelnde Informationstypen**: **nur in Richtlinie** ändern <br />- **Repository konfigurieren**: Konfigurieren Sie zu diesem Zeitpunkt nicht, da der Inhalts Überprüfungs Auftrag zuerst gespeichert werden muss.         |
-    |**Richtlinienerzwingung**     | - **Erzwingen**: SELECT **Off** <br />- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . <br />- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten <br />- **Dateien** neu bezeichnen: Standardwert " **aus** " beibehalten        |
+    |**Vertraulichkeitsrichtlinie**     | - **Erzwingen**: SELECT **Off** <br />- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . <br />- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten <br />- **Dateien** neu bezeichnen: Standardwert " **aus** " beibehalten        |
     |**Konfigurieren von Datei Einstellungen**     | - **"Datum geändert", "zuletzt geändert" und "geändert von**" beibehalten: behalten Sie die Standardeinstellung **bei** . <br />- **Zu überprüfende Dateitypen**: Standard Dateitypen für **Ausschluss** beibehalten <br />- **Standard Besitzer**: behalten Sie die Standardeinstellung **Scanner-Konto** bei.        |
     | | |
 
@@ -233,7 +233,7 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
 
     Verwenden Sie die folgende Syntax, wenn Sie SharePoint-Pfade hinzufügen:
     
-    |`Path`  |Syntax  |
+    |Pfad  |Syntax  |
     |---------|---------|
     |**Stammpfad**     | `http://<SharePoint server name>` <br /><br />Scannt alle Websites, einschließlich sämtlicher Site Sammlungen, die für den scannerbenutzer zulässig sind. <br />Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Stamm Inhalten        |
     |**Bestimmte SharePoint-unter Website oder-Sammlung**     | Einer der folgenden: <br />- `http://<SharePoint server name>/<subsite name>` <br />- `http://SharePoint server name>/<site collection name>/<site name>` <br /><br />Erfordert [zusätzliche Berechtigungen](quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories) zum automatischen ermitteln von Website Sammlungs Inhalten         |
@@ -338,7 +338,7 @@ Um diese Einstellungen zu ändern, bearbeiten Sie den Auftrag für die Inhalts �
 2. Ändern Sie im Bereich Inhalts Überprüfungs Auftrag die folgenden Einstellungen, und wählen Sie dann **Speichern** aus:
     
    - Im Abschnitt **Content Scan Job** : Ändern des **Zeitplans** in **Always**
-   - Aus dem Abschnitt zur **Richtlinien** Erzwingung: Ändern von **erzwingen** **in ein**
+   - Aus dem Abschnitt **Sensitivitäts Richtlinie** : Ändern von **erzwingen** **in ein**
     
     > [!TIP]
     > Möglicherweise möchten Sie andere Einstellungen in diesem Bereich ändern, z. b. ob Dateiattribute geändert werden und ob der Scanner Dateien neu bezeichnen kann. Weitere Informationen zu den einzelnen Konfigurationseinstellungen finden Sie in der Popuphilfe mit Informationen.
@@ -474,7 +474,7 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. <br /><br />Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung der Überprüfung kann beeinträchtigt werden, wenn Sie Änderungen an der Auto Layout-Richtlinie vorgenommen haben. <br /><br />Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. <br /><br />Wenn Sie die Bedingungen oder die Authentifizierungs Einstellungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage.md#rescanning-files).|
 |**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. <br /><br /> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. <br /><br />Beispiel: <br />-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) <br />-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
-|**Log level**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.<br /><br />- **Off** führt zu einer optimalen Leistung. <br />- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. <br /><br />Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.<br /><br />- **Off** führt zu einer optimalen Leistung. <br />- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. <br /><br />Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. <br /><br />-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. <br /><br />-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
 

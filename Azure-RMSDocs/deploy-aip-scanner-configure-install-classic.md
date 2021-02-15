@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren und Konfigurieren des Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 06/29/2020
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 112593d0d26deca85dad62d580c73553f4a26107
-ms.sourcegitcommit: ee20112ada09165b185d9c0c9e7f1179fc39e7cf
+ms.openlocfilehash: 46655ef7da2d8670ef3fced105b3d471bb05a8f9
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98659186"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524760"
 ---
 # <a name="configuring-and-installing-the-azure-information-protection-classic-scanner"></a>Konfigurieren und Installieren des Azure Information Protection klassischen Scanner
 
@@ -80,7 +80,7 @@ So konfigurieren Sie Ihren Scanner:
 
     2. Optional können Sie eine Beschreibung für administrative Zwecke angeben, damit Sie den Cluster Namen des Scanners leichter identifizieren können.
 
-    3. Wählen Sie **Speichern** aus.
+    3. Wählen Sie **Speichern**.
 1. Suchen Sie die Menü Optionen **Scanner** , und wählen Sie **Inhalts Scanaufträge** aus.
 1. Wählen Sie im Bereich **Azure Information Protection-Inhalts Scanaufträge** die Option **Hinzufügen** aus.
 
@@ -89,7 +89,7 @@ So konfigurieren Sie Ihren Scanner:
     |`Section`  |Einstellungen  |
     |---------|---------|
     |**Einstellungen für den Content Scan-Auftrag**     |    - **Zeitplan**: behalten Sie den Standardwert **manuell** bei. </br>- **Zu ermittelnde Informationstypen**: **nur in Richtlinie** ändern </br>- **Repository konfigurieren**: Konfigurieren Sie zu diesem Zeitpunkt nicht, da der Inhalts Überprüfungs Auftrag zuerst gespeichert werden muss.         |
-    |**Richtlinienerzwingung**     | - **Erzwingen**: SELECT **Off** </br>- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . </br>- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten </br>- **Dateien** neu bezeichnen: Standardwert " **aus** " beibehalten        |
+    |**Vertraulichkeitsrichtlinie**     | - **Erzwingen**: SELECT **Off** </br>- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . </br>- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten </br>- **Dateien** neu bezeichnen: Standardwert " **aus** " beibehalten        |
     |**Konfigurieren von Datei Einstellungen**     | - **"Datum geändert", "zuletzt geändert" und "geändert von**" beibehalten: behalten Sie die Standardeinstellung **bei** . </br>- **Zu überprüfende Dateitypen**: Standard Dateitypen für **Ausschluss** beibehalten </br>- **Standard Besitzer**: behalten Sie die Standardeinstellung **Scanner-Konto** bei.        |
     | | |
 
@@ -110,7 +110,7 @@ So konfigurieren Sie Ihren Scanner:
 
 1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
 
-    Zum Beispiel: 
+    Beispiel: 
 
     - Verwenden Sie für eine Netzwerkfreigabe `\\Server\Folder` . 
     - Verwenden Sie für eine SharePoint-Bibliothek `http://sharepoint.contoso.com/Shared%20Documents/Folder` .
@@ -194,7 +194,7 @@ So erhalten Sie ein Azure AD Token:
 
     Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
 
-    Zum Beispiel:
+    Beispiel:
 
     ```PowerShell
     Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
@@ -224,7 +224,7 @@ Um diese Einstellungen zu ändern, bearbeiten Sie den Auftrag für die Inhalts �
 2. Ändern Sie im Bereich Inhalts Überprüfungs Auftrag die folgenden Einstellungen, und wählen Sie dann **Speichern** aus:
 
    - Im Abschnitt **Content Scan Job** : Ändern des **Zeitplans** in **Always**
-   - Aus dem Abschnitt zur **Richtlinien** Erzwingung: Ändern von **erzwingen** **in ein**
+   - Aus dem Abschnitt **Sensitivitäts Richtlinie** : Ändern von **erzwingen** **in ein**
 
     > [!TIP]
     > Möglicherweise möchten Sie andere Einstellungen in diesem Bereich ändern, z. b. ob Dateiattribute geändert werden und ob der Scanner Dateien neu bezeichnen kann. Weitere Informationen zu den einzelnen Konfigurationseinstellungen finden Sie in der Popuphilfe mit Informationen.
@@ -295,7 +295,7 @@ Wenn Sie z. b. einen neuen Dateityp in mehreren SharePoint-Daten Depots haben, k
 
 So führen Sie Massen Änderungen in mehreren Depots durch:
 
-1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Zum Beispiel:
+1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Beispiel:
 
     :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportieren der Datenrepositoryeinstellungen für den Scanner":::
 
@@ -339,7 +339,7 @@ Weitere Informationen [finden Sie unter Schnellstart: finden Sie heraus, welche 
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |BESCHREIBUNG  |
+|Option  |Beschreibung  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. </br></br>Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. </br></br>Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. </br></br>Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
@@ -359,8 +359,8 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Lade-/Antwort-Zeiten**     |Die aktuellen Lade-und Antwortzeiten der Datenspeicher, die die zu überprüfenden Dateien enthalten, wirken sich auch auf die Leistung des Scanners aus.         |
 |**Scanmodus** (Ermittlung/erzwingen)    | Der Ermittlungs Modus hat normalerweise eine höhere Scanrate als der Erzwingungs Modus. </br></br>Die Ermittlung erfordert eine einzelne Datei Leseaktion, während der Erzwingungs Modus Lese-und Schreib Aktionen erfordert.        |
 |**Richtlinienänderungen**     |Die Leistung Ihres Scanners kann beeinträchtigt werden, wenn Sie Änderungen an den Bedingungen in der Azure Information Protection Richtlinie vorgenommen haben. </br></br>Der erste Scan Zyklus, bei dem der Scanner jede Datei überprüfen muss, dauert länger als nachfolgende Überprüfungszyklen, die standardmäßig nur neue und geänderte Dateien untersuchen. </br></br>Wenn Sie die Bedingungen ändern, werden alle Dateien erneut gescannt. Weitere Informationen finden Sie unter [erneutanup von Dateien](deploy-aip-scanner-manage-classic.md#rescanning-files).|
-|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Zum Beispiel: </br>-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
-|**Log level**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
+|**Regex-Konstruktionen**    | Die Leistung des Scanners ist von der Erstellung der Regex-Ausdrücke für benutzerdefinierte Bedingungen betroffen. </br></br> Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. </br></br>Beispiel: </br>-Vermeiden [gieriger quantifiziererer](/dotnet/standard/base-types/quantifiers-in-regular-expressions) </br>-Verwenden Sie nicht Erfassungs Gruppen wie z. b. `(?:expression)` anstelle von. `(expression)`    |
+|**Protokollebene**     |  Optionen auf Protokollebene umfassen **Debug**, **Info**, **Error** und **Off** für die scannerberichte.</br></br>- **Off** führt zu einer optimalen Leistung. </br>- Das **Debuggen** verlangsamt den Scanner erheblich und sollte nur zur Problembehandlung verwendet werden. </br></br>Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).       |
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. </br></br>-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. </br></br>-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
 
