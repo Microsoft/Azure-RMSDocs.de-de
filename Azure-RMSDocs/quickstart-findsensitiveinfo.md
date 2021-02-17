@@ -4,19 +4,19 @@ description: Verwenden Sie den Azure Information Protection-Scanner, um nach ver
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ROBOTS: NOINDEX
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 19070e1e661718c70b21cd16d76130afed91b17f
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 61a31c458ced8f28f62de35204db180dcc785ee2
+ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809381"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524811"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
@@ -92,7 +92,7 @@ Bevor Sie den Scanner installieren, erstellen Sie im Azure-Portal ein Profil daf
 
     Optional können Sie eine Beschreibung für administrative Zwecke eingeben, damit Sie den Profilnamen des Scanners leichter erkennen.
 
-1. Suchen Sie den Abschnitt **Richtlinienerzwingung**, und wählen Sie für diese Schnellstartanleitung nur eine Einstellung aus: Wählen Sie für **Erzwingen** die Option **Aus**. Klicken Sie dann auf **Speichern**, aber schließen Sie den Bereich nicht.
+1. Suchen Sie den Abschnitt **Vertraulichkeitsrichtlinie**, und wählen Sie für diesen Schnellstart nur eine Einstellung aus: Wählen Sie für **Erzwingen** die Option **Aus**. Klicken Sie dann auf **Speichern**, aber schließen Sie den Bereich nicht.
 
     Die Einstellungen konfigurieren den Scanner so, dass eine einmalige Ermittlung aller Dateien in Ihrem angegebenen Datenrepository durchgeführt wird. Bei dieser Überprüfung wird nach allen bekannten vertraulichen Informationstypen gesucht. Sie müssen dabei nicht zuerst Ihre Azure Information Protection-Bezeichnungen oder Einstellungen konfigurieren.
 

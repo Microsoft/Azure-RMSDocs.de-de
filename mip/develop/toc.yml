@@ -141,8 +141,8 @@
       href: concept-mip-proxies.md
     - name: Übersicht über die Dienstermittlung
       href: concept-service-discovery.md
-    - name: SDK-Telemetrie
-      href: concept-mip-telemetry.md
+    - name: SDK-Diagnosen
+      href: concept-mip-diagnostics.md
     - name: Unterstützte Dateitypen
       href: concept-supported-filetypes.md
     - name: Anwendungsfälle
