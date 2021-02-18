@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: batamig
 ms.author: bagol
-ms.date: 11/09/2020
+ms.date: 02/18/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 99c1fa6379f346477431caa884b687d39d500b7a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 19c6b2d4e2e7d06c7fa5552f592f69359dc039de
+ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98808818"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101090561"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
@@ -41,9 +41,9 @@ Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichter
 
 - Identifizieren Sie, ob interne oder externe Benutzer von Windows-Computern auf geschützte Dokumente zugreifen und ob der Zugriff gewährt oder verweigert wurde.
 
-Die Daten, die Sie sehen, werden von ihren Azure Information Protection-Clients und-Scannern, von Microsoft Cloud App Security, von Windows 10-Computern mit Microsoft Defender Advanced Threat Protection und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert. Beachten Sie, dass der [AIP-Viewer](rms-client/clientv2-view-use-files.md) keine Überwachungs Protokolle sendet.
+Die Daten, die Sie sehen, werden von ihren Azure Information Protection-Clients und-Scannern, von Microsoft Cloud App Security, von Windows 10-Computern mit Microsoft Defender Advanced Threat Protection und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert. 
 
-Azure Information Protection Analytics für die Zentrale Berichterstellung befindet sich derzeit in der Vorschau Phase. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+Azure Information Protection Analytics für die Zentrale Berichterstellung befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 
 
 ## <a name="aip-reporting-data"></a>AIP-Berichtsdaten
@@ -148,7 +148,7 @@ Speziell für Azure Information Protection-Analysen können Sie nach der Konfigu
 
 Da Azure Information Protection Analytics die Azure-Überwachung verwendet, steuert die rollenbasierte Zugriffs Steuerung (RBAC) für Azure auch den Zugriff auf Ihren Arbeitsbereich. Daher benötigen Sie zum Verwalten von Azure Information Protection-Analysen sowohl eine Azure-Rolle als auch eine Azure AD-Administratorrolle. Wenn Sie noch keine Erfahrung mit Azure-Rollen haben, sollten Sie [Unterschiede zwischen Azure RBAC-Rollen und Azure AD-Administratorrollen](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles) lesen.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Erforderliche Azure AD Administrator Rollen](#required-azure-ad-administrator-roles)
 - [Erforderliche Azure-Log Analytics Rollen](#required-azure-log-analytics-roles)
@@ -237,7 +237,7 @@ Sie sind jetzt bereit, die Berichte anzuzeigen.
 
 Suchen Sie im Bereich Azure Information Protection die Menü Optionen **Dashboards** , und wählen Sie eine der folgenden Optionen aus:
 
-|Bericht  |Beschreibung  |
+|Bericht  |BESCHREIBUNG  |
 |---------|---------|
 |**Verwendungs Bericht (Vorschau)**     |  Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.       |
 |**Aktivitäts Protokolle (Vorschau)**     |  Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden. Außerdem können Sie für geschützte Dokumente für Benutzer sowohl innerhalb als auch außerhalb Ihrer Organisation Zugriffsversuche (erfolgreich oder verweigert) erkennen, auch wenn Sie den Azure Information Protection-Client nicht installiert haben. <br><br>  Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Wenn Sie **Aktivitätsdetails** auswählen, werden weitere Details zu einer Datei angezeigt.     |
