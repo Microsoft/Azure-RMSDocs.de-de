@@ -14,12 +14,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57f26f92535560a86377a34dcdfbb00a3453d73e
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 8030d9c276bd745a427ed5444076cea4a7a6283e
+ms.sourcegitcommit: 939dee0b096f49f5cf3df32cf800c6ae3114ce25
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809826"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100655236"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -142,10 +142,10 @@ Zusätzlich wird die Dokumentanzeige durch folgende Szenarien unterstützt:
 
 |Plattformen zum Anzeigen und Bearbeiten von Dokumenten: <br />Word, Excel, PowerPoint|Authentifizierungsmethode:<br />Azure AD|Authentifizierungsmethode:<br />Microsoft-Konto|
 |---------------|----------|-----------|-----------|
-|Windows|Ja [[1]](#footnote-1)|Ja (nur Microsoft 365-Apps)|
+|Windows|Ja [[1]](#footnote-1)|Ja (Microsoft 365-apps und Microsoft Office 2019)|
 |iOS|Ja [[1]](#footnote-1)|Ja (Version 2,42 und höher) |
 |Android|Ja [[1]](#footnote-1)|Ja (Version 16.0.13029 und höher)|
-|macOS|Ja [[1]](#footnote-1)|Ja (Version 16,42 und höher)|
+|macOS|Ja [[1]](#footnote-1)|Ja (Microsoft 365-apps, Version 16,42 und höher)|
 
 ###### <a name="footnote-1"></a>Fußnote 1
 Unterstützt die Benutzerkonten, Gruppen mit aktivierter E-Mail-Funktion, alle Mitglieder. Benutzerkonten und Gruppen mit aktivierter E-Mail-Funktion schließen Gastkonten mit ein. Mitglieder beinhalten keine Gastkonten.
