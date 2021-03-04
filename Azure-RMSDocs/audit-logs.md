@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die von Azure Information Protection-AIP ge
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/18/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3019f0d6886f5de79f51f14262094e2be1f7ee40
-ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
+ms.openlocfilehash: fc51c360e4cded259b87eee7bedcaf0829e0b717
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101090547"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844267"
 ---
 # <a name="azure-information-protection-audit-log-reference-public-preview"></a>Azure Information Protection Überwachungs Protokoll Referenz (öffentliche Vorschau)
 
@@ -28,7 +28,7 @@ ms.locfileid: "101090547"
 >[!NOTE] 
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Das Azure Information Protection Audit Log-Feature befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+Das Azure Information Protection Audit Log-Feature befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
 
 Microsoft Azure Information Protection generiert Überwachungs Protokolle bei den folgenden Aktivitäts Ereignissen:
 
@@ -166,4 +166,10 @@ Zum **Entfernen von Schutz** Überwachungsprotokollen werden die folgenden Aktiv
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zur Überwachungs Protokollierung finden Sie unter [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](reports-aip.md).
+AIP-Überwachungs Protokolle werden auch an den Microsoft 365-Aktivitäts-Explorer gesendet, wo Sie mit unterschiedlichen Namen angezeigt werden können.
+
+Weitere Informationen finden Sie unter
+
+- [Public Preview: AIP-Überwachungs Protokolle im Aktivitäts-Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Einstieg in den Aktivitäts-Explorer](/microsoft-365/compliance/data-classification-activity-explorer)
+- [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](reports-aip.md)

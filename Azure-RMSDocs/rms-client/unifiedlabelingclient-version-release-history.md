@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeic
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/14/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: afe860e878df27b7081c4f12a9b4612cab845db9
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 6f77220e6321f8a601c936fec9a5ea4812539f01
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524794"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844369"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -39,8 +39,6 @@ Weitere Informationen finden Sie unter [aktualisieren und Verwalten des Azure In
 
 Jede allgemein verfügbare Version des Azure Information Protection Unified Bezeichnung-Clients wird bis zu sechs Monate nach der Veröffentlichung der nachfolgenden GA-Version unterstützt. Die Dokumentation enthält keine Informationen über nicht unterstützte Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
 
-Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phase sind. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
-
 ### <a name="general-availability-versions-that-are-no-longer-supported"></a>Allgemein verfügbare Versionen, die nicht mehr unterstützt werden
 
 |Clientversion|Datum der Veröffentlichung|
@@ -61,7 +59,7 @@ Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
 
 Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterstützte Version des Azure Information Protection Unified Bezeichnung-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
 
-Die neueste Version von Azure Information Protection befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
+Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phase sind. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
 
 > [!NOTE]
 > Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
@@ -69,6 +67,56 @@ Die neueste Version von Azure Information Protection befindet sich derzeit in de
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
 Der Unified-Bezeichnungs Client ersetzt den Azure Information Protection klassischen Client. Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Beschriftungslösungen für Windows-Computer](use-client.md#compare-the-labeling-solutions-for-windows-computers).
+
+## <a name="version-210460-for-co-authoring-public-preview"></a>Version 2.10.46.0 für die gemeinsamen Erstellung (Public Preview)
+
+Vereinheitlichte Bezeichnung Client Version 2.10.46.0
+
+**Release** 03/02/2021
+
+Diese dedizierte Version von Azure Information Protection bietet eine öffentliche Vorschau der in Microsoft 365 neu unterstützten Funktionen für die gemeinsamen Dokument Erstellung.
+
+Die gemeinsamen Erstellung von Office-Apps ermöglicht mehreren Benutzern das Bearbeiten von Dokumenten, die durch [Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels)gekennzeichnet und verschlüsselt sind.
+
+> [!IMPORTANT]
+> Um die Funktionen zur gemeinsamen Erstellung in der öffentlichen Vorschau zu nutzen, müssen Sie die dedizierte Installationsdatei für diese Version herunterladen und installieren. Laden Sie die Datei auf der [Microsoft-Download Website](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunter, und installieren Sie Sie `AzInfoProtection_2.10.46_CoAuthoring_PublicPreview.exe`  .
+>
+> Ihr System muss außerdem die Versions Anforderungen erfüllen, die in den [Microsoft 365 Voraussetzungen für die gemeinsamen Erstellung](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites)aufgeführt sind.
+>
+
+Bevor Sie beginnen, sollten Sie alle zugehörigen Voraussetzungen und Einschränkungen überprüfen. Weitere Informationen finden Sie unter
+
+- [Aktivieren der gemeinsamen Erstellung von Dateien, die mit Vertraulichkeits Bezeichnungen verschlüsselt](/microsoft-365/compliance/sensitivity-labels-coauthoring) sind, in der Microsoft 365-Dokumentation.
+- [Bekannte Probleme bei der Co-Erstellung in aip](../known-issues.md#known-issues-for-co-authoring-public-preview)
+## <a name="version-210430-for-dlp-policies-public-preview"></a>Version 2.10.43.0 für DLP-Richtlinien (öffentliche Vorschau)
+
+Unified Bezeichnung Scanner-Version 2.10.43.0
+
+**Release** 03/02/2021
+
+Diese dedizierte Version von Azure Information Protection bietet eine öffentliche Vorschau der Unterstützung von Richtlinien zur Verhinderung von Datenverlust (DLP), die von Microsoft 365 unterstützt werden. 
+
+- Die **Verwendung einer DLP-Richtlinie** ermöglicht es dem Scanner, potenzielle Datenverluste zu erkennen, indem er DLP-Regeln mit in Dateifreigaben und SharePoint Server gespeicherten Dateien abschließt. 
+
+- [**Aktivieren Sie DLP-Regeln im Inhalts Überprüfungs Auftrag**](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview) , um das verfügbar machen von Dateien zu verringern, die ihren DLP-Richtlinien entsprechen. 
+
+    Der Scanner kann den Dateizugriff nur auf Daten Besitzer reduzieren oder die Gefährdung von Netzwerk weiten Gruppen, wie z. b. **allen** **Benutzern, authentifizierten Benutzern** oder **Domänen Benutzern**, verringern.
+
+- **Durch das Scannen von Dateien mit aktivierten DLP-Regeln werden auch Datei Berechtigungs Berichte erstellt**. Fragen Sie diese Berichte ab, um bestimmte Dateiinformationen zu untersuchen, oder untersuchen Sie die verfügbar machung eines bestimmten Benutzers für überprüfte Dateien
+
+Einstellungen zum erzwingen oder Testen der DLP-Richtlinie werden im [Microsoft 365 Compliance Center](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy)konfiguriert.
+
+> [!IMPORTANT]
+> Um die DLP-Unterstützung in der öffentlichen Vorschau zu nutzen, müssen Sie die dedizierte Installationsdatei für diese Version herunterladen und installieren. Laden Sie die Datei auf der [Microsoft-Download Website](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunter, und installieren Sie Sie `AzInfoProtection_2.10.43_DLP_PublicPreview.exe` .
+> 
+Weitere Informationen, einschließlich Lizenzierungsanforderungen, finden Sie unter:
+
+- [Konfigurieren einer DLP-Richtlinie im AIP-Scanner](../deploy-aip-scanner-configure-install.md#use-a-dlp-policy-public-preview)
+- Informieren Sie sich in der Microsoft 365 Dokumentation [über die Microsoft 365 Verhinderung von Datenverlusten vor Ort](/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+- [Beginnen Sie mit dem lokalen Scanner für die Verhinderung von Datenverlust](/microsoft-365/compliance/dlp-on-premises-scanner-get-started)
+- [Verwenden des Microsoft 365 für die Verhinderung von Datenverlust vor Ort](/microsoft-365/compliance/dlp-on-premises-scanner-use)
+
+
 
 ## <a name="version-29116"></a>Version 2.9.116 
 
@@ -121,7 +169,7 @@ Der [Azure Information Protection lokale Scanner](../deploy-aip-scanner.md) unte
 
 Zur Unterstützung von getrennten oder Azure China 21ViaNet-Scanner-Servern wurden die folgenden neuen Cmdlets hinzugefügt:
 
-|Cmdlet  |Beschreibung  |
+|Cmdlet  |BESCHREIBUNG  |
 |---------|---------|
 |**[Add-AIPScannerRepository](/powershell/module/azureinformationprotection/add-aipscannerrepository)**     | Fügt ihrem inhaltscanauftrag ein neues Repository hinzu.        |
 |**[Get-aipscannercontentscanjob](/powershell/module/azureinformationprotection/get-aipscannercontentscanjob)**     |      Ruft Details zum inhaltscanauftrag ab.   |
@@ -166,7 +214,7 @@ Wenn Sie Ihre Dokumente für die Überwachung registriert haben, können Adminis
 
 Nachdem Sie das Upgrade ausgeführt haben, können Endbenutzer auch den Zugriff für Dokumente widerrufen, die Sie geschützt haben. Verwenden Sie zum Widerrufen des Zugriffs von Microsoft Office-Apps die neue Option **Zugriff widerrufen** im Menü **Sensitivität** .
 
-Weitere Informationen finden Sie in folgenden Quellen:
+Weitere Informationen finden Sie unter
 
 - [Administrator Handbuch: nachverfolgen und widerrufen des Dokumenten Zugriffs mit Azure Information Protection](track-and-revoke-admin.md)
 - [Benutzerhandbuch: widerrufen des Dokument Zugriffs mit Azure Information Protection](revoke-access-user.md)
@@ -277,7 +325,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 **So verwenden Sie den Netzwerk Ermittlungsdienst**
 
-1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie in folgenden Quellen:
+1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie unter
     - [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
     - [Erstellen eines Scanner-Clusters](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
@@ -302,7 +350,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 
-|Cmdlet  |Beschreibung  |
+|Cmdlet  |BESCHREIBUNG  |
 |---------|---------|
 |[**Get-mipnetworkdiscoveryconfiguration**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryConfiguration)     |   Ruft die aktuelle Einstellung ab, ob der Netzwerk Ermittlungsdienst Netzwerk Scan Daten aus der Standard-, Online-oder Offline Datei abruft, die aus der Azure-Portal exportiert wurde.      |
 |[**Get-mipnetworkdiscoveryjobs**](/powershell/module/azureinformationprotection/Get-MIPNetworkDiscoveryJobs)     |    Ruft eine Liste der derzeit konfigurierten Netzwerk Scanaufträge ab.     |
@@ -340,7 +388,7 @@ Weitere Informationen finden Sie unter [Azure Information Protection Audit Log R
 
 Azure Information Protection unterstützt jetzt eine DKE-vorlagenbasierte (Double Key Encryption) vorlagenbasierte Bezeichnung in der Überprüfung sowie die Verwendung des Datei-Explorers und von PowerShell.
 
-Weitere Informationen finden Sie in folgenden Quellen:
+Weitere Informationen finden Sie unter
 
 - [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-implement-tenant-key.md)
 - [Doppelte Schlüssel Verschlüsselung](/microsoft-365/compliance/double-key-encryption) in den Microsoft 365-Dokumentation
@@ -444,7 +492,7 @@ Unified-Beschriftungs Scanner und Client Version 2.7.96.0
 
 Überwachungs Protokolle werden nun immer generiert, wenn der Scanner erkennt, dass eine zuvor überprüfte Datei entfernt wurde.
 
-Weitere Informationen finden Sie in folgenden Quellen:
+Weitere Informationen finden Sie unter
 
 - [Datei entfernte Überwachungs Protokolle](../audit-logs.md#file-removed-audit-logs)
 - [Zentrale Berichterstellung für Azure Information Protection](../reports-aip.md)

@@ -6,17 +6,17 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: bryanla
 ms.date: 01/13/2021
-ms.openlocfilehash: aaf9cc6803e0111cd37960f356d8a6bb19fd60a5
-ms.sourcegitcommit: 76926b357bbfc8772ed132ce5f2426fbea59e98b
+ms.openlocfilehash: b9a1f4e96b4a8a80280007353d578391f6a02e50
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98215169"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844250"
 ---
 # <a name="class-msginspector"></a>Klasse msginspector 
   
 ## <a name="summary"></a>Zusammenfassung
- Member                        | Beschreibungen                                
+ Members                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: Vector \<uint8_t\>& GetBody () Konstanten  |  Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
 Public Ganzzahl ohne Vorzeichen int getcodepage () konstant  |  Codepage für die Text Codierung, die für txt-, HTML-Textformate relevant ist.
@@ -25,7 +25,7 @@ Public Konstanten Std:: Vector \<std::shared_ptr\<MsgAttachmentData\> \>& getatt
 Public Inspector Type GetInspector Type () Konstanten  |  Dateitypen erhalten.
 Public Std:: shared_ptr \<Stream\> GetFileStream () Konstanten  |  Den Dateistream erhalten.
   
-## <a name="members"></a>Member
+## <a name="members"></a>Members
   
 ### <a name="getbody-function"></a>GetBody-Funktion
 Gibt den Text der Meldung an, wenn txt/HTML als UTF8 formatiert ist.
@@ -39,7 +39,7 @@ Codepage für die Text Codierung, die für txt-, HTML-Textformate relevant ist.
   
 **Gibt Folgendes zurück**: eine nicht signierte Codepage. 
   
-**Siehe auch**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
+**Siehe auch**: [https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers](/windows/win32/intl/code-page-identifiers)
   
 ### <a name="getbodytype-function"></a>Getbodytype-Funktion
 Typ des Get-Texts.

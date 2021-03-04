@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6742a2405471b75a70579e9fbf00a792335537d3
-ms.sourcegitcommit: 4815ab96e4596303af297ae4c13fb6d7083b21e9
+ms.openlocfilehash: dbf96e317f70e41e76223cf6512eaa32427ff4c9
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "95568441"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844301"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>RMS SDK 4,2-Hinweis zur Veraltung 
 
@@ -25,7 +25,7 @@ ms.locfileid: "95568441"
 
 Am 3. März 2020 wurde ein Update der RMS SDK 4,2 für Android, IOS und OSX über das Microsoft Download Center veröffentlicht. Dieses Update ist für alle Anwendungen obligatorisch, die diese RMS SDK Plattformen heute verwenden.  
 
-Nach dem 1. Dezember 2020, der noch nicht festgelegt werden kann, können Versionen der RMS SDK, die vor dem März 2020 veröffentlicht wurden, keine Verbindung mit dem Azure Rights Management-Dienst Endpunkt herstellen. Anwendungen, die RMS SDK 4,2 verwenden, müssen vor diesem Datum aktualisiert werden. 
+Ab Januar 2021 können Versionen der RMS SDK, die vor dem März 2020 veröffentlicht wurden, keine Verbindung mit dem Azure Rights Management-Dienst Endpunkt herstellen. Anwendungen, die noch nicht aktualisiert wurden, können keine TLS-Verbindung mit dem Azure Rights Management-Dienst herstellen. 
 
 ## <a name="reason-for-change"></a>Grund für Änderungen 
 

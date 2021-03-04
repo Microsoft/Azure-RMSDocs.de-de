@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 52e43c9c0960ca5dadcd581db53bad2be2323b25
-ms.sourcegitcommit: 0f694bf6c7ea9c7709954bfb5dbd1c5f009b85a7
+ms.openlocfilehash: 1b34606abcf9093bc082d11b576d5d521e4d7777
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100360346"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844199"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Support Richtlinie für Microsoft Information Protection (MIP) Software Development Kit (SDK)
 
@@ -30,11 +30,18 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 >  
 > Technische Unterstützung finden Sie im [Stack Overflow Microsoft Information Protection-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection).
 
+## <a name="version-1897"></a>Version 1.8.97
+
+**Veröffentlichungsdatum:** 24. Februar 2021
+
+- Es wurde ein Fehler behoben, bei dem untergeordnete Bezeichnungen nicht ordnungsgemäß gefiltert wurden und alle Arten von Bezeichnungen enthalten, auch wenn Sie nicht angefordert wurden. 
+- Ein Fehler wurde behoben, bei dem Bezeichnungen nicht beibehalten wurden, wenn die Bezeichnungs `RemoveProtection()` Metadaten unvollständig waren. 
+
 ## <a name="version-1894"></a>Version 1.8.94
 
 **Veröffentlichungsdatum:** 8. Februar 2021
 
-- Fehler im nuget-Paket behoben, bei dem die Debugkonfiguration für C++-Projekte Versions Binärdateien bereitgestellt hat 
+- Fehler im nuget-Paket behoben, bei dem die Debugkonfiguration für C++-Projekte Versions Binärdateien bereitgestellt hat Version 1.8.86 kann zu einem Absturz mit nativen C++-apps führen. Stellen Sie sicher, dass Sie auf 1.8.94 oder höher aktualisieren.
 - Es wurde ein Fehler behoben, bei dem das Richtlinien Modul zum Entfernen des Schutzes erforderlich war. 
   - Wenn die Richtlinien-Engine nicht geladen werden kann und Bezeichnungs Metadaten vorhanden sind, werden Sie verworfen, wenn der Schutz entfernt wird. 
 - Es wurde ein Fehler behoben, bei dem leere `labelInfo.xml` generiert wurde, wenn die Datei in eine andere geschützte Bezeichnung geändert wurde. 
@@ -50,7 +57,7 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 - Alle Clouds werden in allen drei sdert vollständig unterstützt.
 - Benennen Sie `TelemetryConfiguration` in `DiagnosticConfiguration` um.
 - Aktualisiert `MipContext` , um `DiagnosticConfiguration` anstelle von zu akzeptieren `TelemetryConfiguration` .
-- Neue und verfügbar gemacht `TelemetryDelegate` `AuditDelegate` .
+- Neue verfügbar gemacht `AuditDelegate` .
 - Der Name mehrerer benutzerdefinierter Einstellungen wurde geändert und wird in Version 1,9 entfernt. Diese funktionieren weiterhin parallel zu ihren Update Namen in Version 1,8. 
 
 | Neuer Name          | Alter Name                   |
@@ -185,7 +192,7 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 - TLS 1,2 wird für alle nicht-ADRMS-http-Kommunikationssysteme erzwungen.
 - Migrierte IOS/macOS-http-Implementierung von NSURLConnection zu nsurlsession.
 - Migrierte IOS-telemetriekomponente vom Aria SDK in das 1Ds SDK.
-- Die telemetriekomponente verwendet nun den httpdelegaten von MIP unter IOS, macOs und Linux. (Bisher nur Win32).
+- Die telemetriekomponente verwendet nun den httpdelegaten von MIP unter IOS, macOS und Linux. (Bisher nur Win32).
 - Verbesserte Typsicherheit für die C-API.
 - Authdelegat wurde aus dem Profil in die Engine in den C++-, c#-und Java-APIs verschoben.
 - Authdelegat wurde von Konstruktor von `Profile::Settings` in verschoben `Engine::Settings` .

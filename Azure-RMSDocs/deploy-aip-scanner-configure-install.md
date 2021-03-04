@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren und Konfigurieren des Azure Informatio
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/01/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0c3aa35877ed657f81c955af0d674bde3d22a079
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 98cadb555919ecd6e95e3328ad489b29e3f5c0ef
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524828"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844386"
 ---
 # <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
 
@@ -116,7 +116,7 @@ Ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.m
     
 1. Legen Sie auf der Seite **neuen Netzwerk Scanauftrag hinzufügen** die folgenden Einstellungen fest:
         
-    |Einstellung  |Beschreibung  |
+    |Einstellung  |BESCHREIBUNG  |
     |---------|---------|
     |**Name des Netzwerk Scan Auftrags**     |Geben Sie einen aussagekräftigen Namen für diesen Auftrag ein.  Dieses Feld ist erforderlich.       |
     |**Beschreibung**     |   Geben Sie eine aussagekräftige Beschreibung ein.      |
@@ -153,7 +153,7 @@ Wenn Sie [einen Netzwerk Scanauftrag definiert](#create-a-network-scan-job-publi
 
 1. Führen Sie einen der folgenden Schritte aus:
     
-    |Option  |Beschreibung  |
+    |Option  |BESCHREIBUNG  |
     |---------|---------|
     |![Symbol "Spalten"](media/i-columns.png "Symbol "Spalten"")    | Wählen Sie **Spalten** aus, um die angezeigten Tabellen Spalten zu ändern.        |
     |![Symbol "Aktualisieren"](media/i-refresh.png "Symbol "Aktualisieren"")   | Wenn Ihr Scanner vor kurzem Netzwerk Scanergebnisse ausgeführt hat, wählen Sie **Aktualisieren** aus, um die Seite zu aktualisieren.      |
@@ -186,13 +186,15 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
  
 1. Konfigurieren Sie für diese Erstkonfiguration die folgenden Einstellungen, und wählen Sie dann **Speichern** aus, aber schließen Sie den Bereich nicht.
     
-    |Einstellung  |Beschreibung  |
+    |Einstellung  |BESCHREIBUNG  |
     |---------|---------|
     |**Einstellungen für den Content Scan-Auftrag**     |    - **Zeitplan**: behalten Sie den Standardwert **manuell** bei. <br />- **Zu ermittelnde Informationstypen**: **nur in Richtlinie** ändern <br />- **Repository konfigurieren**: Konfigurieren Sie zu diesem Zeitpunkt nicht, da der Inhalts Überprüfungs Auftrag zuerst gespeichert werden muss.         |
+    |**DLP-Richtlinie** | Wenn Sie eine DLP-Richtlinie (Microsoft 365 Data Loss Prevention) verwenden, legen Sie **DLP-Regeln aktivieren** **auf ein fest.** Weitere Informationen finden Sie unter [Verwenden einer DLP-Richtlinie](#use-a-dlp-policy-public-preview). |
     |**Vertraulichkeitsrichtlinie**     | - **Erzwingen**: SELECT **Off** <br />- Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** . <br />- **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten <br />- **Dateien** neu bezeichnen: Standardwert " **aus** " beibehalten        |
-    |**Konfigurieren von Datei Einstellungen**     | - **"Datum geändert", "zuletzt geändert" und "geändert von**" beibehalten: behalten Sie die Standardeinstellung **bei** . <br />- **Zu überprüfende Dateitypen**: Standard Dateitypen für **Ausschluss** beibehalten <br />- **Standard Besitzer**: behalten Sie die Standardeinstellung **Scanner-Konto** bei.        |
+    |**Konfigurieren von Datei Einstellungen**     | - **"Datum geändert", "zuletzt geändert" und "geändert von**" beibehalten: behalten Sie die Standardeinstellung **bei** . <br />- **Zu überprüfende Dateitypen**: Standard Dateitypen für **Ausschluss** beibehalten <br />- **Standard Besitzer**: behalten Sie die Standardeinstellung **Scanner-Konto** bei.  <br /> - **Repository-Besitzer festlegen**: Verwenden Sie diese Option nur, wenn [Sie eine DLP-Richtlinie verwenden](#use-a-dlp-policy-public-preview). |
     | | |
 
+   
 1. Nachdem der Auftrag für die Inhalts Überprüfung erstellt und gespeichert wurde, können Sie zur Option " **Depots konfigurieren** " zurückkehren, um die Datenspeicher anzugeben, die gescannt werden sollen. 
 
     Geben Sie UNC-Pfade und SharePoint-Server-URLs für lokale SharePoint-Dokument Bibliotheken und-Ordner an. 
@@ -355,6 +357,44 @@ Um diese Einstellungen zu ändern, bearbeiten Sie den Auftrag für die Inhalts �
 
 Der Scanner ist jetzt für die kontinuierliche Ausführung geplant. Wenn die Überprüfung alle konfigurierten Dateien durchläuft, wird automatisch ein neuer Zeitraum gestartet, sodass neue und geänderte Dateien ermittelt werden.
 
+## <a name="use-a-dlp-policy-public-preview"></a>Verwenden einer DLP-Richtlinie (öffentliche Vorschau)
+
+Durch die Verwendung Microsoft 365 einer DLP-Richtlinie (Data Loss Prevention, Verhinderung von Datenverlust) kann der Scanner potenzielle Datenverluste erkennen, indem er DLP-Regeln mit in Dateifreigaben und SharePoint Server gespeicherten Dateien abschließt
+
+- **Aktivieren Sie DLP-Regeln im Inhalts Überprüfungs Auftrag** , um das verfügbar machen von Dateien zu verringern, die ihren DLP-Richtlinien entsprechen. Wenn Ihre DLP-Regeln aktiviert sind, kann der Scanner den Dateizugriff nur auf Daten Besitzer reduzieren oder die Gefährdung von Netzwerk weiten Gruppen, wie z. b. **allen** **Benutzern, authentifizierten Benutzern** oder **Domänen Benutzern**, verringern. 
+
+- Legen Sie **in der Microsoft 365**, die das Admin Center bezeichnet, fest, ob Sie nur ihre DLP-Richtlinie testen möchten oder ob die Regeln erzwungen werden sollen und ihre Dateiberechtigungen gemäß diesen Regeln geändert werden sollen. Weitere Informationen finden Sie unter Aktivieren [einer DLP-Richtlinie](/microsoft-365/compliance/create-test-tune-dlp-policy#turn-on-a-dlp-policy).
+
+> [!TIP]
+> Wenn Sie Ihre Dateien durchsuchen, selbst wenn Sie nur die DLP-Richtlinie testen, werden auch Datei Berechtigungs Berichte erstellt. Fragen Sie diese Berichte ab, um bestimmte Dateiinformationen zu untersuchen, oder untersuchen Sie die verfügbar machung eines bestimmten Benutzers für überprüfte Dateien
+> 
+
+DLP-Richtlinien werden in Ihrem Bezeichnungs-Admin Center konfiguriert, wie z. b. dem Microsoft 365 Compliance Center, und werden in Azure Information Protection ab Version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview)unterstützt. 
+
+Weitere Informationen zur DLP-Lizenzierung finden [Sie unter Einstieg in den lokalen Scanner für die Verhinderung von Datenverlust](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
+
+So **verwenden Sie eine DLP-Richtlinie mit dem Scanner**:
+
+1. Navigieren Sie im Azure-Portal zum Auftrag für die Inhalts Überprüfung. Weitere Informationen finden Sie unter [Erstellen eines Inhalts Scan Auftrags](#create-a-content-scan-job).
+
+1. Legen Sie unter **DLP-Richtlinie** die Option **DLP-Regeln aktivieren** **auf ein** fest.
+
+    > [!IMPORTANT]
+    > Legen Sie **DLP-Regeln aktivieren** nicht auf **on** fest, es sei denn, in Microsoft 365 ist eine DLP-Richtlinie konfiguriert. 
+    >
+    >Wenn diese Funktion ohne eine DLP-Richtlinie aktiviert wird, generiert der Scanner Fehler.
+1. Optionale Legen Sie unter **Datei Einstellungen konfigurieren** den **Besitzer des Set-Repository** **auf ein** fest, und definieren Sie einen bestimmten Benutzer als Repository-Besitzer.  
+
+    Diese Option ermöglicht es dem Scanner, das verfügbar machen von Dateien in diesem Repository, die der DLP-Richtlinie entsprechen, mit dem definierten Repository-Besitzer zu verringern.
+
+### <a name="dlp-policies-and-make-private-actions"></a>DLP-Richtlinien und *Erstellen privater* Aktionen
+
+Wenn Sie eine DLP-Richtlinie mit einer Aktion " *private erstellen* " verwenden und auch die Überprüfung verwenden, um Ihre Dateien automatisch zu bezeichnen, empfiehlt es sich, auch die erweiterte Einstellung " [**usecopyandkonservientfsowner**](rms-client/clientv2-admin-guide-customizations.md#preserve-ntfs-owners-during-labeling-public-preview) " des Unified Label-Clients zu definieren. 
+
+Mit dieser Einstellung wird sichergestellt, dass die ursprünglichen Besitzer den Zugriff auf Ihre Dateien behalten.
+
+Weitere Informationen finden Sie unter [Erstellen eines Inhalts Überprüfungs Auftrags](#create-a-content-scan-job) und  [Anwenden einer Vertraulichkeits Bezeichnung auf Inhalt automatisch](/microsoft-365/compliance/apply-sensitivity-label-automatically) in der Microsoft 365-Dokumentation. 
+
 ## <a name="change-which-file-types-to-protect"></a>Ändern der zu schützenden Dateitypen
 
 Der AIP-Scanner schützt standardmäßig nur Office-Dateitypen und PDF-Dateien.
@@ -419,7 +459,7 @@ In dieser Konfiguration werden alle nicht gekennzeichneten Dateien im Repository
 
 Konfigurieren Sie die folgenden Einstellungen: 
 
-|Einstellung  |Beschreibung  |
+|Einstellung  |BESCHREIBUNG  |
 |---------|---------|
 |**Bezeichnungs Dateien basierend auf dem Inhalt**    |Auf **Off** festgelegt         |
 |**Standard Bezeichnung**     | Legen Sie auf **Custom** fest, und wählen Sie die zu verwendende Bezeichnung aus.       |
@@ -432,7 +472,7 @@ In dieser Konfiguration werden alle vorhandenen Bezeichnungen entfernt, einschli
 
 Konfigurieren Sie die folgenden Einstellungen: 
 
-|Einstellung  |Beschreibung  |
+|Einstellung  |BESCHREIBUNG  |
 |---------|---------|
 |**Bezeichnungs Dateien basierend auf dem Inhalt**    |Auf **Off** festgelegt         |
 |**Standard Bezeichnung**     | Auf " **None** " festlegen  |
@@ -455,7 +495,7 @@ Zum Identifizieren von Bedingungen und Informationstypen für die Bezeichnung ve
 
 Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanner zu optimieren:
 
-|Option  |Beschreibung  |
+|Option  |BESCHREIBUNG  |
 |---------|---------|
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. <br /><br />Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. <br /><br />Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. <br /><br />Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |

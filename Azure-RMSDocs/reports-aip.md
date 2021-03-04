@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: batamig
 ms.author: bagol
-ms.date: 02/18/2021
+ms.date: 03/01/2021
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 19c6b2d4e2e7d06c7fa5552f592f69359dc039de
-ms.sourcegitcommit: 5cc3659ab7650df7ac06af7854671e952932eed9
+ms.openlocfilehash: 4c42dccc21235fe403f3c491491e0a03e015c890
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101090561"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844335"
 ---
 # <a name="central-reporting-for-azure-information-protection-public-preview"></a>Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
@@ -56,7 +56,8 @@ Beispielsweise werden in der Azure Information Protection Analytics for Central 
 |**Aktivitätsprotokolle**     | Wählen Sie einen Zeitraum aus, um Folgendes anzuzeigen: <br /><br />      -Welche zuvor von Scanner ermittelten Dateien aus dem gescannten Repository gelöscht wurden <br /> <br /> -Welche Bezeichnungs Aktionen wurden von einem bestimmten Benutzer ausgeführt? <br /><br /> -Welche Bezeichnungs Aktionen wurden von einem bestimmten Gerät ausgeführt?<br /> <br />    -Benutzer, auf die ein bestimmtes beschrifteten Dokument zugegriffen hat<br /> <br />-Welche Bezeichnungs Aktionen wurden für einen bestimmten Dateipfad ausgeführt?<br /> <br />-Welche Bezeichnungs Aktionen wurden von einer bestimmten Anwendung ausgeführt, z. b. im Datei-Explorer und mit der rechten Maustaste, PowerShell, der Überprüfung oder Microsoft Cloud App Security <br /> <br />-Welche geschützten Dokumente wurden von Benutzern erfolgreich aufgerufen oder der Zugriff auf Benutzer verweigert, auch wenn diese Benutzer den Azure Information Protection-Client nicht installiert haben oder sich außerhalb Ihrer Organisation befinden. <br /> <br />-Drilldown zu gemeldeten Dateien zum Anzeigen von **Aktivitäts Details** für zusätzliche Informationen      |
 |**Daten Ermittlungsbericht**     |      -Welche Dateien befinden sich in den überprüften Daten Depots, Windows 10-Computern oder Computern, auf denen die Azure Information Protection Clients ausgeführt werden <br /><br />-Welche Dateien sind gekennzeichnet und geschützt, und der Speicherort der Dateien nach Bezeichnungen <br /><br />-Welche Dateien vertrauliche Informationen für bekannte Kategorien enthalten, wie z. b. Finanzdaten und persönliche Informationen, sowie den Speicherort der Dateien nach diesen Kategorien       |
 |**Empfehlungs Bericht**     | -Identifizieren Sie ungeschützte Dateien, die einen bekannten vertraulichen Informationstyp enthalten. Mit einer Empfehlung können Sie sofort die entsprechende Bedingung für eine Ihrer Bezeichnungen konfigurieren, um die Bezeichnung automatisch oder nach Empfehlung anzuwenden. **<br /> Wenn Sie der Empfehlung folgen: Wenn** die Dateien das nächste Mal von einem Benutzer geöffnet oder vom Azure Information Protection Scanner gescannt werden, können die Dateien automatisch klassifiziert und geschützt werden. <br /><br /> -Welche Daten Depots Dateien mit identifizierten vertraulichen Informationen haben, aber nicht vom Azure Information Protection gescannt werden. Mit einer Empfehlung können Sie den identifizierten Datenspeicher sofort zu einem der Profile Ihres Scanners hinzufügen. <br />   **Wenn Sie der Empfehlung folgen**: beim nächsten Scanner können die Dateien automatisch klassifiziert und geschützt werden.        |
- 
+| | |
+
 Die Berichte verwenden [Azure Monitor](/azure/log-analytics/log-analytics-overview), um die Daten in einem Log Analytics-Arbeitsbereich zu speichern, der Ihrer Organisation gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial ist möglicherweise hilfreich, um die Abfragesprache zu verstehen: [Get Started with Azure Monitor Log Queries](/azure/azure-monitor/log-query/get-started-queries).
 
 Weitere Informationen finden Sie in den folgenden Blogbeiträgen: 
@@ -141,6 +142,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |Informationen zur Berichterstellung aus cloudbasierten Daten speichern: <br /><br />-Microsoft Cloud App Security |Um Informationen aus Microsoft Cloud App Security anzuzeigen, konfigurieren Sie [Azure Information Protection-Integration](/cloud-app-security/azip-integration).|
 |Informationen zu Berichten aus lokalen Daten speichern: <br /><br />-Azure Information Protection Scanner |Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). |
 |Informationen zur Berichterstellung von Windows 10-Computern:  <br /><br />-Minimaler Build von 1809 mit Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|Sie müssen das Azure Information Protection-Integrations Feature von Microsoft Defender Security Center aktivieren. Weitere Informationen finden Sie unter [Übersicht über den Datenschutz in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
+| | |
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Erforderliche Berechtigungen für Azure Information Protection-Analysen
 
@@ -148,7 +150,7 @@ Speziell für Azure Information Protection-Analysen können Sie nach der Konfigu
 
 Da Azure Information Protection Analytics die Azure-Überwachung verwendet, steuert die rollenbasierte Zugriffs Steuerung (RBAC) für Azure auch den Zugriff auf Ihren Arbeitsbereich. Daher benötigen Sie zum Verwalten von Azure Information Protection-Analysen sowohl eine Azure-Rolle als auch eine Azure AD-Administratorrolle. Wenn Sie noch keine Erfahrung mit Azure-Rollen haben, sollten Sie [Unterschiede zwischen Azure RBAC-Rollen und Azure AD-Administratorrollen](/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles) lesen.
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
 - [Erforderliche Azure AD Administrator Rollen](#required-azure-ad-administrator-roles)
 - [Erforderliche Azure-Log Analytics Rollen](#required-azure-log-analytics-roles)
@@ -169,7 +171,7 @@ Sie müssen über eine der folgenden [Azure AD Administrator Rollen](/azure/acti
 - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
     
     - **Sicherheits Leser**
-    - **Globaler Leser**
+    - **Globaler Reader**
 
 #### <a name="required-azure-log-analytics-roles"></a>Erforderliche Azure-Log Analytics Rollen
 
@@ -298,7 +300,7 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 |**Userbegrün dung**|Begründung beim Herabstufen oder Entfernen der Bezeichnung|
 |**LastModifiedBy**|Benutzer im UPN-Format, von dem die Datei zuletzt geändert wurde. Nur für Office und SharePoint verfügbar|
 |**LastModifiedDate & gt**|UTC im Format yyyy-mm-ddThh: mm: SS: nur für Office und SharePoint verfügbar |
-
+| | |
 #### <a name="examples-using-informationprotectionevents"></a>Beispiele für InformationProtectionEvents
 
 Anhand der folgenden Beispiele erfahren Sie, wie Sie das benutzerfreundliche Schema zur Erstellung benutzerdefinierter Abfragen verwenden können.
@@ -347,3 +349,7 @@ Nachdem Sie die Informationen in den Berichten überprüft haben, können Sie be
 
 Wenn Sie ein Microsoft 365-Abonnement haben, können Sie die Nutzung von Bezeichnungen auch im Microsoft 365 Compliance Center und im Microsoft 365 Security Center anzeigen. Weitere Informationen finden Sie unter [Anzeigen der Nutzung der Bezeichnung mit Bezeichnungsanalysen](/microsoft-365/compliance/label-analytics).
 
+AIP-Überwachungs Protokolle werden auch an den Microsoft 365-Aktivitäts-Explorer gesendet, wo Sie mit unterschiedlichen Namen angezeigt werden können. Weitere Informationen finden Sie unter
+
+- [Public Preview: AIP-Überwachungs Protokolle im Aktivitäts-Explorer](https://www.yammer.com/askipteam/#/Threads/show?threadId=1085834054254592)
+- [Beginnen Sie mit dem Aktivitäts-Explorer](/microsoft-365/compliance/data-classification-activity-explorer).

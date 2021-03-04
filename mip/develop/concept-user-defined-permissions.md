@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 02/02/2021
 ms.author: tommos
-ms.openlocfilehash: 27d17b14ed34ae72fafdf1084d277d3389a1790c
-ms.sourcegitcommit: 314f8109920a706bd1000dd4e63ba9cdd12cd671
+ms.openlocfilehash: 47939a37616173c456d1588e95e36f8a978ed32d
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99554192"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844182"
 ---
 # <a name="microsoft-information-protection-sdk---user-defined-permissions"></a>Microsoft Information Protection SDK: benutzerdefinierte Berechtigungen
 
@@ -94,4 +94,4 @@ Dieser Prozess kann auch verwendet werden, um nur den Schutz festzulegen, indem 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Überprüfen Sie die Konfiguration der Bezeichnungs Verschlüsselung in der Microsoft 365 Dokumentation.](https://docs.microsoft.com/en-us/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#understand-how-the-encryption-works)
+- [Überprüfen Sie die Konfiguration der Bezeichnungs Verschlüsselung in der Microsoft 365 Dokumentation.](/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide#understand-how-the-encryption-works)

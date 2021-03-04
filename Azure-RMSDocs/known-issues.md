@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 02/09/2021
+ms.date: 03/01/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b90b0df202719f6cadab0671db9f118be58ad72
-ms.sourcegitcommit: 14baaa98c5bd0136a2039a4739d59103b027f431
+ms.openlocfilehash: c6fc0880904658b76ff774de33030ce0ca8e3048
+ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100105248"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844352"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -69,9 +69,9 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 
 ## <a name="aip-known-issues-in-office-applications"></a>In Office-Anwendungen bekannte AIP-Probleme
 
-|Komponente  |Bekannte Probleme  |
+|Funktion  |Bekannte Probleme  |
 |---------|---------|
-|**Mehrere Versionen von Office**    | Die Azure Information Protection-Clients (sowohl der klassische als auch der Client für einheitliche Bezeichnungen) unterstützen nicht mehrere Office-Versionen auf ein und demselben Computer. Auch der Wechsel von Benutzerkonten in Office wird nicht unterstützt.       |
+|**Mehrere Versionen von Office <br> <br> mehrere Office-Konten**    | Die Azure Information Protection Clients, einschließlich der klassischen und einheitlichen Bezeichnung, unterstützen Folgendes nicht:  <br><br>-Mehrere Versionen von Office auf demselben Computer <br>-Mehrere Office-Konten oder Benutzerkonten in Office wechseln <br>-Freigegebene Postfächer     |
 |**Mehrere anzeigen** |Wenn Sie mehrere anzeigen verwenden und eine Office-Anwendung geöffnet ist: <br><br>-Bei Ihren Office-Apps können Leistungsprobleme auftreten.<br>-Die Azure Information Protection Leiste kann in der Mitte des Office-Bildschirms auf einem oder beiden anzeigen angezeigt werden. <br><br>Um eine konsistente Leistung sicherzustellen und die Leiste am richtigen Speicherort verbleibt, öffnen Sie das Dialogfeld Optionen für Ihre Office-Anwendung, und wählen Sie unter **Allgemein** die **Option** **für Kompatibilität optimieren** anstelle von **optimieren aus, um das beste Aussehen** zu erzielen.    |
 |**Unterstützung von "unm" in Office 2016**| Die [drmencryptproperty](/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options) -Registrierungs Einstellung, die die metadatenverschlüsselung in Office 2016 steuert, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
 |**Zugriff auf das Outlook-Objektmodell** | -Die " [prompyomaddressbookaccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-accesses-an-address-book-by-using-the-outlook-object-model) "-Registrierungs Einstellung, die die Eingabe Aufforderungen steuert, die beim Zugriff auf Adressbücher über das Outlook-Objektmodell angezeigt werden, wird mit Azure Information Protection Bezeichnungen nicht unterstützt. <br><br>-Die [promptomaddressinformationaccess](/outlook/troubleshoot/security/information-about-email-security-settings#configure-a-prompt-when-a-program-reads-address-information-by-using-the-outlook-object-model) -Registrierungs Einstellung, die die Eingabe Aufforderungen steuert, die angezeigt werden, wenn ein Programm Adressinformationen liest, wird für Azure Information Protection Bezeichnungen nicht unterstützt.|
@@ -80,7 +80,68 @@ Weitere Informationen finden Sie unter [Administrator Handbuch: Verwenden von Po
 |**Nachrichten Zusammenführung**    |  Das Office-Feature [Seriendruck](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) wird mit keinem Azure Information Protection-Feature unterstützt.       |
 | **S/MIME-e-Mails** | Das Öffnen von S/MIME-e-Mails im Lesebereich von Outlook kann zu Leistungsproblemen führen. <br><br>Um Leistungsprobleme bei S/MIME-e-Mails zu vermeiden, aktivieren Sie die erweiterte [**outlookskipsmimeonleseringpaneenable**](rms-client/clientv2-admin-guide-customizations.md#prevent-outlook-performance-issues-with-smime-emails) -Eigenschaft. <br><br>**Hinweis**: durch Aktivieren dieser Eigenschaft wird verhindert, dass die AIP-Leiste oder die e-Mail-Klassifizierung im Lesebereich von Outlook angezeigt wird. |
 |**Option zum Senden an den Datei-Explorer** |Wenn Sie im Datei-Explorer mit der rechten Maustaste auf eine Datei klicken und **an > e-Mail-Empfänger senden** auswählen, wird die AIP-Symbolleiste möglicherweise nicht in der Outlook-Nachricht angezeigt, die mit der angefügten Datei geöffnet wird. <br><br>Wenn dies der Fall ist und Sie die AIP-Symbolleisten Optionen verwenden müssen, starten Sie Ihre e-Mail in Outlook, und navigieren Sie dann zu der Datei, die Sie senden möchten, und fügen Sie Sie an.|
+|**Zusammenstellung** |Die Unterstützung von Co-Authoring wird durch eine [dedizierte Installation](rms-client/unifiedlabelingclient-version-release-history.md#version-210460-for-co-authoring-public-preview) des Azure Information Protection Clients bereitgestellt und ist zurzeit als öffentliche Vorschauversion verfügbar. <br><br>Weitere Informationen finden Sie unter [bekannte Probleme bei der gemeinsamen Dokument Erstellung (Public Preview)](#known-issues-for-co-authoring-public-preview). |
 | | |
+
+### <a name="known-issues-for-co-authoring-public-preview"></a>Bekannte Probleme bei der gemeinsamen Erstellung (Public Preview)
+
+- [Nur in Testumgebungen verwenden](#use-in-testing-environments-only)
+- [Unterstützte Versionen für die gemeinsamen Erstellung und Vertraulichkeits Bezeichnungen](#supported-versions-for-co-authoring-and-sensitivity-labels)
+- [Richtlinien Updates](#policy-updates)
+- [AIP-Analyse-und-Überwachungs Protokolle](#aip-analytics-and-audit-logs)
+- [Bezeichnungen mit benutzerdefinierten Berechtigungen](#labels-with-user-defined-permissions)
+- [Nicht unterstützte Funktionen für die gemeinsamen Erstellung](#unsupported-features-for-co-authoring)
+
+> [!IMPORTANT]
+> Die gemeinsamen Erstellung und die Vertraulichkeits Bezeichnungen können nur einigen Benutzern bereitgestellt werden, da neue Bezeichnungen für Benutzer mit einer älteren Version des Office-Clients nicht sichtbar sind.
+> 
+Weitere Informationen zur Unterstützung von Co-Authoring, einschließlich Einschränkungen und bekannte Probleme bei der öffentlichen Vorschau, finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels-coauthoring).
+
+#### <a name="use-in-testing-environments-only"></a>Nur in Testumgebungen verwenden
+
+Um Konflikte zwischen den gekennzeichneten Dateien zu vermeiden, kann die gemeinsamen Erstellung während des öffentlichen Vorschau Zeitraums nicht deaktiviert werden.
+
+Aus diesem Grund wird empfohlen, dass Sie die gemeinsamen Erstellung für Ihr System derzeit nur in Testumgebungen aktivieren.
+
+#### <a name="supported-versions-for-co-authoring-and-sensitivity-labels"></a>Unterstützte Versionen für die gemeinsamen Erstellung und Vertraulichkeits Bezeichnungen
+
+Alle apps, Dienste und Vorgangs Tools in Ihrem Mandanten müssen die gemeinsamen Dokument Erstellung unterstützen.
+
+Bevor Sie beginnen, stellen Sie sicher, dass Ihr System den in den [Microsoft 365 Voraussetzungen für die gemeinsamen Erstellung](/microsoft-365/compliance/sensitivity-labels-coauthoring#prerequisites)aufgeführten Versions Anforderungen entspricht.
+
+> [!NOTE]
+> Vertraulichkeits Bezeichnungen können zwar auf Dateien in Office 97-2003-Formaten (z  **. b. doc**, **. ppt** und **. xls**) angewendet werden, aber die gemeinsamen Erstellung für diese Dateitypen wird nicht unterstützt. Wenn eine Bezeichnung auf eine neu erstellte Datei oder eine Datei im erweiterten Dateiformat (z **. b. docx**, **PPTX** und **xlsx**) angewendet wird, wird beim Speichern der Datei im Office 97-2003-Format die Bezeichnung entfernt.
+> 
+
+#### <a name="policy-updates"></a>Richtlinien Updates
+
+Wenn die Beschriftungs Richtlinie aktualisiert wurde, während eine Office-Anwendung mit Azure Information Protection geöffnet wurde, werden alle neuen Bezeichnungen angezeigt, aber die Anwendung führt zu einem Fehler. 
+
+Wenn dies der Fall ist, schließen Sie die Office-Anwendung, und öffnen Sie Sie erneut, damit Sie Ihre Bezeichnungen anwenden können
+
+#### <a name="aip-analytics-and-audit-logs"></a>AIP-Analyse-und-Überwachungs Protokolle
+
+Wenn die gemeinsamen Erstellung aktiviert ist, sendet der Azure Information Protection Client keine Überwachungs [Protokolle](audit-logs.md).
+
+#### <a name="labels-with-user-defined-permissions"></a>Bezeichnungen mit benutzerdefinierten Berechtigungen
+
+In Microsoft Word, Excel und PowerPoint sind Bezeichnungen mit benutzerdefinierten Berechtigungen weiterhin verfügbar und können auf Dokumente angewendet werden, werden aber nicht für Funktionen zur gemeinsamen Dokument Erstellung unterstützt. 
+
+Dies bedeutet, dass Sie das Anwenden einer Bezeichnung mit benutzerdefinierten Berechtigungen daran hindern, das Dokument gleichzeitig mit anderen zu bearbeiten.
+
+#### <a name="unsupported-features-for-co-authoring"></a>Nicht unterstützte Funktionen für die gemeinsamen Erstellung
+
+Die folgenden Funktionen werden beim Arbeiten mit der gemeinsamen Erstellung und den Vertraulichkeits Bezeichnungen nicht unterstützt:
+
+- **DKE-Vorlagen und benutzerdefinierte DKE-Eigenschaften**. Weitere Informationen finden Sie unter [Double Key Encryption (DKE)](plan-implement-tenant-key.md#double-key-encryption-dke).
+
+- **Entfernen externer Inhalts Markierungen in-apps**. Weitere Informationen finden Sie unter [Die Clientseite von Azure Information Protection](rms-client/use-client.md).
+
+- Die folgenden erweiterten Einstellungen:
+
+    - **custompropertiesbylabel**. Weitere Informationen finden Sie unter [Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird](rms-client/clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied).
+
+    - **labelbycustomproperties** und **enablelabelbysharepointproperties**. Weitere Informationen finden Sie unter [Migrieren von Bezeichnungen aus sicheren Inseln und anderen](rms-client/clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)Bezeichnungs Lösungen.
 
 ## <a name="known-issues-in-policies"></a>Bekannte Probleme in Richtlinien
 
