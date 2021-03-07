@@ -1,6 +1,6 @@
 ---
-title: Zentrale Berichterstellung für Azure Information Protection
-description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
+title: Analyse und Zentrale Berichterstellung für Azure Information Protection (AIP)
+description: Erfahren Sie, wie Sie die Verwendung von Azure Information Protection (AIP) und die Zentrale Berichterstellung zum Nachverfolgen der Verwendung von Bezeichnungen und zum Identifizieren von Dateien mit sensiblen Informationen verwenden.
 author: batamig
 ms.author: bagol
 ms.date: 03/01/2021
@@ -13,14 +13,14 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4c42dccc21235fe403f3c491491e0a03e015c890
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 5665a071bd99f8ed1118adffcd1ce65f20ff9aa4
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844335"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415465"
 ---
-# <a name="central-reporting-for-azure-information-protection-public-preview"></a>Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
+# <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analyse und Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -29,7 +29,9 @@ ms.locfileid: "101844335"
 >[!NOTE] 
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Zusätzlich:
+In diesem Artikel wird beschrieben, wie Sie Azure Information Protection (AIP)-Analyse für die Zentrale Berichterstellung verwenden, die Ihnen helfen kann, die Übernahme ihrer Bezeichnungen zu verfolgen, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. 
+
+Mit AIP Analytics können Sie auch die folgenden Schritte ausführen:
 
 - Unternehmensweite Überwachung bezeichneter und geschützter Dokumente und E-Mails
 
@@ -235,7 +237,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 
 Sie sind jetzt bereit, die Berichte anzuzeigen.
 
-## <a name="how-to-view-the-reports"></a>Anzeigen von Berichten
+## <a name="view-the-aip-analytics-reports"></a>Anzeigen der AIP-Analyseberichte
 
 Suchen Sie im Bereich Azure Information Protection die Menü Optionen **Dashboards** , und wählen Sie eine der folgenden Optionen aus:
 
@@ -248,7 +250,7 @@ Suchen Sie im Bereich Azure Information Protection die Menü Optionen **Dashboar
 |     |         |
 
 
-## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Ändern von Berichten und Erstellen benutzerdefinierter Abfragen
+## <a name="modify-the-aip-analytics-reports-and-create-custom-queries"></a>Ändern der AIP-Analyseberichte und Erstellen von benutzerdefinierten Abfragen
 
 Wählen Sie im Dashboard das Abfrage Symbol aus, um einen Bereich für die **Protokoll Suche** zu öffnen: 
 

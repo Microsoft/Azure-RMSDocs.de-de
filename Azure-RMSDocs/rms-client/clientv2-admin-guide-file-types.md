@@ -1,6 +1,6 @@
 ---
-title: Unterstützte Dateitypen-Azure Information Protection Unified-Bezeichnungs Client
-description: Technische Details zu unterstützten Dateitypen, Dateinamen Erweiterungen und Schutz Ebenen für Administratoren, die für den Azure Information Protection Unified Bezeichnung-Client für Windows verantwortlich sind.
+title: Vom Unified-Bezeichnungs Client (Azure Information Protection) Unterstützte Dateitypen
+description: Erfahren Sie mehr über die Dateitypen und-Größen, die für den einheitlichen Windows-Bezeichnungs Client (Azure Information Protection) unterstützt werden.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -11,14 +11,14 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 40b2a6de06fb20f8fab0d1a1d7e8a774fe2b54fc
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: bfc773c32a7667a54abdc75985934794414d575a
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560185"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415261"
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen
+# <a name="file-types-supported-by-the-azure-information-protection-aip-unified-labeling-client"></a>Vom Unified-Bezeichnungs Client (Azure Information Protection) Unterstützte Dateitypen
 
 >***Gilt für** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*>
 >
@@ -26,20 +26,11 @@ ms.locfileid: "98560185"
 >
 >***Relevant für**: [nur AIP Unified Bezeichnung Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie unter [klassische Client Dateitypen](client-admin-guide-file-types.md) .*
 
-Der Azure Information Protection Unified Bezeichnung-Client kann Folgendes auf Dokumente und e-Mails anwenden:
+In diesem Artikel werden die Dateitypen und Größen aufgelistet, die vom Unified-Bezeichnungs Client (Azure Information Protection) unterstützt werden.
 
-- Nur Klassifizierung
-
-- Klassifizierung und Schutz
-
-- Nur Schutz
-
-Der Azure Information Protection Unified-Bezeichnungs Client kann auch den Inhalt einiger Dateitypen mithilfe von bekannten sensiblen Informationstypen oder regulären Ausdrücken untersuchen, die Sie definieren.
-
-Verwenden Sie die folgenden Informationen, um zu überprüfen, welche Dateitypen der Azure Information Protection Unified-Bezeichnungs Client unterstützt, welche verschiedenen Schutz Ebenen Sie verwenden und wie Sie die Standardschutz Ebene ändern können, und um festzustellen, welche Dateien von der Klassifizierung und dem Schutz automatisch ausgeschlossen (übersprungen) werden.
-
-Für aufgelisteten Dateitypen werden WebDav-Positionen nicht unterstützt.
-
+> [!NOTE]
+> Für aufgelisteten Dateitypen werden WebDav-Positionen nicht unterstützt.
+> 
 ## <a name="file-types-supported-for-classification-only"></a>Nur für die Klassifizierung unterstützte Dateitypen
 
 Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschützt sind.
@@ -67,8 +58,9 @@ Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschüt
     |Office-Dateityp|Office-Dateityp|
     |----------------------------------|----------------------------------|
     |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />VDW<br /><br />.vsd|VSDM<br /><br /> VSDX<br /><br />VSS<br /><br />VSSM<br /><br />VST<br /><br />VSTM<br /><br />VSSX<br /><br />VSTX<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
+    | | |
 
-Zusätzliche Dateitypen unterstützen die Klassifizierung, wenn sie zudem geschützt sind. Weitere Informationen zu diesen Dateitypen finden Sie im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).
+Andere Dateitypen unterstützen die Klassifizierung, wenn sie zudem geschützt sind. Weitere Informationen zu diesen Dateitypen finden Sie im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).
 
 Beispiele:
 
@@ -80,11 +72,12 @@ Beispiele:
 
 Der Azure Information Protection Unified Bezeichnung-Client unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben.
 
-|Art des Schutzes|Systemeigenes Format|Allgemein|
+|Art des Schutzes|Systemeigen|Allgemein|
 |----------------------|----------|-----------|
-|BESCHREIBUNG|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Bei anderen unterstützten Dateitypen bietet der generische Schutz eine Schutz Ebene, die die Datei Kapselung mit dem Pfile-Dateityp und die Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.|
-|Schutz|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Der Schutz der Dateien wird auf folgende Weise erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
-|Standardebene für Dateitypen|Dies ist die Standardebene des Schutzes für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt, [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).|Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den nativen Schutz unterstützt werden.|
+|**Beschreibung**|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Bei anderen unterstützten Dateitypen bietet der generische Schutz eine Schutz Ebene, die die Datei Kapselung mit dem Pfile-Dateityp und die Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.|
+|**Schutz**|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />-Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Benutzer erfolgen, die die Datei per e-Mail erhalten oder über Datei-oder Freigabe Berechtigungen darauf zugreifen können.<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Der Schutz der Dateien wird auf folgende Weise erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
+|**Standardebene für Dateitypen**|Standardschutz Ebene für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt, [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).|Standardschutz für alle anderen Dateitypen (z. b.. vsdx,. RTF usw.), die nicht vom systemeigenen Schutz unterstützt werden.|
+| | |
 
 Die Standardschutz Ebene, die der Azure Information Protection Unified-Bezeichnungs Client oder der Scanner anwendet, kann nicht geändert werden. Sie können jedoch ändern, welche Dateitypen geschützt werden. Weitere Informationen finden Sie unter [Ändern der zu schützenden Dateitypen](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
@@ -104,7 +97,7 @@ Es gibt maximale Dateigrößen, die der Azure Information Protection Unified-Bez
 | | |
 
 > [!IMPORTANT]
-> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
 **Bei allen anderen Dateien**:
@@ -120,7 +113,7 @@ Es gibt maximale Dateigrößen, die der Azure Information Protection Unified-Bez
 
 In der folgenden Tabelle ist eine Teilmenge der Dateitypen aufgeführt, die den systemeigenen Schutz durch den Azure Information Protection Unified Bezeichnung-Client unterstützen und auch klassifiziert werden können.
 
-Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, die Namenserweiterung der ursprünglichen Datei geändert wird und diese Dateien dadurch schreibgeschützt werden. Beachten Sie, dass wenn Dateien generisch geschützt sind, die ursprüngliche Namenserweiterung immer in PFILE geändert wird.
+Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, die Namenserweiterung der ursprünglichen Datei geändert wird und diese Dateien dadurch schreibgeschützt werden. Wenn Dateien generisch geschützt sind, wird die ursprüngliche Dateinamenerweiterung immer in Pfile geändert.
 
 > [!WARNING]
 > Wenn Sie über Firewalls, Webproxys oder Sicherheitssoftware verfügen, die Erweiterungen überprüfen und entsprechende Maßnahmen ergreifen, müssen Sie die Netzwerkgeräte und die Software möglicherweise zur Unterstützung der neuen Erweiterungen neu konfigurieren.
@@ -139,6 +132,7 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 |JPE|PJPE|
 |JFIF|PJFIF|
 |.jt|.pjt|
+| | |
 
 In der nächsten Tabelle werden die verbleibenden Dateitypen aufgelistet, die den systemeigenen Schutz durch den Azure Information Protection Unified Bezeichnung-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
 
@@ -147,8 +141,8 @@ Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien
 |Von Office unterstützte Dateitypen|Von Office unterstützte Dateitypen|
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />VSDM|VSDX<br /><br />VSSM<br /><br />VSSX<br /><br />VSTM<br /><br />VSTX<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
-
-## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Von der Klassifizierung und dem Schutz ausgeschlossene Dateitypen
+| | |
+## <a name="file-types-excluded-from-classification-and-protection"></a>Von Klassifizierung und Schutz ausgeschlossene Dateitypen
 
 Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Computer entscheidend sind, werden einige Dateitypen und Ordner von der Klassifizierung und dem Schutz automatisch ausgeschlossen. Wenn Benutzer versuchen, diese Dateien mithilfe des Azure Information Protection Unified Bezeichnung-Clients zu klassifizieren oder zu schützen, wird eine Meldung angezeigt, dass Sie ausgeschlossen werden.
 
@@ -162,16 +156,14 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Dateitypen, die von der Klassifizierung und vom Schutz durch die Azure Information Protection-Überprüfung ausgeschlossen sind
 
-Standardmäßig schließt der Scanner auch dieselben Dateitypen wie der Azure Information Protection Unified-Bezeichnungs Client mit den folgenden Ausnahmen aus:
+Der Scanner schließt standardmäßig auch die gleichen Dateitypen wie der Azure Information Protection Unified-Bezeichnungs Client aus. 
 
-- . msg,. RTF und. rar werden ebenfalls ausgeschlossen.
+Für den Scanner werden auch die folgenden Dateitypen ausgeschlossen:. msg,. RTF und. rar
 
-Sie können die enthaltenen oder ausgeschlossenen Dateitypen für die Überprüfung der Dateien durch den Scanner ändern:
-
-- Konfigurieren Sie [mithilfe des Azure-Portals](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)**zu überprüfende Dateitypen** im Scannerprofil.
+Um die Dateitypen zu ändern, die von der Überprüfung für die Dateiüberprüfung eingeschlossen oder ausgeschlossen werden, konfigurieren Sie die **Dateitypen,** die im [Inhalts Überprüfungs Auftrag](../deploy-aip-scanner-configure-install.md#configure-the-scanner-in-the-azure-portal)gescannt werden sollen.
     
-    > [!NOTE]
-    > Überwachen Sie die Überprüfung sorgfältig,wenn Sie RTF-Dateien in der Überprüfung miteinbeziehen. Einige RTF-Dateien können nicht erfolgreich überprüft werden. Die Überprüfung wird nicht abgeschlossen, und Sie müssen den Dienst neustarten.
+> [!NOTE]
+> Wenn Sie RTF-Dateien für die Überprüfung einschließen, empfiehlt es sich, die Überprüfung sorgfältig zu überwachen. Einige RTF-Dateien können nicht erfolgreich überprüft werden. Die Überprüfung wird nicht abgeschlossen, und Sie müssen den Dienst neustarten.
 
 Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Um dieses Verhalten für den Scanner zu ändern, verwenden Sie die erweiterte PowerShell-Einstellung **pfilesupportedextensions**. Weitere Informationen finden Sie unter [Verwenden von PowerShell, um zu ändern, welche Dateitypen](../deploy-aip-scanner-configure-install.md#change-which-file-types-to-protect) vor den Überprüfungs Anweisungen für die Scanner geschützt sind.
 
@@ -189,13 +181,14 @@ Ohne zusätzliche Konfiguration verwendet der Azure Information Protection Unifi
 
 |Anwendungstyp|Dateityp|
 |--------------------------------|-------------------------------------|
-|Word|Post docx;. docm;. dot;. dotm;. dotx|
-|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF |.pdf|
-|Text|.txt; .xml; .csv|
+|**Word**|Post docx;. docm;. dot;. dotm;. dotx|
+|**Excel**|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|**PowerPoint**|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|**PDF** |.pdf|
+|**Text**|.txt; .xml; .csv|
+| | | |
 
-Wenn zusätzliche Konfigurationen vorgenommen werden, können auch andere Dateitypen überprüft werden. Beispielsweise können Sie [eine benutzerdefinierte Erweiterung für die Verwendung des vorhandenen Windows-Filters für Textdateien registrieren](/windows/desktop/search/-search-ifilter-registering-filters) und zusätzliche Filter von Softwareherstellern installieren.
+Mit der zusätzlichen Konfiguration können auch andere Dateitypen überprüft werden. Beispielsweise können Sie [eine benutzerdefinierte Dateinamenerweiterung registrieren, um den vorhandenen Windows-Filter Handler für Textdateien zu verwenden](/windows/desktop/search/-search-ifilter-registering-filters), und Sie können andere Filter von Softwareanbietern installieren.
 
 Wenn Sie überprüfen möchten, welche Filter installiert sind, finden Sie weitere Informationen im Windows Search-Leitfaden für Entwickler unter [Finding a Filter Handler for a Given File Extension (Finden eines Filterhandlers für eine angegebene Erweiterung)](/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension).
 
@@ -223,7 +216,7 @@ Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben und die 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie die vom Azure Information Protection Unified Bezeichnung-Client unterstützten Dateitypen identifiziert haben, finden Sie in den folgenden Ressourcen weitere Informationen, die Sie möglicherweise benötigen, um diesen Client zu unterstützen:
+Weitere Informationen finden Sie unter
 
 - [Anpassungen](clientv2-admin-guide-customizations.md)
 

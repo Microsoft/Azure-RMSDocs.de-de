@@ -13,12 +13,12 @@ ROBOTS: NOINDEX
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86463add67ca43f6908fed110dd358df89052a92
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 39f37c72be1d9284aecdcec559afc03b586e011c
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97806905"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415414"
 ---
 # <a name="azure-information-protection-classic-client-for-windows"></a>Azure Information Protection des klassischen Clients für Windows
 
@@ -29,7 +29,7 @@ ms.locfileid: "97806905"
 >[!NOTE] 
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Der Azure Information Protection klassischer Client ist der ursprüngliche herunterladbare Client für Organisationen, die [Azure Information Protection](../what-is-information-protection.md) zum klassifizieren und schützen von Dokumenten und e-Mails verwenden, oder zum Schutz Ihrer Daten einen Rights Management-Dienst verwenden. Dieser Client verfügt auch über einen Viewer für Organisationen, die über keine eigene Infrastruktur für den Informationsschutz verfügen, aber Inhalte nutzen möchten, die von anderen Organisationen geschützt wurden, die einen Rights Management-Dienst von Microsoft verwenden.
+Der Azure Information Protection klassischer Client ist der ursprüngliche herunterladbare Client für Organisationen, die Azure Information Protection zum klassifizieren und schützen von Dokumenten und e-Mails verwenden, oder zum Schutz Ihrer Daten einen Rights Management-Dienst verwenden. Dieser Client verfügt auch über einen Viewer für Organisationen, die über keine eigene Infrastruktur für den Informationsschutz verfügen, aber Inhalte nutzen möchten, die von anderen Organisationen geschützt wurden, die einen Rights Management-Dienst von Microsoft verwenden.
 
 Verwenden Sie die folgenden Ressourcen für den klassischen Client:
 

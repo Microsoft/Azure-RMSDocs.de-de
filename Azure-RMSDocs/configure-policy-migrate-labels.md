@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1751368b74d6ed2800bfd2e7432a4ce4a5844f0a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 1243d62932a2cda0c6ead806e1b322324e974a9f
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809763"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415210"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -39,9 +39,9 @@ Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie m�
 
 - [Worin besteht der Unterschied zwischen Bezeichnungen in Microsoft 365 und Bezeichnungen in Azure Information Protection?](faqs.md#whats-the-difference-between-labels-in-microsoft-365-and-labels-in-azure-information-protection)
 
-- [Wann ist der richtige Zeitpunkt für die Migration meiner Bezeichnungen?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
+- [Wann ist der richtige Zeitpunkt für die Migration von Bezeichnungen zur vereinheitlichten Bezeichnung?](faqs.md#when-is-the-right-time-to-migrate-my-labels-to-unified-labeling)
 
-- [Welches Verwaltungsportal kann ich verwenden, nachdem ich meine Bezeichnungen migriert habe?](faqs.md?#after-ive-migrated-my-labels-which-management-portal-do-i-use )
+- [Welches Verwaltungs Portal verwende ich, wenn ich meine Bezeichnungen zu vereinheitlichter Bezeichnung migriere?](faqs.md#after-ive-migrated-my-labels-to-unified-labeling-which-management-portal-do-i-use)
 
 ### <a name="administrative-roles-that-support-the-unified-labeling-platform"></a>Administrative Rollen zur Unterstützung der Unified-Bezeichnung-Plattform
 
@@ -55,7 +55,7 @@ Wenn Sie diesen Benutzern nicht über eine dieser Konfigurationen Zugriff auf di
 
 Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Bezeichnungen weiterhin Bezeichnungen und Richtlinien sowohl im Azure-Portal als auch in den Admin-Centers verwalten.
 
-## <a name="before-you-begin"></a>Voraussetzungen
+## <a name="before-you-begin"></a>Vorbereitung
 
 Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig. Stellen Sie vor der Migration sicher, dass Sie die folgenden Änderungen und Überlegungen beachten:
 
@@ -106,7 +106,7 @@ Stellen Sie vor dem Migrieren sicher, dass nach Abschluss der Migration keine Ko
 
 Sehen Sie sich beispielsweise die folgende Liste von Bezeichnungen an:
 
-- **Öffentlich**
+- **Public**
 - **Allgemein**
 - **Vertraulich**
     - **Vertrauen\hr**
@@ -235,7 +235,7 @@ Beachten Sie Folgendes, bevor Sie die Option **Richtlinien kopieren (Vorschau)**
 Weitere Informationen zum Konfigurieren der Richtlinien Einstellungen, der erweiterten Client Einstellungen und der Bezeichnungs Einstellungen für den Azure Information Protection Unified Label-Client finden Sie im Administrator Handbuch unter [benutzerdefinierte Konfigurationen für den Azure Information Protection Unified](./rms-client/clientv2-admin-guide-customizations.md) Label-Client.
 
 > [!NOTE]
-> Azure Information Protection Unterstützung für das Kopieren von Richtlinien ist derzeit in der Vorschau Phase In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+> Azure Information Protection Unterstützung für das Kopieren von Richtlinien ist derzeit in der Vorschau Phase Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Clients und Dienste, die einheitliche Bezeichnungen unterstützen
 

@@ -1,6 +1,6 @@
 ---
-title: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
-description: Anweisungen und Informationen für Administratoren zum Bereitstellen des Azure Information Protection Unified Bezeichnung-Clients für Windows in Unternehmensnetzwerken.
+title: Installieren des Unified Bezeichnung-Clients für Azure Information Protection (AIP) für Benutzer
+description: Erfahren Sie, wie Administratoren den Unified-Bezeichnungs Client (Azure Information Protection) für Ihre Benutzer in einem Unternehmensnetzwerk bereitstellen können.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f818a94e954b245d329a2cdb2dc1ce419e83c4ce
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: b2ffca45a0295b2264a7cfe92d7a1fe350c0f0a8
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560100"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415241"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administrator Handbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
@@ -25,6 +25,8 @@ ms.locfileid: "98560100"
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant für**: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie im [klassischen Client Administrator Handbuch](client-admin-guide-install.md). *
+
+In diesem Artikel wird beschrieben, wie Administratoren den Unified-Bezeichnungs Client (Azure Information Protection) für Ihre Benutzer in einem Unternehmensnetzwerk bereitstellen können.
 
 Überprüfen Sie vor der Installation des Azure Information Protection Unified Bezeichnung-Clients in Ihrem Unternehmensnetzwerk, ob die Computer über die erforderlichen Betriebssystemversionen und Anwendungen für Azure Information Protection verfügen: [Anforderungen für Azure Information Protection](../requirements.md) und [zusätzliche Anforderungen für die Installation des Unified-Bezeichnungs Clients in Unternehmensnetzwerken](reqs-ul-client.md).
 
@@ -46,7 +48,7 @@ Folglich werden Bezeichnungen, die Schutz anwenden, den Benutzern auf der Schalt
 Informationen dazu, welche Office-Editionen den Datenschutzdienst unterstützen, finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../requirements-applications.md).
 
 > [!IMPORTANT]
-> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 
 ## <a name="unified-labeling-client-installation-options"></a>Unified Bezeichnungs Client-Installationsoptionen
 
@@ -79,7 +81,7 @@ So installieren Sie den Unified-Bezeichnungs **Client mithilfe der exe-Datei**:
 
     Um alle Installationsoptionen anzuzeigen, führen Sie zuerst die ausführbare Datei mit **/Help** aus: `AzInfoProtection_UL.exe /help`
 
-    Zum Beispiel: 
+    Beispiel: 
     - So installieren Sie den Client unbeaufsichtigt: `AzInfoProtection_UL.exe /quiet`
     
     - So installieren Sie nur die PowerShell-Cmdlets: `AzInfoProtection_UL.exe  PowerShellOnly=true /quiet`
@@ -89,7 +91,7 @@ So installieren Sie den Unified-Bezeichnungs **Client mithilfe der exe-Datei**:
     |Parameter  |BESCHREIBUNG  |
     |---------|---------|
     |**Allowtelemetry = 0**     |    Verwenden Sie diesen Parameter, um die Installationsoption **Senden Sie Nutzungsstatistiken an Microsoft, und helfen Sie so mit, Azure Information Protection zu verbessern** zu deaktivieren.     |
-    |**ServiceLocation**     |  Verwenden Sie diesen Parameter, wenn Sie den Client auf Computern installieren, die Office 2010 ausführen und Ihre Benutzer keine lokalen Administratoren auf ihren Computern sind, oder wenn Sie keine Eingabeaufforderung für die Benutzer anzeigen lassen möchten. <br><br>**Wichtig**: der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions). |
+    |**ServiceLocation**     |  Verwenden Sie diesen Parameter, wenn Sie den Client auf Computern installieren, die Office 2010 ausführen und Ihre Benutzer keine lokalen Administratoren auf ihren Computern sind, oder wenn Sie keine Eingabeaufforderung für die Benutzer anzeigen lassen möchten. <br><br>**Wichtig**: der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions). |
     | | |
 
 1. Starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu, um die Installation abzuschließen. 
@@ -118,7 +120,7 @@ So installieren Sie den Unified-Bezeichnungs **Client mithilfe der exe-Datei**:
 Wenn Sie den-Client für Benutzer installieren, die über [Office 2010](../known-issues.md#aip-and-legacy-windows-and-office-versions) verfügen und über keine lokalen Administrator Berechtigungen verfügen, geben Sie den **serviceloationsparameter** und die URL für Ihren Azure Rights Management-Dienst an. 
     
 > [!IMPORTANT]
-> Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+> Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
 >
 
 Dieser Parameter und Wert erstellt die folgenden Registrierungsschlüssel und legt sie fest:
@@ -182,7 +184,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     | | | | |
 
     > [!IMPORTANT]
-    > Der erweiterte Support von Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    > Der erweiterte Support für Office 2010 endete am 13. Oktober 2020. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     >
 
 1. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection_UL.msi /quiet`.

@@ -1,5 +1,5 @@
 ---
-title: Azure Information Protection vereinheitlichte Bezeichnung für den Client Versionsverlauf & Unterstützungs Richtlinie
+title: 'Neues in Azure Information Protection (AIP): Versionsverlauf & Unterstützungs Richtlinie'
 description: Hier finden Sie Informationen zu den Neuerungen beim Unified-Bezeichnung-Client (Azure Information Protection) für Windows.
 author: batamig
 ms.author: bagol
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6f77220e6321f8a601c936fec9a5ea4812539f01
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 73d64904f3bea44e7432709773f9400ccd40da3e
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844369"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415295"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -26,6 +26,8 @@ ms.locfileid: "101844369"
 >*Wenn Sie über Windows 7 oder Office 2010 verfügen, finden Sie weitere Informationen unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).*
 >
 >***Relevant für**: [nur AIP Unified Bezeichnung Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Informationen zum klassischen Client finden Sie [unter AIP Classic Client Version Release History und Support Policy](client-version-release-history.md). *
+
+Dieser Artikel beschreibt die neuen Features, die für den Unified-Bezeichnungs Client verfügbar sind, sowie Wartungsinformationen und Support Zeitpläne für jede einheitliche AIP-Client Version.
 
 Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen.
 
@@ -234,9 +236,9 @@ Die folgenden Korrekturen wurden in Version 2.9.111.0 des [Azure Information Pro
 
 - Unterstützung für Bindestriche ( **-** ) in [Scanner-Datenbanknamen](../deploy-aip-scanner-prereqs.md) hinzugefügt
 - Updates in Berichten für den Fall, dass die Option " **[auf Inhalt basierende](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job)** Bezeichnungs Dateien" auf **Off** festgelegt ist
-- [Verbesserter Arbeitsspeicher Verbrauch](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance) für eine große Anzahl von Informationstyp Übereinstimmungen
+- [Verbesserter Arbeitsspeicher Verbrauch](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance) für eine große Anzahl von Informationstyp Übereinstimmungen
 - Unterstützung für [lokale SharePoint-](../deploy-aip-scanner-prereqs.md#sharepoint-requirements) Pfade, die mit einem Schrägstrich ( **/** ) enden
-- Erweiterte SharePoint-Scan [Geschwindigkeit](../deploy-aip-scanner-configure-install.md#optimizing-scanner-performance)
+- Erweiterte SharePoint-Scan [Geschwindigkeit](../deploy-aip-scanner-configure-install.md#optimize-scanner-performance)
 - Unterstützung für das [vermeiden eines Timeouts](clientv2-admin-guide-customizations.md#avoid-scanner-timeouts-in-sharepoint) beim Scannen eines SharePoint-Servers.
 
 ### <a name="fixes-and-improvements-for-the-unified-labeling-client"></a>Korrekturen und Verbesserungen für den Unified-Bezeichnungs Client
@@ -259,7 +261,7 @@ Die folgenden Korrekturen wurden in Version 2.9.111.0 des [Azure Information Pro
 
     In solchen Fällen werden die erweiterten Einstellungen der ersten Richtlinie immer entsprechend der Reihenfolge der Richtlinien im Admin Center angewendet. Die Ausnahme für " *outlookdefaultlabel* " wurde jetzt entfernt.
 
-- In einem Szenario, in dem **% AppData% (appdata\roaming)** auf eine nicht standardmäßige Windows-Ordnerstruktur verweist, werden Dateien in Ordnern, die Benutzerverzeichnissen zugeordnet sind, jetzt wie erwartet [aus der Bezeichnung und dem Schutz ausgeschlossen](clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) , basierend auf der Konfiguration.
+- In einem Szenario, in dem **% AppData% (appdata\roaming)** auf eine nicht standardmäßige Windows-Ordnerstruktur verweist, werden Dateien in Ordnern, die Benutzerverzeichnissen zugeordnet sind, jetzt wie erwartet [aus der Bezeichnung und dem Schutz ausgeschlossen](clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection) , basierend auf der Konfiguration.
 
 - [Neue erweiterte Client Einstellung](clientv2-admin-guide-customizations.md#remove-all-shapes-of-a-specific-shape-name) (**powerpointremuveallshapesbyshapename**), die zum Entfernen von Formen aus PowerPoint-Kopf-oder-Fußzeilen hinzugefügt wurde, indem der Form Name anstelle des Texts innerhalb einer Form verwendet wird.
 
@@ -326,7 +328,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 **So verwenden Sie den Netzwerk Ermittlungsdienst**
 
 1. Führen Sie ein Upgrade Ihrer Überprüfungs Version durch, und stellen Sie sicher, dass Ihr Scanner-Cluster richtig konfiguriert ist. Weitere Informationen finden Sie unter
-    - [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrading-your-scanner)
+    - [Aktualisieren Ihres Scanners](../deploy-aip-scanner-configure-install.md#upgrade-your-scanner)
     - [Erstellen eines Scanner-Clusters](../deploy-aip-scanner-configure-install.md#create-a-scanner-cluster)
 
 1. Stellen Sie sicher, dass Azure Information Protection Analytics aktiviert ist.
@@ -346,7 +348,7 @@ Der **Netzwerk** Ermittlungsdienst aktualisiert die **Repository** -Berichte mit
 
 1. Verwenden Sie die generierten Berichte im Bereich "neue [**Depots**](../deploy-aip-scanner-configure-install.md#analyze-risky-repositories-found-public-preview) ", um nach zusätzlichen Netzwerkdatei Freigaben zu suchen, die möglicherweise gefährdet sind. Fügen Sie Ihren [Inhalts Überprüfungs Aufträgen](../deploy-aip-scanner-configure-install.md#create-a-content-scan-job) riskante Dateifreigaben hinzu, um die hinzugefügten Depots auf vertrauliche Inhalte zu scannen.
 
-#### <a name="network-discovery-cmdlets-public-preview"></a>Cmdlets für die Netzwerk Ermittlung (öffentliche Vorschau)
+### <a name="network-discovery-cmdlets-public-preview"></a>Cmdlets für die Netzwerk Ermittlung (öffentliche Vorschau)
 
 Folgende PowerShell-Cmdlets sind für die Netzwerk Ermittlung hinzugefügt:
 

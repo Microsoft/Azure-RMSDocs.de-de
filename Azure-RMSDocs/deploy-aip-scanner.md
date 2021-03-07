@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f674cd162131b0a45dbefbe70e617296695d6126
-ms.sourcegitcommit: caf2978ab03e4893b59175ce753791867793dcfe
+ms.openlocfilehash: 24429f7727800650e5ce8f5f814597dfd83de0b2
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524743"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414989"
 ---
 # <a name="what-is-the-azure-information-protection-unified-labeling-scanner"></a>Was ist der Azure Information Protection-Scanner für einheitliche Bezeichnungen?
 
@@ -80,7 +80,7 @@ Weitere Informationen finden Sie unter [Dateien, die nicht vom Scanner bezeichne
 
 ### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. bestimmen Sie, ob Dateien für die Überprüfung eingeschlossen oder ausgeschlossen werden. 
 
-Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschlossene Dateien wie ausführbare Dateien und Systemdateien übersprungen. Weitere Informationen finden Sie unter [Dateitypen, die von der Klassifizierung und dem Schutz ausgeschlossen sind](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection).
+Bei der Überprüfung werden von der Klassifizierung und vom Schutz ausgeschlossene Dateien wie ausführbare Dateien und Systemdateien übersprungen. Weitere Informationen finden Sie unter [Dateitypen, die von der Klassifizierung und dem Schutz ausgeschlossen](rms-client/clientv2-admin-guide-file-types.md#file-types-excluded-from-classification-and-protection)sind.
 
 Der Scanner berücksichtigt auch alle Dateilisten, die explizit für die Überprüfung definiert oder von der Überprüfung ausgeschlossen werden sollen. Dateilisten gelten standardmäßig für alle Daten Depots und können auch nur für bestimmte Depots definiert werden.
 
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie unter Bereitstellen [des Azure Information Prot
 
 Nach der Identifizierung ausgeschlossener Dateien filtert der Scanner erneut, um die für die Prüfung unterstützten Dateien zu identifizieren.
 
-Diese zusätzlichen Filter sind dieselben, die vom Betriebssystem für die Windows-Suche und-Indizierung verwendet werden, und es ist keine zusätzliche Konfiguration erforderlich. Windows IFilter wird auch zum Überprüfen von Dateitypen verwendet, die von Word, Excel und PowerPoint sowie von PDF-Dokumenten und Textdateien verwendet werden.
+Diese Filter sind dieselben, die vom Betriebssystem für die Windows-Suche und-Indizierung verwendet werden, und es ist keine zusätzliche Konfiguration erforderlich. Windows IFilter wird auch zum Überprüfen von Dateitypen verwendet, die von Word, Excel und PowerPoint sowie von PDF-Dokumenten und Textdateien verwendet werden.
 
 Eine vollständige Liste der für die Überprüfung unterstützten Dateitypen sowie weitere Anweisungen zum Konfigurieren von Filtern, um Zip-und TIFF-Dateien einzuschließen, finden Sie [unter Unterstützte Dateitypen für die Überprüfung](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection).
 
@@ -106,7 +106,7 @@ Wenn die Überprüfung beendet wird und keine Überprüfung für eine große Anz
 
 Beispielsweise ist die Serverhärtung für SharePoint ein Grund, warum die Überprüfung die Anzahl der zulässigen Netzwerkverbindungen überschreiten würde und daher angehalten wird.
 
-Wenn Sie überprüfen möchten, ob dies die Ursache für die Beendigung des Scanners ist, überprüfen Sie die Überprüfungs Protokolle unter **%LocalAppData%\microsoft\msip\logs\msipscanner.iplog** (mehrere Protokolle werden in eine ZIP-Datei komprimiert):
+Überprüfen Sie in den Überprüfungs Protokollen unter **%LocalAppData%\microsoft\msip\logs\msipscanner.iplog** , ob die Serverhärtung für SharePoint die Ursache für die Beendigung der Überprüfung ist (mehrere Protokolle werden in eine ZIP-Datei komprimiert):
 
 `Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port`
 

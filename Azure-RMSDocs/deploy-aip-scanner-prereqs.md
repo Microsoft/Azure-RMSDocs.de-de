@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 767438db1703c60a545f0b38234f4d7c57b9b569
-ms.sourcegitcommit: d3548610fbfee6006e12acd5471e085edf2da483
+ms.openlocfilehash: 4e8c4444aad6185b54a6f5b5178fa225857b71d2
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99473003"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414955"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Anforderungen für die Installation und Bereitstellung des Azure Information Protection Unified-Beschriftungs Scanners
 
@@ -112,7 +112,7 @@ Verwenden Sie zum Speichern der Überprüfungs Konfigurationsdaten einen SQL-Ser
 
 Der erforderliche Speicherplatz für die Konfigurations Datenbank des Scanners und die Angabe des Computers, auf dem SQL Server ausgeführt wird, kann je nach Umgebung variieren. Daher empfehlen wir Ihnen, ihre eigenen Tests durchzuführen. Verwenden Sie die folgende Anleitung als Ausgangspunkt.
 
-Weitere Informationen finden Sie unter [Optimieren der Leistung des Scanners](deploy-aip-scanner-configure-install.md#optimizing-scanner-performance).
+Weitere Informationen finden Sie unter [Optimieren der Leistung des Scanners](deploy-aip-scanner-configure-install.md#optimize-scanner-performance).
 
 Die Datenträger Größe für die scannerkonfigurationsdatenbank variiert für jede Bereitstellung. Verwenden Sie die folgende Gleichung als Leitfaden:
 
@@ -269,7 +269,7 @@ Führen Sie die folgenden Schritte aus, um einen vom Azure-Portal getrennten Com
 
     1. Legen Sie mithilfe des Cmdlets [Set-mipnetworkdiscoveryconfiguration](/powershell/module/azureinformationprotection/set-mipnetworkdiscoveryconfiguration) den Netzwerk Ermittlungsdienst (Public Preview) für die Funktion im Offline Modus fest.
 
-    1. Konfigurieren Sie den Netzwerk Scanauftrag in der Azure-Portal. Weitere Informationen finden Sie unter [Erstellen eines Netzwerk Scan Auftrags](deploy-aip-scanner-configure-install.md#creating-a-network-scan-job).
+    1. Konfigurieren Sie den Netzwerk Scanauftrag in der Azure-Portal. Weitere Informationen finden Sie unter [Erstellen eines Netzwerk Scan Auftrags](deploy-aip-scanner-configure-install.md#create-a-network-scan-job-public-preview).
     
     1. Exportieren Sie den Netzwerküberprüfungs-Auftrag mithilfe der **Export** Option aus dem Bereich **Azure Information Protection-Netzwerk Scanaufträge (Vorschau)** . 
     
@@ -329,7 +329,7 @@ Führen Sie je nach den Anforderungen Ihrer Organisation einen der folgenden Sch
 |**Sie können nicht über die sysadmin-Rolle verfügen.**     |  Wenn Sie die sysadmin-Rolle nicht auch vorübergehend erhalten können, müssen Sie einen Benutzer mit sysadmin-Berechtigung bitten, vor der Installation des Scanners manuell eine Datenbank zu erstellen. <br><br>Für diese Konfiguration muss die **db_owner** Rolle den folgenden Konten zugewiesen werden: <br>-Dienst Konto für den Scanner<br>-Benutzerkonto für die Scannerinstallation<br>-Benutzerkonto für Scannerkonfiguration <br><br>In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie unterschiedliche Konten verwenden, benötigen beide die **db_owner** Rolle für die scannerkonfigurationsdatenbank. Erstellen Sie diesen Benutzer und die Rechte bei Bedarf. Wenn Sie einen eigenen Cluster Namen angeben, wird die Konfigurations Datenbank **AIPScannerUL_<cluster_name>** benannt.  |
 | | |
 
-Darüber hinaus gilt:
+Außerdem zu beachten:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:

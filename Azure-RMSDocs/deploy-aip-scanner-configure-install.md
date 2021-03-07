@@ -1,6 +1,6 @@
 ---
 title: Installieren und Konfigurieren der Unified-Bezeichnung für Azure Information Protection (AIP)
-description: Anweisungen zum Installieren und Konfigurieren des Azure Information Protection Unified Bezeichnung Scanner zum ermitteln, klassifizieren und schützen von Dateien in Daten speichern.
+description: Erfahren Sie, wie Sie den Unified-Bezeichnungs Scanner (Azure Information Protection) installieren und konfigurieren, um Dateien in Daten speichern zu ermitteln, zu klassifizieren und zu schützen.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -12,20 +12,24 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 98cadb555919ecd6e95e3328ad489b29e3f5c0ef
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: ed21f867dfbd3cf6fb0e453367f9e657ba463e99
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844386"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415397"
 ---
-# <a name="configuring-and-installing-the--azure-information-protection-unified-labeling-scanner"></a>Konfigurieren und Installieren des Azure Information Protection Unified-Beschriftungs Scanner
+# <a name="configuring-and-installing-the-azure-information-protection-aip-unified-labeling-scanner"></a>Konfigurieren und Installieren des Unified-Beschriftungs Scanners für Azure Information Protection (AIP)
 
 >***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 *
 >
 >***Relevant für**: [nur AIP Unified Bezeichnung Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients). Den klassischen Scanner finden Sie unter [Konfigurieren und Installieren des Azure Information Protection klassischen Scanner](deploy-aip-scanner-configure-install-classic.md). *
 
-Vergewissern Sie sich vor dem Konfigurieren und Installieren des Azure Information Protection Scanners, dass Ihr System die [erforderlichen Voraussetzungen](deploy-aip-scanner-prereqs.md)erfüllt. 
+In diesem Artikel wird beschrieben, wie Sie den Azure Information Protection Unified-Bezeichnung, lokaler Scanner, konfigurieren und installieren. 
+
+## <a name="overview"></a>Übersicht
+
+Bevor Sie beginnen, vergewissern Sie sich, dass Ihr System die [erforderlichen Voraussetzungen](deploy-aip-scanner-prereqs.md)erfüllt. 
 
 Wenn Sie fertig sind, fahren Sie mit den folgenden Schritten fort:
 
@@ -37,18 +41,18 @@ Wenn Sie fertig sind, fahren Sie mit den folgenden Schritten fort:
 
 1. [Konfigurieren der Überprüfung zum Anwenden von Klassifizierung und Schutz](#configure-the-scanner-to-apply-classification-and-protection)
  
-Führen Sie die folgenden zusätzlichen Konfigurationsverfahren aus, die für Ihr System erforderlich sind:
+Führen Sie dann die folgenden Konfigurations Prozeduren nach Bedarf für das System aus:
 
 |Verfahren  |BESCHREIBUNG  |
 |---------|---------|
 |[Ändern der zu schützenden Dateitypen](#change-which-file-types-to-protect) |Möglicherweise möchten Sie verschiedene Dateitypen Scannen, klassifizieren oder schützen als die Standardwerte. Weitere Informationen finden Sie unter [AIP-Scanvorgang](deploy-aip-scanner.md#aip-scanning-process). |
-|[Aktualisieren Ihres Scanners](#upgrading-your-scanner) | Aktualisieren Sie Ihren Scanner, um die neuesten Features und Verbesserungen zu nutzen.|
-|[Bearbeiten von Datenrepository-Einstellungen in einem Massen Vorgang](#editing-data-repository-settings-in-bulk)| Verwenden Sie Import-und Exportoptionen, um für mehrere Daten Depots Massen Änderungen vorzunehmen.|
-|[Verwenden des Scanners mit alternativen Konfigurationen](#using-the-scanner-with-alternative-configurations)| Verwenden Sie den Scanner, ohne Bezeichnungen mit Bedingungen zu konfigurieren. |
-|[Optimieren der Leistung](#optimizing-scanner-performance)| Leitfaden zur Optimierung der Leistung des Scanners|
+|[Aktualisieren Ihres Scanners](#upgrade-your-scanner) | Aktualisieren Sie Ihren Scanner, um die neuesten Features und Verbesserungen zu nutzen.|
+|[Bearbeiten von Datenrepository-Einstellungen in einem Massen Vorgang](#edit-data-repository-settings-in-bulk)| Verwenden Sie Import-und Exportoptionen, um für mehrere Daten Depots Massen Änderungen vorzunehmen.|
+|[Verwenden des Scanners mit alternativen Konfigurationen](#use-the-scanner-with-alternative-configurations)| Verwenden Sie den Scanner, ohne Bezeichnungen mit Bedingungen zu konfigurieren. |
+|[Optimieren der Leistung](#optimize-scanner-performance)| Leitfaden zur Optimierung der Leistung des Scanners|
 | | |
 
-Weitere Informationen finden Sie auch [in der Liste der Cmdlets für den Scanner](#list-of-cmdlets-for-the-scanner).
+Weitere Informationen finden Sie [unter Unterstützte PowerShell-Cmdlets](#supported-powershell-cmdlets).
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Konfigurieren des Scanners im Azure-Portal
 
@@ -93,14 +97,11 @@ So konfigurieren Sie Ihren Scanner:
 
 Ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.md#version-28850)können Sie Ihr Netzwerk auf riskante Depots überprüfen. Fügen Sie einem Inhalts Überprüfungs Auftrag mindestens ein Repository hinzu, um Sie auf sensiblen Inhalt zu überprüfen.
 
-- [Voraussetzungen der Netzwerk Ermittlung](#network-discovery-prerequisites)
-- [Erstellen eines Netzwerk Scan Auftrags](#creating-a-network-scan-job)
-
 > [!NOTE]
 > Die Azure Information Protection Network Discovery-Funktion befindet sich derzeit in der Vorschau Phase. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 > 
 
-#### <a name="network-discovery-prerequisites"></a>Voraussetzungen der Netzwerk Ermittlung
+In der folgenden Tabelle werden die für den Netzwerk Ermittlungsdienst erforderlichen Voraussetzungen beschrieben:
 
 |Voraussetzung  |BESCHREIBUNG  |
 |---------|---------|
@@ -108,7 +109,7 @@ Ab Version [2.8.85.0](rms-client/unifiedlabelingclient-version-release-history.m
 |**Azure Information Protection Analytics**     | Stellen Sie sicher, dass Azure Information Protection Analytics aktiviert ist. <br /><br />Wechseln Sie in der Azure-Portal zu **Azure Information Protection > verwalten > configure Analytics (Vorschau)**. <br /><br />Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)](reports-aip.md).|
 | | |
 
-#### <a name="creating-a-network-scan-job"></a>Erstellen eines Netzwerk Scan Auftrags
+**So erstellen Sie einen Netzwerk Scanauftrag**
 
 1. Melden Sie sich beim Azure-Portal an, und wechseln Sie zu **Azure Information Protection**. Wählen Sie im Menü **Scanner** auf der linken Seite die Option Netzwerk Scan **Aufträge (Vorschau)** ![Netzwerk Scanaufträge Symbol](media/i-network-scan-jobs.png "Symbol "Netzwerk Scanaufträge"")aus.
     
@@ -162,7 +163,6 @@ Wenn Sie [einen Netzwerk Scanauftrag definiert](#create-a-network-scan-job-publi
     |![Log Analytics Symbol](media/i-log-analytics.png "Log Analytics Symbol") |Klicken Sie in der oberen rechten Ecke des Diagramms für nicht verwaltete Depots auf das **Log Analytics** -Symbol, um zu Log Analytics Daten für diese Depots zu springen. |
     | | |
 
-#### <a name="repositories-with-public-access"></a>Depots mit öffentlichem Zugriff
 
 In den Depots, in denen der **öffentliche Zugriff** über **Lese** **-oder Lese-/Schreibfunktionen** verfügt, können vertrauliche Inhalte vorhanden sein, die geschützt werden müssen. Wenn der **öffentliche Zugriff** auf false gilt, ist das Repository überhaupt nicht zugänglich.
 
@@ -204,11 +204,11 @@ Dies ist möglicherweise erst nach dem Ausführen eines Netzwerk Scan Auftrags z
     >     
     Wenn Sie den ersten Datenspeicher hinzufügen möchten, wählen Sie im Bereich **neuen Inhalts Überprüfungs Auftrag hinzufügen** die Option **Repository konfigurieren** aus, um den Bereich **Depots** zu öffnen:
     
-    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Konfigurieren von Datenrepositorys für den Azure Information Protection-Scanner":::
+    :::image type="content" source="media/scanner-repositories-bar.png" alt-text="Konfigurieren von Datenrepository für den Azure Information Protection Scanner.":::
 
     1. Klicken Sie im Bereich **Repositorys** auf die Option **Hinzufügen**:
     
-        :::image type="content" source="media/scanner-repository-add.png" alt-text="Hinzufügen eines Datenrepositorys für den Azure Information Protection-Scanner":::
+        :::image type="content" source="media/scanner-repository-add.png" alt-text="Fügen Sie das Datenrepository für den Azure Information Protection Scanner hinzu.":::
 
     1. Geben Sie im Bereich **Repository** den Pfad für das Datenrepository an, und klicken Sie dann auf **Speichern**.
     
@@ -347,7 +347,7 @@ Um diese Einstellungen zu ändern, bearbeiten Sie den Auftrag für die Inhalts �
 
 3. Notieren Sie sich die aktuelle Uhrzeit, und starten Sie die Überprüfung erneut über den Bereich **Azure Information Protection-Inhalts Scanaufträge** :
 
-    :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiieren der Überprüfung für den Azure Information Protection-Scanner":::
+    :::image type="content" source="media/scanner-scan-now.png" alt-text="Initiieren Sie die Überprüfung für den Azure Information Protection Scanner.":::
     
     Alternativ können Sie den folgenden Befehl in der PowerShell-Sitzung ausführen:
     
@@ -369,7 +369,7 @@ Durch die Verwendung Microsoft 365 einer DLP-Richtlinie (Data Loss Prevention, V
 > Wenn Sie Ihre Dateien durchsuchen, selbst wenn Sie nur die DLP-Richtlinie testen, werden auch Datei Berechtigungs Berichte erstellt. Fragen Sie diese Berichte ab, um bestimmte Dateiinformationen zu untersuchen, oder untersuchen Sie die verfügbar machung eines bestimmten Benutzers für überprüfte Dateien
 > 
 
-DLP-Richtlinien werden in Ihrem Bezeichnungs-Admin Center konfiguriert, wie z. b. dem Microsoft 365 Compliance Center, und werden in Azure Information Protection ab Version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-DLP-policies-public-preview)unterstützt. 
+DLP-Richtlinien werden in Ihrem Bezeichnungs-Admin Center konfiguriert, wie z. b. dem Microsoft 365 Compliance Center, und werden in Azure Information Protection ab Version [2.10.43.0](rms-client/unifiedlabelingclient-version-release-history.md#version-210430-for-dlp-policies-public-preview)unterstützt. 
 
 Weitere Informationen zur DLP-Lizenzierung finden [Sie unter Einstieg in den lokalen Scanner für die Verhinderung von Datenverlust](/microsoft-365/compliance/dlp-on-premises-scanner-get-started).
 
@@ -419,13 +419,13 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 Weitere Informationen finden Sie unter [Ändern der zu schützenden Dateitypen](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
-## <a name="upgrading-your-scanner"></a>Aktualisieren Ihres Scanners
+## <a name="upgrade-your-scanner"></a>Aktualisieren Ihres Scanners
  
 Wenn Sie den Scanner bereits installiert haben und ein Upgrade durchführen möchten, befolgen Sie die Anweisungen unter [Aktualisieren der Azure Information Protection Scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 
 [Konfigurieren](deploy-aip-scanner-configure-install.md) und verwenden Sie dann wie gewohnt [Ihren Scanner](deploy-aip-scanner-manage.md) , und überspringen Sie die Schritte zur Installation des Scanners.
 
-## <a name="editing-data-repository-settings-in-bulk"></a>Bearbeiten von Datenrepository-Einstellungen in einem Massen Vorgang
+## <a name="edit-data-repository-settings-in-bulk"></a>Datenrepository-Einstellungen in einem Massen Vorgang bearbeiten
 
 Verwenden Sie die Schaltflächen **exportieren** und **importieren** , um Änderungen für Ihren Scanner in mehreren Depots durchführen zu können. 
 
@@ -437,13 +437,13 @@ So führen Sie Massen Änderungen in mehreren Depots durch:
 
 1. Wählen Sie im Bereich für die Azure-Portal im Bereich " **Depots** " die Option **exportieren** aus. Beispiel:
 
-    :::image type="content" source="media/export-scanner-repositories.png" alt-text="Exportieren von Datenrepository-Einstellungen für den Azure Information Protection Scanner":::
+    :::image type="content" source="media/export-scanner-repositories.png" alt-text="Datenrepository-Einstellungen für den Azure Information Protection Scanner werden exportiert.":::
 
 1. Bearbeiten Sie die exportierte Datei manuell, um die Änderung vorzunehmen. 
 
 1. Verwenden Sie die **Import** -Option auf der gleichen Seite, um die Aktualisierungen in ihren Depots wieder zu importieren.
 
-## <a name="using-the-scanner-with-alternative-configurations"></a>Verwenden der Überprüfung mit alternativen Konfigurationen
+## <a name="use-the-scanner-with-alternative-configurations"></a>Verwenden des Scanners mit alternativen Konfigurationen
 
 Der Azure Information Protection Scanner sucht in der Regel nach Bedingungen, die für ihre Bezeichnungen angegeben sind, um Ihre Inhalte nach Bedarf zu klassifizieren und zu schützen.
 
@@ -487,7 +487,7 @@ Legen Sie die zu **ermittelnden Informationstypen** auf **alle** fest.
 
 Zum Identifizieren von Bedingungen und Informationstypen für die Bezeichnung verwendet der Scanner alle angegebenen benutzerdefinierten sensiblen Informationstypen und die Liste der integrierten Typen sensibler Informationen, die zur Auswahl verfügbar sind, wie in Ihrem Bezeichnungs Verwaltungs Center definiert.
 
-## <a name="optimizing-scanner-performance"></a>Optimieren der Scanner-Leistung
+## <a name="optimize-scanner-performance"></a>Optimieren der Scanner-Leistung
 
 > [!NOTE]
 > Wenn Sie die Reaktionsfähigkeit des Scanner-Computers anstelle der Überprüfungs Leistung verbessern möchten, verwenden Sie eine erweiterte Client Einstellung, um [die Anzahl der von der Überprüfung verwendeten Threads einzuschränken](./rms-client/clientv2-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner).
@@ -500,7 +500,7 @@ Verwenden Sie die folgenden Optionen und Anleitungen, um die Leistung der Scanne
 |**Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**     |  Platzieren Sie z. b. den Überprüfungs Computer im selben LAN oder vorzugsweise im selben Netzwerksegment wie der gescannte Datenspeicher. <br /><br />Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungs Leistung aus, da der Scanner zum Überprüfen der Dateien den Inhalt der Dateien auf den Computer überträgt, auf dem der Überprüfungs Dienst ausgeführt wird. <br /><br />Durch das reduzieren oder eliminieren der Netzwerk Hops, die für die zu übertragenden Daten erforderlich sind, wird auch die Auslastung Ihres Netzwerks reduziert.      |
 |**Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**     | Die Untersuchung der Dateiinhalte und das Verschlüsseln und Entschlüsseln von Dateien sind prozessorintensive Aktionen. <br /><br />Überwachen Sie die üblichen Überprüfungszyklen für die angegebenen Datenspeicher, um zu ermitteln, ob sich die Leistung der Überprüfung durch fehlende Prozessorressourcen beeinträchtigt.        |
 |**Installieren mehrerer Instanzen des Scanners** | Der Azure Information Protection Scanner unterstützt mehrere Konfigurations Datenbanken auf derselben SQL Server-Instanz, wenn Sie einen benutzerdefinierten Cluster Namen für die Überprüfung angeben. <br /><br />Mehrere Scanner können auch denselben Cluster gemeinsam nutzen, was zu schnelleren Scanzeiten führt.|
-|**Überprüfen Sie Ihre alternative Konfigurations Verwendung** |Die Überprüfung wird schneller ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der eine Standardbezeichnung auf alle Dateien angewendet wird, ohne dass die Dateiinhalte überprüft werden. <br/><br />Die Überprüfung wird langsamer ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der alle benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen identifiziert werden.|
+|**Überprüfen Sie Ihre alternative Konfigurations Verwendung** |Die Überprüfung wird schneller ausgeführt, wenn Sie die [alternative Konfiguration](#use-the-scanner-with-alternative-configurations) verwenden, bei der eine Standardbezeichnung auf alle Dateien angewendet wird, ohne dass die Dateiinhalte überprüft werden. <br/><br />Die Überprüfung wird langsamer ausgeführt, wenn Sie die [alternative Konfiguration](#use-the-scanner-with-alternative-configurations) verwenden, bei der alle benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen identifiziert werden.|
 | | |
 
 
@@ -518,7 +518,7 @@ Weitere Faktoren, die sich auf die Scanner-Leistung auswirken, sind:
 |**Dateien, die gescannt werden**     |-Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien. <br /><br />-Ungeschützte Dateien sind schneller zu scannen als geschützte Dateien. <br /><br />-Die Überprüfung großer Dateien dauert offensichtlich länger als bei kleinen Dateien.         |
 | | |
 
-## <a name="list-of-cmdlets-for-the-scanner"></a>Auflisten der Cmdlets für die Überprüfung
+## <a name="supported-powershell-cmdlets"></a>Unterstützte PowerShell-Cmdlets
 
 In diesem Abschnitt werden die für den Azure Information Protection Scanner unterstützten PowerShell-Cmdlets aufgeführt.
 

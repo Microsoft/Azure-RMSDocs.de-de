@@ -1,6 +1,6 @@
 ---
-title: Reader für geschützte PDF-Dokumente für Microsoft Azure Information Protection
-description: Installieren eines Readers für PDF-Dokumente, die für Klassifizierung und Schutz bezeichnet werden
+title: Geschützte PDF-Viewer für Microsoft Information Protection
+description: Erfahren Sie, wie Sie für Klassifizierung und Schutz bezeichnete PDF-Informationen öffnen und anzeigen können.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 16623f1182b248647ef0018ec6b4b21a2cf6f329
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: c982293c4b6544e0bc093caef5a94596660bfcb5
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809861"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415380"
 ---
 # <a name="which-pdf-readers-are-supported-for-protected-pdfs"></a>Welche PDF-Reader werden für geschützte PDF-Funktionen unterstützt?
 
@@ -27,14 +27,12 @@ ms.locfileid: "98809861"
 >
 >***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](../faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
->[!NOTE] 
+>[!NOTE]
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Mit PDF-Lesern für klassifizierte und/oder geschützte PDF-Datei können Sie verschlüsselte PDF-Datei öffnen, die vertrauliche Informationen enthalten.
+In diesem Artikel werden die geschützten PDF-Reader beschrieben, die für Azure Information Protection (AIP) unterstützt werden. Geschützte PDF-Reader ermöglichen es Benutzern, diese verschlüsselten PDF-Datei zu öffnen und die darin enthaltenen vertraulichen Informationen anzuzeigen.
 
-Durch das Verschlüsseln von PDF-Dateien mit [Azure Information Protection (AIP)](../what-is-information-protection.md) wird sichergestellt, dass nicht autorisierte Personen den Inhalt der Datei nicht lesen können.
-
-Geschützte PDF-Leser, die Azure Information Protection unterstützen, stellen sicher, dass Ihnen Berechtigungen zum Öffnen des Dokuments erteilt wurden, und entschlüsseln auch den Inhalt.
+Durch das Verschlüsseln von PDF-Dateien mit AIP wird sichergestellt, dass nicht autorisierte Personen den Inhalt der Datei nicht lesen können Geschützte PDF-Leser, die AIP unterstützen, stellen sicher, dass Ihnen Berechtigungen zum Öffnen des Dokuments erteilt wurden, und entschlüsseln auch den Inhalt.
 
 Die folgende Abbildung zeigt z. b. ein verschlüsseltes Dokument, das in Adobe Acrobat Reader geöffnet ist. Der Balken oben gibt an, dass das Dokument durch eine Microsoft Information Protection-Lösung geschützt wird.
 
@@ -65,7 +63,7 @@ Dieser Standard wird standardmäßig vom AIP-Client verwendet.
 
 ### <a name="viewing-protected-pdfs-in-adobe-acrobat-reader"></a>Anzeigen geschützter PDF-Funktionen in Adobe Acrobat Reader
 
-Adobe Acrobat Reader lässt sich in Microsoft Information Protection-Lösungen integrieren, wie z. b. [Azure Information Protection](../what-is-information-protection.md) , um Benutzern eine vereinfachte und konsistente Darstellung für klassifizierte und/oder geschützte PDF-Informationen bereitzustellen.
+Adobe Acrobat Reader lässt sich in Microsoft Information Protection-Lösungen integrieren, wie z. b. Azure Information Protection, um Benutzern eine vereinfachte und konsistente Darstellung für klassifizierte und/oder geschützte PDF-Informationen bereitzustellen.
 
 Der Adobe Acrobat Reader mit der Microsoft Information Protection-Integration wird für [Windows](#installing-a-protected-pdf-reader-for-windows-or-mac) und [macOS](#installing-a-protected-pdf-reader-for-windows-or-mac)unterstützt.
 
@@ -109,8 +107,6 @@ Zum Öffnen eines geschützten PDF-Dokuments auf dem Desktop Computer wird empfo
 
 1. Installieren Sie das [MIP-Plug-in für Acrobat und Acrobat Reader](https://go.microsoft.com/fwlink/?linkid=2050049) für Ihr Betriebssystem.  
 
-    Download: [ ![MIP-Plug-in für Acrobat-und Acrobat Reader herunterladen](../media/download.png "Herunterladen des MIP-Plug-Ins für Acrobat-und Acrobat Reader")](https://go.microsoft.com/fwlink/?linkid=2050049)
-
     Folgende Versionen werden unterstützt:
 
     - **Windows**: Windows 10 und frühere Versionen über Windows 8. 
@@ -133,19 +129,21 @@ Zum Öffnen eines geschützten PDF-Dokuments auf dem Desktop Computer wird empfo
 
 Alternativ dazu können Sie einen der folgenden PDF-Reader für Windows verwenden, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen:
 
-- Azure Information Protection Viewer [ ![den AIP-Viewer herunterladen](../media/download.png "AIP-Viewer herunterladen")](https://go.microsoft.com/fwlink/?linkid=838993) 
+- [Azure Information Protection Viewer](https://go.microsoft.com/fwlink/?linkid=838993) 
 
-- Foxit Reader [ ![herunterladen des Foxit Reader Viewer](../media/download.png "Herunterladen von Foxit Reader Viewer")](https://www.foxitsoftware.com/pdf-reader/)
+- [Foxit-Reader](https://www.foxitsoftware.com/pdf-reader/)
 
 ## <a name="installing-a-protected-pdf-reader-for-mobile-iosandroid"></a>Installieren eines geschützten PDF-Readers für mobile Geräte (IOS/Android)
 
 Zum Öffnen einer geschützten PDF-Datei auf Ihrem IOS-oder Android-Gerät müssen Sie die APP für Ihr Betriebssystem herunterladen und installieren:
 
-- Azure Information Protection-App für IOS [ ![herunterladen der Azure Information Protection-App für IOS](../media/download.png "Azure Information Protection-App für IOS")  ](https://go.microsoft.com/fwlink/?LinkId=325338)
+|OS  |Link  |
+|---------|---------|
+|**iTunes**     | [![Installation über iTunes.](../media/small/ios-icon-small.png)](https://apps.apple.com/app/microsoft-rights-management/id689516635)        |
+|**Google Play**     |[![Installieren Sie von Google Play.](../media/small/android-icon-small.png)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)         |
+| | |
 
-- Azure Information Protection App für Android [ ![herunterladen der Azure Information Protection-App für Android](../media/download.png "Azure Information Protection-App für Android")](https://go.microsoft.com/fwlink/?LinkId=325340)
-
-Weitere Informationen finden Sie unter [Was ist die Azure Information Protection-App für IOS oder Android?](mobile-app-faq.md).
+Weitere Informationen finden Sie unter [Mobile Viewer-Apps für Azure Information Protection (IOS und Android)](mobile-app-faq.md).
 
 ## <a name="support-for-previous-formats"></a>Unterstützung für vorherige Formate
 
@@ -175,11 +173,11 @@ Wenn Sie die geschützte PDF-Datei nicht mithilfe des empfohlenen Readers öffne
     - Foxit MobilePDF mit RMS
     - TITUS-Dokumentation
 
-- **MacOS Catalina**: Edge-Chrom
+- **macOS Catalina**: Edge-Chrom
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Wenn Sie nach der Installation weitere Hilfe benötigen, befolgen Sie die Anweisungen und die Dokumentation für die einzelnen Leser. Informationen hierzu finden Sie beispielsweise in den folgenden Artikeln:
 
 - [Benutzerhandbuch: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client](clientv2-view-use-files.md)
-- [Was ist die Azure Information Protection-App für IOS oder Android?](mobile-app-faq.md)
+- [Mobile Viewer-Apps für Azure Information Protection (IOS und Android)](mobile-app-faq.md)

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Nutzungsrechten für Azure Information Protection
+title: Konfigurieren von Nutzungsrechten für Azure Information Protection (AIP)
 description: Verstehen und identifizieren Sie die spezifischen Rechte, die beim Schützen von Dateien oder e-Mails mithilfe Rights Management Schutzes von Azure Information Protection verwendet werden.
 author: batamig
 ms.author: bagol
@@ -13,14 +13,14 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 16cc8ae0424f307ae7f0ed864ca36f1a91230977
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: 13263b8d11829104bb0175b4ca91d023637dd1f5
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98809647"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415278"
 ---
-# <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
+# <a name="configure-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
 >***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
@@ -31,10 +31,15 @@ ms.locfileid: "98809647"
 > 
 > Aus Gründen der Vollständigkeit enthält der Artikel Werte aus dem klassischen Azure-Portal, das am 8. Januar 2018 außer Kraft gesetzt wurde.
 
-Wenn Sie Vertraulichkeits Bezeichnungen oder Schutz Vorlagen für die Verschlüsselung konfigurieren, wählen Sie die Nutzungsrechte aus, die dann automatisch angewendet werden, wenn die Bezeichnung oder die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Sie können z.B. im Azure-Portal Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren. Alternativ können Benutzer die Nutzungsrechte selbst auswählen und anwenden.
+In diesem Artikel werden Nutzungsrechte beschrieben, die Sie so konfigurieren können, dass Sie automatisch angewendet werden, wenn eine Bezeichnung oder eine Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird.
 
-Verwenden Sie diesen Artikel, um die gewünschten Nutzungsrechte für die verwendete Anwendung zu konfigurieren und um zu verstehen, wie diese Rechte von Anwendungen interpretiert werden sollen. Allerdings kann es sein, dass Anwendungen in der Art und Weise variieren, in der Sie die Rechte implementieren, sodass Sie sich stets in der zugehörigen Dokumentation ansehen und ihre eigenen Tests mit den Anwendungen durchführen, die Benutzer zum Überprüfen des Verhaltens verwenden
+Wenn Sie Vertraulichkeits Bezeichnungen oder Schutz Vorlagen für die Verschlüsselung konfigurieren, werden die Nutzungsrechte ausgewählt. Sie können beispielsweise Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder die einzelnen Rechte separat konfigurieren. Alternativ können Benutzer die Nutzungsrechte selbst auswählen und anwenden.
 
+> [!IMPORTANT]
+> Verwenden Sie diesen Artikel, um zu *verstehen, wie* Nutzungsrechte von Anwendungen interpretiert werden können. 
+>
+> Anwendungen können sich bei der Implementierung von Nutzungsrechten unterscheiden, und wir empfehlen Ihnen, sich mit der Dokumentation Ihrer Anwendung zu informieren und ihre eigenen Tests durchzuführen, um das Anwendungsverhalten vor der Bereitstellung in der Produktion zu
+> 
 
 ## <a name="usage-rights-and-descriptions"></a>Nutzungsrechte und Beschreibungen
 In der folgenden Tabelle sind die Nutzungsrechte aufgelistet und beschrieben, die Rights Management unterstützt, und wie sie verwendet und interpretiert werden. Sie sind mit ihrem **allgemeinen Namen** aufgelistet, wie die Nutzungsrechte in der Regel angezeigt werden, bzw. über den auf sie verwiesen wird, als benutzerfreundlichere Version des Einzelwortwerts, der im Code verwendet wird (der **Richtliniencodierungswert**). 
@@ -64,6 +69,7 @@ In dieser Tabelle gilt Folgendes:
 |Allgemeiner Name: **Rechte anzeigen** <br /><br />Richtliniencodierung: **VIEWRIGHTSDATA**|Ermöglicht dem Benutzer, die Richtlinie anzuzeigen, die auf das Dokument angewendet wird. <br /><br /> Wird von Office-Apps oder Azure Information Protection-Clients nicht unterstützt.|Benutzerdefinierte Office-Rechte: nicht implementiert.<br /><br />Name im klassischen Azure-Portal: **Zugewiesene Rechte anzeigen**<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **Rechte anzeigen (vieschreightdata)**.<br /><br />Name in AD RMS-Vorlagen: **Rechte anzeigen** <br /><br />API-Konstante oder -Wert: `IPC_READ_RIGHTS L"VIEWRIGHTSDATA"`|
 |Allgemeiner Name: **Rechte ändern** <br /><br />Richtliniencodierung: **EDITRIGHTSDATA**|Ermöglicht dem Benutzer, die Richtlinie zu ändern, die auf das Dokument angewendet wird. Beinhaltet, das Entfernen des Schutzes einzubeziehen. <br /><br /> Wird von Office-Apps oder Azure Information Protection-Clients nicht unterstützt.|Benutzerdefinierte Office-Rechte: nicht implementiert.<br /><br />Name im klassischen Azure-Portal: **Rechte ändern**<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **Rechte bearbeiten (ediyghzdata)**.<br /><br />Name in AD RMS-Vorlagen: **Rechte bearbeiten** <br /><br />API-Konstante oder -Wert: `PC_WRITE_RIGHTS L"EDITRIGHTSDATA"`|
 |Allgemeiner Name: **Makros zulassen** <br /><br />Richtliniencodierung: **OBJMODEL**|Aktiviert die Option zum Ausführen von Makros oder anderem programmgesteuertem oder Remotezugriff auf den Inhalt in einem Dokument.|Benutzerdefinierte Office-Rechte: wie die benutzerdefinierte Richtlinienoption **Programmgesteuerten Zugriff zulassen**. Keine Pro-Empfänger-Einstellung.<br /><br />Name im klassischen Azure-Portal: **Makros zulassen**<br /><br />Name in der Bezeichnung Admin Center und Azure-Portal: **Makros zulassen (objmodel)**<br /><br />Name in AD RMS-Vorlagen: **Makros zulassen** <br /><br />API-Konstante oder -Wert: nicht implementiert.|
+| | | |
 
 ## <a name="rights-included-in-permissions-levels"></a>In Berechtigungsstufen enthaltene Rechte
 
@@ -73,12 +79,11 @@ In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und ei
 
 |Berechtigungsstufe|Anwendungen|Enthaltene Nutzungsrechte|
 |---------------------|----------------|---------------------------------|
-|Viewer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails „Prüfer“ statt dieser Berechtigungsstufe, um sicherzustellen, dass eine E-Mail-Antwort als E-Mail-Nachricht und nicht als Anlage empfangen wird. „Prüfer“ ist auch erforderlich, wenn Sie eine E-Mail an eine andere Organisation senden, die den Outlook-Client oder die Outlook-Web-App verwendet. Es ist ebenfalls für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts ausgenommen sind, weil Sie [Onboardingsteuerelemente](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) implementiert haben.|
-|Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
-|Mitautor|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[4]](#footnote-4); Drucken; Antworten [[3]](#footnote-3); Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3)|
-|Mitbesitzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[3]](#footnote-3); Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Vollzugriff|
-
-----
+|**Viewer**|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails „Prüfer“ statt dieser Berechtigungsstufe, um sicherzustellen, dass eine E-Mail-Antwort als E-Mail-Nachricht und nicht als Anlage empfangen wird. „Prüfer“ ist auch erforderlich, wenn Sie eine E-Mail an eine andere Organisation senden, die den Outlook-Client oder die Outlook-Web-App verwendet. Es ist ebenfalls für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts ausgenommen sind, weil Sie [Onboardingsteuerelemente](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy) implementiert haben.|
+|**Prüfer**|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
+|**Mitautor**|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[4]](#footnote-4); Drucken; Antworten [[3]](#footnote-3); Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3)|
+|**Mitbesitzer**|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[3]](#footnote-3); Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Vollzugriff|
+| | | |
 
 ###### <a name="footnote-1"></a>Fußnote 1
 
@@ -138,8 +143,9 @@ Alternativ können Sie diese Vererbung des Schutzes von Dokumenten ändern, inde
 
 Wenn der ursprüngliche Schutz eines angefügten Dokuments beibehalten werden soll, finden Sie weitere Informationen unter [Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md).
 
-Hinweis: Wenn Verweise auf **decryptattachmentfromportal** angezeigt werden, ist dieser Parameter für [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration)nun veraltet. Sollten Sie den Parameter nicht zuvor festgelegt haben, ist er daher nicht verfügbar.
-
+> [!NOTE]
+> Wenn Sie Verweise auf **DecryptAttachmentFromPortal** sehen, beachten Sie, dass dieser Parameter inzwischen für [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration) als veraltet gilt. Sollten Sie den Parameter nicht zuvor festgelegt haben, ist er daher nicht verfügbar.
+> 
 ## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>Automatisches Verschlüsseln von PDF-Dokumenten mit Exchange Online
 
 Wenn Exchange Online die neuen Funktionen für die Nachrichten Verschlüsselung von Office 365 verwendet, können Sie ungeschützte PDF-Dokumente automatisch verschlüsseln, wenn Sie an eine verschlüsselte e-Mail angefügt werden. Das Dokument erbt dieselben Berechtigungen wie die der e-Mail-Nachricht. Um diese Konfiguration zu aktivieren, legen Sie **enablepdfencryption $true** mit [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration)fest.
@@ -172,8 +178,9 @@ Beispielsweise kann der Benutzer, der das Dokument erstellt hat, es drucken, obw
 
 Der Rights Management-Besitzer für ein Dokument oder eine E-Mail wird im Feld **owner-email** der [Verwendungsprotokolle](log-analyze-usage.md#how-to-interpret-your-usage-logs) protokolliert.
 
-Beachten Sie, dass der Rights Management-Besitzer vom Besitzer des Windows-Dateisystems unabhängig ist. Sie sind häufig identisch, können jedoch unterschiedlich sein, auch wenn Sie nicht die SDKs oder PowerShell verwenden.
-
+> [!NOTE]
+> Der Besitzer der Rights Management ist unabhängig vom Besitzer des Windows-Dateisystems. Sie sind häufig identisch, können jedoch unterschiedlich sein, auch wenn Sie nicht die SDKs oder PowerShell verwenden.
+> 
 ## <a name="rights-management-use-license"></a>Rights Management-Nutzungslizenz
 
 Wenn ein Benutzer ein Dokument oder eine E-Mail öffnet, das/die von Azure Rights Management geschützt wurde, erhält der Benutzer eine Rights Management-Nutzungslizenz für diesen Inhalt. Diese Nutzungslizenz ist ein Zertifikat, das die Nutzungsrechte für das Dokument oder die E-Mail-Nachricht und den Verschlüsselungsschlüssel enthält, der zum Verschlüsseln des Inhalts verwendet wurde. Die Lizenz enthält auch ein ggf. festgelegtes Ablaufdatum und die Gültigkeitsdauer der Nutzungslizenz.
@@ -204,10 +211,11 @@ Diese Standardvorlagen werden beim Erwerb Ihres Abonnements erstellt, und die Na
 
 |Anzeigename der Vorlage|Nutzungsrechte vom 6. Oktober 2017 bis zum aktuellen Datum|Nutzungsrechte vor dem 6. Oktober 2017|
 |----------------|--------------------|----------|
-|\<*organization name> -Nur vertrauliche Ansicht * <br /><br />oder<br /><br /> *Streng vertraulich \ alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Kopieren; Rechte anzeigen; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten|Anzeigen, Öffnen, Lesen|
-|\<*organization name>Vertraulich <br /><br />oder <br /><br />*Vertraulich \ alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Speichern unter; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten; Vollzugriff|Anzeigen, Öffnen, Lesen; Speichern unter; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
+|**\<*organization name> -Nur vertrauliche Ansicht*** <br /><br />oder<br /><br /> **_Streng vertraulich \ alle Mitarbeiter_**|Anzeigen, Öffnen, Lesen; Kopieren; Rechte anzeigen; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten|Anzeigen, Öffnen, Lesen|
+|**\<*organization name>-Vertraulich*** <br /><br />oder <br /><br />**_Vertraulich \ alle Mitarbeiter_**|Anzeigen, Öffnen, Lesen; Speichern unter; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Drucken; Weiterleiten; Antworten; Allen antworten; Speichern; Inhalt bearbeiten, Bearbeiten; Vollzugriff|Anzeigen, Öffnen, Lesen; Speichern unter; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
+| | | |
 
 ## <a name="see-also"></a>Weitere Informationen
-[Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
-[Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md) (Konfigurieren von Administratoren für Azure Information Protection und Ermittlungsdienste oder Wiederherstellung von Daten)
+- [Einschränken des Zugriffs auf Inhalte mithilfe von Vertraulichkeits Bezeichnungen zum Anwenden der Verschlüsselung](/microsoft-365/compliance/encryption-sensitivity-labels)
+- [Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md) (Konfigurieren von Administratoren für Azure Information Protection und Ermittlungsdienste oder Wiederherstellung von Daten)

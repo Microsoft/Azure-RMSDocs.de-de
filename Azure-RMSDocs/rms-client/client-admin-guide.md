@@ -14,12 +14,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 49f80d17e62bbe7e520696460ec39df396e439e4
-ms.sourcegitcommit: af7ac2eeb8f103402c0036dd461c77911fbc9877
+ms.openlocfilehash: 1c208a4dbea10159d2f0f8c505349d2c2acfe6c7
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98560355"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415431"
 ---
 # <a name="azure-information-protection-classic-client-administrator-guide"></a>Azure Information Protection klassisches Client Administrator Handbuch
 
@@ -34,7 +34,7 @@ ms.locfileid: "98560355"
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen erhalten möchten als im [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md) vorhanden sind. 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -64,7 +64,7 @@ Der Azure Information Protection-Client umfasst Folgendes:
 
 - Ein PowerShell-Modul zum Anwenden und Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien. 
     
-    Dieses Modul enthält [Cmdlets zum Installieren und Konfigurieren des Azure Information Protection Scanner](../deploy-aip-scanner-configure-install.md#list-of-cmdlets-for-the-scanner), der als Dienst unter Windows Server ausgeführt wird. Mithilfe dieses Dienstes können Sie Dateien in Datenspeichern wie Netzwerkfreigaben und Serverbibliotheken in SharePoint suchen, klassifizieren und schützen.
+    Dieses Modul enthält [Cmdlets zum Installieren und Konfigurieren des Azure Information Protection Scanner](../deploy-aip-scanner-configure-install-classic.md#list-of-cmdlets-for-the-scanner), der als Dienst unter Windows Server ausgeführt wird. Mithilfe dieses Dienstes können Sie Dateien in Datenspeichern wie Netzwerkfreigaben und Serverbibliotheken in SharePoint suchen, klassifizieren und schützen.
 
 - Der Rights Management-Client, der mit Azure Rights Management (Azure RMS) oder Active Directory Rights Management Services (AD RMS) kommuniziert.
 
@@ -95,7 +95,7 @@ Stellen Sie den Azure Information Protection Client bereit, wenn Sie in Microsof
 
 - Sie führen Office 2010 aus und möchten Dokumente und E-Mails-mithilfe des Azure Rights Management-Diensts schützen. 
 
-    Beachten Sie, dass der erweiterte Support von Office 2010 am 13. Oktober 2020 beendet wurde. Weitere Informationen finden Sie unter [AIP und ältere Windows-und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
+    Beachten Sie, dass der erweiterte Support von Office 2010 am 13. Oktober 2020 beendet wurde. Weitere Informationen finden Sie unter [AIP und ältere Windows- und Office-Versionen](../known-issues.md#aip-and-legacy-windows-and-office-versions).
     
 Beispiel zur Veranschaulichung des Azure Information Protection-Client-Add-Ins für eine Office-Anwendung, in dem die Klassifizierungsbezeichnungen für Ihre Organisation und die neue Schaltfläche **Schützen** im Menüband angezeigt wird:
 
@@ -180,7 +180,7 @@ Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch n
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Beispiel:
 
 - Anweisungen für Onlinebenutzer: [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md)
 

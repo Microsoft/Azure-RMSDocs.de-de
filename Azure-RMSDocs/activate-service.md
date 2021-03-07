@@ -1,6 +1,6 @@
 ---
-title: Aktivieren des Schutz Dienstanbieter von Azure Information Protection
-description: Der Schutzdienst (Azure-Rights Management) muss aktiviert werden, damit Ihre Organisation Dokumente und e-Mails mithilfe von Anwendungen und Diensten schützen kann, die diese Lösung für den Informationsschutz unterstützen.
+title: Aktivieren des Schutz Dienstanbieter von Azure Information Protection (AIP)
+description: Erfahren Sie, wie Sie den Azure Rights Management Protection-Dienst aktivieren, um Ihre Dokumente und e-Mails zu schützen.
 author: batamig
 ms.author: bagol
 manager: rkarlin
@@ -13,18 +13,20 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 842f452a5a7a62002b4c0555580258368416d2d3
-ms.sourcegitcommit: 8a141858e494dd1d3e48831e6cd5a5be48ac00d2
+ms.openlocfilehash: e3089134dc3b289d024c507aec886d622e4d6e16
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97384178"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102414768"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Aktivieren des Schutz Dienstanbieter von Azure Information Protection
 
->***Gilt für**: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>***Gilt für:** [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
->***Relevant für**: [AIP Unified-Bezeichnungs Client und klassischer Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+>***Relevant für:** [AIP-Client für einheitliche Bezeichnungen und den klassischen Client](faqs.md#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+
+In diesem Artikel wird beschrieben, wie Administratoren den Azure Rights Management Protection Service for Azure Information Protection (AIP) aktivieren können. Wenn der Schutzdienst für Ihre Organisation aktiviert ist, können Administratoren und Benutzer wichtige Daten mithilfe von Anwendungen und Diensten schützen, die diese Lösung für den Informationsschutz unterstützen. Administratoren können außerdem geschützte Dokumente und E-Mails, die Ihrer Organisation gehören, verwalten und überwachen.
 
 > [!NOTE]
 > Diese Konfigurationsinformationen richten sich an Administratoren, die für einen Dienst zuständig sind, der für alle Benutzer in einer Organisation gilt. Wenn Sie Hilfe und Informationen zur Verwendung der Rights Management-Funktionen für eine bestimmte Anwendung oder zum Öffnen einer Datei oder E-Mail suchen, die mit Rechten geschützt ist, verwenden Sie die zur Anwendung gehörende Hilfe und Anleitungen.
@@ -33,18 +35,15 @@ ms.locfileid: "97384178"
 >
 > Technischen Support und Antworten auf Fragen zum Dienst finden Sie unter [Support options and community resources (Supportoptionen und Communityressourcen)](information-support.md#support-options-and-community-resources).
 
-Wenn der Schutzdienst für Azure Information Protection für Ihre Organisation aktiviert ist, können Administratoren und Benutzer wichtige Daten mithilfe von Anwendungen und Diensten schützen, die diese Lösung für den Informationsschutz unterstützen. Administratoren können außerdem geschützte Dokumente und E-Mails, die Ihrer Organisation gehören, verwalten und überwachen. 
+## <a name="automatic-activation-for-azure-rights-management"></a>Automatische Aktivierung für Azure Rights Management
 
-
-## <a name="do-you-need-to-activate-the-protection-service-azure-rights-management"></a>Müssen Sie den Schutzdienst, Azure Rights Management aktivieren?
-
-Wenn Sie über einen Serviceplan verfügen, der Azure Rights Management einschließt, müssen Sie den Dienst möglicherweise nicht aktivieren:
+Wenn Sie über einen Serviceplan verfügen, der Azure Rights Management enthält, müssen Sie den Dienst möglicherweise nicht aktivieren:
 
 - **Wenn Ihr Abonnement, das Azure Rights Management oder Azure Information Protection umfasst, bis Ende Februar 2018 oder höher abgerufen wurde,** wird der Dienst automatisch für Sie aktiviert. Sie müssen den Dienst nur dann aktivieren, wenn Sie oder ein anderer globaler Administrator Ihrer Organisation Azure Rights Management deaktiviert hat.
 
-- **Wenn Ihr Abonnement, das Azure Rights Management oder Azure Information Protection umfasst, vor oder im Februar 2018 abgerufen wurde**: Microsoft startet mit dem Aktivieren des Azure Rights Management-Dienstanbieter für diese Abonnements, wenn Ihr Mandant Exchange Online verwendet. Bei diesen Abonnements beginnt das Rollout der automatischen Aktivierung am 1. August 2018. Der Dienst wird für Sie aktiviert, sofern Sie bei Ausführung von [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration) nicht feststellen, dass **AutomaticServiceUpdateEnabled** auf **false** festgelegt ist. 
+- **Wenn Ihr Abonnement, das Azure Rights Management oder Azure Information Protection umfasst, vor oder während Februar 2018 abgerufen wurde**: aktiviert Microsoft den Azure Rights Management-Dienst für diese Abonnements, wenn Ihr Mandant Exchange Online verwendet. Für diese Abonnements wird der Dienst für Sie aktiviert, es sei denn, Sie sehen, dass **automaticserviceupdateaktivierte** auf **false** festgelegt ist, wenn Sie [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration)ausführen. 
 
-Wenn keines der nachfolgenden Szenarien auf Sie zutrifft, müssen Sie den Schutzdienst manuell aktivieren. 
+Wenn keines der aufgeführten Szenarien auf Sie zutrifft, müssen Sie den Schutzdienst manuell aktivieren. 
 
 Wenn der Dienst aktiviert ist, können alle Benutzer in Ihrer Organisation den Informationsschutz auf die eigenen Dokumente und E-Mails anwenden und Dokumente und E-Mails öffnen (nutzen), die durch den Azure Rights Management-Dienst geschützt werden. Bei Bedarf können Sie jedoch einschränken, wer Informationsschutz anwenden kann, indem Sie Onboardingsteuerungsrichtlinien für eine in Phasen vorgenommene Bereitstellung verwenden. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](#configuring-onboarding-controls-for-a-phased-deployment) in diesem Artikel.
 
@@ -61,7 +60,7 @@ Wenn Sie diese Lösung zum Schutz von Daten verwenden möchten, muss Ihre Organi
 
 Wenn der Schutzdienst aktiviert ist, können alle Benutzer in Ihrer Organisation Informationsschutz auf Ihre Dokumente und e-Mails anwenden, und alle Benutzer können Dokumente und e-Mails öffnen (nutzen), die durch diesen Dienst geschützt wurden. Bei Bedarf können Sie jedoch einschränken, wer Informationsschutz anwenden kann, indem Sie Onboardingsteuerungsrichtlinien für eine in Phasen vorgenommene Bereitstellung verwenden. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](#configuring-onboarding-controls-for-a-phased-deployment) in diesem Artikel.
 
-## <a name="choosing-your-activation-method"></a>Auswählen der Aktivierungsmethode
+## <a name="supported-activation-methods"></a>Unterstützte Aktivierungsmethoden
 
 Um zu erfahren, wie Sie den Schutzdienst über ihr Verwaltungs Portal aktivieren, wählen Sie aus, ob das Microsoft 365 Admin Center oder das Azure-Portal verwendet werden soll:
 
