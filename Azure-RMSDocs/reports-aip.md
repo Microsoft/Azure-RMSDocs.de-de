@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5665a071bd99f8ed1118adffcd1ce65f20ff9aa4
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: 7d86ee43b7ccc60922dea88c76e9e0aa68474d26
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102415465"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446948"
 ---
 # <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analyse und Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
@@ -137,14 +137,16 @@ Standardmäßig werden von Azure Information Protection Clients keine Inhalts Ü
 ## <a name="prerequisites"></a>Voraussetzungen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
-|Anforderung|Weitere Informationen|
-|---------------|--------------------|
-|Ein Azure-Abonnement, das Log Analytics umfasst und sich auf denselben Mandanten wie Azure Information Protection bezieht|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
-|Informationen zur Berichterstellung bei der Bezeichnung von Clients: <br /><br />-Azure Information Protection Clients|Sowohl der Unified-Bezeichnungs Client als auch der klassische Client werden unterstützt. <br /><br />Wenn Sie nicht bereits installiert sind, können Sie den Unified-Bezeichnungs Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.|
-|Informationen zur Berichterstellung aus cloudbasierten Daten speichern: <br /><br />-Microsoft Cloud App Security |Um Informationen aus Microsoft Cloud App Security anzuzeigen, konfigurieren Sie [Azure Information Protection-Integration](/cloud-app-security/azip-integration).|
-|Informationen zu Berichten aus lokalen Daten speichern: <br /><br />-Azure Information Protection Scanner |Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). |
-|Informationen zur Berichterstellung von Windows 10-Computern:  <br /><br />-Minimaler Build von 1809 mit Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|Sie müssen das Azure Information Protection-Integrations Feature von Microsoft Defender Security Center aktivieren. Weitere Informationen finden Sie unter [Übersicht über den Datenschutz in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
-| | |
+|Anforderung  |Details  |
+|---------|---------|
+|**Ein Azure-Abonnement**     |   Ihr Azure-Abonnement muss Log Analytics auf demselben Mandanten wie Azure Information Protection enthalten. <br><br> Weitere Informationen finden Sie auf der Seite [Azure Monitor Preise](https://azure.microsoft.com/pricing/details/log-analytics) . <br><br>Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.   |
+| **Überwachungs Protokoll-URL Netzwerk Konnektivität** | AIP muss in der Lage sein, auf die folgenden URLs zuzugreifen, um AIP-Überwachungs Protokolle zu unterstützen:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Nur Android-Gerätedaten)
+|**Azure Information Protection-Client**    |Für die Berichterstellung vom Client. <br><br>Wenn Sie noch keinen-Client installiert haben, können Sie den Unified-Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren.      <br><br>**Hinweis**: sowohl der Unified-Bezeichnung-Client als auch der klassische Client werden unterstützt. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.     |
+|**Azure Information Protection lokaler Scanner**    | Für die Berichterstellung aus lokalen Daten speichern. <br><br>      Weitere Informationen finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).   |
+|**Microsoft Cloud App Security (MCAS)**     | Zur Berichterstellung aus cloudbasierten Daten speichern. <br><br>Weitere Informationen finden Sie unter [Azure Information Protection Integration](/cloud-app-security/azip-integration) in der MCAS-Dokumentation.        |
+|**Minimaler Build von 1809 mit Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)**     | Für die Berichterstellung von Windows 10-Computern. <br>  <br>   Sie müssen das Azure Information Protection-Integrations Feature von Microsoft Defender Security Center aktivieren. <br><br>Weitere Informationen finden Sie unter [Übersicht über den Datenschutz in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).   |
+|     |         |
+
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Erforderliche Berechtigungen für Azure Information Protection-Analysen
 
@@ -172,7 +174,7 @@ Sie müssen über eine der folgenden [Azure AD Administrator Rollen](/azure/acti
     
 - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
     
-    - **Sicherheits Leser**
+    - **Sicherheitsleseberechtigter**
     - **Globaler Reader**
 
 #### <a name="required-azure-log-analytics-roles"></a>Erforderliche Azure-Log Analytics Rollen

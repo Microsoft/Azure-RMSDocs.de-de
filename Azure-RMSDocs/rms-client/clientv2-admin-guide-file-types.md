@@ -4,19 +4,19 @@ description: Erfahren Sie mehr über die Dateitypen und-Größen, die für den e
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/08/2020
+ms.date: 03/07/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bfc773c32a7667a54abdc75985934794414d575a
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: 22a30abf5ea3bf63e5a352bb8b68ceb852036794
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102415261"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446914"
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-aip-unified-labeling-client"></a>Vom Unified-Bezeichnungs Client (Azure Information Protection) Unterstützte Dateitypen
 
@@ -113,35 +113,104 @@ Es gibt maximale Dateigrößen, die der Azure Information Protection Unified-Bez
 
 In der folgenden Tabelle ist eine Teilmenge der Dateitypen aufgeführt, die den systemeigenen Schutz durch den Azure Information Protection Unified Bezeichnung-Client unterstützen und auch klassifiziert werden können.
 
-Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, die Namenserweiterung der ursprünglichen Datei geändert wird und diese Dateien dadurch schreibgeschützt werden. Wenn Dateien generisch geschützt sind, wird die ursprüngliche Dateinamenerweiterung immer in Pfile geändert.
+Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, die Namenserweiterung der ursprünglichen Datei geändert wird und diese Dateien dadurch schreibgeschützt werden. Wenn Dateien generisch geschützt sind, wird die ursprüngliche Dateinamenerweiterung immer in geändert `.p<file-type>` .
 
 > [!WARNING]
 > Wenn Sie über Firewalls, Webproxys oder Sicherheitssoftware verfügen, die Erweiterungen überprüfen und entsprechende Maßnahmen ergreifen, müssen Sie die Netzwerkgeräte und die Software möglicherweise zur Unterstützung der neuen Erweiterungen neu konfigurieren.
 
 |Ursprüngliche Dateinamenerweiterung|Geschützte Dateierweiterung|
 |--------------------------------|-------------------------------------|
-|.txt|PTXT|
-|.xml|PXML|
-|.jpg|PJPG|
+|BMP|PBMP|
+|.gif|PFIG|
+|JFIF|PJFIF|
+|JPE|PJPE|
 |JPEG|PJPEG|
+|.jpg|PJPG|
+|.jt|.pjt|
 |.png|PPNG|
 |.tif|PTIF|
 |TIFF|PTIFF|
-|BMP|PBMP|
-|.gif|PFIG|
-|JPE|PJPE|
-|JFIF|PJFIF|
-|.jt|.pjt|
+|.txt|PTXT|
+|.xla |pxla | 
+|.xlam |. pxlam |
+|.xml|PXML|
 | | |
 
-In der nächsten Tabelle werden die verbleibenden Dateitypen aufgelistet, die den systemeigenen Schutz durch den Azure Information Protection Unified Bezeichnung-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
+**Von Office unterstützte Dateitypen**
 
-Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
+In der folgenden Liste sind die verbleibenden Dateitypen enthalten, die den nativen Schutz durch den Azure Information Protection Unified Bezeichnung-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
 
-|Von Office unterstützte Dateitypen|Von Office unterstützte Dateitypen|
-|----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />VSDM|VSDX<br /><br />VSSM<br /><br />VSSX<br /><br />VSTM<br /><br />VSTX<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
-| | |
+Für diese Dateien *bleibt* die Dateinamenerweiterung unverändert, wenn die Datei durch einen Rights Management Dienst geschützt wird.
+
+:::row:::
+   :::column span="4":::
+.doc
+
+.docm
+
+.docx
+
+.dot
+
+.dotm
+
+.dotx
+
+.potm
+
+   :::column-end:::
+   :::column span="":::
+
+.potx
+
+.pps
+
+.ppsm
+
+.ppsx
+
+.ppt
+
+.pptm
+
+.pptx
+
+
+   :::column-end:::
+   :::column span="":::
+VSDM
+
+VSDX
+
+VSSM
+
+VSSX
+
+VSTM
+
+VSTX
+
+.xls
+
+   :::column-end:::
+   :::column span="":::
+
+.xlsb
+
+.xlt
+
+.xlsm
+
+.xlsx
+
+.xltm
+
+.xltx
+
+.xps
+   :::column-end:::
+:::row-end:::
+
 ## <a name="file-types-excluded-from-classification-and-protection"></a>Von Klassifizierung und Schutz ausgeschlossene Dateitypen
 
 Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Computer entscheidend sind, werden einige Dateitypen und Ordner von der Klassifizierung und dem Schutz automatisch ausgeschlossen. Wenn Benutzer versuchen, diese Dateien mithilfe des Azure Information Protection Unified Bezeichnung-Clients zu klassifizieren oder zu schützen, wird eine Meldung angezeigt, dass Sie ausgeschlossen werden.

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4e8c4444aad6185b54a6f5b5178fa225857b71d2
-ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
+ms.openlocfilehash: b81f72e0bd53e6dc518fad4c7d1bd1700044a8d5
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2021
-ms.locfileid: "102414955"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446931"
 ---
 # <a name="requirements-for-installing-and-deploying-the-azure-information-protection-unified-labeling-scanner"></a>Anforderungen für die Installation und Bereitstellung des Azure Information Protection Unified-Beschriftungs Scanners
 
@@ -400,7 +400,11 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 
 - Verwenden Sie **für das Scanner-Dienst Konto** ein lokales Windows-Konto oder ein Active Directory Konto.
 
-- Geben Sie **für das Azure Active Directory-Konto** Ihr lokales Konto für den *onbehalfof* -Parameter mit "Set-aipauthentication" an. Weitere Informationen finden Sie unter [Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
+- Geben Sie **für das Azure Active Directory-Konto** den Aad-Benutzer im Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " im *delegateduser* -Parameter an. 
+
+    Wenn Sie die Überprüfung unter einem anderen Benutzer als dem Überprüfungs Konto ausführen, stellen Sie sicher, dass Sie auch das Scanner-Konto im *onbehalfof* -Parameter angeben. 
+
+    Weitere Informationen finden Sie unter [Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection).
 
 ### <a name="restriction-your-labels-do-not-have-auto-labeling-conditions"></a>Einschränkung: ihre Bezeichnungen haben keine automatischen Beschriftungs Bedingungen.
 

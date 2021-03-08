@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c6fc0880904658b76ff774de33030ce0ca8e3048
-ms.sourcegitcommit: 7420cf0200c90687996124424a254c289b11a26f
+ms.openlocfilehash: 77016efd46f045f324c9dea540d3b7ce75415d1d
+ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844352"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102446965"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -190,18 +190,18 @@ Weitere Informationen finden Sie im [Administrator Handbuch](rms-client/track-an
 Kenn Wort geschützte Dokumente werden von den Funktionen zum Nachverfolgen und widerrufen nicht unterstützt.
 #### <a name="multiple-attachments-in-a-protected-email"></a>Mehrere Anlagen in einer geschützten e-Mail
 
-Wenn Sie mehrere Dokumente an eine e-Mail anfügen und dann die e-Mail schützen und senden, erhält jede der Anlagen denselben Wert für "contentid". 
+Wenn Sie mehrere Dokumente an eine e-Mail anfügen und dann die e-Mail schützen und senden, erhält jede der Anlagen denselben Wert für "contentid".
 
-Dieser contentid-Wert wird nur mit der ersten geöffneten Datei zurückgegeben. Beim Suchen nach den anderen Anlagen wird nicht der für die Erfassung von Überwachungsdaten erforderliche contentid-Wert zurückgegeben.      
+Dieser contentid-Wert wird nur mit der ersten geöffneten Datei zurückgegeben. Beim Suchen nach den anderen Anlagen wird nicht der für die Erfassung von Überwachungsdaten erforderliche contentid-Wert zurückgegeben.
 
 Außerdem wird durch das Aufheben des Zugriffs für eine der Anhänge der Zugriff für die anderen Anlagen in derselben geschützten e-Mail aufgehoben.
 
 #### <a name="documents-accessed-via-sharepoint-or-onedrive"></a>Dokumente, die über SharePoint oder onedrive aufgerufen werden
-    
+
 - Geschützte Dokumente, die in SharePoint oder onedrive hochgeladen werden, verlieren ihren **contentid** -Wert, und der Zugriff kann nicht nachverfolgt oder widerrufen werden.
 
-- Wenn ein Benutzer die Datei von SharePoint oder onedrive herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue **contentid** auf das Dokument angewendet, wenn Sie Sie lokal öffnen. 
-    
+- Wenn ein Benutzer die Datei von SharePoint oder onedrive herunterlädt und von Ihrem lokalen Computer aus darauf zugreift, wird eine neue **contentid** auf das Dokument angewendet, wenn Sie Sie lokal öffnen.
+
     Die Verwendung des ursprünglichen **contentid** -Werts zum Nachverfolgen von Daten umfasst keinen Zugriff auf die heruntergeladene Datei des Benutzers. Außerdem wird durch das Aufheben des Zugriffs auf Grundlage des ursprünglichen **contentid** -Werts der Zugriff für die heruntergeladenen Dateien nicht widerrufen.
 
     In solchen Fällen können Administratoren die heruntergeladenen Dateien mithilfe von PowerShell ausfindig machen, um die neuen **contentid** -Werte zum Nachverfolgen oder widerrufen des Zugriffs zu finden.
@@ -213,20 +213,20 @@ Wenn Sie Dokumente, die in onedrive gespeichert sind und eine Vertraulichkeits B
 In solchen Fällen müssen Sie das Dokument manuell neu bezeichnen, um den Schutz nach Bedarf anzuwenden.
 ## <a name="aip-and-legacy-windows-and-office-versions"></a>AIP und ältere Windows-und Office-Versionen
 
-- Die [**Erweiterte Unterstützung von Windows 7 endete am 14. Januar 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet). 
+- Die [**Erweiterte Unterstützung von Windows 7 endete am 14. Januar 2020**](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Windows 10 durchzuführen. 
+    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Windows 10 durchzuführen.
 
     Wenn Sie jedoch über erweiterte Sicherheits Updates (ESU) und einen Supportvertrag verfügen, steht die AIP-Unterstützung zur Verfügung, um Ihre Windows 7-Systeme weiterhin sicher zu halten.
 
     Weitere Informationen erhalten Sie von Ihrem Support Kontakt.
 
-- [**Der erweiterte Support von Office 2010 endete am 13. Oktober 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010). 
+- [**Der erweiterte Support von Office 2010 endete am 13. Oktober 2020**](https://support.microsoft.com/lifecycle/search?alpha=office%202010).
 
-    Diese Unterstützung wird nicht verlängert, und ESU wird nicht für Office 2010 angeboten. 
+    Diese Unterstützung wird nicht verlängert, und ESU wird nicht für Office 2010 angeboten.
 
-    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Office 365 durchzuführen. 
-    
+    Wir empfehlen Ihnen dringend, ein Upgrade auf eine neuere Version von Office 365 durchzuführen.
+
     Weitere Informationen erhalten Sie von Ihrem Support Kontakt.
 
 ## <a name="aip-based-conditional-access-policies"></a>Richtlinien für den AIP-basierten bedingten Zugriff
@@ -239,11 +239,11 @@ Es wird empfohlen, Richtlinien für den AIP-basierten bedingten Zugriff nur für
 
 **Richtlinien für den bedingten Zugriff für AIP nur für interne Benutzer aktivieren**:
 
-1.  Navigieren Sie im Azure-Portal zum Blatt für den **bedingten Zugriff** , und wählen Sie die Richtlinie für bedingten Zugriff aus, die Sie ändern möchten. 
+1.  Navigieren Sie im Azure-Portal zum Blatt für den **bedingten Zugriff** , und wählen Sie die Richtlinie für bedingten Zugriff aus, die Sie ändern möchten.
 2.  Wählen Sie unter **Zuweisungen** die Option **Benutzer und Gruppen** aus, und wählen Sie dann **alle Benutzer** aus. Stellen Sie sicher, dass die Option **alle Gäste und externe Benutzer** *nicht* ausgewählt ist.
-3.  Speichern Sie die Änderungen. 
- 
-Sie können die Zertifizierungsstelle in Azure Information Protection auch vollständig deaktivieren, wenn die Funktionalität für Ihre Organisation nicht erforderlich ist, um dieses potenzielle Problem zu vermeiden. 
+3.  Speichern Sie die Änderungen.
+
+Sie können die Zertifizierungsstelle in Azure Information Protection auch vollständig deaktivieren, wenn die Funktionalität für Ihre Organisation nicht erforderlich ist, um dieses potenzielle Problem zu vermeiden.
 
 Weitere Informationen finden Sie in der [Dokumentation zu bedingtem Zugriff](/azure/active-directory/conditional-access/concept-conditional-access-users-groups).
 
