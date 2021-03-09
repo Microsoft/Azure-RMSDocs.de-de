@@ -5,19 +5,19 @@ author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.date: 11/09/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to extend Microsoft 365's labeling and classification functionality to the File Explorer, PowerShell, third party apps and services, and more.
 ms.custom: contperf-fy21q2
 search.appverid:
 - MET150
-ms.openlocfilehash: 8bc04ea9c8d26dc33a8fbb6cdcc52bd78257f41a
-ms.sourcegitcommit: f6d536b6a3b5e14e24f0b9e58d17a3136810213b
+ms.openlocfilehash: d1316fb289c39766b956931758da438b722f018d
+ms.sourcegitcommit: 74b8d03d1ede3da12842b84546417e63897778bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98808525"
+ms.lasthandoff: 03/07/2021
+ms.locfileid: "102415312"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -27,14 +27,17 @@ ms.locfileid: "98808525"
 
 Azure Information Protection (AIP) ist eine cloudbasierte Lösung, die Organisationen das Erkennen, Klassifizieren und Schützen von Dokumenten und E-Mails durch Anwendung von Bezeichnungen auf Inhalte ermöglicht.
 
-AIP gehört zur Microsoft Information Protection-Lösung (MIP) und erweitert die Bezeichnungs- und Klassifizierungsfunktionen von Microsoft 365.
+AIP gehört zur Microsoft Information Protection-Lösung (MIP) und erweitert die [Bezeichnungs](/microsoft-365/compliance/sensitivity-labels)- und [Klassifizierungsfunktionen](/microsoft-365/compliance/data-classification-overview) von Microsoft 365.
 
-Die folgende Abbildung zeigt die Erweiterungen von Azure Information Protection für MIP, einschließlich des [Clients für einheitliche Bezeichnungen](#aip-unified-labeling-client), dem [Scanner](#aip-on-premises-scanner) und dem [SDK](#microsoft-information-protection-sdk).
+Die folgende Abbildung zeigt die Erweiterungen von Azure Information Protection für MIP, einschließlich des [**Clients für einheitliche Bezeichnungen**](#aip-unified-labeling-client), des [**Scanners**](#aip-on-premises-scanner) und des [**SDK**](#microsoft-information-protection-sdk).
 
 :::image type="content" source="media/what-is-mip.png" alt-text="Die Azure Information Protection-Bereiche des Microsoft Information Protection-Frameworks":::
 
 Microsoft Information Protection ist der allgemeine Stack zum Schutz von Informationen, der vom AIP-Client für einheitliche Bezeichnungen genutzt wird. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/protect-information).
 
+> [!NOTE]
+> Ausführliche Informationen zu den neuesten Features und zur öffentlichen Vorschauversion des Clients für einheitliche Bezeichnungen finden Sie unter [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md) (Azure Information Protection-Client für einheitliche Bezeichnungen: Versionsverlauf und Supportrichtlinie).
+> 
 ## <a name="aip-unified-labeling-client"></a>AIP-Client für einheitliche Bezeichnungen
 
 Der Azure Information Protection-Client für einheitliche Bezeichnungen erweitert die Bezeichnungs-, Klassifizierungs- und Schutzfunktionen auf zusätzliche Dateitypen sowie auf den Datei-Explorer und PowerShell. 
@@ -43,7 +46,6 @@ Klicken Sie z. B. im Datei-Explorer mit der rechten Maustaste auf mindestens ei
 
 :::image type="content" source="media/protect-from-file-explorer.png" alt-text="Klassifizieren und Schützen über den Datei-Explorer":::
 
-Ausführliche Informationen zu den neuesten Features und zur öffentlichen Vorschauversion des Clients für einheitliche Bezeichnungen finden Sie unter [Azure Information Protection unified labeling client - Version release history and support policy](rms-client/unifiedlabelingclient-version-release-history.md) (Azure Information Protection-Client für einheitliche Bezeichnungen: Versionsverlauf und Supportrichtlinie).
 
 Laden Sie den Client von der [Microsoft Azure Information Protection-Downloadseite](https://www.microsoft.com/download/details.aspx?id=53018) herunter.
     
