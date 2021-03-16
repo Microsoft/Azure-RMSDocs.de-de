@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7d86ee43b7ccc60922dea88c76e9e0aa68474d26
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: 661baa61f49c6f85f6b52de99ad807f0fcd67ca5
+ms.sourcegitcommit: b2af03adcab2d0446114eea1973a919331cfb437
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446948"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103561261"
 ---
 # <a name="analytics-and-central-reporting-for-azure-information-protection-public-preview"></a>Analyse und Zentrale Berichterstellung für Azure Information Protection (öffentliche Vorschau)
 
@@ -140,7 +140,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |Anforderung  |Details  |
 |---------|---------|
 |**Ein Azure-Abonnement**     |   Ihr Azure-Abonnement muss Log Analytics auf demselben Mandanten wie Azure Information Protection enthalten. <br><br> Weitere Informationen finden Sie auf der Seite [Azure Monitor Preise](https://azure.microsoft.com/pricing/details/log-analytics) . <br><br>Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.   |
-| **Überwachungs Protokoll-URL Netzwerk Konnektivität** | AIP muss in der Lage sein, auf die folgenden URLs zuzugreifen, um AIP-Überwachungs Protokolle zu unterstützen:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Nur Android-Gerätedaten)
+| **Überwachungs Protokoll-URL Netzwerk Konnektivität** | AIP muss in der Lage sein, auf die folgenden URLs zuzugreifen, um AIP-Überwachungsprotokolle zu unterstützen:<br>- `https://*.events.data.microsoft.com` <br>- `https://*.aria.microsoft.com` (Nur Android-Gerätedaten)
 |**Azure Information Protection-Client**    |Für die Berichterstellung vom Client. <br><br>Wenn Sie noch keinen-Client installiert haben, können Sie den Unified-Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53018)herunterladen und installieren.      <br><br>**Hinweis**: sowohl der Unified-Bezeichnung-Client als auch der klassische Client werden unterstützt. Zum Bereitstellen des klassischen AIP-Clients eröffnen Sie ein Supportticket, um Zugriff auf den Download zu erhalten.     |
 |**Azure Information Protection lokaler Scanner**    | Für die Berichterstellung aus lokalen Daten speichern. <br><br>      Weitere Informationen finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).   |
 |**Microsoft Cloud App Security (MCAS)**     | Zur Berichterstellung aus cloudbasierten Daten speichern. <br><br>Weitere Informationen finden Sie unter [Azure Information Protection Integration](/cloud-app-security/azip-integration) in der MCAS-Dokumentation.        |
@@ -174,8 +174,8 @@ Sie müssen über eine der folgenden [Azure AD Administrator Rollen](/azure/acti
     
 - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
     
-    - **Sicherheitsleseberechtigter**
-    - **Globaler Reader**
+    - **Sicherheits Leser**
+    - **Globaler Leser**
 
 #### <a name="required-azure-log-analytics-roles"></a>Erforderliche Azure-Log Analytics Rollen
 
@@ -243,7 +243,7 @@ Sie sind jetzt bereit, die Berichte anzuzeigen.
 
 Suchen Sie im Bereich Azure Information Protection die Menü Optionen **Dashboards** , und wählen Sie eine der folgenden Optionen aus:
 
-|Bericht  |BESCHREIBUNG  |
+|Bericht  |Beschreibung  |
 |---------|---------|
 |**Verwendungs Bericht (Vorschau)**     |  Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.       |
 |**Aktivitäts Protokolle (Vorschau)**     |  Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden. Außerdem können Sie für geschützte Dokumente für Benutzer sowohl innerhalb als auch außerhalb Ihrer Organisation Zugriffsversuche (erfolgreich oder verweigert) erkennen, auch wenn Sie den Azure Information Protection-Client nicht installiert haben. <br><br>  Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Wenn Sie **Aktivitätsdetails** auswählen, werden weitere Details zu einer Datei angezeigt.     |
@@ -350,8 +350,6 @@ Nachdem Sie die Informationen in den Berichten überprüft haben, können Sie be
 - **Einheitlicher** Bezeichnungs Client: nehmen Sie Änderungen an der Beschriftungs Richtlinie in Ihrem Bezeichnungs-Admin Center vor, einschließlich der Microsoft 365 Security Center, Microsoft 365 Compliance Center oder der Microsoft 365 Security & Compliance Center. Weitere Informationen finden Sie in der [Microsoft 365-Dokumentation](/microsoft-365/compliance/sensitivity-labels).
 
 - **Klassischer Client**: nehmen Sie im Azure-Portal Änderungen an der Richtlinie vor. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
-
-Wenn Sie ein Microsoft 365-Abonnement haben, können Sie die Nutzung von Bezeichnungen auch im Microsoft 365 Compliance Center und im Microsoft 365 Security Center anzeigen. Weitere Informationen finden Sie unter [Anzeigen der Nutzung der Bezeichnung mit Bezeichnungsanalysen](/microsoft-365/compliance/label-analytics).
 
 AIP-Überwachungs Protokolle werden auch an den Microsoft 365-Aktivitäts-Explorer gesendet, wo Sie mit unterschiedlichen Namen angezeigt werden können. Weitere Informationen finden Sie unter
 
