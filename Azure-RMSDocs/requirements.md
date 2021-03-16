@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 66ce835eea1bb9d8213a78a211295dea7b93d5e4
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: 04c8a8b78090c784216845530c3ca5587ea4396d
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446846"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558110"
 ---
 # <a name="azure-information-protection-requirements"></a>Anforderungen an Azure Information Protection
 
@@ -82,6 +82,7 @@ Weitere Informationen finden Sie unter
 Computer oder mobile Geräte von Benutzern müssen ein Betriebssystem ausführen, das Azure Information Protection unterstützt.
 
 - [Unterstützte Betriebssysteme für Clientgeräte](#supported-operating-systems-for-client-devices)
+- [ARM64](#arm64)
 - [Virtuelle Computer](#virtual-machines)
 - [Serverunterstützung](#server-support)
 - [Zusätzliche Anforderungen pro Client](#additional-requirements-per-client)
@@ -107,6 +108,8 @@ Weitere Informationen zur Unterstützung in früheren Windows-Versionen erhalten
 > [!NOTE]
 > Wenn der Azure Information Protection-Client Daten mithilfe des Azure Rights Management-Diensts schützt, können die Daten von den [gleichen Geräten](#client-devices) genutzt werden, die auch den Azure Rights Management-Dienst unterstützen.
 >
+
+
 ### <a name="arm64"></a>ARM64 
 
 ARM64 wird derzeit **nicht** unterstützt. 

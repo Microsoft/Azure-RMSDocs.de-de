@@ -4,7 +4,7 @@ description: Sehen Sie sich an, was in einer Version des klassischen Azure Infor
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 11/09/2020
+ms.date: 03/11/2021
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: def8ba403e961f6e64b0bd34eb5c7ac5bd50632a
-ms.sourcegitcommit: b32c16e41ba36167b5a3058b56a73183bdd4306d
+ms.openlocfilehash: 9e03169c4c30bbad4ff9ed9ccaf06b6992994785
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97807072"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558109"
 ---
 # <a name="azure-information-protection-classic-client-version-release-history-and-support-policy"></a>Azure Information Protection klassischer Client: Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie
 
@@ -67,18 +67,26 @@ Alle Client Versionen von 1.4.21.0 veröffentlicht 03/15/2017 unterstützen TLS 
 
 Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterstützte Version des Azure Information Protection klassischen Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt.
 
-Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phase sind. In den [zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) finden Sie weitere rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden oder anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
+Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phase sind. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind. 
 
 > [!NOTE]
-> Kleinere Korrekturen werden nicht aufgelistet. Wenn also ein Problem mit dem Azure Information Protection-Client auftreten sollte, wird empfohlen, dass Sie zuerst überprüfen, ob dieses Problem mit dem neusten allgemein verfügbaren Release behoben wird. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
->  
-> Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
+>  Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
+>
+## <a name="version-156250"></a>Version 1.56.25.0
+
+**Veröffentlicht**: 11/05/2020
+
+**Unterstützt durch**: 03/31/2021
+
+Kleinere Fehlerbehebungen im Zusammenhang mit Outlook-Unterstützung
 
 ## <a name="version-154590"></a>Version 1.54.59.0
 
 **Veröffentlicht**: 02/12/2020
 
-Diese Version enthält nur Korrekturen. 
+**Unterstützt durch**: 03/31/2021
+
+Diese Version enthält nur Korrekturen.
 
 **Fixes**:
 

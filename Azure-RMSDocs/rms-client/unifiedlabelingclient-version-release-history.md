@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e416a7f9b363dc1c0d773561b2c3a1eb6cd56926
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: cf639e1a0e8b68ed58aadb2404c15fd385320bcb
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446982"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558140"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -64,7 +64,7 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 Beachten Sie, Azure Information Protection Features derzeit in der Vorschau Phase sind. Die [ergänzenden Bestimmungen für Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) enthalten zusätzliche rechtliche Bedingungen, die für Azure-Features gelten, die sich in der Beta- oder Vorschauversion befinden bzw. anderweitig noch nicht zur allgemeinen Verfügbarkeit freigegeben sind.
 
 > [!NOTE]
-> Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
+> Kleinere Fehlerbehebungen sind nicht immer aufgeführt. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
 >
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 

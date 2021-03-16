@@ -4,19 +4,19 @@ description: Suchen Sie nach bekannten Problemen und Einschränkungen für Azure
 author: batamig
 ms.author: bagol
 manager: rkarlin
-ms.date: 03/01/2021
+ms.date: 03/16/2021
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77016efd46f045f324c9dea540d3b7ce75415d1d
-ms.sourcegitcommit: 8a45d209273d748ee0f2a96c97893288c0b7efa5
+ms.openlocfilehash: 220b1e7ffec1f1bd4332058c9320241106de2e1d
+ms.sourcegitcommit: 99f1a1ab40eea7802e6c4f98724958409ee779ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102446965"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103558154"
 ---
 # <a name="known-issues---azure-information-protection"></a>Bekannte Probleme: Azure Information Protection
 
@@ -28,6 +28,10 @@ ms.locfileid: "102446965"
 > Der **klassische Azure Information Protection-Client** und die **Bezeichnungsverwaltung** im Azure-Portal werden am **31. März 2021** **eingestellt**, um eine vereinheitlichte und optimierte Kundenumgebung zu gewährleisten. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die Listen und Tabellen unten, um Details zu bekannten Problemen und Einschränkungen im Zusammenhang mit Azure Information Protection Funktionen zu finden.
+
+## <a name="third-party-digital-signing-apps"></a>Drittanbieter-Apps für die digitale Signierung
+
+Mit Azure Information Protection können Dateien, die digital signiert sind, nicht geschützt oder entschlüsselt werden.
 
 ## <a name="client-support-for-container-files-such-as-zip-files"></a>Client Unterstützung für Container Dateien, z. b. zip-Dateien
 
